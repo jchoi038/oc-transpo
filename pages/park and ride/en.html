@@ -4,15 +4,1305 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9" title="octranspo-main-css" rel="stylesheet">
-				<!-- <link href="https://www.octranspo.com/images/files/styles/custom-style.css" rel="stylesheet" /> -->
-
+		
 		<link rel="stylesheet" href="./style.css" />
 		<link rel="stylesheet" href="../../dist/custom-style.css" />
-
+		
 		<title>Park & Ride</title>
 	</head>
 	<body>
 		<div id="PR-page main-content">
+			<link href="https://www.octranspo.com/images/files/styles/custom-style.css" rel="stylesheet" />
+			<style>#PR-page .hidden,
+				#PR-page .mobile-only {
+					display: none;
+					opacity: 0;
+				}
+			
+				@media (max-width: 575.98px) {
+					#PR-page .mobile-only {
+						display: block;
+						opacity: 100%;
+					}
+				}
+			
+				#PR-page .visually-hidden {
+					position: absolute !important;
+					width: 1px !important;
+					height: 1px !important;
+					padding: 0 !important;
+					margin: -1px !important;
+					overflow: hidden !important;
+					clip: rect(0, 0, 0, 0) !important;
+					white-space: nowrap !important;
+					border: 0 !important;
+				}
+			
+			
+				/* 
+			body{
+			margin: 16px;
+			} */
+			
+				#PR-page section {
+					margin-bottom: 7rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					#PR-page section {
+						margin-bottom: 5rem;
+					}
+				}
+			
+				#PR-page ul {
+					padding: 0;
+					margin: 0;
+					margin-bottom: 0rem;
+				}
+			
+				#PR-page li {
+					margin-bottom: 0.25rem;
+					padding: 0;
+					margin-bottom: 0.5rem;
+				}
+			
+				#PR-page .bulleted-list li {
+					margin-left: 1rem;
+				}
+			
+				*,
+				*::before,
+				*::after {
+					box-sizing: border-box;
+					scroll-behavior: smooth;
+				}
+			
+				#PR-page small {
+					font-size: 0.85rem;
+				}
+			
+				#PR-page p,
+				#PR-page h1,
+				#PR-page h2,
+				#PR-page h3,
+				#PR-page h4,
+				#PR-page h5,
+				#PR-page address {
+					margin-top: 0;
+					padding-top: 0;
+					margin-bottom: 0.5rem;
+					line-height: 150%;
+				}
+			
+				#PR-page h5 {
+					/* margin-bottom: 0.75rem; */
+					font-weight: 600;
+					font-size: 0.95rem;
+				}
+			
+				/* TOC */
+			
+				.toc--container {
+					/* background-color: #F5F5F5; */
+					background-color: #fff;
+					padding: 1.5rem;
+					border-top: #d30f1d solid 3px;
+					box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+					border-radius: 2px;
+					max-width: 15rem;
+					margin-left: auto;
+				}
+			
+				@media (max-width: 767.98px) {
+					.toc--container {
+						max-width: none;
+					}
+				}
+			
+				#PR-page .toc--title {
+					font-weight: 700;
+					margin-bottom: 1.5rem;
+				}
+			
+				/*  */
+			
+				#PR-page input {
+					border: 0;
+					font-size: 1rem;
+					font-weight: 600;
+					width: 100%;
+					height: 100%;
+				}
+			
+				#PR-page datalist {
+					position: absolute;
+					background-color: white;
+					border: 1px solid blue;
+					border-radius: 0 0 5px 5px;
+					border-top: none;
+					font-family: sans-serif;
+					width: 350px;
+					padding: 5px;
+				}
+			
+				#PR-page datalist option {
+					background-color: white;
+					padding: 4px;
+					color: blue;
+					margin-bottom: 1px;
+					font-size: 18px;
+					cursor: pointer;
+				}
+			
+				.select--container {
+					border: 1px solid #e9eaed;
+					border-radius: 4px;
+					height: 52px;
+					width: 100%;
+				}
+			
+				.flex {
+					display: flex;
+					gap: 0.5rem;
+				}
+			
+				.flex-dir-row {
+					flex-direction: row;
+				}
+			
+				.flex-dir-col {
+					flex-direction: column;
+				}
+			
+				.gap-1 {
+					gap: 1rem;
+				}
+			
+				.flex-jc-c {
+					justify-content: center;
+				}
+			
+				.flex-jc-sb {
+					justify-content: space-between;
+				}
+			
+				.flex-ai-c {
+					align-items: center;
+				}
+			
+				.tag {
+					padding: 0.35em 0.5em;
+					border-radius: 6px;
+					border: 1.5px solid;
+					font-size: 14px;
+					/* text-transform: uppercase; */
+					font-weight: 600;
+					margin-bottom: 0;
+					line-height: 100%;
+				}
+			
+				.tag--blue {
+					color: #016b9d;
+				}
+			
+				.tag--green {
+					color: #038700;
+				}
+			
+				.font-weight-600 {
+					font-weight: 600;
+				}
+			
+				.font-weight-700 {
+					font-weight: 700;
+				}
+			
+				.m-0 {
+					margin: 0;
+				}
+			
+				.m-1_2 {
+					margin: 0.5rem;
+				}
+			
+				#PR-page .mt-1 {
+					margin-top: 1rem;
+				}
+			
+				.mb-1_2 {
+					margin-bottom: 0.5rem;
+				}
+			
+				.mb-1_4 {
+					margin-bottom: 0.25rem;
+				}
+			
+				.mb-0 {
+					margin-bottom: 0rem;
+				}
+			
+				.mb-1 {
+					margin-bottom: 1rem;
+				}
+			
+				.mb-2 {
+					margin-bottom: 2rem;
+				}
+			
+				.mr-1_2 {
+					margin-right: 0.5rem;
+				}
+			
+				.mr-1_4 {
+					margin-right: 0.25rem;
+				}
+			
+				.mr-1 {
+					margin-right: 1rem;
+				}
+			
+				.mr-2 {
+					margin-right: 2rem;
+				}
+			
+				.ml-1_2 {
+					margin-left: 0.5rem;
+				}
+			
+				.ml-1_4 {
+					margin-left: 0.25rem;
+				}
+			
+				.ml-1 {
+					margin-left: 1rem;
+				}
+			
+				.ml-2 {
+					margin-left: 2rem;
+				}
+			
+				.p-0 {
+					padding: 0;
+				}
+			
+				#PR-page .pt-1_2 {
+					padding-top: 0.5rem;
+				}
+			
+				#PR-page .pt-1_4 {
+					padding-top: 0.25rem;
+				}
+			
+				#PR-page .pt-1 {
+					padding-top: 1rem;
+				}
+			
+				#PR-page .pt-2 {
+					padding-top: 2rem;
+				}
+			
+				.pb-1_2 {
+					padding-top: 0.5rem;
+				}
+			
+				.pb-1_4 {
+					padding-bottom: 0.25rem;
+				}
+			
+				.pb-1 {
+					padding-bottom: 1rem;
+				}
+			
+				.pb-2 {
+					padding-bottom: 2rem;
+				}
+			
+				.border-bottom {
+					border-bottom: #e9eaed 1px solid;
+				}
+			
+				#PR-page .border-top {
+					border-top: 1px solid #e9eaed;
+					margin-top: 1rem;
+					padding-top: 1rem;
+				}
+			
+				/* Park & Ride lots section */
+				.parking-lot-select-options--grid {
+					display: grid;
+					gap: 0.5rem;
+			
+					/* overflow-x: hidden; */
+					background-color: #fff;
+					width: 100%;
+					z-index: 100;
+					grid-template-columns: 1fr 1fr 1fr;
+					/* border: 1px solid #e9eaed; */
+					/* border-radius: 10px; */
+					transition: all 200ms;
+				}
+			
+				.parking-lot-select-options--grid.hidden {
+					height: 0px;
+				}
+			
+				@media (max-width: 991.98px) {
+					.parking-lot-select-options--grid {
+						grid-template-columns: 1fr 1fr;
+					}
+				}
+			
+				@media (max-width: 767.98px) {
+					.parking-lot-select-options--grid {
+						overflow-y: scroll;
+						grid-template-columns: 1fr;
+						height: 500px;
+						border: 1px solid #e9eaed;
+						border-radius: 10px;
+						box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+						gap: 0;
+						padding: 0;
+					}
+				}
+			
+				.icon {
+					/* height: 1.125em; */
+					pointer-events: none;
+					display: flex;
+					align-items: baseline;
+					gap: 0.25rem;
+				}
+			
+				.icon.icon-md {
+					height: 1.5em;
+					gap: 0.5rem;
+				}
+			
+				.select-option {
+					text-decoration: none;
+					color: #000;
+					font-weight: 600;
+					/* border: 1px solid #e9eaed; */
+					border-right: 1px solid e9eaed;
+					/* border-radius: 6px; */
+					padding: 1rem;
+					/* font-weight: 600; */
+					width: 100%;
+					height: 60px;
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+					/* justify-content: space-between; */
+					border: 1px solid #d5d5d5;
+					background-color: #fff;
+					border-radius: 9px;
+					padding: 1rem;
+				}
+				.select-option.active {
+					background-color: #000;
+					color: #fff !important;
+					font-weight: bold;
+					border: solid 2px #000;
+				}
+			
+				#PR-page .select-option:hover {
+					text-decoration: underline;
+					background-color: #00000007;
+					/* border: solid 2px #00007; */
+				}
+			
+				#PR-page .select-option.active:hover {
+					background-color: #000;
+				}
+			
+				.select-option > span > span {
+					flex-grow: 1;
+				}
+			
+				@media (max-width: 767.98px) {
+					.select-option {
+						height: 54x;
+					}
+				}
+			
+				.select-option:not(:last-of-type) {
+					text-decoration: none;
+			
+					/* border: 1px solid #e9eaed; */
+					/* border-radius: 9px; */
+					padding: 1rem;
+				}
+			
+				.select-option:hover {
+					text-decoration: underline;
+					background-color: rgb(247, 247, 247);
+					/* border: 1px solid #dddddd; */
+				}
+			
+				/* .icon.free-tag::before{
+			content: url("https://www.octranspo.com/images/files/icons/tag_free_en.svg");
+			display: flex;
+			height: 16px;
+			width: 16px;
+			margin-left: 1rem;
+			} */
+			
+				.select-option:hover .icon.free-tag::after {
+					content: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/right-arrow-social.svg");
+					display: flex;
+					height: 16px;
+					width: 16px;
+					margin-left: 1rem;
+				}
+			
+				.select-option .icons {
+					pointer-events: none;
+					display: flex;
+					gap: 4px;
+					width: 100%;
+					align-items: center;
+					/* color: transparent; */
+				}
+			
+				.select-option .icons img {
+					height: 1.125em;
+				}
+			
+				.select-option .icons p {
+					display: flex;
+					padding: 0;
+					margin: 0;
+					flex-grow: 1;
+					font-size: 1.125rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					.select-option .icons p {
+						display: flex;
+					}
+				}
+			
+				@media (max-width: 767.98px) {
+					.select-option {
+						border: none;
+						border-bottom: 1px solid #e9eaed;
+						border-radius: 0px;
+					}
+				}
+			
+				/* Parking lot info */
+			
+				.parking-lot--info-list {
+					max-height: 0px;
+					opacity: 0;
+				}
+			
+				.parking-lot--info-box--heading {
+					/* position: sticky; */
+					top: 0;
+					/* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12); */
+					border-bottom: 1px solid #e9eaed;
+					padding: 0.5rem 0;
+					background-color: #fff;
+					display: flex;
+					align-items: center;
+					gap: 1rem;
+				}
+			
+				.parking-lot--info-box--heading .tags {
+					display: flex;
+					gap: 0.25rem;
+				}
+			
+				.parking-lot--info-box--heading h3 {
+					margin: 0;
+					padding: 0;
+					font-weight: 700;
+				}
+			
+				.parking-lot--info-list.active {
+					max-height: fit-content;
+			
+					opacity: 100%;
+					/* transition: max-height 1s ease-in; */
+					background-color: #fff;
+					margin-bottom: 1rem;
+					/* overflow: hidden; */
+					/* box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.17); */
+					border-radius: 10;
+					/* padding: 1.5rem 0; */
+				}
+			
+				@media (max-width: 767.98px) {
+					.parking-lot--info-list.active {
+						/* box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.17); */
+						/* padding: 0 1rem 1.5rem; */
+					}
+				}
+			
+				.parking-lot--info-box.hidden {
+					display: none;
+				}
+			
+				/* .parking-lot--info-box{
+			max-height: 0px;
+			opacity: 0;
+			}
+			
+			
+			.parking-lot--info-box.active{
+			max-height: 2000px;
+			opacity: 100%;
+			transition: max-height 0.3s ease-in;
+			} */
+			
+				#PR-page .parking-lot-list--legend {
+					display: flex;
+					flex-wrap: wrap;
+					padding: 1rem 3rem;
+					/* flex-direction: column; */
+					background-color: rgb(247, 247, 247) !important;
+					/* border-radius: 8px !important; */
+					/* max-width: 400px; */
+					column-gap: 1rem;
+					justify-content: center;
+					margin-bottom: 2rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					#PR-page .parking-lot-list--legend {
+						padding: 1rem;
+					}
+				}
+				/* Permit Types */
+			
+				.permit-types--grid {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					gap: 2rem;
+					margin: 2rem 0;
+				}
+			
+				@media (max-width: 767.98px) {
+					.permit-types--grid {
+						grid-template-columns: 1fr;
+					}
+				}
+			
+				.permit-types--card {
+					padding: 2.5rem 4rem;
+					display: flex;
+					flex-direction: column;
+					text-align: center;
+					/* border: #e9eaed solid 1px; */
+					box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+					justify-content: space-between;
+					border-radius: 10px;
+				}
+			
+				@media (max-width: 767.98px) {
+					.permit-types--card {
+						padding: 1.75rem 2rem;
+					}
+				}
+			
+				.permit-types--card--content {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+			
+				.permit-types--description {
+					margin-bottom: 2rem;
+					padding-bottom: 1rem;
+				}
+			
+				.permit-types--name {
+					font-size: 20px;
+					font-weight: 700;
+					color: #016b9d;
+					padding-bottom: 3rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					.permit-types--name {
+						font-size: 1.125rem;
+						padding-bottom: 2rem;
+					}
+				}
+			
+				.permit-types--price {
+					font-size: 4rem;
+					margin-bottom: 1.5rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					.permit-types--price {
+						font-size: 2.5rem;
+					}
+				}
+			
+				#PR .permit-types--benefit {
+					padding: 1rem;
+					border-top: 1px solid #e9eaed;
+				}
+			
+				#PR-permit-types .contact {
+					text-align: center;
+					max-width: 700px;
+					width: 100%;
+				}
+			
+				/* section: Gold permit availability */
+				#PR-page-gold-permit-availability td {
+					font-size: 1rem;
+				}
+			
+				#PR-page-gold-permit-availability {
+					font-weight: 700;
+					font-size: 1rem;
+				}
+			
+				#PR-page-gold-permit-availability .status--avail {
+					color: #038700;
+				}
+			
+				#PR-page .drop-down-container {
+					width: 100%;
+					/* max-width: 500px; */
+					position: relative;
+					margin-bottom: 0.5rem;
+					/* background-color: #fff; */
+				}
+			
+				#PR-page .drop-down-button {
+					/* padding:1rem; */
+					display: inline-block;
+					/* border-radius: 4px; */
+					border: #e9eaed solid 2px;
+					/* border-bottom: #e9eaed solid 2px; */
+					width: 100%;
+					/* min-width: 400px; */
+					font-size: 1rem;
+					color: #000;
+					font-weight: 400;
+					background-color: #fff;
+					position: relative;
+					overflow: hidden;
+					margin-bottom: 0.5rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					#PR-page .drop-down-button {
+						width: 100%;
+					}
+				}
+			
+				#PR-page .drop-down-button input {
+					text-align: left;
+					background-color: #fff;
+					padding: 1rem;
+					font-weight: 400;
+					font-size: 1.125rem;
+					cursor: pointer;
+				}
+			
+				#PR-page .drop-down-button.active input {
+					background-color: rgb(247, 247, 247);
+				}
+			
+				#PR-page .drop-down-button:hover {
+					/* border: #016b9d solid 2px; */
+					/* border-bottom: #000 solid 2px; */
+				}
+			
+				#PR-page .drop-down-button.active,
+				#PR-page .drop-down-button:focus {
+					background-color: #fff;
+					/* border: #016b9d solid 2px; */
+					border-bottom: #000 solid 2px;
+					/* box-shadow: 0px 0px 0px 3px #00000020; */
+				}
+			
+				#PR-page .drop-down-button.active .drop-down-container {
+					visibility: visible;
+				}
+			
+				#PR-page .drop-down-button a {
+					color: #000;
+					display: flex;
+					justify-content: space-between;
+				}
+			
+				#PR-page .drop-down-button .chevron {
+					content: "";
+					color: #fff;
+					display: inline-block;
+					width: 1rem;
+					height: 1rem;
+					background-repeat: no-repeat;
+					background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/chevron-down-solid.svg");
+					margin-right: 4px;
+					transform: rotate(0deg);
+					/* transition: transform 0.15s ease-in; */
+					position: absolute;
+					right: 1rem;
+					top: calc(50% - 8px);
+				}
+			
+				#PR-page .drop-down-button .chevron.up {
+					transform: rotate(-180deg);
+				}
+			
+				/* icons */
+				.gold-star::before {
+					display: inline-block;
+					content: "";
+					pointer-events: none;
+				}
+			
+				.icon-sm {
+					display: flex;
+					/* align-items: center; */
+					/* gap: 0.25rem; */
+				}
+			
+				.icon-sm::before {
+					content: "";
+					height: 1.25em;
+					width: 1.25em;
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+					flex-shrink: 0;
+					text-decoration: none;
+					/* display: flex; */
+					justify-content: center;
+					align-items: center;
+				}
+			
+				.icon-md::before {
+					content: "";
+					height: 2em;
+					width: 2em;
+					background-repeat: no-repeat;
+					background-size: contain;
+					flex-shrink: 0;
+					text-decoration: none;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			
+				.icon-lg::before {
+					content: "";
+					height: 2.5em;
+					width: 2.5em;
+					background-repeat: no-repeat;
+					background-size: contain;
+					flex-shrink: 0;
+					text-decoration: none;
+					display: flex;
+					justify-content: center;
+				}
+			
+				.icon-after-sm::after {
+					content: "";
+					height: 1.25em;
+					width: 1.25em;
+					background-repeat: no-repeat;
+					background-size: contain;
+					flex-shrink: 0;
+					text-decoration: none;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+			
+				.icon-after-lg::after {
+					content: "";
+					height: 2.5em;
+					width: 2.5em;
+					background-repeat: no-repeat;
+					background-size: contain;
+					flex-shrink: 0;
+					text-decoration: none;
+					display: flex;
+					justify-content: center;
+				}
+			
+				.icon-after--circled-arrow::after {
+					background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/arrow-in-circle.svg");
+				}
+			
+				.icon--pdf::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/PDF-icon-blue.svg");
+				}
+			
+				.icon--travel-planner::before {
+					background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/travel-planner-icon.svg");
+				}
+			
+				.icon--schedules::before {
+					background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconStopSchedules.png");
+				}
+			
+				.icon--ext::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/external-link-blue.svg");
+					height: 1.05rem;
+				}
+			
+				.icon--soldout::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/sold-out.svg");
+				}
+			
+				.icon--available::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
+				}
+			
+				.icon--available-greenBG::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
+				}
+			
+				.icon--star::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/tag_gold.svg");
+				}
+			
+				.icon--warning::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/tag_warning.svg");
+				}
+			
+				.icon-after--park-ride::after {
+					background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg");
+				}
+			
+				.icon--park-ride::before {
+					background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg");
+				}
+			
+				.icon--permit::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/tag_permit_en.svg");
+				}
+			
+				.icon--free::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/tag_free_en.svg");
+				}
+			
+				.icon--limitedfree::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/tag_free-limited_en_v2.svg");
+				}
+			
+				/* Parking lot Info box section */
+			
+				.parking-lot--info-box {
+					/* padding: 1.5rem 2rem; */
+					background-color: #fff;
+					/* border: #e9eaed solid 1px; */
+					/* box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.17); */
+					/* border-radius: 10px; */
+					margin-bottom: 7rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					.parking-lot--info-box {
+						padding: 0;
+						background-color: #fff;
+						border: none;
+						box-shadow: none;
+					}
+				}
+			
+				.parking-lot--info-box--image-container {
+					height: 300px;
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+				}
+			
+				.parking-lot--info-box--image-container > img {
+					width: 100%;
+				}
+			
+				.parking-lot--info-box--body {
+					padding: 0.5rem 0;
+					color: #222;
+					border-bottom: #e9eaed solid 2px;
+				}
+			
+				.parking-lot--h3 {
+					margin-bottom: 2rem;
+				}
+			
+				.parking-lot-content {
+					display: grid;
+					grid-template-columns: 2fr 1fr;
+					gap: 2rem;
+					/* border-top: 1px solid #e9eaed; */
+					/* padding-top: 1.5rem; */
+				}
+			
+				.parking-lot-content .column {
+					display: flex;
+					flex-direction: column;
+					gap: 1rem;
+				}
+			
+				#PR-page .parking-lot-content h4 {
+					margin-bottom: 1rem;
+					font-weight: 600;
+					margin-top: 0;
+					padding-top: 0;
+					font-size: 1.375rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					#PR-page .parking-lot-content h4 {
+						font-size: 1.25rem;
+					}
+				}
+			
+				.parking-lot-content .info-group {
+					/* margin-bottom: 2rem; */
+					padding: 2rem 0 2rem;
+				}
+			
+				.parking-lot-content .info-group.location .body {
+					padding-bottom: 1rem;
+				}
+			
+				.parking-lot-content .info-group:not(:last-of-type) {
+					border-bottom: 1px solid #e9eaed;
+					/* padding-bottom: 0.75rem; */
+				}
+			
+				.parking-lot-content .info-group--offers li img {
+					background-color: #000;
+					border-radius: 999px;
+					content: "";
+					width: 42px;
+					height: 42px;
+				}
+			
+				.parking-lot-content .info-group--offers svg {
+					flex-shrink: 0;
+				}
+			
+				.parking-lot-content .info-group ul {
+					padding: 0 0 1.5rem 0;
+					margin: 0;
+				}
+			
+				.parking-lot-content .info-group li {
+					display: flex;
+					gap: 1rem;
+					align-items: flex-start;
+					padding: 0;
+					line-height: 150%;
+				}
+			
+				.parking-lot-content .info-group--resources li a {
+					display: flex;
+					gap: 0.5rem;
+					align-items: center;
+					padding: 0;
+					line-height: 100%;
+				}
+			
+				.parking-lot-content .info-group--offers {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					column-gap: 1.5rem;
+					/* row-gap: 1rem; */
+					/* border-bottom: 1px solid #e9eaed; */
+				}
+			
+				#PR-page .parking-lot-content .info-group--offers p {
+					margin-bottom: 0;
+				}
+			
+				.parking-lot-content .info-group--offers .important-announcement {
+					grid-column: 1 / 3;
+				}
+			
+				.important-announcement a {
+					padding: 0;
+					margin: 0;
+				}
+			
+				#PR-page .note {
+					margin-top: 0.5rem;
+					padding-top: 1rem;
+					display: inline-flex;
+					width: 100%;
+				}
+			
+				.parking-lot-content .info-group--offers__stats {
+					font-weight: 700;
+					font-size: 1rem;
+					color: #000;
+					/* margin-bottom: 0; */
+				}
+			
+				.parking-lot-content .info-group--offers__name {
+				}
+			
+				.info-card {
+					border: 1px solid #e9eaed;
+					border-radius: 4px;
+					padding: 1rem;
+					/* margin-bottom: 1.5rem; */
+					/* border-top: #000 solid 4px; */
+					box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+					min-width: 18rem;
+				}
+			
+				.info-card--status-heading {
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+				}
+			
+				/* .info-card ul {
+				list-style: none;
+			} */
+			
+				#PR-page .info-card h4 {
+					font-size: 1.25rem;
+				}
+			
+				.info-card--link {
+					box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+				}
+			
+				.info-card--link:hover {
+					background-color: rgb(247, 247, 247);
+				}
+			
+				.info-card--link h3 {
+					font-size: 1.5rem;
+					margin-bottom: 1rem;
+					font-weight: 600;
+				}
+			
+				.info-card--link .info-card--content {
+					display: flex;
+					align-items: center;
+					gap: 1rem;
+					color: #555;
+					text-decoration: none;
+					justify-content: space-between;
+				}
+			
+				.info-card--cta .blue-btn:not(:last-of-type) {
+					margin-bottom: 0.25rem;
+				}
+			
+				#PR-page p.status {
+					margin-bottom: 1rem;
+					font-weight: 700;
+					display: inline-flex;
+					gap: 0.25rem;
+					align-items: center;
+					color: #777;
+					font-size: 0.875rem;
+					padding: 0 0.5rem;
+					border-radius: 100px;
+					min-height: 1.6em;
+				}
+			
+				#PR-page .info-card .soldout {
+					color: #d30f1d;
+					background-color: #d30f1d15;
+				}
+			
+				#PR-page .info-card .available {
+					color: #038700;
+					/* font-size: 1rem; */
+					background-color: #03870020;
+					padding: 0 0.5rem 0 0.25rem;
+				}
+			
+				#PR-page .info-card .status--not-avail {
+					color: #444;
+					background-color: #bfbfbf;
+				}
+			
+				#PR-page .info-card.unavailable {
+					box-shadow: none;
+					background-color: #e9eaed;
+					border-top: 1px solid #dfdfdf;
+				}
+			
+				#PR-page .info-card--hours ul {
+					margin-bottom: 1rem;
+				}
+			
+				#PR-page .info-card--hours li {
+					display: flex;
+				}
+			
+				#PR-page .info-card--hours .info-card--hours--day {
+					width: 50%;
+					max-width: 6.25rem;
+				}
+			
+				/* info messages */
+				.info-message {
+					padding: 1rem;
+				}
+			
+				.info-message--blue {
+					color: #016b9d;
+					background-color: #016b9d10;
+					border: 1px solid #016b9d20;
+					border-radius: 8px;
+					display: flex;
+					gap: 0.75rem;
+					align-items: center;
+				}
+			
+				.info-message--blue::before {
+					content: "";
+					width: 24px;
+					height: 24px;
+					display: inline-block;
+					background-image: url("https://www.octranspo.com/images/files/icons/info.svg");
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			
+				#PR-page .important-announcement {
+					background-color: #fff;
+					padding: 1rem 1.5rem;
+					font-weight: normal;
+					display: flex;
+					gap: 0.5rem;
+					margin-bottom: 1rem;
+					border-radius: 4px;
+				}
+			
+				.important-announcement--blue {
+					border-top: 4px solid #016b9d;
+				}
+			
+				.important-announcement--green {
+					border-top: 4px solid #65a233;
+				}
+			
+				.important-announcement--blue::before {
+					content: "";
+					width: 24px;
+					height: 24px;
+					display: inline-block;
+					background-image: url("https://www.octranspo.com/images/files/icons/info.svg");
+					background-size: contain;
+					background-repeat: no-repeat;
+					flex-shrink: 0;
+				}
+			
+				@media (max-width: 992px) {
+					.parking-lot--info-box--image-container {
+						display: none;
+					}
+			
+					.parking-lot-content .info-group--offers {
+						display: flex;
+						flex-direction: column;
+					}
+			
+					.parking-lot-content .info-group--offers svg {
+						flex-shrink: 0;
+					}
+			
+					.parking-lot--info-box .parking-lot-content {
+						grid-template-columns: 1fr;
+						gap: 0;
+					}
+			
+					.parking-lot--info-box.active .parking-lot--info-box--body {
+						/* max-height: 60vh; */
+						/* overflow-y: scroll; */
+						transition: max-height 1s ease-in;
+						/* border-radius: 10px; */
+					}
+			
+					.parking-lot--info-list {
+						/* overflow: hidden; */
+						position: relative;
+						background-color: #fff;
+					}
+			
+					.parking-lot-list--legend {
+						flex-direction: column;
+						gap: 0.5rem;
+					}
+			
+					.parking-lot-content .info-group {
+						border-bottom: 1px solid #e9eaed;
+						padding-bottom: 1.5rem;
+					}
+			
+					#PR-parking-lots ul {
+						list-style-type: none;
+					}
+			
+					/* #PR-page .info-card.unavailable {
+						background-color: #fff;
+						border-top: none;
+					} */
+			
+					#PR-parking-lots .info-card:last-of-type {
+						border-bottom: none;
+					}
+				}
+			
+				/* section parking info */
+				.grid {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					gap: 1rem;
+				}
+			
+				.grid-2fr-1fr {
+					grid-template-columns: 2fr 1fr;
+					column-gap: 2rem;
+				}
+			
+				@media (max-width: 767.98px) {
+					.grid {
+						grid-template-columns: 1fr;
+					}
+			
+					.grid-2fr-1fr {
+						grid-template-columns: 1fr;
+					}
+				}
+			
+				.contact {
+					text-align: center;
+				}
+			
+				.side-note {
+					border: 1px solid #e9eaed;
+					border-radius: 4px;
+					padding: 1.5rem;
+					display: flex;
+					flex-direction: column;
+					margin-top: 2rem;
+				}
+			
+				#PR-page .side-note--title {
+					margin-bottom: 1rem;
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+			
+				#PR-page .side-note--text {
+					font-size: 0.875rem;
+					height: fit-content;
+					align-items: flex-start;
+				}
+			</style>
 			<section id="PR-intro" style="margin-top: 2rem">
 			<div class="grid grid-2fr-1fr">
 			<div><!-- <img style="width: 100%;" class="mb-1" src="https://www.octranspo.com/images/files/maps/park_ride/park-ride-main.png" alt=""> -->
