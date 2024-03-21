@@ -16214,12 +16214,7 @@ ul, ol {
 }
 
 li {
-  padding-left: 0.25rem;
   line-height: 150%;
-}
-
-ul {
-  margin-bottom: 1rem;
 }
 
 ul.checklist li {

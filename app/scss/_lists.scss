@@ -4,7 +4,7 @@ ul, ol {
 }
 
 li {
-    padding-left: 0.25rem;
+    // padding-left: 0.25rem;
     line-height: 150%;
 }
 
@@ -13,9 +13,9 @@ li {
     //     margin-left: 1rem;
     // }
 }
-ul{
-    margin-bottom: 1rem;
-}
+// ul:not(.){
+//     margin-bottom: 1rem;
+// }
 
 ul.checklist li{
     display: flex;
