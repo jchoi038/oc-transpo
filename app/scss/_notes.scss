@@ -1,8 +1,9 @@
 .note{
-    padding: 0.5rem 1rem;
-    border-left: 3px solid var(--gray--300);
+    padding: 0.5rem;
+    border-left: 2px solid var(--gray--300);
     background: var(--gray--50);
     margin-bottom: 0.5rem;
+    display: block;
     @include media-breakpoint-down(md) {
         font-size: 0.875rem;
     }
@@ -23,6 +24,25 @@
         border-left: 3px solid var(--line3--600);
         .note__title{
             color: var(--line3--700);
+        }
+    }
+    &-update{
+        padding: 0;
+        border-left: none;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        .note__title{
+            margin-bottom: 0 !important;
+            padding: 0.25rem 1rem;
+            color: #000;
+            text-transform: uppercase;
+            background-color: var(--line4--300);
+        }
+        .note__content{
+            padding: 1rem;
+            background: #fff;
         }
     }
     &-tip{

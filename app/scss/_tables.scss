@@ -5,9 +5,12 @@
 		table-layout: auto;
 	}
 }
+
+.auto-width{
+	table-layout: auto;
+}
 table {
 	width: 100%;
-	table-layout: auto;
 	margin: none;
 	margin-bottom: 30px;
 	.emptyCell {

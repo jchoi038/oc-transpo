@@ -2,8 +2,10 @@
 /*!
 OC Transpo Website Styles
 Copyright 2019 OC Transpo
-Authors: Justin MacNeil, Tashana Allen (RealDecoy), Judy Choi (OC Transpo)
-
+Authors: Justin MacNeil, Tashana Allen (RealDecoy)
+Editor: Judy Choi (OC Transpo)
+Date: 3/21/2024
+Time: 11:23
 */
 /*
 
@@ -15725,9 +15727,12 @@ h4.stage2-usage-headings {
   table-layout: auto;
 }
 
+.auto-width {
+  table-layout: auto;
+}
+
 table {
   width: 100%;
-  table-layout: auto;
   margin: none;
   margin-bottom: 30px;
 }
@@ -16147,6 +16152,8 @@ dl dt {
   --line3--600: #8F7200;
   --line3--700: #665200;
   --line4--50: #F2FAFF;
+  --line4--300: #78CBFF;
+  --line4--400: #3EB4FF;
   --line4--500: #019FD9;
   --line4--600: #0980A5;
   --line4--700: #07607C;
@@ -16543,10 +16550,11 @@ ul.grid.grid--3col {
 }
 
 .note {
-  padding: 0.5rem 1rem;
-  border-left: 3px solid var(--gray--300);
+  padding: 0.5rem;
+  border-left: 2px solid var(--gray--300);
   background: var(--gray--50);
   margin-bottom: 0.5rem;
+  display: block;
 }
 @media (max-width: 991.98px) {
   .note {
@@ -16567,6 +16575,24 @@ ul.grid.grid--3col {
 }
 .note-warning .note__title {
   color: var(--line3--700);
+}
+.note-update {
+  padding: 0;
+  border-left: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.note-update .note__title {
+  margin-bottom: 0 !important;
+  padding: 0.25rem 1rem;
+  color: #000;
+  text-transform: uppercase;
+  background-color: var(--line4--300);
+}
+.note-update .note__content {
+  padding: 1rem;
+  background: #fff;
 }
 .note-tip {
   border-color: var(--line4--600);
@@ -17162,30 +17188,6 @@ section:first-of-type {
 .faq-accordion {
   width: 100%;
 }
-.faq-accordion .accordion {
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 24px;
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/nav-plus.svg") no-repeat 97.5% 50% #fff;
-  cursor: pointer;
-  margin-bottom: 15px;
-  background-size: 10px;
-  padding: 0 1rem 0 0;
-}
-.faq-accordion .accordion.active {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/nav-minus.svg") no-repeat 97.5% 50% #fff;
-  background-size: 10px;
-}
-.faq-accordion .accordion-content {
-  display: none;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-.faq-accordion {
-  width: 100%;
-}
 
 .faq-accordion .accordion-content {
   padding: 1rem 0;
@@ -17237,6 +17239,19 @@ section:first-of-type {
 .accordion-container {
   width: 100%;
   letter-spacing: 0px;
+}
+.accordion-container--simple .accordion-content {
+  margin: 0;
+  height: 0px;
+  overflow-y: hidden;
+  opacity: 0;
+  transition: all 200ms ease-out;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .accordion-container--simple .accordion-content {
+    padding: 0rem 0.5rem;
+  }
 }
 .accordion-container--simple .accordion {
   transition: all ease-in-out 150ms;
@@ -17321,19 +17336,6 @@ section:first-of-type {
 }
 .accordion-container--simple .accordion:hover::after, .accordion-container--simple .accordion.active:hover::after {
   background-color: var(--gray--200);
-}
-.accordion-container .accordion-content {
-  margin: 0;
-  height: 0px;
-  overflow-y: hidden;
-  opacity: 0;
-  transition: all 200ms ease-out;
-  padding: 0;
-}
-@media (min-width: 768px) {
-  .accordion-container .accordion-content {
-    padding: 0rem 0.5rem;
-  }
 }
 
 .bordered {

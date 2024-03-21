@@ -2,33 +2,6 @@
 
 .faq-accordion{
 	width: 100%;
-
-	.accordion {
-		font-size: 18px;
-		font-size: 1.125rem;
-		font-weight: 600;
-		line-height: 24px;
-		background:url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/nav-plus.svg") no-repeat 97.5% 50% #fff;
-		cursor: pointer;
-		margin-bottom: 15px;
-		background-size: 10px;
-		padding: 0 1rem 0 0;
-	}
-
-	.accordion.active{
-		background:url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/nav-minus.svg") no-repeat 97.5% 50% #fff;
-		background-size: 10px;
-	}
-
-	.accordion-content{
-		display: none;
-		padding-left:0;
-		margin-bottom: 20px;
-	}
-}
-
-.faq-accordion{
-	width: 100%;
 }
 
 // TP page
@@ -85,6 +58,17 @@
 	width: 100%;
 	letter-spacing: 0px;
 	&--simple{
+		.accordion-content{
+			margin: 0;
+			height: 0px;
+			overflow-y: hidden;
+			opacity: 0;
+			transition: all 200ms ease-out;
+			padding: 0;
+				@include media-breakpoint-up(md) {
+					padding: 0rem 0.5rem;
+				}
+		}
 		.accordion{
 			transition: all ease-in-out 150ms;
 			&:not(:first-of-type){
@@ -167,6 +151,7 @@
 			padding-left: 0.5rem;
 		}
 		}
+		
 		.accordion:hover, .accordion.active:hover{
 			background-color:var(--gray--50);
 			padding-left: 0.5rem;
@@ -177,16 +162,6 @@
 
 	}
 
-	.accordion-content{
-		margin: 0;
-		height: 0px;
-		overflow-y: hidden;
-		opacity: 0;
-		transition: all 200ms ease-out;
-		padding: 0;
-			@include media-breakpoint-up(md) {
-				padding: 0rem 0.5rem;
-			}
-	}
+
 
 }
