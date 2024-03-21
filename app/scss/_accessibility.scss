@@ -35,8 +35,7 @@
 	background-image: url('../img/photo-para.png');
 	background-size: cover;
     background-position: center;
-
-   @include media-breakpoint-down(sm){
+	@include media-breakpoint-down(sm){
 		padding-top:40px;
 	}
 }
