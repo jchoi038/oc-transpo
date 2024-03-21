@@ -1,0 +1,26 @@
+// https://medium.com/@alvaro.saburido/applying-gradient-trends-in-sass-cf825d70f5fe
+$gradients: () !default;
+$gradients: map-merge((
+    red: linear-gradient(#900902, #FF0B0B, #FFFF84),
+    green: linear-gradient(#165031, #78BE21, #FFFF84),
+    yellow: linear-gradient(#8F7200, #FFC600, #FFFF84),
+    blue: linear-gradient(#003D84, #00A3E0, #CCFFFF),
+
+), $gradients);
+
+@mixin bg-gradient($parent, $gradient) {
+    #{$parent}:before  {
+        content: '';
+        background: $gradient;
+        position: absolute;
+        width: 0.5rem;
+        border-radius: 999px;
+        height: 100%;
+        z-index: -1;
+    }
+  }
+
+// Gradient Classes 
+@each $gradient, $value in $gradients {
+    @include bg-gradient(".bg-gradient-#{$gradient}", $value);
+  }

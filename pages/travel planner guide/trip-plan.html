@@ -1,0 +1,648 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trip plan guide</title>
+	<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9" title="octranspo-main-css" rel="stylesheet">
+	<link rel="stylesheet" href="./TPG_style.css" />
+	<link rel="stylesheet" href="../../dist/custom-style.css" />
+</head>
+<body class="main-content">
+	<link href="https://www.octranspo.com/images/files/styles/custom-style.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/styles/TPG_style.css" rel="stylesheet" />
+	<div id="TPG-page">
+		<div class="intro">
+			<p>
+				In this guide you will learn how to use the Travel Planner&#39;s
+				<a href="https://plan.octranspo.com/plan"
+					><img
+						alt="Travel Plans feature icon"
+						height="20"
+						src="https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconTravelPlans.png"
+						width="30"
+					/>Trip Plans</a
+				>&nbsp;feature.
+			</p>
+	
+			<p>
+				Follow the&nbsp;step-by-step instructions on how to input your
+				starting location, destination and the dates and times for your
+				trip. Finally, learn how to read your trip plan results, pick
+				earlier/later trip plans, and&nbsp;print your results.
+			</p>
+		</div>
+	
+		<div class="sub-section tabs">
+			<div class="generic-tab stepper" role="tablist">
+				<button
+					aria-controls="TP-step1"
+					class="tablink"
+					id="TP-tab-1"
+					name="TP-tab-1"
+					role="tab"
+				>
+					<span class="tablink--step-number">Step 1</span
+					><span class="tablink--step-label mobile-hide"
+						>Enter your origin and destination</span
+					></button
+				><button
+					aria-controls="TP-step2"
+					class="tablink"
+					id="TP-tab-2"
+					name="TP-tab-2"
+					role="tab"
+					tabindex="-1"
+				>
+					<span class="tablink--step-number">Step 2</span
+					><span class="tablink--step-label mobile-hide"
+						>Pick the time of your trip</span
+					></button
+				><button
+					aria-controls="TP-step3"
+					class="tablink"
+					id="TP-tab-3"
+					name="TP-tab-3"
+					role="tab"
+					tabindex="-1"
+				>
+					<span class="tablink--step-number">Step 3</span
+					><span class="tablink--step-label mobile-hide"
+						>Get trip plan results</span
+					>
+				</button>
+			</div>
+	
+			<div
+				aria-labelledby="TP-tab-1"
+				class="tabcontent"
+				id="TP-step1"
+				role="tabpanel"
+				tabindex="0"
+			>
+				<h2 class="">
+					Step 1: Enter your origin and destination
+				</h2>
+	
+				<p class="mb-4">
+					You can enter your origin
+					<img
+						alt="Starting point icon"
+						height="20"
+						src="https://www.octranspo.com/images/files/travel_planner/help_images/StartLocation.png "
+						style="margin-bottom: -3px"
+						width="20"
+					/>and destination
+					<img
+						alt="Destination Icon"
+						height="20"
+						src="https://www.octranspo.com/images/files/travel_planner/help_images/EndLocation.png"
+						style="margin-bottom: -3px"
+						width="20"
+					/>
+					using one of the following methods:
+				</p>
+	
+				<ul class="grid grid--3col">
+					<li class="card">
+						<div class="card--text">
+							<div class="card--title">
+								<p>Lookup an address<a href="#note-address-lookup">*<span class="visually-hidden">Footnote about location lookups</span></a></p>
+							</div>
+	
+							<ol class="card--body">
+								<li>Begin typing the address</li>
+								<li>
+									Select the location from the generated list (see
+									examples below)
+								</li>
+							</ol>
+						</div>
+						<img
+							alt="Screenshot of input field with an address being typed in and results are generated below"
+							class="card--image"
+							src="https://www.octranspo.com/images/files/travel_planner/help_images/TP-step1-address.png"
+						/>
+					</li>
+					<li class="card">
+						<div class="card--text">
+
+							<div class="card--title">
+								<p>Lookup a landmark<a href="#note-history">*<span class="visually-hidden">Footnote about search history</span></a></p>
+							</div>
+	
+							<ol class="card--body">
+								<li>Begin typing the name of the landmark</li>
+								<li>
+									Select the location from the generated list (see
+									examples below)
+								</li>
+							</ol>
+						</div>
+						<img
+							alt="Screenshot of input field with a landmark typed in and related results genereated below"
+							class="card--image"
+							src="https://www.octranspo.com/images/files/travel_planner/help_images/TP-step1-landmark.png"
+						/>
+					</li>
+					<li class="card">
+						<div class="card--text">
+							<p class="card--title">
+								<!-- <span class="cue-tag">C</span> -->Pick a
+								location on the map
+							</p>
+	
+							<p class="card--body">
+								Select either &ldquo;Set as origin&rdquo; or
+								&ldquo;Set as destination&rdquo;
+							</p>
+						</div>
+						<img
+							alt="Screenshot of the map interface showing how to choose your destination or origin on the map"
+							class="card--image"
+							src="https://www.octranspo.com/images/files/travel_planner/help_images/TP-step1-map.png"
+						/>
+					</li>
+					<li class="card">
+						<div class="card--text">
+							<p class="card--title">
+								<!-- <span class="cue-tag">D</span> -->Detect your
+								GPS location (for mobile users)
+							</p>
+	
+							<p class="card--body">
+								If you have enabled GPS on your mobile device, you
+								can set your origin or destination to your current
+								location.
+							</p>
+						</div>
+						<img
+							alt="Screenshot of input field with the cursor set on the GPS icon located inside the origin/destination field input"
+							class="card--image"
+							src="https://www.octranspo.com/images/files/travel_planner/help_images/TP-step1-gps.png"
+						/>
+					</li>
+					<li class="card">
+						<div class="card--text">
+							<p class="card--title">
+								<!-- <span class="cue-tag">E</span> -->Travel
+								Planner history
+							</p>
+	
+							<p class="card--body">
+								If you have previously created a travel plan using a
+								destination or an origin, you can click the history
+								icon (round arrow with a clock dial) to select it
+								without looking it up again.
+							</p>
+						</div>
+						<img
+							alt="Screenshot of input field with the cursor set on the history icon located inside the origin/destination field input"
+							class="card--image"
+							src="https://www.octranspo.com/images/files/travel_planner/help_images/TP-step1-history.png"
+						/>
+					</li>
+					<li class="card">
+						<div class="card--text">
+							<p class="card--title">
+								<!-- <span class="cue-tag">F</span> -->Reverse the
+								entries
+							</p>
+	
+							<p class="card--body">
+								If you have entered your destination in place of
+								your origin, or if you would like to generate a
+								return trip quickly, you can reverse the order of
+								your entries.
+							</p>
+						</div>
+						<img
+							alt="Screenshot of input field with the cursor set on the reverse icon located beneath the destination field input"
+							class="card--image"
+							src="https://www.octranspo.com/images/files/travel_planner/help_images/TP-step1-reverse.png"
+						/>
+					</li>
+				</ul>
+	
+				<div id="note-address-lookup" class="note note--level0">
+					<p class="note__title">*Note: Address lookup</p>
+					<p class="note__content">
+						The street types and landmark names are taken directly from the
+						Google Maps database. They are entered in the language most
+						spoken in the area where they are located, that is in English
+						for Ontario addresses and in French for Quebec addresses.
+					</p>
+				</div>
+	
+				<div id="note-history" class="note note--level0">
+					<p class="note__title">**Note: Search history</p>
+					<p class="note__content">
+						In order to save your history, you need to allow cookies and
+						not be in a &ldquo;private&rdquo; or &ldquo;incognito&rdquo;
+						window.
+					</p>
+				</div>
+				<div id="note-landmarks" class="note note-tip">
+					<p class="note__title">Tip</p>
+					<div class="note__content">
+						<p>For better transit results and validated destinations, look for the following icons  in your search results</p>
+						<dl class="icon-list bordered">
+							<dt class="header-row">Icon</dt>
+							<dd class="header-row">Meaning</dd>
+							<dt>
+							<div class="icon-container icon-container--sm"><img alt="" src="https://plan.octranspo.com/plan/Content/OCTranspoCustom/images/LandmarkOCSuggestion.png"></div>
+							</dt>
+							<dd>Landmark (OC Transpo suggestion for most relevant results)</dd>
+							<dt>
+							<div class="icon-container icon-container--sm"><img alt="" src="https://plan.octranspo.com/plan/Content/Shared/Images/StationSuggestion.png"></div>
+							</dt>
+							<dd>Station</dd>
+							<dt>
+							<div class="icon-container icon-container--sm"><img alt="" src="https://plan.octranspo.com/plan/Content/Shared/Images/StopSuggestion.png"></div>
+							</dt>
+							<dd>OC Transpo bus stop (especailly important for stops where both STO and OC Transpo serve)</dd>
+							<dt>
+							<div class="icon-container icon-container--sm"><img alt="" src="https://plan.octranspo.com/plan/Content/Shared/Images/AddressSuggestion.png"></div>
+							</dt>
+							<dd>Google result</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+	
+			<div
+				aria-labelledby="TP-tab-2"
+				class="tabcontent"
+				id="TP-step2"
+				role="tabpanel"
+				tabindex="0"
+			>
+				<h2 class="">Step 2: Pick the time of your trip</h2>
+	
+				<p class="mb-4">
+					Times use the 24-hour clock format as opposed to
+					&ldquo;a.m.&rdquo; and &ldquo;p.m.&rdquo; times. Enter 00:00 for
+					midnight and 12:00 for noon.
+				</p>
+	
+				<ul class="grid grid--3col">
+					<li class="card">
+						<div class="card--text">
+							<p class="card--title">
+								Select a specific departure or arrival time
+							</p>
+	
+							<p class="card--body">
+								You can plan for your trip to begin at a specific
+								time (Depart At) or to reach your destination for a
+								specific time (Arrive at). By default, the trip time
+								is set to &ldquo;Depart At&rdquo;.
+							</p>
+						</div>
+						<img
+							alt="Screenshot of input fields with the cursor on the 'Depart' and 'Arrive by' toggle element
+							"
+							class="card--image"
+	
+							src="https://www.octranspo.com/images/files/files/travel_planner/help_images/TP-step2-depart.png"
+						/>
+					</li>
+					<li class="card">
+						<div class="card--text">
+							<p class="card--title">
+								<!-- <span class="cue-tag">B</span> -->To select a
+								different day
+							</p>
+	
+							<p class="card--body">
+								Use the drop-down menus next to the hour and minutes
+								figures to choose the time of day for your trip To
+								plan a trip on another day, click on the calendar
+								icon next to today&rsquo;s date
+							</p>
+						</div>
+						<img
+							alt="Screenshot of the date input field with the cursor set on the calendar icon and picking a date from the calendar popup"
+							class="card--image"
+							src="https://www.octranspo.com/images/files/files/travel_planner/help_images/TP-step2-date.png"
+						/>
+					</li>
+					<li class="card">
+						<div class="card--text">
+							<p class="card--title">
+								<!-- <span class="cue-tag">C</span> -->To select a
+								different month
+							</p>
+	
+							<p class="card--body">
+								You can even select a date next month by clicking
+								the right arrow next to the month:
+							</p>
+						</div>
+						<img
+							alt="Screenshot of the date input field with the cursor on the arrow pointing right on the top right corner of the calendar popup. "
+							class="card--image"
+							src="https://www.octranspo.com/images/files/files/travel_planner/help_images/TP-step2-month.png"
+						/>
+					</li>
+				</ul>
+			</div>
+	
+			<div
+				aria-labelledby="TP-tab-3"
+				class="tabcontent"
+				id="TP-step3"
+				role="tabpanel"
+				tabindex="0"
+			>
+				<h2 class="">
+					Step 3: Get your trip plan results: choosing the best you
+				</h2>
+	
+				<p class="mb-2">
+					The visual display of options lets you quickly see:
+				</p>
+	
+				<div class="grid grid-1fr-2fr sub-section">
+					<ul>
+						<li>Start time</li>
+						<li>Walking distance</li>
+						<li>Number of transfers</li>
+						<li>Route and line numbers</li>
+						<li>Transfer periods</li>
+						<li>Arrival time</li>
+					</ul>
+	
+					<div>
+						<img
+							alt="Example of Travel Plan results from Rideau centre to 1500 St. Laurent with trip options at the top, trip details on the left and map with the trip highlighted on the right"
+							class="card--image__4-3"
+							src="https://www.octranspo.com/images/files/travel_planner/help_images/TP-results.png"
+						/>
+						
+						<!-- <div class="note">
+									<p class="card--title">Service note</p>
+									<p class="card--body">Click to view a service notice related to a stop or trip. This may be a trip-specific destination, a routing detour or a caution order.</p>
+								</div>-->
+					</div>
+				</div>
+				<div class="note note-tip">
+					<p class="note__title">Tip</p>
+
+					<p class="site-note__body">
+						When you generate a travel plan, you will be given
+						many trip options. The default trip plan
+						(highlighted in yellow) is best most customers.
+					</p>
+				</div>
+
+
+				<div class="accordion-container accordion-container--simple bordered">
+					<style type="text/css">
+						.card--text__whiteBG {
+							background-color: none;
+							padding: 0;
+						}
+
+						.cards--list {
+							margin: 0;
+						}
+
+						.cards--list .card {
+							margin: 0;
+						}
+
+						@media (max-width: 575.98px) {
+							.trip-plan-legend .card {
+								align-items: start;
+								flex-direction: row;
+							}
+						}
+					</style>
+					<h3 id="placeholderID-acc1" class="accordion">
+						How to read the trip plan
+					</h3>
+					<div class="accordion-content">
+
+						<ul class="grid grid--3col x-scroll--none trip-plan-legend">
+							<li class="card card--whiteBG">
+								<div class="TP_legend-BG selected">
+									<img
+										alt="Black arrow pointing right on a narrow yellow background - an example of an active (selected) travel plan
+										"
+										class="icon"
+										src="https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/ActiveTravelPlanIndicator.png"
+									/>
+								</div>
+	
+								<div class="card--text__whiteBG">
+									<p class="card--title">
+										Default or selected trip plan option
+									</p>
+	
+									<p class="card--body">
+										The yellow highlight and arrow mean this is
+										the trip described below. The time next to
+										the arrow is the trip&rsquo;s start time.
+									</p>
+								</div>
+							</li>
+							<li class="card">
+								<div class="TP_legend-BG selected start-end">
+									<p>10:23</p>
+	
+									<p class="mobile-hide">10:57</p>
+								</div>
+	
+								<div class="card--text__whiteBG">
+									<p class="card--title">
+										Trip start/arrival times
+									</p>
+	
+									<p class="card--body">
+										The time on the left is the start time of
+										your trip. (When you leave your origin),
+										while the time on the right is the time you
+										should reach your destination under normal
+										traffic conditions.
+									</p>
+								</div>
+							</li>
+							<li class="card">
+								<div class="TP_legend-BG walking">
+									<img
+										alt="Person walking icon on a narrow blue and light blue hatched background - an example of a walking segment in a travel plan
+										"
+										class="icon"
+										src="https://plan.octranspo.com/plan/Content/Shared/Images/WhiteWalk.png"
+									/>
+								</div>
+	
+								<div class="card--text__whiteBG">
+									<p class="card--title">Walking segment</p>
+	
+									<p class="card--body">
+										Walking segment. The width of this band indicates the relative walking distance: the narrower the band, the shorter the distance; the wider the band, the longer the walk
+									</p>
+								</div>
+							</li>
+							<li class="card">
+								<div class="TP_legend-BG route">
+									<img
+										alt="Bus icon on a narrow dark blue background - an example of a transit bus route portion of a travel plan
+										"
+										class="icon"
+										src="https://plan.octranspo.com/plan/Content/Shared/Images/WhiteBus.png"
+									/>
+								</div>
+	
+								<div class="card--text__whiteBG">
+									<p class="card--title">Bus route segment</p>
+	
+									<p class="card--body">
+										The route number is clearly indicated in the
+										preview. The width of the band represents
+										the relative time aboard the bus.
+									</p>
+								</div>
+							</li>
+							<li class="card">
+								<div class="flex gap-0_5 otrain-segment">
+									<div class="TP_legend-BG line1">
+										<img
+											alt="active trip plan indicator icon"
+											class="Train icon on a narrow red background - an example of a transit train line portion of a travel plan"
+											src="https://plan.octranspo.com/plan/Content/Shared/Images/WhiteTrain.png"
+										/>
+										<span class="mobile-hide">1</span>
+									</div>
+	
+									<div class="TP_legend-BG line2">
+										<img
+											alt="Train icon on a narrow green background - an example of a transit train line portion of a travel plan
+											"
+											class="icon"
+											src="https://plan.octranspo.com/plan/Content/Shared/Images/WhiteTrain.png"
+										/>
+										<span class="mobile-hide">2</span>
+									</div>
+								</div>
+	
+								<div class="card--text__whiteBG">
+									<p class="card--title">O-Train segment</p>
+	
+									<p class="card--body">
+										The line number is clearly indicated in the
+										preview. The width of the band represents
+										the relative time aboard the Train.
+									</p>
+								</div>
+							</li>
+							<li class="card">
+								<div class="TP_legend-BG wait">.</div>
+	
+								<div class="card--text__whiteBG">
+									<p class="card--title">
+										Transfer or layover time
+									</p>
+	
+									<p class="card--body">
+										The width of the band represents the
+										relative time waiting to transfer between
+										routes.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<h3 class="accordion" tabindex="0">Print your Travel Plan</h3>
+	
+					<div class="accordion-content">
+						<p class="card--title">Print your Travel Plan</p>
+	
+						<p class="card--body">
+							Your Travel Plan is available in a printer-friendly
+							version. Simply click in the printer icon
+							<span class="icon-container icon-container--sm">
+								<img
+									alt="Printer icon on a dark grey background
+									"
+									class="icon"
+									src="https://www.octranspo.com/images/files/icons/tp_print.svg"
+								/>
+							</span>
+							on the top right corner of the plan description.
+						</p>
+					</div>
+	
+					<h3 class="accordion" tabindex="0">
+						Get earlier or later trip plans
+					</h3>
+	
+					<div class="accordion-content">
+						<p class="card--title">Get earlier or later trip plans</p>
+	
+						<p>
+							You can check earlier and later trip options by clicking
+							the grey bands as above and below your trip plan results.
+						</p>
+					</div>
+	
+					<h3 class="accordion" tabindex="0">
+						Advanced options (Service options)
+					</h3>
+	
+					<div class="accordion-content">
+						<p>
+							Use the Travel Planner&rsquo;s Service options to
+							customize your trip even more:
+						</p>
+	
+						<ul>
+							<li>
+								Filter by vehicle type (bus or train) &mdash; If you
+								would prefer to not use a vehicle type, click its
+								icon to uncheck it
+							</li>
+							<li>
+								Filter out school routes (600s) or special event
+								routes (400s and 450s) &mdash; Click to uncheck
+							</li>
+							<li>Exclude STO routes &mdash; Click to uncheck</li>
+							<li>
+								Combining cycling and transit to open trip options beyond walking distance
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="accordion-container sub-section">
+
+	
+
+				</div>
+			</div>
+		</div>
+	
+		<div class="banner dark banner--key-to-icons">
+			<div class="banner__content">
+				<p class="banner__title">What do the icons mean?</p>
+		
+				<p class="banner__body">
+					Find out the meaning of icons used in the Trip Plan.
+				</p>
+				<a class="btn btn__arrow btn-white borderless "href="">
+					Key to icons page
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<script src="../../app/js/octranspo.js"></script>
+
+</body>
+</html>

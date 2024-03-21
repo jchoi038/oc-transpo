@@ -1,0 +1,36 @@
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex !important;
+    gap: 0.5rem;
+}
+
+.flex-dir-row {
+    flex-direction: row;
+}
+
+.flex-dir-col {
+    flex-direction: column;
+    row-gap: 1rem;
+    @include media-breakpoint-up(sm) {
+        row-gap: 2rem;
+    }
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.flex-jc-c {
+    justify-content: center;
+}
+
+.flex-jc-sb {
+    justify-content: space-between;
+}
+
+.flex-ai-c {
+    align-items: center;
+}

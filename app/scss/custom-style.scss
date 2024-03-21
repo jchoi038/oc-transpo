@@ -1,0 +1,219 @@
+// @forward "globals";
+// @forward 'util';
+// @forward 'layout';
+// @forward 'components';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i'); // import Open Sans font from Google Fonts - https://fonts.google.com/specimen/Open+Sans
+/*!
+OC Transpo Website Styles
+Copyright 2019 OC Transpo
+Authors: Justin MacNeil, Tashana Allen (RealDecoy)
+*/
+
+// The contents of this file are compiled to themes/user/site/octranspo/assets/css/style.css
+
+/*
+
+Grid System:
+
+The website uses Bootstrap's grid system set to an eight column grid. Individual elements can span between 1 and 8 columns. Each set of columns should be wrapped in a <div class="row">.
+
+To set a default column width for the smallest breakpoint, use "col-(number from 1-8)" classes.
+
+Override this at higher breakpoints using col-(breakpoint) classes (i.e, "col-8 col-md-4" will be full width at the xs and sm breakpoints and half width at md and higher breakpoints).
+
+The following breakpoints will be applied based on the window width:
+
+xs: 0-575px
+sm: 576px+
+md: 768px+
+lg: 992px+
+xl: 1200px+
+
+CSS can also be applied to specific breakpoints using "@include media-breakpoint-up", "@include media-breakpoint-down" and "@include media-breakpoint-between". i.e,
+
+@include media-breakpoint-up(md) { // applied to md and larger breakpoints. Equivalent to @media (min-width: 768px)
+	//css
+}
+
+@include media-breakpoint-down(xl) { //applied to all breakpoints below xl. Equivalent to @media (max-width: 1199.98px)
+	//css
+}
+
+@include media-breakpoint-between (sm, md) { //applied to all breakpoints between sm and md. Equivalent to @media (min-width: 576px) and (max-width: 767.98px)
+	//css
+}
+
+More information on the grid system is available at https://getbootstrap.com/docs/4.0/layout/grid/
+*/
+
+$grid-columns:      8; // Sets the grid to 8 columns wide
+$grid-gutter-width: 55px; //Default width between columns
+$transition-collapse: none;
+
+@import "reset"; // reset to reduce browser display inconsistencies
+@import "bootstrap/mixins"; // common sass mixins. see https://gist.github.com/anschaef/d7552885c0e1f127cf8830d3bbf6e4b1 for more information.
+@import "bootstrap/bootstrap-grid"; // bootstrap grid
+// @import "bootstrap/navbar"; // bootstrap navbar. used for mobile nav
+@import "bootstrap/transitions"; // bootstrap css transitions
+@import "typography"; // general font and header styles
+// @import "navigation"; // main/footer nav
+@import "homepage"; // homepage styles
+@import "fares"; // page styles
+@import "page"; // page styles
+@import "costs"; // page styles
+@import "accessibility"; // Accessibile transit section styles
+@import "busfleets"; // Bus fleets page styles
+@import "routes"; // Route schedules page styles
+@import "destinations"; // Ottawa Destinations section styles
+@import "stations"; // Stations section styles
+@import "alerts"; // Alerts page + homepage alerts styles
+@import "alert-registration"; // Alert registration application styles
+@import "contact"; // Contact page styles
+@import "search"; // Search results page styles
+@import "reports-stats"; // Reports & Stats page styles
+@import "jquery.fancybox"; // fancybox modal window styles
+@import "ready-for-rail"; // ready for rail page styles
+@import "otrain-launch"; // LRT launch styles (animated logo, countdown, welcome aboard nav
+@import "service-change"; // Service change styles - countdown, logo image, modal pop-up
+@import "virtual-museum"; // Virtual Museum styles (timeline, before/after and colourized images)
+@import "print"; // print styles
+@import "stage-2"; // Stage 2 styles
+@import "stage2-page"; // Stage 2 Style Guide 
+
+
+@import "badges";//new
+@import "tables"; //new
+@import "containers"; //new
+@import "globals"; //new
+@import "lists"; //new
+@import "flex"; //new
+@import "buttons"; //new
+@import "grid";//new
+@import "notes";//new
+@import "cards";//new
+@import "tabs";//new
+@import "layout";//new
+@import "accordion";//new
+@import "util";//new
+@import "banners";//new
+@import "pre";//new
+// @import "bread-crumbs";
+
+
+
+.clearfix:after { // clearfix to set the height of a container to include all floated elements within
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+.visuallyhidden { // use this class to hide elements visually while keeping the text visible to screen readers and allowing users to tab to the element (i.e, the "Skip to content" link in the header).
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px; width: 1px;
+	margin: -1px; padding: 0; border: 0;
+}
+
+.invalid-field{
+	box-shadow:0 0 3px #ff0000;
+}
+
+.valid-field{
+	box-shadow:0 0 3px #61ffa0;
+}
+
+@include media-breakpoint-up(lg) {
+	.container {
+		max-width: 100%;
+	}
+
+	.mobile-only{
+		display: none;
+	}
+}
+
+@media (min-width: 1440px) {
+	.container {
+		max-width: 1440px;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.col-8 {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.mobile-only{
+		display: inline-block;
+	}
+}
+
+
+
+a.blue-button {
+	background-color: #016b9d;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 35px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0px 25px 0px 10px;
+    background-image: url(../img/right_white_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+a.learn-more{
+	color: #000000;	
+	font-size: 15px;
+	font-weight: bold;	
+	text-decoration: none;
+	display: inline-block;
+	background-image: url(../img/right-arrow.svg);
+	background-repeat: no-repeat;
+    background-position: 100% center;
+    padding-right: 16px;
+}
+
+h2.border-blue{
+	&:before{
+		border-top: 4px solid #016b9d;
+		content: "";
+		width: 64px;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+h2.border-green{
+	&:before{
+		border-top: 4px solid #37B249;
+		content: "";
+		width: 64px;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+//image-gallery-carousel-main class is for the photo galleries on the main site only
+//using different class since main site has narrower grid
+.image-gallery-carousel-main {
+	@media (max-width: 767px) {
+		#gallery-subhead-arrows-main{
+			padding-left: 0rem !important;
+			padding-right: 0rem !important;
+			.subhead{
+				font-size: 1.15rem !important;
+			}
+		}
+	}
+}
+
+

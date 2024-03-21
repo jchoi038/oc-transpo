@@ -1,0 +1,208 @@
+/* Stations */
+
+#zoomPanObj { width: 100%; float: left; }
+
+/*#zoomContainer { overflow: hidden; clear: both; width: 100%; cursor: -webkit-grab; cursor: grab; }*/
+#zoomContainer { overflow: hidden; clear: both; width: 100%; position: relative; cursor: -webkit-grab; cursor: grab; }
+
+/*#objWrap { width: 100%; position: relative; }*/
+#objWrap { width: 100%; position: absolute; }
+
+#objWrap>img { width: 100%; position: absolute; margin: 0; }
+
+#objWrap>div { width: 100%; height: 100%; position: absolute; margin: 0; }
+
+#zoomBtns { position: absolute; bottom: 2%; right: 2%; height: 40px; width: 84px; }
+
+#zoomIn, #zoomOut { height: 100%; width: calc(50% - 2px); cursor: pointer; float: left; background: url('../img/stations/ui/zoomIn.png'); background-size: 100%; opacity: 0.5; }
+
+#zoomOut { background: url('../img/stations/ui/zoomOut.png'); background-size: 100%; margin-left: 4px; }
+
+#zoomIn:hover, #zoomOut:hover { opacity: 1; }
+
+/*---------------------------- STATIONS PAGES ----------------------------*/
+
+#stationWrap { margin: 20px; }
+
+#stationWrap p, #stationWrap li { font-size: 1.1em; }
+
+#stationWrap h1, #stationWrap h2, #stationWrap h3, #stationWrap h4 { color: black; }
+
+#stnCats { width: 100%; float: left; }
+
+#stnCats .featIcon { margin: 12px 4px 12px 0; }
+
+#stnCats .featIcon:hover { background-position-y: -52px; }
+
+#stnInfo { display: table; width: 100%; border-spacing: 0 15px; }
+
+#stnInfo .table-row { display: table-row; }
+
+#stnScheds, #stnOtrain { width: 48.5%; text-align: center; background: #ededed; padding-bottom: 1.8em; display: table-cell; }
+
+#stnScheds { margin-right: 3%; }
+
+ul#otrnCons { margin-top: 15px; }
+
+#otrnCons li { margin: 3px; }
+
+#stnTabs .stnTab { width: calc(25% - 50px); float: left; color: #fff; border-bottom: 50px solid #eb1e32; border-left: 25px solid transparent; border-right: 25px solid transparent; height: 0; }
+
+#stnTabs .stnTab:hover { border-bottom: 50px solid #af002e; }
+
+#stnTabs .stnTab:hover span { color: #fff; }
+
+#stnTabs .stnTab.selected { border-bottom: 50px solid #ededed; color: #000; cursor: context-menu; }
+
+#stnTabs .stnTab.selected:hover span { color: #000; }
+
+#stnTabs .stnTab span { text-align: center; width: 100%; float: left; margin-top: 17px; font-size: 1.4em; }
+
+/*#stnMaps { display: inline-block; }*/
+
+#stnMaps .stnMap { display: none; width: calc(100% - 40px); background-color: #ededed; padding: 20px; float: left; }
+
+#stnMaps .stnMap.selected { display: block; }
+
+#stnMaps .stnMap img { width: 100%; }
+
+#stnServes { display: none; }
+
+#stnFeatures ul .stnFeat { background-color: #f9f9f9; padding: 1.2em; }
+
+#stnFeatures ul:nth-child(odd) .stnFeat { background-color: #ededed; }
+
+#stnFeatures .featIcon { margin-bottom: 12px; background-position-y: -104px; }
+
+#stnFeatures h3 { float: left; clear: none; margin-left: 12px; }
+
+#stnFeatures ul:last-child h3 { margin-left: 0; margin-bottom: 13px; }
+
+#stnFeatures p { clear: both; margin-top: 12px; }
+
+/*Station Feature Icons*/
+.featIcon { width: 48px; height: 49px; float: left; background: url(/images/files/stations/ui/stnFeatIcons.png) no-repeat; }
+
+.featIcon.service_center	{ background-position-x: -312px !important; }
+
+.featIcon.bicycle			{ background-position-x: 0px !important; }
+
+.featIcon.o_train			{ background-position-x: -52px !important; }
+
+.featIcon.park_ride			{ background-position-x: -104px !important; }
+
+.featIcon.ticket_machine	{ background-position-x: -364px !important; }
+
+.featIcon.washroom			{ background-position-x: -260px !important; }
+
+.featIcon.accessibility		{ background-position-x: -416px !important; }
+
+.featIcon.cab				{ background-position-x: -156px !important; }
+
+.featIcon.drop_off			{ background-position-x: -208px !important; }
+/*Station Feature Icons End*/
+
+/*Dynamic Map App*/
+
+#stnMapWrap { width: 100% }
+	
+#mapSect { width: 100%; float: left; position: relative; }
+
+#rightColumn {display: none;}
+
+.stopMarker { cursor: pointer; z-index:999; width: 2.54%; background-image: url("/images/files/stations/ui/stop_marker_n.png"); position: absolute; background-size: 100%; background-repeat: no-repeat; }
+
+.stopMarker:hover { background-image: url("/images/files/stations/ui/stop_marker_o.png"); }
+
+.stnMarker { cursor: pointer; z-index:999; width: 1%; background-color: #000; border-radius: 1000px; position: absolute; background-repeat: no-repeat; }
+
+.stnMarker.r45 { transform: rotate(45deg); }
+
+.stnMarker.r90 { transform: rotate(90deg); }
+
+.stnMarker.r135 { transform: rotate(135deg); }
+
+.stnMarker:hover div, .stnMarker:focus div { background-color: #af002e; }
+
+.stnMarker div { background-color: #eb1e32; margin: 10%; height: 80%; width: 80%; border-radius: 1000px; }
+
+.stnMarker.m div { height: 90.5%; }
+
+.stnMarker.l div { height: 93%; }
+
+.stnMarker.xl div { height: 93.5%; }
+
+#mapMarks { position:relative; float:left; position: absolute; width: 100%; height: 100%; }
+
+#map img { width: 100%; }
+
+#stopWindow { display: none;/* border-top: 3px solid #ED1B2F;*/ margin: 10px; width: 400px; height: 210px; position: absolute; z-index:1000; background-color: #fff; }
+
+/*stopWindowWrap { position: relative; }*/
+
+.routes th { border: 0px; background-color: #444; color: #fff; padding: 3px; }
+
+.routes { margin-bottom: 0; width: 100%;  border-collapse: collapse; font-size: 1.2em; }
+
+.routes tbody tr:hover { background-color: #af002e !important; color: #fff; cursor: pointer; }
+
+.routes td { padding: 10px 1%; text-align: center; }
+
+.closeWindow { float: right; text-decoration: none !important; margin-top: 5px; font-size: 1.4em; font-weight: bold; margin-right: 7px; }
+
+.closeWindow.noteClose { margin: 0 5px 0 0; color: #444; }
+
+.stopName { float: left; margin-top: 0}
+
+#stopWindowBody { background-color: #F3F3F3; width: 100%; overflow-y: scroll; height:100%; }
+
+#stopWindowHead { padding: 0 5px 0 5px; }
+
+#stnName { cursor: pointer;  text-align: center; font-size: 2em !important; font-weight: bold; height: 100%; margin-top: -2px; }
+
+.stnLink { cursor: pointer; /*border-top: 3px solid #ED1B2F; */float:left; text-align:center; width: 25%; font-size: 1.3em; padding: 12px 0; /*margin-bottom: 10px;*/ background-color: #F3F3F3; }
+
+.stnLink:hover { background-color: #DFDFDF; }
+
+#expandWindow { float: right; margin: 10px 7px 0 0; }
+
+#shrinkWindow { float: right; margin: 10px 7px 0 0; }
+
+#stopBox { display:none;/* border-top: 3px solid #ED1B2F;*/ float:left; /*width: 670px;*/ width: 100%; position: relative; }
+
+#stopBoxHead { width: 100%; float: left; }
+
+#stopBoxBody table { width:49.5%; float: left; }
+
+#stopBoxBody table:nth-child(1) { margin-right: 1%; }
+
+#stopBoxBody table:nth-child(1) .hideRow { display: none; }
+
+#btnLinks { width:100%; display: none; float: left; background-color: #F3F3F3; }
+
+.btnLink{ font-size:1.1em; cursor: pointer;/* border-top: 3px solid #ED1B2F;*/ float:right; text-align:center; width: 50%; font-size: 1.3em; padding: 12px 0; background-color: #F3F3F3; }
+
+.btnLink:hover { background-color: #DFDFDF; }
+
+.multiStop { text-align: center; /*width: 100%; float: left;*/ font-size: 14pt; text-decoration: underline; }
+
+.multistop:hover { background-color: #FFC107; color: #000; cursor: pointer;}
+
+/*.pltfrm { position: absolute; color: black; font-weight: bold; font-size: 180%; margin-top: -3px; }*/
+
+.rteNoteWrap { background-color: #fff; border: 2px solid #444; display: none; position: absolute; top: 0; left: -2; width: 100%; }
+
+.rteNoteWrap p { font-size: 1.2em; padding: 0 10px; }
+
+.rteLink { color: #444; }
+
+.noRtes { color: red; font-weight: bold; font-size: 12pt; width:95%; display: none; margin-left: 5%; }
+
+@media print {
+	.rteNoteWrap { top: auto !important; }
+	
+	.stopMarker { background: none !important; }
+}
+/*Dynamic Map App End*/
+
+/*-------------------------- STATIONS PAGES END --------------------------*/

@@ -1,0 +1,38 @@
+.note{
+    padding: 0.5rem 1rem;
+    border-left: 3px solid var(--gray--300);
+    background: var(--gray--50);
+    margin-bottom: 0.5rem;
+    @include media-breakpoint-down(md) {
+        font-size: 0.875rem;
+    }
+    &__title{
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+
+        
+    }
+    &__content{
+        p:not(:last-child){
+            margin-bottom: 0.25rem;
+        }
+    }
+    &-warning{
+        padding: 0.75rem 1rem;
+        background: var(--line3--50);
+        border-left: 3px solid var(--line3--600);
+        .note__title{
+            color: var(--line3--700);
+        }
+    }
+    &-tip{
+        border-color:var(--line4--600);
+        background: transparent;
+    }
+
+    &--level0{
+        padding: 0.5rem;
+        background: transparent;
+    }
+}
+    

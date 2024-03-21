@@ -1,0 +1,50 @@
+.accessibility-transit, .paratranspo, .senior-riders {
+	background-image: url('../img/o-medium-left.jpg'); 
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-bottom:60px;
+	padding-top:60px;
+
+	@include media-breakpoint-down(sm){
+		padding-top:0;
+	}
+
+	a{
+		display: block;
+	    color: #000000;
+	    font-size: 20px;
+	    font-size: 1.25rem;
+	    font-weight: 600;
+	    text-decoration: none;
+	    line-height: 28px;
+	    padding-bottom: 15px;
+
+	    &:hover{
+	    	text-decoration: underline;
+	    	color: #E71324;
+	    }
+
+	    @include media-breakpoint-down(sm) {
+	    	font-size:17px;
+	    	font-size:1.0625rem;
+	    }
+	}
+}
+
+.paratranspo{
+	background-image: url('../img/photo-para.png');
+	background-size: cover;
+    background-position: center;
+
+   @include media-breakpoint-down(sm){
+		padding-top:40px;
+	}
+}
+
+.senior-riders{
+	background-image: url('../img/o-medium.jpg');
+	background-position: right bottom;
+	@include media-breakpoint-down(sm){
+		padding-top:40px;
+	}
+}

@@ -1,0 +1,13 @@
+.icon-container{
+    width: fit-content;
+    display: flex;
+
+    &--tiny{
+        height:  1rem;
+    }
+
+    &--sm{
+        width: 1.5rem;
+    }
+
+}

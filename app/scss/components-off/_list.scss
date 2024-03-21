@@ -1,0 +1,35 @@
+@use '../globals' as g;
+
+.timeline{
+        position: relative;
+    li.timeline__list{
+        display: flex;
+
+        &:before{
+            content: "";
+            display: block;
+            min-width: 0.5rem;
+            margin-right: 1rem;
+            margin-top: 0.4rem;
+            height: 0.5rem;
+            background-color: #FFFF84;
+            border-radius: 999px;
+        }
+
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+
+
+    &__body{
+        line-height: 1.6rem;
+
+    }
+
+    &__year{
+        font-weight: bold;
+        font-size: 1.25rem;
+        color: var(--charcoal--800);
+    }
+}

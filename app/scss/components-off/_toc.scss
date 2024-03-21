@@ -1,0 +1,65 @@
+@use '../util' as u;
+.toc{
+    &--container {
+        background-color: #fff;
+        max-width: 100%;
+        
+        
+        @include u.media-breakpoint-up(lg) {
+            max-width: 75%;
+            margin-left: auto;
+
+        }
+
+        &-sticky{
+            position: sticky;
+            top: 1rem;;
+        }
+        
+
+        &__link:last-child{
+            padding: 0 0 0 1rem;
+
+        }
+    }
+
+    &--list{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    &__link{
+        padding: 1rem 0 1rem 1rem;
+        border-left: 1px solid  var(--gray--300);
+        color: var(--gray--900);
+        font-size: 0.875rem;
+        font-weight: 600;
+
+        &:hover{
+            color: var(--oc-red--700);
+        }
+    }
+
+
+    &__link.active{
+        border-left: 1px solid var(--oc-red--700);
+        background-color: var(--oc-red--50);
+        color: var(--oc-red--700);
+        font-weight: 600;
+    }
+
+    &--title {
+        // font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+    
+    
+}
+
+
+@media (max-width: 767.98px) {
+    .toc--container {
+        max-width: none;
+    }
+}

@@ -1,0 +1,56 @@
+.ready-for-rail{
+	background-image: url('../img/left-circle.png'), url('../img/medium-bottom-right.png'); 
+	background-repeat: no-repeat, no-repeat;
+	background-position: left 30%, right bottom;
+
+	h1{
+		margin-bottom:65px;
+
+		@include media-breakpoint-down(md){
+			margin-bottom:30px;
+		}
+
+	}
+
+	.nav-section{
+		margin-top:60px;
+		.nav-block{
+			margin-bottom:65px;
+		}
+		.nav-heading{
+			background-color: #FFC600;
+			margin-bottom:20px;
+			a{
+				color:#000000;
+				text-decoration: none;
+				line-height:30px;
+				display:block;
+				padding: 0 8px;
+				font-weight: 600;
+				background-image:url('../img/right-arrow-black.svg');
+				background-repeat: no-repeat;
+				background-position: 97% center;
+			}
+		}
+		.nav-links{
+			a{
+				display:block;
+				text-decoration:none;
+				line-height: 30px;
+				padding-left:8px;
+			}
+		}
+		.secondary-nav-links{
+			border-top: 1px solid #000000;
+			padding-top: 5px;
+			a{
+				color: #000000;
+				text-decoration: none;
+				display:block;
+				line-height: 30px;
+				padding-left:8px;
+			}
+
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.icon-container{
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &--tiny{
+        height:  1rem;
+    }
+
+    &--sm{
+        min-width: 1.5rem;
+        max-width: 2rem;
+        height: 1.5rem;
+        @include media-breakpoint-down(sm) {
+            height: 1.25rem;
+        }
+        
+    }
+
+    &--md{
+        min-width: 2rem;
+        max-width: 3rem;
+        height: 2rem;
+    }
+    :first-child{
+        max-height: 100%;
+
+    }
+
+}
+

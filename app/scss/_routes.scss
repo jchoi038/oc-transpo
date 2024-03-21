@@ -1,0 +1,247 @@
+/* Routes */
+
+.routes__header {
+	/* margin-top: 70px;
+	margin-bottom: 60px; */
+}
+
+.routes .breadcrumbs {
+	li:after {
+		top: -1px;
+	}
+}
+
+.routes-trip-planner-callout {
+	img {
+		width: 305px;
+		float: right;
+		margin: 0;
+		@include media-breakpoint-down(md) {
+			float: none;
+			width: auto;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.routes .btn-get-travel-plan-alt {
+		border-left: 1px solid #931516;
+		border-right: 1px solid #931516;
+		height: auto;
+		padding: 1px 0;
+		span {
+			background-position: center;
+			display: block;
+			margin: 0 auto;
+			padding: 0.5em 0;
+		}
+		&:before, &:after {
+			display: none;
+		}
+	}
+}
+
+.routes {
+	h1 span.heading-notice {
+		font-size: 16px;
+		font-size: 1rem;
+		line-height: 1.5;
+		display: block;
+		font-weight: normal;
+		margin-top: 1em;
+	}
+
+	.select-date, .select-route {
+		label {
+			display: block;
+			font-size: 14px;
+			font-size: 0.875rem;
+			font-weight: bold;
+			line-height: 2;
+			margin: 1em 0 0;
+		}
+
+		select {
+			font-size: 1rem;
+			height: 32px;
+			width: 300px;
+			&#timetableDate {
+				display: block;
+				float: left;
+				margin-right: 10px;
+			}
+		}
+
+		input#datepicker {
+			display: none;
+		}
+
+		.ui-datepicker-trigger {
+			
+		}
+
+		input[type="submit"] {
+			background-color: #016b9d;
+			background-position: right 13px center;
+			border: 1px solid #016b9d;
+			border-radius: 2px;
+			box-shadow: none;
+			color: #fff;
+			cursor: pointer;
+			display: block;
+			font-size: 1rem;
+			margin: 1em 0 0;
+			padding: 10px 35px 10px 25px;
+			text-align: center;
+			min-width: 100px;
+		}
+	}
+}
+
+.route-sidebar {
+	a {
+		color: #FFFFFF;
+		font-size: 14px;
+		font-size: 0.875rem;
+		font-weight: bold;
+		text-decoration: none;
+		background: #038700;
+		padding: 0 22px 0 8px;
+		border-radius: 2px;
+		line-height: 30px;
+		display: block;
+		margin-bottom: 1em;
+		//background-image: url(../img/white_arrow_closed.svg);
+		//background-repeat: no-repeat;
+		//background-position: 92% center;
+		&:after {
+			background: url(../img/white-arrow-closed.svg) no-repeat 0px 0px;
+			background-size: 7px 11px;
+			content: '';
+			position: absolute;
+			right: 8px;
+			top: 50%;
+			margin-top: -5px;
+			width: 7px;
+			height: 11px;
+			display: block;
+		}
+	}
+}
+
+img.ui-datepicker-trigger {
+	cursor: pointer;
+}
+
+#timetable {
+	margin-bottom: 35px;
+	@include media-breakpoint-up(md) {
+		margin-bottom: 70px;
+	}
+	.tab {
+		text-align: center;
+		font-size: 12px;
+		font-size: 0.75rem;
+		width: 100%;
+	}
+
+	#dir0 > p, #dir1 > p {
+		margin-top: 0;
+		text-align: left;
+	}
+
+	#dir0 > p, #dir1 > p {
+		background-color: #fff;
+		border: 1px solid #038700;
+		color: #000;
+		font-size: 14px;
+		font-size: 0.875rem;
+		padding: 5px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.tab-content {
+			overflow-x: scroll;
+		}
+	}
+
+	table {
+		tr {
+			&:nth-child(even) {
+				background: #f1f1f1;
+			}
+			&:nth-child(odd) {
+				background: #fff;
+			}
+		}
+
+		td, th {
+			padding: 0.25em;
+		}
+
+		th {
+			background: #008BC2;
+			font-weight: bold;
+		}
+
+		@include media-breakpoint-down(sm) {
+			table-layout: auto;
+		}
+	}
+
+	.sticky-header-wrap {
+		overflow: scroll;
+		position: fixed;
+		top: 0;
+		table {
+			margin-bottom: 0;
+		}
+	}
+
+	.tmtbl_date {
+		margin-top: 27px;
+		@include media-breakpoint-up(lg) {
+			float: right;
+		}
+	}
+
+	.tab_navigation{
+		@extend .clearfix;
+		margin-top: 30px;
+		border-bottom: 3px solid #C80D1A;
+		padding-left:0;
+		padding-right: 0;
+
+		a {
+			width: 50%;
+			float: left;
+			background: #ffff;
+			line-height: 40px;
+			text-align: center;
+			font-size: 12px;
+			font-size:0.75rem;
+			font-weight: bold;
+			color: #000000;
+			border: 1px solid #C2C2C2;
+			border-bottom:none;
+			text-decoration:none;
+			overflow: hidden;
+		}
+
+		a.active, li.current a {
+			background: #C80D1A;
+			color: #FFFFFF;
+			border-right: 1px solid #C80D1A;
+			border-left: 1px solid #C80D1A;
+		}
+
+		a:last-child {
+			border-left:none;
+		}
+
+		a:first-child {
+			border-right:none;
+		}
+	}
+
+}

@@ -1,0 +1,105 @@
+
+.banner {
+	border: 1px solid var(--gray--100);
+	padding: 1.5rem 1rem;
+	gap: 1rem;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    &__content {
+        width: 60%;
+        @include media-breakpoint-up(md) {
+            width: 75%;
+            }
+        }
+	
+
+	&__title {
+        font-size: 1.5rem;
+        color: var(--charcoal--800);
+		font-weight: 700;
+        line-height: 1.15;
+	}
+	&__body {
+        margin-bottom: 1.5rem;
+	}
+
+    &--key-to-icons{
+        background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_2.svg");
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-size: contain;
+        background-position-x: calc(100% + 20vw);
+        @include media-breakpoint-up(md) {
+            background-size: contain;
+            background-position-x: calc(100% - 1rem);
+            }
+        }
+    &--transparency{
+        background-image: url("https://www.octranspo.com/images/files/banners/banner_transparency-test.svg");
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-size: contain;
+        background-position-x: calc(100% + 20vw);
+        @include media-breakpoint-up(md) {
+            background-size: contain;
+            background-position-x: calc(100% - 1rem);
+            }
+        }
+    &--new-ways-to-bus{
+        background-image: url("https://www.octranspo.com/images/files/banners/banner_new-ways-to-bus.svg");
+        background-repeat: no-repeat;
+        background-color: var(--new--800);
+        background-size: 200%;
+        background-position-x: 80%;
+        background-position-y: 50%;
+        @include media-breakpoint-up(md) {
+            background-size: cover;
+            background-position-x: center;
+
+        }
+        p.banner__title {
+            color: #fff;
+        }
+        p.banner__body {
+            color: var(--transparent--800);
+        }
+
+        .banner__content {
+            width: 80%;
+            @include media-breakpoint-up(md) {
+                width: 75%;
+                }
+            }
+    }
+    &.dark{
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+            background-color: var(--charcoal--800);
+        }
+        p.banner__title {
+            color: #fff;
+        }
+        p.banner__body {
+            color: var(--transparent--800);
+        }
+    
+    }
+
+    
+
+	
+
+    &--key-to-icons.dark{
+        background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_dark.svg");
+    
+    }
+}

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../dist/custom-style.css" />
+		<link rel="stylesheet" href="./TPG_style.css" />
+
+		<title>Travel Planner Guide</title>
+	</head>
+	<body class="container main-content">
+		<link href="https://www.octranspo.com/images/files/styles/custom-style.css" rel="stylesheet" />
+		<link href="https://www.octranspo.com/images/files/styles/TPG_style.css" rel="stylesheet" />
+		<div id="TPG-page">
+			<section class="features">
+				<div class="mb-2">
+					<p class="subtitle">Overview</p>
+
+					<div>
+						<h2>Travel Planner features</h2>
+
+						<p class="sub-section">
+							Explore the features available on the Travel Planner
+							to help you get customized transit information.
+						</p>
+					</div>
+				</div>
+
+				<div class="features--container mobile-hide">
+					<div class="features--list">
+						<ul>
+						
+							<li
+								class="TPG-feature"
+								data-featureid="TP"
+								tabindex="0"
+							>
+								<p
+									class="feature--title icon icon--m icon--TP"
+									data-featureid="TP"
+								>
+									Trip Plan
+								</p>
+
+								<p
+									class="feature--description"
+									data-featureid="TP"
+								>
+									Provides multiple itineraries to get to your
+									destination so you can choose the best
+									option for you
+								</p>
+							</li>
+							<li
+								class="TPG-feature"
+								data-featureid="RS"
+								tabindex="0"
+							>
+								<p
+									class="feature--title icon icon--m icon--RS"
+									data-featureid="RS"
+								>
+									Route Schedules
+								</p>
+
+								<p
+									class="feature--description"
+									data-featureid="RS"
+								>
+									Gives the passing times for your route
+									for&nbsp;a&nbsp;selected&nbsp;day
+								</p>
+							</li>
+							<li
+								class="TPG-feature"
+								data-featureid="SS"
+								tabindex="0"
+							>
+								<p
+									class="feature--title icon icon--m icon--SS"
+									data-featureid="SS"
+								>
+									Stop Schedules
+								</p>
+
+								<p
+									class="feature--description"
+									data-featureid="SS"
+								>
+									Gives the passing times of all the routes
+									that serve your stop on a selected day
+								</p>
+							</li>
+							<li
+								class="TPG-feature"
+								data-featureid="ND"
+								tabindex="0"
+							>
+								<p
+									class="feature--title icon icon--m icon--ND"
+									data-featureid="ND"
+								>
+									Next Departures
+								</p>
+
+								<p
+									class="feature--description"
+									data-featureid="ND"
+								>
+									Shows you the next scheduled passing times
+									at your stop
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="features--image-container">
+						<div
+							class="feature--image active"
+							data-featureid="TP"
+						></div>
+
+						<div
+							class="feature--image hidden"
+							data-featureid="RS"
+						></div>
+
+						<div
+							class="feature--image hidden"
+							data-featureid="SS"
+						></div>
+
+						<div
+							class="feature--image hidden"
+							data-featureid="ND"
+						></div>
+					</div>
+				</div>
+
+				<div class="features--container mobile-only">
+					<div class="features--list">
+						<ul>
+							<li class="TPG-feature-mobile" data-featureid="TP">
+								<p
+									class="feature--title icon icon--m icon--TP"
+									data-featureid="TP"
+								>
+									Trip Plan
+								</p>
+
+								<p
+									class="feature--description"
+									data-featureid="TP"
+								>
+									Provides multiple itineraries to get to your
+									destination so you can choose the best
+									option for you
+								</p>
+							</li>
+							<li class="TPG-feature-mobile" data-featureid="RS">
+								<p
+									class="feature--title icon icon--m icon--RS"
+									data-featureid="RS"
+								>
+									Route Schedules
+								</p>
+
+								<p
+									class="feature--description"
+									data-featureid="RS"
+								>
+									Gives the passing times for your route for a
+									selected day
+								</p>
+							</li>
+							<li class="TPG-feature-mobile" data-featureid="SS">
+								<p
+									class="feature--title icon icon--m icon--SS"
+									data-featureid="SS"
+								>
+									Stop Schedules
+								</p>
+
+								<p
+									class="feature--description"
+									data-featureid="SS"
+								>
+									Gives the passing times of all the routes
+									that serve your stop on a selected day
+								</p>
+							</li>
+							<li class="TPG-feature-mobile" data-featureid="ND">
+								<p
+									class="feature--title icon icon--m icon--ND"
+									data-featureid="ND"
+								>
+									Next Departures
+								</p>
+
+								<p
+									class="feature--description"
+									data-featureid="ND"
+								>
+									Shows you the next scheduled passing times
+									at your stop
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<script>
+					const features =
+						document.getElementsByClassName("TPG-feature");
+					// 2.get item with class="features--image" and set as image element
+					const featureImages =
+						document.getElementsByClassName("feature--image");
+					// 1. add click event listener to each feature
+					for (let i = 0; i < features.length; i++) {
+						features[i].addEventListener("click", (event) => {
+							// 3. on click get clickedValue for "data-featureID" attribute
+							const clickedValue =
+								event.target.getAttribute("data-featureID");
+
+							// 4. replace image data-featureID to this clickedValue
+							for (let i = 0; i < features.length; i++) {
+								if (
+									featureImages[i].getAttribute(
+										"data-featureID"
+									) == clickedValue
+								) {
+									featureImages[i].classList.add("active");
+									featureImages[i].classList.remove("hidden");
+								} else {
+									featureImages[i].classList.remove("active");
+									featureImages[i].classList.add("hidden");
+								}
+							}
+							// 5. add remove all class active, and add active to the element clicked
+							for (let i = 0; i < features.length; i++) {
+								if (
+									features[i].getAttribute(
+										"data-featureID"
+									) == clickedValue
+								) {
+									features[i].classList.add("active");
+								} else {
+									features[i].classList.remove("active");
+								}
+							}
+						});
+
+						features[i].addEventListener("mouseover", (event) => {
+							console.log(
+								event.target.getAttribute("data-featureID")
+							);
+							// 3. on click get clickedValue for "data-featureID" attribute
+							const clickedValue =
+								event.target.getAttribute("data-featureID");
+
+							// 4. replace image data-featureID to this clickedValue
+							for (let i = 0; i < features.length; i++) {
+								if (
+									featureImages[i].getAttribute(
+										"data-featureID"
+									) == clickedValue
+								) {
+									featureImages[i].classList.add("active");
+									featureImages[i].classList.remove("hidden");
+								} else {
+									featureImages[i].classList.remove("active");
+									featureImages[i].classList.add("hidden");
+								}
+							}
+							// 5. add remove all class active, and add active to the element clicked
+							for (let i = 0; i < features.length; i++) {
+								if (
+									features[i].getAttribute(
+										"data-featureID"
+									) == clickedValue
+								) {
+									features[i].classList.add("active");
+								} else {
+									features[i].classList.remove("active");
+								}
+							}
+						});
+
+						features[i].addEventListener("focus", (event) => {
+							console.log(
+								event.target.getAttribute("data-featureID")
+							);
+							// 3. on click get clickedValue for "data-featureID" attribute
+							const clickedValue =
+								event.target.getAttribute("data-featureID");
+
+							// 4. replace image data-featureID to this clickedValue
+							for (let i = 0; i < features.length; i++) {
+								if (
+									featureImages[i].getAttribute(
+										"data-featureID"
+									) == clickedValue
+								) {
+									featureImages[i].classList.add("active");
+									featureImages[i].classList.remove("hidden");
+								} else {
+									featureImages[i].classList.remove("active");
+									featureImages[i].classList.add("hidden");
+								}
+							}
+							// 5. add remove all class active, and add active to the element clicked
+							for (let i = 0; i < features.length; i++) {
+								if (
+									features[i].getAttribute(
+										"data-featureID"
+									) == clickedValue
+								) {
+									features[i].classList.add("active");
+								} else {
+									features[i].classList.remove("active");
+								}
+							}
+						});
+					}
+				</script>
+			</section>
+
+			<section class="guide-types">
+				<div class="sub-section">
+					<h2>User guides</h2>
+
+					<p>Travel planner guides to help you get started.</p>
+				</div>
+
+				<div class="grid--3col">
+					<div class="image-card">
+						<a
+							class="image-card__link"
+							href="https://staging.octranspo1.com/en/plan-your-trip/travel-planner/travel-planner-guide-new/trip-plan-guide"
+							>Read more about the Trip Plan guide</a
+						>
+
+						<div class="image-card__image-container">
+							<img
+								alt=""
+								src="https://www.octranspo.com/images/files/travel_planner/guide-imageTP.png"
+							/>
+						</div>
+
+						<div class="image-card__text">
+							<h3 class="image-card__title">Trip Plan guide</h3>
+
+							<p class="image-card__body">
+								Learn how to plan your trip,&nbsp;read your trip
+								options, print your results, get earlier/later
+								trip plans, and more.
+							</p>
+							<a class="btn-tertiary btn btn-lg btn__arrow btn-text-only" href="">Learn more</a>
+						</div>
+					</div>
+
+					<div class="image-card">
+						<a
+							class="image-card__link"
+							href="https://staging.octranspo1.com/en/plan-your-trip/travel-planner/travel-planner-guide-new/route-schedules-guide"
+							>Read more about the Route Schedules guide</a
+						>
+
+						<div class="image-card__image-container">
+							<img
+								alt=""
+								src="https://www.octranspo.com/images/files/travel_planner/guide-imageRS.png"
+							/>
+						</div>
+
+						<div class="image-card__text">
+							<h3 class="image-card__title">
+								Route Schedules guide
+							</h3>
+
+							<p class="image-card__body">
+								Learn how to view your route schedule and create
+								custom printable schedule.
+							</p>
+							<a class="btn-tertiary btn btn-lg btn__arrow btn-text-only" href="">Learn more</a>
+						</div>
+					</div>
+
+					<div class="image-card">
+						<a
+							class="image-card__link"
+							href="https://staging.octranspo1.com/en/plan-your-trip/travel-planner/travel-planner-guide-new/stop-schedules-guide"
+							>Read more about the Stop Schedules guide</a
+						>
+
+						<div class="image-card__image-container">
+							<img
+								alt=""
+								src="https://www.octranspo.com/images/files/travel_planner/guide-imageSS.png"
+							/>
+						</div>
+
+						<div class="image-card__text">
+							<h3 class="image-card__title">
+								Stop Schedules guide
+							</h3>
+
+							<p class="image-card__body">
+								Learn how to get the schedules of any route
+								serving your stop on the chosen day.
+							</p>
+							<a class="btn-tertiary btn btn-lg btn__arrow btn-text-only" href="">Learn more</a>
+						</div>
+					</div>
+
+					<div class="image-card">
+						<a
+							class="image-card__link"
+							href="https://staging.octranspo1.com/en/plan-your-trip/travel-planner/travel-planner-guide-new/next-departures-guide"
+							>Read more about the Next Departures guide</a
+						>
+
+						<div class="image-card__image-container">
+							<img
+								alt=""
+								src="https://www.octranspo.com/images/files/travel_planner/guide-imageND.png"
+							/>
+						</div>
+
+						<div class="image-card__text">
+							<h3 class="image-card__title">
+								Next departures guide
+							</h3>
+
+							<p class="image-card__body">
+								Learn how&nbsp;to find the next passing times at
+								your stop or station for any (all) routes or for
+								selected routes.
+							</p>
+							<a class="btn-tertiary btn btn-lg btn__arrow btn-text-only" href="">Learn more</a>
+						</div>
+					</div>
+
+					<div class="image-card">
+						<a
+							class="image-card__link"
+							href="https://staging.octranspo1.com/en/plan-your-trip/travel-planner/travel-planner-guide-new/map-interface-guide"
+							>Read more about the map interface guide</a
+						>
+
+						<div class="image-card__image-container">
+							<img
+								alt=""
+								src="https://www.octranspo.com/images/files/travel_planner/guide-imageMap.png"
+							/>
+						</div>
+
+						<div class="image-card__text">
+							<h3 class="image-card__title">
+								Map interface guide
+							</h3>
+
+							<p class="image-card__body">
+								Learn how to use the map interface to do actions
+								like zooming in, moving the map, enabling Google
+								street view, and more.
+							</p>
+							<a class="btn-tertiary btn btn-lg btn__arrow btn-text-only" href="">Learn more</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="banner dark banner--key-to-icons">
+				<div class="banner__content">
+					<p class="banner__title">What do the icons mean?</p>
+			
+					<p class="banner__body">
+						Find out the meaning of icons used in the Trip Plan.
+					</p>
+					<a class="btn btn__arrow btn-white borderless "href="">
+						Key to icons page
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="../app/js/octranspo.js"></script>
+	</body>
+</html>

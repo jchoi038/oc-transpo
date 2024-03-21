@@ -1,0 +1,20 @@
+.badge{
+    font-size: 0.75rem;
+    border: 1px solid var(--charcoal--800);
+    padding: 0.15rem 0.3rem 0.1rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 100px;
+    font-weight: 700;
+    &--complete, &--available, &--success-green{
+        border-color: var(--success-green);
+        color: var(--success-green);
+    }
+    &--inprogress{
+        border-color: var(--success-green);
+        color: var(--success-green);
+
+    }
+}
