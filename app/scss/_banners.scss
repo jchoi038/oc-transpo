@@ -7,6 +7,45 @@
     border-radius: 0.5rem;
     overflow: hidden;
 
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &.fullwidth{
+        overflow: visible;
+        border: none;
+        &::before{
+            // position: absolute;
+            // background-color: var(--charcoal--800);
+            width: 1000rem;
+            height: 100%;
+            top:0;
+            bottom: 0;
+            left: -500rem;
+        }
+        
+    }
+
+    &.dark{
+        &::before{
+            background-color: var(--charcoal--800);
+        }
+        p.banner__title {
+            color: #fff;
+        }
+        p.banner__body {
+            color: var(--transparent--800);
+        }
+    }
+
+
+
     &__content {
         width: 60%;
         @include media-breakpoint-up(md) {
@@ -50,10 +89,12 @@
     &--new-ways-to-bus{
         background-image: url("https://www.octranspo.com/images/files/banners/banner_new-ways-to-bus.svg");
         background-repeat: no-repeat;
-        background-color: var(--new--800);
         background-size: 200%;
         background-position-x: 80%;
         background-position-y: 50%;
+        &::before{
+            background-color: var(--new--800);
+        }
         @include media-breakpoint-up(md) {
             background-size: cover;
             background-position-x: center;
@@ -72,26 +113,6 @@
                 width: 75%;
                 }
             }
-    }
-    &.dark{
-        &::before{
-            content: "";
-            display: block;
-            position: absolute;
-            top:0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            z-index: -1;
-            background-color: var(--charcoal--800);
-        }
-        p.banner__title {
-            color: #fff;
-        }
-        p.banner__body {
-            color: var(--transparent--800);
-        }
-    
     }
 
     
