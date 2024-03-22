@@ -1,4 +1,59 @@
 
+.accordion-container {
+	width: 100%;
+	letter-spacing: 0.8px;
+	.accordion {
+		border: 1px solid #9F9F9F;
+		border-radius: 2px;
+		box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1);
+		font-size: 22px;
+		font-size: 1.4rem;
+		line-height: 1.25;
+		cursor: pointer;
+		margin-top: 25px;
+		background:url('https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/green-arrow-closed.svg') no-repeat 2% center;
+		padding: 7px 10px 7px 35px;
+		@include media-breakpoint-up(md) {
+			font-size: 32px;
+			font-size: 2rem;
+		}
+	}
+	.accordion.active{
+		background:url('https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/green-arrow.svg') no-repeat 2% center;
+	}
+	.accordion-content{
+		display: none;
+		padding: 0;
+		margin-top: 35px;
+	}
+}
+
+
+.faq-accordion{
+	width: 100%;
+
+	.accordion {
+		font-size: 18px;
+		font-size: 1.125rem;
+		font-weight: 600;
+		line-height: 24px;
+		background:url('https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/blue-arrow-closed.svg') no-repeat left center;
+		cursor: pointer;
+		margin-bottom: 15px;
+		padding: 0 0 0 15px;
+	}
+
+	.accordion.active{
+		background:url('https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/blue-arrow.svg') no-repeat left center;
+	}
+
+	.accordion-content{
+		display: none;
+		padding-left:0;
+		margin-bottom: 20px;
+	}
+
+}
 
 .faq-accordion{
 	width: 100%;

@@ -109,6 +109,7 @@
         background-color: var(--transparent--50);
         &:hover{
             background-color: var(--transparent--100);
+            color: white;
         }
 
         &::after{

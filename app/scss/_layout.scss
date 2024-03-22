@@ -1,5 +1,9 @@
 body{
     overflow-x: hidden;
+    &.blog{
+        max-width: 720px;
+        margin: auto;
+    }
 }
 .page-layout--sidecol {
     display: flex;

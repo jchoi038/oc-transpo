@@ -6,6 +6,7 @@
     position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
+    margin: 1rem 0;
 
     &::before{
         content: "";
@@ -20,6 +21,9 @@
     &.fullwidth{
         overflow: visible;
         border: none;
+        border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
         &::before{
             // position: absolute;
             // background-color: var(--charcoal--800);
