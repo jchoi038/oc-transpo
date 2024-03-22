@@ -16427,8 +16427,12 @@ ul.grid.grid--3col {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 3rem;
+  gap: 1.5rem;
   margin-bottom: 4rem;
+}
+.grid-fluid {
+  grid-template-columns: auto;
+  grid-auto-flow: column;
 }
 @media (min-width: 768px) {
   .grid-2fr-1fr {
@@ -16468,8 +16472,32 @@ ul.grid.grid--3col {
 }
 .grid--8col {
   margin-bottom: 0;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+}
+@media (min-width: 576px) {
+  .grid--8col {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    row-gap: 0;
+  }
+}
+@media (min-width: 768px) {
+  .grid--8col {
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    row-gap: 0;
+  }
+}
+@media (min-width: 992px) {
+  .grid--8col {
+    grid-template-columns: repeat(8, 1fr);
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    row-gap: 0;
+  }
 }
 
 .section-row {
@@ -17627,6 +17655,104 @@ pre {
 .fancybox-media {
   display: flex;
   justify-content: center;
+}
+
+.select-options {
+  gap: 0.5rem;
+}
+
+.parking-lot-select-options--grid {
+  display: grid;
+  gap: 0.5rem;
+  /* overflow-x: hidden; */
+  background-color: #fff;
+  width: 100%;
+  z-index: 100;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* border: 1px solid #e9eaed; */
+  /* border-radius: 10px; */
+  transition: all 200ms;
+}
+
+.parking-lot-select-options--grid.hidden {
+  height: 0px;
+}
+
+@media (max-width: 991.98px) {
+  .parking-lot-select-options--grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767.98px) {
+  .parking-lot-select-options--grid {
+    overflow-y: scroll;
+    grid-template-columns: 1fr;
+    height: 500px;
+    border: 1px solid #e9eaed;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    gap: 0;
+    padding: 0;
+  }
+}
+.select-option {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  /* border: 1px solid #e9eaed; */
+  border-right: 1px solid e9eaed;
+  /* border-radius: 6px; */
+  padding: 1rem;
+  /* font-weight: 600; */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* justify-content: space-between; */
+  border: 1px solid #d5d5d5;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 1rem;
+}
+
+.select-option.active {
+  background-color: #000;
+  color: #fff !important;
+  font-weight: bold;
+  border: solid 2px #000;
+}
+
+.select-option:hover {
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.0274509804);
+  /* border: solid 2px #00007; */
+}
+
+.select-option.active:hover {
+  background-color: #000;
+}
+
+.select-option > span > span {
+  flex-grow: 1;
+}
+
+@media (max-width: 767.98px) {
+  .select-option {
+    height: 54x;
+  }
+}
+.select-option:not(:last-of-type) {
+  text-decoration: none;
+  /* border: 1px solid #e9eaed; */
+  /* border-radius: 9px; */
+  padding: 1rem;
+}
+
+.select-option:hover {
+  text-decoration: underline;
+  background-color: rgb(247, 247, 247);
+  /* border: 1px solid #dddddd; */
 }
 
 .clearfix:after, #timetable .tab_navigation:after, .tripPlanBox:after, ul.venues li:after, .tooltip:after, .stage-2 .stage2-main .useful-links-section .stage2-cta-buttons.no-border:after, .stage-2 .stage2-main .stage2-cta-buttons.no-border:after {
