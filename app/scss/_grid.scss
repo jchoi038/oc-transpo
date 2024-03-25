@@ -15,6 +15,11 @@ ul.grid.grid--3col{
         grid-auto-flow: column;
     }
 
+    &-1fr-2fr{
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 2fr;
+        }
+    }
     
     &-2fr-1fr{
         @include media-breakpoint-up(md) {
@@ -85,6 +90,7 @@ ul.grid.grid--3col{
             }
         }
     
+        
         &-2fr-1fr{
             @include media-breakpoint-up(md) {
                 grid-template-columns: 2fr 1fr;

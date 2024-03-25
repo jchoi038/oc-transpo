@@ -9,8 +9,8 @@ OC Transpo Website Styles
 Copyright 2019 OC Transpo
 Authors: Justin MacNeil, Tashana Allen (RealDecoy)
 Editor: Judy Choi (OC Transpo)
-Date: 3/22/2024
-Time: 8:54
+Date: 3/25/2024
+Time: 1:42
 */
 
 // The contents of this file are compiled to themes/user/site/octranspo/assets/css/style.css
@@ -104,6 +104,7 @@ $transition-collapse: none;
 @import "tags";//new
 @import "images";//new
 @import "select-options";//new
+@import "toc";//new
 // @import "bread-crumbs";
 
 

@@ -1060,6 +1060,8 @@
 				display: flex;
 				align-items: center;
 				gap: 0.5rem;
+				flex-wrap: wrap;
+				row-gap: 0;
 			}
 		
 			/* .info-card ul {
@@ -1099,7 +1101,6 @@
 		
 			#PR-page .status {
 				margin-bottom: 1rem;
-				/* font-weight: 700; */
 				display: inline-flex;
 				gap: 0.25rem;
 				align-items: center;
@@ -1584,7 +1585,8 @@
 		
 		<div class="info-card info-card--hours unavailable">
 		<div class="info-card--status-heading">
-		<h4>Stationnement gratuit <span class="parking status status--not-avail"> Non disponible </span></h4>
+		<h4>Stationnement gratuit </h4>
+		<p class="parking status status--not-avail"> Non disponible </p>
 		</div>
 		
 		<p>Il faut un permis pour utiliser ce parc.</p>
@@ -2318,7 +2320,8 @@
 		
 		<div class="info-card info-card--hours unavailable">
 		<div class="info-card--status-heading">
-		<h4>Stationnement gratuit<span class="parking status status--not-avail"> Non disponible </span></h4>
+		<h4>Stationnement gratuit</h4>
+		<p class="parking status status--not-avail"> Non disponible </p>
 		</div>
 		
 		<p>Ce stationnement exige un <a href="#PR-types-de-permis">permis</a>.</p>
@@ -2892,7 +2895,8 @@
 		
 		<div class="info-card info-card--hours unavailable">
 		<div class="info-card--status-heading">
-		<h4>Stationnement gratuit<span class="parking status status--not-avail"> Non disponible </span></h4>
+		<h4>Stationnement gratuit</h4>
+		<p class="parking status status--not-avail"> Non disponible </p>
 		</div>
 		
 		<p>Ce stationnement exige un <a href="#PR-types-de-permis">permis.</a></p>
@@ -3388,13 +3392,12 @@
 		
 		<p style="margin-bottom: 2rem"><span class="permit-types--price">{oc_grid_fares:fo-prp}</span>/mois</p>
 		
-		<p class="permit-types--description">Acc&egrave;s aux stationnements exigeant un permis 7&nbsp;jours sur&nbsp;7, sauf la nuit.</p>
+		<p class="permit-types--description">Acc&egrave;s aux stationnements exigeant un permis 7&nbsp;jours sur&nbsp;7. Le stationnement de nuit est interdit.</p>
 		
 		<p class="permit-types--description"><strong>Stationnements exigeant un permis :</strong></p>
 		
 		<ul>
 			<li class="flex gap-1_2 icon-sm icon--available-greenBG">Baseline (avant 11&nbsp;h)</li>
-			<li class="flex gap-1_2 icon-sm icon--available-greenBG">Blair (Telesat)</li>
 			<li class="flex gap-1_2 icon-sm icon--available-greenBG">Jeanne d&rsquo;Arc, and</li>
 			<li class="flex gap-1_2 icon-sm icon--available-greenBG">Ray Friel</li>
 		</ul>
@@ -3407,7 +3410,7 @@
 		
 		<p style="margin-bottom: 2rem"><span class="permit-types--price">{oc_grid_fares:fo-gpp}</span>/mois</p>
 		
-		<p class="permit-types--description">Garantit une place de stationnement 7&nbsp;jours sur&nbsp;7, sauf la nuit (places limit&eacute;es).</p>
+		<p class="permit-types--description">Garantit une place de stationnement 7&nbsp;jours sur&nbsp;7. Le stationnement de nuit est interdit.</p>
 		
 		<p>Le nombre de permis disponibles est limit&eacute;. Les permis sont vendus selon le principe du premier arriv&eacute;, premier servi.&nbsp;<a href="#PR-select">S&eacute;lectionnez-en un</a> with parc de stationnement dot&eacute; de l&#39;ic&ocirc;ne de places r&eacute;serv&eacute;es aux d&eacute;tenteurs d&#39;un permis Or&nbsp;<img alt="Icône d’une étoile se détache sur un fond bleu clair" height="17" src="https://www.octranspo.com/images/files/icons/tag_gold.svg" width="17" />&nbsp;pour v&eacute;rifier si le permis Or y est offert.</p>
 		</div>

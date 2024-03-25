@@ -3,6 +3,18 @@ ul, ol {
     padding-left: 0;
 }
 
+.content-container ul li {
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+}
+
+.content-container ul, .content-container ol{
+    margin-left: 2.5rem;
+    padding: 0;
+    line-height: 150%;
+}
+
 li {
     // padding-left: 0.25rem;
     line-height: 150%;
@@ -38,6 +50,8 @@ ul.checklist li{
         background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
     }
 }
+
+
 
 .timeline{
     position: relative;

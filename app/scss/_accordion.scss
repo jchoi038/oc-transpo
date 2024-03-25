@@ -127,7 +127,7 @@
 		.accordion{
 			transition: all ease-in-out 150ms;
 			&:not(:first-of-type){
-				border-top: 1px solid var(--gray--100);
+				border-top: 1px solid var(--gray--100) !important;
 			}
 			margin: 0;
 			padding: 0.75rem 0;

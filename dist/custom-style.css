@@ -4,8 +4,8 @@ OC Transpo Website Styles
 Copyright 2019 OC Transpo
 Authors: Justin MacNeil, Tashana Allen (RealDecoy)
 Editor: Judy Choi (OC Transpo)
-Date: 3/22/2024
-Time: 8:54
+Date: 3/25/2024
+Time: 1:42
 */
 /*
 
@@ -16106,6 +16106,7 @@ dl dt {
   --line4--700: #07607C;
   --transparent--50: hsl(0, 0%, 100%, 10%);
   --transparent--100: hsl(0, 0%, 100%, 25%);
+  --transparent--500: hsl(0, 0%, 100%, 60%);
   --transparent--800: hsl(0, 0%, 100%, 95%);
   --gray--50: #F4F7F9;
   --gray--100: #EBEEF2;
@@ -16166,6 +16167,18 @@ dl dt {
 ul, ol {
   /* margin: 0 1.5rem 0; */
   padding-left: 0;
+}
+
+.content-container ul li {
+  margin: 0;
+  padding: 0;
+  line-height: 150%;
+}
+
+.content-container ul, .content-container ol {
+  margin-left: 2.5rem;
+  padding: 0;
+  line-height: 150%;
 }
 
 li {
@@ -16435,6 +16448,11 @@ ul.grid.grid--3col {
   grid-auto-flow: column;
 }
 @media (min-width: 768px) {
+  .grid-1fr-2fr {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (min-width: 768px) {
   .grid-2fr-1fr {
     grid-template-columns: 2fr 1fr;
   }
@@ -16559,6 +16577,7 @@ ul.grid.grid--3col {
 .note--level0 {
   padding: 0.5rem;
   background: transparent;
+  font-size: 0.875rem;
 }
 
 li.card {
@@ -16958,7 +16977,7 @@ a.image-card__link:focus {
   background-repeat: no-repeat;
   background-position: 50% 2rem;
   gap: 0.5rem;
-  color: #666;
+  color: var(--charcoal--800);
   background-color: transparent;
   border: none;
   padding: 0.25rem 0;
@@ -17139,15 +17158,12 @@ section {
   max-width: 45rem;
 }
 
-section:first-of-type {
-  margin-top: 5rem;
-}
-
 .intro {
   margin-bottom: 4rem;
 }
 
 .main-content {
+  max-width: 1025px;
   margin: auto;
 }
 
@@ -17290,7 +17306,7 @@ section:first-of-type {
   min-height: 2.75rem;
 }
 .accordion-container--simple .accordion:not(:first-of-type) {
-  border-top: 1px solid var(--gray--100);
+  border-top: 1px solid var(--gray--100) !important;
 }
 .accordion-container--simple .accordion--sm {
   font-size: 1rem;
@@ -17534,14 +17550,14 @@ section:first-of-type {
   left: 0;
   z-index: -1;
 }
-.banner.fullwidth {
+.banner.fullwidth, .banner .stretch {
   overflow: visible;
   border: none;
   border-radius: 0;
   padding-left: 0;
   padding-right: 0;
 }
-.banner.fullwidth::before {
+.banner.fullwidth::before, .banner .stretch::before {
   width: 1000rem;
   height: 100%;
   top: 0;
@@ -17649,6 +17665,40 @@ pre {
 .fancybox-media {
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 1625px) {
+  .toc__container {
+    padding: 1rem;
+    background-color: var(--transparent--500);
+    border-radius: 0.5rem;
+  }
+}
+@media (min-width: 1625px) {
+  .toc.sticky {
+    position: sticky;
+    top: 1rem;
+    width: 300px;
+    display: block;
+    height: 0px;
+    margin-left: 100%;
+    padding-left: 1rem;
+  }
+}
+.toc__items {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.toc__link {
+  text-decoration: none;
+  color: var(--line4--600);
+  border: 1px solid var(--line4--600);
+  border-radius: 100rem;
+  padding: 0.125rem 0.5rem;
+}
+.toc__link:hover {
+  background-color: var(--line4--50);
 }
 
 .clearfix:after, #timetable .tab_navigation:after, .tripPlanBox:after, ul.venues li:after, .tooltip:after, .stage-2 .stage2-main .useful-links-section .stage2-cta-buttons.no-border:after, .stage-2 .stage2-main .stage2-cta-buttons.no-border:after {

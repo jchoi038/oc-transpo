@@ -1,146 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9" title="octranspo-main-css" rel="stylesheet">
-		<!-- <link href="https://jchoi038.github.io/oc-transpo/dist/custom-style.css" title="octranspo-custom-css" rel="stylesheet"/> -->
-		<!-- <link href="https://www.octranspo.com/images/files/styles/custom-style.css" rel="stylesheet" /> -->
-		<link rel="stylesheet" href="../dist/custom-style.css" />
-		<title>Style Guide</title>
 
-		<style>
-			
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9"
+		title="octranspo-main-css" rel="stylesheet">
+	<!-- <link href="https://jchoi038.github.io/oc-transpo/dist/custom-style.css" title="octranspo-custom-css" rel="stylesheet"/> -->
+	<!-- <link href="https://www.octranspo.com/images/files/styles/custom-style.css" rel="stylesheet" /> -->
+	<link rel="stylesheet" href="../dist/custom-style.css" />
+	<title>Style Guide</title>
+
+	<style>
+		.select--container {
+			border: 1px solid #e9eaed;
+			border-radius: 4px;
+			height: 52px;
+			width: 100%;
+		}
 
 
-			
 
-			.select--container {
-				border: 1px solid #e9eaed;
-				border-radius: 4px;
-				height: 52px;
-				width: 100%;
-			}
 
-			
 
-			
 
-			
 
-			/* Park & Ride lots section */
+		/* Park & Ride lots section */
+		.select-options--grid {
+			display: grid;
+			gap: 0.5rem;
+
+			/* overflow-x: hidden; */
+			background-color: #fff;
+			width: 100%;
+			z-index: 100;
+			grid-template-columns: 1fr 1fr 1fr;
+			/* border: 1px solid #e9eaed; */
+			/* border-radius: 10px; */
+			transition: all 200ms;
+		}
+
+		.select-options--grid.hidden {
+			height: 0px;
+		}
+
+		@media (max-width: 991.98px) {
 			.select-options--grid {
-				display: grid;
-				gap: 0.5rem;
-
-				/* overflow-x: hidden; */
-				background-color: #fff;
-				width: 100%;
-				z-index: 100;
-				grid-template-columns: 1fr 1fr 1fr;
-				/* border: 1px solid #e9eaed; */
-				/* border-radius: 10px; */
-				transition: all 200ms;
+				grid-template-columns: 1fr 1fr;
 			}
+		}
 
-			.select-options--grid.hidden {
-				height: 0px;
+		@media (max-width: 767.98px) {
+			.select-options--grid {
+				overflow-y: scroll;
+				grid-template-columns: 1fr;
+				height: 500px;
+				border: 1px solid #e9eaed;
+				border-radius: 10px;
+				box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+				gap: 0;
+				padding: 0;
 			}
+		}
 
-			@media (max-width: 991.98px) {
-				.select-options--grid {
-					grid-template-columns: 1fr 1fr;
-				}
-			}
+		.icon {
+			/* height: 1.125em; */
+			pointer-events: none;
+			display: flex;
+			align-items: baseline;
+			gap: 0.25rem;
+		}
 
-			@media (max-width: 767.98px) {
-				.select-options--grid {
-					overflow-y: scroll;
-					grid-template-columns: 1fr;
-					height: 500px;
-					border: 1px solid #e9eaed;
-					border-radius: 10px;
-					box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
-					gap: 0;
-					padding: 0;
-				}
-			}
+		.icon.icon-md {
+			height: 1.5em;
+			gap: 0.5rem;
+		}
 
-			.icon {
-				/* height: 1.125em; */
-				pointer-events: none;
-				display: flex;
-				align-items: baseline;
-				gap: 0.25rem;
-			}
+		.select-option {
+			text-decoration: none;
+			color: #000;
+			font-weight: 600;
+			/* border: 1px solid #e9eaed; */
+			border-right: 1px solid e9eaed;
+			/* border-radius: 6px; */
+			padding: 1rem;
+			/* font-weight: 600; */
+			width: 100%;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			/* justify-content: space-between; */
+			border: 1px solid #d5d5d5;
+			background-color: #fff;
+			border-radius: 9px;
+			padding: 1rem;
+		}
 
-			.icon.icon-md {
-				height: 1.5em;
-				gap: 0.5rem;
-			}
+		.select-option.active {
+			background-color: #000;
+			color: #fff !important;
+			font-weight: bold;
+			border: solid 2px #000;
+		}
 
+		.select-option:hover {
+			text-decoration: underline;
+			background-color: #00000010;
+			/* border: solid 2px #00007; */
+		}
+
+		.select-option.active:hover {
+			background-color: #000;
+		}
+
+		.select-option>span>span {
+			flex-grow: 1;
+		}
+
+		@media (max-width: 767.98px) {
 			.select-option {
-				text-decoration: none;
-				color: #000;
-				font-weight: 600;
-				/* border: 1px solid #e9eaed; */
-				border-right: 1px solid e9eaed;
-				/* border-radius: 6px; */
-				padding: 1rem;
-				/* font-weight: 600; */
-				width: 100%;
-				height: 60px;
-				display: flex;
-				align-items: center;
-				gap: 0.5rem;
-				/* justify-content: space-between; */
-				border: 1px solid #d5d5d5;
-				background-color: #fff;
-				border-radius: 9px;
-				padding: 1rem;
+				height: 54x;
 			}
-			.select-option.active {
-				background-color: #000;
-				color: #fff !important;
-				font-weight: bold;
-				border: solid 2px #000;
-			}
+		}
 
-			.select-option:hover {
-				text-decoration: underline;
-				background-color: #00000010;
-				/* border: solid 2px #00007; */
-			}
+		.select-option:not(:last-of-type) {
+			text-decoration: none;
 
-			.select-option.active:hover {
-				background-color: #000;
-			}
+			/* border: 1px solid #e9eaed; */
+			/* border-radius: 9px; */
+			padding: 1rem;
+		}
 
-			.select-option > span > span {
-				flex-grow: 1;
-			}
+		.select-option:hover {
+			text-decoration: underline;
+			background-color: rgb(247, 247, 247);
+			/* border: 1px solid #dddddd; */
+		}
 
-			@media (max-width: 767.98px) {
-				.select-option {
-					height: 54x;
-				}
-			}
-
-			.select-option:not(:last-of-type) {
-				text-decoration: none;
-
-				/* border: 1px solid #e9eaed; */
-				/* border-radius: 9px; */
-				padding: 1rem;
-			}
-
-			.select-option:hover {
-				text-decoration: underline;
-				background-color: rgb(247, 247, 247);
-				/* border: 1px solid #dddddd; */
-			}
-
-			/* .icon.free-tag::before{
+		/* .icon.free-tag::before{
 content: url("https://www.octranspo.com/images/files/icons/tag_free_en.svg");
 display: flex;
 height: 16px;
@@ -148,104 +146,104 @@ width: 16px;
 margin-left: 1rem;
 } */
 
-			.select-option:hover .icon.free-tag::after {
-				content: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/right-arrow-social.svg");
-				display: flex;
-				height: 16px;
-				width: 16px;
-				margin-left: 1rem;
-			}
+		.select-option:hover .icon.free-tag::after {
+			content: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/right-arrow-social.svg");
+			display: flex;
+			height: 16px;
+			width: 16px;
+			margin-left: 1rem;
+		}
 
-			.select-option .icons {
-				pointer-events: none;
-				display: flex;
-				gap: 4px;
-				width: 100%;
-				align-items: center;
-				/* color: transparent; */
-			}
+		.select-option .icons {
+			pointer-events: none;
+			display: flex;
+			gap: 4px;
+			width: 100%;
+			align-items: center;
+			/* color: transparent; */
+		}
 
-			.select-option .icons img {
-				height: 1.125em;
-			}
+		.select-option .icons img {
+			height: 1.125em;
+		}
 
+		.select-option .icons p {
+			display: flex;
+			padding: 0;
+			margin: 0;
+			flex-grow: 1;
+			font-size: 1.125rem;
+		}
+
+		@media (max-width: 767.98px) {
 			.select-option .icons p {
 				display: flex;
-				padding: 0;
-				margin: 0;
-				flex-grow: 1;
-				font-size: 1.125rem;
 			}
+		}
 
-			@media (max-width: 767.98px) {
-				.select-option .icons p {
-					display: flex;
-				}
-			}
-
-			@media (max-width: 767.98px) {
-				.select-option {
-					border: none;
-					border-bottom: 1px solid #e9eaed;
-					border-radius: 0px;
-				}
-			}
-
-			/* Parking lot info */
-
-			.options-content {
-				max-height: 0px;
-				opacity: 0;
-			}
-
-			.option-content {
-				/* position: sticky; */
-				top: 0;
-				/* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12); */
+		@media (max-width: 767.98px) {
+			.select-option {
+				border: none;
 				border-bottom: 1px solid #e9eaed;
-				padding: 0.5rem 0;
-				background-color: #fff;
-				display: flex;
-				align-items: center;
-				gap: 1rem;
+				border-radius: 0px;
 			}
+		}
 
-			.option-content .tags {
-				display: flex;
-				gap: 0.25rem;
-			}
+		/* Parking lot info */
 
-			.option-content h3 {
-				margin: 0;
-				padding: 0;
-				font-weight: 700;
-			}
+		.options-content {
+			max-height: 0px;
+			opacity: 0;
+		}
 
+		.option-content {
+			/* position: sticky; */
+			top: 0;
+			/* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12); */
+			border-bottom: 1px solid #e9eaed;
+			padding: 0.5rem 0;
+			background-color: #fff;
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.option-content .tags {
+			display: flex;
+			gap: 0.25rem;
+		}
+
+		.option-content h3 {
+			margin: 0;
+			padding: 0;
+			font-weight: 700;
+		}
+
+		.options-content.active {
+			max-height: fit-content;
+
+			opacity: 100%;
+			/* transition: max-height 1s ease-in; */
+			background-color: #fff;
+			margin-bottom: 1rem;
+			/* overflow: hidden; */
+			/* box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.17); */
+			border-radius: 10;
+			/* padding: 1.5rem 0; */
+		}
+
+		@media (max-width: 767.98px) {
 			.options-content.active {
-				max-height: fit-content;
-
-				opacity: 100%;
-				/* transition: max-height 1s ease-in; */
-				background-color: #fff;
-				margin-bottom: 1rem;
-				/* overflow: hidden; */
 				/* box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.17); */
-				border-radius: 10;
-				/* padding: 1.5rem 0; */
+				/* padding: 0 1rem 1.5rem; */
 			}
+		}
 
-			@media (max-width: 767.98px) {
-				.options-content.active {
-					/* box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.17); */
-					/* padding: 0 1rem 1.5rem; */
-				}
-			}
+		.options-content-container.hidden {
+			display: none;
+		}
 
-			.options-content-container.hidden {
-				display: none;
-			}
-
-			/* .options-content-container{
+		/* .options-content-container{
 max-height: 0px;
 opacity: 0;
 }
@@ -257,865 +255,801 @@ opacity: 100%;
 transition: max-height 0.3s ease-in;
 } */
 
+		.parking-lot-list--legend {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 1rem 3rem;
+			/* flex-direction: column; */
+			background-color: rgb(247, 247, 247) !important;
+			/* border-radius: 8px !important; */
+			/* max-width: 400px; */
+			column-gap: 1rem;
+			justify-content: center;
+			margin-bottom: 2rem;
+		}
+
+		@media (max-width: 767.98px) {
 			.parking-lot-list--legend {
-				display: flex;
-				flex-wrap: wrap;
-				padding: 1rem 3rem;
-				/* flex-direction: column; */
-				background-color: rgb(247, 247, 247) !important;
-				/* border-radius: 8px !important; */
-				/* max-width: 400px; */
-				column-gap: 1rem;
-				justify-content: center;
-				margin-bottom: 2rem;
+				padding: 1rem;
 			}
+		}
 
-			@media (max-width: 767.98px) {
-				.parking-lot-list--legend {
-					padding: 1rem;
-				}
-			}
-			/* Permit Types */
+		/* Permit Types */
 
+		.permit-types--grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+			margin: 2rem 0;
+		}
+
+		@media (max-width: 767.98px) {
 			.permit-types--grid {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 2rem;
-				margin: 2rem 0;
+				grid-template-columns: 1fr;
 			}
+		}
 
-			@media (max-width: 767.98px) {
-				.permit-types--grid {
-					grid-template-columns: 1fr;
-				}
-			}
+		.permit-types--card {
+			padding: 2.5rem 4rem;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			/* border: #e9eaed solid 1px; */
+			box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+			justify-content: space-between;
+			border-radius: 10px;
+		}
 
+		@media (max-width: 767.98px) {
 			.permit-types--card {
-				padding: 2.5rem 4rem;
-				display: flex;
-				flex-direction: column;
-				text-align: center;
-				/* border: #e9eaed solid 1px; */
-				box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-				justify-content: space-between;
-				border-radius: 10px;
+				padding: 1.75rem 2rem;
 			}
+		}
 
-			@media (max-width: 767.98px) {
-				.permit-types--card {
-					padding: 1.75rem 2rem;
-				}
-			}
+		.permit-types--card--content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 
-			.permit-types--card--content {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
+		.permit-types--description {
+			margin-bottom: 2rem;
+			padding-bottom: 1rem;
+		}
 
-			.permit-types--description {
-				margin-bottom: 2rem;
-				padding-bottom: 1rem;
-			}
+		.permit-types--name {
+			font-size: 20px;
+			font-weight: 700;
+			color: #016b9d;
+			padding-bottom: 3rem;
+		}
 
+		@media (max-width: 767.98px) {
 			.permit-types--name {
-				font-size: 20px;
-				font-weight: 700;
-				color: #016b9d;
-				padding-bottom: 3rem;
-			}
-
-			@media (max-width: 767.98px) {
-				.permit-types--name {
-					font-size: 1.125rem;
-					padding-bottom: 2rem;
-				}
-			}
-
-			.permit-types--price {
-				font-size: 4rem;
-				margin-bottom: 1.5rem;
-			}
-
-			@media (max-width: 767.98px) {
-				.permit-types--price {
-					font-size: 2.5rem;
-				}
-			}
-
-			#PR .permit-types--benefit {
-				padding: 1rem;
-				border-top: 1px solid #e9eaed;
-			}
-
-			#PR-permit-types .contact {
-				text-align: center;
-				max-width: 700px;
-				width: 100%;
-			}
-
-			/* section: Gold permit availability */
-			#PR-page-gold-permit-availability td {
-				font-size: 1rem;
-			}
-
-			#PR-page-gold-permit-availability {
-				font-weight: 700;
-				font-size: 1rem;
-			}
-
-			#PR-page-gold-permit-availability .status--avail {
-				color: #038700;
-			}
-
-			.drop-down-container {
-				width: 100%;
-				/* max-width: 500px; */
-				position: relative;
-				margin-bottom: 0.5rem;
-				/* background-color: #fff; */
-			}
-
-			.drop-down-button {
-				/* padding:1rem; */
-				display: inline-block;
-				/* border-radius: 4px; */
-				border: #e9eaed solid 2px;
-				/* border-bottom: #e9eaed solid 2px; */
-				width: 100%;
-				/* min-width: 400px; */
-				font-size: 1rem;
-				color: #000;
-				font-weight: 400;
-				background-color: #fff;
-				position: relative;
-				overflow: hidden;
-				margin-bottom: 0.5rem;
-			}
-
-			@media (max-width: 767.98px) {
-				.drop-down-button {
-					width: 100%;
-				}
-			}
-
-			.drop-down-button input {
-				text-align: left;
-				background-color: #fff;
-				padding: 1rem;
-				font-weight: 400;
 				font-size: 1.125rem;
-				cursor: pointer;
+				padding-bottom: 2rem;
 			}
+		}
 
-			.drop-down-button.active input {
-				background-color: rgb(247, 247, 247);
+		.permit-types--price {
+			font-size: 4rem;
+			margin-bottom: 1.5rem;
+		}
+
+		@media (max-width: 767.98px) {
+			.permit-types--price {
+				font-size: 2.5rem;
 			}
+		}
 
-			.drop-down-button:hover {
-				/* border: #016b9d solid 2px; */
-				/* border-bottom: #000 solid 2px; */
-			}
+		#PR .permit-types--benefit {
+			padding: 1rem;
+			border-top: 1px solid #e9eaed;
+		}
 
-			.drop-down-button.active,
-			.drop-down-button:focus {
-				background-color: #fff;
-				/* border: #016b9d solid 2px; */
-				border-bottom: #000 solid 2px;
-				/* box-shadow: 0px 0px 0px 3px #00000020; */
-			}
+		#PR-permit-types .contact {
+			text-align: center;
+			max-width: 700px;
+			width: 100%;
+		}
 
-			.drop-down-button.active .drop-down-container {
-				visibility: visible;
-			}
+		/* section: Gold permit availability */
+		#PR-page-gold-permit-availability td {
+			font-size: 1rem;
+		}
 
-			.drop-down-button a {
-				color: #000;
-				display: flex;
-				justify-content: space-between;
-			}
+		#PR-page-gold-permit-availability {
+			font-weight: 700;
+			font-size: 1rem;
+		}
 
-			.drop-down-button .chevron {
-				content: "";
-				color: #fff;
-				display: inline-block;
-				width: 1rem;
-				height: 1rem;
-				background-repeat: no-repeat;
-				background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/chevron-down-solid.svg");
-				margin-right: 4px;
-				transform: rotate(0deg);
-				/* transition: transform 0.15s ease-in; */
-				position: absolute;
-				right: 1rem;
-				top: calc(50% - 8px);
-			}
+		#PR-page-gold-permit-availability .status--avail {
+			color: #038700;
+		}
 
-			.drop-down-button .chevron.up {
-				transform: rotate(-180deg);
-			}
+		.drop-down-container {
+			width: 100%;
+			/* max-width: 500px; */
+			position: relative;
+			margin-bottom: 0.5rem;
+			/* background-color: #fff; */
+		}
 
-			/* icons */
-			.gold-star::before {
-				display: inline-block;
-				content: "";
-				pointer-events: none;
-			}
+		.drop-down-button {
+			/* padding:1rem; */
+			display: inline-block;
+			/* border-radius: 4px; */
+			border: #e9eaed solid 2px;
+			/* border-bottom: #e9eaed solid 2px; */
+			width: 100%;
+			/* min-width: 400px; */
+			font-size: 1rem;
+			color: #000;
+			font-weight: 400;
+			background-color: #fff;
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 0.5rem;
+		}
 
-			.icon-sm {
-				display: flex;
-				/* align-items: center; */
-				gap: 0.25rem;
-			}
-
-			.icon-sm::before {
-				content: "";
-				height: 1.25em;
-				width: 1.25em;
-				background-repeat: no-repeat;
-				background-size: contain;
-				background-position: center;
-				flex-shrink: 0;
-				text-decoration: none;
-				/* display: flex; */
-				justify-content: center;
-				align-items: center;
-			}
-
-			.icon-md::before {
-				content: "";
-				height: 2em;
-				width: 2em;
-				background-repeat: no-repeat;
-				background-size: contain;
-				flex-shrink: 0;
-				text-decoration: none;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			.icon-lg::before {
-				content: "";
-				height: 2.5em;
-				width: 2.5em;
-				background-repeat: no-repeat;
-				background-size: contain;
-				flex-shrink: 0;
-				text-decoration: none;
-				display: flex;
-				justify-content: center;
-			}
-
-			.icon-after-sm::after {
-				content: "";
-				height: 1.25em;
-				width: 1.25em;
-				background-repeat: no-repeat;
-				background-size: contain;
-				flex-shrink: 0;
-				text-decoration: none;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-			}
-
-			.icon-after-lg::after {
-				content: "";
-				height: 2.5em;
-				width: 2.5em;
-				background-repeat: no-repeat;
-				background-size: contain;
-				flex-shrink: 0;
-				text-decoration: none;
-				display: flex;
-				justify-content: center;
-			}
-
-			.icon-after--circled-arrow::after {
-				background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/arrow-in-circle.svg");
-			}
-
-			.icon--pdf::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/PDF-icon-blue.svg");
-			}
-
-			.icon--travel-planner::before {
-				background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/travel-planner-icon.svg");
-			}
-
-			.icon--schedules::before {
-				background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconStopSchedules.png");
-			}
-
-			.icon--ext::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/external-link-blue.svg");
-				height: 1.05rem;
-			}
-
-			.icon--soldout::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/sold-out.svg");
-			}
-
-			.icon--available::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
-			}
-
-			.icon--available-greenBG::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
-			}
-
-			.icon--star::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/tag_gold.svg");
-			}
-
-			.icon--warning::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/tag_warning.svg");
-			}
-
-			.icon-after--park-ride::after {
-				background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg");
-			}
-
-			.icon--park-ride::before {
-				background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg");
-			}
-
-			.icon--permit::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/tag_permit_en.svg");
-			}
-
-			.icon--free::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/tag_free_en.svg");
-			}
-
-			.icon--limitedfree::before {
-				background-image: url("https://www.octranspo.com/images/files/icons/tag_free-limited_en_v2.svg");
-			}
-
-			/* Parking lot Info box section */
-
-			.options-content-container {
-				/* padding: 1.5rem 2rem; */
-				background-color: #fff;
-				/* border: #e9eaed solid 1px; */
-				/* box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.17); */
-				/* border-radius: 10px; */
-				margin-bottom: 7rem;
-			}
-
-			@media (max-width: 767.98px) {
-				.options-content-container {
-					padding: 0;
-					background-color: #fff;
-					border: none;
-					box-shadow: none;
-				}
-			}
-
-			.options-content-container--image-container {
-				height: 300px;
-				overflow: hidden;
-				display: flex;
-				align-items: center;
-			}
-
-			.options-content-container--image-container > img {
+		@media (max-width: 767.98px) {
+			.drop-down-button {
 				width: 100%;
 			}
+		}
 
-			.options-content-container--body {
-				padding: 0.5rem 0;
-				color: #222;
-				border-bottom: #e9eaed solid 2px;
+		.drop-down-button input {
+			text-align: left;
+			background-color: #fff;
+			padding: 1rem;
+			font-weight: 400;
+			font-size: 1.125rem;
+			cursor: pointer;
+		}
+
+		.drop-down-button.active input {
+			background-color: rgb(247, 247, 247);
+		}
+
+		.drop-down-button:hover {
+			/* border: #016b9d solid 2px; */
+			/* border-bottom: #000 solid 2px; */
+		}
+
+		.drop-down-button.active,
+		.drop-down-button:focus {
+			background-color: #fff;
+			/* border: #016b9d solid 2px; */
+			border-bottom: #000 solid 2px;
+			/* box-shadow: 0px 0px 0px 3px #00000020; */
+		}
+
+		.drop-down-button.active .drop-down-container {
+			visibility: visible;
+		}
+
+		.drop-down-button a {
+			color: #000;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.drop-down-button .chevron {
+			content: "";
+			color: #fff;
+			display: inline-block;
+			width: 1rem;
+			height: 1rem;
+			background-repeat: no-repeat;
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/chevron-down-solid.svg");
+			margin-right: 4px;
+			transform: rotate(0deg);
+			/* transition: transform 0.15s ease-in; */
+			position: absolute;
+			right: 1rem;
+			top: calc(50% - 8px);
+		}
+
+		.drop-down-button .chevron.up {
+			transform: rotate(-180deg);
+		}
+
+		/* icons */
+		.gold-star::before {
+			display: inline-block;
+			content: "";
+			pointer-events: none;
+		}
+
+		.icon-sm {
+			display: flex;
+			/* align-items: center; */
+			gap: 0.25rem;
+		}
+
+		.icon-sm::before {
+			content: "";
+			height: 1.25em;
+			width: 1.25em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			flex-shrink: 0;
+			text-decoration: none;
+			/* display: flex; */
+			justify-content: center;
+			align-items: center;
+		}
+
+		.icon-md::before {
+			content: "";
+			height: 2em;
+			width: 2em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-shrink: 0;
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.icon-lg::before {
+			content: "";
+			height: 2.5em;
+			width: 2.5em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-shrink: 0;
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+		}
+
+		.icon-after-sm::after {
+			content: "";
+			height: 1.25em;
+			width: 1.25em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-shrink: 0;
+			text-decoration: none;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.icon-after-lg::after {
+			content: "";
+			height: 2.5em;
+			width: 2.5em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-shrink: 0;
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+		}
+
+		.icon-after--circled-arrow::after {
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/arrow-in-circle.svg");
+		}
+
+		.icon--pdf::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/PDF-icon-blue.svg");
+		}
+
+		.icon--travel-planner::before {
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/travel-planner-icon.svg");
+		}
+
+		.icon--schedules::before {
+			background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconStopSchedules.png");
+		}
+
+		.icon--ext::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/external-link-blue.svg");
+			height: 1.05rem;
+		}
+
+		.icon--soldout::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/sold-out.svg");
+		}
+
+		.icon--available::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
+		}
+
+		.icon--available-greenBG::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
+		}
+
+		.icon--star::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/tag_gold.svg");
+		}
+
+		.icon--warning::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/tag_warning.svg");
+		}
+
+		.icon-after--park-ride::after {
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg");
+		}
+
+		.icon--park-ride::before {
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg");
+		}
+
+		.icon--permit::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/tag_permit_en.svg");
+		}
+
+		.icon--free::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/tag_free_en.svg");
+		}
+
+		.icon--limitedfree::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/tag_free-limited_en_v2.svg");
+		}
+
+		/* Parking lot Info box section */
+
+		.options-content-container {
+			/* padding: 1.5rem 2rem; */
+			background-color: #fff;
+			/* border: #e9eaed solid 1px; */
+			/* box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.17); */
+			/* border-radius: 10px; */
+			margin-bottom: 7rem;
+		}
+
+		@media (max-width: 767.98px) {
+			.options-content-container {
+				padding: 0;
+				background-color: #fff;
+				border: none;
+				box-shadow: none;
+			}
+		}
+
+		.options-content-container--image-container {
+			height: 300px;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+		}
+
+		.options-content-container--image-container>img {
+			width: 100%;
+		}
+
+		.options-content-container--body {
+			padding: 0.5rem 0;
+			color: #222;
+			border-bottom: #e9eaed solid 2px;
+		}
+
+		.parking-lot--h3 {
+			margin-bottom: 2rem;
+		}
+
+		.parking-lot-content {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 2rem;
+			/* border-top: 1px solid #e9eaed; */
+			/* padding-top: 1.5rem; */
+		}
+
+		.parking-lot-content .column {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.parking-lot-content h4 {
+			margin-bottom: 1rem;
+			font-weight: 600;
+			margin-top: 0;
+			padding-top: 0;
+			font-size: 1.375rem;
+		}
+
+		@media (max-width: 767.98px) {
+			.parking-lot-content h4 {
+				font-size: 1.25rem;
+			}
+		}
+
+		.parking-lot-content .info-group {
+			/* margin-bottom: 2rem; */
+			padding: 2rem 0 2rem;
+		}
+
+		.parking-lot-content .info-group.location .body {
+			padding-bottom: 1rem;
+		}
+
+		.parking-lot-content .info-group:not(:last-of-type) {
+			border-bottom: 1px solid #e9eaed;
+			/* padding-bottom: 0.75rem; */
+		}
+
+		.parking-lot-content .info-group--offers li img {
+			background-color: #000;
+			border-radius: 999px;
+			content: "";
+			width: 42px;
+			height: 42px;
+		}
+
+		.parking-lot-content .info-group--offers svg {
+			flex-shrink: 0;
+		}
+
+		.parking-lot-content .info-group ul {
+			padding: 0 0 1.5rem 0;
+			margin: 0;
+		}
+
+		.parking-lot-content .info-group li {
+			display: flex;
+			gap: 1rem;
+			align-items: flex-start;
+			padding: 0;
+			line-height: 150%;
+		}
+
+		.parking-lot-content .info-group--resources li a {
+			display: flex;
+			gap: 0.5rem;
+			align-items: center;
+			padding: 0;
+			line-height: 100%;
+		}
+
+		.parking-lot-content .info-group--offers {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 1.5rem;
+			/* row-gap: 1rem; */
+			/* border-bottom: 1px solid #e9eaed; */
+		}
+
+		.parking-lot-content .info-group--offers p {
+			margin-bottom: 0;
+		}
+
+		.parking-lot-content .info-group--offers .important-announcement {
+			grid-column: 1 / 3;
+		}
+
+		.important-announcement a {
+			padding: 0;
+			margin: 0;
+		}
+
+
+		.parking-lot-content p {
+			margin-bottom: 0;
+		}
+
+		.parking-lot-content .info-group--offers__stats {
+			font-weight: 700;
+			font-size: 1rem;
+			color: #000;
+			/* margin-bottom: 0; */
+		}
+
+		.parking-lot-content .info-group--offers__name {}
+
+		.info-card {
+			border: 1px solid #e9eaed;
+			border-radius: 4px;
+			padding: 1.5rem;
+			/* margin-bottom: 1.5rem; */
+			/* border-top: #000 solid 4px; */
+			box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+			min-width: 18rem;
+		}
+
+		.info-card--status-heading {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		/* .info-card ul {
+    list-style: none;
+} */
+
+		.info-card h4 {
+			font-size: 1.25rem;
+		}
+
+		.info-card--link {
+			box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+		}
+
+		.info-card--link:hover {
+			background-color: rgb(247, 247, 247);
+		}
+
+		.info-card--link h3 {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+			font-weight: 600;
+		}
+
+		.info-card--link .info-card--content {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			color: #555;
+			text-decoration: none;
+			justify-content: space-between;
+		}
+
+		.info-card--cta .blue-btn:not(:last-of-type) {
+			margin-bottom: 0.25rem;
+		}
+
+		.status {
+			margin-bottom: 1rem;
+			/* font-weight: 700; */
+			display: inline-flex;
+			gap: 0.25rem;
+			align-items: center;
+			color: #777;
+			font-size: 0.875rem;
+			padding: 0 0.5rem;
+			border-radius: 100px;
+			min-height: 1.6em;
+		}
+
+		.info-card .soldout {
+			color: #d30f1d;
+			background-color: #d30f1d15;
+		}
+
+		.info-card .available {
+			color: #038700;
+			/* font-size: 1rem; */
+			background-color: #03870020;
+			padding: 0 0.5rem 0 0.25rem;
+		}
+
+		.info-card .status--not-avail {
+			color: #444;
+			background-color: #bfbfbf;
+		}
+
+		.info-card.unavailable {
+			box-shadow: none;
+			background-color: #e9eaed;
+			border-top: 1px solid #dfdfdf;
+		}
+
+		.info-card--hours ul {
+			margin-bottom: 1rem;
+		}
+
+		.info-card--hours li {
+			display: flex;
+		}
+
+		.info-card--hours .info-card--hours--day {
+			width: 50%;
+			max-width: 6.25rem;
+		}
+
+		/* info messages */
+		.info-message {
+			padding: 1rem;
+		}
+
+		.info-message--blue {
+			color: #016b9d;
+			background-color: #016b9d10;
+			border: 1px solid #016b9d20;
+			border-radius: 8px;
+			display: flex;
+			gap: 0.75rem;
+			align-items: center;
+		}
+
+		.info-message--blue::before {
+			content: "";
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			background-image: url("https://www.octranspo.com/images/files/icons/info.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.important-announcement {
+			background-color: #fff;
+			padding: 1rem 1.5rem;
+			font-weight: normal;
+			display: flex;
+			gap: 0.5rem;
+			margin-bottom: 1rem;
+			border-radius: 4px;
+		}
+
+		.important-announcement--blue {
+			border-top: 4px solid #016b9d;
+		}
+
+		.important-announcement--green {
+			border-top: 4px solid #65a233;
+		}
+
+		.important-announcement--blue::before {
+			content: "";
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			background-image: url("https://www.octranspo.com/images/files/icons/info.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			flex-shrink: 0;
+		}
+
+		@media (max-width: 992px) {
+			.options-content-container--image-container {
+				display: none;
 			}
 
-			.parking-lot--h3 {
-				margin-bottom: 2rem;
-			}
-
-			.parking-lot-content {
-				display: grid;
-				grid-template-columns: 2fr 1fr;
-				gap: 2rem;
-				/* border-top: 1px solid #e9eaed; */
-				/* padding-top: 1.5rem; */
-			}
-
-			.parking-lot-content .column {
+			.parking-lot-content .info-group--offers {
 				display: flex;
 				flex-direction: column;
-				gap: 1rem;
-			}
-
-			.parking-lot-content h4 {
-				margin-bottom: 1rem;
-				font-weight: 600;
-				margin-top: 0;
-				padding-top: 0;
-				font-size: 1.375rem;
-			}
-
-			@media (max-width: 767.98px) {
-				.parking-lot-content h4 {
-					font-size: 1.25rem;
-				}
-			}
-
-			.parking-lot-content .info-group {
-				/* margin-bottom: 2rem; */
-				padding: 2rem 0 2rem;
-			}
-
-			.parking-lot-content .info-group.location .body {
-				padding-bottom: 1rem;
-			}
-
-			.parking-lot-content .info-group:not(:last-of-type) {
-				border-bottom: 1px solid #e9eaed;
-				/* padding-bottom: 0.75rem; */
-			}
-
-			.parking-lot-content .info-group--offers li img {
-				background-color: #000;
-				border-radius: 999px;
-				content: "";
-				width: 42px;
-				height: 42px;
 			}
 
 			.parking-lot-content .info-group--offers svg {
 				flex-shrink: 0;
 			}
 
-			.parking-lot-content .info-group ul {
-				padding: 0 0 1.5rem 0;
-				margin: 0;
+			.options-content-container .parking-lot-content {
+				grid-template-columns: 1fr;
+				gap: 0;
 			}
 
-			.parking-lot-content .info-group li {
-				display: flex;
-				gap: 1rem;
-				align-items: flex-start;
-				padding: 0;
-				line-height: 150%;
+			.options-content-container.active .options-content-container--body {
+				/* max-height: 60vh; */
+				/* overflow-y: scroll; */
+				transition: max-height 1s ease-in;
+				/* border-radius: 10px; */
 			}
 
-			.parking-lot-content .info-group--resources li a {
-				display: flex;
-				gap: 0.5rem;
-				align-items: center;
-				padding: 0;
-				line-height: 100%;
-			}
-
-			.parking-lot-content .info-group--offers {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				column-gap: 1.5rem;
-				/* row-gap: 1rem; */
-				/* border-bottom: 1px solid #e9eaed; */
-			}
-
-			.parking-lot-content .info-group--offers p {
-				margin-bottom: 0;
-			}
-
-			.parking-lot-content .info-group--offers .important-announcement {
-				grid-column: 1 / 3;
-			}
-
-			.important-announcement a {
-				padding: 0;
-				margin: 0;
-			}
-
-
-			.parking-lot-content p {
-				margin-bottom: 0;
-			}
-
-			.parking-lot-content .info-group--offers__stats {
-				font-weight: 700;
-				font-size: 1rem;
-				color: #000;
-				/* margin-bottom: 0; */
-			}
-
-			.parking-lot-content .info-group--offers__name {
-			}
-
-			.info-card {
-				border: 1px solid #e9eaed;
-				border-radius: 4px;
-				padding: 1.5rem;
-				/* margin-bottom: 1.5rem; */
-				/* border-top: #000 solid 4px; */
-				box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
-				min-width: 18rem;
-			}
-
-			.info-card--status-heading {
-				display: flex;
-				align-items: center;
-				gap: 0.5rem;
-			}
-
-			/* .info-card ul {
-    list-style: none;
-} */
-
-			.info-card h4 {
-				font-size: 1.25rem;
-			}
-
-			.info-card--link {
-				box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-			}
-
-			.info-card--link:hover {
-				background-color: rgb(247, 247, 247);
-			}
-
-			.info-card--link h3 {
-				font-size: 1.5rem;
-				margin-bottom: 1rem;
-				font-weight: 600;
-			}
-
-			.info-card--link .info-card--content {
-				display: flex;
-				align-items: center;
-				gap: 1rem;
-				color: #555;
-				text-decoration: none;
-				justify-content: space-between;
-			}
-
-			.info-card--cta .blue-btn:not(:last-of-type) {
-				margin-bottom: 0.25rem;
-			}
-
-			.status {
-				margin-bottom: 1rem;
-				/* font-weight: 700; */
-				display: inline-flex;
-				gap: 0.25rem;
-				align-items: center;
-				color: #777;
-				font-size: 0.875rem;
-				padding: 0 0.5rem;
-				border-radius: 100px;
-				min-height: 1.6em;
-			}
-
-			.info-card .soldout {
-				color: #d30f1d;
-				background-color: #d30f1d15;
-			}
-
-			.info-card .available {
-				color: #038700;
-				/* font-size: 1rem; */
-				background-color: #03870020;
-				padding: 0 0.5rem 0 0.25rem;
-			}
-
-			.info-card .status--not-avail {
-				color: #444;
-				background-color: #bfbfbf;
-			}
-
-			.info-card.unavailable {
-				box-shadow: none;
-				background-color: #e9eaed;
-				border-top: 1px solid #dfdfdf;
-			}
-
-			.info-card--hours ul {
-				margin-bottom: 1rem;
-			}
-
-			.info-card--hours li {
-				display: flex;
-			}
-
-			.info-card--hours .info-card--hours--day {
-				width: 50%;
-				max-width: 6.25rem;
-			}
-
-			/* info messages */
-			.info-message {
-				padding: 1rem;
-			}
-
-			.info-message--blue {
-				color: #016b9d;
-				background-color: #016b9d10;
-				border: 1px solid #016b9d20;
-				border-radius: 8px;
-				display: flex;
-				gap: 0.75rem;
-				align-items: center;
-			}
-
-			.info-message--blue::before {
-				content: "";
-				width: 24px;
-				height: 24px;
-				display: inline-block;
-				background-image: url("https://www.octranspo.com/images/files/icons/info.svg");
-				background-size: contain;
-				background-repeat: no-repeat;
-			}
-
-			.important-announcement {
+			.options-content {
+				/* overflow: hidden; */
+				position: relative;
 				background-color: #fff;
-				padding: 1rem 1.5rem;
-				font-weight: normal;
-				display: flex;
+			}
+
+			.parking-lot-list--legend {
+				flex-direction: column;
 				gap: 0.5rem;
-				margin-bottom: 1rem;
-				border-radius: 4px;
 			}
 
-			.important-announcement--blue {
-				border-top: 4px solid #016b9d;
+			.parking-lot-content .info-group {
+				border-bottom: 1px solid #e9eaed;
+				padding-bottom: 1.5rem;
 			}
 
-			.important-announcement--green {
-				border-top: 4px solid #65a233;
+			#PR-parking-lots ul {
+				list-style-type: none;
 			}
 
-			.important-announcement--blue::before {
-				content: "";
-				width: 24px;
-				height: 24px;
-				display: inline-block;
-				background-image: url("https://www.octranspo.com/images/files/icons/info.svg");
-				background-size: contain;
-				background-repeat: no-repeat;
-				flex-shrink: 0;
-			}
-
-			@media (max-width: 992px) {
-				.options-content-container--image-container {
-					display: none;
-				}
-
-				.parking-lot-content .info-group--offers {
-					display: flex;
-					flex-direction: column;
-				}
-
-				.parking-lot-content .info-group--offers svg {
-					flex-shrink: 0;
-				}
-
-				.options-content-container .parking-lot-content {
-					grid-template-columns: 1fr;
-					gap: 0;
-				}
-
-				.options-content-container.active .options-content-container--body {
-					/* max-height: 60vh; */
-					/* overflow-y: scroll; */
-					transition: max-height 1s ease-in;
-					/* border-radius: 10px; */
-				}
-
-				.options-content {
-					/* overflow: hidden; */
-					position: relative;
-					background-color: #fff;
-				}
-
-				.parking-lot-list--legend {
-					flex-direction: column;
-					gap: 0.5rem;
-				}
-
-				.parking-lot-content .info-group {
-					border-bottom: 1px solid #e9eaed;
-					padding-bottom: 1.5rem;
-				}
-
-				#PR-parking-lots ul {
-					list-style-type: none;
-				}
-
-				/* .info-card.unavailable {
+			/* .info-card.unavailable {
 			background-color: #fff;
 			border-top: none;
 		} */
 
-				#PR-parking-lots .info-card:last-of-type {
-					border-bottom: none;
-				}
+			#PR-parking-lots .info-card:last-of-type {
+				border-bottom: none;
 			}
+		}
 
-			/* section parking info */
-			
+		/* section parking info */
+
+
+		.grid-2fr-1fr {
+			grid-template-columns: 2fr 1fr;
+			column-gap: 2rem;
+		}
+
+		@media (max-width: 767.98px) {
+
 
 			.grid-2fr-1fr {
-				grid-template-columns: 2fr 1fr;
-				column-gap: 2rem;
+				grid-template-columns: 1fr;
 			}
+		}
 
-			@media (max-width: 767.98px) {
-				
+		.contact {
+			text-align: center;
+		}
+	</style>
+</head>
 
-				.grid-2fr-1fr {
-					grid-template-columns: 1fr;
-				}
-			}
-
-			.contact {
-				text-align: center;
-			}
-
-		</style>
-	</head>
-	<body class="container main-content">
-		<h1>Style guide</h1>
-		<!-- <link href="https://www.octranspo.com/images/files/test/custom-style.css" rel="stylesheet" /> -->
-			<section>
-
-				<p
-					class="font-weight-600"
-					for="PR-dropdown"
-					style="margin-bottom: 4px; display: block"
-				>
-					Select a Park &amp; Ride lot:
-				</p>
-
-				<div class="select-options--grid mb-1" id="PR-select">
-					<a class="select-option" data-value="Baseline" href="#PR-baseline"
-						><span class="icons" data-switch="1 1-l 1"
-							><span>Baseline</span></span
-						>
-						<!--data-swtich meaning: 1 1 => goldstar freetag -->
-					</a>
-					<a class="select-option" data-value="Blair" href="#PR-blair">
-						<span class="icons" data-switch="1 0 0 1">
-							<span>Blair</span></span
-						></a
-					>
-					<a class="select-option" data-value="ChapelHill" href="#PR-chapelhill"
-						><span class="icons" data-switch="0 1 0"
-							><span>Chapel Hill</span></span
-						>
-					</a>
-				</div>
-
-				<div class="options-content active" id="PR-details">
-					<div
-						class="options-content-container"
-						data-value="Baseline"
-						id="PR-baseline"
-					>
-					<h3>Baseline</h3>
-					</div>
-
-					<div class="options-content-container" data-value="Blair" id="PR-blair">
-						<h3>Blair (Telesat)</h3>
-					</div>
-
-					<div
-						class="options-content-container"
-						data-value="ChapelHill"
-						id="PR-chapelhill"
-					>
-					<h3>Chapel Hill</h3>
-						
-					</div>
-				</div>
-					
-			
-			</section>
-			<section>
-				<h2>Select options</h2>
-				<div class="select-options--grid mb-1" id="PR-select">
-					<a class="select-option" data-value="" href="#select-option1"
-							><span class="icons" line-switch="1 1 1 1" data-switch=""
-								><span>Option 1</span></span
-							>
-					</a>
-					<a class="select-option" data-value="" href="#select-option2"
-							><span class="icons" line-switch="1 1 1 1" data-switch=""
-								><span>Option 2</span></span
-							>
-					</a>
-				</div>
-				<div class="options-content active" id="PR-details">
-					<div
-						class="options-content-container"
-						data-value="Baseline"
-						id="select-option1"
-					>
+<body class="main-content">
+	<h1>Style guide</h1>
+	<link href="https://www.octranspo.com/images/files/dist/custom-style.css" rel="stylesheet" />
+	<div class="toc sticky"></div>
+	<div>
+		<section id="select-option">
+			<h2>Select options</h2>
+			<div class="select-options--grid mb-1" id="PR-select">
+				<a class="select-option" data-value="" href="#select-option1"><span class="icons" line-switch="1 1 1 1"
+						data-switch=""><span>Option 1</span></span>
+				</a>
+				<a class="select-option" data-value="" href="#select-option2"><span class="icons" line-switch="1 1 1 1"
+						data-switch=""><span>Option 2</span></span>
+				</a>
+			</div>
+			<div class="options-content active" id="PR-details">
+				<div class="options-content-container" data-value="Baseline" id="select-option1">
 					<h3>Option 1</h3>
 					<div class="options-content-container--body">
 						<div class="parking-lot-content">
 							Option 1 content
 						</div>
 					</div>
-					</div>
-					<div
-						class="options-content-container"
-						data-value="Baseline"
-						id="select-option2"
-					>
+				</div>
+				<div class="options-content-container" data-value="Baseline" id="select-option2">
 					<h3>Option 2</h3>
 					<div class="options-content-container--body">
 						<div class="parking-lot-content">
 							Option 2 content
 						</div>
 					</div>
-					</div>
-
 				</div>
-				
-			</section>
-			<section>
-				<h2>Banners</h2>
-				<div class="section-row">
-					<div class="">
-						<h3>Key to icons page</h3>
-						<div class="banner banner--key-to-icons">
-							<div class="banner__content">
-								<p class="banner__title">What do the icons mean?</p>
-								<p class="banner__body">
-									Find out the meaning of icons used in the Trip Plan.
-								</p>
-								<a class="btn btn__arrow btn-tertiary borderless" href="">
-									Key to icons page
-								</a>
-							</div>
+	
+			</div>
+	
+		</section>
+		<section id="banner">
+			<h2>Banners</h2>
+			<div class="section-row">
+				<div class="">
+					<h3>Key to icons page</h3>
+					<div class="banner banner--key-to-icons">
+						<div class="banner__content">
+							<p class="banner__title">What do the icons mean?</p>
+							<p class="banner__body">
+								Find out the meaning of icons used in the Trip Plan.
+							</p>
+							<a class="btn btn__arrow btn-tertiary borderless" href="">
+								Key to icons page
+							</a>
 						</div>
-						<div class="banner dark banner--key-to-icons">
-							<div class="banner__content">
-								<p class="banner__title">What do the icons mean?</p>
-								<p class="banner__body">
-									Find out the meaning of icons used in the Trip Plan.
-								</p>
-								<a class="btn btn__arrow btn-white borderless "href="">
-									Key to icons page
-								</a>
-							</div>
+					</div>
+					<div class="banner dark banner--key-to-icons">
+						<div class="banner__content">
+							<p class="banner__title">What do the icons mean?</p>
+							<p class="banner__body">
+								Find out the meaning of icons used in the Trip Plan.
+							</p>
+							<a class="btn btn__arrow btn-white borderless " href="">
+								Key to icons page
+							</a>
 						</div>
-						<div class="banner dark fullwidth banner--key-to-icons">
-							<div class="banner__content">
-								<p class="banner__title">What do the icons mean?</p>
-								<p class="banner__body">
-									Find out the meaning of icons used in the Trip Plan.
-								</p>
-								<a class="btn btn__arrow btn-white borderless "href="">
-									Key to icons page
-								</a>
-							</div>
+					</div>
+					<div class="banner dark fullwidth banner--key-to-icons">
+						<div class="banner__content">
+							<p class="banner__title">What do the icons mean?</p>
+							<p class="banner__body">
+								Find out the meaning of icons used in the Trip Plan.
+							</p>
+							<a class="btn btn__arrow btn-white borderless " href="">
+								Key to icons page
+							</a>
 						</div>
-						<pre>
+					</div>
+<pre>
 &lt;div class&#x3D;&quot;banner banner--key-to-icons&quot;&gt;
 	&lt;div class&#x3D;&quot;banner__content&quot;&gt;
 		&lt;p class&#x3D;&quot;banner__title&quot;&gt;What do the icons mean?&lt;&#x2F;p&gt;
@@ -1128,9 +1062,9 @@ transition: max-height 0.3s ease-in;
 		&lt;&#x2F;a&gt;
 	&lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
-						</pre>
-		
-						<pre>
+</pre>
+	
+<pre>
 &lt;div class&#x3D;&quot;banner dark banner--key-to-icons&quot;&gt;
 	&lt;div class&#x3D;&quot;banner__content&quot;&gt;
 		&lt;p class&#x3D;&quot;banner__title&quot;&gt;What do the icons mean?&lt;&#x2F;p&gt;
@@ -1143,998 +1077,947 @@ transition: max-height 0.3s ease-in;
 		&lt;&#x2F;a&gt;
 	&lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
-						</pre>
+</pre>
+				</div>
+	
+				<div>
+					<h3>New ways to bus</h3>
+					<div class="banner banner--new-ways-to-bus">
+						<div class="banner__content">
+							<p class="banner__title">New Ways to Bus Are Coming Your Way</p>
+							<p class="banner__body">
+								Frequent. Local. Connected.
+							</p>
+							<a class="btn btn__arrow btn-white borderless"
+								href="https://www.youtube.com/watch?v=LwWLSKj9yBc&t=4883s">
+								Watch the presentation
+							</a>
+						</div>
 					</div>
+					<div class="banner fullwidth banner--new-ways-to-bus">
+						<div class="banner__content">
+							<p class="banner__title">New Ways to Bus Are Coming Your Way</p>
+							<p class="banner__body">
+								Frequent. Local. Connected.
+							</p>
+							<a class="btn btn__arrow btn-white borderless"
+								href="https://www.youtube.com/watch?v=LwWLSKj9yBc&t=4883s">
+								Watch the presentation
+							</a>
+						</div>
+					</div>
+	
+	
+					<pre>
+		&lt;div class&#x3D;&quot;banner banner--new-ways-to-bus&quot;&gt;
+			&lt;div class&#x3D;&quot;banner__content&quot;&gt;
+				&lt;p class&#x3D;&quot;banner__title&quot;&gt;New Ways to Bus Are Coming Your Way&lt;&#x2F;p&gt;
 		
-					<div>
-						<h3>New ways to bus</h3>
-						<div class="banner banner--new-ways-to-bus">
-							<div class="banner__content">
-								<p class="banner__title">New Ways to Bus Are Coming Your Way</p>
-								<p class="banner__body">
-									Frequent. Local. Connected.
-								</p>
-								<a class="btn btn__arrow btn-white borderless" href="https://www.youtube.com/watch?v=LwWLSKj9yBc&t=4883s">
-									Watch the presentation
-								</a>
-							</div>
+				&lt;p class&#x3D;&quot;banner__body&quot;&gt;
+					Frequent. Local. Connected.
+				&lt;&#x2F;p&gt;
+				&lt;a class&#x3D;&quot;btn btn__arrow btn-white borderless &quot;href&#x3D;&quot;&quot;&gt;
+					Watch the presentation
+				&lt;&#x2F;a&gt;
+			&lt;&#x2F;div&gt;
+		&lt;&#x2F;div&gt;
+								</pre>
+					<div class="banner banner--new-ways-to-bus">
+						<div class="banner__content">
+							<p class="banner__title">L’autobus réinventé est en route</p>
+							<p class="banner__body">
+								Fréquent. Dans ton quartier. Connecté.
+							</p>
+							<a class="btn btn__arrow btn-white borderless"
+								href="https://www.youtube.com/watch?v=LwWLSKj9yBc&t=4883s">
+								Voir la présentation
+							</a>
 						</div>
-						<div class="banner fullwidth banner--new-ways-to-bus">
-							<div class="banner__content">
-								<p class="banner__title">New Ways to Bus Are Coming Your Way</p>
-								<p class="banner__body">
-									Frequent. Local. Connected.
-								</p>
-								<a class="btn btn__arrow btn-white borderless" href="https://www.youtube.com/watch?v=LwWLSKj9yBc&t=4883s">
-									Watch the presentation
-								</a>
-							</div>
-						</div>
-
-						
-						<pre>
-&lt;div class&#x3D;&quot;banner banner--new-ways-to-bus&quot;&gt;
-	&lt;div class&#x3D;&quot;banner__content&quot;&gt;
-		&lt;p class&#x3D;&quot;banner__title&quot;&gt;New Ways to Bus Are Coming Your Way&lt;&#x2F;p&gt;
-
-		&lt;p class&#x3D;&quot;banner__body&quot;&gt;
-			Frequent. Local. Connected.
-		&lt;&#x2F;p&gt;
-		&lt;a class&#x3D;&quot;btn btn__arrow btn-white borderless &quot;href&#x3D;&quot;&quot;&gt;
-			Watch the presentation
-		&lt;&#x2F;a&gt;
-	&lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;
-						</pre>
-						<div class="banner banner--new-ways-to-bus">
-							<div class="banner__content">
-								<p class="banner__title">L’autobus réinventé est en route</p>
-								<p class="banner__body">
-									Fréquent. Dans ton quartier. Connecté.
-								</p>
-								<a class="btn btn__arrow btn-white borderless" href="https://www.youtube.com/watch?v=LwWLSKj9yBc&t=4883s">
-									Voir la présentation
-								</a>
-							</div>
-						</div>
-						<pre></pre>
 					</div>
-					<div>
-						<h3>Travel Planner</h3>
-							<div class="banner dark banner--travel-planner">
-								<div class="banner__content">
-									<p class="banner__title">Get your travel plan</p>
-									<p class="banner__body">
-										Use our Travel Planner to get customized trip plans
-									</p>
-									<a class="btn btn__arrow btn-white borderless "href="">
-										Try it out
-									</a>
-								</div>
-							</div>
-					</div>
-					<div>
-						<h3>Transparency page</h3>
-							<div class="banner dark banner--transparency">
-								<div class="banner__content">
-									<p class="banner__title">Transparency page</p>
-									<p class="banner__body">
-										Check out our Transparency page for upcoming meetings, agendas, and videos
-									</p>
-									<a class="btn btn__arrow btn-white borderless "href="">
-										Visit page
-									</a>
-								</div>
-							</div>
+					<pre></pre>
+				</div>
+				<div>
+					<h3>Travel Planner</h3>
+					<div class="banner dark banner--travel-planner">
+						<div class="banner__content">
+							<p class="banner__title">Get your travel plan</p>
+							<p class="banner__body">
+								Use our Travel Planner to get customized trip plans
+							</p>
+							<a class="btn btn__arrow btn-white borderless " href="">
+								Try it out
+							</a>
+						</div>
 					</div>
 				</div>
-			</section>
-			<section id="button">
-				<h2>Buttons</h2>
-				<div class="">
-		
-					<div class="section-row">
-						<div class="grid grid--8col">
-							<a class="btn-primary btn btn-lg btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-primary btn btn-lg  btn-solid" href="">Button</a>
-							<a class="btn-primary btn btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-primary btn btn-solid" href="">Button</a>
-							<a class="btn-primary btn btn-lg btn__arrow" href="">Button</a>
-							<a class="btn-primary btn btn-lg " href="">Button</a>
-							<a class="btn-primary btn btn__arrow" href="">Button</a>
-							<a class="btn-primary btn" href="">Button</a>
-		
+				<div>
+					<h3>Transparency page</h3>
+					<div class="banner dark banner--transparency">
+						<div class="banner__content">
+							<p class="banner__title">Transparency page</p>
+							<p class="banner__body">
+								Check out our Transparency page for upcoming meetings, agendas, and videos
+							</p>
+							<a class="btn btn__arrow btn-white borderless " href="">
+								Visit page
+							</a>
 						</div>
-						<pre>
-&lt;a class&#x3D;&quot;btn-primary btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-primary btn btn-lg  btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-primary btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-primary btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-primary btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-primary btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-primary btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-primary btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-						</pre>
-						<div class="grid grid--8col">
-		
-							<!-- Line2 -->
-							<a class="btn-line2 btn btn-lg btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-line2 btn btn-lg  btn-solid" href="">Button</a>
-							<a class="btn-line2 btn btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-line2 btn btn-solid" href="">Button</a>
-							<a class="btn-line2 btn btn-lg btn__arrow" href="">Button</a>
-							<a class="btn-line2 btn btn-lg " href="">Button</a>
-							<a class="btn-line2 btn btn__arrow" href="">Button</a>
-							<a class="btn-line2 btn" href="">Button</a>
-		
-						</div>
-						<pre>
-&lt;a class&#x3D;&quot;btn-line2 btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line2 btn btn-lg  btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line2 btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line2 btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line2 btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line2 btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line2 btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line2 btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-						</pre>
-						<div class="grid grid--8col">
-		
-							<a class="btn-line3 btn btn-lg btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-line3 btn btn-lg btn-solid" href="">Button</a>
-							<a class="btn-line3 btn btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-line3 btn btn-solid" href="">Button</a>
-							<a class="btn-line3 btn btn-lg btn__arrow" href="">Button</a>
-							<a class="btn-line3 btn btn-lg " href="">Button</a>
-							<a class="btn-line3 btn btn__arrow" href="">Button</a>
-							<a class="btn-line3 btn" href="">Button</a>
-		
-						</div>
-						<pre>
-&lt;a class&#x3D;&quot;btn-line3 btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line3 btn btn-lg btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line3 btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line3 btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line3 btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line3 btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line3 btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line3 btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-						</pre>
-						<div class="grid grid--8col">
-		
-							<a class="btn-line4 btn btn-lg btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-line4 btn btn-lg btn-solid" href="">Button</a>
-							<a class="btn-line4 btn btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-line4 btn btn-solid" href="">Button</a>
-							<a class="btn-line4 btn btn-lg btn__arrow" href="">Button</a>
-							<a class="btn-line4 btn btn-lg " href="">Button</a>
-							<a class="btn-line4 btn btn__arrow" href="">Button</a>
-							<a class="btn-line4 btn" href="">Button</a>
-		
-						</div>
-						<pre>
-&lt;a class&#x3D;&quot;btn-line4 btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line4 btn btn-lg btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line4 btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line4 btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line4 btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line4 btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line4 btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-line4 btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-						</pre>
-						<div class="grid grid--8col">
-		
-							<a class="btn-secondary btn btn-lg btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-secondary btn btn-lg btn-solid" href="">Button</a>
-							<a class="btn-secondary btn btn__arrow btn-solid" href="">Button</a>
-							<a class="btn-secondary btn btn-solid" href="">Button</a>
-							<a class="btn-secondary btn btn-lg btn__arrow" href="">Button</a>
-							<a class="btn-secondary btn btn-lg " href="">Button</a>
-							<a class="btn-secondary btn btn__arrow" href="">Button</a>
-							<a class="btn-secondary btn" href="">Button</a>
-		
-						</div>
-						<pre>
-&lt;a class&#x3D;&quot;btn-secondary btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-secondary btn btn-lg btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-secondary btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-secondary btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-secondary btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-secondary btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-secondary btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-&lt;a class&#x3D;&quot;btn-secondary btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-						</pre>
-						<div class="grid grid--8col">
-		
-							<a class="btn-tertiary btn btn-lg btn__arrow " href="">Button</a>
-							<a class="btn-tertiary btn btn-lg" href="">Button
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="button">
+			<h2>Buttons</h2>
+			<div class="">
+	
+				<div class="section-row">
+					<div class="grid grid--8col">
+						<a class="btn-primary btn btn-lg btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-primary btn btn-lg  btn-solid" href="">Button</a>
+						<a class="btn-primary btn btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-primary btn btn-solid" href="">Button</a>
+						<a class="btn-primary btn btn-lg btn__arrow" href="">Button</a>
+						<a class="btn-primary btn btn-lg " href="">Button</a>
+						<a class="btn-primary btn btn__arrow" href="">Button</a>
+						<a class="btn-primary btn" href="">Button</a>
+	
+					</div>
+					<pre>
+		&lt;a class&#x3D;&quot;btn-primary btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-primary btn btn-lg  btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-primary btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-primary btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-primary btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-primary btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-primary btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-primary btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+								</pre>
+					<div class="grid grid--8col">
+	
+						<!-- Line2 -->
+						<a class="btn-line2 btn btn-lg btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-line2 btn btn-lg  btn-solid" href="">Button</a>
+						<a class="btn-line2 btn btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-line2 btn btn-solid" href="">Button</a>
+						<a class="btn-line2 btn btn-lg btn__arrow" href="">Button</a>
+						<a class="btn-line2 btn btn-lg " href="">Button</a>
+						<a class="btn-line2 btn btn__arrow" href="">Button</a>
+						<a class="btn-line2 btn" href="">Button</a>
+	
+					</div>
+					<pre>
+		&lt;a class&#x3D;&quot;btn-line2 btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line2 btn btn-lg  btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line2 btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line2 btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line2 btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line2 btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line2 btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line2 btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+								</pre>
+					<div class="grid grid--8col">
+	
+						<a class="btn-line3 btn btn-lg btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-line3 btn btn-lg btn-solid" href="">Button</a>
+						<a class="btn-line3 btn btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-line3 btn btn-solid" href="">Button</a>
+						<a class="btn-line3 btn btn-lg btn__arrow" href="">Button</a>
+						<a class="btn-line3 btn btn-lg " href="">Button</a>
+						<a class="btn-line3 btn btn__arrow" href="">Button</a>
+						<a class="btn-line3 btn" href="">Button</a>
+	
+					</div>
+					<pre>
+		&lt;a class&#x3D;&quot;btn-line3 btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line3 btn btn-lg btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line3 btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line3 btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line3 btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line3 btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line3 btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line3 btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+								</pre>
+					<div class="grid grid--8col">
+	
+						<a class="btn-line4 btn btn-lg btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-line4 btn btn-lg btn-solid" href="">Button</a>
+						<a class="btn-line4 btn btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-line4 btn btn-solid" href="">Button</a>
+						<a class="btn-line4 btn btn-lg btn__arrow" href="">Button</a>
+						<a class="btn-line4 btn btn-lg " href="">Button</a>
+						<a class="btn-line4 btn btn__arrow" href="">Button</a>
+						<a class="btn-line4 btn" href="">Button</a>
+	
+					</div>
+					<pre>
+		&lt;a class&#x3D;&quot;btn-line4 btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line4 btn btn-lg btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line4 btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line4 btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line4 btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line4 btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line4 btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-line4 btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+								</pre>
+					<div class="grid grid--8col">
+	
+						<a class="btn-secondary btn btn-lg btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-secondary btn btn-lg btn-solid" href="">Button</a>
+						<a class="btn-secondary btn btn__arrow btn-solid" href="">Button</a>
+						<a class="btn-secondary btn btn-solid" href="">Button</a>
+						<a class="btn-secondary btn btn-lg btn__arrow" href="">Button</a>
+						<a class="btn-secondary btn btn-lg " href="">Button</a>
+						<a class="btn-secondary btn btn__arrow" href="">Button</a>
+						<a class="btn-secondary btn" href="">Button</a>
+	
+					</div>
+					<pre>
+		&lt;a class&#x3D;&quot;btn-secondary btn btn-lg btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-secondary btn btn-lg btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-secondary btn btn__arrow btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-secondary btn btn-solid&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-secondary btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-secondary btn btn-lg &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-secondary btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+		&lt;a class&#x3D;&quot;btn-secondary btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+								</pre>
+					<div class="grid grid--8col">
+	
+						<a class="btn-tertiary btn btn-lg btn__arrow " href="">Button</a>
+						<a class="btn-tertiary btn btn-lg" href="">Button
 							<a class="btn-tertiary btn btn__arrow" href="">Button</a>
 							<a class="btn-tertiary btn" href="">Button</a>
 							<a class="btn-tertiary btn btn-lg btn__arrow btn-text-only" href="">Button</a>
 							<p></p>
 							<a class="btn-tertiary btn btn__arrow btn-text-only" href="">Button</a>
 							<p></p>
-		
-						</div>
-						<pre>
-		&lt;a class&#x3D;&quot;btn-tertiary btn btn-lg btn__arrow &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;a class&#x3D;&quot;btn-tertiary btn btn-lg&quot; href&#x3D;&quot;&quot;&gt;Button
-		&lt;a class&#x3D;&quot;btn-tertiary btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;a class&#x3D;&quot;btn-tertiary btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;a class&#x3D;&quot;btn-tertiary btn btn-lg btn__arrow btn-text-only&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;p&gt;&lt;&#x2F;p&gt;
-		&lt;a class&#x3D;&quot;btn-tertiary btn btn__arrow btn-text-only&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;p&gt;&lt;&#x2F;p&gt;
-						</pre>
-						<div class="grid grid--8col">
-		
-							<a class="btn-tertiary btn-line4 btn btn-lg btn__arrow " href="">Button</a>
-							<a class="btn-tertiary btn-line4 btn btn-lg" href="">Button
+	
+					</div>
+					<pre>
+				&lt;a class&#x3D;&quot;btn-tertiary btn btn-lg btn__arrow &quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;a class&#x3D;&quot;btn-tertiary btn btn-lg&quot; href&#x3D;&quot;&quot;&gt;Button
+				&lt;a class&#x3D;&quot;btn-tertiary btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;a class&#x3D;&quot;btn-tertiary btn&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;a class&#x3D;&quot;btn-tertiary btn btn-lg btn__arrow btn-text-only&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;p&gt;&lt;&#x2F;p&gt;
+				&lt;a class&#x3D;&quot;btn-tertiary btn btn__arrow btn-text-only&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;p&gt;&lt;&#x2F;p&gt;
+								</pre>
+					<div class="grid grid--8col">
+	
+						<a class="btn-tertiary btn-line4 btn btn-lg btn__arrow " href="">Button</a>
+						<a class="btn-tertiary btn-line4 btn btn-lg" href="">Button
 							<a class="btn-tertiary btn-line4 btn btn__arrow" href="">Button</a>
 							<a class="btn-tertiary btn-line4 btn" href="">Button</a>
 							<a class="btn-tertiary btn-line4 btn btn-lg btn__arrow btn-text-only" href="">Button</a>
 							<p></p>
 							<a class="btn-tertiary btn-line4 btn btn__arrow btn-text-only" href="">Button</a>
 							<p></p>
-		
-						</div>
-		
-						<div class="grid grid--8col background-dark">
-							<a class="btn-white btn btn-lg btn__arrow borderless" href="">Button</a>
-							<a class="btn-white btn btn-lg btn__arrow" href="">Button</a>
-							<a class="btn-white btn btn__arrow borderless" href="">Button</a>
-							<a class="btn-white btn btn__arrow" href="">Button</a>
-							<a class="btn-white btn btn-lg btn__arrow btn-text-only" href="">Button</a>
-							<p></p>
-							<a class="btn-white btn btn__arrow btn-text-only" href="">Button</a>
-							<p></p>
-						</div>
-						<pre>
-		&lt;a class&#x3D;&quot;btn-white btn btn-lg btn__arrow borderless&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;a class&#x3D;&quot;btn-white btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;a class&#x3D;&quot;btn-white btn btn__arrow borderless&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;a class&#x3D;&quot;btn-white btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;a class&#x3D;&quot;btn-white btn btn-lg btn__arrow btn-text-only&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;p&gt;&lt;&#x2F;p&gt;
-		&lt;a class&#x3D;&quot;btn-white btn btn__arrow btn-text-only&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
-		&lt;p&gt;&lt;&#x2F;p&gt;
-						</pre>
+	
 					</div>
-				</div>
-			</section>
-			<section>
-				<h3>Notes</h3>
-				<div class="note-warning note">
-					<p class="note__title"><strong>Warning</strong></p>
-		
-					<p>On <strong>Friday , March 22</strong> to <strong>Sunday, March 24</strong>, the Transitway nightly detour will start earlier at <strong>10 pm</strong>. The standard 11:30 pm start time will be reintroduced on Monday 25.</p>
-		
-					<p><span id="10921-changes">*</span>Changes: Route 64 will be affected on Friday, March 22 due to the earlier start time.</p>
-				</div>
-				<div class="note-update note">
-					<p class="note__title">Update</p>
-					<div class="note__content">
-						<p>On <strong>Friday , March 22</strong> to <strong>Sunday, March 24</strong>, the Transitway nightly detour will start earlier at <strong>10 pm</strong>. The standard 11:30 pm start time will be reintroduced on Monday 25.</p>
-		
-						<p><span id="10921-changes">*</span>Changes: Route 64 will be affected on Friday, March 22 due to the earlier start time.</p>
+	
+					<div class="grid grid--8col background-dark">
+						<a class="btn-white btn btn-lg btn__arrow borderless" href="">Button</a>
+						<a class="btn-white btn btn-lg btn__arrow" href="">Button</a>
+						<a class="btn-white btn btn__arrow borderless" href="">Button</a>
+						<a class="btn-white btn btn__arrow" href="">Button</a>
+						<a class="btn-white btn btn-lg btn__arrow btn-text-only" href="">Button</a>
+						<p></p>
+						<a class="btn-white btn btn__arrow btn-text-only" href="">Button</a>
+						<p></p>
 					</div>
+					<pre>
+				&lt;a class&#x3D;&quot;btn-white btn btn-lg btn__arrow borderless&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;a class&#x3D;&quot;btn-white btn btn-lg btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;a class&#x3D;&quot;btn-white btn btn__arrow borderless&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;a class&#x3D;&quot;btn-white btn btn__arrow&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;a class&#x3D;&quot;btn-white btn btn-lg btn__arrow btn-text-only&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;p&gt;&lt;&#x2F;p&gt;
+				&lt;a class&#x3D;&quot;btn-white btn btn__arrow btn-text-only&quot; href&#x3D;&quot;&quot;&gt;Button&lt;&#x2F;a&gt;
+				&lt;p&gt;&lt;&#x2F;p&gt;
+								</pre>
 				</div>
-				<pre></pre>
-			</section>
-			<section id="ul">
-				<h2>Unordered lists</h2>
-				<div>
-					<h3>Timeline</h3>
-					<div class="section-row section-row-1fr-1fr">
-						<div>
-							<ul class="timeline bg-gradient-red">
-								<li class="timeline__list">
-									<div class="timeline__text">
-										<p class="timeline__year">Title</p>
-										<p class="timeline__body">
-											Lorem ipsum dolor sit
-										</p>
-									</div>
-								</li>
-								<li class="timeline__list">
-									<div class="timeline__text">
-										<p class="timeline__year">Title</p>
-										<p class="timeline__body">
-											Lorem ipsum dolor sit
-										</p>
-									</div>
-								</li>
-								<li class="timeline__list">
-									<div class="timeline__text">
-										<p class="timeline__year">Title</p>
-										<p class="timeline__body">
-											Lorem ipsum dolor sit
-										</p>
-									</div>
-								</li>
-							</ul>
-							<!-- <ul class="timeline bg-gradient-green">
+			</div>
+		</section>
+		<section id="notes">
+			<h2>Notes</h2>
+			<div class="note-warning note">
+				<p class="note__title"><strong>Warning</strong></p>
+	
+				<p>On <strong>Friday , March 22</strong> to <strong>Sunday, March 24</strong>, the Transitway nightly detour
+					will start earlier at <strong>10 pm</strong>. The standard 11:30 pm start time will be reintroduced on
+					Monday 25.</p>
+	
+				<p><span id="10921-changes">*</span>Changes: Route 64 will be affected on Friday, March 22 due to the
+					earlier start time.</p>
+			</div>
+			<div class="note-update note">
+				<p class="note__title">Update</p>
+				<div class="note__content">
+					<p>On <strong>Friday , March 22</strong> to <strong>Sunday, March 24</strong>, the Transitway nightly
+						detour will start earlier at <strong>10 pm</strong>. The standard 11:30 pm start time will be
+						reintroduced on Monday 25.</p>
+	
+					<p><span id="10921-changes">*</span>Changes: Route 64 will be affected on Friday, March 22 due to the
+						earlier start time.</p>
+				</div>
+			</div>
+			<pre></pre>
+		</section>
+		<section id="ul">
+			<h2>Unordered lists</h2>
+			<div>
+				<h3>Timeline</h3>
+				<div class="section-row section-row-1fr-1fr">
+					<div>
+						<ul class="timeline bg-gradient-red">
 							<li class="timeline__list">
 								<div class="timeline__text">
 									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
+									<p class="timeline__body">
+										Lorem ipsum dolor sit
+									</p>
 								</div>
 							</li>
 							<li class="timeline__list">
 								<div class="timeline__text">
 									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
+									<p class="timeline__body">
+										Lorem ipsum dolor sit
+									</p>
 								</div>
 							</li>
 							<li class="timeline__list">
 								<div class="timeline__text">
 									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
+									<p class="timeline__body">
+										Lorem ipsum dolor sit
+									</p>
 								</div>
 							</li>
-			
 						</ul>
-						<ul class="timeline bg-gradient-yellow">
-							<li class="timeline__list">
-								<div class="timeline__text">
-									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
-								</div>
-							</li>
-							<li class="timeline__list">
-								<div class="timeline__text">
-									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
-								</div>
-							</li>
-							<li class="timeline__list">
-								<div class="timeline__text">
-									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
-								</div>
-							</li>
-			
-						</ul>
-						<ul class="timeline bg-gradient-blue">
-							<li class="timeline__list">
-								<div class="timeline__text">
-									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
-								</div>
-							</li>
-							<li class="timeline__list">
-								<div class="timeline__text">
-									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
-								</div>
-							</li>
-							<li class="timeline__list">
-								<div class="timeline__text">
-									<p class="timeline__year">Title</p>
-									<p class="timeline__body">Lorem ipsum dolor sit</p>
-								</div>
-							</li>
-			
-						</ul> -->
-						</div>
-						<pre>
-		swap out [colour] to:
-		bg-gradient-red
-		bg-gradient-green
-		bg-gradient-yellow
-		bg-gradient-blue
-		---------------------
-		
-		&lt;ul class&#x3D;&quot;timeline bg-gradient-[colour]&quot;&gt;
-			&lt;li class&#x3D;&quot;timeline__list&quot;&gt;
-				&lt;div class&#x3D;&quot;timeline__text&quot;&gt;
-					&lt;p class&#x3D;&quot;timeline__year&quot;&gt;Title&lt;&#x2F;p&gt;
-					&lt;p class&#x3D;&quot;timeline__body&quot;&gt;Lorem ipsum dolor sit&lt;&#x2F;p&gt;
-				&lt;&#x2F;div&gt;
-			&lt;&#x2F;li&gt;
-			&lt;li class&#x3D;&quot;timeline__list&quot;&gt;
-				&lt;div class&#x3D;&quot;timeline__text&quot;&gt;
-					&lt;p class&#x3D;&quot;timeline__year&quot;&gt;Title&lt;&#x2F;p&gt;
-					&lt;p class&#x3D;&quot;timeline__body&quot;&gt;Lorem ipsum dolor sit&lt;&#x2F;p&gt;
-				&lt;&#x2F;div&gt;
-			&lt;&#x2F;li&gt;
-			&lt;li class&#x3D;&quot;timeline__list&quot;&gt;
-				&lt;div class&#x3D;&quot;timeline__text&quot;&gt;
-					&lt;p class&#x3D;&quot;timeline__year&quot;&gt;Title&lt;&#x2F;p&gt;
-					&lt;p class&#x3D;&quot;timeline__body&quot;&gt;Lorem ipsum dolor sit&lt;&#x2F;p&gt;
-				&lt;&#x2F;div&gt;
-			&lt;&#x2F;li&gt;
-		&lt;&#x2F;ul&gt;
-					</pre
-						>
-					</div>
-					<h3>Checklist</h3>
-					<div class="section-row section-row-1fr-1fr">
-						<ul class="checklist">
-							<li>Baseline (avant 11 h)</li>
-							<li>Blair (Telesat)</li>
-							<li>Jeanne d’Arc, and</li>
-							<li>Ray Friel</li>
-						</ul>
-						<pre>
-		&lt;ul class&#x3D;&quot;checklist&quot;&gt;
-			&lt;li&gt;Baseline (avant 11 h)&lt;&#x2F;li&gt;
-			&lt;li&gt;Blair (Telesat)&lt;&#x2F;li&gt;
-			&lt;li&gt;Jeanne d’Arc, and&lt;&#x2F;li&gt;
-			&lt;li&gt;Ray Friel&lt;&#x2F;li&gt;
-		&lt;&#x2F;ul&gt;
-						</pre
-						>
-					</div>
-				</div>
-			</section>
-			<!--     
-			<section id="typography">
-				<h1>This is a h1</h1>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, omnis esse, reiciendis, a sunt nesciunt est ipsam nihil qui ratione aliquam in neque non autem.</p>
-				<h2>This is a h2</h2>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, omnis esse, reiciendis, a sunt nesciunt est ipsam nihil qui ratione aliquam in neque non autem.</p>
-			</section> -->
-			<section>
-				<h2>Accordions</h2>
-				<p>
-					note from Francine:
-					linearizing tabs and expanding accordions in print mode:
-					https://reintech.io/blog/css-print-stylesheets-tutorial
-				</p>
-				<h3>Original faq</h3>
-				<div class="faq-accordion">
-					<h5 class="accordion">Access points</h5>
-		
-					<div class="accordion-content">
-					<p>The entrance to the parking lot is located at the intersection at Woodroffe Ave. (west side) / Parkglen Dr.</p>
-					</div>
-					</div>
-		
-				<h3>Simple</h3>
-				<div class="section-row section-row-1fr-1fr">
-					<div class="accordion-container accordion-container--simple">
-						<h4 id="placeholderID-acc1" class="accordion">
-							Accordion 1
-						</h4>
-						<div class="accordion-content">
-							<p>accordion content 1</p>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing
-								elit. Harum earum consectetur magni voluptatibus,
-								temporibus nemo quae sed libero beatae delectus.
-								Perspiciatis quod beatae quia qui atque nostrum
-								voluptate, cumque quos.
-							</p>
-						</div>
-						<h4 id="placeholderID-acc2" class="accordion">
-							Accordion 2
-						</h4>
-						<div class="accordion-content">
-							<p>accordion content 2</p>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing
-								elit. Harum earum consectetur magni voluptatibus,
-								temporibus nemo quae sed libero beatae delectus.
-								Perspiciatis quod beatae quia qui atque nostrum
-								voluptate, cumque quos.
-							</p>
-							<div class="side-note">
-								<p class="side-note__title">
-									*Note: Replacement bus service
-								</p>
-								<div class="side-note__content">
-									<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat soluta delectus tempore sit ullam, saepe quam ipsam omnis, fugit a repellendus! Minus illo quibusdam ea inventore nulla quia saepe.</p> -->
-									<ul>
-										<li>
-											May be deployed when the O-Train is not
-											running during regular service hours
-										</li>
-										<li>
-											Serves all O-Train stations on the
-											line and only makes limited stops along
-											the way
-										</li>
-										<li>
-											For shorter trip times, Lees and
-											Cyrville are served by a shuttle instead
-										</li>
-										<li>
-											If an O-Train line is partially closed,
-											may run only along the closed portion
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<pre>
-		&lt;div class&#x3D;&quot;accordion-container accordion-container--simple&quot;&gt;
-			&lt;h4 id&#x3D;&quot;placeholderID-acc1&quot;class&#x3D;&quot;accordion&quot;&gt;Accordion 1&lt;&#x2F;h4&gt;
-			&lt;div class&#x3D;&quot;accordion-content&quot;&gt;
-				&lt;p&gt;accordion content&lt;&#x2F;p&gt;  
-			&lt;&#x2F;div&gt;
-			&lt;h4 id&#x3D;&quot;placeholderID-acc2&quot;class&#x3D;&quot;accordion&quot;&gt;Accordion 2&lt;&#x2F;h4&gt;
-			&lt;div class&#x3D;&quot;accordion-content&quot;&gt;
-				&lt;p&gt;accordion content&lt;&#x2F;p&gt;
-			&lt;&#x2F;div&gt;
-		&lt;&#x2F;div&gt;
-						</pre>
-				</div>
-				<p>Simple & bordered</p>
-				<div class="section-row section-row-1fr-1fr">
-					<div
-						class="accordion-container accordion-container--simple bordered"
-					>
-						<h4 id="placeholderID-acc1" class="accordion">
-							Accordion 1
-						</h4>
-						<div class="accordion-content">
-							<p>accordion content 1</p>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing
-								elit. Harum earum consectetur magni voluptatibus,
-								temporibus nemo quae sed libero beatae delectus.
-								Perspiciatis quod beatae quia qui atque nostrum
-								voluptate, cumque quos.
-							</p>
-						</div>
-						<h4 id="placeholderID-acc2" class="accordion">
-							Accordion 2
-						</h4>
-						<div class="accordion-content">
-							<p>accordion content 2</p>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing
-								elit. Harum earum consectetur magni voluptatibus,
-								temporibus nemo quae sed libero beatae delectus.
-								Perspiciatis quod beatae quia qui atque nostrum
-								voluptate, cumque quos.
-							</p>
-							<div class="side-note">
-								<p class="side-note__title">
-									*Note: Replacement bus service
-								</p>
-								<div class="side-note__content">
-									<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat soluta delectus tempore sit ullam, saepe quam ipsam omnis, fugit a repellendus! Minus illo quibusdam ea inventore nulla quia saepe.</p> -->
-									<ul>
-										<li>
-											May be deployed when the O-Train is not
-											running during regular service hours
-										</li>
-										<li>
-											Serves all O-Train stations on the
-											line and only makes limited stops along
-											the way
-										</li>
-										<li>
-											For shorter trip times, Lees and
-											Cyrville are served by a shuttle instead
-										</li>
-										<li>
-											If an O-Train line is partially closed,
-											may run only along the closed portion
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<pre>
-		<!-- insert code here -->
-						</pre>
-				</div>
-			</section>
-			<section>
-				<h2>Tables</h2>
-				<h3>Definition tables</h3>
-				<p>Simple icon table</p>
-				<div class="section-row section-row-1fr-1fr">
-					<dl class="icon-list">
-						<dt class="header-row">Icon</dt>
-						<dd class="header-row">Meaning</dd>
-						<dt>
-							<div class="icon-container icon-container--sm">
-								<img
-									src="https://www.octranspo.com/images/files/icons/line_1.svg "
-									alt=""
-								/>
-							</div>
-						</dt>
-						<dd>Line 1</dd>
-						<dt>
-							<div class="icon-container icon-container--sm">
-								<img
-									src="https://www.octranspo.com/images/files/icons/line_2.svg "
-									alt=""
-								/>
-							</div>
-						</dt>
-						<dd>Line 2</dd>
-						<dt>
-							<div class="icon-container icon-container--sm">
-								<img
-									src="https://www.octranspo.com/images/files/icons/line_4.svg "
-									alt=""
-								/>
-							</div>
-						</dt>
-						<dd>Line 4</dd>
-					</dl>
-					<pre>
-		<!-- insert -->
-						</pre>
-				</div>
-				<p>Bordered</p>
-				<div class="section-row section-row-1fr-1fr">
-					<dl class="icon-list icon-list bordered">
-						<dt class="header-row">Icon</dt>
-						<dd class="header-row">Meaning</dd>
-						<dt>
-							<div class="icon-container icon-container--sm">
-								<img
-									src="https://www.octranspo.com/images/files/icons/line_1.svg "
-									alt=""
-								/>
-							</div>
-						</dt>
-						<dd>Line 1</dd>
-						<dt>
-							<div class="icon-container icon-container--sm">
-								<img
-									src="https://www.octranspo.com/images/files/icons/line_2.svg "
-									alt=""
-								/>
-							</div>
-						</dt>
-						<dd>Line 2</dd>
-						<dt>
-							<div class="icon-container icon-container--sm">
-								<img
-									src="https://www.octranspo.com/images/files/icons/line_4.svg "
-									alt=""
-								/>
-							</div>
-						</dt>
-						<dd>Line 4</dd>
-					</dl>
-					<pre>
-		&lt;dl class&#x3D;&quot;icon-list bordered&quot;&gt;
-		&lt;dt class&#x3D;&quot;header-row&quot;&gt;
-			Icon
-		&lt;&#x2F;dt&gt;
-		&lt;dd class&#x3D;&quot;header-row&quot;&gt;Meaning&lt;&#x2F;dd&gt;
-		&lt;dt&gt;
-			&lt;div class&#x3D;&quot;icon-container icon-container--sm&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;line_1.svg &quot; alt&#x3D;&quot;&quot;&gt;&lt;&#x2F;div&gt;
-		&lt;&#x2F;dt&gt;
-		&lt;dd&gt;Line 1&lt;&#x2F;dd&gt;
-		&lt;dt&gt;
-			&lt;div class&#x3D;&quot;icon-container icon-container--sm&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;line_2.svg &quot; alt&#x3D;&quot;&quot;&gt;&lt;&#x2F;div&gt;
-		&lt;&#x2F;dt&gt;
-		&lt;dd&gt;Line 2&lt;&#x2F;dd&gt;
-		
-		&lt;dt&gt;
-			&lt;div class&#x3D;&quot;icon-container icon-container--sm&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;line_4.svg &quot; alt&#x3D;&quot;&quot;&gt;&lt;&#x2F;div&gt;
-		&lt;&#x2F;dt&gt;
-		&lt;dd&gt;Line 4&lt;&#x2F;dd&gt;
-		
-		
-		&lt;&#x2F;dl&gt;
-			</pre
-					>
-				</div>
-				<h3>Simple text table</h3>
-				<p>text tables will collapse to one column in mobile view</p>
-				<div class="section-row section-row-1fr-1fr">
-					<dl class="text-list">
-						<dt class="header-row">Term</dt>
-						<dd class="header-row">Meaning</dd>
-						<dt>term 1</dt>
-						<dd>
-							Lorem, ipsum dolor sit amet consectetur adipisicing
-							elit. Vel, earum?
-						</dd>
-						<dt>term 2</dt>
-						<dd>
-							Lorem, ipsum dolor sit amet consectetur adipisicing
-							elit. Vel, earum?
-						</dd>
-					</dl>
-					<pre>
-		<!-- insert -->
-						</pre>
-				</div>
-				<h3>Responsive table</h3>
-				<p>
-					At small screens only: Sticky left header column and autoflow-x
-				</p>
-				<ul class="checklist">
-					<li>Horizontal scroll at mobile screens</li>
-					<li>Sticky left header column</li>
-				</ul>
-				<div class="section-row section-row-1fr-1fr">
-					<div class="table-container">
-						<table
-							class="table--simple table--responsive-xscroll sticky-left-col bordered"
-						>
-							<caption>
-								Ottawa LRT Public Inquiry Action Plan
-							</caption>
-							<thead>
-								<tr>
-									<th><div>Theme</div></th>
-									<th><div>default table width</div></th>
-									<th class="wide">
-										<div>
-											wide table width with utility class
+						<!-- <ul class="timeline bg-gradient-green">
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
 										</div>
-									</th>
-									<th><div>default table width</div></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th><div>header</div></th>
-									<td>cell content</td>
-									<td>cell content</td>
-									<td>cell content</td>
-								</tr>
-								<tr>
-									<th><div>header</div></th>
-									<td>cell content</td>
-									<td>
-										<p>
-											Lorem ipsum dolor sit, amet consectetur
-											adipisicing elit. Vitae dolorem soluta
-											aliquid est alias atque architecto,
-											rerum optio quibusdam eaque.
-										</p>
-									</td>
-									<td>cell content</td>
-								</tr>
-								<tr class="bold">
-									<th><div>header</div></th>
-									<td>cell content</td>
-									<td>
-										<p>
-											utility class for making entire table
-											row bold
-										</p>
-									</td>
-									<td>cell content lorem</td>
-								</tr>
-							</tbody>
-						</table>
+									</li>
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
+										</div>
+									</li>
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
+										</div>
+									</li>
+					
+								</ul>
+								<ul class="timeline bg-gradient-yellow">
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
+										</div>
+									</li>
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
+										</div>
+									</li>
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
+										</div>
+									</li>
+					
+								</ul>
+								<ul class="timeline bg-gradient-blue">
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
+										</div>
+									</li>
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
+										</div>
+									</li>
+									<li class="timeline__list">
+										<div class="timeline__text">
+											<p class="timeline__year">Title</p>
+											<p class="timeline__body">Lorem ipsum dolor sit</p>
+										</div>
+									</li>
+					
+								</ul> -->
 					</div>
 					<pre>
-		<!-- insert -->
-						</pre>
+				swap out [colour] to:
+				bg-gradient-red
+				bg-gradient-green
+				bg-gradient-yellow
+				bg-gradient-blue
+				---------------------
+				
+				&lt;ul class&#x3D;&quot;timeline bg-gradient-[colour]&quot;&gt;
+					&lt;li class&#x3D;&quot;timeline__list&quot;&gt;
+						&lt;div class&#x3D;&quot;timeline__text&quot;&gt;
+							&lt;p class&#x3D;&quot;timeline__year&quot;&gt;Title&lt;&#x2F;p&gt;
+							&lt;p class&#x3D;&quot;timeline__body&quot;&gt;Lorem ipsum dolor sit&lt;&#x2F;p&gt;
+						&lt;&#x2F;div&gt;
+					&lt;&#x2F;li&gt;
+					&lt;li class&#x3D;&quot;timeline__list&quot;&gt;
+						&lt;div class&#x3D;&quot;timeline__text&quot;&gt;
+							&lt;p class&#x3D;&quot;timeline__year&quot;&gt;Title&lt;&#x2F;p&gt;
+							&lt;p class&#x3D;&quot;timeline__body&quot;&gt;Lorem ipsum dolor sit&lt;&#x2F;p&gt;
+						&lt;&#x2F;div&gt;
+					&lt;&#x2F;li&gt;
+					&lt;li class&#x3D;&quot;timeline__list&quot;&gt;
+						&lt;div class&#x3D;&quot;timeline__text&quot;&gt;
+							&lt;p class&#x3D;&quot;timeline__year&quot;&gt;Title&lt;&#x2F;p&gt;
+							&lt;p class&#x3D;&quot;timeline__body&quot;&gt;Lorem ipsum dolor sit&lt;&#x2F;p&gt;
+						&lt;&#x2F;div&gt;
+					&lt;&#x2F;li&gt;
+				&lt;&#x2F;ul&gt;
+							</pre>
 				</div>
-				<p>Horzontal scrolling table at mobile screen</p>
-				<ul class="checklist">
-					<li>Horizontal scroll at mobile screens</li>
-				</ul>
+				<h3>Checklist</h3>
 				<div class="section-row section-row-1fr-1fr">
-					<div class="table-container">
-						<table
-							aria-labelledby="busStops-58375"
-							class="table--simple table--responsive-xscroll bordered table--detour"
-						>
-							<thead class="">
-								<tr>
-									<th class="wide">Bus stop (560#) not in use</th>
-									<th class="wide">Routes</th>
-									<th class="wide">Alternate stop</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td rowspan="">
-										#7683 -- Queen (north-side) / Bank
-									</td>
-									<td>
-										<ul>
-											<li style="text-align: left">
-												<p>16 Tunney&#39;s Pasture</p>
-											</li>
-										</ul>
-									</td>
-									<td rowspan="2" class="travel-planner-link">
-										#3051 -- Lyon A
-									</td>
-								</tr>
-								<tr>
-									<td rowspan="" style="text-align: left">
-										Albert (north-side) / Lyon
-									</td>
-									<td rowspan="">
-										<ul>
-											<li style="text-align: left">
-												10 Hurdman
-											</li>
-										</ul>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+					<ul class="checklist">
+						<li>Baseline (avant 11 h)</li>
+						<li>Blair (Telesat)</li>
+						<li>Jeanne d’Arc, and</li>
+						<li>Ray Friel</li>
+					</ul>
+					<pre>
+				&lt;ul class&#x3D;&quot;checklist&quot;&gt;
+					&lt;li&gt;Baseline (avant 11 h)&lt;&#x2F;li&gt;
+					&lt;li&gt;Blair (Telesat)&lt;&#x2F;li&gt;
+					&lt;li&gt;Jeanne d’Arc, and&lt;&#x2F;li&gt;
+					&lt;li&gt;Ray Friel&lt;&#x2F;li&gt;
+				&lt;&#x2F;ul&gt;
+								</pre>
+				</div>
+			</div>
+		</section>
+		<!--     
+					<section id="typography">
+						<h1>This is a h1</h1>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, omnis esse, reiciendis, a sunt nesciunt est ipsam nihil qui ratione aliquam in neque non autem.</p>
+						<h2>This is a h2</h2>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, omnis esse, reiciendis, a sunt nesciunt est ipsam nihil qui ratione aliquam in neque non autem.</p>
+					</section> -->
+		<section id="accordions">
+			<h2>Accordions</h2>
+			<p>
+				note from Francine:
+				linearizing tabs and expanding accordions in print mode:
+				https://reintech.io/blog/css-print-stylesheets-tutorial
+			</p>
+			<h3>Original faq</h3>
+			<div class="faq-accordion">
+				<h5 class="accordion">Access points</h5>
+	
+				<div class="accordion-content">
+					<p>The entrance to the parking lot is located at the intersection at Woodroffe Ave. (west side) /
+						Parkglen Dr.</p>
+				</div>
+			</div>
+	
+			<h3>Simple</h3>
+			<div class="section-row section-row-1fr-1fr">
+				<div class="accordion-container accordion-container--simple">
+					<h4 id="placeholderID-acc1" class="accordion">
+						Accordion 1
+					</h4>
+					<div class="accordion-content">
+						<p>accordion content 1</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Harum earum consectetur magni voluptatibus,
+							temporibus nemo quae sed libero beatae delectus.
+							Perspiciatis quod beatae quia qui atque nostrum
+							voluptate, cumque quos.
+						</p>
 					</div>
-					<pre>
-		<!-- insert -->
-						</pre>
+					<h4 id="placeholderID-acc2" class="accordion">
+						Accordion 2
+					</h4>
+					<div class="accordion-content">
+						<p>accordion content 2</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Harum earum consectetur magni voluptatibus,
+							temporibus nemo quae sed libero beatae delectus.
+							Perspiciatis quod beatae quia qui atque nostrum
+							voluptate, cumque quos.
+						</p>
+						<div class="side-note">
+							<p class="side-note__title">
+								*Note: Replacement bus service
+							</p>
+							<div class="side-note__content">
+								<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat soluta delectus tempore sit ullam, saepe quam ipsam omnis, fugit a repellendus! Minus illo quibusdam ea inventore nulla quia saepe.</p> -->
+								<ul>
+									<li>
+										May be deployed when the O-Train is not
+										running during regular service hours
+									</li>
+									<li>
+										Serves all O-Train stations on the
+										line and only makes limited stops along
+										the way
+									</li>
+									<li>
+										For shorter trip times, Lees and
+										Cyrville are served by a shuttle instead
+									</li>
+									<li>
+										If an O-Train line is partially closed,
+										may run only along the closed portion
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
-				<h3>Table utilities</h3>
-				<div></div>
-			</section>
-			<section>
-				<h2>Hyperlinking guide</h2>
-				<table class="table--simple bordered">
-					<thead>
-						<tr>
-							<th>Topic</th>
-							<th>Details</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Link text</td>
-							<td>
-								<p>
-									The text contained within a hyperlink should be
-									sufficiently specific to allow a user hearing
-									the link by itself to understand where it is
-									heading.
-								</p>
-								<p>
-									Meaningful link text should not be overly
-									general and should clearly describe the content
-									to be found or action to be performed by the
-									link. (<a
-										href="https://www.webaccessibility.com/resource-library/best-practice/?bestPractice=1301#:~:text=Meaningful%20link%20text%20should%20not,meaning%20in%20the%20surrounding%20content."
-										>Ensure link text is meaningful within
-										context - webaccessibility.com</a
-									>)
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td>Linking to a page within a PDF hosted online:</td>
-							<td>
-								<p>
-									To link to a specific page, append the following
-									code to the URL: #page=[pagenumber].
-								</p>
-								<p>
-									Example:
-									https://domain.com/manuals/72041M.pdf#page=41
-									links to page 41 of the PDF.
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td>Adding the PDF icon to a hyperlink</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Linking to an external site</td>
-							<td>
-								<p>
-									To link to an external site, add the following
-									class to the anchor tag:
-								</p>
-								<p>class="link-new-window"</p>
-								<p>
-									This will add the title “Opens external website
-									in a new window/tab.” And append the following
-									icon
-									<img
-										class="icon-container icon-container--sm"
-										src="https://www.octranspo.com/images/files/icons/resource_ext-link.svg"
-										alt=""
-									/>
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td>Linking to an English-only external site</td>
-							<td>
-								On the French page, add to the following to the
-								link : (site Web externe disponible en anglais
-								seulement).
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</section>
-			<section>
-				<h2>Utilities</h2>
-				<p>visually hidden text</p>
-				<div class="section-row section-row-1fr-1fr">
-					<p>
-						Replacement bus service for Line 2
-						<a href="#note-replacement-service"
-							>*
-							<span class="visuallyhidden"
-								>replacement service footnote</span
-							>
-						</a>
-					</p>
-					<pre>
-		&lt;p&gt;Replacement bus service for Line 2
-		&lt;a href&#x3D;&quot;#note-replacement-service&quot;&gt;*
-			&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;replacement service footnote&lt;&#x2F;span&gt;
-		&lt;&#x2F;a&gt;
-		&lt;&#x2F;p&gt;				</pre
-					>
+				<pre>
+				&lt;div class&#x3D;&quot;accordion-container accordion-container--simple&quot;&gt;
+					&lt;h4 id&#x3D;&quot;placeholderID-acc1&quot;class&#x3D;&quot;accordion&quot;&gt;Accordion 1&lt;&#x2F;h4&gt;
+					&lt;div class&#x3D;&quot;accordion-content&quot;&gt;
+						&lt;p&gt;accordion content&lt;&#x2F;p&gt;  
+					&lt;&#x2F;div&gt;
+					&lt;h4 id&#x3D;&quot;placeholderID-acc2&quot;class&#x3D;&quot;accordion&quot;&gt;Accordion 2&lt;&#x2F;h4&gt;
+					&lt;div class&#x3D;&quot;accordion-content&quot;&gt;
+						&lt;p&gt;accordion content&lt;&#x2F;p&gt;
+					&lt;&#x2F;div&gt;
+				&lt;&#x2F;div&gt;
+								</pre>
+			</div>
+			<p>Simple & bordered</p>
+			<div class="section-row section-row-1fr-1fr">
+				<div class="accordion-container accordion-container--simple bordered">
+					<h4 id="placeholderID-acc1" class="accordion">
+						Accordion 1
+					</h4>
+					<div class="accordion-content">
+						<p>accordion content 1</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Harum earum consectetur magni voluptatibus,
+							temporibus nemo quae sed libero beatae delectus.
+							Perspiciatis quod beatae quia qui atque nostrum
+							voluptate, cumque quos.
+						</p>
+					</div>
+					<h4 id="placeholderID-acc2" class="accordion">
+						Accordion 2
+					</h4>
+					<div class="accordion-content">
+						<p>accordion content 2</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Harum earum consectetur magni voluptatibus,
+							temporibus nemo quae sed libero beatae delectus.
+							Perspiciatis quod beatae quia qui atque nostrum
+							voluptate, cumque quos.
+						</p>
+						<div class="side-note">
+							<p class="side-note__title">
+								*Note: Replacement bus service
+							</p>
+							<div class="side-note__content">
+								<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat soluta delectus tempore sit ullam, saepe quam ipsam omnis, fugit a repellendus! Minus illo quibusdam ea inventore nulla quia saepe.</p> -->
+								<ul>
+									<li>
+										May be deployed when the O-Train is not
+										running during regular service hours
+									</li>
+									<li>
+										Serves all O-Train stations on the
+										line and only makes limited stops along
+										the way
+									</li>
+									<li>
+										For shorter trip times, Lees and
+										Cyrville are served by a shuttle instead
+									</li>
+									<li>
+										If an O-Train line is partially closed,
+										may run only along the closed portion
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
-			</section>
-			<section>
-				<div class="generic-tab stepper" role="tablist">
-					<button
-						aria-controls="TP-step1"
-						class="tablink"
-						id="placeholderID-tab1"
-						name="placeholderID-tab1"
-						role="tab"
-					>
-						<span class="tablink--step-number">Step 1</span
-						><span class="tablink--step-label mobile-hide"
-							>Label</span
-						></button
-					><button
-						aria-controls="TP-step2"
-						class="tablink"
-						id="placeholderID-tab2"
-						name="placeholderID-tab2"
-						role="tab"
-						tabindex="-1"
-					>
-						<span class="tablink--step-number">Step 2</span
-						><span class="tablink--step-label mobile-hide"
-							>Label</span
-						></button
-					><button
-						aria-controls="TP-step3"
-						class="tablink"
-						id="placeholderID-tab3"
-						name="placeholderID-tab3"
-						role="tab"
-						tabindex="-1"
-					>
-						<span class="tablink--step-number">Step 3</span
-						><span class="tablink--step-label mobile-hide">Label</span>
-					</button>
+				<pre>
+				<!-- insert code here -->
+								</pre>
+			</div>
+		</section>
+		<section>
+			<h2>Tables</h2>
+			<h3>Definition tables</h3>
+			<p>Simple icon table</p>
+			<div class="section-row section-row-1fr-1fr">
+				<dl class="icon-list">
+					<dt class="header-row">Icon</dt>
+					<dd class="header-row">Meaning</dd>
+					<dt>
+						<div class="icon-container icon-container--sm">
+							<img src="https://www.octranspo.com/images/files/icons/line_1.svg " alt="" />
+						</div>
+					</dt>
+					<dd>Line 1</dd>
+					<dt>
+						<div class="icon-container icon-container--sm">
+							<img src="https://www.octranspo.com/images/files/icons/line_2.svg " alt="" />
+						</div>
+					</dt>
+					<dd>Line 2</dd>
+					<dt>
+						<div class="icon-container icon-container--sm">
+							<img src="https://www.octranspo.com/images/files/icons/line_4.svg " alt="" />
+						</div>
+					</dt>
+					<dd>Line 4</dd>
+				</dl>
+				<pre>
+				<!-- insert -->
+								</pre>
+			</div>
+			<p>Bordered</p>
+			<div class="section-row section-row-1fr-1fr">
+				<dl class="icon-list icon-list bordered">
+					<dt class="header-row">Icon</dt>
+					<dd class="header-row">Meaning</dd>
+					<dt>
+						<div class="icon-container icon-container--sm">
+							<img src="https://www.octranspo.com/images/files/icons/line_1.svg " alt="" />
+						</div>
+					</dt>
+					<dd>Line 1</dd>
+					<dt>
+						<div class="icon-container icon-container--sm">
+							<img src="https://www.octranspo.com/images/files/icons/line_2.svg " alt="" />
+						</div>
+					</dt>
+					<dd>Line 2</dd>
+					<dt>
+						<div class="icon-container icon-container--sm">
+							<img src="https://www.octranspo.com/images/files/icons/line_4.svg " alt="" />
+						</div>
+					</dt>
+					<dd>Line 4</dd>
+				</dl>
+				<pre>
+				&lt;dl class&#x3D;&quot;icon-list bordered&quot;&gt;
+				&lt;dt class&#x3D;&quot;header-row&quot;&gt;
+					Icon
+				&lt;&#x2F;dt&gt;
+				&lt;dd class&#x3D;&quot;header-row&quot;&gt;Meaning&lt;&#x2F;dd&gt;
+				&lt;dt&gt;
+					&lt;div class&#x3D;&quot;icon-container icon-container--sm&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;line_1.svg &quot; alt&#x3D;&quot;&quot;&gt;&lt;&#x2F;div&gt;
+				&lt;&#x2F;dt&gt;
+				&lt;dd&gt;Line 1&lt;&#x2F;dd&gt;
+				&lt;dt&gt;
+					&lt;div class&#x3D;&quot;icon-container icon-container--sm&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;line_2.svg &quot; alt&#x3D;&quot;&quot;&gt;&lt;&#x2F;div&gt;
+				&lt;&#x2F;dt&gt;
+				&lt;dd&gt;Line 2&lt;&#x2F;dd&gt;
+				
+				&lt;dt&gt;
+					&lt;div class&#x3D;&quot;icon-container icon-container--sm&quot;&gt;&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;line_4.svg &quot; alt&#x3D;&quot;&quot;&gt;&lt;&#x2F;div&gt;
+				&lt;&#x2F;dt&gt;
+				&lt;dd&gt;Line 4&lt;&#x2F;dd&gt;
+				
+				
+				&lt;&#x2F;dl&gt;
+					</pre>
+			</div>
+			<h3>Simple text table</h3>
+			<p>text tables will collapse to one column in mobile view</p>
+			<div class="section-row section-row-1fr-1fr">
+				<dl class="text-list">
+					<dt class="header-row">Term</dt>
+					<dd class="header-row">Meaning</dd>
+					<dt>term 1</dt>
+					<dd>
+						Lorem, ipsum dolor sit amet consectetur adipisicing
+						elit. Vel, earum?
+					</dd>
+					<dt>term 2</dt>
+					<dd>
+						Lorem, ipsum dolor sit amet consectetur adipisicing
+						elit. Vel, earum?
+					</dd>
+				</dl>
+				<pre>
+				<!-- insert -->
+								</pre>
+			</div>
+			<h3>Responsive table</h3>
+			<p>
+				At small screens only: Sticky left header column and autoflow-x
+			</p>
+			<ul class="checklist">
+				<li>Horizontal scroll at mobile screens</li>
+				<li>Sticky left header column</li>
+			</ul>
+			<div class="section-row section-row-1fr-1fr">
+				<div class="table-container">
+					<table class="table--simple table--responsive-xscroll sticky-left-col bordered">
+						<caption>
+							Ottawa LRT Public Inquiry Action Plan
+						</caption>
+						<thead>
+							<tr>
+								<th>
+									<div>Theme</div>
+								</th>
+								<th>
+									<div>default table width</div>
+								</th>
+								<th class="wide">
+									<div>
+										wide table width with utility class
+									</div>
+								</th>
+								<th>
+									<div>default table width</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>
+									<div>header</div>
+								</th>
+								<td>cell content</td>
+								<td>cell content</td>
+								<td>cell content</td>
+							</tr>
+							<tr>
+								<th>
+									<div>header</div>
+								</th>
+								<td>cell content</td>
+								<td>
+									<p>
+										Lorem ipsum dolor sit, amet consectetur
+										adipisicing elit. Vitae dolorem soluta
+										aliquid est alias atque architecto,
+										rerum optio quibusdam eaque.
+									</p>
+								</td>
+								<td>cell content</td>
+							</tr>
+							<tr class="bold">
+								<th>
+									<div>header</div>
+								</th>
+								<td>cell content</td>
+								<td>
+									<p>
+										utility class for making entire table
+										row bold
+									</p>
+								</td>
+								<td>cell content lorem</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<div
-					aria-labelledby="placeholderID-tab1"
-					class="tabcontent"
-					id="TP-step1"
-					role="tabpanel"
-					tabindex="0"
-				>
-					<p>Step 1 content</p>
+				<pre>
+				<!-- insert -->
+								</pre>
+			</div>
+			<p>Horzontal scrolling table at mobile screen</p>
+			<ul class="checklist">
+				<li>Horizontal scroll at mobile screens</li>
+			</ul>
+			<div class="section-row section-row-1fr-1fr">
+				<div class="table-container">
+					<table aria-labelledby="busStops-58375"
+						class="table--simple table--responsive-xscroll bordered table--detour">
+						<thead class="">
+							<tr>
+								<th class="wide">Bus stop (560#) not in use</th>
+								<th class="wide">Routes</th>
+								<th class="wide">Alternate stop</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="">
+									#7683 -- Queen (north-side) / Bank
+								</td>
+								<td>
+									<ul>
+										<li style="text-align: left">
+											<p>16 Tunney&#39;s Pasture</p>
+										</li>
+									</ul>
+								</td>
+								<td rowspan="2" class="travel-planner-link">
+									#3051 -- Lyon A
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="" style="text-align: left">
+									Albert (north-side) / Lyon
+								</td>
+								<td rowspan="">
+									<ul>
+										<li style="text-align: left">
+											10 Hurdman
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<div
-					aria-labelledby="placeholderID-tab2"
-					class="tabcontent"
-					id="TP-step2"
-					role="tabpanel"
-					tabindex="0"
-				>
-					<p>Step 2 content</p>
-				</div>
-				<div
-					aria-labelledby="placeholderID-tab3"
-					class="tabcontent"
-					id="TP-step3"
-					role="tabpanel"
-					tabindex="0"
-				>
-					<p>Step 3 content</p>
-				</div>
-			</section>
-			<script src="../app/js/script.js"></script>
-			<script src="https://staging.octranspo1.com/themes/user/site/octranspo/assets/js/dist/main.min.js?v=1.0.6"></script>
+				<pre>
+				<!-- insert -->
+								</pre>
+			</div>
+			<h3>Table utilities</h3>
+			<div></div>
+		</section>
+		<section>
+			<h2>Hyperlinking guide</h2>
+			<table class="table--simple bordered">
+				<thead>
+					<tr>
+						<th>Topic</th>
+						<th>Details</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Link text</td>
+						<td>
+							<p>
+								The text contained within a hyperlink should be
+								sufficiently specific to allow a user hearing
+								the link by itself to understand where it is
+								heading.
+							</p>
+							<p>
+								Meaningful link text should not be overly
+								general and should clearly describe the content
+								to be found or action to be performed by the
+								link. (<a
+									href="https://www.webaccessibility.com/resource-library/best-practice/?bestPractice=1301#:~:text=Meaningful%20link%20text%20should%20not,meaning%20in%20the%20surrounding%20content.">Ensure
+									link text is meaningful within
+									context - webaccessibility.com</a>)
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Linking to a page within a PDF hosted online:</td>
+						<td>
+							<p>
+								To link to a specific page, append the following
+								code to the URL: #page=[pagenumber].
+							</p>
+							<p>
+								Example:
+								https://domain.com/manuals/72041M.pdf#page=41
+								links to page 41 of the PDF.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Adding the PDF icon to a hyperlink</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Linking to an external site</td>
+						<td>
+							<p>
+								To link to an external site, add the following
+								class to the anchor tag:
+							</p>
+							<p>class="link-new-window"</p>
+							<p>
+								This will add the title “Opens external website
+								in a new window/tab.” And append the following
+								icon
+								<img class="icon-container icon-container--sm"
+									src="https://www.octranspo.com/images/files/icons/resource_ext-link.svg" alt="" />
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Linking to an English-only external site</td>
+						<td>
+							On the French page, add to the following to the
+							link : (site Web externe disponible en anglais
+							seulement).
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Utilities</h2>
+			<p>visually hidden text</p>
+			<div class="section-row section-row-1fr-1fr">
+				<p>
+					Replacement bus service for Line 2
+					<a href="#note-replacement-service">*
+						<span class="visuallyhidden">replacement service footnote</span>
+					</a>
+				</p>
+				<pre>
+				&lt;p&gt;Replacement bus service for Line 2
+				&lt;a href&#x3D;&quot;#note-replacement-service&quot;&gt;*
+					&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;replacement service footnote&lt;&#x2F;span&gt;
+				&lt;&#x2F;a&gt;
+				&lt;&#x2F;p&gt;				</pre>
+			</div>
+		</section>
+		<section>
+			<div class="generic-tab stepper" role="tablist">
+				<button aria-controls="TP-step1" class="tablink" id="placeholderID-tab1" name="placeholderID-tab1"
+					role="tab">
+					<span class="tablink--step-number">Step 1</span><span
+						class="tablink--step-label mobile-hide">Label</span></button><button aria-controls="TP-step2"
+					class="tablink" id="placeholderID-tab2" name="placeholderID-tab2" role="tab" tabindex="-1">
+					<span class="tablink--step-number">Step 2</span><span
+						class="tablink--step-label mobile-hide">Label</span></button><button aria-controls="TP-step3"
+					class="tablink" id="placeholderID-tab3" name="placeholderID-tab3" role="tab" tabindex="-1">
+					<span class="tablink--step-number">Step 3</span><span
+						class="tablink--step-label mobile-hide">Label</span>
+				</button>
+			</div>
+			<div aria-labelledby="placeholderID-tab1" class="tabcontent" id="TP-step1" role="tabpanel" tabindex="0">
+				<p>Step 1 content</p>
+			</div>
+			<div aria-labelledby="placeholderID-tab2" class="tabcontent" id="TP-step2" role="tabpanel" tabindex="0">
+				<p>Step 2 content</p>
+			</div>
+			<div aria-labelledby="placeholderID-tab3" class="tabcontent" id="TP-step3" role="tabpanel" tabindex="0">
+				<p>Step 3 content</p>
+			</div>
+		</section>
+	</div>
+	<script src="https://www.octranspo.com/images/files/dist/script.js"></script>
+	<script src="../app/js/script.js"></script>
+	<script src="https://staging.octranspo1.com/themes/user/site/octranspo/assets/js/dist/main.min.js?v=1.0.6"></script>
 
-		</div>
-	</body>
+	</div>
+</body>
+
 </html>

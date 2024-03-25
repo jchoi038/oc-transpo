@@ -1,0 +1,37 @@
+.toc{
+    &__container{
+        @media (min-width: 1625px) {
+            padding: 1rem;
+            background-color: var(--transparent--500);
+            border-radius: 0.5rem;
+        }
+    }
+    &.sticky{
+        @media (min-width: 1625px) {
+            position: sticky;
+            top: 1rem;
+            width: 300px;
+            display: block;
+            height: 0px;
+            margin-left: 100%;
+            padding-left: 1rem; 
+        }
+    }
+    &__items{
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    &__link{
+        text-decoration: none;
+        color: var(--line4--600);
+        border: 1px solid var(--line4--600);
+        border-radius: 100rem;
+        padding: 0.125rem 0.5rem;
+
+        &:hover{
+            background-color: var(--line4--50);
+        }
+    }
+
+}
