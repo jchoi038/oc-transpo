@@ -1,0 +1,11 @@
+.link-stack{
+    gap: 0;
+    li {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        &:hover{
+            background-color: var(--gray--50);
+        }
+    }
+}

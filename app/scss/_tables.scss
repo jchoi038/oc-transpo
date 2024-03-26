@@ -6,7 +6,7 @@
 	}
 }
 
-.auto-width{
+.auto-width, .flow{
 	table-layout: auto;
 }
 table {
@@ -371,10 +371,9 @@ table {
                 
 				thead {
 					th {
-						max-width: 40vw;
-                        &.wide{
+                        &.readable{
                             @include media-breakpoint-down(md) {
-                                min-width: 60vw;
+                                min-width: 50vw;
                         }
 					}
                     

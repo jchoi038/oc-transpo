@@ -5,7 +5,7 @@ Copyright 2019 OC Transpo
 Authors: Justin MacNeil, Tashana Allen (RealDecoy)
 Editor: Judy Choi (OC Transpo)
 Date: 3/25/2024
-Time: 1:42
+Time: 21:26
 */
 /*
 
@@ -930,6 +930,7 @@ p, dt, dd, li, strong, h1, h2, h3, h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.15rem;
   margin-bottom: 0.75em;
+  font-weight: 600;
 }
 
 h2, h3, h4, h5, h6 {
@@ -15674,7 +15675,7 @@ h4.stage2-usage-headings {
   table-layout: auto;
 }
 
-.auto-width {
+.auto-width, .flow {
   table-layout: auto;
 }
 
@@ -15961,13 +15962,10 @@ table.table--simple tbody tr {
     filter: drop-shadow(rgba(0, 0, 0, 0.05) 3px 0px 3px);
     box-shadow: rgba(0, 0, 0, 0.06) 3px 0px 3px;
   }
-  table.table--responsive-xscroll thead th {
-    max-width: 40vw;
-  }
 }
 @media (max-width: 991.98px) and (max-width: 991.98px) {
-  table.table--responsive-xscroll thead th.wide {
-    min-width: 60vw;
+  table.table--responsive-xscroll thead th.readable {
+    min-width: 50vw;
   }
 }
 
@@ -16439,9 +16437,11 @@ ul.grid.grid--3col {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   gap: 1rem;
-  margin-bottom: 4rem;
+}
+.grid.no-gutters {
+  gap: 0;
 }
 .grid-fluid {
   grid-template-columns: auto;
@@ -16460,9 +16460,18 @@ ul.grid.grid--3col {
 .grid__sidebar {
   border: 1px solid var(--gray-100);
 }
+.grid--2col {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 576px) {
+  .grid--2col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .grid--3col {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
 @media (min-width: 576px) {
   .grid--3col {
@@ -16479,13 +16488,23 @@ ul.grid.grid--3col {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-.grid--2col {
+.grid--4col {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
 @media (min-width: 576px) {
-  .grid--2col {
+  .grid--4col {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .grid--4col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .grid--4col {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 .grid--8col {
@@ -16787,7 +16806,6 @@ figure figcaption {
   margin: 0 0 1.5rem;
   color: var(--gray--800);
   flex-grow: 1;
-  display: flex;
 }
 
 .image-card__link {
@@ -17142,7 +17160,7 @@ section {
 }
 @media (min-width: 992px) {
   section {
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
     padding-bottom: 2rem;
   }
 }
@@ -17371,6 +17389,10 @@ section {
 }
 .accordion-container--simple .accordion:hover::after, .accordion-container--simple .accordion.active:hover::after {
   background-color: var(--gray--200);
+}
+
+section.divided {
+  margin-bottom: 20rem;
 }
 
 .bordered {
@@ -17653,13 +17675,20 @@ section {
 pre {
   background: var(--gray--50);
   border: 1px solid var(--gray--100);
-  border-radius: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   font-size: 1rem;
   font-family: monospace;
   padding: 16px;
   color: var(--charcoal--800);
-  max-height: 300px;
-  overflow-y: scroll;
+  overflow: auto;
+  box-shadow: none;
+}
+
+.example {
+  margin: auto;
+  padding: 1.5rem;
+  border: 2px solid var(--gray--100);
+  overflow-x: scroll;
 }
 
 .fancybox-media {
@@ -17667,38 +17696,75 @@ pre {
   justify-content: center;
 }
 
-@media (min-width: 1625px) {
+.toc ul li {
+  display: flex;
+}
+.toc ul li a {
+  width: 100%;
+}
+.toc__container {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (min-width: 1200px) {
   .toc__container {
     padding: 1rem;
-    background-color: var(--transparent--500);
+    background-color: white;
     border-radius: 0.5rem;
   }
 }
-@media (min-width: 1625px) {
+@media (min-width: 1200px) {
   .toc.sticky {
     position: sticky;
     top: 1rem;
-    width: 300px;
+    width: 200px;
     display: block;
     height: 0px;
     margin-left: 100%;
-    padding-left: 1rem;
   }
 }
 .toc__items {
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .toc__link {
-  text-decoration: none;
+  padding: 0;
   color: var(--line4--600);
-  border: 1px solid var(--line4--600);
-  border-radius: 100rem;
-  padding: 0.125rem 0.5rem;
+  font-size: 0.875rem;
 }
-.toc__link:hover {
-  background-color: var(--line4--50);
+@media (min-width: 1200px) {
+  .toc__link {
+    padding: 0.125rem 0.5rem;
+    color: var(--gray--500);
+    border-left: 2px solid var(--gray--200);
+    padding: 0.5rem 0 0.5rem 0.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .toc__link:hover {
+    text-decoration: underline;
+    background-color: var(--line4--50);
+  }
+}
+@media (min-width: 1200px) {
+  .toc__link.active {
+    color: var(--line4--600);
+    background-color: var(--line4--50);
+    border-left: 2px solid var(--line4--600);
+  }
+}
+
+.link-stack {
+  gap: 0;
+}
+.link-stack li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.link-stack li:hover {
+  background-color: var(--gray--50);
 }
 
 .clearfix:after, #timetable .tab_navigation:after, .tripPlanBox:after, ul.venues li:after, .tooltip:after, .stage-2 .stage2-main .useful-links-section .stage2-cta-buttons.no-border:after, .stage-2 .stage2-main .stage2-cta-buttons.no-border:after {

@@ -6,9 +6,13 @@ ul.grid.grid--3col{
 .grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     gap: 1rem;
-    margin-bottom: 4rem;
+    // margin-bottom: 4rem;
+
+    &.no-gutters{
+        gap: 0;
+    }
 
     &-fluid{
         grid-template-columns: auto;
@@ -33,9 +37,20 @@ ul.grid.grid--3col{
     &__sidebar{
         border: 1px solid var(--gray-100);
     }
+    
+    //even grids
+
+    &--2col{
+        display: grid;
+	    gap: 1rem;
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: 1fr 1fr;
+
+        }
+    }
     &--3col {
         display: grid;
-        gap: 2rem ;
+        gap: 1rem ;
     
         @include media-breakpoint-up(sm) {
             grid-template-columns: 1fr 1fr;
@@ -50,14 +65,22 @@ ul.grid.grid--3col{
         }
     
     }
-
-    &--2col{
+    &--4col {
         display: grid;
-	    gap: 2rem;
+        gap: 1rem ;
+    
         @include media-breakpoint-up(sm) {
             grid-template-columns: 1fr 1fr;
-
         }
+    
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    
     }
 
     &--8col{

@@ -5,7 +5,7 @@ let sections = document.getElementsByTagName("section");
 // toc.className = "toc--list";
 
 if (toc) {
-	let toc_container = document.createElement("div");
+	let toc_container = document.createElement("nav");
 	toc_container.className = "toc__container"
 	toc[0].appendChild(toc_container);
 
@@ -15,7 +15,7 @@ if (toc) {
 	toc_container.appendChild(toc_title);
 
 
-	let toc_items = document.createElement("div");
+	let toc_items = document.createElement("ul");
 	toc_items.className = "toc__items"
 	toc_container.appendChild(toc_items);
 
@@ -24,17 +24,21 @@ if (toc) {
 		// warning if id is empty
 		if (sections[i].id == "") {
 			console.log(
-				"Warning: Section '" +
-				sections[i].getElementsByTagName("h2")[0].textContent +
-				"' does not have an id"
+				"Warning: Section no." +
+				i +
+				" does not have an id"
 				);
+			} else {
+				var toc_li = document.createElement("li");
+				var toc_link = document.createElement("a");
+				var href = "#" + sections[i].id;
+				toc_link.href = href;
+				toc_link.className = "toc__link";
+				toc_link.textContent = sections[i].getElementsByTagName("h2")[0].textContent;
+				toc_li.appendChild(toc_link)
+				toc_items.appendChild(toc_li);
 			}
-		var toc_link = document.createElement("a");
-		var href = "#" + sections[i].id;
-		toc_link.href = href;
-		toc_link.className = "toc__link";
-		toc_link.textContent = sections[i].getElementsByTagName("h2")[0].textContent;
-		toc_items.appendChild(toc_link);
+		
 	}
 
 	window.addEventListener("scroll", function () {
