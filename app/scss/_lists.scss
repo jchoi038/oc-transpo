@@ -3,22 +3,19 @@ ul, ol {
     padding-left: 0;
 }
 
-.content-container ul li {
+.content-container ul li, li{
     margin: 0;
+    margin-bottom: 0.25rem;
     padding: 0;
-    line-height: 150%;
+    // line-height: 150%;
 }
 
 .content-container ul, .content-container ol{
     margin-left: 2.5rem;
     padding: 0;
-    line-height: 150%;
 }
 
-li {
-    // padding-left: 0.25rem;
-    line-height: 150%;
-}
+
 
 .accordion,.fares,.row--basic-content-main, .main-content{
     // li {
@@ -29,26 +26,32 @@ li {
 //     margin-bottom: 1rem;
 // }
 
-ul.checklist li{
-    display: flex;
-    /* align-items: center; */
-    gap: 0.25rem;
-    margin: 0;
-
-    &::before{
-        content: "";
-        height: 1.25em;
-        width: 1.25em;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        flex-shrink: 0;
-        text-decoration: none;
+ul.checklist {
+    li{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
+        gap: 0.5rem;
+    
+        &::before{
+            content: "";
+            height: 1em;
+            width: 1em;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            flex-shrink: 0;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://www.octranspo.com/images/files/icons/status_postive.svg");
+        }
+}
+&--x{
+    li::before{
+        background-image: url("https://www.octranspo.com/images/files/icons/status_negative.svg");
     }
+}
+
 }
 
 

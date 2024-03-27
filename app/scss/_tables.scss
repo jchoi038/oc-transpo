@@ -1,12 +1,18 @@
+// reset
+table tbody tr:nth-child(odd) {
+    background-color: white;
+	line-height: 150%;
+}
+
+td,th{
+	color: var(--gray--700);
+}
 /****table styles ******/
 .responsive-table {
 	overflow-x: auto;
-	table {
-		table-layout: auto;
-	}
 }
 
-.auto-width, .flow{
+.auto-width, .fluid{
 	table-layout: auto;
 }
 table {
@@ -21,16 +27,22 @@ table {
 	thead {
 		td,
 		th {
-			// background-color: #4D4C4C;
-			// color: #FFFFFF;
 			font-weight: bold;
-			// border: 1px solid #434343;
 		}
 
 		a {
 			color: #ffffff;
 		}
+		th {
+			&.readable{
+				@include media-breakpoint-down(md) {
+					min-width: 50vw;
+			}
+		}
+		
 	}
+	}
+
 	thead.small-header {
 		font-size: 12px;
 		font-size: 0.75rem;
@@ -95,7 +107,7 @@ table {
 				font-weight: 400;
 				font-size: 1rem;
 				text-align: left;
-				vertical-align: text-top;
+				vertical-align: top;
 				padding: 2rem 1rem;
 				@include media-breakpoint-down(sm) {
 					padding: 1.25rem 1rem;
@@ -369,42 +381,104 @@ table {
                 }
 
                 
-				thead {
-					th {
-                        &.readable{
-                            @include media-breakpoint-down(md) {
-                                min-width: 50vw;
-                        }
-					}
-                    
-				}
 				
-			}
 		}
 	}
 }
 }
+
+/* Transcript tables*/
+
+.transcript-table{
+	table-layout: auto;
+	tr{
+		/* toggle on/off to make zebra*/
+		&:nth-of-type(odd) {
+			td {
+				background-color: var(--gray--50);
+				
+			}
+		}
+		overflow: hidden;
+		border-radius: 0.5rem;
+		// border-bottom: 1px solid var(--gray--100);
+	}
+	
+	//styling the time stamp column
+	td:first-of-type{
+		color: var(--gray--500);
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		font-size: 0.875rem;
+	}
+
+	//styling the text description column
+	td:last-of-type{
+		color: var(--gray--500);
+		&::before{
+			content: "[";
+		}
+		&::after{
+			content: "]";
+		}
+	}
+	td, th{
+		padding: 1.25rem 1rem;
+		background-color: white;
+	}
+	th{
+		color: var(--gray-800);
+		font-size: 0.875rem;
+		border: none;
+
+		//turn on to back background colour of header grey
+		// background-color: var(--gray--50);
+	}
+
+	@include media-breakpoint-down(xs) {
+		td, th{
+			padding:0 0.5rem 0.5rem;
+		}
+		// padding for time stamp
+		td:first-of-type{
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+
+		// padding for last element
+		td:last-of-type{
+			padding-bottom: 1.5rem;
+		}
+		tr{
+			display: flex;
+			flex-direction: column;
+			// gap: 0.25rem;
+			margin-bottom: 0.5rem;
+		}
+	
+	}
+	
+	
+	
+}
+	
 
 /*Key value table*/
 
 
 dl {
 	display: grid;
+	grid-template-columns: auto 1fr;
 	height: max-content;
 	.header-row{
 		font-weight: 600;
 		font-size: 0.875rem;
 	}
 	
-	
 	@include media-breakpoint-down(md) {
 		font-size: 0.875rem;
 	}
 
-	dd,
-	dt {
-		border-bottom: 1px solid var(--gray--100);
-	}
 
 	&.bordered {
 		dd:last-of-type,
@@ -413,11 +487,11 @@ dl {
 		}
 	}
 
-
 	dd {
 		padding-left: 0.75rem;
 		// border-radius: 0 0.25rem 0.25rem 0;
 	}
+
 
 	&.text-list {
 		border-top: 1px solid var(--gray--100);
@@ -425,8 +499,10 @@ dl {
 		dd,
 		dt {
 			padding: 0.5rem;
+			border-bottom: 1px solid var(--gray--100);
+
 		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(xs) {
 			grid-template-columns: 1fr;
 			dt {
 				border-bottom: none;
@@ -452,20 +528,19 @@ dl {
 		grid-template-columns: auto 1fr;
 		dd,
 		dt {
+			border-bottom: 1px solid var(--gray--100);
 			padding: 0.3rem 0.5rem 0.2rem 0.5rem;
 			&:nth-of-type(even) {
 				background-color: var(--gray--50);
 			}
 		}
-		}
-
 		dt {
 			display: flex;
-			// align-items: center;
-			display: flex;
 			justify-content: center;
-			// border-radius: 0.25rem 0 0 0.25rem;
-		}
+		}		
+	}
+
+
 		
 }
 

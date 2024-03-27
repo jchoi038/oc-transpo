@@ -4,8 +4,8 @@ OC Transpo Website Styles
 Copyright 2019 OC Transpo
 Authors: Justin MacNeil, Tashana Allen (RealDecoy)
 Editor: Judy Choi (OC Transpo)
-Date: 3/25/2024
-Time: 21:26
+Date: 3/27/2024
+Time: 9:00
 */
 /*
 
@@ -15667,15 +15667,21 @@ h4.stage2-usage-headings {
   color: var(--success-green);
 }
 
+table tbody tr:nth-child(odd) {
+  background-color: white;
+  line-height: 150%;
+}
+
+td, th {
+  color: var(--gray--700);
+}
+
 /****table styles ******/
 .responsive-table {
   overflow-x: auto;
 }
-.responsive-table table {
-  table-layout: auto;
-}
 
-.auto-width, .flow {
+.auto-width, .fluid {
   table-layout: auto;
 }
 
@@ -15695,6 +15701,11 @@ table thead th {
 }
 table thead a {
   color: #ffffff;
+}
+@media (max-width: 991.98px) {
+  table thead th.readable {
+    min-width: 50vw;
+  }
 }
 table thead.small-header {
   font-size: 12px;
@@ -15754,7 +15765,7 @@ table tbody tr th {
   font-weight: 400;
   font-size: 1rem;
   text-align: left;
-  vertical-align: text-top;
+  vertical-align: top;
   padding: 2rem 1rem;
 }
 @media (max-width: 767.98px) {
@@ -15963,15 +15974,65 @@ table.table--simple tbody tr {
     box-shadow: rgba(0, 0, 0, 0.06) 3px 0px 3px;
   }
 }
-@media (max-width: 991.98px) and (max-width: 991.98px) {
-  table.table--responsive-xscroll thead th.readable {
-    min-width: 50vw;
+
+/* Transcript tables*/
+.transcript-table {
+  table-layout: auto;
+}
+.transcript-table tr {
+  /* toggle on/off to make zebra*/
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.transcript-table tr:nth-of-type(odd) td {
+  background-color: var(--gray--50);
+}
+.transcript-table td:first-of-type {
+  color: var(--gray--500);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+.transcript-table td:last-of-type {
+  color: var(--gray--500);
+}
+.transcript-table td:last-of-type::before {
+  content: "[";
+}
+.transcript-table td:last-of-type::after {
+  content: "]";
+}
+.transcript-table td, .transcript-table th {
+  padding: 1.25rem 1rem;
+  background-color: white;
+}
+.transcript-table th {
+  color: var(--gray-800);
+  font-size: 0.875rem;
+  border: none;
+}
+@media (max-width: 575.98px) {
+  .transcript-table td, .transcript-table th {
+    padding: 0 0.5rem 0.5rem;
+  }
+  .transcript-table td:first-of-type {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .transcript-table td:last-of-type {
+    padding-bottom: 1.5rem;
+  }
+  .transcript-table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
   }
 }
 
 /*Key value table*/
 dl {
   display: grid;
+  grid-template-columns: auto 1fr;
   height: -moz-max-content;
   height: max-content;
 }
@@ -15983,10 +16044,6 @@ dl .header-row {
   dl {
     font-size: 0.875rem;
   }
-}
-dl dd,
-dl dt {
-  border-bottom: 1px solid var(--gray--100);
 }
 dl.bordered dd:last-of-type,
 dl.bordered dt:last-of-type {
@@ -16002,8 +16059,9 @@ dl.text-list {
 dl.text-list dd,
 dl.text-list dt {
   padding: 0.5rem;
+  border-bottom: 1px solid var(--gray--100);
 }
-@media (max-width: 991.98px) {
+@media (max-width: 575.98px) {
   dl.text-list {
     grid-template-columns: 1fr;
   }
@@ -16028,14 +16086,14 @@ dl.icon-list {
 }
 dl.icon-list dd,
 dl.icon-list dt {
+  border-bottom: 1px solid var(--gray--100);
   padding: 0.3rem 0.5rem 0.2rem 0.5rem;
 }
 dl.icon-list dd:nth-of-type(even),
 dl.icon-list dt:nth-of-type(even) {
   background-color: var(--gray--50);
 }
-dl dt {
-  display: flex;
+dl.icon-list dt {
   display: flex;
   justify-content: center;
 }
@@ -16111,6 +16169,7 @@ dl dt {
   --gray--200: #C5CED8;
   --gray--300: #A4AEBB;
   --gray--400: #838D9A;
+  --gray--500: #616977;
   --gray--700: #353A43;
   --gray--800: #1A1C21;
   --charcoal--50: hsl(249, 14%, 26%,10%);
@@ -16167,32 +16226,25 @@ ul, ol {
   padding-left: 0;
 }
 
-.content-container ul li {
+.content-container ul li, li {
   margin: 0;
+  margin-bottom: 0.25rem;
   padding: 0;
-  line-height: 150%;
 }
 
 .content-container ul, .content-container ol {
   margin-left: 2.5rem;
   padding: 0;
-  line-height: 150%;
-}
-
-li {
-  line-height: 150%;
 }
 
 ul.checklist li {
   display: flex;
-  /* align-items: center; */
-  gap: 0.25rem;
-  margin: 0;
+  gap: 0.5rem;
 }
 ul.checklist li::before {
   content: "";
-  height: 1.25em;
-  width: 1.25em;
+  height: 1em;
+  width: 1em;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -16201,7 +16253,10 @@ ul.checklist li::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/status_postive.svg");
+}
+ul.checklist--x li::before {
+  background-image: url("https://www.octranspo.com/images/files/icons/status_negative.svg");
 }
 
 .timeline {
@@ -17430,6 +17485,19 @@ section.divided {
   white-space: nowrap !important;
   border: 0 !important;
 }
+@media (max-width: 575.98px) {
+  .visually-hidden-mobile {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+}
 
 .inactive {
   color: var(--gray--400);
@@ -17689,6 +17757,13 @@ pre {
   padding: 1.5rem;
   border: 2px solid var(--gray--100);
   overflow-x: scroll;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
 }
 
 .fancybox-media {
