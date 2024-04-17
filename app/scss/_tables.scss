@@ -4,7 +4,7 @@ table tbody tr:nth-child(odd) {
 	line-height: 150%;
 }
 
-td,th{
+td{
 	color: var(--gray--700);
 }
 /****table styles ******/
@@ -310,7 +310,7 @@ table {
 	thead th,
 	tbody th {
 		font-weight: 700;
-		font-size: 1rem;
+		// font-size: 0.875rem;
 	}
 	tr {
 		&:nth-of-type(odd) {
@@ -338,19 +338,19 @@ table {
 			thead th {
                 border: none;
 				border-bottom: 1px solid var(--gray--100);
-				background-color: var(--gray--50);
-				color: var(--gray-800);
+				/*light header*/
+				background-color: var(--gray--100);
+
+				/*dark header*/
+				// background-color: var(--nwtb--800);
+				// color: var(--transparent--800);
+
 				text-align: left;
 			}
 
 			tbody th {
 				background-color: white;
-				// color: white;
-				font-size: 1rem;
                 font-weight: 700;
-				&:nth-of-type(even) {
-                    // background-color: var(--charcoal--700);
-				}
 			}
             
 			tbody tr {
@@ -387,22 +387,12 @@ table {
 }
 }
 
+
 /* Transcript tables*/
 
 .transcript-table{
 	table-layout: auto;
-	tr{
-		/* toggle on/off to make zebra*/
-		&:nth-of-type(odd) {
-			td {
-				background-color: var(--gray--50);
-				
-			}
-		}
-		overflow: hidden;
-		border-radius: 0.5rem;
-		// border-bottom: 1px solid var(--gray--100);
-	}
+	
 	
 	//styling the time stamp column
 	td:first-of-type{
@@ -423,13 +413,16 @@ table {
 		}
 	}
 	td, th{
-		padding: 1.25rem 1rem;
 		background-color: white;
+	}
+	td, th{
+		padding: 1.25rem 1rem;
 	}
 	th{
 		color: var(--gray-800);
 		font-size: 0.875rem;
 		border: none;
+		padding: 0.75rem 1rem;
 
 		//turn on to back background colour of header grey
 		// background-color: var(--gray--50);
@@ -460,6 +453,69 @@ table {
 	
 	
 	
+}
+table{
+	/* toggle on/off to make zebra*/
+&.zebra{
+	tr{
+		
+		&:nth-of-type(odd) {
+			td {
+				background-color: var(--gray--50);
+				
+			}
+		}
+		overflow: hidden;
+		border-radius: 0.5rem;
+		// border-bottom: 1px solid var(--gray--100);
+	}
+}
+/* toggle on/off for line seperated look */
+&.cardify{
+	@include media-breakpoint-down(xs) {
+		td, th{
+			padding:0;
+		}
+		// padding for time stamp
+		td:first-of-type{
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+
+		// padding for last element
+		td:last-of-type{
+			padding-bottom: 1.5rem;
+		}
+		tr{
+			display: flex;
+			flex-direction: column;
+			// gap: 0.25rem;
+			margin-bottom: 0.5rem;
+		}
+	
+	}
+
+}
+&.line-seperated {
+
+	tbody{
+		tr:hover{
+			td,th{
+				background-color: var(--gray--50);
+			}
+		}
+	}
+	thead th {
+		border: none;
+		border-top: 1px solid var(--gray--100);
+		border-bottom: 1px solid var(--gray--100);
+		background-color: var(--gray--100);
+	}
+	thead th:not(:first-of-type){
+		border-left: var(--transparent--200) solid 1px;
+	}
+
+}
 }
 	
 

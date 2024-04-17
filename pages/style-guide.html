@@ -4,12 +4,18 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- loading main css from oc site -->
 	<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9"
 		title="octranspo-main-css" rel="stylesheet">
-	<!-- <link href="https://jchoi038.github.io/oc-transpo/dist/custom-style.css" title="octranspo-custom-css" rel="stylesheet"/> -->
-	<link rel="stylesheet" href="../dist/custom-style.css" />
+		<!-- loading custom css from local project folder -->
+		<link rel="stylesheet" href="../dist/custom-style.css" />
 	<title>Style Guide</title>
 
+
+</head>
+
+<body class="main-content">
+	<h1>Style guide</h1>
 	<style>
 		.select--container {
 			border: 1px solid #e9eaed;
@@ -605,14 +611,14 @@ transition: max-height 0.3s ease-in;
 			}
 		}
 
-		.options-content-container--image-container {
+		.options-content-container--icon-container {
 			height: 300px;
 			overflow: hidden;
 			display: flex;
 			align-items: center;
 		}
 
-		.options-content-container--image-container>img {
+		.options-content-container--icon-container>img {
 			width: 100%;
 		}
 
@@ -891,7 +897,7 @@ transition: max-height 0.3s ease-in;
 		}
 
 		@media (max-width: 992px) {
-			.options-content-container--image-container {
+			.options-content-container--icon-container {
 				display: none;
 			}
 
@@ -966,13 +972,193 @@ transition: max-height 0.3s ease-in;
 			text-align: center;
 		}
 	</style>
-</head>
-
-<body class="main-content">
-	<h1>Style guide</h1>
 	<!-- <link href="https://www.octranspo.com/images/files/dist/custom-style.css" rel="stylesheet" /> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 	<div class="toc sticky"></div>
 	<div>
+		<section id="typography">
+			<h2>Typography</h2>
+			<p>Typescale</p>
+			<div class="example">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+				<p class="subhead">Subhead</p>
+				<p>Lorem ipsum dolor sit, amet swconsectetur adipisicing elit. Nulla natus sapiente voluptatum minima perspiciatis dolores porro illo, similique quae mollitia commodi nesciunt iste eos, distinctio doloremque quas debitis necessitatibus optio, possimus ullam quaerat tempora eveniet! Enim eligendi ad labore exercitationem blanditiis, soluta, quo vero maxime iusto quasi, sed amet minima.</p>
+				<figcaption>figcaption</figcaption>
+			</div>
+			<pre></pre>
+			<p>Heading group</p>
+			<div class="example">
+				<hgroup>
+					<h1>Heading 1</h1>
+					<p>This is a tag line</p>
+				</hgroup>
+			</div>
+			<pre></pre>
+			
+		</section>
+		<section id="Colours">
+			<hgroup>
+				<h2>Colours</h2>
+				<p>Primary, secondary colours, hues & tints</p>
+			</hgroup>
+			<div class="note ">
+				<p class="note__title">Colour value meanings</p>
+				<p>50: Contrast of low 1.0s. Used as subtle backgrounds for banners & section dividers</p>
+				<p>100: Contrast of mid 1.0s</p>
+				<p>50-200s: light bg fills for dark text, Hover shadows</p>
+				<p>200-300s: Graphics, Hover shadows</p>
+				<p>50-400s: non cruicial / non interacting ui elements (dividers, backgrounds)</p>
+				<p>500s: Contrast of 3.0+. crucial ui components: ui borders, icons, text 18 pt / 14 pt bold</p>
+				<p>600s: Contrast of 4.5+. Prominent bg fills for light text, normal text</p>
+				<p>700s: Button hover state fills</p>
+				<p>800s: dark text on white or light bg (up to 200s)</p>
+			</div>
+			<h3>Primary</h3>
+			<h3>Secondary</h3>
+			<h3>Hues & tints</h3>
+			<div class="grid grid--4col">
+				<div>
+					<div class="swatch" style="background-color: var(--line1--50);"></div>
+					<p>line1/50</p>
+					<div class="swatch" style="background-color: var(--line1--100);"></div>
+					<p>line1/100</p>
+					<div class="swatch" style="background-color: var(--line1--200);"></div>
+					<p>line1/200</p>
+					<div class="swatch" style="background-color: var(--line1--300);"></div>
+					<p>line1/300</p>
+					<div class="swatch" style="background-color: var(--line1--400);"></div>
+					<p>line1/400</p>
+					<div class="swatch" style="background-color: var(--line1--500);"></div>
+					<p>line1/500</p>
+					<div class="swatch" style="background-color: var(--line1--600);"></div>
+					<p>line1/600</p>
+					<div class="swatch" style="background-color: var(--line1--700);"></div>
+					<p>line1/700</p>
+					<div class="swatch" style="background-color: var(--line1--800);"></div>
+					<p>line1/800</p>
+				</div>
+				<div>
+					<div class="swatch" style="background-color: var(--line2--50);"></div>
+					<p>line2/50</p>
+					<div class="swatch" style="background-color: var(--line2--100);"></div>
+					<p>line2/100</p>
+					<div class="swatch" style="background-color: var(--line2--200);"></div>
+					<p>line2/200</p>
+					<div class="swatch" style="background-color: var(--line2--300);"></div>
+					<p>line2/300</p>
+					<div class="swatch" style="background-color: var(--line2--400);"></div>
+					<p>line2/400</p>
+					<div class="swatch" style="background-color: var(--line2--500);"></div>
+					<p>line2/500</p>
+					<div class="swatch" style="background-color: var(--line2--600);"></div>
+					<p>line2/600</p>
+					<div class="swatch" style="background-color: var(--line2--700);"></div>
+					<p>line2/700</p>
+					<div class="swatch" style="background-color: var(--line2--800);"></div>
+					<p>line2/800</p>
+				</div>
+				<div>
+					<div class="swatch" style="background-color: var(--line3--50);"></div>
+					<p>line3/50</p>
+					<div class="swatch" style="background-color: var(--line3--100);"></div>
+					<p>line3/100</p>
+					<div class="swatch" style="background-color: var(--line3--200);"></div>
+					<p>line3/200</p>
+					<div class="swatch" style="background-color: var(--line3--300);"></div>
+					<p>line3/300</p>
+					<div class="swatch" style="background-color: var(--line3--400);"></div>
+					<p>line3/400</p>
+					<div class="swatch" style="background-color: var(--line3--500);"></div>
+					<p>line3/500</p>
+					<div class="swatch" style="background-color: var(--line3--600);"></div>
+					<p>line3/600</p>
+					<div class="swatch" style="background-color: var(--line3--700);"></div>
+					<p>line3/700</p>
+					<div class="swatch" style="background-color: var(--line3--800);"></div>
+					<p>line3/800</p>
+				</div>
+				<div>
+					<div class="swatch" style="background-color: var(--line4--50);"></div> 
+					<p>line4/50</p>
+					<div class="swatch" style="background-color: var(--line4--100);"></div>
+					<p>line4/100</p>
+					<div class="swatch" style="background-color: var(--line4--200);"></div>
+					<p>line4/200</p>
+					<div class="swatch" style="background-color: var(--line4--300);"></div>
+					<p>line4/300</p>
+					<div class="swatch" style="background-color: var(--line4--400);"></div>
+					<p>line4/400</p>
+					<div class="swatch" style="background-color: var(--line4--500);"></div>
+					<p>line4/500</p>
+					<div class="swatch" style="background-color: var(--line4--600);"></div>
+					<p>line4/600</p>
+					<div class="swatch" style="background-color: var(--line4--700);"></div>
+					<p>line4/700</p>
+					<div class="swatch" style="background-color: var(--line4--800);"></div>
+					<p>line4/800</p>
+				</div>
+			</div>
+			<h3>Branded services</h3>
+			<h3>Functional/semantic</h3>
+
+
+			<h3>Colour combinations</h3>
+		</section>
+		<!-- <section id="Graphics">
+			<h2>Banners</h2>
+			<img src="https://www.o-payment.octranspo.com/img/header-en.png" alt="">
+			<p>https://www.o-payment.octranspo.com/img/header-en.png</p>
+			<img src="https://www.octranspo.com/images/files/banners/next-stop_blog_banner-sketch_en.png" alt="">
+			<p>https://www.octranspo.com/images/files/banners/next-stop_blog_banner-sketch_en.png</p>
+			<img src="https://www.octranspo.com/images/files/banners/alerts-banner.png" alt="">
+			<p>https://www.octranspo.com/images/files/banners/alerts-banner.png</p>
+			<img src="https://www.octranspo.com/images/files/banners/transparency-banner.png" alt="">
+			<p>https://www.octranspo.com/images/files/banners/transparency-banner.png</p>
+			<h3>Stage 2 graphics</h3>
+			<img src="https://www.octranspo.com/images/files/card-section-bg-01-dark.jpg" alt="">
+			<p>https://www.octranspo.com/images/files/card-section-bg-01-dark.jpg</p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_East_Red_A.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_East_Red_A.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_East_Red_B.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_East_Red_B.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Line2_Green_A.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Line2_Green_A.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Line2_Green_B.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Line2_Green_B.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Line4_Blue_A.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Line4_Blue_A.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Line4_Blue_B.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Line4_Blue_B.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Multi_1.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Multi_1.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Multi_2.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Multi_2.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Multi_3.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Multi_3.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Multi_4.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Multi_4.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Multi_5.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Multi_5.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Multi_6.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Multi_6.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Multi_7.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Multi_7.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_Multi_8.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_Multi_8.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_West_Line1_Red_A.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_West_Line1_Red_A.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_West_Line1_Red_B.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_West_Line1_Red_B.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_West_Line3_Yellow_A.svg" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_West_Line3_Yellow_A.svg </p>
+			<img src="https://www.octranspo.com/images/files/graphics/stage2_West_Line3_Yellow_B.sv" alt="">
+			<p>https://www.octranspo.com/images/files/graphics/stage2_West_Line3_Yellow_B.svg</p>
+		</section> -->
 		<section id="responsive-grids">
 			<h2>Responsive grids</h2>
 			<p>2 column / equal widths</p>
@@ -1037,6 +1223,178 @@ transition: max-height 0.3s ease-in;
 
 
 				
+		</section>
+		<section id="carousel">
+			<h2>Images</h2>
+			<h3>Click to expand image box</h3>
+			<figure class="clickable-img">
+				<a class="fancybox-media" href="https://dev.octranspo.com/images/files/2-no-line.jpg" title="addTitle">
+				<img alt="addTitle" class="fancy_image" float="right"
+					src="https://dev.octranspo.com/images/files/2-no-line.jpg">
+				</a>
+				<figcaption>
+					<p >Pictured above: addTitle
+					</p>
+					<p><em>Click the image&nbsp;above for a closer look.</em></p>
+				</figcaption>
+			</figure>
+			<p>French:</p>
+			<figcaption>
+				<p >Ci-dessus : addTitle.
+				</p>
+				<p><em>Cliquer sur l'image ci-dessus pour y voir de plus près.</em></p>
+			</figcaption>
+			
+			<h3>Carousel & slideshow</h3>
+<p>More information in the Stage 2 Style Guide: <a href="https://staging.octranspo1.com/en/stage-2-style-guide">stage 2 style guide</a></p>
+<div>
+	<div
+		class="stage-2 container container-photo-gallery-header image-gallery-carousel-main no-padding"
+	>
+		<div class="photo-gallery-generic">
+			<div class="row photo-gallery-first-row">
+				<div class="col-4"><!-- <h2>Photo Gallery</h2> --></div>
+
+				<div
+					class="col-4 gallery-subhead-arrows"
+					id="gallery-subhead-arrows-main"
+				>
+					<p class="subhead">STATION IN PHOTOS</p>
+
+					<div class="col-4">
+						<div
+							class="navigation-buttons-section navigation-buttons-section--spotlight photo-carousel-container-nav photo-carousel-container-nav--new"
+						>
+							<div class="navigation-buttons-slider prev">
+								<img
+									alt="left-arrow-button"
+									src="/themes/user/site/octranspo/assets/img/stage-2/left-arrow-button.svg"
+								/>
+							</div>
+
+							<div class="navigation-buttons-slider next">
+								<img
+									alt="right-arrow-button"
+									src="/themes/user/site/octranspo/assets/img/stage-2/right-arrow-button.svg"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container carousel-container photo-carousel-container">
+				<div
+					class="gallery-carousel image-gallery-carousel gallery-carousel__item-wrapper"
+					data-js="image-gallery-carousel-main"
+				>
+				<div class="gallery-image">
+					<figure class="clickable-img">
+						<a class="fancybox-media" href="https://dev.octranspo.com/images/files/2-no-line.jpg" title="addTitle">
+						<img alt="addTitle" class="fancy_image" float="right"
+							src="https://dev.octranspo.com/images/files/2-no-line.jpg">
+						</a>
+						<figcaption>
+							<p >Pictured above: addTitle
+							</p>
+							<p><em>Click the image&nbsp;above for a closer look.</em></p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="gallery-image">
+					<figure class="clickable-img">
+						<a class="fancybox-media" href="https://dev.octranspo.com/images/files/2-no-line.jpg" title="addTitle">
+						<img alt="addTitle" class="fancy_image" float="right"
+							src="https://dev.octranspo.com/images/files/2-no-line.jpg">
+						</a>
+						<figcaption>
+							<p >Pictured above: addTitle
+							</p>
+							<p><em>Click the image&nbsp;above for a closer look.</em></p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="gallery-image">
+					<figure class="clickable-img">
+						<a class="fancybox-media" href="https://dev.octranspo.com/images/files/2-no-line.jpg" title="addTitle">
+						<img alt="addTitle" class="fancy_image" float="right"
+							src="https://dev.octranspo.com/images/files/2-no-line.jpg">
+						</a>
+						<figcaption>
+							<p >Pictured above: addTitle
+							</p>
+							<p><em>Click the image&nbsp;above for a closer look.</em></p>
+						</figcaption>
+					</figure>
+				</div>
+					<div class="gallery-image">
+						<figure>
+							<img
+								alt="Hurdman Station exterior"
+								height="560"
+								src="https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Hurdman_01.jpg"
+								width="996"
+							/>
+							<figcaption>Hurdman Station exterior.</figcaption>
+						</figure>
+					</div>
+
+					<div class="gallery-image">
+						<figure>
+							<img
+								alt="Public Art at Hurdman Station"
+								height="667"
+								src="https://www.octranspo.com/images/files/Hurdman-Station-Public-Art-01.jpg"
+								width="1000"
+							/>
+							<figcaption>Public Art at Hurdman Station.</figcaption>
+						</figure>
+					</div>
+
+					<div class="gallery-image">
+						<figure>
+							<img
+								alt="Hurdman Station platform"
+								height="4160"
+								src="https://www.octranspo.com/images/files/Hurdman_platform.JPG"
+								width="6240"
+							/>
+							<figcaption>Hurdman Station platform.</figcaption>
+						</figure>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>			
+		</section>
+		<section id="containers">
+			<h2>Containers</h2>
+			<h3>Icon containers</h3>
+			<div class="example">
+				<p>icon containers:</p>
+				<div class="flex flex-jc-c">
+					<div class="icon-container icon-container--tiny">
+						<img src="https://www.octranspo.com/images/files/icons/placeholder-image.png" alt="">
+					</div>
+					<div class="icon-container icon-container--sm">
+						<img src="https://www.octranspo.com/images/files/icons/placeholder-image.png" alt="">
+					</div>
+					<div class="icon-container icon-container--md">
+						<img src="https://www.octranspo.com/images/files/icons/placeholder-image.png" alt="">
+					</div>
+					<div class="icon-container icon-container--lg">
+						<img src="https://www.octranspo.com/images/files/icons/placeholder-image.png" alt="">
+					</div>
+					<div class="icon-container icon-container--xl">
+						<img src="https://www.octranspo.com/images/files/icons/placeholder-image.png" alt="">
+					</div>
+
+				</div>
+				
+			</div>
+			<pre></pre>
 		</section>
 		<section id="icons">
 			<h2>Icons</h2>
@@ -1277,13 +1635,104 @@ transition: max-height 0.3s ease-in;
 					<dd><a href="https://www.octranspo.com/images/files/icons/transport_train.svg ">https://www.octranspo.com/images/files/icons/transport_train.svg</a></dd>
 					<dt><div class="icon-container icon-container--sm"><img src="https://www.octranspo.com/images/files/icons/transport_walk.svg" alt=""></div></dt>
 					<dd><a href="https://www.octranspo.com/images/files/icons/transport_walk.svg">https://www.octranspo.com/images/files/icons/transport_walk.svg</a></dd>
+					<dt><div class="icon-container icon-container--sm"><img src="https://www.octranspo.com/images/files/files/icons/snowflake.png" alt=""></div></dt>
+					<dd>Snowflake <a href="https://www.octranspo.com/images/files/files/icons/snowflake.png">https://www.octranspo.com/images/files/files/icons/snowflake.png</a></dd>
 
                 </dl>
 		</section>
 		<section id="button">
 			<h2>Buttons</h2>
-			<div class="section-row example">
-				<div class="grid grid--8col">
+			<div class="example">
+				<p>Examples with custom leading svg icons</p>
+				<div class="flex flex-jc-c">
+					<a class="btn-primary btn__arrow btn" href=""><span class="icon-container icon-container--sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="12" cy="12" r="11.5" fill="white" stroke="white"/>
+						<path d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z" fill="#D30F1D"/>
+						<path d="M12.7832 17H10.6709V11.2168C10.6709 11.0573 10.6732 10.8613 10.6777 10.6289C10.6823 10.3919 10.6891 10.1504 10.6982 9.9043C10.7074 9.65365 10.7165 9.42806 10.7256 9.22754C10.6755 9.28678 10.5729 9.38932 10.418 9.53516C10.2676 9.67643 10.1263 9.80404 9.99414 9.91797L8.8457 10.8408L7.82715 9.56934L11.0469 7.00586H12.7832V17Z" fill="white"/>
+						</svg>
+						</span>
+						Button
+					</a>
+					<a class="btn-line2 btn__arrow btn" href=""><span class="icon-container icon-container--sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="12" cy="12" r="10.5" fill="white" stroke="white"/>
+						<path d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z" fill="#65A233"/>
+						<path d="M15.5469 17H8.56055V15.5303L11.0693 12.9941C11.5752 12.4746 11.9808 12.0417 12.2861 11.6953C12.596 11.3444 12.8193 11.0254 12.9561 10.7383C13.0973 10.4512 13.168 10.1436 13.168 9.81543C13.168 9.41895 13.0563 9.12272 12.833 8.92676C12.6143 8.72624 12.3203 8.62598 11.9512 8.62598C11.5638 8.62598 11.1878 8.71484 10.8232 8.89258C10.4587 9.07031 10.0781 9.32324 9.68164 9.65137L8.5332 8.29102C8.82031 8.04492 9.12337 7.8125 9.44238 7.59375C9.76595 7.375 10.1396 7.19954 10.5635 7.06738C10.9919 6.93066 11.5046 6.8623 12.1016 6.8623C12.7578 6.8623 13.3206 6.98079 13.79 7.21777C14.264 7.45475 14.6286 7.77832 14.8838 8.18848C15.139 8.59408 15.2666 9.05436 15.2666 9.56934C15.2666 10.1208 15.1572 10.6243 14.9385 11.0801C14.7197 11.5358 14.4007 11.987 13.9814 12.4336C13.5667 12.8802 13.0654 13.3747 12.4775 13.917L11.1924 15.127V15.2227H15.5469V17Z" fill="white"/>
+						</svg>
+						</span>
+						Button
+					</a>
+					<a class="btn-line3 btn__arrow btn" href=""><span class="icon-container icon-container--sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12Z" fill="#8F7200"/>
+						<path d="M15.1572 9.24121C15.1572 9.7015 15.0615 10.1003 14.8701 10.4375C14.6787 10.7747 14.4189 11.0505 14.0908 11.2646C13.7673 11.4788 13.4027 11.6361 12.9971 11.7363V11.7773C13.7992 11.8776 14.4076 12.1237 14.8223 12.5156C15.2415 12.9076 15.4512 13.4316 15.4512 14.0879C15.4512 14.6712 15.3076 15.193 15.0205 15.6533C14.738 16.1136 14.3005 16.4759 13.708 16.7402C13.1156 17.0046 12.3522 17.1367 11.418 17.1367C10.8665 17.1367 10.3516 17.0911 9.87305 17C9.39909 16.9134 8.95247 16.779 8.5332 16.5967V14.7988C8.96159 15.0176 9.41048 15.1839 9.87988 15.2979C10.3493 15.4072 10.7868 15.4619 11.1924 15.4619C11.9489 15.4619 12.4775 15.332 12.7783 15.0723C13.0837 14.8079 13.2363 14.4388 13.2363 13.9648C13.2363 13.6868 13.1657 13.4521 13.0244 13.2607C12.8831 13.0693 12.637 12.9235 12.2861 12.8232C11.9398 12.723 11.4544 12.6729 10.8301 12.6729H10.0713V11.0527H10.8438C11.459 11.0527 11.9261 10.9958 12.2451 10.8818C12.5687 10.7633 12.7874 10.6038 12.9014 10.4033C13.0199 10.1982 13.0791 9.96582 13.0791 9.70605C13.0791 9.35059 12.9697 9.07259 12.751 8.87207C12.5322 8.67155 12.1676 8.57129 11.6572 8.57129C11.3382 8.57129 11.0465 8.6123 10.7822 8.69434C10.5225 8.77181 10.2878 8.86751 10.0781 8.98145C9.86849 9.09082 9.68392 9.19792 9.52441 9.30273L8.54688 7.84668C8.9388 7.56413 9.39681 7.32943 9.9209 7.14258C10.4495 6.95573 11.0785 6.8623 11.8076 6.8623C12.8376 6.8623 13.6533 7.06966 14.2549 7.48438C14.8564 7.89909 15.1572 8.4847 15.1572 9.24121Z" fill="white"/>
+						</svg>
+						
+						</span>
+						Button
+					</a>
+					<a class="btn-line4 btn__arrow btn" href=""><span class="icon-container icon-container--sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="12" cy="12" r="11.5" fill="white" stroke="white"/>
+						<path d="M12.5049 11.5928V13.2881H10.0986L11.9307 10.5195C12.0583 10.3281 12.1699 10.1458 12.2656 9.97266C12.3613 9.79492 12.4525 9.61263 12.5391 9.42578H12.5938C12.5892 9.49414 12.5801 9.61491 12.5664 9.78809C12.5573 9.95671 12.5482 10.1504 12.5391 10.3691L12.5117 11.0254C12.5072 11.2441 12.5049 11.4333 12.5049 11.5928Z" fill="#009DDB"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM14.5693 14.9287H15.7725V13.2881H14.5693V7.00586H12.6211L8.23926 13.459V14.9287H12.5049V17H14.5693V14.9287Z" fill="#009DDB"/>
+						</svg>
+						
+						</span>
+						Button
+					</a>
+				</div>
+				
+			</div>
+			<pre></pre>
+			<div class="example">
+				<p>Customize the leading button icon with any svg</p>
+				<div class="flex flex-jc-c">
+					<a class="btn-tertiary btn__arrow btn" href=""><span class="icon-container icon-container--sm"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22 19.7778V4.22222C22 3 21 2 19.7778 2H4.22222C3 2 2 3 2 4.22222V19.7778C2 21 3 22 4.22222 22H19.7778C21 22 22 21 22 19.7778ZM8.11111 13.6667L10.8889 17.0111L14.7778 12L19.7778 18.6667H4.22222L8.11111 13.6667Z" fill="#3D3A4D"/>
+						</svg></span>
+						Button
+					</a>
+					
+				</div>
+			</div>
+			<pre></pre>
+			<div class="example flex flex-dir-col">
+				<p>Arrow only buttons</p>
+				<div class="flex flex-jc-c">
+					<a class="btn-primary btn btn-lg btn__arrow btn-solid btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line2 btn btn-lg btn__arrow btn-solid btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line3 btn btn-lg btn__arrow btn-solid btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line4 btn btn-lg btn__arrow btn-solid btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+				</div>
+				<div class="flex flex-jc-c">
+					<a class="btn-primary btn btn-lg btn__arrow btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line2 btn btn-lg btn__arrow btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line3 btn btn-lg btn__arrow btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line4 btn btn-lg btn__arrow btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+				</div>
+				<div class="flex flex-jc-c">
+					<a class="btn-primary btn btn__arrow btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line2 btn btn__arrow btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line3 btn btn__arrow btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line4 btn btn__arrow btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+				</div>
+				<div class="flex flex-jc-c">
+					<a class="btn-primary btn btn__arrow btn-solid btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line2 btn btn__arrow btn-solid btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line3 btn btn__arrow btn-solid btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+					<a class="btn-line4 btn btn__arrow btn-solid btn-arrow-only" href=""><span class="visually-hidden">Button</span></a>
+				</div>
+			</div>
+			<pre></pre>
+			<div class="example">
+				<p>Button sizes</p>
+				<div class="flex flex-jc-c">
+					<a class="btn" href="">Default</a>
+					<a class="btn btn-lg" href="">Large</a>
+				</div>
+			</div>
+			<pre></pre>
+			<div class="flex example">
+				
+				<div class="flex">
 					<a class="btn-primary btn btn-lg btn__arrow btn-solid" href="">Button</a>
 					<a class="btn-primary btn btn-lg  btn-solid" href="">Button</a>
 					<a class="btn-primary btn btn__arrow btn-solid" href="">Button</a>
@@ -1354,16 +1803,44 @@ transition: max-height 0.3s ease-in;
 
 				</div>
 				<div class="grid grid--8col">
-
+					<a class="btn-tertiary btn-line1 btn btn-lg btn__arrow " href="">Button</a>
+					<a class="btn-tertiary btn-line1 btn btn-lg" href="">Button
+					<a class="btn-tertiary btn-line1 btn btn__arrow" href="">Button</a>
+					<a class="btn-tertiary btn-line1 btn" href="">Button</a>
+					<a class="btn-tertiary btn-line1 btn btn-lg btn__arrow btn-text-only" href="">Button</a>
+					<p></p>
+					<a class="btn-tertiary btn-line1 btn btn__arrow btn-text-only" href="">Button</a>
+					<p></p>
+				</div>
+				<div class="grid grid--8col">
+					<a class="btn-tertiary btn-line2 btn btn-lg btn__arrow " href="">Button</a>
+					<a class="btn-tertiary btn-line2 btn btn-lg" href="">Button
+					<a class="btn-tertiary btn-line2 btn btn__arrow" href="">Button</a>
+					<a class="btn-tertiary btn-line2 btn" href="">Button</a>
+					<a class="btn-tertiary btn-line2 btn btn-lg btn__arrow btn-text-only" href="">Button</a>
+					<p></p>
+					<a class="btn-tertiary btn-line2 btn btn__arrow btn-text-only" href="">Button</a>
+					<p></p>
+				</div>
+				<div class="grid grid--8col">
+					<a class="btn-tertiary btn-line3 btn btn-lg btn__arrow " href="">Button</a>
+					<a class="btn-tertiary btn-line3 btn btn-lg" href="">Button
+					<a class="btn-tertiary btn-line3 btn btn__arrow" href="">Button</a>
+					<a class="btn-tertiary btn-line3 btn" href="">Button</a>
+					<a class="btn-tertiary btn-line3 btn btn-lg btn__arrow btn-text-only" href="">Button</a>
+					<p></p>
+					<a class="btn-tertiary btn-line3 btn btn__arrow btn-text-only" href="">Button</a>
+					<p></p>
+				</div>
+				<div class="grid grid--8col">
 					<a class="btn-tertiary btn-line4 btn btn-lg btn__arrow " href="">Button</a>
 					<a class="btn-tertiary btn-line4 btn btn-lg" href="">Button
-						<a class="btn-tertiary btn-line4 btn btn__arrow" href="">Button</a>
-						<a class="btn-tertiary btn-line4 btn" href="">Button</a>
-						<a class="btn-tertiary btn-line4 btn btn-lg btn__arrow btn-text-only" href="">Button</a>
-						<p></p>
-						<a class="btn-tertiary btn-line4 btn btn__arrow btn-text-only" href="">Button</a>
-						<p></p>
-
+					<a class="btn-tertiary btn-line4 btn btn__arrow" href="">Button</a>
+					<a class="btn-tertiary btn-line4 btn" href="">Button</a>
+					<a class="btn-tertiary btn-line4 btn btn-lg btn__arrow btn-text-only" href="">Button</a>
+					<p></p>
+					<a class="btn-tertiary btn-line4 btn btn__arrow btn-text-only" href="">Button</a>
+					<p></p>
 				</div>
 
 				<div class="grid grid--8col background-dark">
@@ -1462,6 +1939,8 @@ transition: max-height 0.3s ease-in;
 	
 		</section>
 		<section id="links">
+			<h2>Links</h2>
+			<a href="#">Link test</a>
 			<h2>Link stack</h2>
 			<ul class="grid grid--3col link-stack example">
 				<li>
@@ -1856,13 +2335,8 @@ bg-gradient-blue
 							</pre>
 			</div>
 		</section>
-		<!--     
-					<section id="typography">
-						<h1>This is a h1</h1>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, omnis esse, reiciendis, a sunt nesciunt est ipsam nihil qui ratione aliquam in neque non autem.</p>
-						<h2>This is a h2</h2>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, omnis esse, reiciendis, a sunt nesciunt est ipsam nihil qui ratione aliquam in neque non autem.</p>
-					</section> -->
+		    
+
 		<section id="accordions">
 			<h2>Accordions</h2>
 			<p>
@@ -1880,13 +2354,13 @@ bg-gradient-blue
 				</div>
 			</div>
 	
-			<h3>Simple accordion</h3>
-			<div class="example accordion-container accordion-container--simple">
-				<h4 id="placeholderID-acc1" class="accordion">
-					Accordion 1
+			<h3>Plain</h3>
+			<div class="example accordion-container new">
+				<h4 id="placeholderID" class="accordion">
+					Accordion
 				</h4>
 				<div class="accordion-content">
-					<p>accordion content 1</p>
+					<p>accordion content</p>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing
 						elit. Harum earum consectetur magni voluptatibus,
@@ -1895,65 +2369,8 @@ bg-gradient-blue
 						voluptate, cumque quos.
 					</p>
 				</div>
-				<h4 id="placeholderID-acc2" class="accordion">
-					Accordion 2
-				</h4>
-				<div class="accordion-content">
-					<p>accordion content 2</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Harum earum consectetur magni voluptatibus,
-						temporibus nemo quae sed libero beatae delectus.
-						Perspiciatis quod beatae quia qui atque nostrum
-						voluptate, cumque quos.
-					</p>
-					<div class="side-note">
-						<p class="side-note__title">
-							*Note: Replacement bus service
-						</p>
-						<div class="side-note__content">
-							<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat soluta delectus tempore sit ullam, saepe quam ipsam omnis, fugit a repellendus! Minus illo quibusdam ea inventore nulla quia saepe.</p> -->
-							<ul>
-								<li>
-									May be deployed when the O-Train is not
-									running during regular service hours
-								</li>
-								<li>
-									Serves all O-Train stations on the
-									line and only makes limited stops along
-									the way
-								</li>
-								<li>
-									For shorter trip times, Lees and
-									Cyrville are served by a shuttle instead
-								</li>
-								<li>
-									If an O-Train line is partially closed,
-									may run only along the closed portion
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<pre></pre>
-			<p>Simple & bordered</p>
-			<div class="example accordion-container accordion-container--simple bordered">
-				<h4 id="placeholderID-acc1" class="accordion">
-					Accordion 1
-				</h4>
-				<div class="accordion-content">
-					<p>accordion content 1</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Harum earum consectetur magni voluptatibus,
-						temporibus nemo quae sed libero beatae delectus.
-						Perspiciatis quod beatae quia qui atque nostrum
-						voluptate, cumque quos.
-					</p>
-				</div>
-				<h4 id="placeholderID-acc2" class="accordion">
-					Accordion 2
+				<h4 id="placeholderID" class="accordion">
+					Accordion
 				</h4>
 				<div class="accordion-content">
 					<p>accordion content 2</p>
@@ -1994,6 +2411,76 @@ bg-gradient-blue
 				</div>
 			</div>
 			<pre></pre>
+			<h3>Bold</h3>
+			<div class="example">
+				<div class="accordion-container new bordered">
+					<h4 id="placeholderID" class="accordion bold">
+						Accordion
+					</h4>
+					<div class="accordion-content">
+						<p>accordion content</p>
+					</div>
+					<h4 id="placeholderID" class="accordion bold md">
+						Accordion
+					</h4>
+					<div class="accordion-content">
+						<p>accordion content</p>
+					</div>
+					<h4 id="placeholderID" class="accordion bold lg">
+						Accordion
+					</h4>
+					<div class="accordion-content">
+						<p>accordion content</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="example accordion-container new">
+				<h4 id="placeholderID" class="accordion bold">
+					Accordion
+				</h4>
+				<div class="accordion-content">
+					<p>accordion content</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Harum earum consectetur magni voluptatibus,
+						temporibus nemo quae sed libero beatae delectus.
+						Perspiciatis quod beatae quia qui atque nostrum
+						voluptate, cumque quos.
+					</p>
+				</div>
+				<h4 id="placeholderID" class="accordion bold md">
+					Accordion
+				</h4>
+				
+				<div class="accordion-content">
+					<p>accordion content</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Harum earum consectetur magni voluptatibus,
+						temporibus nemo quae sed libero beatae delectus.
+						Perspiciatis quod beatae quia qui atque nostrum
+						voluptate, cumque quos.
+					</p>
+				</div>
+				<h4 id="placeholderID" class="accordion bold lg">
+					Accordion
+				</h4>
+				<div class="accordion-content">
+					<p>accordion content</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Harum earum consectetur magni voluptatibus,
+						temporibus nemo quae sed libero beatae delectus.
+						Perspiciatis quod beatae quia qui atque nostrum
+						voluptate, cumque quos.
+					</p>
+				</div>
+				
+				
+				
+			</div>
+			
 		</section>
 		<section id="tabs">
 			<h2>Tabs</h2>
@@ -2032,8 +2519,8 @@ bg-gradient-blue
 				<li>for bordered look add class = "bordered"</li>
 			</ul>
 			<dl class="example icon-list">
-				<dt class="Header-row">Icon</dt>
-				<dd class="Header-row">Meaning</dd>
+				<dt class="header-row">Icon</dt>
+				<dd class="header-row">Meaning</dd>
 				<dt>
 					<div class="icon-container icon-container--sm">
 						<img src="https://www.octranspo.com/images/files/icons/line_1.svg " alt="" />
@@ -2055,8 +2542,8 @@ bg-gradient-blue
 			</dl>
 			<pre>
 &lt;dl class&#x3D;&quot;icon-list&quot;&gt;
-	&lt;dt class&#x3D;&quot;Header-row&quot;&gt;Icon&lt;&#x2F;dt&gt;
-	&lt;dd class&#x3D;&quot;Header-row&quot;&gt;Meaning&lt;&#x2F;dd&gt;
+	&lt;dt class&#x3D;&quot;header-row&quot;&gt;Icon&lt;&#x2F;dt&gt;
+	&lt;dd class&#x3D;&quot;header-row&quot;&gt;Meaning&lt;&#x2F;dd&gt;
 	&lt;dt&gt;
 		&lt;div class&#x3D;&quot;icon-container icon-container--sm&quot;&gt;
 			&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;line_1.svg &quot; alt&#x3D;&quot;&quot; &#x2F;&gt;
@@ -2080,8 +2567,8 @@ bg-gradient-blue
 			<h3>Text definitions</h3>
 			<p>text tables will collapse to one column in mobile view</p>
 			<dl class="example text-list ">
-				<dt class="Header-row visually-hidden-mobile">Term</dt>
-				<dd class="Header-row visually-hidden-mobile">Meaning</dd>
+				<dt class="header-row visually-hidden-mobile">Term</dt>
+				<dd class="header-row visually-hidden-mobile">Meaning</dd>
 				<dt>term 1</dt>
 				<dd>
 					Lorem, ipsum dolor sit amet consectetur adipisicing
@@ -2116,7 +2603,7 @@ bg-gradient-blue
 				<div class="table-container">
 					<table class="table--simple table--responsive-xscroll sticky-left-col bordered">
 						<caption>
-							Table title
+							Table caption
 						</caption>
 						<thead>
 							<tr>
@@ -2175,7 +2662,7 @@ bg-gradient-blue
 				<div class="table-container">
 					<table class="table--simple table--responsive-xscroll fluid sticky-left-col bordered">
 						<caption>
-							Table title
+							Table caption
 						</caption>
 						<thead>
 							<tr>
@@ -2293,7 +2780,38 @@ bg-gradient-blue
 			</pre>
 			<h3>Transcript tables</h3>
 			<div class="example">
-				<table class="transcript-table">
+				<table class="transcript-table zebra">
+					<caption>Zebra table</caption>
+					<thead class="visually-hidden-mobile">
+						<tr>
+							<th>Time</th>
+							<th>Transcript</th>
+							<th>Text description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>00:01</td><td></td><td>OC Transpo and Para Transpo Log on screen</td></tr>
+						<tr><td>03:00</td><td>An even better Para Transpo is here.</td><td>A bus is driving down the street.</td></tr>
+						<tr><td>06:07</td><td>OC Transpo introduces: “My Para Transpo”</td><td>A hand with a mobile phone is displayed with the My Para Transpo application</td></tr>
+					</tbody>
+				</table>
+				<table class="transcript-table line-seperated">
+					<caption>Line seperated table</caption>
+					<thead class="visually-hidden-mobile">
+						<tr>
+							<th>Time</th>
+							<th>Transcript</th>
+							<th>Text description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>00:01</td><td></td><td>OC Transpo and Para Transpo Log on screen</td></tr>
+						<tr><td>03:00</td><td>An even better Para Transpo is here.</td><td>A bus is driving down the street.</td></tr>
+						<tr><td>06:07</td><td>OC Transpo introduces: “My Para Transpo”</td><td>A hand with a mobile phone is displayed with the My Para Transpo application</td></tr>
+					</tbody>
+				</table>
+				<table class="transcript-table line-seperated">
+					<caption>Example</caption>
 					<thead class="visually-hidden-mobile">
 						<tr>
 							<th>Time</th>
@@ -2316,7 +2834,7 @@ bg-gradient-blue
 				</table>
 			</div>
 			<pre>
-&lt;table class&#x3D;&quot;transcript-table bordered&quot;&gt;
+&lt;table class&#x3D;&quot;transcript-table line-seperated&quot;&gt;
 	&lt;thead class&#x3D;&quot;visually-hidden-mobile&quot;&gt;
 		&lt;tr&gt;
 			&lt;th&gt;Time&lt;&#x2F;th&gt;
@@ -2545,8 +3063,12 @@ bg-gradient-blue
 		
 	</div>
 	<script src="https://www.octranspo.com/images/files/dist/script.js"></script>
-	<script src="../app/js/script.js"></script>
 	<script src="https://staging.octranspo1.com/themes/user/site/octranspo/assets/js/dist/main.min.js?v=1.0.6"></script>
+	<!-- **important: controls the carousel arrows & and adds link to slick stylesheet-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	
+	<!-- do not copy -->
+	<script src="../app/js/script.js"></script>
 
 	</div>
 </body>

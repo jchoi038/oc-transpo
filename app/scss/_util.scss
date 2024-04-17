@@ -2,8 +2,8 @@ section.divided{
     margin-bottom: 20rem;
 }
 .bordered{
-    border: 1px solid var(--gray--100);
-	border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+	// border-radius: 0.5rem;
 }
 
 .borderless{
@@ -11,11 +11,11 @@ section.divided{
 }
 
 .border-bottom {
-    border-bottom: var(--gray--100) 1px solid;
+    border-bottom: var(--border-color) 1px solid;
 }
 
 .border-top {
-    border-top: 1px solid var(--gray--100);
+    border-top: 1px solid var(--border-color);
 }
 .background-dark {
     background-color: var(--charcoal--800);

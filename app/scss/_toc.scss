@@ -1,6 +1,7 @@
 .toc{
     ul li{
         display: flex;
+        margin-bottom: 0;
     }
     ul li a{
         width: 100%;
@@ -41,6 +42,7 @@
         font-size: 0.875rem;
         // text-decoration: none;
         @include media-breakpoint-up(xl){
+            text-decoration: none;
             padding: 0.125rem 0.5rem;
             color: var(--gray--500);
             border-left: 2px solid var(--gray--200);
@@ -57,6 +59,7 @@
         }
         &.active{
             @include media-breakpoint-up(xl){
+                font-weight: 700;
                 color: var(--line4--600);
                 background-color: var(--line4--50);
                 border-left: 2px solid var(--line4--600)

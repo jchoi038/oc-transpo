@@ -8,13 +8,15 @@ pre {
     color: var(--charcoal--800);
     overflow:auto;
     box-shadow: none;
+    margin-bottom: 1rem;
 }
 
 .example{
     margin: auto;
     padding: 1.5rem;
     border: 2px solid  var(--gray--100);
-    overflow-x: scroll;
+    justify-content: center;
+    // overflow-x: scroll;
 }
 
 code {

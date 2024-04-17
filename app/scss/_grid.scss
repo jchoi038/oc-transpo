@@ -89,19 +89,18 @@ ul.grid.grid--3col{
         grid-template-rows: 1fr;
         @include media-breakpoint-up(md) {
             grid-template-columns: repeat(8, 1fr);
-            row-gap: 0;
         }
     }
 
 }
 
 .section-row{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        row-gap: 3rem;
-        margin: 0 auto;
-        margin-bottom: 1rem;
+        // display: grid;
+        // grid-template-columns: 1fr;
+        // grid-template-rows: auto auto;
+        // row-gap: 3rem;
+        // margin: 0 auto;
+        // margin-bottom: 1rem;
         &-1fr-1fr{
             @include media-breakpoint-up(sm) {
                 grid-template-columns: 1fr 1fr;

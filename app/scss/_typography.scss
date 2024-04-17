@@ -43,14 +43,7 @@ i, em {
 	font-style: italic;
 }
 
-p{
-	// margin: 16px 0;
-	margin: 0 0 0.5rem;
-}
 
-p, dt,dd, li,strong, h1, h2, h3, h4, h5, h6 {
-	color: var(--gray--700);
-}
 
 .row--basic-content-main{
 	&p, dt,dd, li,strong {
@@ -165,4 +158,73 @@ sub {
 
 .font-weight-700 {
 	font-weight: 700;
+}
+
+// new
+
+
+
+p, dt,dd, li,strong{
+	// margin: 16px 0;
+	margin: 0 0 0.5rem;
+	color: var(--text-color);
+}
+
+caption, figcaption, figcaption p{
+	font-style: italic;
+	color: var(--caption-color);
+	text-align: left !important;
+	font-size: 0.875rem;
+	padding: 0.25rem 0;
+}
+
+h1, h2, h3, h4, h5, h6, th{
+	color: var(--heading-color) !important;
+	line-height: 1.15em;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0.5em;
+}
+
+h1{
+	font-size: 3.375rem;
+	font-weight: 600;
+}
+
+h2{
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+h3{
+	font-size: 1.75rem;
+	font-weight: 600;
+}
+h4{
+	font-size: 1.375rem;
+	font-weight: 600;
+}
+h5{
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+h6{
+	font-size: 1.125rem;
+	font-weight: 600;
+}
+
+hgroup{
+	h1, h2, h3, h4, h5, h6, th{
+		color: var(--heading-color);
+		line-height: 1.15em;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.subhead, hgroup p{
+	text-transform: uppercase;
+	color: var(--caption-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
 }
