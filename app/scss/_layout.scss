@@ -29,7 +29,16 @@ section {
 
     }
 }
+section>section{
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
 
+    }
+}
 .sub-section {
 	margin-bottom: 1.5rem;
 	gap: 0.5rem;

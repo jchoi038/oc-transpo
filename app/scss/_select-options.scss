@@ -1,0 +1,14 @@
+.select-option{
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+
+    &:hover{
+        background-color: var(--gray--50);
+    }
+}
+
+.select-options .grid{
+    gap: 0.5rem;
+}

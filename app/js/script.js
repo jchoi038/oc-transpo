@@ -1,7 +1,7 @@
 // toc
 let toc = document.getElementsByClassName("toc");
-let sections = document.getElementsByTagName("section");
-
+let sections = document.getElementsByClassName("section");
+console.log(sections)
 // toc.className = "toc--list";
 
 if (toc) {

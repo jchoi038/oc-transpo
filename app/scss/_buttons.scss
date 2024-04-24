@@ -81,6 +81,9 @@
     &-primary{
         background-color: transparent;
         border: solid 1px var(--line1--600);
+        &::after{
+            background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right_line1.svg");
+        }
         &:hover{
             border: solid 1.25px var(--line1--500);
         }

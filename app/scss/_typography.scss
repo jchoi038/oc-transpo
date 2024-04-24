@@ -170,10 +170,10 @@ p, dt,dd, li,strong{
 	color: var(--text-color);
 }
 
-caption, figcaption, figcaption p{
+.caption, figcaption, figcaption p{
 	font-style: italic;
 	color: var(--caption-color);
-	text-align: left !important;
+	text-align: left ;
 	font-size: 0.875rem;
 	padding: 0.25rem 0;
 }
