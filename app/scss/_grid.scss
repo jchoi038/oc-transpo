@@ -10,8 +10,12 @@ ul.grid.grid--3col{
     gap: 1rem;
     // margin-bottom: 4rem;
 
-    &.no-gutters{
+    &.gutters-none{
         gap: 0;
+    }
+
+    &.gutters-tight{
+        gap: 0.5rem;
     }
 
     &-fluid{

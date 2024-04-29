@@ -12,7 +12,7 @@ td{
 	overflow-x: auto;
 }
 
-.auto-width, .fluid{
+.auto-width, .fluid, .transcript-table{
 	table-layout: auto;
 }
 table {
@@ -36,6 +36,7 @@ table {
 		th {
 			&.readable{
 				@include media-breakpoint-down(md) {
+					width: 50vw;
 					min-width: 50vw;
 			}
 		}
@@ -184,27 +185,27 @@ table {
 		th {
 			border: 1px solid #005171;
 
-			&:nth-child(even) {
-				background-color: #004560;
-			}
+			// &:nth-child(even) {
+			// 	background-color: #004560;
+			// }
 		}
 	}
 	thead.yellow-header {
 		th {
 			border: 1px solid #a88300;
 
-			&:nth-child(even) {
-				background-color: #dcab00;
-			}
+			// &:nth-child(even) {
+			// 	background-color: #dcab00;
+			// }
 		}
 	}
 	thead.green-header {
 		th {
 			border: 1px solid #166f23;
 
-			&:nth-child(even) {
-				background-color: #1e6729;
-			}
+			// &:nth-child(even) {
+			// 	background-color: #1e6729;
+			// }
 		}
 	}
 	thead.red-header {
@@ -212,8 +213,8 @@ table {
 			border: 1px solid #8c1818;
 
 			&:nth-child(even) {
-				background-color: #cb2c2c;
-			}
+			// 	background-color: #cb2c2c;
+			// }
 		}
 	}
 	th.green-header,
@@ -249,7 +250,7 @@ table.small-table {
 	tbody {
 		tr {
 			td {
-				font-size: 10px;
+				font-size: 0.875rem;
 				font-size: 0.625rem;
 			}
 		}
@@ -260,7 +261,7 @@ table.table-border {
 		tr {
 			th,
 			td {
-				border: 1px solid #979797;
+				border: 1px solid var(--border-color-dark);
 			}
 		}
 	}
@@ -324,26 +325,33 @@ table {
         }
 	}
 
-	&.table {
-
+	&.table.new {
+		tbody{
+			tr:hover{
+				td,th{
+					background-color: var(--gray--50);
+				}
+			}
+		}
         &--detour{
             td{
                 vertical-align: middle;
             }
         }
-
-        
-
-		&--simple {
 			thead th {
                 border: none;
 				border-bottom: 1px solid var(--gray--100);
-				/*light header*/
-				background-color: var(--gray--100);
+				padding: 0.5rem 1rem;
 
-				/*dark header*/
-				// background-color: var(--nwtb--800);
-				// color: var(--transparent--800);
+				/*light header (default)*/
+				background-color: var(--gray--100);
+				color: var(--charcoal--800);
+
+				// dark header
+				&.th__theme--dark{
+					background-color: var(--nwtb--800);
+					color: var(--transparent--800);
+				}
 
 				text-align: left;
 			}
@@ -364,36 +372,15 @@ table {
 					}
 				}
 			}
-		}
-		&--responsive-xscroll {
-			@include media-breakpoint-down(md) {
-				width: auto;
-
-                &.sticky-left-col{
-                    thead th:first-child, tbody th {
-                        position: sticky;
-                        left: 0;
-                        z-index: 2;
-                        width: max-content;
-                        filter: drop-shadow(rgba(0, 0, 0, 0.05) 3px 0px 3px);       
-                        box-shadow: rgba(0, 0, 0, 0.06) 3px 0px 3px;         
-                    }
-                }
-
-                
-				
-		}
-	}
+		
+		
 }
 }
 
 
-/* Transcript tables*/
 
+/* Transcript tables & small tables*/
 .transcript-table{
-	table-layout: auto;
-	
-	
 	//styling the time stamp column
 	td:first-of-type{
 		color: var(--gray--500);
@@ -401,7 +388,6 @@ table {
 		letter-spacing: 0.05em;
 		font-size: 0.875rem;
 	}
-
 	//styling the text description column
 	td:last-of-type{
 		color: var(--gray--500);
@@ -412,6 +398,9 @@ table {
 			content: "]";
 		}
 	}
+}
+.transcript-table, .detour-table, .table__size--sm{
+	
 	td, th{
 		background-color: white;
 	}
@@ -423,40 +412,64 @@ table {
 		font-size: 0.875rem;
 		border: none;
 		padding: 0.75rem 1rem;
-
 		//turn on to back background colour of header grey
 		// background-color: var(--gray--50);
 	}
-
-	@include media-breakpoint-down(xs) {
-		td, th{
-			padding:0 0.5rem 0.5rem;
-		}
-		// padding for time stamp
-		td:first-of-type{
-			padding-top: 1rem;
-			padding-bottom: 1rem;
-		}
-
-		// padding for last element
-		td:last-of-type{
-			padding-bottom: 1.5rem;
-		}
-		tr{
-			display: flex;
-			flex-direction: column;
-			// gap: 0.25rem;
-			margin-bottom: 0.5rem;
-		}
-	
+	td {
+		font-size: 0.875rem;
 	}
 	
+}
+
+// Table behaviour
+
+.transcript-table, .detour-table, .table__behaviour{
+	&--xscroll {
+		@include media-breakpoint-down(md) {
+			width: auto;
+
+			&.sticky-left-col{
+				thead th:first-child, tbody th {
+					position: sticky;
+					left: 0;
+					z-index: 2;
+					width: max-content;
+					filter: drop-shadow(rgba(0, 0, 0, 0.05) 3px 0px 3px);       
+					box-shadow: rgba(0, 0, 0, 0.06) 3px 0px 3px;         
+				}
+			}
+	}
+}
+
+	&--collapse{
+		@include media-breakpoint-down(xs) {
+			td, th{
+				padding:0 0.5rem 0.5rem;
+			}
+			// padding for time stamp
+			td:first-of-type{
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			}
 	
+			// padding for last element
+			td:last-of-type{
+				padding-bottom: 1.5rem;
+			}
+			//collapse
+			tr{
+				display: flex;
+				flex-direction: column;
+				// gap: 0.25rem;
+				margin-bottom: 0.5rem;
+			}
 	
+		}
+	}
 }
 table{
 	/* toggle on/off to make zebra*/
-&.zebra{
+&.zebra, &.detour-table{
 	tr{
 		
 		&:nth-of-type(odd) {
@@ -498,13 +511,7 @@ table{
 }
 &.line-seperated {
 
-	tbody{
-		tr:hover{
-			td,th{
-				background-color: var(--gray--50);
-			}
-		}
-	}
+
 	thead th {
 		border: none;
 		border-top: 1px solid var(--gray--100);
@@ -518,7 +525,12 @@ table{
 }
 }
 	
-
+// padding
+table.table__padding--compact, table.detour-table{
+	td, th{
+		padding: 0.5rem 1rem;
+	}
+}
 /*Key value table*/
 
 
@@ -619,4 +631,5 @@ dl {
 		}
 
 
+}
 }

@@ -1,0 +1,22 @@
+.tag{
+    background-color: var(--charcoal--800);
+    color: white;
+    font-size: $tag-size-sm;
+    border-radius: $radius-pill;
+    width: fit-content;
+    padding: 0rem 0.5rem 0.1rem;
+    margin: 0;
+}
+.tag__color{
+    &--special{
+        background-color: var(--special);
+    }
+}
+
+.tag__location{
+    &--top-right-corner{
+        position: absolute;
+        top: -0.5rem;
+        right: 1rem;
+    }
+}

@@ -1,8 +1,21 @@
 .icon-container{
+    :first-child{
+        height: 1.5em;
+        
+    }
+
+   
+
     width: fit-content;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    &--inline{
+        height: 1.5em;
+        width: auto;
+        
+    }
 
     &--tiny{
         height:  1rem;
@@ -23,10 +36,7 @@
         max-width: 3rem;
         height: 1.5rem;
     }
-    :first-child{
-        max-height: 100%;
-
-    }
+    
 
     &--lg{
         min-width: 2.25rem;

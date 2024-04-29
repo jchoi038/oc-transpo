@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Filterable list</title>
+  <title>Stations page sample</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -10,8 +10,279 @@
   <link rel="stylesheet" href="../dist/custom-style.css" />
 </head>
 <body>
-<div class="main-content">
+  <nav class="flex" style="position: sticky; background-color: white; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px; height: 60px; top: 0px; left: 0; right: 0;  width: 100vw;">
+		<a href="./style-guide.html">Home</a>
+		<a href="./index.html">Sample stations page</a>
+	</nav>
+  <div class="main-content">
+    <div class="page-type__narrow">
+      <h1>Algonquin Station</h1>
+      <section>
+        <img alt="Algonquin Station entrance sign" class="entrance-sign" src="https://www.octranspo.com/images/files/news/Algonquin_entrance.png">
+        <p>Algonquin Station, currently known as Baseline, is the terminus for the extended O-Train Line 1. It is located beneath a beautiful, landscaped plaza between Adjidjàk Private and Navaho Drive. The station features a central platform design and three entrances, one of which is a pedestrian bridge connecting to the Algonquin ACCE building.</p>
+        <img style="width: 100%;" src="https://www.octranspo.com/images/files/news/Baseline_station_layout_carte.png" alt="">
+        <div class="grid grid--2col">
+          <div class="card card__type--image card__color--white ">
+            <img class="card__image" src="https://www.octranspo.com/images/files/news/Baseline_station_layout_carte.png" alt="">
+            <p class="card__title">Station layout map</p>
+            <div class="function-icon no-border">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 16H4V20H20V16H22V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V16Z" fill="#3D3A4D"></path>
+                <path d="M12 2L12 15" stroke="#3D3A4D" stroke-width="2"></path>
+                <path d="M16.2422 11L11.9995 15.2426L7.75691 11" stroke="#3D3A4D" stroke-width="2"></path>
+              </svg>
+        
+            </div>
+            <a href="" class="clickable-card-link">Learn more</a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Station features & amenities</h2>
+        
+        <section class="sub-section">
+          <div class="flex flex-wrap">
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_wifi.svg" alt="">
+              <p class="card__title">Wifi</p>
+            </div>
+                    <div class="card card__type--feature">
+                      <img class="card__icon" src="https://www.octranspo.com/images/files/icons/accessibility_elevators.svg" alt="">
+                      <p class="card__title">Elevators</p>
+                    </div>
+                    <div class="card card__type--feature">
+                      <img class="card__icon" src="https://www.octranspo.com/images/files/icons/accessibility_accessible-forward.svg" alt="">
+                      <p class="card__title">Accessible</p>
+                    </div>
+            <div class="card card__type--feature">
+                      <img class="card__icon" src="https://www.octranspo.com/images/files/icons/accessibility_escalators.svg" alt="">
+                      <p class="card__title">Escalators</p>
+                    </div>
+            <div class="card card__type--feature">
+                      <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_public-washroom.svg" alt="">
+                      <p class="card__title">Accessible washrooms</p>
+                    </div>
+                    <div class="card card__type--feature">
+                      <img class="card__icon" src="https://www.octranspo.com/images/files/icons/service_pnr.svg" alt="">
+                      <p class="card__title">Parking</p>
+                    </div>
+              </div>
+        </section>
 
-  
+      <div class="accordion-container accordion-container__style--attached new">
+        <h4 id="placeholderID" class="accordion accordion__size--sm new">
+          See detailed accessibility features of the station
+        </h4>
+        <div class="accordion-content">
+          <div class="card">
+            <img class="card__icon" src="https://www.octranspo.com/images/files/icons/accessibility_accessible-forward.svg" alt="">
+            <p class="card__title">Accessibilty features</p>
+            <ul class="card__body checklist">
+              <li>4 elevators</li>
+              <li>Audible and visual announcements</li>
+              <li>Tactile wayfinding tiles & platform edge indicator strips</li>
+              <li>Braille/tactile signage</li>
+              <li>Accessible washrooms</li>
+            </ul>
+          </div>
+        </div>
+        <h4 id="placeholderID" class="accordion accordion__size--sm new">
+          See more station features
+        </h4>
+        <div class="accordion-content">
+          <div class="flex flex-wrap">
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/service_bikesecure.svg" alt="">
+              <p class="card__title">Bike shelters</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_airport.svg" alt="">
+              <p class="card__title">Airport connection</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_bike-repair-station.svg" alt="">
+              <p class="card__title">Bike repair station</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_customer-service.svg" alt="">
+              <p class="card__title">Customer Service Centre</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/service_live-video-chat.svg" alt="">
+              <p class="card__title">Live video chat</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_info.svg" alt="">
+              <p class="card__title">Information phones</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_fare-gate.svg" alt="">
+              <p class="card__title">Fare paid zone</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_fare-machine.svg" alt="">
+              <p class="card__title">Fare machine</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_pick-up-drop-off-zone.svg" alt="">
+              <p class="card__title">Pick-Up /Drop-Off Zone</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/service_transecure.svg" alt="">
+              <p class="card__title">Night stop</p>
+            </div>
+            <div class="card card__type--feature">
+              <img class="card__icon" src="https://www.octranspo.com/images/files/icons/station_happy-goat.svg" alt="">
+              <p class="card__title">Happy Goat cafe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section>
+        <h2>Connecting routes</h2>
+        <table class="table fluid new table__size--sm table__padding--compact bordered">
+          <thead>
+            <tr>
+              <th class="wide">Route</th>
+              <th class="wide">Stop</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p><span class="route route__type--connexion">123</span><span class="visually-hidden">Connexion Route</span> Route direction1 - Route direction2</p>
+              </td>
+              <td>1A</td>
+            </tr>
+            <tr>
+              <td>
+                <p><span class="route route__type--frequent">123</span><span class="visually-hidden">Frequent Route</span> Route direction1 - Route direction2</p>
+              </td>
+              <td>1A</td>
+            </tr>
+            <tr>
+              <td>
+                <p><span class="route route__type--local">123<span class="visually-hidden">Local Route</span></span> Route direction1 - Route direction2</p>
+              </td>
+              <td>1A</td>
+            </tr>
+            <tr>
+              <td>
+                <p><span class="route route__type--connexion-ltd">123<span class="visually-hidden">Limited Connexion Route</span></span> Route direction1 - Route direction2</p>
+              </td>
+              <td>1A</td>
+            </tr>
+            <tr>
+              <td>
+                <p><span class="route route__type--frequent-ltd">123<span class="visually-hidden">Limited Frequent Route</span></span> Route direction1 - Route direction2</p>
+              </td>
+              <td>1A</td>
+            </tr>
+            <tr>
+              <td>
+                <p><span class="route route__type--local-ltd">123<span class="visually-hidden">Limited Local Route</span></span> Route direction1 - Route direction2</p>
+              </td>
+              <td>1A</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section>
+        <h2>Station Gallery</h2>
+        <div class="stage-2 container container-photo-gallery-header image-gallery-carousel-main no-padding">
+          <div class="photo-gallery-generic">
+            <div class="row photo-gallery-first-row">
+              <div class="col-4"><!-- <h2>Photo Gallery</h2> --></div>
+              <div class="col-4 gallery-subhead-arrows" id="gallery-subhead-arrows-main">
+                <p class="subhead">STATION IN PHOTOS</p>
+                <div class="col-4">
+                  <div
+                    class="navigation-buttons-section navigation-buttons-section--spotlight photo-carousel-container-nav photo-carousel-container-nav--new">
+                    <div class="navigation-buttons-slider prev">
+                      <img alt="left-arrow-button"
+                        src="/themes/user/site/octranspo/assets/img/stage-2/left-arrow-button.svg" />
+                    </div>
+                    <div class="navigation-buttons-slider next">
+                      <img alt="right-arrow-button"
+                        src="/themes/user/site/octranspo/assets/img/stage-2/right-arrow-button.svg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container carousel-container photo-carousel-container">
+              <div class="gallery-carousel image-gallery-carousel gallery-carousel__item-wrapper"
+                data-js="image-gallery-carousel-main">
+                <div class="gallery-image">
+                  <figure class="clickable-img">
+                    <a class="fancybox-media"
+                      href="https://dev.octranspo.com/images/files/2-no-line.jpg"
+                      title="addTitle">
+                      <img alt="addTitle" class="fancy_image" float="right"
+                        src="https://dev.octranspo.com/images/files/2-no-line.jpg">
+                    </a>
+                    <figcaption>
+                      <p>Pictured above: addTitle
+                      </p>
+                      <p><em>Click the image&nbsp;above for a closer look.</em></p>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="gallery-image">
+                  <figure>
+                    <img alt="Hurdman Station exterior" height="560"
+                      src="https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Hurdman_01.jpg"
+                      width="996" />
+                    <figcaption>Hurdman Station exterior.</figcaption>
+                  </figure>
+                </div>
+                <div class="gallery-image">
+                  <figure>
+                    <img alt="Public Art at Hurdman Station" height="667"
+                      src="https://www.octranspo.com/images/files/Hurdman-Station-Public-Art-01.jpg"
+                      width="1000" />
+                    <figcaption>Public Art at Hurdman Station.</figcaption>
+                  </figure>
+                </div>
+                <div class="gallery-image">
+                  <figure>
+                    <img alt="Hurdman Station platform" height="4160"
+                      src="https://www.octranspo.com/images/files/Hurdman_platform.JPG"
+                      width="6240" />
+                    <figcaption>Hurdman Station platform.</figcaption>
+                  </figure>
+                </div>
+        
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+
+	<!-- bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<!-- custom -->
+	<!-- <script src="https://www.octranspo.com/images/files/dist/script.js"></script> -->
+
+	<!-- octranspo -->
+	<script src="https://staging.octranspo1.com/themes/user/site/octranspo/assets/js/dist/main.min.js?v=1.0.6"></script>
+	<!-- **important: controls the carousel arrows & and adds link to slick stylesheet-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
 </body>
 </html>

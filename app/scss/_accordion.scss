@@ -1,11 +1,14 @@
 
-.accordion-container {
+.alerts--general .accordion-container {
 	width: 100%;
-	letter-spacing: 0.8px;
+	letter-spacing: normal;
+	border: 1px solid var(--border-color);
+	border-radius: $radius-md;
+	overflow: hidden;
 	.accordion {
 		border: 1px solid #9F9F9F;
 		border-radius: 2px;
-		box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1);
+		box-shadow: none;
 		font-size: 22px;
 		font-size: 1.4rem;
 		line-height: 1.25;
@@ -25,6 +28,10 @@
 		display: none;
 		padding: 0;
 		margin-top: 35px;
+	}
+	.accordion{
+		font-size: 1.125rem;
+        font-weight: 700;
 	}
 }
 
@@ -109,30 +116,38 @@
 }
 // end
 
-.accordion-container {
+.new.accordion-container{
 	width: 100%;
 	letter-spacing: 0px;
+	
 	&.bordered{
 		border: 1px solid var(--border-color);
 		border-radius: 0.5rem;
 	}
-	
-	&.new{
-		
-		.accordion-content{
-			padding-left: 0.5em;
-			padding-right: 0.5em;
+
+		// padding for both accordion heading & content
+		.accordion.new, .new+.accordion-content{
+			background-color: white;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
 					@include media-breakpoint-up(sm) {
 						padding-left: 1rem;
 						padding-right: 1rem;
 					}
+				}
+
+		// accordion content styles
+		
+		.new+.accordion-content{
 			margin: 0;
 			height: 0px;
 			overflow-y: hidden;
 			opacity: 0;
 			transition: all 200ms ease-out;
+			background-color: var(--gray--50);
 		}
-		.accordion{
+
+		.accordion.new{
 			transition: all ease-in-out 150ms;
 			&:not(:first-of-type){
 				border-top: 1px solid var(--border-color) !important;
@@ -140,8 +155,6 @@
 			margin: 0;
 			box-shadow: none;
 			border: none;
-			font-size: 1rem;
-			line-height: 1.15;
 			font-weight: 600;
 			background: none;
 			display: flex;
@@ -149,49 +162,65 @@
 			justify-content: space-between;
 			align-items: center;
 			min-height: 2.75rem;
+			color: var(--caption-color);
 			
 			
 			span{
 				align-items: center;
 
 			}
+
+			//chevron icon styling
 			&::after{
 				content: "";
-				width: 1.5rem;
-				height: 1.5rem;
+				width: 1.125rem;
+				height: 1.125rem;
 				display: flex; 
 				flex-shrink: 0;
 				justify-content: center;
 				align-items: center;
-				border-radius: 999px;
-				background:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down.svg') no-repeat 2% center, var(--gray--100) ;
-				background-size: 65%;
+				border-radius: $radius-pill;
+				background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down.svg');
+				background-repeat: no-repeat;
+				background-size: 90%;
 				background-position: center;
 				transition: all 200ms ease-out;
+				border: 1px solid var(--charcoal--800)
 			}
-			&.bold::after{
-				background-image: url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-white.svg');
-				background-color: var(--charcoal--600) ;
-			}
+
+			// icon types
+
+
+
 			
+			
+			&:hover, &.active{
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_plus-white.svg');
+					}
+					
+				}
+				&::after{
+					background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-white.svg');
+					background-color: var(--charcoal--800);
+				}
+				
+			}
+
 			&.active{
-				// color:var(--oc-red--700);
-				background: none;
-				border-bottom: none;
-				border: none;
-				box-shadow: 0px 1px 7px -1px var(--shadow-color);
-				// border-radius: 0.5rem;
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_minus-white.svg');
+					}
+					
+				}
+				//rotate chevron icon
 				&::after{
 					transform: rotate(180deg);
-					background:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down.svg') no-repeat 2% center, var(--gray--100);
-					background-size: 65%;
-					background-position: center;
 				}
-				&.bold::after{
-					background-image: url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-white.svg');
-					background-color: var(--ui-title-color) ;
-				}
-		
+
+				//make content visible
 				&+ .accordion-content{
 					height: auto;
 					opacity: 100%;
@@ -205,24 +234,156 @@
 
 			}
 		}
+
 		
-		.accordion{
-			padding: 1rem 0.5em;
-			@include media-breakpoint-up(sm) {
-				padding: 1rem;
+		// accordion colors
+			// defualt chevron & plus
+		.new{
+			&.accordion__color--line1{
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_plus-line1.svg');
+					}
+					
+				}
+				&::after{
+					background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-line1.svg');
+					border: 1px solid var(--line1--500)
+				}
+				&:hover, &.active{
+					color: var(--line1--500) !important;
+					&::after{
+						background-color: var(--line1--500);
+					}
+				}
 			}
-		
+			&.accordion__color--line2{
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_plus-line2.svg');
+					}
+					
+				}
+				&::after{
+					background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-line2.svg');
+					border: 1px solid var(--line2--500)
+				}
+				&:hover, &.active{
+					color: var(--line2--500) !important;
+					&::after{
+						background-color: var(--line2--500);
+					}
+				}
+			}
+			&.accordion__color--line3{
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_plus-line3.svg');
+					}
+					
+				}
+				&::after{
+					background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-line3.svg');
+					border: 1px solid var(--line3--500)
+				}
+				&:hover, &.active{
+					color: var(--line3--500) !important;
+					&::after{
+						background-color: var(--line3--500);
+					}
+				}
+			}
+			&.accordion__color--line4{
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_plus-line4.svg');
+					}
+					
+				}
+				&::after{
+					background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-line4.svg');
+					border: 1px solid var(--line4--500)
+				}
+				&:hover, &.active{
+					color: var(--line4--500) !important;
+					&::after{
+						background-color: var(--line4--500);
+					}
+				}
+			}
+			&.accordion__color--connexion{
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_plus-connexion.svg');
+					}
+					
+				}
+				&::after{
+					background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-connexion.svg');
+					border: 1px solid var(--connexion--600)
+				}
+				&:hover, &.active{
+					color: var(--connexion--600) !important;
+					&::after{
+						background-color: var(--connexion--600);
+					}
+				}
+			}
+			&.accordion__color--frequent{
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_plus-frequent.svg');
+					}
+					
+				}
+				&::after{
+					background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-frequent.svg');
+					border: 1px solid var(--frequent--600)
+				}
+				&:hover, &.active{
+					color: var(--frequent--600) !important;
+					&::after{
+						background-color: var(--frequent--600);
+					}
+				}
+			}
+			&.accordion__color--local{
+				&.accordion__icon--plus{
+					&::after{
+						background-image:url('https://www.octranspo.com/images/files/icons/interactive_plus-local.svg');
+					}
+					
+				}
+				&::after{
+					background-image:url('https://www.octranspo.com/images/files/icons/interactive_chevron-down-local.svg');
+					border: 1px solid var(--local--600)
+				}
+				&:hover, &.active{
+					color: var(--local--600) !important;
+					&::after{
+						background-color: var(--local--600);
+					}
+				}
+			}
+
 			
-			&.sm{
+			
+		}
+
+		// accordion sizes
+		
+		.new.accordion__size{
+			
+			&--sm{
+				font-size: $ui-title-size-sm;
 				font-weight: 700;
-				font-size: 0.875rem;
 			}
-			&.md{
-				font-size: 1.25rem;
-				font-weight: 600;
+			&--md{
+				font-size: $ui-title-size-md;
+				font-weight: 700;
 			}
-			&.lg{
-				font-size: 1.5rem;
+			&--lg{
+				font-size: $ui-title-size-lg;
 				font-weight: 600;
 			}
 			@include media-breakpoint-up(sm) {
@@ -232,12 +393,35 @@
 
 		
 		}
-		.accordion:hover, .accordion.active:hover{
-			color: var(--ui-title-color-light);
+		.new.accordion:hover, .new.accordion.active:hover{
+			color: var(--charcoal--800);
 		}
 
+		
+
+	
+}
+
+.new.accordion-container{
+	// Container styles attached vs detached
+
+	// default attached
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	border: 1px solid var(--border-color);
+	border-radius: $radius-md;
+	height: fit-content;
+	
+	&__style--detached{
+		border: none;
+		gap: 0.5rem;
+		.accordion.new{
+			border: 1px solid var(--border-color);
+			border-radius: $radius-md;
+		}
 	}
-
-
+	
 
 }
+

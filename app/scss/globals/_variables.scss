@@ -1,9 +1,25 @@
-// Ui font sizes
-$ui-font-size-md:                1.125rem !default;
+// UI component font sizes
+$ui-title-size-xs:               0.875rem !default;
+$ui-title-size-sm:               1rem !default;
+$ui-title-size-md:               1.125rem !default;
+$ui-title-size-lg:               1.3755rem !default;
+$ui-body-size-sm:                0.9375rem !default;
+
+//tag font sizes
+$tag-size-sm:       0.8125rem;
+
+// Icon sizes
+$icon-size-tiny:                1rem;
+$icon-size-sm:                  1.5rem;
+$icon-size-md:                  2rem;
+$icon-size-lg:                  2.5rem;
+$icon-size-xl:                  2.5rem;
+
 
 // Border radius
 $radius-md: 0.5rem;
 $radius-pill: 999rem;
+
 
 //Drop shadow
 $card-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;

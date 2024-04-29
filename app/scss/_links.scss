@@ -13,4 +13,77 @@
 a{
     color: var(--link);
     fill: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    &:hover{
+        color: var(--link-hover);
+    }
+    // text-decoration: underline;
+}
+
+// exception
+ .ext-link-icon{
+    height: 1.5em;
+    width: 0.8em;
+    padding-bottom: 0.5rem;
+}
+
+a.icon-link{
+    &::before{
+        content: "";
+        width: 1.25em;
+        height: 1.25em;
+        display: inline-flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0;
+        background-size: 100%;
+    }
+
+    &--pdf::before{
+        background-image: url(https://www.octranspo.com/images/files/icons/resource_pdf.svg);
+    }
+    &--map::before{
+        background-image: url(https://www.octranspo.com/images/files/icons/resource_map.svg);
+    }
+    &--image::before{
+        background-image: url(https://www.octranspo.com/images/files/icons/resource_image.svg);
+    }
+    &--email::before{
+        background-image: url(https://www.octranspo.com/images/files/icons/contact_email.svg);
+    }
+    &--mail::before{
+        background-image: url(https://www.octranspo.com/images/files/icons/contact_mail.svg);
+    }
+    &--phone::before{
+        background-image: url(https://www.octranspo.com/images/files/icons/contact_phone.svg);
+    }
+    &--tty::before{
+        background-image: url(https://www.octranspo.com/images/files/icons/contact_tty.svg);
+    }
+
+
+    
+
+    
+
+}
+
+a.external-link::after{
+    content: "";
+    background-image: url(https://www.octranspo.com/images/files/icons/resource_ext-link.svg);
+    width: 0.8em;
+    height: 1.5em;
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: left top;
+    margin: 0;
+    background-size: 100%;
 }

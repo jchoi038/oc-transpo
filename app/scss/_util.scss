@@ -6,8 +6,8 @@ section.divided{
 	// border-radius: 0.5rem;
 }
 
-.borderless{
-    border:none;
+.borderless,.no-border{
+    border:none !important;
 }
 
 .border-bottom {
@@ -57,6 +57,13 @@ section.divided{
 .foot-note {
     color: var(--gray--800);
     font-size: 0.875rem;
+}
+
+.gap-1{
+    gap: 1rem;
+}
+.gap-2{
+    gap: 2rem;
 }
 
 

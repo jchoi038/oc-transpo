@@ -1,18 +1,21 @@
 .note{
-    padding: 0.5rem;
-    border-left: 2px solid var(--gray--300);
-    background: var(--gray--50);
+    padding: 1rem;
     margin-bottom: 0.5rem;
-    font-size: 0.875rem;
+    font-size:1rem;
     display: block;
+    border-radius: $radius-md;
+
+    .note__heading{
+        display: flex;
+        .note__title{
+            flex-grow: 1;
+            font-weight: 700;
+        }
+    }
     // @include media-breakpoint-down(md) {
     //     font-size: 0.875rem;
     // }
-    &__title{
-        font-size: 0.875rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-    }
+
     &__content{
         p:not(:last-child){
             margin-bottom: 0.25rem;
@@ -21,7 +24,6 @@
     &-warning{
         padding: 0.75rem 1rem;
         background: var(--line3--50);
-        border-left: 3px solid var(--line3--600);
         .note__title{
             color: var(--line3--700);
         }
@@ -54,6 +56,66 @@
         padding: 0.5rem;
         background: transparent;
         font-size: 0.875rem;
+    }
+}
+.note__action{
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.note__type--info{
+    .note__action{
+        color: var(--info);
+    }
+}
+.note__type--warning{
+    .note__action{
+        color: var(--warning);
+    }
+}
+.note__type--positive{
+    .note__action{
+        color: var(--positive);
+    }
+}
+.note__type--negative{
+    .note__action{
+        color: var(--negative);
+    }
+}
+
+.note__style{
+    &--filled{
+        &.note__type--info{
+            background-color: var(--info-bg-color);
+        }
+        &.note__type--warning{
+            background-color: var(--warning-bg-color);
+            
+        }
+        &.note__type--positive{
+            background-color: var(--positive-bg-color);
+        }
+        &.note__type--negative{
+            background-color: var(--negative-bg-color);
+        }
+
+    }
+    &--bordered{
+        border: 1px solid;
+        &.note__type--info{
+            border-color: var(--info-border-color);
+        }
+        &.note__type--warning{
+            border-color: var(--warning-border-color);
+        }
+        &.note__type--positive{
+            border-color: var(--positive-border-color);
+        }
+        &.note__type--negative{
+            border-color: var(--negative-border-color);
+        }
     }
 }
     

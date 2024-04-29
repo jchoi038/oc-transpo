@@ -9,8 +9,8 @@ OC Transpo Website Styles
 Copyright 2019 OC Transpo
 Authors: Justin MacNeil, Tashana Allen (RealDecoy)
 Editor: Judy Choi (OC Transpo)
-Date: 4/15/2024
-Time: 10:18 am
+Date: 4/29/2024
+Time: 1:49am
 */
 
 // The contents of this file are compiled to themes/user/site/octranspo/assets/css/style.css
@@ -54,6 +54,8 @@ $grid-columns:      8; // Sets the grid to 8 columns wide
 $grid-gutter-width: 55px; //Default width between columns
 $transition-collapse: none;
 
+@import "globals"; //new
+
 @import "reset"; // reset to reduce browser display inconsistencies
 @import "bootstrap/mixins"; // common sass mixins. see https://gist.github.com/anschaef/d7552885c0e1f127cf8830d3bbf6e4b1 for more information.
 @import "bootstrap/bootstrap-grid"; // bootstrap grid
@@ -85,10 +87,10 @@ $transition-collapse: none;
 @import "stage2-page"; // Stage 2 Style Guide 
 
 
+
 @import "badges";//new
 @import "tables"; //new
 @import "containers"; //new
-@import "globals"; //new
 @import "lists"; //new
 @import "flex"; //new
 @import "buttons"; //new
@@ -109,6 +111,8 @@ $transition-collapse: none;
 @import "select-options";//new
 @import "fields";//new
 @import "icons";//new
+@import "routes-lines";//new
+@import "entrance-sign";//new
 // @import "bread-crumbs";
 
 
