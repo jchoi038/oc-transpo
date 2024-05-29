@@ -12,6 +12,9 @@
 	<link rel="stylesheet" href="../dist/custom-style.css" />
 	<title>Style Guide</title>
 
+	
+	<!-- <link rel="stylesheet" href="https://www.octranspo.com/images/files/dist/custom-style.css"> -->
+
 
 </head>
 
@@ -101,6 +104,17 @@
 		</section>
 		<section class="section" id="notes">
 			<h2>Notes</h2>
+			<p>Level 0</p>
+			<p>Used for side notes, not crucial</p>
+			<div class="example">
+				<div class="note note__style--filled note__type--neutral" id="note-limited-service">
+					<p class="note__title">*Note: All symbols with a white background</p>
+					
+					<div class="note__content">
+					<p>A symbol with a white background means that the route, or that a portion of the route, only runs during certain times of the day, or on certain days of the week.</p>
+					</div>
+				</div>
+			</div>
 			<p>Filled</p>
 			<div class="example">
 				<div class="note note__style--filled note__type--info">
@@ -116,7 +130,7 @@
 					<div class="note__body">Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</div>
 				</div>
 				<div class="note note__style--filled note__type--negative">
-					<div class="note__heading"><p class="note__title">Negative</p><img class="note__icon icon-container icon-container--sm" src="https://www.octranspo.com/images/files/icons/alert_negative.svg" alt=""></div>
+					<div class="note__heading"><p class="note__title">Negative</p><img class="note__icon icon-container icon-container--sm" src="https://www.octranspo.com/images/files/icons/alert_critical.svg" alt=""></div>
 					<div class="note__body">Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</div>
 				</div>
 			</div>
@@ -3705,10 +3719,99 @@
 		</section>
 		<section class="section" id="tables">
 			<h2>Tables</h2>
+			
 			<h3>Table best practices</h3>
 			<ul>
 				<li>Heading should be left aligned (this is the default setting)</li>
 			</ul>
+			<h3>Detour tables</h3>
+			<div class="example">
+				
+<div class="table-container">
+	<table class="table-border detour-table">
+		<thead class="blue-header">
+			<tr>
+				<th class="readable">Bus Stop (560#) not in use</th>
+				<th class="readable">Routes</th>
+				<th class="readable">Alternate Stop</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+				<p>#5924 -- Centrum (north-side) / 245 Centrum</p>
+				</td>
+				<td>
+				<ul>
+					<li>33 Blair</li>
+					<li>35 Blair</li>
+					<li>636 Blair</li>
+				</ul>
+				</td>
+				<td>
+				<p style="text-align: left;"><a class="travel-planner-link" href="http://plan.octranspo.com/plan/StopSchedules?Date=2023-9-5&amp;PreferredRouteKey=33~~Direction1&amp;ShowOptions=false&amp;StopIdentifier=EM096">#5926 -- Prestone / Centrum</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td>#2627 --&nbsp;Centrum (south-side) / Plaza</td>
+				<td>
+				<ul>
+					<li>33 Portobello</li>
+					<li>35 Esprit</li>
+					<li>37 Queenswood Heights</li>
+					<li>232 Queenswood Heights</li>
+				</ul>
+				</td>
+				<td><a class="travel-planner-link" href="http://plan.octranspo.com/plan/StopSchedules?Date=2023-9-5&amp;PreferredRouteKey=33~~Direction2&amp;ShowOptions=false&amp;StopIdentifier=EM095">#7845 -- Prestone / Centrum</a></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+			</div>
+			<pre>
+&lt;link href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;custom-style.css&quot; rel&#x3D;&quot;stylesheet&quot; &#x2F;&gt;
+&lt;div class&#x3D;&quot;table-container&quot;&gt;
+&lt;div class&#x3D;&quot;table-container&quot;&gt;
+	&lt;table class&#x3D;&quot;table-border detour-table&quot;&gt;
+		&lt;thead class&#x3D;&quot;blue-header&quot;&gt;
+			&lt;tr&gt;
+				&lt;th class&#x3D;&quot;readable&quot;&gt;Bus Stop (560#) not in use&lt;&#x2F;th&gt;
+				&lt;th class&#x3D;&quot;readable&quot;&gt;Routes&lt;&#x2F;th&gt;
+				&lt;th class&#x3D;&quot;readable&quot;&gt;Alternate Stop&lt;&#x2F;th&gt;
+			&lt;&#x2F;tr&gt;
+		&lt;&#x2F;thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+				&lt;p&gt;#5924 -- Centrum (north-side) &#x2F; 245 Centrum&lt;&#x2F;p&gt;
+				&lt;&#x2F;td&gt;
+				&lt;td&gt;
+				&lt;ul&gt;
+					&lt;li&gt;33 Blair&lt;&#x2F;li&gt;
+					&lt;li&gt;35 Blair&lt;&#x2F;li&gt;
+					&lt;li&gt;636 Blair&lt;&#x2F;li&gt;
+				&lt;&#x2F;ul&gt;
+				&lt;&#x2F;td&gt;
+				&lt;td&gt;
+				&lt;p style&#x3D;&quot;text-align: left;&quot;&gt;&lt;a class&#x3D;&quot;travel-planner-link&quot; href&#x3D;&quot;http:&#x2F;&#x2F;plan.octranspo.com&#x2F;plan&#x2F;StopSchedules?Date&#x3D;2023-9-5&amp;amp;PreferredRouteKey&#x3D;33~~Direction1&amp;amp;ShowOptions&#x3D;false&amp;amp;StopIdentifier&#x3D;EM096&quot;&gt;#5926 -- Prestone &#x2F; Centrum&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+				&lt;&#x2F;td&gt;
+			&lt;&#x2F;tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;#2627 --&amp;nbsp;Centrum (south-side) &#x2F; Plaza&lt;&#x2F;td&gt;
+				&lt;td&gt;
+				&lt;ul&gt;
+					&lt;li&gt;33 Portobello&lt;&#x2F;li&gt;
+					&lt;li&gt;35 Esprit&lt;&#x2F;li&gt;
+					&lt;li&gt;37 Queenswood Heights&lt;&#x2F;li&gt;
+					&lt;li&gt;232 Queenswood Heights&lt;&#x2F;li&gt;
+				&lt;&#x2F;ul&gt;
+				&lt;&#x2F;td&gt;
+				&lt;td&gt;&lt;a class&#x3D;&quot;travel-planner-link&quot; href&#x3D;&quot;http:&#x2F;&#x2F;plan.octranspo.com&#x2F;plan&#x2F;StopSchedules?Date&#x3D;2023-9-5&amp;amp;PreferredRouteKey&#x3D;33~~Direction2&amp;amp;ShowOptions&#x3D;false&amp;amp;StopIdentifier&#x3D;EM095&quot;&gt;#7845 -- Prestone &#x2F; Centrum&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;
+			&lt;&#x2F;tr&gt;
+		&lt;&#x2F;tbody&gt;
+	&lt;&#x2F;table&gt;
+	&lt;&#x2F;div&gt;
+			</pre>
 	<h3>Stations table</h3>
 	<p>For connecting routes & their respective stops</p>
 			<div class="example">
@@ -3971,6 +4074,76 @@
 	&lt;&#x2F;div&gt;
 				</pre>
 			<h3>Transcript tables</h3>
+			<div class="example">
+				<div class="accordion-container accordion-container__style--attached new">
+					<h4 id="placeholderID" class="accordion accordion__size--sm new" tabindex="0">
+						Text description
+					</h4>
+					<div class="accordion-content" style="max-height: 75vh; overflow-y: scroll;">
+						<table class="transcript-table zebra">
+							<thead class="visually-hidden-mobile">
+								<tr>
+									<th>Time</th>
+									<th>Transcript</th>
+									<th>Text description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>00:01</td>
+									<td></td>
+									<td>OC Transpo and Para Transpo Log on screen</td>
+								</tr>
+								<tr>
+									<td>03:00</td>
+									<td>An even better Para Transpo is here.</td>
+									<td>A bus is driving down the street.</td>
+								</tr>
+								<tr>
+									<td>06:07</td>
+									<td>OC Transpo introduces:&nbsp;“My Para Transpo”</td>
+									<td>A hand with a mobile phone is displayed with the My Para Transpo application</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="accordion-container accordion-container__style--attached new">
+					<h4 id="placeholderID" class="accordion accordion__size--sm new" tabindex="0">
+						Description textuelle
+					</h4>
+					<div class="accordion-content" style="max-height: 75vh; overflow-y: scroll;">
+						<table class="transcript-table zebra">
+							<thead class="visually-hidden-mobile">
+								<tr>
+									<th>Temps</th>
+									<th>Transcription</th>
+									<th>Description textuelle</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>00:01</td>
+									<td></td>
+									<td>OC Transpo and Para Transpo Log on screen</td>
+								</tr>
+								<tr>
+									<td>03:00</td>
+									<td>An even better Para Transpo is here.</td>
+									<td>A bus is driving down the street.</td>
+								</tr>
+								<tr>
+									<td>06:07</td>
+									<td>OC Transpo introduces:&nbsp;“My Para Transpo”</td>
+									<td>A hand with a mobile phone is displayed with the My Para Transpo application</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<pre></pre>
 			<div class="example">
 				<table class="transcript-table zebra">
 					<caption>Zebra table</caption>

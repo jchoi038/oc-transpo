@@ -1,3 +1,4 @@
+/*Colours*/
 :root {
     --line1--50:  #FFEDE4;
     --line1--100: #FFD2BC;
@@ -67,8 +68,8 @@
     --transparent--200: hsl(0, 0%, 100%, 40%); 
     --transparent--500: hsl(0, 0%, 100%, 60%); 
     --transparent--800: hsl(0, 0%, 100%, 95%); 
-    --gray--50: #F8F9FA; 
-    --gray--100: #E9ECF0; 
+    --gray--50: hsl(210, 17%, 98%); 
+    --gray--100: hsl(214, 19%, 89%); 
     --gray--200: #D3D8DE; 
     --gray--300: #BEC7D4; 
     --gray--400: #A8B0BB; 
@@ -76,8 +77,8 @@
     --gray--600: #6E7687; 
     --gray--700: #4A515D;
     --gray--800: #1A1C21;
-    --charcoal--50: hsl(249, 14%, 26%,10%);
-    --charcoal--100: hsl(249, 14%, 26%,25%);
+    --charcoal--50: hsl(249, 14%, 26%,5%);
+    --charcoal--100: hsl(249, 14%, 26%,15%);
     --charcoal--500: #9491A1;
     --charcoal--600: #646171;
     --charcoal--700: #514E5F;
@@ -97,14 +98,15 @@
     --line4:var(--line4--500);
 
     //text colors
+    --text-color-light: var(--gray--600);
     --text-color: var(--gray--700);
     --heading-color: var(--gray--800);
     --caption-color: var(--gray--600);
     --ui-title-color: var(--charcoal--800);
-    --ui-title-color-light: var(--charcoal--500);
+    --ui-title-color-light: var(--charcoal--600);
 
     //borders
-    --border-color: var(--gray--100);
+    --border-color: var(--charcoal--100);
     --border-color-dark: var(--gray--200);
 
     //shadows
@@ -133,3 +135,4 @@
     height: 3rem;
     border-radius: 0.5rem;
 }
+/*Colors end*/

@@ -1,15 +1,12 @@
 .icon-container{
-    :first-child{
-        height: 1.5em;
-        
-    }
-
-   
-
     width: fit-content;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    img{
+        height: 100%;
+    }
 
     &--inline{
         height: 1.5em;
@@ -23,7 +20,7 @@
 
     &--sm{
         // min-width: 1.75rem;
-        max-width: 2rem;
+        // max-width: 2rem;
         height: 1.25rem;
         @include media-breakpoint-down(sm) {
             height: 1.25rem;

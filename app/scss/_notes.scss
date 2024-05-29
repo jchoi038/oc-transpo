@@ -1,16 +1,17 @@
+/* Note styles*/
 .note{
     padding: 1rem;
     margin-bottom: 0.5rem;
-    font-size:1rem;
+    font-size:0.875rem;
     display: block;
     border-radius: $radius-md;
 
     .note__heading{
-        display: flex;
-        .note__title{
-            flex-grow: 1;
-            font-weight: 700;
-        }
+        display: flex; 
+    }
+    .note__title{
+        flex-grow: 1;
+        font-weight: 700;
     }
     // @include media-breakpoint-down(md) {
     //     font-size: 0.875rem;
@@ -58,11 +59,14 @@
         font-size: 0.875rem;
     }
 }
+
+//not__action is the icon for the note
 .note__action{
     margin-top: 1rem;
     font-weight: 600;
     font-size: 0.875rem;
 }
+
 
 .note__type--info{
     .note__action{
@@ -87,6 +91,9 @@
 
 .note__style{
     &--filled{
+        &.note__type--neutral{
+            background-color: var(--charcoal--50);
+        }
         &.note__type--info{
             background-color: var(--info-bg-color);
         }
@@ -119,3 +126,4 @@
     }
 }
     
+/* END Note styles*/
