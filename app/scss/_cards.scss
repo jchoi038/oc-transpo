@@ -1,4 +1,21 @@
+.basic-card{
+	background-color: white;
+	box-shadow: $elevation1;
 
+	&:hover{
+		box-shadow: $elevation2;
+	}
+
+	.card__icon{
+		height: $icon-size-md;
+		align-self: flex-start;
+	}
+	.card__title{
+		font-size: $ui-title-size-md;
+		font-weight: 600;
+	}
+
+}
 .card{
 	padding: 1rem;
 	border-radius: $radius-md;
@@ -36,7 +53,7 @@
 		color: var(--heading-color);
 		font-weight: 700;
 	}
-	.function-icon{
+		.arrow-container{
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -45,7 +62,10 @@
 		border-radius: $radius-pill;
 		margin-left: auto;
 		padding: 0.125rem;
+		color: var(--charcoal--800);
+		border:1px solid var(--charcoal--800);
 	}
+
 }
 
 //Type
@@ -121,78 +141,78 @@
 		&.card__color--white{
 			background-color: white;
 			border: var(--border-color) 1px solid;
-			.function-icon{
-				color: var(--gray--500);
-				border:1px solid var(--gray--500);
+			.arrow-container{
+				color: var(--charcoal--800);
+				border:1px solid var(--charcoal--800);
 			}
 		}
 		&.card__color--transparent{
 			background-color: var(--transparent--800);
 			border: var(--border-color) 1px solid;
-			.function-icon{
-				color: var(--gray--500);
-				border:1px solid var(--gray--500);
+			.arrow-container{
+				color: var(--charcoal--800);
+				border:1px solid var(--charcoal--800);
 			}
 		}
 		&.card__color--line1{
 			background-color: var(--line1--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--line1--600);
 				border:1px solid var(--line1--600);
 			}
 		}
 		&.card__color--line2{
 			background-color: var(--line2--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--line2--600);
 				border:1px solid var(--line2--600);
 			}
 		}
 		&.card__color--line3{
 			background-color: var(--line3--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--line3--600);
 				border:1px solid var(--line3--600);
 			}
 		}
 		&.card__color--line4{
 			background-color: var(--line4--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--line4--600);
 				border:1px solid var(--line4--600);
 			}
 		}
 		&.card__color--frequent{
 			background-color: var(--frequent--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--frequent--600);
 				border:1px solid var(--frequent--600);
 			}
 		}
 		&.card__color--connexion{
 			background-color: var(--connexion--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--connexion--600);
 				border:1px solid var(--connexion--600);
 			}
 		}
 		&.card__color--local{
 			background-color: var(--local--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--local--600);
 				border:1px solid var(--local--600);
 			}
 		}
 		&.card__color--charcoal{
 			background-color: var(--charcoal--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--charcoal--800);
 				border:1px solid var(--charcoal--800);
 			}
 		}
 		&.card__color--neutral{
 			background-color: var(--gray--50);
-			.function-icon{
+			.arrow-container{
 				color: var(--gray--800);
 				border:1px solid var(--gray--800);
 			}
@@ -201,7 +221,7 @@
 			fill: white;
 			background-color: white;
 			box-shadow: $card-shadow;
-			.function-icon{
+			.arrow-container{
 				border-width: 2px
 
 			}
@@ -221,7 +241,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--line1--600);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--line1--600);
 				border:1px solid var(--line1--600);
 			}
@@ -231,7 +251,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--line2--600);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--line2--600);
 				border:1px solid var(--line2--600);
 			}
@@ -241,7 +261,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--line3--600);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--line3--600);
 				border:1px solid var(--line3--600);
 			}
@@ -251,7 +271,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--line4--600);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--line4--600);
 				border:1px solid var(--line4--600);
 			}
@@ -261,7 +281,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--frequent--600);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--frequent--600);
 				border:1px solid var(--frequent--600);
 			}
@@ -271,7 +291,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--connexion--600);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--connexion--600);
 				border:1px solid var(--connexion--600);
 			}
@@ -281,7 +301,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--local--600);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--local--600);
 				border:1px solid var(--local--600);
 			}
@@ -291,7 +311,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--charcoal--800);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--charcoal--800);
 				border:1px solid var(--charcoal--800);
 			}
@@ -301,7 +321,7 @@
 			&:hover,&:focus,&:active{
 				background-color: var(--gray--600);
 			}
-			.function-icon{
+			.arrow-container{
 				background-color: var(--gray--800);
 				border:1px solid var(--gray--800);
 			}

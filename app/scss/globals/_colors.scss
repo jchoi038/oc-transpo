@@ -125,6 +125,25 @@
     --warning: var(--line3--600);
     --positive: var(--line2--600);
     --negative: var(--line1--600);
+
+    //Semantic colours
+    --warning-bg-color: var(--line3--100);
+    --warning-bg-dark-color: var(--line3--200);
+    --warning-bg-border-color: var(--line3--500);
+    --warning-bg-icon-color: var(--line3--600);
+    --warning-text-color: var(--line3--800);
+   
+    --success-bg-color: var(--line2--100);
+    --success-bg-dark-color: var(--line2--200);
+    --success-bg-border-color: var(--line2--500);
+    --success-bg-icon-color: var(--line2--600);
+    --success-text-color: var(--line2--800);
+    
+    --neutral-bg-color: var(--gray--100);
+    --neutral-bg-dark-color: var(--gray--200);
+    --neutral-bg-border-color: var(--gray--500);
+    --neutral-bg-icon-color: var(--gray--600);
+    --neutral-text-color: var(--gray--800);
 }  
 
 .swatch{

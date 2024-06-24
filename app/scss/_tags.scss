@@ -20,3 +20,31 @@
         right: 1rem;
     }
 }
+
+.warning-tag{
+    font-size: $tag-size-sm;
+    border-radius: $radius-pill;
+    width: fit-content;
+    padding: 0rem 0.5rem 0.1rem;
+    margin: 0;
+    background-color: var(--warning-bg-dark-color);
+    color: var(--warning-text-color);
+}
+.available-tag{
+    font-size: $tag-size-sm;
+    border-radius: $radius-pill;
+    width: fit-content;
+    padding: 0rem 0.5rem 0.1rem;
+    margin: 0;
+    background-color: var(--success-bg-dark-color);
+    color: var(--success-text-color);
+}
+.unavailable-tag{
+    font-size: $tag-size-sm;
+    border-radius: $radius-pill;
+    width: fit-content;
+    padding: 0rem 0.5rem 0.1rem;
+    margin: 0;
+    background-color: var(--neutral-bg-dark-color);
+    color: var(--neutral-text-color);
+}
