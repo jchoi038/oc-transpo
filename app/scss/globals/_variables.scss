@@ -6,7 +6,7 @@ $ui-title-size-lg:               1.3755rem !default;
 $ui-body-size-sm:                0.9375rem !default;
 
 //tag font sizes
-$tag-size-sm:       0.8125rem;
+$tag-size-sm:       0.8125rem; 
 
 // Icon sizes
 $icon-size-tiny:                1rem;
@@ -23,5 +23,9 @@ $radius-pill: 999rem;
 
 //Drop shadow x/y/blur/spread
 $card-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+$general-shadow1: rgba(0, 0, 0, 0.2) 0px 1px 4px;
 $elevation1: rgba(0, 0, 0, 0.12) 0px 1px 10px;
 $elevation2: rgba(0, 0, 0, 0.22) 0px 1px 15px; 
+
+// gradient:
+$grad-all: linear-gradient(to left,#65A233, #01A1DD, #D30F1D, #AF882D);

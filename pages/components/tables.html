@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<!-- loading main css from oc site -->
+	<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9"
+    title="octranspo-main-css" rel="stylesheet">
+    <link rel="stylesheet" href="../../dist/custom-style.css" />
+    <title>Tables</title>
+</head>
+<body>
+    <nav class="flex" style="z-index: 1;position: sticky; background-color: white; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px; height: 60px; top: 0px; left: 0; right: 0;  width: 100vw;">
+		<a href="/pages/">Style Guide</a>
+		<a href="/pages//index.html">Sample stations page</a>
+		<a href="/pages/components/tables.html">Tables</a>
+		<a href="/pages/components/tags.html">Tags</a>
+	</nav>
+    <div class="main-content">
+        <section class="section" id="tables">
+            <h2>Tables</h2>
+        
+            <h3>Table Guide</h3>
+            <ul>
+                <li>Heading should be left aligned (this is the default setting)</li>
+            </ul>
+
+            <h3>Colour variations</h3>
+            <div class="example">
+                <p>Default</p>
+                <div class="table-container">
+                    <table class="small-table">
+                        <thead>
+                            <tr>
+                                <th class="readable">Header 1</th>
+                                <th class="readable">Header 2</th>
+                                <th class="readable">Header 3</th>
+                                <!-- <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Charcoal</p>
+                <div class="table-container">
+                    <table class="small-table dark">
+                        <thead>
+                            <tr>
+                                <th class="readable">Header 1</th>
+                                <th class="readable">Header 2</th>
+                                <th class="readable">Header 3</th>
+                                <!-- <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3>2 Sizes</h3>
+            <div class="example">
+                <p>Default size</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="readable">Header 1</th>
+                                <th class="readable">Header 2</th>
+                                <th class="readable">Header 3</th>
+                                <!-- <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Small size</p>
+
+                    <table class="small-table ">
+                        <thead>
+                            <tr>
+                                <th class="readable">Header 1</th>
+                                <th class="readable">Header 2</th>
+                                <th class="readable">Header 3</th>
+                                <!-- <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <h3>Over flow x scrolling table</h3>
+            <ul class="checklist">
+                <li>Horizontal scroll at mobile screens</li>
+            </ul>
+            <div class="example">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="readable">Header 1</th>
+                                <th class="readable">Header 2</th>
+                                <th class="readable">Header 3</th>
+                                <!-- <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3>Detour tables</h3>
+            <div class="example">
+                
+        <div class="table-container">
+        <table class="detour-table">
+        <thead class="">
+            <tr>
+                <th class="readable">Bus Stop (560#) not in use</th>
+                <th class="readable">Routes</th>
+                <th class="readable">Alternate Stop</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                <p>#5924 -- Centrum (north-side) / 245 Centrum</p>
+                </td>
+                <td>
+                <ul>
+                    <li>33 Blair</li>
+                    <li>35 Blair</li>
+                    <li>636 Blair</li>
+                </ul>
+                </td>
+                <td>
+                <p style="text-align: left;"><a class="travel-planner-link" href="http://plan.octranspo.com/plan/StopSchedules?Date=2023-9-5&amp;PreferredRouteKey=33~~Direction1&amp;ShowOptions=false&amp;StopIdentifier=EM096">#5926 -- Prestone / Centrum</a></p>
+                </td>
+            </tr>
+            <tr>
+                <td>#2627 --&nbsp;Centrum (south-side) / Plaza</td>
+                <td>
+                <ul>
+                    <li>33 Portobello</li>
+                    <li>35 Esprit</li>
+                    <li>37 Queenswood Heights</li>
+                    <li>232 Queenswood Heights</li>
+                </ul>
+                </td>
+                <td><a class="travel-planner-link" href="http://plan.octranspo.com/plan/StopSchedules?Date=2023-9-5&amp;PreferredRouteKey=33~~Direction2&amp;ShowOptions=false&amp;StopIdentifier=EM095">#7845 -- Prestone / Centrum</a></td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+            </div>
+        
+        <h3>Compact tables</h3>
+        <p>More compact, fit table width to content</p>
+            <div class="example">
+                <p>Example: Fares table</p>
+                <table class="compact-table small-table">
+                    <thead>
+                        <tr>
+                            <th>Eligible Groups</th>
+                        <th>Per-ride fare</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td>Persons who are blind or partially sighted</td>
+                            <td>
+                                <p class="tag tag-type__success">Free</p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Children under 12</td>
+                            <td>
+                                <p class="tag tag-type__success">Free</p>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Seniors, 65+</td>
+                            <td>$2.90</td>
+                        </tr>
+                        <tr>
+                            <td>Equipass (Low income)</td>
+                            <td>$1.75</td>
+                        </tr>
+                        <tr>
+                            <td>Community (Persons receiving ODSP benefits)</td>
+                            <td>$1.75</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Example: Hours of operation</p>
+                  <table class="compact-table small-table">
+                    <tbody>
+                        <tr>
+                            <td>Monday to Friday</td>
+                            <td>7 am - 9 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8 am - 9 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>9 am - 5 pm</td>
+                        </tr>
+                    </tbody>
+                  </table>
+
+                <p>Auto width:</p>
+                <p>Automatically adjusts columnm width to fit cell contents</p>
+                <table class="compact-table small-table fluid">
+                    <thead>
+                      <tr>
+                        <th>Route</th>
+                        <th>Direction</th>
+                        <th>Stop</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="rt rt__type--line1">1</span></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><p><span class="rt rt__type--line2">2</span></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><p><span class="rt rt__type--line3">3</span></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><p><span class="rt rt__type--line4">4</span></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rt rt__type--R1">1</span></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rt rt__type--R2">2</span></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rt rt__type--R3">3</span></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td><span class="rt rt__type--R4">4</span></td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                            <td>A</td>
+                        </tr>
+                      <tr>
+                        <td>
+                          <span class="rt rt__type--connexion">123</span><span class="visually-hidden">Connexion Route</span>
+                        </td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                        <td>1A</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="rt rt__type--rapid">97</span><span class="visually-hidden">Rapid Route</span>
+                        </td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                        <td>1A</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="rt rt__type--frequent">123</span><span class="visually-hidden">Frequent Route</span>
+                        </td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                        <td>1A</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="rt rt__type--local">123<span class="visually-hidden">Local Route</span></span>
+                        </td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                        <td>1A</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="rt rt__type--connexion-ltd">123<span class="visually-hidden">Limited Connexion Route</span></span>
+                        </td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                        <td>1A</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="rt rt__type--frequent-ltd">123<span class="visually-hidden">Limited Frequent Route</span></span>
+                        </td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                        <td>1A</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="rt rt__type--local-ltd">123<span class="visually-hidden">Limited Local Route</span></span>
+                        </td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos?</td>
+                        <td>1A</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+            </div>
+            <h3>Sticky left header & x scroll table</h3>
+            <p>
+                At small screens only: Sticky left Header column and autoflow-x
+            </p>
+            <ul class="checklist">
+                <li>Horizontal scroll at mobile screens</li>
+                <li>Sticky left Header column</li>
+            </ul>
+            <div class="example">
+                <div class="table-container">
+                    <table class="table table__behaviour--xscroll sticky-left-col">
+                        <caption>
+                            Table caption
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Header&nbsp;1
+                                </th>
+                                <th>
+                                    Header&nbsp;2
+                                </th>
+                                <th>
+                                    Header&nbsp;3
+                                </th>
+                                <th>
+                                    Header&nbsp;4
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quia sunt quisquam
+                                    provident consequuntur porro fuga cupiditate, eligendi cumque ipsa, asperiores
+                                    dignissimos quam minima omnis animi. Iusto, voluptatibus cumque. Id.</td>
+                                <td>cell content</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Vitae dolorem soluta
+                                        aliquid est alias atque architecto,
+                                        rerum optio quibusdam eaque.
+                                    </p>
+                                </td>
+                                <td>cell content</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae qui placeat sequi in
+                                    magnam quo.
+                                </td>
+                                <td>cell content lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <table class="table table__behaviour--xscroll sticky-left-col">
+                        <caption>
+                            Empth top left cell
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th class="emptyCell">
+                                </th>
+                                <th>
+                                    Header&nbsp;1
+                                </th>
+                                <th>
+                                    Header&nbsp;2
+                                </th>
+                                <th>
+                                    Header&nbsp;3
+                                </th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quia sunt quisquam
+                                    provident consequuntur porro fuga cupiditate, eligendi cumque ipsa, asperiores
+                                    dignissimos quam minima omnis animi. Iusto, voluptatibus cumque. Id.</td>
+                                <td>cell content</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Vitae dolorem soluta
+                                        aliquid est alias atque architecto,
+                                        rerum optio quibusdam eaque.
+                                    </p>
+                                </td>
+                                <td>cell content</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae qui placeat sequi in
+                                    magnam quo.
+                                </td>
+                                <td>cell content lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>w/ .fluid class:</p>
+                <div class="table-container">
+                    <table class="table table__behaviour--xscroll fluid sticky-left-col">
+                        <caption>
+                            Table caption
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Header&nbsp;1
+                                </th>
+                                <th>
+                                    Header&nbsp;2
+                                </th>
+                                <th class="readable">
+                                    Header&nbsp;3
+                                </th>
+                                <th>
+                                    Header&nbsp;4
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quia sunt quisquam
+                                    provident consequuntur porro fuga cupiditate, eligendi cumque ipsa, asperiores
+                                    dignissimos quam minima omnis animi. Iusto, voluptatibus cumque. Id.</td>
+                                <td>cell content</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Vitae dolorem soluta
+                                        aliquid est alias atque architecto,
+                                        rerum optio quibusdam eaque.
+                                    </p>
+                                </td>
+                                <td>cell content</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae qui placeat sequi in
+                                    magnam quo.
+                                </td>
+                                <td>cell content lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-container">
+                    <table class="table table__behaviour--xscroll fluid sticky-left-col">
+                        <caption>
+                            Empty top left cell
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th class="emptyCell">
+                                </th>
+                                <th>
+                                    Header&nbsp;1
+                                </th>
+                                <th>
+                                    Header&nbsp;2
+                                </th>
+                                <th>
+                                    Header&nbsp;3
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quia sunt quisquam
+                                    provident consequuntur porro fuga cupiditate, eligendi cumque ipsa, asperiores
+                                    dignissimos quam minima omnis animi. Iusto, voluptatibus cumque. Id.</td>
+                                <td>cell content</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Vitae dolorem soluta
+                                        aliquid est alias atque architecto,
+                                        rerum optio quibusdam eaque.
+                                    </p>
+                                </td>
+                                <td>cell content</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div>Header</div>
+                                </th>
+                                <td>cell content</td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae qui placeat sequi in
+                                    magnam quo.
+                                </td>
+                                <td>cell content lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <h3>Transcript tables</h3>
+            <div class="example">
+                <div class="accordion-container accordion-container__style--attached">
+                    <h4 id="placeholderID" class="accordion accordion__size--sm" tabindex="0">
+                        Text description
+                    </h4>
+                    <div class="accordion-content" style="max-height: 75vh; overflow-y: scroll;">
+                        <table class="transcript-table
+                            <thead class="visually-hidden-mobile">
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Transcript</th>
+                                    <th>Text description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>00:01</td>
+                                    <td></td>
+                                    <td>OC Transpo and Para Transpo Log on screen</td>
+                                </tr>
+                                <tr>
+                                    <td>03:00</td>
+                                    <td>An even better Para Transpo is here.</td>
+                                    <td>A bus is driving down the street.</td>
+                                </tr>
+                                <tr>
+                                    <td>06:07</td>
+                                    <td>OC Transpo introduces:&nbsp;“My Para Transpo”</td>
+                                    <td>A hand with a mobile phone is displayed with the My Para Transpo application</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="accordion-container accordion-container__style--attached">
+                    <h4 id="placeholderID" class="accordion accordion__size--sm" tabindex="0">
+                        Description textuelle
+                    </h4>
+                    <div class="accordion-content" style="max-height: 75vh; overflow-y: scroll;">
+                        <table class="transcript-table">
+                            <thead class="visually-hidden-mobile">
+                                <tr>
+                                    <th>Temps</th>
+                                    <th>Transcription</th>
+                                    <th>Description textuelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>00:01</td>
+                                    <td></td>
+                                    <td>OC Transpo and Para Transpo Log on screen</td>
+                                </tr>
+                                <tr>
+                                    <td>03:00</td>
+                                    <td>An even better Para Transpo is here.</td>
+                                    <td>A bus is driving down the street.</td>
+                                </tr>
+                                <tr>
+                                    <td>06:07</td>
+                                    <td>OC Transpo introduces:&nbsp;“My Para Transpo”</td>
+                                    <td>A hand with a mobile phone is displayed with the My Para Transpo application</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="example">
+                <table class="transcript-table">
+                    <caption>Transcript table</caption>
+                    <thead class="visually-hidden-mobile">
+                        <tr>
+                            <th>Time</th>
+                            <th>Transcript</th>
+                            <th>Text description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>00:01</td>
+                            <td></td>
+                            <td>OC Transpo and Para Transpo Log on screen</td>
+                        </tr>
+                        <tr>
+                            <td>03:00</td>
+                            <td>An even better Para Transpo is here.</td>
+                            <td>A bus is driving down the street.</td>
+                        </tr>
+                        <tr>
+                            <td>06:07</td>
+                            <td>OC Transpo introduces: “My Para Transpo”</td>
+                            <td>A hand with a mobile phone is displayed with the My Para Transpo application</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <pre>
+        &lt;table class&#x3D;&quot;transcript-table line-seperated&quot;&gt;
+        &lt;thead class&#x3D;&quot;visually-hidden-mobile&quot;&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Time&lt;&#x2F;th&gt;
+                &lt;th&gt;Transcript&lt;&#x2F;th&gt;
+                &lt;th&gt;Text description&lt;&#x2F;th&gt;
+            &lt;&#x2F;tr&gt;
+        &lt;&#x2F;thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;0:00&lt;&#x2F;td&gt;
+                &lt;td&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, non?&lt;&#x2F;td&gt;
+                &lt;td&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ullam ipsa expedita!&lt;&#x2F;td&gt;
+            &lt;&#x2F;tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;0:02&lt;&#x2F;td&gt;
+                &lt;td&gt;Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, non.&lt;&#x2F;td&gt;
+                &lt;td&gt;Lorem, ipsum dolor.&lt;&#x2F;td&gt;
+            &lt;&#x2F;tr&gt;
+        &lt;&#x2F;tbody&gt;
+        &lt;&#x2F;table&gt;
+                </pre>
+        </section>
+        <section>
+            <h2>Definition list</h2>
+			<p>Icon definitions</p>
+			<p>class toggles:</p>
+			<ul class="checklist">
+				<li>for bordered look add class = "bordered"</li>
+			</ul>
+			<dl class="example icon-list">
+				<dt class="header-row">Icon</dt>
+				<dd class="header-row">Meaning</dd>
+				<dt>
+					<div class="arrow-container arrow-container--sm">
+						<img src="https://www.octranspo.com/images/files/icons/line_1.svg " alt="" />
+					</div>
+				</dt>
+				<dd>Line 1</dd>
+				<dt>
+					<div class="arrow-container arrow-container--sm">
+						<img src="https://www.octranspo.com/images/files/icons/line_2.svg " alt="" />
+					</div>
+				</dt>
+				<dd>Line 2</dd>
+				<dt>
+					<div class="arrow-container arrow-container--sm">
+						<img src="https://www.octranspo.com/images/files/icons/line_4.svg " alt="" />
+					</div>
+				</dt>
+				<dd>Line 4</dd>
+			</dl>
+        </section>
+        <section>
+            <h3>Examples</h3>
+            <p>Status table</p>
+            <div class="table-container">
+                <table class="fluid">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th class="readable">Description</th>
+                            <th>Status</th>
+                            <!-- <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                            </td>
+                            <td>
+                                <p class="tag tag-type__info">In&nbsp;progess</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                            </td>
+                            <td>
+                                <p class="tag tag-type__success">Complete</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                            </td>
+                            <td>
+                                <p class="tag tag-type__warning">Paused</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                            </td>
+                            <td>
+                                <p class="tag tag-type__critical">Cancelled</p>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
