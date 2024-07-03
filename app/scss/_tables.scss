@@ -1,8 +1,42 @@
 /****table styles ******/
+// overiding styles from oc styles
+main thead td, main thead th{
+	box-shadow: none;
+}
 //alginment
 table tr td{
 	align-content: start;
 }
+
+
+
+//bordered table class
+table.bordered {
+	border:none;
+	border-collapse: collapse;
+
+	thead{
+		border: 1px solid var(--border-color);
+	}
+
+	tbody {
+		border: 1px solid var(--border-color);
+	}
+
+	thead.empty-corner{
+		border: none;
+		background-color: #fff;
+		z-index: 1;
+		border-right: 1px solid var(--border-color);
+		tr th:not(:first-of-type){
+			border-top: 1px solid var(--border-color);
+		}
+		tr th:last-of-type, tr th:first-of-type{
+			border-right: 1px solid var(--border-color);
+		}
+	}
+}
+
 
 //hover effect 
 table tbody {
@@ -10,8 +44,18 @@ table tbody {
 		td{
 			background-color: var(--charcoal--50);
 		}
+		th{
+			background-color: var(--line1--100);
+		}
 	}
-	
+}
+
+table.transcript-table, table.table__behaviour--collapse {
+	tr:hover {
+		
+		border-radius: 0.5rem;
+		
+	}
 }
 // Table padding
 table {
@@ -22,29 +66,64 @@ table {
 		padding: 0.5rem 1rem;
 		// border-right: 1px solid var(--gray--200);
 	}
-	
 
-	&.compact-table{
+	&.small-table{
+		td, th {
+		padding: 0.5rem 1rem;
+	}
+	}
+
+	&.compact-table, &.transcript-table{
 		tbody tr td, tbody tr th{
 			padding: 0.25rem 1rem;
 		}
-		width: auto;
 		
-
-		thead tr th:first-of-type{
-			border-radius: 8px 0 0 0;
-		}
-
-		thead tr th:last-of-type{
-			border-radius: 0 8px 0 0;
-		}
-
-		tbody tr:last-of-type{
-			border-radius: 0 8px 0 0;
-		}
 	}
+
+	&.transcript-table{
+		@include media-breakpoint-down(xs){
+			tbody tr td:first-of-type{
+				padding-top: 1rem;
+			}
+			tbody tr td:last-of-type{
+				padding-bottom: 1rem;
+			}
+			tbody tr td, tbody tr th{
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+
+			}
+		}	
+	}
+
+	&.table__behaviour--collapse{
+		@include media-breakpoint-down(xs){
+			tbody tr td:first-of-type{
+				padding-top: 1.5rem;
+			}
+			tbody tr td:last-of-type{
+				padding-bottom: 1.5rem;
+
+			}
+			tbody tr td{
+				padding-left: 0.25rem;
+				padding-right: 0.25rem;
+				padding-top: 0rem;
+				padding-bottom: 1rem;
+			}
+		}	
+	}
+	
 } 
 
+
+
+// table width 
+table{
+	&.compact-table{
+		width: auto;
+	}
+}
 
 
 // table alignment
@@ -60,16 +139,17 @@ table th {
 	color: var(--charcoal--800);
 }
 
-//table border
+// table border
 table {
+	border-collapse: collapse;
 	tbody tr{
 		border-top: 1px solid var(--border-color);
 		border-bottom: 1px solid var(--border-color);
 	}
-	
-	thead tr th, tbody th{
-		border: 1px solid #fff;
 
+	tbody tr th{
+		border-bottom: 1px solid var(--border-color);
+		border-right: 1px solid var(--border-color);
 	}
 	
 }
@@ -78,10 +158,13 @@ table {
 /*Reset tables styles from OC & new styles*/
 // fonts
 table{
-	thead tr th,
-	tbody tr th {
+	thead tr th {
 		font-weight: 700;
-		font-size: 0.875rem;
+		font-size: 1rem;
+	}
+	tbody tr th {
+		font-weight: 400;
+		font-size: 1rem;
 	}
 	tbody tr td{
 		font-size: 1rem;
@@ -91,18 +174,39 @@ table{
 		color: var(--gray--700);
 
 	}
-	&.small-table {
+	&.small-table, &.transcript-table{
 		tbody tr td,tbody tr th, thead tr th{
 			font-size: 0.875rem !important;
 		}
 	}
+
 }
 
 //background colours
 table {
+	
 	// heading backgrounds
-	thead tr th, tbody tr th{
-		background-color: var(--gray--100);
+	thead tr th{
+		background-color: white;
+		color: var(--charcoal--800);
+		border: none;
+	}
+	thead.light{
+		tr th{
+			background-color: var(--gray--100);
+		}
+	}
+	thead.dark{
+		tr th{
+			background-color: var(--charcoal--800);
+			color: var(--transparent--800);
+		}
+		
+	}
+	
+	tbody tr th{
+		background-color: var(--line1--50);
+		font-weight: 600;
 		color: var(--charcoal--800);
 	}
 	//normal cell backgrounds
@@ -123,17 +227,16 @@ table {
 	margin-bottom: 2rem;
 	.emptyCell {
 		background: none !important;
-		border: none !important;
 		box-shadow: none !important;
 	}
 	thead {
 		th {
-			&.readable {
+			&.readable, &.wide {
 				@include media-breakpoint-down(md) {
-					min-width: 30vw;
+					width: 30vw;
 				}
 				@include media-breakpoint-down(sm) {
-					min-width: 50vw;
+					width: 60vw;
 				}
 			}
 		}
@@ -141,7 +244,7 @@ table {
 
 	table.small-table {
 		table tbody tr td, table tbody tr th{
-			padding: 0.5rem 1rem;
+			padding: 0.25rem 1rem;
 		}
 		
 	}
@@ -168,12 +271,28 @@ table {
 .transcript-table {
 	table-layout: auto;
 }
+// transcript table styles
 
 .transcript-table{
 	tr{
 		overflow: hidden;
-		border-radius: 0.5rem;
 	}
+}
+.transcript-table {
+	// td:first-of-type{
+	// 	color: var(--line1--700);
+	// 	background-color: var(--line1--100);
+	// 	width: fit-content;
+	// 	height: fit-content;
+	// }
+	
+	// @include media-breakpoint-down(xs) {
+		
+	// 	// padding for time stamp
+	// 	td:first-of-type{
+	// 		border-radius: 0.5rem;
+	// 	}
+	// }
 }
 
 
@@ -229,7 +348,6 @@ table {
 	&.dark {
 		tr th{
 			background-color: var(--charcoal--800);
-			color: var(--transparent--800);
 		}
 	}
 
@@ -239,14 +357,14 @@ table {
 .transcript-table {
 	//styling the time stamp column
 	td:first-of-type {
-		color: var(--text-color);
+		color: var(--line1--600);
 		font-weight: 700;
 		letter-spacing: 0.05em;
 		font-size: 0.875rem;
 	}
 	//styling the text description column
 	td:last-of-type {
-		color: var(--gray--600);
+		color: var(--caption-color);
 		&::before {
 			content: "[";
 		}
@@ -260,29 +378,6 @@ table {
 			}
 		}
 }
-.transcript-table,
-.detour-table, .small-table{
-	td{
-		background-color: white;
-	}
-	td,
-	th {
-		padding: 1.25rem 1rem;
-	}
-	th {
-		color: var(--gray-800);
-		font-size: 0.875rem;
-		border: none;
-		padding: 0.5rem 1rem;
-		//turn on to back background colour of header grey
-		// background-color: var(--gray--50);
-	}
-	td {
-		font-size: 0.875rem;
-	}
-}
-
-
 
 
 table {
@@ -424,10 +519,13 @@ dl {
 
 
 /*autoflow table*/
-.table-container {
+.table-container,.overflow-x-container {
 	@include media-breakpoint-down(md) {
 		overflow-x: scroll;
 		position: relative;
+	}
+	table{
+		width: auto;
 	}
 }
 
@@ -436,10 +534,9 @@ dl {
 .transcript-table,
 .detour-table,
 .table__behaviour {
-	&--xscroll {
+	&--xscroll, .table-container>table {
 		@include media-breakpoint-down(md) {
 			width: auto;
-
 		}
 	}
 }
@@ -452,34 +549,23 @@ table {
 			left: 0;
 			z-index: 2;
 			width: max-content;
-			filter: drop-shadow(rgba(0, 0, 0, 0.05) 3px 0px 3px);
-			box-shadow: rgba(0, 0, 0, 0.06) 3px 0px 3px;
+			filter: $general-shadow1;
+			box-shadow: $general-shadow1;
 		}
 	}
 }
 
 .table__behaviour--collapse,  .transcript-table {
+	
 	@include media-breakpoint-down(xs) {
-		td,
-		th {
-			padding: 0 0.5rem 0.5rem;
-		}
-		// padding for time stamp
-		td:first-of-type {
-			padding-top: 1rem;
-			padding-bottom: 1rem;
-		}
 
 		// padding for last element
-		td:last-of-type {
-			padding-bottom: 1.5rem;
-		}
+		
 		//collapse
 		tr {
 			display: flex;
 			flex-direction: column;
-			// gap: 0.25rem;
-			margin-bottom: 0.5rem;
+			border-top: none;
 		}
 	}
 }

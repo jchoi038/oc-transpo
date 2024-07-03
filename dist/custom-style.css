@@ -15990,12 +15990,46 @@ h4.stage2-usage-headings {
 }
 
 /****table styles ******/
+main thead td, main thead th {
+  box-shadow: none;
+}
+
 table tr td {
   align-content: start;
 }
 
+table.bordered {
+  border: none;
+  border-collapse: collapse;
+}
+table.bordered thead {
+  border: 1px solid var(--border-color);
+}
+table.bordered tbody {
+  border: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner {
+  border: none;
+  background-color: #fff;
+  z-index: 1;
+  border-right: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner tr th:not(:first-of-type) {
+  border-top: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner tr th:last-of-type, table.bordered thead.empty-corner tr th:first-of-type {
+  border-right: 1px solid var(--border-color);
+}
+
 table tbody tr:hover td {
   background-color: var(--charcoal--50);
+}
+table tbody tr:hover th {
+  background-color: var(--line1--100);
+}
+
+table.transcript-table tr:hover, table.table__behaviour--collapse tr:hover {
+  border-radius: 0.5rem;
 }
 
 table tbody tr td, table table tbody tr th {
@@ -16004,20 +16038,41 @@ table tbody tr td, table table tbody tr th {
 table thead th {
   padding: 0.5rem 1rem;
 }
-table.compact-table {
-  width: auto;
+table.small-table td, table.small-table th {
+  padding: 0.5rem 1rem;
 }
-table.compact-table tbody tr td, table.compact-table tbody tr th {
+table.compact-table tbody tr td, table.compact-table tbody tr th, table.transcript-table tbody tr td, table.transcript-table tbody tr th {
   padding: 0.25rem 1rem;
 }
-table.compact-table thead tr th:first-of-type {
-  border-radius: 8px 0 0 0;
+@media (max-width: 575.98px) {
+  table.transcript-table tbody tr td:first-of-type {
+    padding-top: 1rem;
+  }
+  table.transcript-table tbody tr td:last-of-type {
+    padding-bottom: 1rem;
+  }
+  table.transcript-table tbody tr td, table.transcript-table tbody tr th {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
-table.compact-table thead tr th:last-of-type {
-  border-radius: 0 8px 0 0;
+@media (max-width: 575.98px) {
+  table.table__behaviour--collapse tbody tr td:first-of-type {
+    padding-top: 1.5rem;
+  }
+  table.table__behaviour--collapse tbody tr td:last-of-type {
+    padding-bottom: 1.5rem;
+  }
+  table.table__behaviour--collapse tbody tr td {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+  }
 }
-table.compact-table tbody tr:last-of-type {
-  border-radius: 0 8px 0 0;
+
+table.compact-table {
+  width: auto;
 }
 
 table tbody tr td, table thead tr th {
@@ -16028,19 +16083,26 @@ table th {
   color: var(--charcoal--800);
 }
 
+table {
+  border-collapse: collapse;
+}
 table tbody tr {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
-table thead tr th, table tbody th {
-  border: 1px solid #fff;
+table tbody tr th {
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
 /*Reset tables styles from OC & new styles*/
-table thead tr th,
-table tbody tr th {
+table thead tr th {
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+table tbody tr th {
+  font-weight: 400;
+  font-size: 1rem;
 }
 table tbody tr td {
   font-size: 1rem;
@@ -16049,12 +16111,25 @@ table tbody tr td {
   line-height: 150%;
   color: var(--gray--700);
 }
-table.small-table tbody tr td, table.small-table tbody tr th, table.small-table thead tr th {
+table.small-table tbody tr td, table.small-table tbody tr th, table.small-table thead tr th, table.transcript-table tbody tr td, table.transcript-table tbody tr th, table.transcript-table thead tr th {
   font-size: 0.875rem !important;
 }
 
-table thead tr th, table tbody tr th {
+table thead tr th {
+  background-color: white;
+  color: var(--charcoal--800);
+  border: none;
+}
+table thead.light tr th {
   background-color: var(--gray--100);
+}
+table thead.dark tr th {
+  background-color: var(--charcoal--800);
+  color: var(--transparent--800);
+}
+table tbody tr th {
+  background-color: var(--line1--50);
+  font-weight: 600;
   color: var(--charcoal--800);
 }
 table tbody tr td, table tbody tr:nth-child(odd) {
@@ -16072,21 +16147,20 @@ table {
 }
 table .emptyCell {
   background: none !important;
-  border: none !important;
   box-shadow: none !important;
 }
 @media (max-width: 991.98px) {
-  table thead th.readable {
-    min-width: 30vw;
+  table thead th.readable, table thead th.wide {
+    width: 30vw;
   }
 }
 @media (max-width: 767.98px) {
-  table thead th.readable {
-    min-width: 50vw;
+  table thead th.readable, table thead th.wide {
+    width: 60vw;
   }
 }
 table table.small-table table tbody tr td, table table.small-table table tbody tr th {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
 }
 table table.table-border tbody tr th,
 table table.table-border tbody tr td {
@@ -16105,7 +16179,6 @@ table table.table-border tbody tr td {
 
 .transcript-table tr {
   overflow: hidden;
-  border-radius: 0.5rem;
 }
 
 table caption {
@@ -16136,18 +16209,17 @@ table.table tbody tr {
 
 table.dark tr th {
   background-color: var(--charcoal--800);
-  color: var(--transparent--800);
 }
 
 /* Transcript tables & small tables*/
 .transcript-table td:first-of-type {
-  color: var(--text-color);
+  color: var(--line1--600);
   font-weight: 700;
   letter-spacing: 0.05em;
   font-size: 0.875rem;
 }
 .transcript-table td:last-of-type {
-  color: var(--gray--600);
+  color: var(--caption-color);
 }
 .transcript-table td:last-of-type::before {
   content: "[";
@@ -16159,29 +16231,6 @@ table.dark tr th {
   .transcript-table tr {
     border: none;
   }
-}
-
-.transcript-table td,
-.detour-table td, .small-table td {
-  background-color: white;
-}
-.transcript-table td,
-.transcript-table th,
-.detour-table td,
-.detour-table th, .small-table td,
-.small-table th {
-  padding: 1.25rem 1rem;
-}
-.transcript-table th,
-.detour-table th, .small-table th {
-  color: var(--gray-800);
-  font-size: 0.875rem;
-  border: none;
-  padding: 0.5rem 1rem;
-}
-.transcript-table td,
-.detour-table td, .small-table td {
-  font-size: 0.875rem;
 }
 
 table {
@@ -16304,16 +16353,21 @@ dl.icon-list dt {
 
 /*autoflow table*/
 @media (max-width: 991.98px) {
-  .table-container {
+  .table-container, .overflow-x-container {
     overflow-x: scroll;
     position: relative;
   }
 }
+.table-container table, .overflow-x-container table {
+  width: auto;
+}
 
 @media (max-width: 991.98px) {
-  .transcript-table--xscroll,
+  .transcript-table--xscroll, .transcript-table .table-container > table,
   .detour-table--xscroll,
-  .table__behaviour--xscroll {
+  .detour-table .table-container > table,
+  .table__behaviour--xscroll,
+  .table__behaviour .table-container > table {
     width: auto;
   }
 }
@@ -16325,27 +16379,15 @@ table.sticky-left-col tbody th {
   z-index: 2;
   width: -moz-max-content;
   width: max-content;
-  filter: drop-shadow(rgba(0, 0, 0, 0.05) 3px 0px 3px);
-  box-shadow: rgba(0, 0, 0, 0.06) 3px 0px 3px;
+  filter: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
 }
 
 @media (max-width: 575.98px) {
-  .table__behaviour--collapse td,
-  .table__behaviour--collapse th, .transcript-table td,
-  .transcript-table th {
-    padding: 0 0.5rem 0.5rem;
-  }
-  .table__behaviour--collapse td:first-of-type, .transcript-table td:first-of-type {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  .table__behaviour--collapse td:last-of-type, .transcript-table td:last-of-type {
-    padding-bottom: 1.5rem;
-  }
   .table__behaviour--collapse tr, .transcript-table tr {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.5rem;
+    border-top: none;
   }
 }
 
@@ -16514,9 +16556,9 @@ ul.checklist--x li::before {
   font-weight: 600;
   transition: all 100ms ease-out;
   font-size: 0.875rem;
-  color: var(--charcoal--800);
   text-decoration: none;
-  background-color: var(--gray--100);
+  background-color: var(--neutral-bg-color);
+  color: var(--neutral-text-color);
 }
 .btn-arrow-only {
   padding: 0;
@@ -16549,15 +16591,10 @@ ul.checklist--x li::before {
   background-size: contain;
   width: 1rem;
   height: 1rem;
-  background-position-x: left;
-  transition: all 50ms ease-out;
 }
 .btn__arrow.btn-lg::after {
   width: 1.125rem;
   height: 1.125rem;
-}
-.btn:hover::after {
-  transform: translateX(2px);
 }
 .btn-primary {
   background-color: transparent;
@@ -18217,6 +18254,7 @@ pre {
   padding: 1.5rem;
   border: 2px solid var(--gray--100);
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 code {
@@ -18226,6 +18264,7 @@ code {
   padding: 0 3px;
 }
 
+/*** tag styles ***/
 .tag {
   background-color: var(--neutral-bg-color);
   color: var(--neutral-text-color);
@@ -18322,6 +18361,7 @@ code {
   color: var(--neutral-text-color);
 }
 
+/*** tag styles end***/
 .fancybox-media {
   display: flex;
   overflow: hidden;
@@ -18578,6 +18618,7 @@ input {
   }
 }
 
+/****Routes & lines styles ******/
 .rt {
   color: white;
   text-align: center;
@@ -18654,6 +18695,7 @@ input {
   color: var(--local--600);
 }
 
+/****End Routes & lines styles ******/
 .entrance-sign {
   margin: -15px 0px 0px;
   border: 1px solid rgb(35, 31, 32);

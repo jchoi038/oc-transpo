@@ -11,6 +11,7 @@
 
 		<!-- <link rel="stylesheet" href="./style.css" /> -->
 		<link rel="stylesheet" href="../../dist/custom-style.css" />
+
 		<title>Park & Ride</title>
 	</head>
 
@@ -92,7 +93,7 @@
 			#PR-page address {
 				margin-top: 0;
 				padding-top: 0;
-				margin-bottom: 0.5rem;
+				margin-bottom: 0.5em;
 				line-height: 150%;
 			}
 
@@ -100,7 +101,7 @@
 				/* margin-bottom: 0.75rem; */
 				font-weight: 600;
 				font-size: 0.95rem;
-			}
+			} 
 
 			/* TOC */
 
@@ -383,18 +384,13 @@
 			.select-option {
 				text-decoration: none;
 				color: #000;
-				font-weight: 600;
-				/* border: 1px solid #e9eaed; */
 				border-right: 1px solid e9eaed;
-				/* border-radius: 6px; */
 				padding: 1rem;
-				/* font-weight: 600; */
 				width: 100%;
 				height: 60px;
 				display: flex;
 				align-items: center;
 				gap: 0.5rem;
-				/* justify-content: space-between; */
 				border: 1px solid #d5d5d5;
 				background-color: #fff;
 				border-radius: 9px;
@@ -404,7 +400,6 @@
 			.select-option.active {
 				background-color: #000;
 				color: #fff !important;
-				font-weight: bold;
 				border: solid 2px #000;
 			}
 
@@ -564,7 +559,7 @@
 				flex-wrap: wrap;
 				padding: 1rem 3rem;
 				/* flex-direction: column; */
-				background-color: rgb(247, 247, 247) !important;
+				background-color: var(--gray--50) !important;
 				/* border-radius: 8px !important; */
 				/* max-width: 400px; */
 				column-gap: 1rem;
@@ -937,49 +932,36 @@
 				margin-bottom: 2rem;
 			}
 
-			.grid-2fr-1fr {
+			.parking-lot-content {
 				display: grid;
 				grid-template-columns: 2fr 1fr;
 				gap: 2rem;
+				border-radius: 0.5rem;
+				background-color: var(--gray--50);
+				padding: 1.5rem;
 				/* border-top: 1px solid #e9eaed; */
 				/* padding-top: 1.5rem; */
 			}
-
-			.grid-2fr-1fr .column {
-				display: flex;
-				flex-direction: column;
-				gap: 1rem;
-			}
-
-			#PR-page .grid-2fr-1fr h4 {
-				margin-bottom: 1rem;
-				font-weight: 600;
-				margin-top: 0;
-				padding-top: 0;
-				font-size: 1.375rem;
-			}
-
-			@media (max-width: 767.98px) {
-				#PR-page .grid-2fr-1fr h4 {
-					font-size: 1.25rem;
-				}
-			}
-
-			.grid-2fr-1fr .info-group {
+			.parking-lot-content .info-group {
 				/* margin-bottom: 2rem; */
 				padding: 2rem 0 2rem;
 			}
 
-			.grid-2fr-1fr .info-group.location .body {
+			.parking-lot-content .info-group.location .body {
 				padding-bottom: 1rem;
 			}
 
-			.grid-2fr-1fr .info-group:not(:last-of-type) {
+			.parking-lot-content .info-group:not(:last-of-type) {
 				border-bottom: 1px solid #e9eaed;
 				/* padding-bottom: 0.75rem; */
 			}
 
-			.grid-2fr-1fr .info-group--offers li img {
+			.info-group--offers li{
+				display: flex;
+				gap:  1rem;
+			}
+
+			.info-group--offers li img {
 				background-color: #000;
 				border-radius: 999px;
 				content: "";
@@ -987,16 +969,16 @@
 				height: 42px;
 			}
 
-			.grid-2fr-1fr .info-group--offers svg {
+			.info-group--offers svg {
 				flex-shrink: 0;
 			}
 
-			.grid-2fr-1fr .info-group ul {
+			.parking-lot-content .info-group ul {
 				padding: 0 0 1.5rem 0;
 				margin: 0;
 			}
 
-			.grid-2fr-1fr .info-group li {
+			.parking-lot-content .info-group li {
 				display: flex;
 				gap: 1rem;
 				align-items: flex-start;
@@ -1004,7 +986,7 @@
 				line-height: 150%;
 			}
 
-			.grid-2fr-1fr .info-group--resources li a {
+			.parking-lot-content .info-group--resources li a {
 				display: flex;
 				gap: 0.5rem;
 				align-items: center;
@@ -1012,7 +994,7 @@
 				line-height: 100%;
 			}
 
-			.grid-2fr-1fr .info-group--offers {
+			.info-group--offers {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				column-gap: 1.5rem;
@@ -1020,11 +1002,11 @@
 				/* border-bottom: 1px solid #e9eaed; */
 			}
 
-			#PR-page .grid-2fr-1fr .info-group--offers p {
+			#PR-page .info-group--offers p {
 				margin-bottom: 0;
 			}
 
-			.grid-2fr-1fr .info-group--offers .important-announcement {
+			.info-group--offers .important-announcement {
 				grid-column: 1 / 3;
 			}
 
@@ -1034,27 +1016,29 @@
 			}
 
 			#PR-page .note {
+				padding: 0;
 				margin-top: 0.5rem;
-				padding-top: 1rem;
+				padding-top: 0.5rem;
+				/* padding-bottom: 1rem; */
 				display: inline-flex;
 				width: 100%;
 			}
 
-			.grid-2fr-1fr p {
+			.parking-lot-content p {
 				margin-bottom: 0;
 			}
 
-			.grid-2fr-1fr .info-group--offers__stats {
+			.info-group--offers__stats {
 				font-weight: 700;
 				font-size: 1rem;
 				color: #000;
 				/* margin-bottom: 0; */
 			}
 
-			.grid-2fr-1fr .info-group--offers__name {
+			.info-group--offers__name {
 			}
 
-			.info-card {
+			.card basic-card {
 				border: 1px solid #e9eaed;
 				border-radius: 4px;
 				padding: 1.5rem;
@@ -1064,35 +1048,35 @@
 				min-width: 18rem;
 			}
 
-			.info-card--status-heading {
+			.card__title {
 				display: flex;
 				align-items: center;
 				gap: 0.5rem;
 			}
 
-			/* .info-card ul {
+			/* .card basic-card ul {
 			list-style: none;
 		} */
 
-			#PR-page .info-card h4 {
+			#PR-page .card basic-card h4 {
 				font-size: 1.25rem;
 			}
 
-			.info-card--link {
+			.card basic-card--link {
 				box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
 			}
 
-			.info-card--link:hover {
+			.card basic-card--link:hover {
 				background-color: rgb(247, 247, 247);
 			}
 
-			.info-card--link h3 {
+			.card basic-card--link h3 {
 				font-size: 1.5rem;
 				margin-bottom: 1rem;
 				font-weight: 600;
 			}
 
-			.info-card--link .info-card--content {
+			.card basic-card--link .card basic-card--content {
 				display: flex;
 				align-items: center;
 				gap: 1rem;
@@ -1101,7 +1085,7 @@
 				justify-content: space-between;
 			}
 
-			.info-card--cta .blue-btn:not(:last-of-type) {
+			.card basic-card .blue-btn:not(:last-of-type) {
 				margin-bottom: 0.25rem;
 			}
 
@@ -1118,38 +1102,38 @@
 				min-height: 1.6em;
 			}
 
-			#PR-page .info-card .soldout {
+			#PR-page .card basic-card .soldout {
 				color: #d30f1d;
 				background-color: #d30f1d15;
 			}
 
-			#PR-page .info-card .available {
+			#PR-page .card basic-card .available {
 				color: #038700;
 				/* font-size: 1rem; */
 				background-color: #03870020;
 				padding: 0 0.5rem 0 0.25rem;
 			}
 
-			#PR-page .info-card .status--not-avail {
+			#PR-page .card basic-card .status--not-avail {
 				color: #444;
 				background-color: #bfbfbf;
 			}
 
-			#PR-page .info-card.unavailable {
+			#PR-page .card basic-card.unavailable {
 				box-shadow: none;
 				background-color: #e9eaed;
 				border-top: 1px solid #dfdfdf;
 			}
 
-			#PR-page .info-card--hours ul {
+			#PR-page . ul {
 				margin-bottom: 1rem;
 			}
 
-			#PR-page .info-card--hours li {
+			#PR-page . li {
 				display: flex;
 			}
 
-			#PR-page .info-card--hours .info-card--hours--day {
+			#PR-page . .--day {
 				width: 50%;
 				max-width: 6.25rem;
 			}
@@ -1213,16 +1197,16 @@
 					display: none;
 				}
 
-				.grid-2fr-1fr .info-group--offers {
+				.info-group--offers {
 					display: flex;
 					flex-direction: column;
 				}
 
-				.grid-2fr-1fr .info-group--offers svg {
+				.info-group--offers svg {
 					flex-shrink: 0;
 				}
 
-				.parking-lot--info-box .grid-2fr-1fr {
+				.parking-lot--info-box .parking-lot-content {
 					grid-template-columns: 1fr;
 					gap: 0;
 				}
@@ -1245,7 +1229,7 @@
 					gap: 0.5rem;
 				}
 
-				.grid-2fr-1fr .info-group {
+				.parking-lot-content .info-group {
 					border-bottom: 1px solid #e9eaed;
 					padding-bottom: 1.5rem;
 				}
@@ -1254,22 +1238,17 @@
 					list-style-type: none;
 				}
 
-				/* #PR-page .info-card.unavailable {
+				/* #PR-page .card basic-card.unavailable {
 					background-color: #fff;
 					border-top: none;
 				} */
 
-				#PR-parking-lots .info-card:last-of-type {
+				#PR-parking-lots .card basic-card:last-of-type {
 					border-bottom: none;
 				}
 			}
 
 			/* section parking info */
-			.grid {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 1rem;
-			}
 
 			.grid-2fr-1fr {
 				grid-template-columns: 2fr 1fr;
@@ -1374,16 +1353,16 @@
 			</section>
 			<!-- <section id="PR-parking-information">
 																			<h2 class="">Parking information</h2>
-																			<div class="grid">
-																				<div class="info-card info-card--link">
+																			<div class="column gap">
+																				<div class="card basic-card card basic-card--link">
 																					<h3>Terms & Conditions</h3>
-																					<a target="_blank" href="https://www.octranspo.com/en/our-services/park-ride/permits-terms-conditions/" class="info-card--content icon-after-sm icon-after--circled-arrow">
+																					<a target="_blank" href="https://www.octranspo.com/en/our-services/park-ride/permits-terms-conditions/" class="card basic-card--content icon-after-sm icon-after--circled-arrow">
 																						Learn more about Park & Ride permits terms and conditions, including overnight parking, permit freeze, and purchasing permits.
 																					</a>
 																				</div>
-																				<div class="info-card info-card--link">
+																				<div class="card basic-card card basic-card--link">
 																					<h3>Gold permits</h3>
-																					<a target="_blank" href="#PR-gold-permit" class="info-card--content icon-after-sm icon-after--circled-arrow">
+																					<a target="_blank" href="#PR-gold-permit" class="card basic-card--content icon-after-sm icon-after--circled-arrow">
 																						A Gold permit guarantees you a parking space.
 																						Learn more about Gold permits.
 																					</a>
@@ -1416,14 +1395,22 @@
 
 				<div class="parking-lot-select-options--grid mb-1" id="PR-select">
 					<a class="select-option" data-value="Baseline" href="#PR-baseline"
-						><span class="icons" data-switch="1 1-l 1"
+						>
+						<span class="icons" data-switch="1 1-l 1"
 							><span>Baseline</span></span
 						>
 						<!--data-swtich meaning: 1 1 => goldstar freetag -->
 					</a>
 					<a class="select-option" data-value="Blair" href="#PR-blair">
+						<img style="width: 24px; height: 24px;" src="https://www.octranspo.com/images/files/icons/line_1.svg" alt="Line 1 connection">
 						<span class="icons" data-switch="1 0 0 1">
-							<img style="width: 18px; height: 18px;" src="https://www.octranspo.com/images/files/icons/line_1.svg" alt="Line 1 connection"><span>Blair</span></span
+							<span>Blair</span></span
+						></a
+					>
+					<a class="select-option" data-value="Bowesville" href="#PR-bowesville">
+						<img style="width: 24px; height: 24px;" src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="Line 2 connection">
+						<span class="icons" data-switch="1 0 0 1">
+							<span>Bowesville</span></span
 						></a
 					>
 					<a class="select-option" data-value="ChapelHill" href="#PR-chapelhill"
@@ -1443,7 +1430,7 @@
 							><span>Fallowfield</span></span
 						>
 					</a>
-					<a class="select-option" data-value="Greenboro" href="#PR-greenboro">
+					<a class="select-option" data-value="Greenboro" href="#PR-greenboro"><img style="width: 24px; height: 24px;" src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="Line 2 connection">
 						<span class="icons" data-switch="1 1 1"
 							><span>Greenboro</span></span
 						>
@@ -1463,7 +1450,8 @@
 						>
 					</a>
 					<a class="select-option" data-value="Leitrim" href="#PR-leitrim">
-						<span class="icons" data-switch="0 1 0"><img style="width: 18px; height: 18px;" src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="Line 2 connection"><span>Leitrim</span></span>
+						<img style="width: 24px; height: 24px;" src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="Line 2 connection">
+						<span class="icons" data-switch="0 1 0"><span>Leitrim</span></span>
 					</a>
 					<a
 						class="select-option"
@@ -1566,8 +1554,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Baseline">
 										<h4>Location</h4>
 
@@ -1598,7 +1586,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -1693,7 +1681,7 @@
 										>
 									</div>
 
-									<div class="info-group connecting-routes">
+									<div class="">
 										<h4>Connecting stations and routes</h4>
 
 										<p>
@@ -1721,7 +1709,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Baseline">
+									<div class="" data-station="Baseline">
 										<h4>Related resources</h4>
 
 										<ul>
@@ -1743,33 +1731,33 @@
 											</li>
 										</ul>
 									</div>
-									<!-- <div  class="flex info-group resources flex-dir-col" data-station="Baseline">
+									<!-- <div  class="flex  flex-dir-col" data-station="Baseline">
 																	<a target="_blank" target="_blank" class="flex flex-ai-c gap-1" href="https://www.octranspo.com/images/files/news/Baseline_station_layout_carte.png"><img style="height: 60px;" src="https://www.octranspo.com/images/files/news/Baseline_station_layout_carte.png" alt="Baseline station layout map">Baseline Station layout map</a>
 																</div> -->
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card ">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status available icon-sm icon--available">
+											</p>
+											
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
+											<p>This parking lot offers Gold permits.</p>
+											</div>
 
-										<p>This parking lot offers Gold permits.</p>
-									</div>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
-
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>
 											This parking lot offers limited<a
 												href="#PR-note-baseline-2"
@@ -1778,24 +1766,27 @@
 											free parking.
 										</p>
 
-										<h5>Hours of free parking:</h5>
-
-										<ul style="margin-bottom: 1rem">
-											<li>
-												<span class="info-card--hours--day"
-													>Mon<span class="visually-hidden">day</span> &ndash;
-													Fri<span class="visually-hidden">day</span></span
-												><span class="info-card--hours--time">After 11 am</span>
-											</li>
-											<li>
-												<span class="info-card--hours--day">Weekends</span
-												><span class="info-card--hours--time">Free</span>
-											</li>
-											<li>
-												<span class="info-card--hours--day">Holidays</span
-												><span class="info-card--hours--time">Free</span>
-											</li>
-										</ul>
+										
+										<div class="border-top note flex-dir-col">
+											<h5>Hours of free parking:</h5>
+											<div>
+												<p>
+														<span class="--day"
+															>Mon<span class="visually-hidden">day</span> &ndash;
+															Fri<span class="visually-hidden">day</span>: </span
+														><span class="--time">After 11 am</span>
+												
+												</p>
+												<p>
+													<span class="--day">Weekends: </span
+													><span class="--time">Free</span>
+												</p>
+												<p>
+													<span class="--day">Holidays: </span
+													><span class="--time">Free</span>
+												</p>
+											</div>
+										</div>
 
 										<p
 											class="icon-sm icon--warning border-top note"
@@ -1815,8 +1806,8 @@
 										</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -1868,8 +1859,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Blair">
 										<h4>Location</h4>
 
@@ -1899,7 +1890,7 @@
 										<!-- <a target="_blank" class="icon-sm icon--pdf" href="-">Download the area map for Blair Station</a> -->
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -1935,7 +1926,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Blair"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -1964,7 +1955,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Blair">
+									<div class="" data-station="Blair">
 										<h4>Related resources</h4>
 
 										<ul>
@@ -1979,45 +1970,51 @@
 										</ul>
 									</div>
 								</div>
-                                
 
-								<div class="column">
-									<div class="card card__size--md card__style--subtle card__color--white">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
-
-											<p class="warning-tag">Sold out</p>
+								<div class="column gap">
+									<div class="card basic-card">
+										<img class="card__icon" src="https://www.octranspo.com/images/files/icons/line_1.svg" alt="">
+										<p class="card__title">Line 1 connection</p>								
+										<p>This Park & Ride provides connection to Line 1</p>
+										<div class="arrow-container">
+											<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M7.24285 0.52827C7.5032 0.26792 7.92531 0.26792 8.18566 0.52827L12.6571 4.99967L8.18566 9.47108C7.92531 9.73143 7.5032 9.73143 7.24285 9.47108C6.9825 9.21073 6.9825 8.78862 7.24285 8.52827L10.0095 5.76161H0.666667C0.298477 5.76161 0 5.46313 0 5.09494C0 4.72675 0.298477 4.42827 0.666667 4.42827H10.2L7.24285 1.47108C6.9825 1.21073 6.9825 0.788619 7.24285 0.52827Z" fill="currentColor"></path>
+											</svg>
 										</div>
+										<a href="" class="clickable-card-link">Learn more</a>
+									</div>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Gold permit
+
+											</p>
+										<p class="warning-tag">Sold out</p>
 
 										<p>Gold permits are sold out at this parking lot.</p>
 
 										<h5>Join the waitlist:</h5>
 
-										<div class="info-card--cta">
-											<a
-												class="btn-tertiary btn btn__arrow btn-text-only"
+											<a class="btn-tertiary btn btn__arrow btn-text-only"
 												href="tel:613-842-3777"
 												target="_blank"
 												title="Call the Park &amp; Ride Adminstrator at 613-842-3777"
 												>Call sales</a
 											>
-											<a
-												class="btn-tertiary btn btn__arrow btn-text-only"
+											<a class="btn-tertiary btn btn__arrow btn-text-only"
 												href="mailto:parkandridepermits@ottawa.ca?subject=Park%20%26%20Ride%20permits"
 												target="_blank"
 												>Email sales</a
 											>
-										</div>
 									</div>
 
-									<div class="info-card info-card--hours unavailable">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card">
+										<p class="card__title">
+											Free parking
 
-											<p class="parking status status--not-avail">
-												Very limited
 											</p>
-										</div>
+												<p class="warning-tag">
+													Very limited
+												</p>
 
 										<p>
 											Free parking in this lot cannot be guaranteed at any time.
@@ -2025,8 +2022,8 @@
 										</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -2078,8 +2075,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Chapel Hill">
 										<h4>Location</h4>
 
@@ -2112,7 +2109,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -2208,7 +2205,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Chapel Hill"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -2238,7 +2235,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources">
+									<div class="">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -2249,31 +2246,31 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card unavailable">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+											</p>
+										<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -2330,8 +2327,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Eagleson">
 										<h4>Location</h4>
 
@@ -2377,7 +2374,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -2496,7 +2493,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Eagleson"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -2525,7 +2522,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Eagleson">
+									<div class="" data-station="Eagleson">
 										<h4>Related resources</h4>
 
 										<ul>
@@ -2549,28 +2546,29 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card ">
+										<p class="card__title">
+											Gold permit
+										</p>
 
-											<p class="status available icon-sm icon--available">
-												Available
-											</p>
-										</div>
+										<p class="available-tag">
+												
+													Available
+												</p>
 
 										<p>This parking lot offers Gold permits.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 
 										<p class="icon-sm icon--warning border-top note">
@@ -2582,8 +2580,8 @@
 										</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -2639,8 +2637,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Fallowfield">
 										<h4>Location</h4>
 
@@ -2670,7 +2668,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -2816,7 +2814,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Fallowfield"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -2846,7 +2844,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Fallowfield">
+									<div class="" data-station="Fallowfield">
 										<h4>Related resources</h4>
 
 										<ul>
@@ -2871,33 +2869,33 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card ">
+										<p class="card__title">
+											Gold permit
+										</p>
 
-											<p class="status available icon-sm icon--available">
-												Available
+												<p class="available-tag">
+											Available
 											</p>
-										</div>
 
 										<p>This parking lot offers Gold permits.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -2954,8 +2952,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Greenboro">
 										<h4>Location</h4>
 
@@ -2985,7 +2983,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -3104,7 +3102,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Greenboro"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -3133,7 +3131,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Greenboro">
+									<div class="" data-station="Greenboro">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -3144,28 +3142,39 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
-
-											<p class="status available icon-sm icon--available">
-												Available
-											</p>
+								<div class="column gap">
+								<div class="card basic-card">
+										<img class="card__icon" src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="">
+										<p class="card__title">Line 2 connection</p>								
+										<p>This Park &amp; Ride provides connection to Line 2</p>
+										<div class="arrow-container">
+											<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M7.24285 0.52827C7.5032 0.26792 7.92531 0.26792 8.18566 0.52827L12.6571 4.99967L8.18566 9.47108C7.92531 9.73143 7.5032 9.73143 7.24285 9.47108C6.9825 9.21073 6.9825 8.78862 7.24285 8.52827L10.0095 5.76161H0.666667C0.298477 5.76161 0 5.46313 0 5.09494C0 4.72675 0.298477 4.42827 0.666667 4.42827H10.2L7.24285 1.47108C6.9825 1.21073 6.9825 0.788619 7.24285 0.52827Z" fill="currentColor"></path>
+											</svg>
 										</div>
+										<a href="" class="clickable-card-link">Learn more</a>
+									</div>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Gold permit
+										</p>
+
+												<p class="available-tag">
+											Available
+											</p>
 
 										<p>This parking lot offers Gold permits.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 
 										<p class="icon-sm icon--warning border-top note">
@@ -3176,8 +3185,8 @@
 										</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -3234,8 +3243,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Innovation">
 										<h4>Location</h4>
 
@@ -3276,7 +3285,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -3341,7 +3350,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Innovation"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -3371,7 +3380,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Innovation">
+									<div class="" data-station="Innovation">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -3382,31 +3391,31 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card  unavailable">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+											</p>
+										<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -3459,8 +3468,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Jeanne d’Arc">
 										<h4>Location</h4>
 
@@ -3492,7 +3501,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -3530,7 +3539,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Jeanne d’Arc"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -3560,7 +3569,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Jeanne d’Arc">
+									<div class="" data-station="Jeanne d’Arc">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -3571,25 +3580,25 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+											</p>
+										<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours unavailable">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card  unavailable">
+										<p class="card__title">
+											Free parking
+										</p>
 
-											<p class="parking status status--not-avail">
+											<p class="unavailable-tag">
 												Unavailable
 											</p>
-										</div>
 
 										<p>
 											<a href="#PR-permit-types">Regular Parking Permits</a
@@ -3597,8 +3606,8 @@
 										</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -3655,8 +3664,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Leitrim">
 										<h4>Location</h4>
 
@@ -3693,7 +3702,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -3758,7 +3767,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Leitrim"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -3787,7 +3796,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Leitrim">
+									<div class="" data-station="Leitrim">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -3798,31 +3807,42 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
-
-											<p class="status status--not-avail">Unavailable</p>
+								<div class="column gap">
+								<div class="card basic-card">
+										<img class="card__icon" src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="">
+										<p class="card__title">Line 2 connection</p>								
+										<p>This Park &amp; Ride provides connection to Line 2</p>
+										<div class="arrow-container">
+											<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M7.24285 0.52827C7.5032 0.26792 7.92531 0.26792 8.18566 0.52827L12.6571 4.99967L8.18566 9.47108C7.92531 9.73143 7.5032 9.73143 7.24285 9.47108C6.9825 9.21073 6.9825 8.78862 7.24285 8.52827L10.0095 5.76161H0.666667C0.298477 5.76161 0 5.46313 0 5.09494C0 4.72675 0.298477 4.42827 0.666667 4.42827H10.2L7.24285 1.47108C6.9825 1.21073 6.9825 0.788619 7.24285 0.52827Z" fill="currentColor"></path>
+											</svg>
 										</div>
+										<a href="" class="clickable-card-link">Learn more</a>
+									</div>
+									<div class="card basic-card">
+										<p class="card__title">
+											Gold permit
+
+											</p>
+										<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -3878,8 +3898,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Millennium">
 										<h4>Location</h4>
 
@@ -3910,7 +3930,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -3975,7 +3995,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Millennium"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -4005,7 +4025,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Millennium">
+									<div class="" data-station="Millennium">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -4016,31 +4036,31 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card  unavailable">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+										</p>
+											<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -4097,8 +4117,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Nepean Woods">
 										<h4>Location</h4>
 
@@ -4139,7 +4159,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -4204,7 +4224,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Nepean Woods"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -4234,7 +4254,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Nepean Woods">
+									<div class="" data-station="Nepean Woods">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -4245,31 +4265,31 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card  unavailable">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+										</p>
+											<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -4322,8 +4342,8 @@
 							<!-- <div class="parking-lot--info-box--image-container">
 																							<img src="https://www.octranspo.com/images/files/stage2/algonquin-stn-card.jpg" alt="Place d’Orleans station">
 																						</div> -->
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div
 										class=""
 										data-station="Place d’Orleans"
@@ -4358,7 +4378,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -4477,7 +4497,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Place d’Orléans"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -4510,7 +4530,7 @@
 									</div>
 
 									<div
-										class="info-group resources"
+										class=""
 										data-station="Place d’Orleans"
 									>
 										<h4>Related resources</h4>
@@ -4538,28 +4558,28 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card ">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status available icon-sm icon--available">
+											</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers Gold permits.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 
 										<p class="icon-sm icon--warning border-top note">
@@ -4572,8 +4592,8 @@
 										</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -4630,8 +4650,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Ray Friel">
 										<h4>Location</h4>
 
@@ -4657,7 +4677,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -4722,7 +4742,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Ray Friel"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -4753,7 +4773,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Rayfriel">
+									<div class="" data-station="Rayfriel">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -4764,25 +4784,24 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
-
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+								<div class="column gap">
+									<div class="card basic-card">
+										<p class="card__title">
+											Gold permit
+											</p>
+										<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours unavailable">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card">
+										<p class="card__title">
+											Free parking
 
-											<p class="parking status status--not-avail">
+										</p>
+											<p class="unavailable-tag">
 												Unavailable
 											</p>
-										</div>
 
 										<p>
 											<a href="#PR-permit-types">Regular Parking Permits</a> are
@@ -4790,8 +4809,8 @@
 										</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -4871,8 +4890,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Riverview">
 										<h4>Location</h4>
 
@@ -4902,7 +4921,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -4967,7 +4986,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Riverview"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -4996,7 +5015,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Riverview">
+									<div class="" data-station="Riverview">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -5007,31 +5026,31 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card  unavailable">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+										</p>
+											<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -5088,8 +5107,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Strandherd">
 										<h4>Location</h4>
 
@@ -5119,7 +5138,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -5184,7 +5203,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Strandherd"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -5214,7 +5233,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Strandherd">
+									<div class="" data-station="Strandherd">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -5225,31 +5244,31 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card  unavailable">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+										</p>
+											<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -5306,8 +5325,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Terry Fox">
 										<h4>Location</h4>
 
@@ -5337,7 +5356,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -5402,7 +5421,7 @@
 									</div>
 
 									<div
-										class="info-group connecting-routes"
+										class=""
 										data-station="Terry Fox"
 									>
 										<h4>Connecting stations and routes</h4>
@@ -5431,7 +5450,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Terry Fox">
+									<div class="" data-station="Terry Fox">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -5442,28 +5461,28 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card  unavailable">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+										</p>
+											<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-										<!-- <div class="travel-plan-banner">
+											<!-- <div class="travel-plan-banner">
 																			<a target="_blank" class="btn-get-travel-plan" href="https://plan.octranspo.com/plan"><span>Get your travel plan</span></a>
-																			<p class="status available icon-sm icon--available ">Available</p>
+																			<p class="available-tag ">Available</p>
 																		</div> -->
 
 										<p>This parking lot offers free parking.</p>
@@ -5476,8 +5495,8 @@
 										</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
@@ -5527,8 +5546,8 @@
 																					</div> -->
 
 						<div class="parking-lot--info-box--body">
-							<div class="grid-2fr-1fr">
-								<div class="column">
+							<div class="parking-lot-content">
+								<div class="column gap-md">
 									<div class="" data-station="Trim">
 										<h4>Location</h4>
 
@@ -5557,7 +5576,7 @@
 										</div>
 									</div>
 
-									<div class="info-group offers">
+									<div class="">
 										<h4>Types of parking spaces</h4>
 
 										<ul class="info-group--offers">
@@ -5621,7 +5640,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group connecting-routes" data-station="Trim">
+									<div class="" data-station="Trim">
 										<h4>Connecting stations and routes</h4>
 
 										<p>
@@ -5647,7 +5666,7 @@
 										</ul>
 									</div>
 
-									<div class="info-group resources" data-station="Trim">
+									<div class="" data-station="Trim">
 										<h4>Related resources</h4>
 										<a
 											class="icon-sm icon--pdf"
@@ -5658,31 +5677,31 @@
 									</div>
 								</div>
 
-								<div class="column">
-									<div class="info-card info-card--status unavailable">
-										<div class="info-card--status-heading">
-											<h4>Gold permit</h4>
+								<div class="column gap">
+									<div class="card basic-card  unavailable">
+										<p class="card__title">
+											Gold permit
 
-											<p class="status status--not-avail">Unavailable</p>
-										</div>
+										</p>
+											<p class="unavailable-tag">Unavailable</p>
 
 										<p>Gold permits are not sold at this location.</p>
 									</div>
 
-									<div class="info-card info-card--hours">
-										<div class="info-card--status-heading">
-											<h4>Free parking</h4>
+									<div class="card basic-card ">
+										<p class="card__title">
+											Free parking
 
-											<p class="status available icon-sm icon--available">
+										</p>
+											<p class="available-tag">
 												Available
 											</p>
-										</div>
-
+											
 										<p>This parking lot offers free parking.</p>
 									</div>
 
-									<div class="info-card info-card--next-departures">
-										<h4>Routes &amp; next departures</h4>
+									<div class="card basic-card ">
+										<p class="card__title">Routes &amp; next departures</p>
 
 										<p>Use our Travel Planner to plan your trip:</p>
 
