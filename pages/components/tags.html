@@ -16,9 +16,10 @@
 		<a href="../components/tables.html">Tables</a>
 		<a href="../components/tags.html">Tags</a>
 	</nav>
-    <h1>Tags</h1>
+    <h1 class="main-content">Tags</h1>
     <div class="main-content">
         <h2>Semantic tags</h2>
+        <p>The semantic tag component uses color to convey specific statuses.</p>
         <div class="flex flex-jc-c">
             <p class="tag tag-type__warning">Warning</p>
             <p class="tag tag-type__critical">Critical</p>
@@ -28,60 +29,68 @@
         </div>
         <h3>Usage guide</h3>
         <strong>
-            <p>Overview</p>
+            <p>Customizing text:</p>
         </strong>
-<p>The semantic tag component uses color to convey specific statuses. Each color represents a specific meaning, while the text within the tag can be customized to fit the context. Follow these guidelines to ensure consistency and clarity in your design.</p>
-<strong>
-    <p>Customizing text:</p>
-</strong>
-<ul>
-    <li>While the text within the tags can be customized to fit the specific needs of the designers, the semantic meaning conveyed by the color should remain unchanged.</li>
-    <li>Choose text that clearly represents the status in a concise and understandable manner.</li>
-</ul>
-<p>Examples:</p>
-<div class="example">
-    <table class="width-to-fit align-c">        <tbody>
-            <tr>
-                <td><p class="tag tag-type__warning">Warning</p></td>
-                <td><p class="tag tag-type__critical">Critical</p></td>
-                <td><p class="tag">Neutral</p></td>
-                <td><p class="tag tag-type__info">Info</p></td>
-                <td><p class="tag tag-type__success">Success</p></td>
-            </tr>
-            <tr>
-                <td class="">
-                    <p class="tag tag-type__warning">Warning</p>
-                    <p class="tag tag-type__warning">Out&nbsp;of&nbsp;service</p>
-                    <p class="tag tag-type__warning">Under&nbsp;construction</p>
-                </td>
-                <td class="">
-                    <p class="tag tag-type__critical">Error</p>
-                    <p class="tag tag-type__critical">Cancelled</p>
-                    <p class="tag tag-type__critical">Removed</p>
-                    <p class="tag tag-type__critical">Important</p>
-                </td>
-                <td class="">
-                    <p class="tag tag-type__neutral">Inactive</p>
-                    <p class="tag tag-type__neutral">Planned</p>
-                    <p class="tag tag-type__neutral">Unavailable</p>
-                </td>
-                <td class="">
-                    <p class="tag tag-type__info">Info</p>
-                    <p class="tag tag-type__info">In&nbsp;progress</p>
-                </td>
-                <td class="">
-                    <p class="tag tag-type__success">Complete</p>
-                    <p class="tag tag-type__success">Approved</p>
-                    <p class="tag tag-type__success">Confirmed</p>
-                    <p class="tag tag-type__success">Success</p>
-                    <p class="tag tag-type__success">Normal&nbsp;operation</p>
-                    <p class="tag tag-type__success">Ongoing</p>
-                    <p class="tag tag-type__success">Free</p>
-                </td>
-            </tr>
-        </thead>
-    </table>
-</div>
+        <ul>
+            <li>While the text within the tags can be customized to fit the specific needs of the designers, the semantic meaning conveyed by the color should remain unchanged.</li>
+            <li>Choose text that clearly represents the status in a concise and understandable manner.</li>
+        </ul>
+        <strong>
+            <p>When to use</p>
+        </strong>
+        <p>To represent the status of an element on a page.</p>
+        <strong>
+            <p>How to use</p>
+        </strong>
+        <ul>
+            <li>Within card components: Use to display the status of an item or entity within a card.</li>
+            <li>Within table components: Use to display the status of items within table rows.</li>
+        </ul>
+        <p>Examples:</p>
+        <div class="example">
+            <table class="width-to-fit align-c">
+                <tbody>
+                    <tr>
+                        <td><p class="tag tag-type__warning">Warning</p></td>
+                        <td><p class="tag tag-type__critical">Critical</p></td>
+                        <td><p class="tag">Neutral</p></td>
+                        <td><p class="tag tag-type__info">Info</p></td>
+                        <td><p class="tag tag-type__success">Success</p></td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <p class="tag tag-type__warning">Warning</p>
+                            <p class="tag tag-type__warning">Out&nbsp;of&nbsp;service</p>
+                            <p class="tag tag-type__warning">Under&nbsp;construction</p>
+                        </td>
+                        <td class="">
+                            <p class="tag tag-type__critical">Error</p>
+                            <p class="tag tag-type__critical">Cancelled</p>
+                            <p class="tag tag-type__critical">Removed</p>
+                            <p class="tag tag-type__critical">Important</p>
+                        </td>
+                        <td class="">
+                            <p class="tag tag-type__neutral">Inactive</p>
+                            <p class="tag tag-type__neutral">Planned</p>
+                            <p class="tag tag-type__neutral">Unavailable</p>
+                        </td>
+                        <td class="">
+                            <p class="tag tag-type__info">Info</p>
+                            <p class="tag tag-type__info">In&nbsp;progress</p>
+                        </td>
+                        <td class="">
+                            <p class="tag tag-type__success">Complete</p>
+                            <p class="tag tag-type__success">Approved</p>
+                            <p class="tag tag-type__success">Confirmed</p>
+                            <p class="tag tag-type__success">Success</p>
+                            <p class="tag tag-type__success">Normal&nbsp;operation</p>
+                            <p class="tag tag-type__success">Ongoing</p>
+                            <p class="tag tag-type__success">Free</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <h2>Special tag</h2>
         <p>The Special Tag component is used to draw attention to special or exciting content, helping users quickly identify important updates or new features.</p>
         <div class="flex flex-jc-c">
@@ -90,24 +99,51 @@
         <p>Examples:</p>
         <div class="flex example">
             <p class="tag tag-type__special">New!</p>
-            <p class="tag tag-type__special">New feature</p>
+            <p class="tag tag-type__special">New feature!</p>
+            <p class="tag tag-type__special">Featured</p>
             <p class="tag tag-type__special">Tip</p>
-            <p class="tag tag-type__special">Just launched</p>
+            <p class="tag tag-type__special">Just launched!</p>
             <p class="tag tag-type__special">Updated</p>
             <p class="tag tag-type__special">Update</p>
-            <p class="tag tag-type__special">Coming soon</p>
+            <p class="tag tag-type__special">Coming soon!</p>
             <p class="tag tag-type__special">Upcoming</p>
         </div>
-        <h2>Keyword tag</h2>
-        <p>The Keyword tag component is used to label and organize data within card components or other UI elements. It helps in categorizing information without implying a status or urgency. </p>
+        <h3>Usage guide</h3>
         <strong>
-            <p>When to use:</p>
+            <p>When to use</p>
         </strong>
-<p>The Keyword tag component is designed for simple, neutral labeling without any additional styles. It is ideal for use within card components or other UI elements where a simple text label is sufficient.</p>
+        <p>To draw attention to special or exciting content, helping users quickly identify important updates or new features.</p>
+        <strong>
+            <p>How to use</p>
+        </strong>
+        <ul>
+            <li>Within promotional banner components: Place at the top left corner of the banner.</li>
+            <li>Within tab components: Place beside tab text.</li>
+        </ul>
+        <h2>Keyword tag</h2>
+        <p>The Keyword tag component is used to label and organize data within card components or other UI elements. It helps in categorizing information without implying a status or urgency.</p>
         <div class="flex flex-jc-c">
             <p class="tag tag-type__keyword">Keyword</p>
         </div>
-
+        <p>Examples</p>
+        <div class="flex example">
+            <p class="tag tag-type__keyword">Projects</p>
+            <p class="tag tag-type__keyword">Feature</p>
+        </div>
+        <h3>Usage guide</h3>
+        <strong>
+            <p>When to use:</p>
+        </strong>
+        <p>The Keyword tag component is designed for simple, neutral labeling without any additional styles. It is ideal for use within card components or other UI elements where a simple text label is sufficient.</p>
+        <strong>
+            <p>How to use:</p>
+        </strong>
+        <p>Within card components: Place above card title</p>     
+        <strong>
+            <p>To avoid:</p>
+        </strong>
+        <p>Refrain from making keyword more than one word</p>        
     </div>
+    
 </body>
 </html>
