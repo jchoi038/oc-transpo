@@ -1,6 +1,6 @@
 
 /*** tag styles ***/
-/*Last updated: 2024/07/04 12:34pm*/
+/*Last updated: 2024/07/04 3:55pm*/
 .tag {
   background-color: var(--neutral-bg-color);
   color: var(--neutral-text-color);
@@ -41,7 +41,7 @@
   font-weight: 700;
   text-transform: uppercase;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
-  padding: 6px 0.6rem 5px 0.6rem;
+  padding: 4px 0.6rem 4px 0.6rem;
 }
 .tag-type__special:before {
   content: "";
@@ -50,7 +50,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 1px;
+  margin: 1px 1.5px;
   border-radius: inherit; /* !importanté */
   background-color: white;
   z-index: -1;

@@ -1,107 +1,112 @@
-/* Note styles*/
-/* updated on 2024/07/03 2:12 */
+
+/*Note styles*/
+/* updated on 2024/07/03 3:54 */
 .note {
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-    display: block;
-    border-radius: 0.5rem;
-  }
-  .note .note__heading {
-    display: flex;
-  }
-  .note .note__title {
-    flex-grow: 1;
-    font-weight: 700;
-  }
-  .note__content p:not(:last-child) {
-    margin-bottom: 0.25rem;
-  }
-  .note-warning {
-    padding: 0.75rem 1rem;
-    background: var(--line3--50);
-  }
-  .note-warning .note__title {
-    color: var(--line3--700);
-  }
-  .note-update {
-    padding: 0;
-    border-left: none;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  }
-  .note-update .note__title {
-    margin-bottom: 0 !important;
-    padding: 0.25rem 1rem;
-    color: #000;
-    text-transform: uppercase;
-    background-color: var(--line4--300);
-  }
-  .note-update .note__content {
-    padding: 1rem;
-    background: #fff;
-  }
-  .note-tip {
-    border-color: var(--line4--600);
-    background: transparent;
-  }
-  .note--level0 {
-    padding: 0.5rem;
-    background: transparent;
-    font-size: 0.875rem;
-  }
-  
-  .note__action {
-    margin-top: 1rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-  }
-  
-  .note__type--info .note__action {
-    color: var(--info);
-  }
-  
-  .note__type--warning .note__action {
-    color: var(--warning);
-  }
-  
-  .note__type--positive .note__action {
-    color: var(--positive);
-  }
-  
-  .note__type--negative .note__action {
-    color: var(--negative);
-  }
-  
-  .note__style--filled.note__type--neutral {
-    background-color: var(--charcoal--50);
-  }
-  .note__style--filled.note__type--info {
-    background-color: var(--info-bg-color);
-  }
-  .note__style--filled.note__type--warning {
-    background-color: var(--warning-bg-color);
-  }
-  .note__style--filled.note__type--positive {
-    background-color: var(--positive-bg-color);
-  }
-  .note__style--filled.note__type--negative {
-    background-color: var(--negative-bg-color);
-  }
-  .note__style--bordered {
-    border: 1px solid;
-  }
-  .note__style--bordered.note__type--info {
-    border-color: var(--info-border-color);
-  }
-  .note__style--bordered.note__type--warning {
-    border-color: var(--warning-border-color);
-  }
-  .note__style--bordered.note__type--positive {
-    border-color: var(--positive-border-color);
-  }
-  .note__style--bordered.note__type--negative {
-    border-color: var(--negative-border-color);
-  }
-  
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+}
+.note .note__title {
+  flex-grow: 1;
+  font-weight: 700;
+  line-height: 24px;
+}
+.note.note__type--info > *, .note.note__type--success > *, .note.note__type--warning > *, .note.note__type--critical > * {
+  padding-left: 32px;
+}
+.note.note__type--info::before, .note.note__type--success::before, .note.note__type--warning::before, .note.note__type--critical::before {
+  content: "";
+  display: inline-flex;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 999rem;
+}
+
+.note__type--info::before {
+  background-image: url("https://www.octranspo.com/images/files/icons/alert_info-circled.svg");
+}
+.note__type--warning::before {
+  background-image: url("https://www.octranspo.com/images/files/icons/alert_warning-circled.svg");
+}
+.note__type--success::before {
+  background-image: url("https://www.octranspo.com/images/files/icons/alert_success-circled.svg");
+}
+.note__type--critical::before {
+  background-image: url("https://www.octranspo.com/images/files/icons/alert_critical-circled.svg");
+}
+
+.note__action {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.note__type--info .note__action {
+  color: var(--info);
+}
+
+.note__type--warning .note__action {
+  color: var(--warning);
+}
+
+.note__type--success .note__action {
+  color: var(--success);
+}
+
+.note__type--critical .note__action {
+  color: var(--critical);
+}
+
+.note__desc p:last-of-type {
+  margin-bottom: 0;
+}
+
+.note {
+  background-color: var(--neutral-bg-color);
+}
+.note > *, .note p {
+  color: var(--neutral-text-color);
+}
+
+.note__type--special {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+}
+
+.note__type--info {
+  background-color: var(--info-bg-color);
+}
+.note__type--info > *, .note__type--info p {
+  color: var(--info-text-color);
+}
+.note__type--warning {
+  background-color: var(--warning-bg-color);
+}
+.note__type--warning > *, .note__type--warning p {
+  color: var(--warning-text-color);
+}
+.note__type--success {
+  background-color: var(--success-bg-color);
+}
+.note__type--success > *, .note__type--success p {
+  color: var(--success-text-color);
+}
+.note__type--critical {
+  background-color: var(--critical-bg-color);
+}
+.note__type--critical > *, .note__type--critical p {
+  color: var(--critical-text-color);
+}
+
+/*END Note styles*/
