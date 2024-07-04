@@ -1,4 +1,4 @@
-// /*Util*/
+/*Util start*/
 section.divided{
     margin-bottom: 20rem;
 }
@@ -25,7 +25,7 @@ section.divided{
     border-radius: 0.5rem;
 }
 
-.visually-hidden {
+.visually-hidden{
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
@@ -35,7 +35,7 @@ section.divided{
     clip: rect(0, 0, 0, 0) !important;
     white-space: nowrap !important;
     border: 0 !important;
-    &-mobile{
+    &-for-mobile{
         @include media-breakpoint-down(xs) {
             position: absolute !important;
             width: 1px !important;
@@ -184,4 +184,47 @@ section.divided{
 				}
 			}
 
-/*Util end*/
+// alignment
+.align {
+    &-c{
+        // center align
+        margin: auto;
+    }
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex !important;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.flex-dir-row {
+    flex-direction: row;
+}
+
+.flex-dir-col {
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.flex-jc-c {
+    justify-content: center;
+}
+
+.flex-jc-sb {
+    justify-content: space-between;
+}
+
+.flex-ai-c {
+    align-items: center;
+}
+
+/*end Util*/

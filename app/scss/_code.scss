@@ -1,5 +1,6 @@
+/*Code styles start*/
 pre {
-	background: var(--gray--50);
+	background: var(--gray--25);
 	border: 1px solid var(--gray--100);
     border-radius: 0 0 0.5rem 0.5rem; 
     font-size: 1rem;
@@ -17,6 +18,8 @@ pre {
     border: 2px solid  var(--gray--100);
     justify-content: center;
     margin-bottom: 1rem;
+    background-color: var(--gray--25);
+    border-radius: 4px;
 }
 
 code {
@@ -25,3 +28,9 @@ code {
     font-family: courier, monospace;
     padding: 0 3px;
 }
+
+.code {
+    font-family: monospace;
+    font-size: 1rem;
+}
+/*end Code styles*/

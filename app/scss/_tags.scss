@@ -7,6 +7,7 @@
     width: fit-content;
     padding: 4px 0.5rem 5px 0.5rem;
     margin: 0;
+    margin-bottom: 0.5rem;
     line-height: 100%;
 }
 
@@ -33,7 +34,7 @@
                 content: '';
                 position: absolute;
                 top: 0; right: 0; bottom: 0; left: 0;
-                margin: 1.5px;
+                margin: 1px;
                 border-radius: inherit; /* !importanté */
                 background-color: white;
                 z-index: -1;
@@ -42,11 +43,18 @@
             z-index: 1;
             background: $grad-all;
             color: var(--charcoal--800);
-            border-image:  1/1.5px;
+            border-image:  1/1px;
             background-clip: padding-box;
             font-weight: 700;
             text-transform: uppercase;
             box-shadow: $general-shadow1;
+            padding: 5px 0.5rem 4px 0.5rem;
+        }
+        &__keyword{
+            background-color: transparent;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--charcoal--800);
         }
     }
 }

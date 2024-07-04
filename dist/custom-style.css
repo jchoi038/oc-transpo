@@ -42,7 +42,7 @@ CSS can also be applied to specific breakpoints using "@include media-breakpoint
 
 More information on the grid system is available at https://getbootstrap.com/docs/4.0/layout/grid/
 */
-/*Colours*/
+/*Colours start*/
 :root {
   --line1--50: #FCF4F0;
   --line1--100: #FCE4D9;
@@ -112,6 +112,7 @@ More information on the grid system is available at https://getbootstrap.com/doc
   --transparent--200: hsl(0, 0%, 100%, 40%);
   --transparent--500: hsl(0, 0%, 100%, 60%);
   --transparent--800: hsl(0, 0%, 100%, 95%);
+  --gray--25: #fcfcfc;
   --gray--50: #F8F8F8;
   --gray--100: #E8EAED;
   --gray--200: #CED6DE;
@@ -194,7 +195,7 @@ More information on the grid system is available at https://getbootstrap.com/doc
   border-radius: 0.5rem;
 }
 
-/*Colors end*/
+/*end Colors*/
 .bg-gradient-red:before {
   content: "";
   background: linear-gradient(#900902, #FF0B0B, #FFFF84);
@@ -1386,2117 +1387,6 @@ hgroup h1, hgroup h2, hgroup h3, hgroup h4, hgroup h5, hgroup h6, hgroup th {
   .related-news h2.related-news-title, .related-news h3.related-news-title {
     margin-bottom: 28px;
   }
-}
-
-@media (max-width: 767.98px) {
-  .row .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-.col-third {
-  flex: 0 0 33.333%;
-  max-width: 33.333%;
-}
-
-.col-two-thirds {
-  flex: 0 0 66.666%;
-  max-width: 66.666%;
-}
-
-@media (min-width: 576px) {
-  .col-sm-third {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-  .col-sm-two-thirds {
-    flex: 0 0 66.666%;
-    max-width: 66.666%;
-  }
-}
-@media (min-width: 768px) {
-  .col-md-third {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-  .col-md-fourth {
-    flex: 0 0 24.4%;
-    max-width: 24.4%;
-  }
-  .app-gallery-filter {
-    padding-right: 1px !important;
-  }
-  .col-md-two-thirds {
-    flex: 0 0 66.666%;
-    max-width: 66.666%;
-  }
-}
-@media (min-width: 992px) {
-  .col-lg-third {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-  .col-lg-fourth {
-    flex: 0 0 24.4%;
-    max-width: 24.4%;
-  }
-  .col-lg-two-thirds {
-    flex: 0 0 66.666%;
-    max-width: 66.666%;
-  }
-}
-@media (min-width: 1200px) {
-  .col-xl-third {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-  .col-xl-two-thirds {
-    flex: 0 0 66.666%;
-    max-width: 66.666%;
-  }
-}
-@media (min-width: 768px) {
-  .mobile-only {
-    display: none;
-  }
-}
-@media (max-width: 767.98px) {
-  .desktop-only {
-    display: none;
-  }
-}
-iframe {
-  max-width: 100%;
-}
-
-.basic-content, .content-container, .ready-for-rail {
-  line-height: 1.4rem;
-  letter-spacing: 0.015em;
-}
-@media (max-width: 767.98px) {
-  .basic-content, .content-container, .ready-for-rail {
-    padding: 0 15px;
-  }
-  .basic-content main .col-8, .content-container main .col-8, .ready-for-rail main .col-8 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-.basic-content main, .content-container main, .ready-for-rail main {
-  /* padding-left: 16px;
-  padding-right: 16px; */
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
-}
-@media (min-width: 768px) {
-  .basic-content, .content-container, .ready-for-rail {
-    /* main, .row--breadcrumbs > div {
-    	padding-left: 0;
-    	padding-right: 0;
-    } */
-  }
-  .basic-content main, .content-container main, .ready-for-rail main {
-    margin-bottom: 55px;
-  }
-}
-.basic-content ol, .basic-content ul, .content-container ol, .content-container ul, .ready-for-rail ol, .ready-for-rail ul {
-  list-style: disc;
-  padding-left: 16px;
-  padding-left: 1rem;
-  margin-left: 30px;
-  margin-left: 1.875rem;
-}
-.basic-content ol li, .basic-content ul li, .content-container ol li, .content-container ul li, .ready-for-rail ol li, .ready-for-rail ul li {
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
-  padding-left: 15px;
-  padding-left: 0.9375rem;
-}
-.basic-content ul, .content-container ul, .ready-for-rail ul {
-  list-style: disc;
-}
-.basic-content ul ul, .content-container ul ul, .ready-for-rail ul ul {
-  list-style: circle;
-}
-.basic-content ul ul ul, .content-container ul ul ul, .ready-for-rail ul ul ul {
-  list-style: square;
-}
-.basic-content ol, .content-container ol, .ready-for-rail ol {
-  list-style: decimal;
-}
-.basic-content ol ol, .content-container ol ol, .ready-for-rail ol ol {
-  list-style-type: lower-latin;
-}
-.basic-content ol ol ol, .content-container ol ol ol, .ready-for-rail ol ol ol {
-  list-style-type: lower-roman;
-}
-@media (min-width: 576px) {
-  .basic-content .four_image, .content-container .four_image, .ready-for-rail .four_image {
-    padding: 0 27.5px;
-  }
-}
-.basic-content .four_image.row .img, .content-container .four_image.row .img, .ready-for-rail .four_image.row .img {
-  padding-right: 5px;
-  padding-left: 0;
-}
-@media (min-width: 576px) {
-  .basic-content .three_image, .content-container .three_image, .ready-for-rail .three_image {
-    padding: 0 27.5px;
-  }
-  .basic-content .three_image .img, .content-container .three_image .img, .ready-for-rail .three_image .img {
-    flex: 0 0 33%;
-  }
-}
-.basic-content .three_image.row .img, .content-container .three_image.row .img, .ready-for-rail .three_image.row .img {
-  padding-right: 5px;
-  padding-left: 0;
-}
-
-.row.section-usage > div {
-  padding: 0;
-}
-
-main table {
-  table-layout: fixed;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-main table th, main table td {
-  padding: 14px;
-}
-main thead td, main thead th {
-  background-color: #434343;
-  border: 1px solid #434343;
-  border-bottom: none;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-  color: #FFFFFF;
-  font-weight: bold;
-}
-main thead.small-header {
-  font-size: 14px;
-  font-size: 0.875rem;
-}
-main thead th:first-child {
-  text-align: left;
-}
-main thead a {
-  color: #fff;
-}
-main thead a:hover, main thead a:focus {
-  color: #C5C5C5;
-}
-main tbody {
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid #979797;
-}
-main tbody:first-child {
-  border-top: 1px solid #979797;
-}
-main tbody tr:nth-child(odd) {
-  background-color: #fff;
-}
-main tbody tr:nth-child(even) {
-  background-color: #F1F1F1;
-}
-main tbody tr td {
-  color: #000000;
-  font-size: 14px;
-  font-size: 0.875rem;
-  margin: 0;
-  padding: 18px 14px;
-  text-align: center;
-}
-main tbody tr td.icon {
-  width: 50px;
-}
-main tbody tr td:first-child {
-  text-align: left;
-}
-main tbody tr td.information {
-  background: #fff;
-  text-align: center;
-}
-main tbody tr td.information p {
-  font-weight: normal;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  color: #595854;
-}
-main tbody tr td.information a {
-  color: #595854;
-}
-main tbody tr th {
-  text-align: left;
-  padding: 0 10px;
-  background-color: #4D4C4C;
-  color: #FFFFFF;
-  font-weight: bold;
-  border-bottom: 1px solid #979797;
-}
-main tbody tr th a, main tbody tr th p, main tbody tr th span {
-  color: #FFFFFF;
-  font-weight: bold;
-}
-main tbody p {
-  color: #000000;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin: 0;
-}
-main tbody span, main tbody span > a {
-  color: #595854;
-  font-size: 12px;
-  font-size: 0.75rem;
-}
-main table.charHeader.blue-table thead th, main table.charHeader.blue-table .emptyCell {
-  background: #005E83;
-}
-main table.charHeader.red-table thead th, main table.charHeader.red-table .emptyCell {
-  background: #C92D2D;
-}
-main table.charHeader.green-table thead th, main table.charHeader.green-table .emptyCell {
-  background: #038700;
-}
-main table.venue-detail-table h2 {
-  font-size: 20px;
-  font-size: 1.25rem;
-  padding-top: 0;
-}
-
-table thead.uppercase, table tbody.uppercase {
-  text-transform: uppercase;
-}
-table thead tr.uppercase, table thead td.uppercase, table thead th.uppercase, table tbody tr.uppercase, table tbody td.uppercase, table tbody th.uppercase {
-  text-transform: uppercase;
-}
-
-.venue-td-place h2 {
-  font-size: 32px;
-  font-size: 2rem;
-}
-
-/*------------------------ ROUTE TYPE TABLE HEADERS ----------------------*/
-th.rtRapid {
-  background-color: #0056b8 !important;
-  color: #fff !important;
-}
-
-th.rtFrequent {
-  background-color: #d74100 !important;
-  color: #fff !important;
-}
-
-th.rtConnexion {
-  background-color: #ac5b8c !important;
-  color: #fff !important;
-}
-
-th.rtLocal {
-  background-color: #6e6e70 !important;
-  color: #fff !important;
-}
-
-th.rtLocalLimit {
-  background-color: #e6e6e6 !important;
-  color: #58595b !important;
-}
-
-th.rtConfed {
-  background-color: #da291c !important;
-  color: #fff !important;
-}
-
-th.rtTrillium { /*background-color: #65a233 !important;*/
-  background-color: #51831D !important;
-  color: #fff !important;
-}
-
-th.rtNight {
-  background-color: white !important;
-  color: #0056b8 !important;
-}
-
-/*---------------------- ROUTE TYPE TABLE HEADERS END --------------------*/
-/*************************Style Guide*******************************/
-.style-guide .section {
-  margin-top: 60px;
-}
-.style-guide .section > h4 {
-  width: 100%;
-  font-size: 16px;
-  color: #ACACAC;
-  margin-bottom: 20px;
-}
-
-ul.bulleted-list {
-  list-style-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/black-arrow-bulleted list.svg");
-}
-ul.bulleted-list li {
-  font-weight: 600;
-  padding-left: 0;
-}
-ul.bulleted-list li a {
-  color: #950819;
-}
-
-.important-announcement {
-  border: 1px solid #CCCCCC;
-  border-top: 4px solid #E9B500;
-  border-radius: 2px;
-  background-color: #F5F5F5;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-  font-weight: bold;
-  margin: 16px 0;
-  margin: 1rem 0;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-}
-.important-announcement a {
-  display: block;
-  color: #010101;
-  text-decoration: none;
-  /* line-height: 55px; */
-  line-height: 1.4;
-  padding-left: 46px;
-  padding-top: 17px;
-  padding-bottom: 18px;
-  padding-right: 28px;
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/arrow-in-circle.svg") no-repeat center right;
-}
-.important-announcement a:before {
-  content: "";
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/Location.png") no-repeat top left;
-  height: 34px;
-  width: 46px;
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 0;
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  margin-top: -17px;
-}
-.important-announcement a img {
-  vertical-align: middle;
-  padding-right: 12px;
-}
-.important-announcement.important-announcement-img img {
-  max-height: 40px;
-  max-width: 46px;
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  margin-top: -20px;
-}
-.important-announcement.important-announcement-img a:before {
-  display: none;
-}
-.costs .important-announcement p {
-  margin: 16px 0;
-  margin: 1rem 0;
-}
-
-.important-announcement.r4r-lyon a:before {
-  content: "";
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/360_lyon.png") no-repeat top left;
-  height: 34px;
-  width: 34px;
-  background-size: cover;
-  background-position: center;
-  margin-right: 12px;
-}
-
-a.travel-planner-banner {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/Travel planner 1.png") no-repeat center left;
-  background-size: contain;
-  clear: both;
-  display: block;
-  height: 101px;
-  text-indent: -1000%;
-  overflow: hidden;
-  width: 100%;
-}
-
-a.travel-planner-banner-alt {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/Travel planner 2.png") no-repeat center left;
-  background-size: contain;
-  clear: both;
-  display: block;
-  height: 68px;
-  text-indent: -1000%;
-  overflow: hidden;
-  width: 100%;
-}
-
-.pdf-icon {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/PDF-icon.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.map-icon {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/map-icon.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.travel-planner-icon {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/travel-planner-icon.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.image-icon {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/image-icon.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.bus-icon {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/bus-black-icon.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.train-icon {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/train-black-icon.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.park-and-ride-icon {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/parkandride-icon.svg");
-  width: 15px;
-  height: 20px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.station-icon {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/station-icon.svg");
-  width: 22px;
-  height: 22px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-tty-grey {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-tty-grey.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-tty-blue {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-tty-blue.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-phone-grey {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-phone-grey.svg");
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-tty-black {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-tty-black.svg");
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-phone-blue {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-phone-blue.svg");
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-phone-black {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-phone-black.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-mail-grey {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-mail-grey.svg");
-  background-size: contain;
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-mail-blue {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-mail-blue.svg");
-  background-size: contain;
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-mail-black {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-mail-black.svg");
-  background-size: contain;
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-email-grey {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-email-grey.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-email-blue {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-email-blue.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-.icon-contact-email-black {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-email-black.svg");
-  width: 30px;
-  height: 30px;
-  margin-right: 37px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
-a.contact-link-tty-grey {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-tty-grey.svg");
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.contact-link-tty-blue {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-tty-blue.svg");
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.contact-link-phone-grey {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-phone-grey.svg");
-  background-position: center;
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 20px;
-  font-weight: 600;
-}
-
-a.contact-link-tty-black {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-tty-black.svg");
-  background-position: center;
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.contact-link-phone-blue {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-phone-blue.svg");
-  background-position: center;
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 20px;
-  font-weight: 600;
-}
-
-a.contact-link-phone-black {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-phone-black.svg");
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 20px;
-  font-weight: 600;
-}
-
-a.contact-link-mail-grey {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-mail-grey.svg");
-  background-size: contain;
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.contact-link-mail-blue {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-mail-blue.svg");
-  background-size: contain;
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.contact-link-mail-black {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-mail-black.svg");
-  background-size: contain;
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.contact-link-email-grey {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-email-grey.svg");
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.contact-link-email-blue {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-email-blue.svg");
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.contact-link-email-black {
-  background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/contact/icon-contact-email-black.svg");
-  min-height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left center;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-.info-box {
-  background: #fff;
-  border: 2px solid #016b9d;
-  border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-  margin: 1.5em auto;
-  padding: 30px 20px 40px;
-}
-@media (min-width: 768px) {
-  .info-box {
-    max-width: 60%;
-  }
-}
-
-.documentation div.important-announcements {
-  background: #fce894;
-  border: 1px solid #cbad30;
-  padding: 15px 15px 0px 15px;
-  margin: 8px 0px;
-  width: calc(100% - 12px);
-  height: contain;
-  overflow: hidden;
-  font-size: 1.1em;
-  font-weight: 400;
-}
-.documentation div.important-announcements h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.documentation div.important-announcements ul {
-  margin-left: 0 !important;
-}
-.documentation div.important-announcements li {
-  float: left;
-  background: url(http://www.octranspo.com/images/ulArrow.gif) no-repeat 0 5px;
-  list-style: none !important;
-  padding: 0 0 0 10px;
-  margin: 0 25px 15px 0 !important;
-}
-
-.quote {
-  padding-right: 27.5px;
-  padding-left: 27.5px;
-}
-.quote p.author-name {
-  font-style: italic;
-  font-weight: 600;
-}
-
-.quote-box {
-  border: 1px solid #9F9F9F;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-  padding-right: 27.5px;
-  padding-left: 27.5px;
-}
-.quote-box p.author-name {
-  font-weight: 600;
-}
-
-a.read-more-btn, a.green-btn, a.blue-btn {
-  color: #fff;
-  font-weight: 600;
-  font-size: 15px;
-  text-decoration: none;
-  background: #038700;
-  padding: 0 25px 0 8px;
-  border: 1px solid #038700;
-  border-radius: 2px;
-  line-height: 30px;
-  display: inline-block;
-  position: relative;
-}
-a.read-more-btn:after, a.green-btn:after, a.blue-btn:after {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/white-arrow-closed.svg) no-repeat 0px 0px;
-  background-size: 7px 11px;
-  content: "";
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -5px;
-  width: 7px;
-  height: 11px;
-  display: block;
-}
-a.read-more-btn.btn-large, a.green-btn.btn-large, a.blue-btn.btn-large {
-  font-size: 1.2em;
-  padding: 10px 35px 10px 25px;
-}
-a.read-more-btn.btn-large:after, a.green-btn.btn-large:after, a.blue-btn.btn-large:after {
-  right: 13px;
-}
-
-a.blue-btn {
-  background: #016b9d;
-  border: 1px solid #016b9d;
-}
-
-a.read-more, a.read-less {
-  color: #000000;
-  font-size: 15px;
-  font-weight: bold;
-  padding-left: 15px;
-}
-
-a.read-more {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/green-arrow-closed.svg") no-repeat left center;
-}
-
-a.read-less {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/green-arrow.svg") no-repeat left center;
-}
-
-figure figcaption {
-  color: #515151;
-  font-size: 14px;
-  font-style: italic;
-  margin-top: 8px;
-}
-
-a.img-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/image-icon.svg) no-repeat left center;
-  min-height: 30px;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.pdf-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/PDF-icon.svg) no-repeat left center;
-  min-height: 30px;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.map-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/map-icon.svg) no-repeat left center;
-  min-height: 30px;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.travel-planner-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/travel-planner-icon.svg) no-repeat left center;
-  min-height: 31px;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 31px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.bus-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/bus-black-icon.svg) no-repeat left center;
-  min-height: 30px;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 30px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.train-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/train-black-icon.svg) no-repeat left center;
-  min-height: 31px;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 31px;
-  padding-left: 40px;
-  font-weight: 600;
-}
-
-a.park-and-ride-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/parkandride-icon.svg) no-repeat left center;
-  min-height: 20px;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 20px;
-  padding-left: 30px;
-  font-weight: 600;
-}
-
-a.station-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/station-icon.svg) no-repeat left center;
-  min-height: 20px;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 20px;
-  padding-left: 30px;
-  font-weight: 600;
-}
-
-.event-destination {
-  background-color: #F5F5F5;
-  border: 1px solid #9F9F9F;
-  border-radius: 2px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  margin-top: 10px;
-}
-.event-destination p {
-  display: inline;
-  margin: 0;
-}
-.event-destination p.title {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-}
-.event-destination p.title span {
-  display: inline-block;
-}
-.event-destination .venueDescription p {
-  display: block;
-  margin: 16px 0;
-  margin: 1rem 0;
-}
-.event-destination a.venue-info, .event-destination a.direction-link {
-  color: #000000;
-  font-weight: bold;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  text-align: right;
-}
-@media (max-width: 991.98px) {
-  .event-destination a.venue-info, .event-destination a.direction-link {
-    padding: 0;
-    text-align: inherit;
-    margin-top: 15px;
-  }
-}
-.event-destination a.direction-link {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/right-arrow-black.svg) no-repeat right center;
-  padding-right: 15px;
-  max-height: 20px;
-}
-.event-destination a.direction-link span.travel-planner-icon-small {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/small-travel-icon.svg) no-repeat right center;
-  height: 20px;
-  width: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.event-destination form {
-  margin-top: 0;
-  padding: 0;
-}
-.event-destination form select {
-  margin: 0 0 1em;
-  width: 100%;
-}
-.event-destination .submit {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/right-arrow-black.svg) no-repeat right center;
-  padding-right: 15px;
-  padding-left: 27.5px;
-  max-height: 20px;
-  text-align: right;
-}
-.event-destination .submit span.travel-planner-icon-small {
-  background: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/small-travel-icon.svg) no-repeat right center;
-  height: 20px;
-  width: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.event-destination input.direction-link {
-  background: none transparent;
-  border: none;
-  color: #000000;
-  font-weight: bold;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 18.75px;
-  margin: 0;
-  padding: 0;
-  text-align: right;
-  text-decoration: underline;
-}
-
-.school-icon, .colleges-universities-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/school.svg);
-  height: 18px;
-  width: 22px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-}
-
-.library-icon, .museums-heritage-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/library.svg);
-  height: 21px;
-  width: 19px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-}
-
-.red-bus-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/bus.svg);
-  height: 20px;
-  width: 17px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-}
-
-.red-train-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/train.svg);
-  height: 23px;
-  width: 18px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-}
-
-.out-of-town-connections-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/plane.svg);
-  height: 24px;
-  width: 24px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-}
-
-.shopping-icon, .shopping-markets-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/shopping.svg);
-  height: 21px;
-  width: 19px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-}
-
-.event-space-icon, .sports-shows-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/event-space.svg);
-  height: 21px;
-  width: 20px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-.activity-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/activity.svg);
-  height: 21px;
-  width: 24px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-}
-
-.scenery-icon, .parks-icon {
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/scenery.svg);
-  height: 22px;
-  width: 19px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-}
-
-ul.nav_categories--venues label .school-icon, ul.nav_categories--venues label .colleges-universities-icon, ul.nav_categories--venues label .library-icon, ul.nav_categories--venues label .museums-heritage-icon, ul.nav_categories--venues label .red-bus-icon, ul.nav_categories--venues label .red-train-icon, ul.nav_categories--venues label .out-of-town-connections-icon, ul.nav_categories--venues label .shopping-icon, ul.nav_categories--venues label .shopping-markets-icon, ul.nav_categories--venues label .event-space-icon, ul.nav_categories--venues label .sports-shows-icon, ul.nav_categories--venues label .activity-icon, ul.nav_categories--venues label .scenery-icon, ul.nav_categories--venues label .parks-icon {
-  margin-right: 5px;
-}
-
-.green-font {
-  color: #2F9A3F;
-}
-
-.blue-font {
-  color: #016b9d;
-}
-
-.red-font {
-  color: #CB2C2C;
-}
-
-.grey-font {
-  color: #8B8B8B;
-}
-
-.right {
-  float: right;
-}
-
-.btn-get-travel-plan {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/btn-get-travel-plan-bg.jpg") no-repeat top left;
-  border: 1px solid #C4C4C4;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-  display: block;
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-  max-width: 683px;
-  height: 93px;
-  position: relative;
-}
-.btn-get-travel-plan:before {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/btn-get-travel-plan-bg-txt-icon.png") no-repeat -1px -1px;
-  background-size: 283px 93px;
-  content: "";
-  display: block;
-  height: 100%;
-  margin-bottom: -2px;
-  max-width: 100%;
-  overflow: hidden;
-  text-indent: -1000%;
-  width: 100%;
-}
-.fr .btn-get-travel-plan:before {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/btn-get-travel-plan-bg-txt-icon-fr.png") no-repeat -1px -1px;
-  background-size: 283px 93px;
-}
-.btn-get-travel-plan:after {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/arrow-in-circle.svg") no-repeat center right;
-  content: "";
-  display: block;
-  height: 22px;
-  margin-top: -11px;
-  overflow: hidden;
-  position: absolute;
-  right: 16px;
-  text-indent: -1000%;
-  top: 50%;
-  width: 22px;
-}
-@media (max-width: 767.98px) {
-  .btn-get-travel-plan {
-    height: 50px;
-  }
-  .btn-get-travel-plan:before {
-    background-size: contain;
-  }
-}
-
-.btn-get-travel-plan-alt {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/btn-get-travel-plan-bg-alt.jpg") no-repeat 0 0;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-  display: block;
-  height: 60px;
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-  max-width: 685px;
-  position: relative;
-  text-align: center;
-}
-.btn-get-travel-plan-alt:before {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/btn-get-travel-plan-bg-alt-a.svg") no-repeat 0 0;
-  content: "";
-  height: 34px;
-  left: 14px;
-  margin-top: -17px;
-  position: absolute;
-  top: 50%;
-  width: 28px;
-}
-.btn-get-travel-plan-alt:after {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/btn-get-travel-plan-bg-alt-b.svg") no-repeat 0 0;
-  content: "";
-  height: 34px;
-  margin-top: -17px;
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  width: 28px;
-}
-.btn-get-travel-plan-alt span {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/btn-get-travel-plan-bg-alt-txt.png") no-repeat 0 0;
-  background-size: contain;
-  display: inline-block;
-  overflow: hidden;
-  margin: 2.773723%;
-  max-width: 90%;
-  text-indent: -1000%;
-  width: 301px;
-}
-.fr .btn-get-travel-plan-alt span {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/btn-get-travel-plan-bg-alt-txt-fr.png") no-repeat 0 0;
-  background-size: contain;
-  width: 403px;
-}
-@media (max-width: 767.98px) {
-  .btn-get-travel-plan-alt {
-    height: auto;
-  }
-  .btn-get-travel-plan-alt:before, .btn-get-travel-plan-alt:after {
-    display: none;
-  }
-}
-
-/*********form fields ***********/
-form {
-  margin-top: 30px;
-  padding: 0;
-}
-form h4 {
-  padding-bottom: 20px;
-}
-form a {
-  color: #000000;
-}
-form label {
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-form label.error, form .error p {
-  color: #b71703;
-  display: block;
-  font-size: 0.875em;
-  font-weight: bold;
-  margin-top: -20px;
-  margin-bottom: 30px;
-}
-form .label-number {
-  display: none;
-}
-form textarea, form input[type=text], form input[type=email], form input[type=date], form input[type=number], form input[type=password], form input[type=search], form input[type=tel], form input[type=time], form input[type=url], form input[type=week] {
-  width: 100%;
-  border: 1px solid #B0B0B0;
-  padding: 10px;
-  margin-bottom: 25px;
-}
-form textarea.error, form input[type=text].error, form input[type=email].error, form input[type=date].error, form input[type=number].error, form input[type=password].error, form input[type=search].error, form input[type=tel].error, form input[type=time].error, form input[type=url].error, form input[type=week].error {
-  border: 1px solid #b71703;
-}
-form input[type=checkbox] {
-  margin-bottom: 25px;
-}
-form textarea {
-  min-height: 125px;
-}
-form .radio {
-  display: inline-block;
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-form input[type=submit].red, form button.red {
-  background-color: #CB2C2C;
-  border: 1px solid #CB2C2C;
-}
-
-input[type=submit], button, .button {
-  color: #fff;
-  font-weight: 600;
-  font-size: 15px;
-  text-decoration: none;
-  background-color: #038700;
-  padding: 0 25px 0 8px;
-  border: 1px solid #038700;
-  border-radius: 2px;
-  line-height: 30px;
-  display: inline-block;
-  background-image: url(https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/white-arrow-closed.svg);
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  -webkit-appearance: none;
-  margin-top: 5px;
-}
-
-input[type=submit].blue, button.blue, .button.blue {
-  background-color: #016b9d;
-  border: 1px solid #016b9d;
-}
-
-form.bg-grey {
-  border: 1px solid #9F9F9F;
-  border-radius: 2px;
-  background-color: #F5F5F5;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  padding: 15px !important;
-}
-
-.app-gallery h2 {
-  margin: 0.5em 0;
-}
-@media (min-width: 768px) {
-  .app-gallery img {
-    display: block;
-    float: left;
-    max-width: 32%;
-    padding-right: 1%;
-  }
-}
-
-.channel_form label {
-  display: block;
-}
-.channel_form .file_existing {
-  display: none;
-}
-
-.bg-grey h2 {
-  color: #016b9d;
-  font-size: 20px;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-.bg-grey .freeform-row .freeform-column .freeform-label {
-  font-weight: 600;
-}
-.bg-grey input[type=checkbox] {
-  margin-bottom: 0;
-}
-.bg-grey .freeform-row .freeform-column .freeform-input {
-  margin-bottom: 0;
-}
-.bg-grey p {
-  font-size: 12px;
-  font-size: 0.75rem;
-  margin: 0;
-}
-
-#zoomContainer img {
-  max-width: none;
-}
-
-#ui-datepicker-div {
-  font-size: 12px;
-  font-family: "Open Sans", sans-serif;
-  font-stretch: 100%;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  border-color: rgba(0, 0, 0, 0.2);
-}
-#ui-datepicker-div .ui-widget-header {
-  background: #f5f5f5;
-  border: none;
-}
-#ui-datepicker-div th {
-  color: #000000;
-  background-color: #f5f5f5;
-  font-weight: normal;
-  border: 1px solid #cccccc;
-}
-#ui-datepicker-div a.ui-state-default {
-  background: none;
-  border: none;
-  color: #333333;
-}
-
-.k-calendar th {
-  color: #000000;
-}
-
-.border-top--green:before {
-  border-top: 4px solid #37b249;
-  content: "";
-  width: 64px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.border-top--red:before {
-  border-top: 4px solid #e24949;
-  content: "";
-  width: 64px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.border-top--blue:before {
-  border-top: 4px solid #016b9d;
-  content: "";
-  width: 64px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.border-top--yellow:before {
-  border-top: 4px solid #ffc600;
-  content: "";
-  width: 64px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-#cform.bg-grey textarea, #cform.bg-grey input[type=text], #cform.bg-grey input[type=email], #cform.bg-grey input[type=date], #cform.bg-grey input[type=number], #cform.bg-grey input[type=password], #cform.bg-grey input[type=search], #cform.bg-grey input[type=tel], #cform.bg-grey input[type=time], #cform.bg-grey input[type=url], #cform.bg-grey input[type=week] {
-  margin-bottom: 25px;
-}
-
-#cform.bg-grey fieldset {
-  padding: 10px 0;
-}
-
-#cform.bg-grey label {
-  padding: 10px 0;
-}
-#cform.bg-grey label label {
-  padding: 0;
-}
-
-#cform input[type=submit] {
-  color: #fff;
-  margin-top: 5px;
-  padding: 0 25px 0 8px;
-}
-
-hr {
-  border: none;
-  border-top: 2px solid #2D2D2D;
-  clear: both;
-  margin: 1em 0;
-}
-hr.red {
-  border-top: 2px solid #e24949;
-}
-hr.green {
-  border-top: 2px solid #37b249;
-}
-hr.blue {
-  border-top: 2px solid #016b9d;
-}
-hr.yellow {
-  border-top: 2px solid #ffc600;
-}
-
-img.inline-icon-large, img.inline-icon-small, img.inline-icon-medium {
-  display: inline;
-  margin: 0;
-  max-width: 50px;
-  max-height: 50px;
-}
-
-img.inline-icon-medium {
-  max-width: 25px;
-  max-height: 25px;
-}
-
-img.inline-icon-small {
-  max-width: 15px;
-  max-height: 15px;
-}
-
-.horizontal-center {
-  align-items: baseline;
-  display: flex;
-  justify-content: center;
-}
-
-.vertical-center {
-  align-items: center;
-  display: flex;
-  flex-basis: 100%;
-  flex-wrap: wrap;
-}
-.vertical-center p, .vertical-center ul, .vertical-center ol, .vertical-center div {
-  width: 100%;
-}
-
-.detour-map {
-  text-align: center;
-}
-.detour-map img {
-  max-width: 50%;
-}
-
-table ul, table ol, .basic-content table ul, .basic-content table ol, .content-container table ul, .content-container table ol, .ready-for-rail table ul, .ready-for-rail table ol {
-  margin-left: 30px;
-  margin-left: 1.875rem;
-  text-align: left;
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
-}
-table ul li, table ol li, .basic-content table ul li, .basic-content table ol li, .content-container table ul li, .content-container table ol li, .ready-for-rail table ul li, .ready-for-rail table ol li {
-  padding-left: 0;
-}
-table ul ul, table ul ol, table ol ul, table ol ol, .basic-content table ul ul, .basic-content table ul ol, .basic-content table ol ul, .basic-content table ol ol, .content-container table ul ul, .content-container table ul ol, .content-container table ol ul, .content-container table ol ol, .ready-for-rail table ul ul, .ready-for-rail table ul ol, .ready-for-rail table ol ul, .ready-for-rail table ol ol {
-  margin-bottom: 0;
-}
-table ul, .basic-content table ul, .content-container table ul, .ready-for-rail table ul {
-  margin-left: 30px;
-  margin-left: 1.875rem;
-  padding-left: 13px;
-}
-table ul.bulleted-list, .basic-content table ul.bulleted-list, .content-container table ul.bulleted-list, .ready-for-rail table ul.bulleted-list {
-  margin-left: 0;
-}
-
-ul.offset-md-1, .basic-content ul.offset-md-1, .content-container ul.offset-md-1, .ready-for-rail ul.offset-md-1 {
-  margin-left: 12.5%;
-}
-
-.content-container ul.sitemap {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-@media (min-width: 768px) {
-  .content-container ul.sitemap {
-    -moz-column-count: 3;
-    column-count: 3;
-  }
-}
-.content-container ul.sitemap li {
-  padding: 0;
-}
-.content-container ul.sitemap ul {
-  list-style: none;
-  margin: 0 0 0 24px;
-  margin: 0 0 0 1.5rem;
-  padding: 0;
-}
-
-.back-to-top {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/arrow-back-to-top.svg") no-repeat center;
-  background-size: 25px 18px;
-  display: inline-block;
-  height: 18px;
-  margin: 0 5px;
-  overflow: hidden;
-  position: relative;
-  text-indent: -1000%;
-  top: 3px;
-  width: 25px;
-}
-
-.back-to-top-circle {
-  background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/arrow-in-circle-up.svg") no-repeat center;
-  background-size: 19px 19px;
-  display: inline-block;
-  height: 19px;
-  margin: 0 5px;
-  overflow: hidden;
-  position: relative;
-  text-indent: -1000%;
-  top: 3px;
-  width: 19px;
-}
-
-.back-to-top-text {
-  color: #2D2D2D;
-  text-decoration: none;
-}
-.back-to-top-text:hover, .back-to-top-text:focus {
-  text-decoration: underline;
-}
-
-/* "Opens in new tab/window styles */
-.link-new-window {
-  position: relative;
-}
-.link-new-window:after {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z" fill="%23016b9d" /></svg>');
-  content: "";
-  display: inline-block;
-  margin-left: 0.25em;
-  width: 1em;
-  height: 1em;
-  background-size: contain;
-}
-.link-new-window .new-window-tooltip {
-  position: absolute;
-  left: -9000px;
-  width: 0;
-  overflow: hidden;
-}
-.link-new-window:hover .new-window-tooltip, .link-new-window:focus .new-window-tooltip {
-  display: block;
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  width: 18.75rem;
-  border: 1px solid #9f9f9f;
-  background-color: #f5f5f5;
-  color: #2d2d2d;
-  text-align: center;
-  font-size: 0.75em;
-  line-height: 1.2em;
-  padding: 4px 0;
-}
-.link-new-window.reverse:after, .link-new-window.green-btn:after, .link-new-window.blue-btn:after {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z" fill="%23FFFFFF" /></svg>');
-  width: 1em;
-  height: 1em;
-  background-size: contain;
-  margin-top: -7px;
-  margin-right: -3px;
-}
-
-/****Route Icons ******/
-.routeIconsTable span {
-  display: inline-block;
-  height: 2em;
-  text-align: center;
-  vertical-align: middle;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0em 0.3em;
-  padding: auto;
-  line-height: 2em;
-}
-.routeIconsTable span.rt-frequent-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_empty.png");
-  color: white;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-}
-.routeIconsTable span.rt-frequent-limit-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_limited_empty.png");
-  color: #cc3300;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-}
-.routeIconsTable span.rt-local-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/local_regular_empty.png");
-  color: white;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-}
-.routeIconsTable span.rt-local-limit-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/local_limited_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-  color: #6E6E70;
-}
-.routeIconsTable span.rt-rapid-small {
-  background-color: none;
-  background-image: url("https://www.octranspo.com/images/files/route_types/rapid_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-rapid-limit-small {
-  background-color: none;
-  background-image: url("https://www.octranspo.com/images/files/route_types/rapid_limited_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-  color: #0056B8;
-}
-.routeIconsTable span.rt-line2-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/trillium_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-line1-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/line1_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-connexion-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/connexion_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-r2-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/Route-Icon_R2.png");
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 12px;
-  font-weight: normal;
-  color: #65a233;
-  padding: 0 0 0 10px;
-}
-.routeIconsTable span.rt-r1-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/Route-Icon_R1.png");
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 12px;
-  font-weight: normal;
-  color: #da291c;
-  padding: 0 0 0 12px;
-}
-.routeIconsTable span.rt-STO-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/sto_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 12px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-night-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/night-route_empty.png");
-  color: #0066cc;
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 12px;
-  font-weight: normal;
-  padding: 0 0 0 12px;
-}
-.routeIconsTable span.rt-STO-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/sto_empty.png");
-  color: white;
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 12px;
-  font-weight: normal;
-  padding: 0 0 0 0px;
-}
-.routeIconsTable span.rt-frequent-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_empty.png");
-  color: white;
-  background-size: 3.4em 1.9em;
-  width: 3.5em;
-  font-size: 16px;
-  font-weight: normal;
-}
-.routeIconsTable span.rt-frequent-limit-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_limited_empty.png");
-  color: #cc3300;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-}
-.routeIconsTable span.rt-local-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/local_regular_empty.png");
-  color: white;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-}
-.routeIconsTable span.rt-local-limit-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/local_limited_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: #6E6E70;
-}
-.routeIconsTable span.rt-rapid-large {
-  background-color: none;
-  background-image: url("https://www.octranspo.com/images/files/route_types/rapid_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-rapid-limit-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/rapid_limited_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: #0056B8;
-}
-.routeIconsTable span.rt-connexion-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/connexion_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-line2-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/trillium_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-line1-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/line1_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-r2-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/Route-Icon_R2.png");
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 16px;
-  font-weight: normal;
-  color: #65a233;
-  padding: 0 0 0 13px;
-}
-.routeIconsTable span.rt-r1-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/Route-Icon_R1.png");
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 16px;
-  font-weight: normal;
-  color: #da291c;
-  padding: 0 0 0 15px;
-}
-.routeIconsTable span.rt-STO-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/sto_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.routeIconsTable span.rt-night-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/night-route_empty.png");
-  color: #0066cc;
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 16px;
-  font-weight: normal;
-  padding: 0 0 0 15px;
-}
-.routeIconsTable span.rt-STO-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/sto_empty.png");
-  color: white;
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 16px;
-  font-weight: normal;
-  padding: 0 0 0 0px;
-}
-
-.routeIcons ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-  grid-auto-flow: row;
-  grid-gap: 0.5rem;
-  list-style: none;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  list-style-type: none;
-}
-.routeIcons ul li {
-  padding: 0;
-  margin: 0.3em 0.3em;
-  list-style-type: none;
-}
-.routeIcons ul li span {
-  display: inline-block;
-  height: 2em;
-  text-align: center;
-  vertical-align: middle;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: auto;
-  line-height: 2em;
-  width: 100%;
-  background-size: contain;
-}
-.routeIcons ul li span.rt-frequent-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_empty.png");
-  color: white;
-}
-.routeIcons ul li span.rt-frequent-limit-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_limited_empty.png");
-  color: #cc3300;
-}
-.routeIcons ul li span.rt-local-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/local_regular_empty.png");
-  color: white;
-}
-.routeIcons ul li span.rt-local-limit-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/local_limited_empty.png");
-  color: #6E6E70;
-}
-.routeIcons ul li span.rt-rapid-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/rapid_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.routeIcons ul li span.rt-rapid-limit-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/rapid_limited_empty.png");
-  color: #0056B8;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-}
-.routeIcons ul li span.rt-connexion-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/connexion_empty.png");
-  color: white;
-}
-.routeIcons ul li span.rt-line2-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/trillium_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.routeIcons ul li span.rt-line1-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/line1_empty.png");
-  background-size: 3.6em 2em;
-  width: 3.6em;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.routeIcons ul li span.rt-r2-large {
-  background-image: url("http://www.octranspo.com/images/files/route_types/Route-Icon_R2.png");
-  color: #65a233;
-  padding: 0 0 0 13px;
-}
-.routeIcons ul li span.rt-r1-large {
-  background-image: url("http://www.octranspo.com/images/files/route_types/Route-Icon_R1.png");
-  color: #da291c;
-  padding: 0 0 0 13px;
-}
-.routeIcons ul li span.rt-night-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/night-route_empty.png");
-  color: #0066cc;
-  padding: 0 0 0 13px;
-}
-.routeIcons ul li span.rt-STO-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/sto_empty.png");
-  color: white;
-  background-size: 3em 2em;
-  width: 3em;
-  font-size: 16px;
-  font-weight: normal;
-  padding: 0 0 0 0px;
-}
-
-.routeIconsTable {
-  list-style: default;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-}
-.routeIconsTable tbody tr td span {
-  display: inline-block;
-  height: 2em;
-  text-align: center;
-  vertical-align: middle;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: auto;
-  line-height: 2em;
-  width: 100%;
-  background-size: contain;
-}
-.routeIconsTable tbody tr td span .rt-frequent-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_empty.png");
-  color: white;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-}
-.routeIconsTable tbody tr td span .rt-frequent-limit-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_limited_empty.png");
-  color: #cc3300;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-}
-.routeIconsTable tbody tr td span .rt-local-small {
-  background-image: url("https://www.octranspo.com/images/files/route_types/local_regular_empty.png");
-  color: white;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-}
-.routeIconsTable tbody tr td span .rt-frequent-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_empty.png");
-  color: white;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-}
-.routeIconsTable tbody tr td span .rt-frequent-limit-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/frequent_limited_empty.png");
-  color: #cc3300;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-}
-.routeIconsTable tbody tr td span .rt-local-large {
-  background-image: url("https://www.octranspo.com/images/files/route_types/local_regular_empty.png");
-  color: white;
-  background-size: 3.6em 2em;
-  width: 3.6em;
-}
-
-input::-moz-placeholder {
-  color: #4F4F4F;
-}
-
-input::placeholder {
-  color: #4F4F4F;
 }
 
 .costs {
@@ -13202,7 +11092,7 @@ li.last:before {
     top: -4px;
   }
 }
-.stage-2 .stage2-main .lines span.visuallyhidden, .stage-2 .stage2-main .lines .btn-get-travel-plan span, .btn-get-travel-plan .stage-2 .stage2-main .lines span, .stage-2 .stage2-main .lines span.hideLinkSpan, .stage-2 .stage2-main .lines .logo-animation-desktop .navbar--main-nav .logo--desktop span.logo-text, .logo-animation-desktop .navbar--main-nav .logo--desktop .stage-2 .stage2-main .lines span.logo-text {
+.stage-2 .stage2-main .lines span.visuallyhidden, .stage-2 .stage2-main .lines span.hideLinkSpan, .stage-2 .stage2-main .lines .logo-animation-desktop .navbar--main-nav .logo--desktop span.logo-text, .logo-animation-desktop .navbar--main-nav .logo--desktop .stage-2 .stage2-main .lines span.logo-text {
   position: absolute;
   margin: -1px;
   padding: 0;
@@ -15990,70 +13880,86 @@ h4.stage2-usage-headings {
 }
 
 /****table styles ******/
+/** updated on: 2024/07/04 9:28 am **/
 main thead td, main thead th {
   box-shadow: none;
+}
+
+main tbody p {
+  font-size: inherit;
+  font-weight: 400;
 }
 
 table tr td {
   align-content: start;
 }
 
-table.bordered {
-  border: none;
-  border-collapse: collapse;
+table {
+  width: 100%;
 }
-table.bordered thead {
-  border: 1px solid var(--border-color);
+table.width-to-fit, table.sticky-table {
+  width: auto;
 }
-table.bordered tbody {
-  border: 1px solid var(--border-color);
+@media (max-width: 991.98px) {
+  table thead th.readable, table thead th.wide {
+    min-width: 30vw;
+  }
 }
-table.bordered thead.empty-corner {
-  border: none;
-  background-color: #fff;
-  z-index: 1;
-  border-right: 1px solid var(--border-color);
+@media (max-width: 767.98px) {
+  table thead th.readable, table thead th.wide {
+    min-width: 75vw;
+  }
 }
-table.bordered thead.empty-corner tr th:not(:first-of-type) {
-  border-top: 1px solid var(--border-color);
+
+table {
+  margin: none;
+  margin-bottom: 1rem;
 }
-table.bordered thead.empty-corner tr th:last-of-type, table.bordered thead.empty-corner tr th:first-of-type {
-  border-right: 1px solid var(--border-color);
+table .emptyCell {
+  background: none !important;
+  box-shadow: none !important;
+}
+table.small-table table tbody tr td, table.small-table table tbody tr th {
+  padding: 0.25rem 1rem;
+}
+table.table-border tbody tr th,
+table.table-border tbody tr td {
+  border: 1px solid var(--border-color-dark);
 }
 
 table tbody tr:hover td {
   background-color: var(--charcoal--50);
 }
 table tbody tr:hover th {
-  background-color: var(--line1--100);
+  background-color: var(--gray--100);
 }
 
 table.transcript-table tr:hover, table.table__behaviour--collapse tr:hover {
   border-radius: 0.5rem;
 }
 
-table tbody tr td, table table tbody tr th {
-  padding: 1.5rem 1rem;
+table tbody tr td, table tbody tr th {
+  padding: 0.3em 1em;
 }
-table thead th {
-  padding: 0.5rem 1rem;
+table thead tr th {
+  padding: 0.5em 1em;
 }
-table.small-table td, table.small-table th {
-  padding: 0.5rem 1rem;
+table.text-heavy-table tbody tr td, table.text-heavy-table tbody tr th, table.extra-padding tbody tr td, table.extra-padding tbody tr th, table.sticky-table tbody tr td, table.sticky-table tbody tr th {
+  padding: 1.5em 1em;
 }
-table.compact-table tbody tr td, table.compact-table tbody tr th, table.transcript-table tbody tr td, table.transcript-table tbody tr th {
-  padding: 0.25rem 1rem;
+table.text-heavy-table thead th, table.extra-padding thead th, table.sticky-table thead th {
+  padding: 0.5em 1em;
 }
 @media (max-width: 575.98px) {
   table.transcript-table tbody tr td:first-of-type {
-    padding-top: 1rem;
+    padding-top: 1em;
   }
   table.transcript-table tbody tr td:last-of-type {
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
   }
   table.transcript-table tbody tr td, table.transcript-table tbody tr th {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 @media (max-width: 575.98px) {
@@ -16071,16 +13977,16 @@ table.compact-table tbody tr td, table.compact-table tbody tr th, table.transcri
   }
 }
 
-table.compact-table {
-  width: auto;
-}
-
 table tbody tr td, table thead tr th {
   text-align: left;
 }
 
 table th {
   color: var(--charcoal--800);
+}
+
+main tbody {
+  border: none;
 }
 
 table {
@@ -16092,17 +13998,48 @@ table tbody tr {
 }
 table tbody tr th {
   border-bottom: 1px solid var(--border-color);
+}
+
+table.bordered {
+  border: none;
+  border-collapse: collapse;
+}
+table.bordered thead {
+  border: 1px solid var(--border-color);
+}
+table.bordered tbody {
+  border: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner {
+  border: none;
+  z-index: 1;
   border-right: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner th {
+  background-color: 1px solid var(--gray--50);
+}
+table.bordered thead.empty-corner tr th:not(:first-of-type) {
+  border-top: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner tr th:last-of-type, table.bordered thead.empty-corner tr th:first-of-type {
+  border-right: 1px solid var(--border-color);
+}
+
+table tbody tr th {
+  align-content: start;
 }
 
 /*Reset tables styles from OC & new styles*/
 table thead tr th {
   font-weight: 700;
   font-size: 1rem;
+  line-height: 1.15;
 }
 table tbody tr th {
   font-weight: 400;
   font-size: 1rem;
+  color: var(--charcoal--800);
+  line-height: 1.15;
 }
 table tbody tr td {
   font-size: 1rem;
@@ -16110,61 +14047,43 @@ table tbody tr td {
   text-align: left;
   line-height: 150%;
   color: var(--gray--700);
+  line-height: 1.5;
 }
-table.small-table tbody tr td, table.small-table tbody tr th, table.small-table thead tr th, table.transcript-table tbody tr td, table.transcript-table tbody tr th, table.transcript-table thead tr th {
+table.small-table tbody tr td, table.small-table tbody tr th, table.small-table thead tr th, table.transcript-table tbody tr td, table.transcript-table tbody tr th, table.transcript-table thead tr th, table.detour-table tbody tr td, table.detour-table tbody tr th, table.detour-table thead tr th {
   font-size: 0.875rem !important;
 }
 
+table tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+table.detour-table tr th, table.detour-table thead.blue-header th:nth-child(even) {
+  background-color: var(--line4--700);
+  color: var(--transparent--800);
+}
 table thead tr th {
-  background-color: white;
+  background-color: transparent;
   color: var(--charcoal--800);
   border: none;
 }
-table thead.light tr th {
+table thead.empty-corner tr th {
+  background-color: white;
+}
+table.light tr th {
   background-color: var(--gray--100);
 }
-table thead.dark tr th {
+table.dark tr th {
   background-color: var(--charcoal--800);
   color: var(--transparent--800);
 }
 table tbody tr th {
-  background-color: var(--line1--50);
-  font-weight: 600;
-  color: var(--charcoal--800);
+  background-color: var(--gray--100);
 }
 table tbody tr td, table tbody tr:nth-child(odd) {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 table tbody {
   box-shadow: none;
-}
-
-table {
-  width: 100%;
-  margin: none;
-  margin-bottom: 2rem;
-}
-table .emptyCell {
-  background: none !important;
-  box-shadow: none !important;
-}
-@media (max-width: 991.98px) {
-  table thead th.readable, table thead th.wide {
-    width: 30vw;
-  }
-}
-@media (max-width: 767.98px) {
-  table thead th.readable, table thead th.wide {
-    width: 60vw;
-  }
-}
-table table.small-table table tbody tr td, table table.small-table table tbody tr th {
-  padding: 0.25rem 1rem;
-}
-table table.table-border tbody tr th,
-table table.table-border tbody tr td {
-  border: 1px solid var(--border-color-dark);
 }
 
 .responsive-table {
@@ -16213,7 +14132,7 @@ table.dark tr th {
 
 /* Transcript tables & small tables*/
 .transcript-table td:first-of-type {
-  color: var(--line1--600);
+  color: var(--gray--600);
   font-weight: 700;
   letter-spacing: 0.05em;
   font-size: 0.875rem;
@@ -16372,13 +14291,11 @@ dl.icon-list dt {
   }
 }
 
-table.sticky-left-col thead th:first-child,
-table.sticky-left-col tbody th {
+table.sticky-table thead th:first-child,
+table.sticky-table tbody th:first-child {
   position: sticky;
   left: 0;
   z-index: 2;
-  width: -moz-max-content;
-  width: max-content;
   filter: rgba(0, 0, 0, 0.2) 0px 1px 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
 }
@@ -16399,7 +14316,15 @@ table.detour-table tr {
   border: 1px solid var(--border-color);
 }
 
-/* Table end */
+table caption {
+  caption-side: top;
+  text-align: left;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: var(--charcoal--800);
+}
+
+/**** end table styles ******/
 .icon-container {
   width: -moz-fit-content;
   width: fit-content;
@@ -16740,6 +14665,7 @@ ul.checklist--x li::before {
   border: solid 1px var(--charcoal--700);
 }
 
+/*****grid styles start *****/
 ul.grid.grid--3col {
   margin-left: 0;
   padding-left: 0;
@@ -16868,7 +14794,9 @@ ul.grid.grid--3col {
   gap: 5rem;
 }
 
-/* Note styles*/
+/*****grid styles End *****/
+/*Note styles*/
+/* updated on 2024/07/03 2:12 */
 .note {
   padding: 1rem;
   margin-bottom: 0.5rem;
@@ -16974,7 +14902,7 @@ ul.grid.grid--3col {
   border-color: var(--negative-border-color);
 }
 
-/* END Note styles*/
+/*END Note styles*/
 .basic-card {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 10px;
@@ -17934,6 +15862,7 @@ section > section {
 }
 
 /*Accordion style end*/
+/*Util start*/
 section.divided {
   margin-bottom: 20rem;
 }
@@ -17973,7 +15902,7 @@ section.divided {
   border: 0 !important;
 }
 @media (max-width: 575.98px) {
-  .visually-hidden-mobile {
+  .visually-hidden-for-mobile {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
@@ -18116,7 +16045,46 @@ section.divided {
     opacity: 100%;
   }
 }
-/*Util end*/
+.align-c {
+  margin: auto;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex {
+  display: flex !important;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.flex-dir-row {
+  flex-direction: row;
+}
+
+.flex-dir-col {
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+/*end Util*/
 .banner {
   border: 1px solid var(--gray--100);
   padding: 1.5rem 1rem;
@@ -18236,8 +16204,9 @@ section.divided {
   background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_dark.svg");
 }
 
+/*Code styles start*/
 pre {
-  background: var(--gray--50);
+  background: var(--gray--25);
   border: 1px solid var(--gray--100);
   border-radius: 0 0 0.5rem 0.5rem;
   font-size: 1rem;
@@ -18255,6 +16224,8 @@ pre {
   border: 2px solid var(--gray--100);
   justify-content: center;
   margin-bottom: 1rem;
+  background-color: var(--gray--25);
+  border-radius: 4px;
 }
 
 code {
@@ -18264,6 +16235,12 @@ code {
   padding: 0 3px;
 }
 
+.code {
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+/*end Code styles*/
 /*** tag styles ***/
 .tag {
   background-color: var(--neutral-bg-color);
@@ -18274,6 +16251,7 @@ code {
   width: fit-content;
   padding: 4px 0.5rem 5px 0.5rem;
   margin: 0;
+  margin-bottom: 0.5rem;
   line-height: 100%;
 }
 
@@ -18298,12 +16276,13 @@ code {
   z-index: 1;
   background: linear-gradient(to left, #65A233, #01A1DD, #D30F1D, #AF882D);
   color: var(--charcoal--800);
-  -o-border-image: 1/1.5px;
-     border-image: 1/1.5px;
+  -o-border-image: 1/1px;
+     border-image: 1/1px;
   background-clip: padding-box;
   font-weight: 700;
   text-transform: uppercase;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+  padding: 5px 0.5rem 4px 0.5rem;
 }
 .tag-type__special:before {
   content: "";
@@ -18312,10 +16291,16 @@ code {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 1.5px;
+  margin: 1px;
   border-radius: inherit; /* !importanté */
   background-color: white;
   z-index: -1;
+}
+.tag-type__keyword {
+  background-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--charcoal--800);
 }
 
 .tag__color--special {
@@ -18710,7 +16695,7 @@ input {
   height: 0;
 }
 
-.visuallyhidden, .btn-get-travel-plan span, .hideLinkSpan, .basic-content ul.nav_categories--venues input[type=checkbox], .basic-content ul.nav_categories--venues input[type=submit], #destinations-keyword-search input[type=submit], .logo-animation-desktop .navbar--main-nav .logo--desktop .logo-text {
+.visuallyhidden, .hideLinkSpan, .basic-content ul.nav_categories--venues input[type=checkbox], .basic-content ul.nav_categories--venues input[type=submit], #destinations-keyword-search input[type=submit], .logo-animation-desktop .navbar--main-nav .logo--desktop .logo-text {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

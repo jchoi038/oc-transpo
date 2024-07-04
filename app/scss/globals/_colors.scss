@@ -1,4 +1,4 @@
-/*Colours*/
+/*Colours start*/
 :root {
     --line1--50:  #FCF4F0;
     --line1--100: #FCE4D9;
@@ -68,6 +68,7 @@
     --transparent--200: hsl(0, 0%, 100%, 40%); 
     --transparent--500: hsl(0, 0%, 100%, 60%); 
     --transparent--800: hsl(0, 0%, 100%, 95%); 
+    --gray--25: #fcfcfc;
     --gray--50: #F8F8F8;
     --gray--100: #E8EAED;
     --gray--200: #CED6DE;
@@ -166,4 +167,4 @@
     height: 3rem;
     border-radius: 0.5rem;
 }
-/*Colors end*/
+/*end Colors*/

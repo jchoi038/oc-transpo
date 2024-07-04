@@ -1,70 +1,84 @@
-
 /****table styles ******/
-/* Updated: 07/03/2024 9:28AM */
+/** updated on: 2024/07/04 9:28 am **/
 main thead td, main thead th {
   box-shadow: none;
+}
+
+main tbody p {
+  font-size: inherit;
+  font-weight: 400;
 }
 
 table tr td {
   align-content: start;
 }
 
-table.bordered {
-  border: none;
-  border-collapse: collapse;
+table {
+  width: 100%;
 }
-table.bordered thead {
-  border: 1px solid var(--border-color);
+table.width-to-fit, table.sticky-table {
+  width: auto;
 }
-table.bordered tbody {
-  border: 1px solid var(--border-color);
+@media (max-width: 991.98px) {
+  table thead th.readable, table thead th.wide {
+    min-width: 30vw;
+  }
 }
-table.bordered thead.empty-corner {
-  border: none;
-  background-color: #fff;
-  z-index: 1;
-  border-right: 1px solid var(--border-color);
+@media (max-width: 767.98px) {
+  table thead th.readable, table thead th.wide {
+    min-width: 75vw;
+  }
 }
-table.bordered thead.empty-corner tr th:not(:first-of-type) {
-  border-top: 1px solid var(--border-color);
+
+table {
+  margin: none;
+  margin-bottom: 1rem;
 }
-table.bordered thead.empty-corner tr th:last-of-type, table.bordered thead.empty-corner tr th:first-of-type {
-  border-right: 1px solid var(--border-color);
+table .emptyCell {
+  background: none !important;
+  box-shadow: none !important;
+}
+table.small-table table tbody tr td, table.small-table table tbody tr th {
+  padding: 0.25rem 1rem;
+}
+table.table-border tbody tr th,
+table.table-border tbody tr td {
+  border: 1px solid var(--border-color-dark);
 }
 
 table tbody tr:hover td {
   background-color: var(--charcoal--50);
 }
 table tbody tr:hover th {
-  background-color: var(--line1--100);
+  background-color: var(--gray--100);
 }
 
 table.transcript-table tr:hover, table.table__behaviour--collapse tr:hover {
   border-radius: 0.5rem;
 }
 
-table tbody tr td, table table tbody tr th {
-  padding: 1.5rem 1rem;
+table tbody tr td, table tbody tr th {
+  padding: 0.3em 1em;
 }
-table thead th {
-  padding: 0.5rem 1rem;
+table thead tr th {
+  padding: 0.5em 1em;
 }
-table.small-table td, table.small-table th {
-  padding: 0.5rem 1rem;
+table.text-heavy-table tbody tr td, table.text-heavy-table tbody tr th, table.extra-padding tbody tr td, table.extra-padding tbody tr th, table.sticky-table tbody tr td, table.sticky-table tbody tr th {
+  padding: 1.5em 1em;
 }
-table.compact-table tbody tr td, table.compact-table tbody tr th, table.transcript-table tbody tr td, table.transcript-table tbody tr th {
-  padding: 0.25rem 1rem;
+table.text-heavy-table thead th, table.extra-padding thead th, table.sticky-table thead th {
+  padding: 0.5em 1em;
 }
 @media (max-width: 575.98px) {
   table.transcript-table tbody tr td:first-of-type {
-    padding-top: 1rem;
+    padding-top: 1em;
   }
   table.transcript-table tbody tr td:last-of-type {
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
   }
   table.transcript-table tbody tr td, table.transcript-table tbody tr th {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 @media (max-width: 575.98px) {
@@ -82,16 +96,16 @@ table.compact-table tbody tr td, table.compact-table tbody tr th, table.transcri
   }
 }
 
-table.compact-table {
-  width: auto;
-}
-
 table tbody tr td, table thead tr th {
   text-align: left;
 }
 
 table th {
   color: var(--charcoal--800);
+}
+
+main tbody {
+  border: none;
 }
 
 table {
@@ -103,17 +117,48 @@ table tbody tr {
 }
 table tbody tr th {
   border-bottom: 1px solid var(--border-color);
+}
+
+table.bordered {
+  border: none;
+  border-collapse: collapse;
+}
+table.bordered thead {
+  border: 1px solid var(--border-color);
+}
+table.bordered tbody {
+  border: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner {
+  border: none;
+  z-index: 1;
   border-right: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner th {
+  background-color: 1px solid var(--gray--50);
+}
+table.bordered thead.empty-corner tr th:not(:first-of-type) {
+  border-top: 1px solid var(--border-color);
+}
+table.bordered thead.empty-corner tr th:last-of-type, table.bordered thead.empty-corner tr th:first-of-type {
+  border-right: 1px solid var(--border-color);
+}
+
+table tbody tr th {
+  align-content: start;
 }
 
 /*Reset tables styles from OC & new styles*/
 table thead tr th {
   font-weight: 700;
   font-size: 1rem;
+  line-height: 1.15;
 }
 table tbody tr th {
   font-weight: 400;
   font-size: 1rem;
+  color: var(--charcoal--800);
+  line-height: 1.15;
 }
 table tbody tr td {
   font-size: 1rem;
@@ -121,61 +166,43 @@ table tbody tr td {
   text-align: left;
   line-height: 150%;
   color: var(--gray--700);
+  line-height: 1.5;
 }
-table.small-table tbody tr td, table.small-table tbody tr th, table.small-table thead tr th, table.transcript-table tbody tr td, table.transcript-table tbody tr th, table.transcript-table thead tr th {
+table.small-table tbody tr td, table.small-table tbody tr th, table.small-table thead tr th, table.transcript-table tbody tr td, table.transcript-table tbody tr th, table.transcript-table thead tr th, table.detour-table tbody tr td, table.detour-table tbody tr th, table.detour-table thead tr th {
   font-size: 0.875rem !important;
 }
 
+table tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+table.detour-table tr th, table.detour-table thead.blue-header th:nth-child(even) {
+  background-color: var(--line4--700);
+  color: var(--transparent--800);
+}
 table thead tr th {
-  background-color: white;
+  background-color: transparent;
   color: var(--charcoal--800);
   border: none;
 }
-table thead.light tr th {
+table thead.empty-corner tr th {
+  background-color: white;
+}
+table.light tr th {
   background-color: var(--gray--100);
 }
-table thead.dark tr th {
+table.dark tr th {
   background-color: var(--charcoal--800);
   color: var(--transparent--800);
 }
 table tbody tr th {
-  background-color: var(--line1--50);
-  font-weight: 600;
-  color: var(--charcoal--800);
+  background-color: var(--gray--100);
 }
 table tbody tr td, table tbody tr:nth-child(odd) {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 table tbody {
   box-shadow: none;
-}
-
-table {
-  width: 100%;
-  margin: none;
-  margin-bottom: 2rem;
-}
-table .emptyCell {
-  background: none !important;
-  box-shadow: none !important;
-}
-@media (max-width: 991.98px) {
-  table thead th.readable, table thead th.wide {
-    width: 30vw;
-  }
-}
-@media (max-width: 767.98px) {
-  table thead th.readable, table thead th.wide {
-    width: 60vw;
-  }
-}
-table table.small-table table tbody tr td, table table.small-table table tbody tr th {
-  padding: 0.25rem 1rem;
-}
-table table.table-border tbody tr th,
-table table.table-border tbody tr td {
-  border: 1px solid var(--border-color-dark);
 }
 
 .responsive-table {
@@ -224,7 +251,7 @@ table.dark tr th {
 
 /* Transcript tables & small tables*/
 .transcript-table td:first-of-type {
-  color: var(--line1--600);
+  color: var(--gray--600);
   font-weight: 700;
   letter-spacing: 0.05em;
   font-size: 0.875rem;
@@ -383,13 +410,11 @@ dl.icon-list dt {
   }
 }
 
-table.sticky-left-col thead th:first-child,
-table.sticky-left-col tbody th {
+table.sticky-table thead th:first-child,
+table.sticky-table tbody th:first-child {
   position: sticky;
   left: 0;
   z-index: 2;
-  width: -moz-max-content;
-  width: max-content;
   filter: rgba(0, 0, 0, 0.2) 0px 1px 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
 }
@@ -408,4 +433,12 @@ table.detour-table {
 }
 table.detour-table tr {
   border: 1px solid var(--border-color);
+}
+
+table caption {
+  caption-side: top;
+  text-align: left;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: var(--charcoal--800);
 }
