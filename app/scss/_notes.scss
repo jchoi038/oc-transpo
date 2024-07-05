@@ -1,26 +1,37 @@
 /*Note styles*/
-/* updated on 2024/07/03 3:54 */
+/* updated on 2024/07/05 11:14am */
+/* overriding */
+.note{
+    p.note__title, .note__desc{
+      margin-top: 0;
+    }
+  }
+  
+  /* Basic styles */
 
 .note{
     position: relative;
     padding: 1rem;
+    margin-top: 0;
     margin-bottom: 0.5rem;
     font-size:0.875rem;
     align-items: flex-start;
     gap: 0.5rem;
     border-radius: $radius-md;
+    height: fit-content;
 
 
     .note__title{
         flex-grow: 1;
         font-weight: 700;
-        line-height: 24px;
+        line-height: 1.15em;
+        padding-top: 0.25rem;
     }
 
     &.note__type{
-        &--info, &--success,&--warning, &--critical{
+        &--info, &--success,&--warning, &--urgent{
             > * {
-                padding-left: 32px;
+                padding-left: 36px;
             } 
 
             &::before{
@@ -41,6 +52,19 @@
     }   
 }
 
+// note fonts
+.note{
+    .note__desc{
+        font-size: $ui-body-size-sm;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .note__desc{
+            font-size: $ui-body-size-sm-mobile;
+        }
+    }
+}
+
 // Semantic note icons
 .note__type{
     &--info{
@@ -59,7 +83,7 @@
             background-image: url("https://www.octranspo.com/images/files/icons/alert_success-circled.svg");
         }
     }
-    &--critical{
+    &--urgent{
         &::before{
             background-image: url("https://www.octranspo.com/images/files/icons/alert_critical-circled.svg");
         }
@@ -112,6 +136,8 @@
     background-color: var(--neutral-bg-color);
 }
 
+//neutral colours
+
     //special colours
     .note__type{
         &--special{
@@ -141,7 +167,7 @@
         }
         background-color: var(--success-bg-color);
     }
-    &--critical{
+    &--urgent{
         > *, p{
             color: var(--critical-text-color);
         }

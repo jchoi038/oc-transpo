@@ -43,6 +43,7 @@ CSS can also be applied to specific breakpoints using "@include media-breakpoint
 More information on the grid system is available at https://getbootstrap.com/docs/4.0/layout/grid/
 */
 /*Colours start*/
+/* updated on 2024/07/05 11:14am */
 :root {
   --line1--50: #FCF4F0;
   --line1--100: #FCE4D9;
@@ -179,7 +180,7 @@ More information on the grid system is available at https://getbootstrap.com/doc
   --info-bg-border-color: var(--frequent--500);
   --info-bg-icon-color: var(--frequent--600);
   --info-text-color: var(--frequent--800);
-  --neutral-bg-color: var(--gray--100);
+  --neutral-bg-color: var(--charcoal--50);
   --neutral-bg-dark-color: var(--gray--200);
   --neutral-bg-border-color: var(--gray--500);
   --neutral-bg-icon-color: var(--gray--600);
@@ -14666,6 +14667,7 @@ ul.checklist--x li::before {
 }
 
 /*****grid styles start *****/
+/* updated on 2024/07/05 11:14am */
 ul.grid.grid--3col {
   margin-left: 0;
   padding-left: 0;
@@ -14683,6 +14685,7 @@ ul.grid.grid--3col {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 .grid.gutters-none {
   gap: 0;
@@ -14796,25 +14799,35 @@ ul.grid.grid--3col {
 
 /*****grid styles End *****/
 /*Note styles*/
-/* updated on 2024/07/03 3:54 */
+/* updated on 2024/07/05 11:14am */
+/* overriding */
+.note p.note__title, .note .note__desc {
+  margin-top: 0;
+}
+
+/* Basic styles */
 .note {
   position: relative;
   padding: 1rem;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
   align-items: flex-start;
   gap: 0.5rem;
   border-radius: 0.5rem;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .note .note__title {
   flex-grow: 1;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.15em;
+  padding-top: 0.25rem;
 }
-.note.note__type--info > *, .note.note__type--success > *, .note.note__type--warning > *, .note.note__type--critical > * {
-  padding-left: 32px;
+.note.note__type--info > *, .note.note__type--success > *, .note.note__type--warning > *, .note.note__type--urgent > * {
+  padding-left: 36px;
 }
-.note.note__type--info::before, .note.note__type--success::before, .note.note__type--warning::before, .note.note__type--critical::before {
+.note.note__type--info::before, .note.note__type--success::before, .note.note__type--warning::before, .note.note__type--urgent::before {
   content: "";
   display: inline-flex;
   position: absolute;
@@ -14829,6 +14842,15 @@ ul.grid.grid--3col {
   border-radius: 999rem;
 }
 
+.note .note__desc {
+  font-size: 0.875rem;
+}
+@media (max-width: 767.98px) {
+  .note .note__desc {
+    font-size: 13px;
+  }
+}
+
 .note__type--info::before {
   background-image: url("https://www.octranspo.com/images/files/icons/alert_info-circled.svg");
 }
@@ -14838,7 +14860,7 @@ ul.grid.grid--3col {
 .note__type--success::before {
   background-image: url("https://www.octranspo.com/images/files/icons/alert_success-circled.svg");
 }
-.note__type--critical::before {
+.note__type--urgent::before {
   background-image: url("https://www.octranspo.com/images/files/icons/alert_critical-circled.svg");
 }
 
@@ -14898,10 +14920,10 @@ ul.grid.grid--3col {
 .note__type--success > *, .note__type--success p {
   color: var(--success-text-color);
 }
-.note__type--critical {
+.note__type--urgent {
   background-color: var(--critical-bg-color);
 }
-.note__type--critical > *, .note__type--critical p {
+.note__type--urgent > *, .note__type--urgent p {
   color: var(--critical-text-color);
 }
 
@@ -15228,7 +15250,7 @@ ul.grid.grid--3col {
   font-weight: 700;
 }
 .card__size--sm .card__body {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
 }
 .card__size--md .card__icon {
   height: 2rem;
@@ -15507,6 +15529,8 @@ ul.grid.grid--3col {
   font-weight: 600;
 }
 
+/*Layout styles*/
+/* updated on 2024/07/05 11:14am */
 body {
   overflow-x: hidden;
 }
@@ -15554,9 +15578,6 @@ section > section {
 
 .sub-section {
   margin-bottom: 1.5rem;
-  gap: 0.5rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .page-type__narrow {
@@ -15573,6 +15594,7 @@ section > section {
   margin: auto;
 }
 
+/*End Layout styles*/
 /*Accordion style*/
 .faq-accordion {
   width: 100%;
@@ -16208,6 +16230,7 @@ section.divided {
 }
 
 /*Code styles start*/
+/* updated on 2024/07/05 11:14am */
 pre {
   background: var(--gray--25);
   border: 1px solid var(--gray--100);
@@ -16222,13 +16245,15 @@ pre {
 }
 
 .example {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1.5rem;
   border: 2px solid var(--gray--100);
   justify-content: center;
-  margin-bottom: 1rem;
   background-color: var(--gray--25);
   border-radius: 4px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 code {
@@ -16245,7 +16270,7 @@ code {
 
 /*end Code styles*/
 /*** tag styles ***/
-/*Last updated: 2024/07/04 3:55pm*/
+/* updated on 2024/07/05 11:14am */
 .tag {
   background-color: var(--neutral-bg-color);
   color: var(--neutral-text-color);
@@ -16256,7 +16281,7 @@ code {
   padding: 4px 0.5rem 5px 0.5rem;
   margin: 0;
   margin-bottom: 0.5rem;
-  line-height: 100%;
+  line-height: 115%;
 }
 
 .tag-type__warning {
@@ -16286,7 +16311,7 @@ code {
   font-weight: 700;
   text-transform: uppercase;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
-  padding: 4px 0.6rem 4px 0.6rem;
+  padding: 3px 0.6rem 2px 0.6rem;
 }
 .tag-type__special:before {
   content: "";
@@ -16295,7 +16320,7 @@ code {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 1px 1.5px;
+  margin: 1px;
   border-radius: inherit; /* !importanté */
   background-color: white;
   z-index: -1;

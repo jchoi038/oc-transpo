@@ -1,4 +1,5 @@
 /*Code styles start*/
+/* updated on 2024/07/05 11:14am */
 pre {
 	background: var(--gray--25);
 	border: 1px solid var(--gray--100);
@@ -13,13 +14,15 @@ pre {
 }
 
 .example{
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1.5rem;
     border: 2px solid  var(--gray--100);
     justify-content: center;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
     background-color: var(--gray--25);
     border-radius: 4px;
+    height: fit-content;
 }
 
 code {

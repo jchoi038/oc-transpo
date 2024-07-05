@@ -1,4 +1,5 @@
 /*****grid styles start *****/
+/* updated on 2024/07/05 11:14am */
 ul.grid.grid--3col{
     margin-left: 0;
     padding-left: 0;
@@ -15,7 +16,7 @@ ul.grid.grid--3col{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 1rem;
-    // margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     &.gutters-none{
         gap: 0;
