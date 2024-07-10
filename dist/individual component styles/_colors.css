@@ -1,6 +1,8 @@
 
 /*Colours start*/
-/* updated on 2024/07/10 */
+/* colors.scss*/
+/* gradients.scss*/
+/* updated on 2024/07/10 11:27am */
 :root {
   --line1--50: #FCF4F0;
   --line1--100: #FCE4D9;
@@ -47,7 +49,6 @@
   --frequent--600: #1A559B;
   --frequent--700: #0F3869;
   --frequent--800: #0C294A;
-  --frequent: #D74100;
   --connexion--50: #FDF4F9;
   --connexion--100: #FAE2F1;
   --connexion--200: #F4BCDE;
@@ -155,3 +156,47 @@
 }
 
 /*end Colors*/
+
+
+/*Gradient start*/
+.bg-gradient-red:before {
+  content: "";
+  background: linear-gradient(#900902, #FF0B0B, #FFFF84);
+  position: absolute;
+  width: 0.5rem;
+  border-radius: 999px;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-gradient-green:before {
+  content: "";
+  background: linear-gradient(#165031, #78BE21, #FFFF84);
+  position: absolute;
+  width: 0.5rem;
+  border-radius: 999px;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-gradient-yellow:before {
+  content: "";
+  background: linear-gradient(#8F7200, #FFC600, #FFFF84);
+  position: absolute;
+  width: 0.5rem;
+  border-radius: 999px;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-gradient-blue:before {
+  content: "";
+  background: linear-gradient(#003D84, #00A3E0, #CCFFFF);
+  position: absolute;
+  width: 0.5rem;
+  border-radius: 999px;
+  height: 100%;
+  z-index: -1;
+}
+
+/*Gradient End*/

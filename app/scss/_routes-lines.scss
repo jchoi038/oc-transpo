@@ -1,5 +1,5 @@
 /****Routes & lines styles ******/
-/* updated on 2024/07/10 */
+/* updated on 2024/07/10 11:53am */
 
 
 //allow span nested to inherit styles of parent to allow icon to become responsive
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    padding: 0rem 0.5rem;
+    padding: 0.125rem 0.5rem;
     font-weight: 600;
     font-size: 0.875em;
 }
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6, p {
         background-image:url('https://www.octranspo.com/images/files/icons/route_rapid.svg');
     }
     &--frequent{
-        background-image:url('https://www.octranspo.com/images/files/icons/route_frequent.svg');
+        background-image:url('https://www.octranspo.com/images/files/icons/route_frequent_nwtb.svg');
     }
     &--local{
         background-image:url('https://www.octranspo.com/images/files/icons/route_local.svg');
@@ -92,8 +92,8 @@ h1, h2, h3, h4, h5, h6, p {
         color: var(--connexion--600);
     }
     &--frequent_l{
-        background-image:url('https://www.octranspo.com/images/files/icons/route_frequent-ltd.svg');
-        color: var(--frequent);
+        background-image:url('https://www.octranspo.com/images/files/icons/route_frequent-ltd-nwtb.svg');
+        color: var(--frequent--600);
     }
     &--local_l{
         background-image:url('https://www.octranspo.com/images/files/icons/route_local-ltd.svg');

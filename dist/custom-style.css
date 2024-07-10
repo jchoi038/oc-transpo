@@ -90,7 +90,6 @@ More information on the grid system is available at https://getbootstrap.com/doc
   --frequent--600: #1A559B;
   --frequent--700: #0F3869;
   --frequent--800: #0C294A;
-  --frequent: #D74100;
   --connexion--50: #FDF4F9;
   --connexion--100: #FAE2F1;
   --connexion--200: #F4BCDE;
@@ -198,6 +197,7 @@ More information on the grid system is available at https://getbootstrap.com/doc
 }
 
 /*end Colors*/
+/*Gradient start*/
 .bg-gradient-red:before {
   content: "";
   background: linear-gradient(#900902, #FF0B0B, #FFFF84);
@@ -238,6 +238,7 @@ More information on the grid system is available at https://getbootstrap.com/doc
   z-index: -1;
 }
 
+/*Gradient End*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -16671,7 +16672,7 @@ input {
 }
 
 /****Routes & lines styles ******/
-/* updated on 2024/07/10 */
+/* updated on 2024/07/10 11:53am */
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
   line-height: inherit;
   font-size: inherit;
@@ -16690,7 +16691,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  padding: 0rem 0.5rem;
+  padding: 0.125rem 0.5rem;
   font-weight: 600;
   font-size: 0.875em;
 }
@@ -16738,7 +16739,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
   background-image: url("https://www.octranspo.com/images/files/icons/route_rapid.svg");
 }
 .rt-type--frequent {
-  background-image: url("https://www.octranspo.com/images/files/icons/route_frequent.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/route_frequent_nwtb.svg");
 }
 .rt-type--local {
   background-image: url("https://www.octranspo.com/images/files/icons/route_local.svg");
@@ -16748,8 +16749,8 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
   color: var(--connexion--600);
 }
 .rt-type--frequent_l {
-  background-image: url("https://www.octranspo.com/images/files/icons/route_frequent-ltd.svg");
-  color: var(--frequent);
+  background-image: url("https://www.octranspo.com/images/files/icons/route_frequent-ltd-nwtb.svg");
+  color: var(--frequent--600);
 }
 .rt-type--local_l {
   background-image: url("https://www.octranspo.com/images/files/icons/route_local-ltd.svg");

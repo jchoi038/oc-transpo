@@ -17,6 +17,9 @@
         <link rel="stylesheet" href="https://www.octranspo.com/images/files/dist/_inlinestyles.css" />
         <link rel="stylesheet" href="https://www.octranspo.com/images/files/dist/_colors.css" />
         <link rel="stylesheet" href="https://www.octranspo.com/images/files/dist/_grids.css" />
+        <link rel="stylesheet" href="https://www.octranspo.com/images/files/dist/_code.css" />
+        <link rel="stylesheet" href="https://www.octranspo.com/images/files/dist/_layout.css" />
+        <link rel="stylesheet" href="https://www.octranspo.com/images/files/dist/_util.css" />
         <section class="intro">
             <strong>Covered on this page:</strong>
             <ul>
@@ -169,12 +172,12 @@
         <section>
             <div class="example">
 				<div class="flex flex-dir-col flex-ai-c">
-					<p><span class="rt rt-type--connexion">123</span><span class="visually-hidden">Connexion Route</span> Route destination</p>
-					<p><span class="rt rt-type--frequent">123</span><span class="visually-hidden">Frequent Route</span> Route destination</p>
-					<p><span class="rt rt-type--local">123<span class="visually-hidden">Local Route</span></span> Route destination</p>
-					<p><span class="rt rt-type--connexion_l">123<span class="visually-hidden">Limited Connexion Route</span></span> Route destination</p>
-					<p><span class="rt rt-type--frequent_l">123<span class="visually-hidden">Limited Frequent Route</span></span> Route destination</p>
-					<p><span class="rt rt-type--local_l">123<span class="visually-hidden">Limited Local Route</span></span> Route destination</p>
+					<p><span class="rt rt-type--connexion">11</span><span class="visually-hidden">Connexion Route</span> Route destination</p>
+					<p><span class="rt rt-type--frequent">11</span><span class="visually-hidden">Frequent Route</span> Route destination</p>
+					<p><span class="rt rt-type--local">11<span class="visually-hidden">Local Route</span></span> Route destination</p>
+					<p><span class="rt rt-type--connexion_l">11<span class="visually-hidden">Limited Connexion Route</span></span> Route destination</p>
+					<p><span class="rt rt-type--frequent_l">11<span class="visually-hidden">Limited Frequent Route</span></span> Route destination</p>
+					<p><span class="rt rt-type--local_l">11<span class="visually-hidden">Limited Local Route</span></span> Route destination</p>
 				</div>
 			</div>
             <pre>
@@ -189,12 +192,12 @@
         <h2>Bus route ID only</h2>
         <section>
             <div class="example flex flex-jc-c">
-				<p class="rt rt-type--connexion">123<span class="visually-hidden">Connexion Route</span></p>
-				<p class="rt rt-type--frequent">123<span class="visually-hidden">Frequent Route</span></p>
-				<p class="rt rt-type--local">123<span class="visually-hidden">Local Route</span></p>
-				<p class="rt rt-type--connexion_l">123<span class="visually-hidden">Limited Connexion Route</span></p>
-				<p class="rt rt-type--frequent_l">123<span class="visually-hidden">Limited Frequent Route</span></p>
-				<p class="rt rt-type--local_l">123<span class="visually-hidden">Limited Local Route</span></p>
+				<p class="rt rt-type--connexion">11<span class="visually-hidden">Connexion Route</span></p>
+				<p class="rt rt-type--frequent">11<span class="visually-hidden">Frequent Route</span></p>
+				<p class="rt rt-type--local">11<span class="visually-hidden">Local Route</span></p>
+				<p class="rt rt-type--connexion_l">11<span class="visually-hidden">Limited Connexion Route</span></p>
+				<p class="rt rt-type--frequent_l">11<span class="visually-hidden">Limited Frequent Route</span></p>
+				<p class="rt rt-type--local_l">11<span class="visually-hidden">Limited Local Route</span></p>
 			</div>
             <pre>
 &lt;p class&#x3D;&quot;rt rt-type--connexion&quot;&gt;123&lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Connexion Route&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;
@@ -207,7 +210,7 @@
         </section>
         <h2>Headings with inline lines IDs </h2>
         <section>
-            <dv class="example grid--4col">
+            <div class="example grid--4col">
                 <div>
                     <h1>Line <span class="rt rt-type--line1">1</span></h1>
                     <h2>Line <span class="rt rt-type--line1">1</span></h2>
@@ -240,9 +243,9 @@
                     <h5>Line <span class="rt rt-type--line4">4</span></h5>
                     <h6>Line <span class="rt rt-type--line4">4</span></h6>
                 </div>
-            </dv>
+            </div>
             <pre>
-                <p>Swap instances of line1 to line2, line3, line4 for Line 2, Line 3, Line 4 headings, respectfully</p>
+                Swap instances of line1 to line2, line3, line4 for Line 2, Line 3, Line 4 headings, respectfully
 &lt;h1&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h1&gt;
 &lt;h2&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h2&gt;
 &lt;h3&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h3&gt;
@@ -253,7 +256,7 @@
         </section>
         <h2>Lists</h2>
         <h3>Checklists</h3>
-        <div class="example grid grid--2col">
+        <div class="example grid--2col">
 	
             <ul class="checklist">
                 <li>Baseline (avant 11 h)</li>

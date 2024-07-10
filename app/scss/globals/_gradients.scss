@@ -1,4 +1,5 @@
 // https://medium.com/@alvaro.saburido/applying-gradient-trends-in-sass-cf825d70f5fe
+/*Gradient start*/
 $gradients: () !default;
 $gradients: map-merge((
     red: linear-gradient(#900902, #FF0B0B, #FFFF84),
@@ -24,3 +25,5 @@ $gradients: map-merge((
 @each $gradient, $value in $gradients {
     @include bg-gradient(".bg-gradient-#{$gradient}", $value);
   }
+
+/*Gradient End*/
