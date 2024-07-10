@@ -18,15 +18,34 @@
 	</nav>
     <h1 class="main-content">Tags</h1>
     <div class="main-content">
+        <link href="https://www.octranspo.com/images/files/dist/_code.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_colors.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_util.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_tables.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_tags.css" rel="stylesheet" />
         <h2>Semantic tags</h2>
         <p>The semantic tag component uses color to convey specific statuses.</p>
-        <div class="flex flex-jc-c">
+        <div class=" example flex flex-jc-c">
             <p class="tag tag-type__warning">Warning</p>
             <p class="tag tag-type__critical">Critical</p>
             <p class="tag">Neutral</p> 
             <p class="tag tag-type__info">Info</p>
             <p class="tag tag-type__success">Success</p>
         </div>
+        <pre>
+&lt;p class&#x3D;&quot;tag tag-type__warning&quot;&gt;Warning&lt;&#x2F;p&gt;
+&lt;p class&#x3D;&quot;tag tag-type__critical&quot;&gt;Critical&lt;&#x2F;p&gt;
+&lt;p class&#x3D;&quot;tag&quot;&gt;Neutral&lt;&#x2F;p&gt; 
+&lt;p class&#x3D;&quot;tag tag-type__info&quot;&gt;Info&lt;&#x2F;p&gt;
+&lt;p class&#x3D;&quot;tag tag-type__success&quot;&gt;Success&lt;&#x2F;p&gt;
+        </pre>
+        <strong>
+            <p>How to use components on this page:</p>
+        </strong>
+        <p>Add the following style sheets to the top your content</p>
+        <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_tags.css&quot; &#x2F;&gt; </p>
+        <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_colors.css&quot; &#x2F;&gt; </p>
+
         <h3>Usage guide</h3>
         <strong>
             <p>Customizing text:</p>
@@ -93,9 +112,13 @@
         </div>
         <h2>Special tag</h2>
         <p>The Special Tag component is used to draw attention to special or exciting content, helping users quickly identify important updates or new features.</p>
-        <div class="flex flex-jc-c">
+        <div class="example flex flex-jc-c">
             <p class="tag tag-type__special">Special</p>
         </div>
+        <pre>
+&lt;p class&#x3D;&quot;tag tag-type__special&quot;&gt;Special&lt;&#x2F;p&gt;
+
+        </pre>
         <p>Examples:</p>
         <div class="flex example">
             <p class="tag tag-type__special">New!</p>
@@ -122,9 +145,13 @@
         </ul>
         <h2>Keyword tag</h2>
         <p>The Keyword tag component is used to label and organize data within card components or other UI elements. It helps in categorizing information without implying a status or urgency.</p>
-        <div class="flex flex-jc-c">
+        <div class="example flex flex-jc-c">
             <p class="tag tag-type__keyword">Keyword</p>
         </div>
+        <pre>
+&lt;p class&#x3D;&quot;tag tag-type__keyword&quot;&gt;Keyword&lt;&#x2F;p&gt;
+
+        </pre>
         <p>Examples</p>
         <div class="flex example">
             <p class="tag tag-type__keyword">Projects</p>
