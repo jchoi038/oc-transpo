@@ -1,3 +1,4 @@
+/* link styles start*/
 .link-stack{
     gap: 0;
     li {
@@ -13,77 +14,104 @@
 a{
     color: var(--link);
     fill: inherit;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    &:hover{
-        color: var(--link-hover);
-    }
+    display: inline-block;
+    line-height: inherit;
     // text-decoration: underline;
 }
-
-// exception
- .ext-link-icon{
+//heights
+p a.icon-link::before{
     height: 1.5em;
-    width: 0.8em;
-    padding-bottom: 0.5rem;
 }
 
-a.icon-link{
-    &::before{
+p a.icon-link::after{
+    height: 1.5em;
+}
+// overriding styles from old style sheet
+
+a.map-link, a.pdf-link{
+    background: none;
+    padding-left: 0;
+    font-weight: inherit;
+    display: inherit;
+    line-height: inherit;
+    min-height: inherit;
+    display: inline-block;
+    vertical-align: inherit;
+}
+
+//hover
+a:hover{
+    background-color: var(--charcoal--50);
+    border-radius: 4px;
+    text-decoration: none;
+}
+// styles
+
+a.external-link,
+a.arrow-link{
+    &::after{
         content: "";
-        width: 1.25em;
-        height: 1.25em;
-        display: inline-flex;
+        width: 1.15em;
+        height: 1.15em;
+        display: inline-block;
         flex-shrink: 0;
-        justify-content: center;
-        align-items: center;
         background-repeat: no-repeat;
         background-position: center center;
         margin: 0;
         background-size: 100%;
+        vertical-align: text-bottom;
+        margin-bottom: 1px;
+        margin-left: 0.25em;
     }
-
-    &--pdf::before{
-        background-image: url(https://www.octranspo.com/images/files/icons/resource_pdf.svg);
-    }
-    &--map::before{
-        background-image: url(https://www.octranspo.com/images/files/icons/resource_map.svg);
-    }
-    &--image::before{
-        background-image: url(https://www.octranspo.com/images/files/icons/resource_image.svg);
-    }
-    &--email::before{
-        background-image: url(https://www.octranspo.com/images/files/icons/contact_email.svg);
-    }
-    &--mail::before{
-        background-image: url(https://www.octranspo.com/images/files/icons/contact_mail.svg);
-    }
-    &--phone::before{
-        background-image: url(https://www.octranspo.com/images/files/icons/contact_phone.svg);
-    }
-    &--tty::before{
-        background-image: url(https://www.octranspo.com/images/files/icons/contact_tty.svg);
-    }
-
-
-    
-
-    
-
 }
 
-a.external-link::after{
-    content: "";
-    background-image: url(https://www.octranspo.com/images/files/icons/resource_ext-link.svg);
-    width: 0.8em;
-    height: 1.5em;
-    display: inline-flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: left top;
-    margin: 0;
-    background-size: 100%;
+a.pdf-link,
+a.download-link,
+a.map-link,
+a.image-link,
+a.email-link,
+a.phone-link,
+a.tty-link {
+    &::before{
+        content: "";
+        width: 1.15em;
+        height: 1.15em;
+        display: inline-block;
+        flex-shrink: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0;
+        background-size: 100%;
+        vertical-align: text-bottom;
+        margin-right: 0.4em;
+        margin-bottom: 1px;
+    }
 }
+li.resource-li{
+    a.pdf-link,
+    a.download-link,
+    a.map-link,
+    a.image-link,
+    a.email-link,
+    a.phone-link,
+    a.tty-link {
+        &::before{
+            content: "";
+            margin-right: 0.75em;
+    }
+}
+}
+
+a.external-link::after {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_external.svg);}
+a.arrow-link::after {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_arrow-right.svg);}
+a.pdf-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_pdf.svg);}
+a.download-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_download.svg);}
+a.map-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_map.svg);}
+a.image-link::before { background-image: url(https://www.octranspo.com/images/files/icons/link-icon_image.svg);}
+a.email-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_email.svg);}
+a.phone-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_phone.svg);}    
+a.tty-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_TTY.svg);}    
+
+
+/* End link styles*/
+

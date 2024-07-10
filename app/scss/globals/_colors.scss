@@ -47,6 +47,10 @@
     --frequent--600: #1A559B;
     --frequent--700: #0F3869;
     --frequent--800: #0C294A;
+    // Delete below line for NWTB
+    --frequent: #D74100;
+    // Uncomment below line for NWTB
+    // --frequent: var(--frequent--600);
     --connexion--50: #FDF4F9; 
     --connexion--100: #FAE2F1;
     --connexion--200: #F4BCDE;

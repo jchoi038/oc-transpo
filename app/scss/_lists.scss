@@ -1,30 +1,4 @@
-ul, ol {
-    /* margin: 0 1.5rem 0; */
-    padding-left: 0;
-}
-
-.content-container ul li, li{
-    margin: 0;
-    margin-bottom: 0.25rem;
-    padding: 0;
-    // line-height: 150%;
-}
-
-.content-container ul, .content-container ol{
-    margin-left: 2.5rem;
-    padding: 0;
-}
-
-
-
-.accordion,.fares,.row--basic-content-main, .main-content{
-    // li {
-    //     margin-left: 1rem;
-    // }
-}
-// ul:not(.){
-//     margin-bottom: 1rem;
-// }
+/*lists start*/
 
 ul.checklist {
     li{
@@ -90,3 +64,5 @@ li.timeline__list{
     color: var(--charcoal--800);
 }
 }
+
+/*End lists*/

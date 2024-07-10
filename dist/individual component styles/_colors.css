@@ -1,6 +1,6 @@
 
 /*Colours start*/
-/* updated on 2024/07/05 11:14am */
+/* updated on 2024/07/10 */
 :root {
   --line1--50: #FCF4F0;
   --line1--100: #FCE4D9;
@@ -47,6 +47,7 @@
   --frequent--600: #1A559B;
   --frequent--700: #0F3869;
   --frequent--800: #0C294A;
+  --frequent: #D74100;
   --connexion--50: #FDF4F9;
   --connexion--100: #FAE2F1;
   --connexion--200: #F4BCDE;
