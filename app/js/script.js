@@ -1,4 +1,4 @@
-// toc
+/* toc start */
 let toc = document.getElementsByClassName("toc");
 let sections = document.getElementsByClassName("section");
 console.log(sections)
@@ -65,6 +65,9 @@ if (toc) {
 		}
 	});
 }
+
+/* end toc */
+
 
 /* select option */
 //get chevron icon element:
