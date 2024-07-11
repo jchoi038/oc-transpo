@@ -185,6 +185,8 @@ More information on the grid system is available at https://getbootstrap.com/doc
   --neutral-bg-border-color: var(--gray--500);
   --neutral-bg-icon-color: var(--gray--600);
   --neutral-text-color: var(--gray--800);
+  --prm-button: var(--line1--600);
+  --prm-button-hover: var(--line1--700);
 }
 
 .swatch {
@@ -16381,9 +16383,17 @@ figure.clickable-img:hover img {
   scale: 103%;
 }
 
+/* toc start */
+/* last updated: 2024/07/11 12:57pm */
+ul.toc__items {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
 .toc ul li {
   display: flex;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
 }
 .toc ul li a {
   width: 100%;
@@ -16395,6 +16405,7 @@ figure.clickable-img:hover img {
 @media (min-width: 1200px) {
   .toc__container {
     padding: 1rem;
+    padding-top: 0;
     background-color: white;
     border-radius: 0.5rem;
   }
@@ -16402,7 +16413,7 @@ figure.clickable-img:hover img {
 @media (min-width: 1200px) {
   .toc.sticky {
     position: sticky;
-    top: 6rem;
+    top: 0rem;
     width: 200px;
     display: block;
     height: 0px;
@@ -16425,13 +16436,14 @@ figure.clickable-img:hover img {
     padding: 0.125rem 0.5rem;
     color: var(--gray--500);
     border-left: 2px solid var(--gray--200);
-    padding: 0.5rem 0 0.5rem 0.5rem;
+    padding: 0.5rem;
   }
 }
 @media (min-width: 1200px) {
   .toc__link:hover {
     text-decoration: underline;
     background-color: var(--line4--50);
+    border-radius: 0 !important;
   }
 }
 @media (min-width: 1200px) {
@@ -16442,7 +16454,11 @@ figure.clickable-img:hover img {
     border-left: 2px solid var(--line4--600);
   }
 }
+.toc__link.active:hover {
+  text-decoration: none;
+}
 
+/* end toc */
 /* link styles start*/
 .link-stack {
   gap: 0;
@@ -16759,6 +16775,61 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
 .rt-type--local_l {
   background-image: url("https://www.octranspo.com/images/files/icons/route_local-ltd.svg");
   color: var(--local--600);
+}
+
+.rt-1 {
+  background-image: url("https://www.octranspo.com/images/files/icons/line_1-blank.svg");
+}
+.rt-2 {
+  background-image: url("https://www.octranspo.com/images/files/icons/line_2-blank.svg");
+}
+.rt-3 {
+  background-image: url("https://www.octranspo.com/images/files/icons/line_3-blank.svg");
+}
+.rt-4 {
+  background-image: url("https://www.octranspo.com/images/files/icons/line_4-blank.svg");
+}
+.rt-R1 {
+  background-image: url("https://www.octranspo.com/images/files/icons/line_R1-blank.svg");
+  color: var(--line1--600);
+  padding-left: 0.85em;
+}
+.rt-R2 {
+  background-image: url("https://www.octranspo.com/images/files/icons/line_R2-blank.svg");
+  color: var(--line2--500);
+  padding-left: 0.85em;
+}
+.rt-R3 {
+  background-image: url("https://www.octranspo.com/images/files/icons/line_R3-blank.svg");
+  color: var(--line3--500);
+  padding-left: 0.85em;
+}
+.rt-R4 {
+  background-image: url("https://www.octranspo.com/images/files/icons/line_R4-blank.svg");
+  color: var(--line4--500);
+  padding-left: 0.85em;
+}
+
+.rt-5, .rt-5, .rt-6, .rt-6, .rt-7, .rt-7, .rt-10, .rt-10, .rt-11, .rt-11, .rt-12, .rt-12, .rt-14, .rt-14, .rt-25, .rt-25, .rt-39, .rt-39, .rt-40, .rt-40, .rt-41, .rt-41, .rt-44, .rt-44, .rt-45, .rt-45, .rt-57, .rt-57, .rt-61, .rt-61, .rt-62, .rt-62, .rt-63, .rt-63, .rt-63, .rt-63, .rt-68, .rt-68, .rt-74, .rt-74, .rt-75, .rt-75, .rt-80, .rt-85, .rt-85, .rt-87, .rt-87, .rt-88, .rt-88, .rt-90, .rt-90, .rt-98, .rt-98, .rt-111, .rt-111 {
+  background-image: url("https://www.octranspo.com/images/files/icons/route_frequent_nwtb.svg");
+}
+.rt-39, .rt-N39, .rt-N39, .rt-N39, .rt-N45, .rt-N45, .rt-N57, .rt-N57, .rt-N61, .rt-N61, .rt-62, .rt-62, .rt-68, .rt-68, .rt-N75, .rt-N75, .rt-N98, .rt-N98, .rt-111, .rt-111 {
+  background-image: url("https://www.octranspo.com/images/files/icons/route_frequent-ltd-nwtb.svg");
+  color: var(--frequent--600);
+}
+.rt-8, .rt-8, .rt-9, .rt-9, .rt-18, .rt-18, .rt-19, .rt-19, .rt-20, .rt-20, .rt-24, .rt-24, .rt-24, .rt-24, .rt-30, .rt-30, .rt-31, .rt-31, .rt-33, .rt-33, .rt-34, .rt-34, .rt-35, .rt-35, .rt-36, .rt-36, .rt-38, .rt-38, .rt-42, .rt-42, .rt-48, .rt-48, .rt-49, .rt-49, .rt-51, .rt-51, .rt-53, .rt-53, .rt-56, .rt-56, .rt-58, .rt-58, .rt-60, .rt-60, .rt-67, .rt-67, .rt-67, .rt-70, .rt-70, .rt-73, .rt-73, .rt-81, .rt-81, .rt-82, .rt-82, .rt-86, .rt-86, .rt-93, .rt-93, .rt-99, .rt-99, .rt-110, .rt-110, .rt-110, .rt-110, .rt-112, .rt-112, .rt-116, .rt-116, .rt-138, .rt-138, .rt-161, .rt-161, .rt-162, .rt-162, .rt-163, .rt-163, .rt-165, .rt-165, .rt-168, .rt-168, .rt-173, .rt-173, .rt-189, .rt-189, .rt-197, .rt-197, .rt-198 {
+  background-image: url("https://www.octranspo.com/images/files/icons/route_local.svg");
+}
+.rt-8, .rt-8, .rt-13, .rt-13, .rt-15, .rt-15, .rt-17, .rt-17, .rt-21, .rt-21, .rt-23, .rt-23, .rt-26, .rt-26, .rt-32, .rt-32, .rt-33, .rt-33, .rt-38, .rt-38, .rt-43, .rt-43, .rt-47, .rt-47, .rt-58, .rt-58, .rt-60, .rt-60, .rt-66, .rt-66, .rt-67, .rt-67, .rt-73, .rt-73, .rt-82, .rt-82, .rt-84, .rt-84, .rt-92, .rt-92, .rt-92, .rt-94, .rt-94, .rt-99, .rt-117, .rt-117, .rt-125, .rt-125, .rt-139, .rt-139, .rt-153, .rt-153, .rt-158, .rt-158, .rt-161, .rt-161, .rt-187, .rt-187, .rt-198, .rt-198, .rt-301, .rt-301, .rt-302, .rt-302, .rt-303, .rt-303, .rt-304, .rt-304, .rt-305, .rt-305, .rt-404, .rt-404, .rt-405, .rt-405, .rt-406, .rt-406, .rt-450, .rt-450, .rt-451, .rt-451, .rt-452, .rt-452, .rt-454, .rt-454, .rt-455, .rt-455, .rt-456, .rt-456 {
+  background-image: url("https://www.octranspo.com/images/files/icons/route_local-ltd.svg");
+  color: var(--local--600);
+}
+.rt-221, .rt-221, .rt-222, .rt-222, .rt-228, .rt-228, .rt-234, .rt-234, .rt-237, .rt-237, .rt-256, .rt-256, .rt-261, .rt-261, .rt-262, .rt-262, .rt-263, .rt-263, .rt-265, .rt-265, .rt-266, .rt-266, .rt-275, .rt-275, .rt-277, .rt-277, .rt-279, .rt-279, .rt-283, .rt-283, .rt-294, .rt-294, .rt-299, .rt-299 {
+  background-image: url("https://www.octranspo.com/images/files/icons/route_connexion.svg");
+}
+.rt-8::after, .rt-33::after, .rt-38::after, .rt-39::after, .rt-58::after, .rt-60::after, .rt-62::after, .rt-67::after, .rt-68::after, .rt-73::after, .rt-99::after, .rt-111::after, .rt-161::after, .rt-198::after {
+  background-color: yellow;
+  content: "*";
 }
 
 /****End Routes & lines styles ******/
