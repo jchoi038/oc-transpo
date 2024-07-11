@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<!-- loading main css from oc site -->
+	<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9"
+    title="octranspo-main-css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../../dist/custom-style.css" /> -->
+    <title>Style guide 2024 approved components</title>
+</head>
+<body>
+    <div class="main-content">
+        <h1>Style Guide 2024 approved components</h1>
+    </div>
+    <!-- Copy below -->
+    <div class="main-content" >
+        
+        <link href="https://www.octranspo.com/images/files/dist/_code.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_colors.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_util.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_tags.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_layout.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_grids.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_notes.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_inline.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_tables.css" rel="stylesheet" />
+        <link href="https://www.octranspo.com/images/files/dist/_toc.css" rel="stylesheet" />
+        <!-- TOC -->
+        <div class="toc sticky"></div>
+        <!-- inline styles -->
+        <section class="section" id="styleguide-inline">
+            <h2>Inline styles</h2>
+            <section>
+                <section class="intro">
+                            <strong>Covered on this section:</strong>
+                            <ul>
+                                <li>Resource links</li>
+                                <li>Lists</li>
+                                <li>Route icons</li>
+                                <!-- last worked on here -->
+                                <p>Combine styles for links.scss, lists.scss, route-lines.scss in one style sheet</p>
+                            </ul>
+                            <strong>
+                                <p>How to use these components</p>
+                            </strong>
+                            <p>Add the following style sheets to the top your content</p>
+                            <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_inline.css&quot; &#x2F;&gt; </p>
+                            <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_colors.css&quot; &#x2F;&gt; </p>
+                        </section>
+                        <h3>Inline resource links</h3>
+                        <section>
+                            <div class="example flex flex-jc-c">
+                                <a class="external-link" href="">External link</a>
+                            </div>
+                            <pre>
+                                &lt;a class&#x3D;&quot;external-link&quot; href&#x3D;&quot;&quot;&gt;External link&lt;&#x2F;a&gt;
+                            </pre>
+                            <div class="example flex flex-jc-c">
+                                <a class="arrow-link" href="">Arrow link</a>
+                            </div>
+                            <pre>
+                                &lt;a class&#x3D;&quot;arrow-link&quot; href&#x3D;&quot;&quot;&gt;Arrow link&lt;&#x2F;a&gt;
+                            </pre>
+                            <div class="example flex flex-jc-c">
+                                <a href="" class="pdf-link">PDF link</a>
+                            </div>
+                            <pre>
+                                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;pdf-link&quot;&gt;PDF link&lt;&#x2F;a&gt;
+                            </pre>
+                            <div class="example flex flex-jc-c">
+                                <a href="" class="download-link">Download link</a>
+                            </div>
+                            <pre>
+                                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;download-link&quot;&gt;Download link&lt;&#x2F;a&gt;
+                            </pre>
+                            <div class="example flex flex-jc-c">
+                                <a href="" class="map-link">Map link</a>
+                            </div>
+                            <pre>
+                                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;map-link&quot;&gt;Map link&lt;&#x2F;a&gt;
+                            </pre>
+                            <div class="example flex flex-jc-c">
+                                <a href="" class="image-link">Image link</a>
+                            </div>
+                            <pre>
+                                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;image-link&quot;&gt;Image link&lt;&#x2F;a&gt;
+                            </pre>
+                            <div class="example flex flex-jc-c">
+                                <a href="" class="email-link">Email link</a>
+                            </div>
+                            <pre>
+                                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;email-link&quot;&gt;Email link&lt;&#x2F;a&gt;
+                            </pre>
+                            <div class="example flex flex-jc-c">
+                                <a href="" class="tty-link">TTY link</a>
+                            </div>
+                            <pre>
+                                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;tty-link&quot;&gt;TTY link&lt;&#x2F;a&gt;
+                            </pre>
+                            <div class="example flex flex-jc-c">
+                                <a href="" class="phone-link">Phone number link</a>
+                            </div>
+                            <pre>
+                                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;phone-link&quot;&gt;Phone number link&lt;&#x2F;a&gt;
+                            </pre>
+                            <!-- <div class="example flex flex-jc-c">
+                                <a href="" class="web-link">Website link</a>
+                            </div>
+                            <pre>
+                                &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;web-link&quot;&gt;Website link&lt;&#x2F;a&gt;
+                            </pre> -->
+                            <p>Listed</p>
+                            <div class="example flex flex-jc-c">
+                                <ul>
+                                    <li><a href="" class="resource-li phone-link">613-123-1234</a></li>
+                                    <li><a href="" class="resource-li email-link">email@octranspo.com</a></li>
+                                    <li><a href="" class="resource-li tty-link">613-123-1234</a></li>
+                                    <li><a href="" class="resource-li download-link">Download link</a></li>
+                                    <li><a href="" class="resource-li pdf-link">PDF link</a></li>
+                                    <li>This is a regular list item Lorem ipsum dolor sit.</li>
+                                    <li>This is a regular list item with an inline icon link <a href="" class="external-link">external link </a>Lorem ipsum dolor sit.</li>
+                                </ul>
+                            </div>
+                            <pre>
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;resource-li phone-link&quot;&gt;613-123-1234&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+                                &lt;li&gt;&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;resource-li email-link&quot;&gt;email@octranspo.com&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+                                &lt;li&gt;&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;resource-li tty-link&quot;&gt;613-123-1234&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+                                &lt;li&gt;&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;resource-li download-link&quot;&gt;Download link&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+                                &lt;li&gt;&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;resource-li pdf-link&quot;&gt;PDF link&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+                                &lt;li&gt;This is a regular list item Lorem ipsum dolor sit.&lt;&#x2F;li&gt;
+                                &lt;li&gt;This is a regular list item with an inline icon link &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;external-link&quot;&gt;external link &lt;&#x2F;a&gt;Lorem ipsum dolor sit.&lt;&#x2F;li&gt;
+                            &lt;&#x2F;ul&gt;
+                            </pre>
+                        </section>
+                        <h3>O-Train Line destinations</h3>
+                        <section>
+                            <div class="example flex flex-dir-col flex-ai-c">
+                                <div style="text-align: left;">
+                                    <p><span class="rt rt-type--line1">1</span><span class="visuallyhidden">Line 1</span> Tunney's Pasture</p>
+                                    <p><span class="rt rt-type--line1">1</span><span class="visuallyhidden">Line 1</span> Blair</p>
+                                    <p><span class="rt rt-type--line2">2</span><span class="visuallyhidden">Line 2</span> Bayview</p>
+                                    <p><span class="rt rt-type--line2">2</span><span class="visuallyhidden">Line 2</span> Limebank</p>
+                                    <p><span class="rt rt-type--line3">3</span><span class="visuallyhidden">Line 3</span> Tunney's Pasture</p>
+                                    <p><span class="rt rt-type--line3">3</span><span class="visuallyhidden">Line 3</span> Moodie</p>
+                                    <p><span class="rt rt-type--line4">4</span><span class="visuallyhidden">Line 4</span> South Keys</p>
+                                    <p><span class="rt rt-type--line4">4</span><span class="visuallyhidden">Line 4</span> Airport</p>
+                                </div>
+                            </div>
+                            <pre>
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Line 1&lt;&#x2F;span&gt; Tunney&#39;s Pasture&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Line 1&lt;&#x2F;span&gt; Blair&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--line2&quot;&gt;2&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Line 2&lt;&#x2F;span&gt; Bayview&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--line2&quot;&gt;2&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Line 2&lt;&#x2F;span&gt; Limebank&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--line3&quot;&gt;3&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Line 3&lt;&#x2F;span&gt; Tunney&#39;s Pasture&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--line3&quot;&gt;3&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Line 3&lt;&#x2F;span&gt; Moodie&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--line4&quot;&gt;4&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Line 4&lt;&#x2F;span&gt; South Keys&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--line4&quot;&gt;4&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Line 4&lt;&#x2F;span&gt; Airport&lt;&#x2F;p&gt;
+                            </pre>
+                        </section>
+                        <h3>Bus route with destination</h3>
+                        <section>
+                            <div class="example">
+                                <div class="flex flex-dir-col flex-ai-c">
+                                    <p><span class="rt rt-type--connexion">11</span><span class="visuallyhidden">Connexion Route</span> Route destination</p>
+                                    <p><span class="rt rt-type--frequent">11</span><span class="visuallyhidden">Frequent Route</span> Route destination</p>
+                                    <p><span class="rt rt-type--local">11<span class="visuallyhidden">Local Route</span></span> Route destination</p>
+                                    <p><span class="rt rt-type--connexion_l">11<span class="visuallyhidden">Limited Connexion Route</span></span> Route destination</p>
+                                    <p><span class="rt rt-type--frequent_l">11<span class="visuallyhidden">Limited Frequent Route</span></span> Route destination</p>
+                                    <p><span class="rt rt-type--local_l">11<span class="visuallyhidden">Limited Local Route</span></span> Route destination</p>
+                                </div>
+                            </div>
+                            <pre>
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--connexion&quot;&gt;123&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Connexion Route&lt;&#x2F;span&gt; Route destination&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--frequent&quot;&gt;123&lt;&#x2F;span&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Frequent Route&lt;&#x2F;span&gt; Route destination&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--local&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Local Route&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; Route destination&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--connexion_l&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Limited Connexion Route&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; Route destination&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--frequent_l&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Limited Frequent Route&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; Route destination&lt;&#x2F;p&gt;
+                &lt;p&gt;&lt;span class&#x3D;&quot;rt rt-type--local_l&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Limited Local Route&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; Route destination&lt;&#x2F;p&gt;
+                            </pre>
+                        </section>
+                        <h3>Bus route ID only</h3>
+                        <section>
+                            <div class="example flex flex-jc-c">
+                                <p class="rt rt-type--connexion">11<span class="visuallyhidden">Connexion Route</span></p>
+                                <p class="rt rt-type--frequent">11<span class="visuallyhidden">Frequent Route</span></p>
+                                <p class="rt rt-type--local">11<span class="visuallyhidden">Local Route</span></p>
+                                <p class="rt rt-type--connexion_l">11<span class="visuallyhidden">Limited Connexion Route</span></p>
+                                <p class="rt rt-type--frequent_l">11<span class="visuallyhidden">Limited Frequent Route</span></p>
+                                <p class="rt rt-type--local_l">11<span class="visuallyhidden">Limited Local Route</span></p>
+                            </div>
+                            <pre>
+                &lt;p class&#x3D;&quot;rt rt-type--connexion&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Connexion Route&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;rt rt-type--frequent&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Frequent Route&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;rt rt-type--local&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Local Route&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;rt rt-type--connexion_l&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Limited Connexion Route&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;rt rt-type--frequent_l&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Limited Frequent Route&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;rt rt-type--local_l&quot;&gt;123&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Limited Local Route&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;
+                            </pre>
+                        </section>
+                        <h3>Headings with inline lines IDs </h3>
+                        <section>
+                            <div class="example grid--4col">
+                                <div>
+                                    <h1>Line <span class="rt rt-type--line1">1</span></h1>
+                                    <h3>Line <span class="rt rt-type--line1">1</span></h3>
+                                    <h3>Line <span class="rt rt-type--line1">1</span></h3>
+                                    <h4>Line <span class="rt rt-type--line1">1</span></h4>
+                                    <h5>Line <span class="rt rt-type--line1">1</span></h5>
+                                    <h6>Line <span class="rt rt-type--line1">1</span></h6>
+                                </div>
+                                <div>
+                                    <h1>Line <span class="rt rt-type--line2">2</span></h1>
+                                    <h3>Line <span class="rt rt-type--line2">2</span></h3>
+                                    <h3>Line <span class="rt rt-type--line2">2</span></h3>
+                                    <h4>Line <span class="rt rt-type--line2">2</span></h4>
+                                    <h5>Line <span class="rt rt-type--line2">2</span></h5>
+                                    <h6>Line <span class="rt rt-type--line2">2</span></h6>
+                                </div>
+                                <div>
+                                    <h1>Line <span class="rt rt-type--line3">3</span></h1>
+                                    <h3>Line <span class="rt rt-type--line3">3</span></h3>
+                                    <h3>Line <span class="rt rt-type--line3">3</span></h3>
+                                    <h4>Line <span class="rt rt-type--line3">3</span></h4>
+                                    <h5>Line <span class="rt rt-type--line3">3</span></h5>
+                                    <h6>Line <span class="rt rt-type--line3">3</span></h6>
+                                </div>
+                                <div>
+                                    <h1>Line <span class="rt rt-type--line4">4</span></h1>
+                                    <h3>Line <span class="rt rt-type--line4">4</span></h3>
+                                    <h3>Line <span class="rt rt-type--line4">4</span></h3>
+                                    <h4>Line <span class="rt rt-type--line4">4</span></h4>
+                                    <h5>Line <span class="rt rt-type--line4">4</span></h5>
+                                    <h6>Line <span class="rt rt-type--line4">4</span></h6>
+                                </div>
+                            </div>
+                            <pre>
+                                Swap instances of line1 to line2, line3, line4 for Line 2, Line 3, Line 4 headings, respectfully
+                &lt;h1&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h1&gt;
+                &lt;h3&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h3&gt;
+                &lt;h3&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h3&gt;
+                &lt;h4&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h4&gt;
+                &lt;h5&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;
+                &lt;h6&gt;Line &lt;span class&#x3D;&quot;rt rt-type--line1&quot;&gt;1&lt;&#x2F;span&gt;&lt;&#x2F;h6&gt;
+                            </pre>
+                        </section>
+                        <h3>Lists</h3>
+                        <h3>Checklists</h3>
+                        <div class="example grid--2col">
+                
+                            <ul class="checklist">
+                                <li>Baseline (avant 11 h)</li>
+                                <li>Blair (Telesat)</li>
+                                <li>Jeanne d’Arc, and</li>
+                                <li>Ray Friel</li>
+                            </ul>
+                            <ul class="checklist checklist--x">
+                                <li>Baseline (avant 11 h)</li>
+                                <li>Blair (Telesat)</li>
+                                <li>Jeanne d’Arc, and</li>
+                                <li>Ray Friel</li>
+                            </ul>
+                        </div>
+                        <pre>
+                &lt;ul class="checklist"&gt;
+                    &lt;li&gt;Baseline (avant 11 h)&lt;/li&gt;
+                    &lt;li&gt;Blair (Telesat)&lt;/li&gt;
+                    &lt;li&gt;Jeanne d’Arc, and&lt;/li&gt;
+                    &lt;li&gt;Ray Friel&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul class="checklist checklist--x"&gt;
+                    &lt;li&gt;Baseline (avant 11 h)&lt;/li&gt;
+                    &lt;li&gt;Blair (Telesat)&lt;/li&gt;
+                    &lt;li&gt;Jeanne d’Arc, and&lt;/li&gt;
+                    &lt;li&gt;Ray Friel&lt;/li&gt;
+                &lt;/ul&gt;
+                        </pre>
+                        <h3>Timeline lists</h3>
+                        <div class="example grid grid--4col">
+                            <!-- <ul class="timeline bg-gradient-red">
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">
+                                            Lorem ipsum dolor sit
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">
+                                            Lorem ipsum dolor sit
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">
+                                            Lorem ipsum dolor sit
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="timeline bg-gradient-green">
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                
+                            </ul>
+                            <ul class="timeline bg-gradient-yellow">
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                
+                            </ul>
+                            <ul class="timeline bg-gradient-blue">
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                                <li class="timeline__list">
+                                    <div class="timeline__text">
+                                        <p class="timeline__year">Title</p>
+                                        <p class="timeline__body">Lorem ipsum dolor sit</p>
+                                    </div>
+                                </li>
+                
+                            </ul> -->
+                            <p>WIP</p>
+                        </div>
+                        <!-- <pre>
+                swap out [colour] to:
+                bg-gradient-red
+                bg-gradient-green
+                bg-gradient-yellow
+                bg-gradient-blue
+                ---------------------
+                
+                &lt;ul class="timeline bg-gradient-[colour]"&gt;
+                    &lt;li class="timeline__list"&gt;
+                        &lt;div class="timeline__text"&gt;
+                            &lt;p class="timeline__year"&gt;Title&lt;/p&gt;
+                            &lt;p class="timeline__body"&gt;Lorem ipsum dolor sit&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="timeline__list"&gt;
+                        &lt;div class="timeline__text"&gt;
+                            &lt;p class="timeline__year"&gt;Title&lt;/p&gt;
+                            &lt;p class="timeline__body"&gt;Lorem ipsum dolor sit&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="timeline__list"&gt;
+                        &lt;div class="timeline__text"&gt;
+                            &lt;p class="timeline__year"&gt;Title&lt;/p&gt;
+                            &lt;p class="timeline__body"&gt;Lorem ipsum dolor sit&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                                        </pre> -->
+                        
+            </section>
+        </section>
+        <!-- tags -->
+        <section class="section" id="styleguide-tags">
+            <h2>Tags</h2>
+            <section>
+                <h3>Semantic tags</h3>
+                        <p>The semantic tag component uses color to convey specific statuses.</p>
+                        <div class=" example flex flex-jc-c">
+                            <p class="tag tag-type__warning">Warning</p>
+                            <p class="tag tag-type__critical">Critical</p>
+                            <p class="tag">Neutral</p>
+                            <p class="tag tag-type__info">Info</p>
+                            <p class="tag tag-type__success">Success</p>
+                        </div>
+                        <pre>
+                &lt;p class&#x3D;&quot;tag tag-type__warning&quot;&gt;Warning&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;tag tag-type__critical&quot;&gt;Critical&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;tag&quot;&gt;Neutral&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;tag tag-type__info&quot;&gt;Info&lt;&#x2F;p&gt;
+                &lt;p class&#x3D;&quot;tag tag-type__success&quot;&gt;Success&lt;&#x2F;p&gt;
+                        </pre>
+                        <strong>
+                            <p>How to use these components</p>
+                        </strong>
+                        <p>Add the following style sheets to the top your content</p>
+                        <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_tags.css&quot; &#x2F;&gt; </p>
+                        <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_colors.css&quot; &#x2F;&gt; </p>
+                
+                        <h3>Usage guide</h3>
+                        <strong>
+                            <p>Customizing text:</p>
+                        </strong>
+                        <ul>
+                            <li>While the text within the tags can be customized to fit your needs, the semantic meaning conveyed by the color should remain unchanged.</li>
+                            <li>Choose text that clearly represents the status in a concise and understandable manner.</li>
+                        </ul>
+                        <strong>
+                            <p>When to use</p>
+                        </strong>
+                        <p>To represent the status of an element on a page.</p>
+                        <strong>
+                            <p>How to use</p>
+                        </strong>
+                        <ul>
+                            <li>Within card components: Use to display the status of an item or entity within a card.</li>
+                            <li>Within table components: Use to display the status of items within table rows.</li>
+                        </ul>
+                        <p>Examples:</p>
+                        <div class="example">
+                            <table class="width-to-fit align-c">
+                                <tbody>
+                                    <tr>
+                                        <td><p class="tag tag-type__warning">Warning</p></td>
+                                        <td><p class="tag tag-type__critical">Critical</p></td>
+                                        <td><p class="tag">Neutral</p></td>
+                                        <td><p class="tag tag-type__info">Info</p></td>
+                                        <td><p class="tag tag-type__success">Success</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="">
+                                            <p class="tag tag-type__warning">Warning</p>
+                                            <p class="tag tag-type__warning">Out&nbsp;of&nbsp;service</p>
+                                            <p class="tag tag-type__warning">Under&nbsp;construction</p>
+                                        </td>
+                                        <td class="">
+                                            <p class="tag tag-type__critical">Error</p>
+                                            <p class="tag tag-type__critical">Cancelled</p>
+                                            <p class="tag tag-type__critical">Removed</p>
+                                            <p class="tag tag-type__critical">Important</p>
+                                        </td>
+                                        <td class="">
+                                            <p class="tag tag-type__neutral">Inactive</p>
+                                            <p class="tag tag-type__neutral">Planned</p>
+                                            <p class="tag tag-type__neutral">Unavailable</p>
+                                        </td>
+                                        <td class="">
+                                            <p class="tag tag-type__info">Info</p>
+                                            <p class="tag tag-type__info">In&nbsp;progress</p>
+                                        </td>
+                                        <td class="">
+                                            <p class="tag tag-type__success">Complete</p>
+                                            <p class="tag tag-type__success">Approved</p>
+                                            <p class="tag tag-type__success">Confirmed</p>
+                                            <p class="tag tag-type__success">Success</p>
+                                            <p class="tag tag-type__success">Normal&nbsp;operation</p>
+                                            <p class="tag tag-type__success">Ongoing</p>
+                                            <p class="tag tag-type__success">Free</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3>Special tag</h3>
+                        <p>The Special Tag component is used to draw attention to special or exciting content, helping users quickly identify important updates or new features.</p>
+                        <div class="example flex flex-jc-c">
+                            <p class="tag tag-type__special">Special</p>
+                        </div>
+                        <pre>
+                &lt;p class&#x3D;&quot;tag tag-type__special&quot;&gt;Special&lt;&#x2F;p&gt;
+                
+                        </pre>
+                        <p>Examples:</p>
+                        <div class="flex example">
+                            <p class="tag tag-type__special">New!</p>
+                            <p class="tag tag-type__special">New feature!</p>
+                            <p class="tag tag-type__special">Featured</p>
+                            <p class="tag tag-type__special">Tip</p>
+                            <p class="tag tag-type__special">Just launched!</p>
+                            <p class="tag tag-type__special">Updated</p>
+                            <p class="tag tag-type__special">Update</p>
+                            <p class="tag tag-type__special">Coming soon!</p>
+                            <p class="tag tag-type__special">Upcoming</p>
+                        </div>
+                        <h3>Usage guide</h3>
+                        <strong>
+                            <p>When to use</p>
+                        </strong>
+                        <p>To draw attention to special or exciting content, helping users quickly identify important updates or new features.</p>
+                        <strong>
+                            <p>How to use</p>
+                        </strong>
+                        <ul>
+                            <li>Within promotional banner components: Place at the top left corner of the banner.</li>
+                            <li>Within tab components: Place beside tab text.</li>
+                        </ul>
+                        <h3>Keyword tag</h3>
+                        <p>The Keyword tag component is used to label and organize data within card components or other UI elements. It helps in categorizing information without implying a status or urgency.</p>
+                        <div class="example flex flex-jc-c">
+                            <p class="tag tag-type__keyword">Keyword</p>
+                        </div>
+                        <pre>
+                &lt;p class&#x3D;&quot;tag tag-type__keyword&quot;&gt;Keyword&lt;&#x2F;p&gt;
+                
+                        </pre>
+                        <p>Examples</p>
+                        <div class="flex example">
+                            <p class="tag tag-type__keyword">Projects</p>
+                            <p class="tag tag-type__keyword">Feature</p>
+                        </div>
+                        <h3>Usage guide</h3>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <p>The Keyword tag component is designed for simple, neutral labeling without any additional styles. It is ideal for use within card components or other UI elements where a simple text label is sufficient.</p>
+                        <strong>
+                            <p>How to use:</p>
+                        </strong>
+                        <p>Within card components: Place above card title.</p>
+                        <strong>
+                            <p>To avoid:</p>
+                        </strong>
+                        <p>Refrain from making keyword more than one word.</p>
+            </section>
+        </section>
+        <!-- Notes -->
+        <section class="section" id="styleguide-notes">
+            <h2>Notes</h2>
+            <section>
+                <p>Notes are responsive components that provide additional detailed messaging related to the content of the page.</p>
+                <strong>
+                    <p>Note title guide</p>
+                </strong>
+                <ul>
+                    Keep note title short and informative
+                    Do not include paragraphs of information in the note title, instead place additional lengthy information in the note description
+                </ul>
+                <strong>
+                    <p>How to use these components</p>
+                </strong>
+                <p>Add the following style sheets to the top your content</p>
+                <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_tags.css&quot; &#x2F;&gt; </p>
+                <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_notes.css&quot; &#x2F;&gt; </p>
+                <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_colors.css&quot; &#x2F;&gt; </p>
+            </section>
+            <!-- sementic notes section -->
+            <section>
+                <h3>Semantic notes</h3>
+                <p>4 types of semantic notes are available. </p>
+                <p>Select the most appropriate type for your use.</p>
+                <section class="sub-section">
+                    <div class="example">
+                        <div class="note note__type--warning">
+                            <p class="note__title">Warning note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <pre>
+                    &lt;div class&#x3D;&quot;note note__type--warning&quot;&gt;
+                        &lt;p class&#x3D;&quot;note__title&quot;&gt;[Warning note title placeholder]&lt;&#x2F;p&gt;
+                        &lt;div class&#x3D;&quot;note__desc&quot;&gt;
+                            &lt;p&gt;[note description placeholder]&lt;&#x2F;p&gt;
+                        &lt;&#x2F;div&gt;
+                    &lt;&#x2F;div&gt;
+                </pre>
+                    <div class="example">
+                        <div class="note note__type--urgent">
+                            <p class="note__title">Urgent note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <pre>
+                    &lt;div class&#x3D;&quot;note note__type--urgent&quot;&gt;
+                        &lt;p class&#x3D;&quot;note__title&quot;&gt;[Urgent note title placeholder]&lt;&#x2F;p&gt;
+                        &lt;div class&#x3D;&quot;note__desc&quot;&gt;
+                            &lt;p&gt;[note description placeholder]&lt;&#x2F;p&gt;
+                        &lt;&#x2F;div&gt;
+                    &lt;&#x2F;div&gt;
+                    </pre>
+                    <div class="example">
+                        <div class="note note__type--info">
+                            <p class="note__title">Info note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <pre>
+                    &lt;div class&#x3D;&quot;note note__type--info&quot;&gt;
+                        &lt;p class&#x3D;&quot;note__title&quot;&gt;[Info note title placeholder]&lt;&#x2F;p&gt;
+                        &lt;div class&#x3D;&quot;note__desc&quot;&gt;
+                            &lt;p&gt;[note description placeholder]&lt;&#x2F;p&gt;
+                        &lt;&#x2F;div&gt;
+                    &lt;&#x2F;div&gt;
+                    </pre>
+                    <div class="example">
+                        <div class="note note__type--success">
+                            <p class="note__title">Success note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <pre>
+                    &lt;div class&#x3D;&quot;note note__type--success&quot;&gt;
+                        &lt;p class&#x3D;&quot;note__title&quot;&gt;[Success note title placeholder]&lt;&#x2F;p&gt;
+                        &lt;div class&#x3D;&quot;note__desc&quot;&gt;
+                            &lt;p&gt;[note description placeholder]&lt;&#x2F;p&gt;
+                        &lt;&#x2F;div&gt;
+                    &lt;&#x2F;div&gt;
+                    </pre>
+                </section>
+                <h3>Semantic note usage guide</h3>
+                <div class="grid grid--2col">
+                    <div class="example">
+                        <div class="note note__type--warning">
+                            <p class="note__title">Warning note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Warning notes are to be used as generic warning messages like service disruptions, important reminders.</p>
+                        <strong>
+                            <p>Tone</p>
+                        </strong>
+                        <ul>
+                            <li>Important</li>
+                            <li>non-urgent</li>
+                        </ul>
+                        <strong>
+                            <p>When to use</p>
+                        </strong>
+                        <ul>
+                            <li>Generic warning messages / non-urgent, important reminders.</li>
+                        </ul>
+                        <strong>
+                            <p>Specific use case:</p>
+                        </strong>
+                        <ul>
+                            <li>Service disruptions</li>
+                        </ul>
+                        <strong>
+                            <p>Warning note title examples</p>
+                        </strong>
+                        <ul>
+                            <li>Warning</li>
+                            <li>Reminder</li>
+                            <li>Dates adjusted for Canada Day</li>
+                            <li>Tap your card, not your wallet</li>
+                            <li>Line 1 planned maintence</li>
+                        </ul>
+                    </div>
+            
+            
+            
+                </div>
+                <div class="grid grid--2col">
+                    <div class="example">
+                        <div class="note note__type--urgent">
+                            <p class="note__title">Urgent note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Urgent notes are to be reserved for messages of high importance and urgency, considered a level higher in importance compared to warning notes. Do not use them for regular service disruptions; instead, use the warning note.</p>
+                        <strong>
+                            <p>Tone</p>
+                        </strong>
+                        <ul>
+                            <li>Urgent</li>
+                        </ul>
+                        <strong>
+                            <p>When to use</p>
+                        </strong>
+                        <ul>
+                            <li>For high importance messages.</li>
+                        </ul>
+                        <strong>
+                            <p>Specific use cases</p>
+                        </strong>
+                        <ul>
+                            <li>Pandemic-related government mandates (e.g., COVID-19 mask requirement, social distancing, etc.)</li>
+                            <li>Current urgent issues (e.g., weather, terrorism) that require immediate attention</li>
+                        </ul>
+                        <strong>
+                            <p>Urgent note title examples</p>
+                        </strong>
+                        <ul>
+                            <li>COVID-19 (or other future pandemic names)</li>
+                            <li>Important</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid--2col">
+                    <div class="example">
+                        <div class="note note__type--info">
+                            <p class="note__title">Info note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Info notes are to be used for informative pieces of information that have either a positive or neutral tone.</p>
+                        <strong>
+                            <p>Tone</p>
+                        </strong>
+                        <ul>
+                            <li>Positive or neutral</li>
+                        </ul>
+                        <strong>
+                            <p>When to use</p>
+                        </strong>
+                        <ul>
+                            <li>To provide helpful pieces of information.</li>
+                        </ul>
+                        <strong>
+                            <p>Info note title examples</p>
+                        </strong>
+                        <ul>
+                            <li>Info</li>
+                            <li>Event info</li>
+                            <li>Free service for event ticket holders!</li>
+                            <li>90-minute transfer times</li>
+                            <li>Seniors ride free</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid--2col">
+                    <div class="example">
+                        <div class="note note__type--success">
+                            <p class="note__title">Success note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Success notes are to be used for any messages that inform of something successful.</p>
+                        <strong>
+                            <p>Tone</p>
+                        </strong>
+                        <ul>
+                            <li>Positive</li>
+                        </ul>
+                        <strong>
+                            <p>When to use</p>
+                        </strong>
+                        <ul>
+                            <li>For any type of success messaging.</li>
+                        </ul>
+                        <strong>
+                            <p>Note title examples</p>
+                        </strong>
+                        <ul>
+                            <li>Routes/Trains are back in service</li>
+                            <li>Customer Service Centre at Rideau Centre is now open</li>
+                            <li>Routes/Trains are operating normally</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Semantic notes specs & colours</h3>
+                <figure><img src="https://www.octranspo.com/images/files/styleguide2024/note_specs.png" alt=""></figure>
+            </section>
+            
+            <h3>Neutral note</h3>
+            <div class="sub-section">
+                <div class="example">
+                    <div class="note">
+                        <p class="note__title">Neutral note</p>
+                        <div class="note__desc">
+                            <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                        </div>
+                    </div>
+                </div>
+                <pre>
+            &lt;div class&#x3D;&quot;note&quot;&gt;
+                &lt;p class&#x3D;&quot;note__title&quot;&gt;[note title placeholder]&lt;&#x2F;p&gt;
+                &lt;div class&#x3D;&quot;note__desc&quot;&gt;
+            &lt;p&gt;[note desc placeholder]&lt;&#x2F;p&gt;
+                &lt;&#x2F;div&gt;
+            &lt;&#x2F;div&gt;
+                </pre>
+                <h3>Neutral note usage guide</h3>
+                <div class="grid grid--2col">
+                    <div class="example">
+                        <div class="note">
+                            <p class="note__title">Neutral note</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>The neutral note component is to contain pieces of supplementary information</p>
+                        <strong>
+                            <p>Tone</p>
+                        </strong>
+                        <ul>
+                            <li>Neutral</li>
+                        </ul>
+                        <strong>
+                            <p>When to use</p>
+                        </strong>
+                        <ul>
+                            <li>For supplementary pieces of information that are low in importance.</li>
+                            <li>For Footnotes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h3>Special note</h3>
+            <section class="sub-section">
+                <div class="example">
+                    <div class="note note__type--special">
+                        <p class="tag tag-type__special">Special</p>
+                        <p class="note__title">Special note title</p>
+                        <div class="note__desc">
+                            <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                        </div>
+                    </div>
+                </div>
+                <pre>
+                &lt;div class&#x3D;&quot;note note__type--special&quot;&gt;
+                    &lt;p class&#x3D;&quot;tag tag-type__special&quot;&gt;Special&lt;&#x2F;p&gt;
+                    &lt;p class&#x3D;&quot;note__title&quot;&gt;[Special note title placeholder]&lt;&#x2F;p&gt;
+                    &lt;div class&#x3D;&quot;note__desc&quot;&gt;
+                        &lt;p&gt;[note description placeholder]&lt;&#x2F;p&gt;
+                    &lt;&#x2F;div&gt;
+                &lt;&#x2F;div&gt;
+                </pre>
+                <div class="grid grid--2col">
+                    <div class="example">
+                        <div class="note note__type--special">
+                            <p class="tag tag-type__special">Special</p>
+                            <p class="note__title">Special note title</p>
+                            <div class="note__desc">
+                                <p>Lorem ipsum dolor sit amet consectetur. Libero rhoncus mi gravida eget magna suscipit lobortis lorem enim. Amet in eget vitae phasellus condimentum diam iaculis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>The Special note component is used to draw attention to special or exciting content, helping users quickly identify important updates or new features.</p>
+                        <strong>
+                            <p>Tone</p>
+                        </strong>
+                        <ul>
+                            <li>Exciting</li>
+                        </ul>
+                        <strong>
+                            <p>When to use</p>
+                        </strong>
+                        <ul>
+                            <li>to draw attention to special or exciting pieces of information</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+       
+
+    </div>
+    <script src="https://www.octranspo.com/images/files/dist/toc_script.js"></script>
+    <!-- End copy -->
+</body>
+</html>
