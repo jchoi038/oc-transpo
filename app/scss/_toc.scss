@@ -1,7 +1,17 @@
+/* toc start */
+/* last updated: 2024/07/11 12:57pm */
+// remove margin & padding from prev styles
+ul.toc__items {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+// custom Styles start
 .toc{
     ul li{
         display: flex;
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
+        padding-left: 0 !important;
     }
     ul li a{
         width: 100%;
@@ -10,6 +20,7 @@
         width: fit-content;
         @media (min-width: 1200px) {
             padding: 1rem;
+            padding-top: 0;
             background-color: white;
             border-radius: 0.5rem;
         }
@@ -17,7 +28,7 @@
     &.sticky{
         @include media-breakpoint-up(xl) {
             position: sticky;
-            top: 6rem;
+            top: 0rem;
             width: 200px;
             display: block;
             height: 0px;
@@ -46,7 +57,7 @@
             padding: 0.125rem 0.5rem;
             color: var(--gray--500);
             border-left: 2px solid var(--gray--200);
-            padding: 0.5rem 0 0.5rem 0.5rem;
+            padding: 0.5rem;
         }
         
         
@@ -54,6 +65,7 @@
             @include media-breakpoint-up(xl){
                 text-decoration:underline;
                 background-color: var(--line4--50);
+                border-radius: 0 !important;
             }
             
         }
@@ -64,8 +76,13 @@
                 background-color: var(--line4--50);
                 border-left: 2px solid var(--line4--600)
             }
+            &:hover{
+                text-decoration: none;
+            }
             
         }
     }
 
 }
+
+/* end toc */
