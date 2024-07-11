@@ -1,0 +1,295 @@
+
+
+/*Accordion style*/
+/*Last updated: 2024/07/04 1:01pm*/
+.faq-accordion {
+    width: 100%;
+  }
+  .faq-accordion .accordion {
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 24px;
+    background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/blue-arrow-closed.svg") no-repeat left center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 0 0 0 15px;
+  }
+  .faq-accordion .accordion.active {
+    background: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/blue-arrow.svg") no-repeat left center;
+  }
+  .faq-accordion .accordion-content {
+    display: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .faq-accordion {
+    width: 100%;
+  }
+  
+  .faq-accordion .accordion-content {
+    padding: 1rem 0;
+    margin: 0 0 0 1rem;
+  }
+  
+  .memo__month {
+    margin: 1rem 0;
+    font-weight: 700;
+  }
+  
+  .memo__month:first-of-type {
+    margin-top: 0;
+  }
+  
+  .faq-accordion:not(:last-of-type) {
+    border-bottom: 1px solid #e9eaed;
+  }
+  
+  .accordion__date {
+    font-size: 0.8rem;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .accordion__title {
+    margin: 0;
+  }
+  
+  @media (max-width: 575.98px) {
+    #transpar-page .accordion__date {
+      font-size: 0.75rem;
+    }
+    #transpar-page .accordion__title {
+      font-size: 0.875rem;
+    }
+    #transpar-page .tabcontent {
+      padding: 1rem;
+    }
+  }
+  .new.accordion-container {
+    width: 100%;
+    letter-spacing: 0px;
+  }
+  .new.accordion-container.bordered {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+  }
+  .new.accordion-container .accordion.new, .new.accordion-container .new + .accordion-content {
+    background-color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  @media (min-width: 576px) {
+    .new.accordion-container .accordion.new, .new.accordion-container .new + .accordion-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  .new.accordion-container .new + .accordion-content {
+    margin: 0;
+    height: 0px;
+    overflow-y: hidden;
+    opacity: 0;
+    transition: all 200ms ease-out;
+    background-color: var(--gray--50);
+  }
+  .new.accordion-container .accordion.new {
+    transition: all ease-in-out 150ms;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    font-weight: 400;
+    background: none;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 2.75rem;
+    color: var(--ui-title-color-light);
+  }
+  .new.accordion-container .accordion.new:not(:first-of-type) {
+    border-top: 1px solid var(--border-color) !important;
+  }
+  .new.accordion-container .accordion.new span {
+    align-items: center;
+  }
+  .new.accordion-container .accordion.new::after {
+    content: "";
+    width: 1.125rem;
+    height: 1.125rem;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999rem;
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down.svg");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    transition: all 200ms ease-out;
+    border: 1px solid var(--charcoal--800);
+  }
+  .new.accordion-container .accordion.new:hover.accordion__icon--plus::after, .new.accordion-container .accordion.new.active.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_plus-white.svg");
+  }
+  .new.accordion-container .accordion.new:hover::after, .new.accordion-container .accordion.new.active::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down-white.svg");
+    background-color: var(--charcoal--800);
+  }
+  .new.accordion-container .accordion.new.active.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_minus-white.svg");
+  }
+  .new.accordion-container .accordion.new.active::after {
+    transform: rotate(180deg);
+  }
+  .new.accordion-container .accordion.new.active + .accordion-content {
+    height: auto;
+    opacity: 100%;
+    display: block;
+    padding: 0.5em;
+  }
+  @media (min-width: 576px) {
+    .new.accordion-container .accordion.new.active + .accordion-content {
+      padding: 1rem;
+    }
+  }
+  .new.accordion-container .new.accordion__color--line1.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_plus-line1.svg");
+  }
+  .new.accordion-container .new.accordion__color--line1::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down-line1.svg");
+    border: 1px solid var(--line1--500);
+  }
+  .new.accordion-container .new.accordion__color--line1:hover, .new.accordion-container .new.accordion__color--line1.active {
+    color: var(--line1--500) !important;
+  }
+  .new.accordion-container .new.accordion__color--line1:hover::after, .new.accordion-container .new.accordion__color--line1.active::after {
+    background-color: var(--line1--500);
+  }
+  .new.accordion-container .new.accordion__color--line2.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_plus-line2.svg");
+  }
+  .new.accordion-container .new.accordion__color--line2::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down-line2.svg");
+    border: 1px solid var(--line2--500);
+  }
+  .new.accordion-container .new.accordion__color--line2:hover, .new.accordion-container .new.accordion__color--line2.active {
+    color: var(--line2--500) !important;
+  }
+  .new.accordion-container .new.accordion__color--line2:hover::after, .new.accordion-container .new.accordion__color--line2.active::after {
+    background-color: var(--line2--500);
+  }
+  .new.accordion-container .new.accordion__color--line3.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_plus-line3.svg");
+  }
+  .new.accordion-container .new.accordion__color--line3::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down-line3.svg");
+    border: 1px solid var(--line3--500);
+  }
+  .new.accordion-container .new.accordion__color--line3:hover, .new.accordion-container .new.accordion__color--line3.active {
+    color: var(--line3--500) !important;
+  }
+  .new.accordion-container .new.accordion__color--line3:hover::after, .new.accordion-container .new.accordion__color--line3.active::after {
+    background-color: var(--line3--500);
+  }
+  .new.accordion-container .new.accordion__color--line4.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_plus-line4.svg");
+  }
+  .new.accordion-container .new.accordion__color--line4::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down-line4.svg");
+    border: 1px solid var(--line4--500);
+  }
+  .new.accordion-container .new.accordion__color--line4:hover, .new.accordion-container .new.accordion__color--line4.active {
+    color: var(--line4--500) !important;
+  }
+  .new.accordion-container .new.accordion__color--line4:hover::after, .new.accordion-container .new.accordion__color--line4.active::after {
+    background-color: var(--line4--500);
+  }
+  .new.accordion-container .new.accordion__color--connexion.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_plus-connexion.svg");
+  }
+  .new.accordion-container .new.accordion__color--connexion::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down-connexion.svg");
+    border: 1px solid var(--connexion--600);
+  }
+  .new.accordion-container .new.accordion__color--connexion:hover, .new.accordion-container .new.accordion__color--connexion.active {
+    color: var(--connexion--600) !important;
+  }
+  .new.accordion-container .new.accordion__color--connexion:hover::after, .new.accordion-container .new.accordion__color--connexion.active::after {
+    background-color: var(--connexion--600);
+  }
+  .new.accordion-container .new.accordion__color--frequent.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_plus-frequent.svg");
+  }
+  .new.accordion-container .new.accordion__color--frequent::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down-frequent.svg");
+    border: 1px solid var(--frequent--600);
+  }
+  .new.accordion-container .new.accordion__color--frequent:hover, .new.accordion-container .new.accordion__color--frequent.active {
+    color: var(--frequent--600) !important;
+  }
+  .new.accordion-container .new.accordion__color--frequent:hover::after, .new.accordion-container .new.accordion__color--frequent.active::after {
+    background-color: var(--frequent--600);
+  }
+  .new.accordion-container .new.accordion__color--local.accordion__icon--plus::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_plus-local.svg");
+  }
+  .new.accordion-container .new.accordion__color--local::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down-local.svg");
+    border: 1px solid var(--local--600);
+  }
+  .new.accordion-container .new.accordion__color--local:hover, .new.accordion-container .new.accordion__color--local.active {
+    color: var(--local--600) !important;
+  }
+  .new.accordion-container .new.accordion__color--local:hover::after, .new.accordion-container .new.accordion__color--local.active::after {
+    background-color: var(--local--600);
+  }
+  .new.accordion-container .new.accordion__size--sm {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .new.accordion-container .new.accordion__size--md {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  .new.accordion-container .new.accordion__size--lg {
+    font-size: 1.3755rem;
+    font-weight: 600;
+  }
+  @media (min-width: 576px) {
+    .new.accordion-container .new.accordion__size {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+  .new.accordion-container .new.accordion:hover, .new.accordion-container .new.accordion.active:hover, .new.accordion-container .new.accordion.active {
+    color: var(--charcoal--800);
+  }
+  .new.accordion-container .new.accordion.active {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 10px;
+    z-index: 1;
+  }
+  
+  .new.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .new.accordion-container__style--detached {
+    border: none;
+    gap: 0.5rem;
+  }
+  .new.accordion-container__style--detached .accordion.new {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+  }
+  
+  /*End Accordion style*/
