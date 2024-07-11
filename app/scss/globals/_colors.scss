@@ -90,6 +90,7 @@
     --accessible-blue: #0079C1;
     --success-green: #45A041;
     --special: #7637C7;
+
     //Semantic colours
     --link:var(--line4--600);
     --link-hover:var(--line4--700);
@@ -159,6 +160,10 @@
     --neutral-bg-border-color: var(--gray--500);
     --neutral-bg-icon-color: var(--gray--600);
     --neutral-text-color: var(--gray--800);
+
+    // component colours
+    --prm-button: var(--line1--600);
+    --prm-button-hover: var(--line1--700);
 }  
 
 .swatch{
