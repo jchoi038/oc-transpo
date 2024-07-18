@@ -1,5 +1,5 @@
 /****table styles ******/
-/** updated on: 2024/07/04 9:28 am **/
+/** updated on: 2024/07/18 **/
 // overiding styles from oc styles
 main thead td, main thead th{
 	box-shadow: none;
@@ -20,6 +20,7 @@ table tr td{
 
 table{
 	width: 100%;
+	height: fit-content;
 	
 	&.width-to-fit, &.sticky-table{
 		width: auto;
@@ -183,7 +184,7 @@ table {
 	
 }
 
-table.bordered {
+table.bordered  {
 	border:none;
 	border-collapse: collapse;
 
@@ -250,6 +251,27 @@ table{
 
 }
 
+//station table
+
+table.station-table{
+	border-collapse: separate;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	border: 1px solid var(--border-color);
+
+	tbody tr td {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	tbody tr:first-child td {
+		padding-top: 0.5rem;
+	}
+	tbody tr:last-child td {
+		padding-bottom: 0.5rem;
+	}
+}
+
 //background colours
 table {
 	tbody tr:nth-child(even) {
@@ -273,7 +295,7 @@ table {
 		background-color: white;
 	}
 
-	&.light{
+	&.light, &.station-table{
 		tr th{
 			background-color: var(--gray--100);
 		}
@@ -285,6 +307,7 @@ table {
 		}
 		
 	}
+	
 	
 	tbody tr th{
 		background-color: var(--gray--100);
@@ -522,6 +545,7 @@ dl {
 	}
 
 	&.icon-list {
+		border: 1px solid var(--border-color);
 		grid-template-columns: auto 1fr;
 		dd,
 		dt {
@@ -529,13 +553,14 @@ dl {
 			padding: 0.3rem 0.5rem 0.2rem 0.5rem;
 			margin: 0;
 			&:nth-of-type(even) {
-				background-color: var(--gray--50);
+				background-color: var(--gray--25);
 			}
 		}
 		dt {
 			display: flex;
 			justify-content: center;
 			align-items:flex-start;
+				// background-color: var(--gray--50);
 		}
 	}
 }

@@ -1,8 +1,5 @@
-
 /*Colours start*/
-/* colors.scss*/
-/* gradients.scss*/
-/* updated on 2024/07/10 11:27am */
+/* updated on 2024/07/18 */
 :root {
   --line1--50: #FCF4F0;
   --line1--100: #FCE4D9;
@@ -88,7 +85,9 @@
   --charcoal--600: #646171;
   --charcoal--700: #514E5F;
   --charcoal--800: #3D3A4D;
-  --nwtb--800: #153159;
+  --nwtb--100: hsl(215, 62%, 82%);
+  --nwtb--700: hsl(215, 62%, 32%);
+  --nwtb--800: hsl(215, 62%, 22%);
   --accessible-blue: #0079C1;
   --success-green: #45A041;
   --special: #7637C7;
@@ -98,6 +97,9 @@
   --line2:var(--line2--500);
   --line3:var(--line3--600);
   --line4:var(--line4--500);
+  --frequent:#0057b8;
+  --connexion:#B66B94;
+  --local:#6D6E70;
   --text-color-light: var(--gray--600);
   --text-color: var(--gray--700);
   --heading-color: var(--gray--800);
@@ -144,6 +146,8 @@
   --neutral-bg-border-color: var(--gray--500);
   --neutral-bg-icon-color: var(--gray--600);
   --neutral-text-color: var(--gray--800);
+  --prm-button: var(--line1--600);
+  --prm-button-hover: var(--line1--700);
 }
 
 .swatch {
@@ -155,9 +159,16 @@
   border-radius: 0.5rem;
 }
 
+.square-swatch {
+  content: "";
+  display: inline-block;
+  background-color: var(--gray--100);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.25rem;
+}
+
 /*end Colors*/
-
-
 /*Gradient start*/
 .bg-gradient-red:before {
   content: "";

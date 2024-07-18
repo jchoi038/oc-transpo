@@ -1,11 +1,15 @@
 
+
 /* toc start */
-/* last updated: 2024/07/11 12:57pm */
+/* last updated: 2024/07/18 */
 ul.toc__items {
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
 
+.toc a.toc__link > * {
+  flex-grow: 0;
+}
 .toc ul li {
   display: flex;
   margin-bottom: 0 !important;
@@ -13,6 +17,10 @@ ul.toc__items {
 }
 .toc ul li a {
   width: 100%;
+}
+.toc ul li a p {
+  padding: 0;
+  margin: 0;
 }
 .toc__container {
   width: -moz-fit-content;
@@ -41,6 +49,9 @@ ul.toc__items {
   flex-wrap: wrap;
   flex-direction: column;
 }
+.toc__link, .toc p {
+  color: var(--gray--500);
+}
 .toc__link {
   padding: 0;
   color: var(--line4--600);
@@ -53,6 +64,9 @@ ul.toc__items {
     color: var(--gray--500);
     border-left: 2px solid var(--gray--200);
     padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
 }
 @media (min-width: 1200px) {

@@ -1,4 +1,5 @@
 /* link styles start*/
+/* Last updated: 2024/07/18 */
 .link-stack{
     gap: 0;
     li {
@@ -40,8 +41,8 @@ a.map-link, a.pdf-link{
 }
 
 //hover
-a:hover{
-    background-color: var(--charcoal--50);
+a:not(.btn):hover{
+    background-color: var(--gray--50);
     border-radius: 4px;
     text-decoration: none;
 }

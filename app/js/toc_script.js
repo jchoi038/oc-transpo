@@ -19,27 +19,30 @@ if (toc) {
 	toc_items.className = "toc__items"
 	toc_container.appendChild(toc_items);
 
+	//adds updated sections to toc list on every load
+	addEventListener("load", (event) =>{
+		for (let i = 0; i < sections.length; i++) {
+			// warning if id is empty
+			if (sections[i].id == "") {
+				console.log(
+					"Warning: Section no." +
+					i +
+					" does not have an id"
+					);
+				} else {
+					var toc_li = document.createElement("li");
+					var toc_link = document.createElement("a");
+					var href = "#" + sections[i].id;
+					toc_link.href = href;
+					toc_link.className = "toc__link";
+					toc_link.innerHTML = sections[i].getElementsByTagName("h2")[0].innerHTML;
+					toc_li.appendChild(toc_link)
+					toc_items.appendChild(toc_li);
+				}
 
-	for (let i = 0; i < sections.length; i++) {
-		// warning if id is empty
-		if (sections[i].id == "") {
-			console.log(
-				"Warning: Section no." +
-				i +
-				" does not have an id"
-				);
-			} else {
-				var toc_li = document.createElement("li");
-				var toc_link = document.createElement("a");
-				var href = "#" + sections[i].id;
-				toc_link.href = href;
-				toc_link.className = "toc__link";
-				toc_link.textContent = sections[i].getElementsByTagName("h2")[0].textContent;
-				toc_li.appendChild(toc_link)
-				toc_items.appendChild(toc_li);
-			}
-		
-	}
+		}
+	})
+	
 
 	window.addEventListener("scroll", function () {
 		for (let i = 0; i < sections.length; i++) {
@@ -63,5 +66,7 @@ if (toc) {
 		}
 	});
 }
+
+
 
 /* end toc */

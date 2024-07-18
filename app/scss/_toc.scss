@@ -1,5 +1,5 @@
 /* toc start */
-/* last updated: 2024/07/11 12:57pm */
+/* last updated: 2024/07/18 */
 // remove margin & padding from prev styles
 ul.toc__items {
     margin-left: 0 !important;
@@ -8,6 +8,9 @@ ul.toc__items {
 
 // custom Styles start
 .toc{
+    a.toc__link>* {
+        flex-grow: 0;
+    }
     ul li{
         display: flex;
         margin-bottom: 0 !important;
@@ -15,6 +18,10 @@ ul.toc__items {
     }
     ul li a{
         width: 100%;
+    }
+    ul li a p {
+        padding: 0;
+        margin: 0;
     }
     &__container{
         width: fit-content;
@@ -45,6 +52,10 @@ ul.toc__items {
 
         }
     }
+    &__link, p{
+        color: var(--gray--500);
+
+    }
     &__link{
         // border: 1px solid var(--line4--600);
         // border-radius: 100rem;
@@ -58,6 +69,9 @@ ul.toc__items {
             color: var(--gray--500);
             border-left: 2px solid var(--gray--200);
             padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
         }
         
         

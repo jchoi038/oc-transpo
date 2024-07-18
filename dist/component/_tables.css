@@ -1,5 +1,6 @@
+
 /****table styles ******/
-/** updated on: 2024/07/04 9:28 am **/
+/** updated on: 2024/07/18 **/
 main thead td, main thead th {
   box-shadow: none;
 }
@@ -15,6 +16,8 @@ table tr td {
 
 table {
   width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 table.width-to-fit, table.sticky-table {
   width: auto;
@@ -172,6 +175,23 @@ table.small-table tbody tr td, table.small-table tbody tr th, table.small-table 
   font-size: 0.875rem !important;
 }
 
+table.station-table {
+  border-collapse: separate;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+table.station-table tbody tr td {
+  display: flex;
+  gap: 0.5rem;
+}
+table.station-table tbody tr:first-child td {
+  padding-top: 0.5rem;
+}
+table.station-table tbody tr:last-child td {
+  padding-bottom: 0.5rem;
+}
+
 table tbody tr:nth-child(even) {
   background-color: transparent;
 }
@@ -187,7 +207,7 @@ table thead tr th {
 table thead.empty-corner tr th {
   background-color: white;
 }
-table.light tr th {
+table.light tr th, table.station-table tr th {
   background-color: var(--gray--100);
 }
 table.dark tr th {
@@ -356,6 +376,7 @@ dl.text-list dt:nth-of-type(odd) {
   background-color: var(--gray--50);
 }
 dl.icon-list {
+  border: 1px solid var(--border-color);
   grid-template-columns: auto 1fr;
 }
 dl.icon-list dd,
@@ -366,7 +387,7 @@ dl.icon-list dt {
 }
 dl.icon-list dd:nth-of-type(even),
 dl.icon-list dt:nth-of-type(even) {
-  background-color: var(--gray--50);
+  background-color: var(--gray--25);
 }
 dl.icon-list dt {
   display: flex;
@@ -442,3 +463,5 @@ table caption {
   font-weight: bold;
   color: var(--charcoal--800);
 }
+
+/**** end table styles ******/

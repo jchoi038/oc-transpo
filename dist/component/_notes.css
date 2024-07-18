@@ -1,6 +1,6 @@
 
 /*Note styles*/
-/* updated on 2024/07/05 11:14am */
+/* updated on 2024/07/18 */
 /* overriding */
 .note p.note__title, .note .note__desc {
   margin-top: 0;
@@ -53,16 +53,16 @@
 }
 
 .note__type--info::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/alert_info-circled.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/semantic_info-circled.svg");
 }
 .note__type--warning::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/alert_warning-circled.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/semantic_warning-yellow-circled.svg");
 }
 .note__type--success::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/alert_success-circled.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/semantic_success-circled.svg");
 }
 .note__type--urgent::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/alert_critical-circled.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/semantic_warning-red-circled.svg");
 }
 
 .note__action {

@@ -90,7 +90,7 @@
             background-position-x: calc(100% - 1rem);
             }
         }
-    &--new-ways-to-bus{
+    &--new-ways-to-bus, &--nwtb{
         background-image: url("https://www.octranspo.com/images/files/banners/banner_new-ways-to-bus.svg");
         background-repeat: no-repeat;
         background-size: 200%;
@@ -103,6 +103,9 @@
             background-size: cover;
             background-position-x: center;
 
+        }
+        p {
+            text-shadow: $text-shadow;
         }
         p.banner__title {
             color: #fff;

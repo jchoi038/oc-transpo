@@ -43,7 +43,7 @@ CSS can also be applied to specific breakpoints using "@include media-breakpoint
 More information on the grid system is available at https://getbootstrap.com/docs/4.0/layout/grid/
 */
 /*Colours start*/
-/* updated on 2024/07/05 11:14am */
+/* updated on 2024/07/18 */
 :root {
   --line1--50: #FCF4F0;
   --line1--100: #FCE4D9;
@@ -129,7 +129,9 @@ More information on the grid system is available at https://getbootstrap.com/doc
   --charcoal--600: #646171;
   --charcoal--700: #514E5F;
   --charcoal--800: #3D3A4D;
-  --nwtb--800: #153159;
+  --nwtb--100: hsl(215, 62%, 82%);
+  --nwtb--700: hsl(215, 62%, 32%);
+  --nwtb--800: hsl(215, 62%, 22%);
   --accessible-blue: #0079C1;
   --success-green: #45A041;
   --special: #7637C7;
@@ -139,6 +141,9 @@ More information on the grid system is available at https://getbootstrap.com/doc
   --line2:var(--line2--500);
   --line3:var(--line3--600);
   --line4:var(--line4--500);
+  --frequent:#0057b8;
+  --connexion:#B66B94;
+  --local:#6D6E70;
   --text-color-light: var(--gray--600);
   --text-color: var(--gray--700);
   --heading-color: var(--gray--800);
@@ -196,6 +201,15 @@ More information on the grid system is available at https://getbootstrap.com/doc
   width: 100%;
   height: 3rem;
   border-radius: 0.5rem;
+}
+
+.square-swatch {
+  content: "";
+  display: inline-block;
+  background-color: var(--gray--100);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.25rem;
 }
 
 /*end Colors*/
@@ -13885,7 +13899,7 @@ h4.stage2-usage-headings {
 }
 
 /****table styles ******/
-/** updated on: 2024/07/04 9:28 am **/
+/** updated on: 2024/07/18 **/
 main thead td, main thead th {
   box-shadow: none;
 }
@@ -13901,6 +13915,8 @@ table tr td {
 
 table {
   width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 table.width-to-fit, table.sticky-table {
   width: auto;
@@ -14058,6 +14074,23 @@ table.small-table tbody tr td, table.small-table tbody tr th, table.small-table 
   font-size: 0.875rem !important;
 }
 
+table.station-table {
+  border-collapse: separate;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+table.station-table tbody tr td {
+  display: flex;
+  gap: 0.5rem;
+}
+table.station-table tbody tr:first-child td {
+  padding-top: 0.5rem;
+}
+table.station-table tbody tr:last-child td {
+  padding-bottom: 0.5rem;
+}
+
 table tbody tr:nth-child(even) {
   background-color: transparent;
 }
@@ -14073,7 +14106,7 @@ table thead tr th {
 table thead.empty-corner tr th {
   background-color: white;
 }
-table.light tr th {
+table.light tr th, table.station-table tr th {
   background-color: var(--gray--100);
 }
 table.dark tr th {
@@ -14242,6 +14275,7 @@ dl.text-list dt:nth-of-type(odd) {
   background-color: var(--gray--50);
 }
 dl.icon-list {
+  border: 1px solid var(--border-color);
   grid-template-columns: auto 1fr;
 }
 dl.icon-list dd,
@@ -14252,7 +14286,7 @@ dl.icon-list dt {
 }
 dl.icon-list dd:nth-of-type(even),
 dl.icon-list dt:nth-of-type(even) {
-  background-color: var(--gray--50);
+  background-color: var(--gray--25);
 }
 dl.icon-list dt {
   display: flex;
@@ -14657,7 +14691,7 @@ ul.checklist--x li::before {
 }
 
 /*****grid styles start *****/
-/* updated on 2024/07/05 11:14am */
+/* updated on 2024/07/18 */
 ul.grid.grid--3col {
   margin-left: 0;
   padding-left: 0;
@@ -14668,6 +14702,10 @@ ul.grid.grid--3col {
   flex-direction: column;
   gap: 1rem;
   flex-grow: 0;
+}
+
+.grid.reverse:first-child {
+  order: 2;
 }
 
 .grid {
@@ -14685,7 +14723,18 @@ ul.grid.grid--3col {
 }
 .grid-fluid {
   grid-template-columns: auto;
+}
+.grid-flow-col {
   grid-auto-flow: column;
+}
+.grid--2row {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 576px) {
+  .grid--2row {
+    grid-template-rows: 1fr 1fr;
+  }
 }
 @media (min-width: 768px) {
   .grid-1fr-2fr {
@@ -14789,7 +14838,7 @@ ul.grid.grid--3col {
 
 /*****grid styles End *****/
 /*Note styles*/
-/* updated on 2024/07/05 11:14am */
+/* updated on 2024/07/18 */
 /* overriding */
 .note p.note__title, .note .note__desc {
   margin-top: 0;
@@ -14842,16 +14891,16 @@ ul.grid.grid--3col {
 }
 
 .note__type--info::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/alert_info-circled.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/semantic_info-circled.svg");
 }
 .note__type--warning::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/alert_warning-circled.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/semantic_warning-yellow-circled.svg");
 }
 .note__type--success::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/alert_success-circled.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/semantic_success-circled.svg");
 }
 .note__type--urgent::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/alert_critical-circled.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/semantic_warning-red-circled.svg");
 }
 
 .note__action {
@@ -16185,33 +16234,36 @@ section.divided {
     background-position-x: calc(100% - 1rem);
   }
 }
-.banner--new-ways-to-bus {
+.banner--new-ways-to-bus, .banner--nwtb {
   background-image: url("https://www.octranspo.com/images/files/banners/banner_new-ways-to-bus.svg");
   background-repeat: no-repeat;
   background-size: 200%;
   background-position-x: 80%;
   background-position-y: 50%;
 }
-.banner--new-ways-to-bus::before {
+.banner--new-ways-to-bus::before, .banner--nwtb::before {
   background-color: var(--nwtb--800);
 }
 @media (min-width: 768px) {
-  .banner--new-ways-to-bus {
+  .banner--new-ways-to-bus, .banner--nwtb {
     background-size: cover;
     background-position-x: center;
   }
 }
-.banner--new-ways-to-bus p.banner__title {
+.banner--new-ways-to-bus p, .banner--nwtb p {
+  text-shadow: rgba(0, 0, 0, 0.45) 0px 0px 5px;
+}
+.banner--new-ways-to-bus p.banner__title, .banner--nwtb p.banner__title {
   color: #fff;
 }
-.banner--new-ways-to-bus p.banner__body {
+.banner--new-ways-to-bus p.banner__body, .banner--nwtb p.banner__body {
   color: var(--transparent--800);
 }
-.banner--new-ways-to-bus .banner__content {
+.banner--new-ways-to-bus .banner__content, .banner--nwtb .banner__content {
   width: 80%;
 }
 @media (min-width: 768px) {
-  .banner--new-ways-to-bus .banner__content {
+  .banner--new-ways-to-bus .banner__content, .banner--nwtb .banner__content {
     width: 75%;
   }
 }
@@ -16384,12 +16436,15 @@ figure.clickable-img:hover img {
 }
 
 /* toc start */
-/* last updated: 2024/07/11 12:57pm */
+/* last updated: 2024/07/18 */
 ul.toc__items {
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
 
+.toc a.toc__link > * {
+  flex-grow: 0;
+}
 .toc ul li {
   display: flex;
   margin-bottom: 0 !important;
@@ -16397,6 +16452,10 @@ ul.toc__items {
 }
 .toc ul li a {
   width: 100%;
+}
+.toc ul li a p {
+  padding: 0;
+  margin: 0;
 }
 .toc__container {
   width: -moz-fit-content;
@@ -16425,6 +16484,9 @@ ul.toc__items {
   flex-wrap: wrap;
   flex-direction: column;
 }
+.toc__link, .toc p {
+  color: var(--gray--500);
+}
 .toc__link {
   padding: 0;
   color: var(--line4--600);
@@ -16437,6 +16499,9 @@ ul.toc__items {
     color: var(--gray--500);
     border-left: 2px solid var(--gray--200);
     padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
 }
 @media (min-width: 1200px) {
@@ -16460,6 +16525,7 @@ ul.toc__items {
 
 /* end toc */
 /* link styles start*/
+/* Last updated: 2024/07/18 */
 .link-stack {
   gap: 0;
 }
@@ -16498,8 +16564,8 @@ a.map-link, a.pdf-link {
   vertical-align: inherit;
 }
 
-a:hover {
-  background-color: var(--charcoal--50);
+a:not(.btn):hover {
+  background-color: var(--gray--50);
   border-radius: 4px;
   text-decoration: none;
 }
@@ -16635,6 +16701,8 @@ input {
   width: 100%;
 }
 
+/* icons start */
+/* updated: 2024/07/18 */
 .inline-icon {
   width: auto;
   height: 100%;
@@ -16668,7 +16736,7 @@ input {
 }
 
 .md-icon {
-  height: 2rem;
+  height: 2.25rem;
 }
 @media (max-width: 767.98px) {
   .md-icon {
@@ -16678,7 +16746,7 @@ input {
 }
 
 .lg-icon {
-  height: 2.5rem;
+  height: 3rem;
 }
 @media (max-width: 767.98px) {
   .lg-icon {
@@ -16687,8 +16755,9 @@ input {
   }
 }
 
+/*END icon styles*/
 /****Routes & lines styles ******/
-/* updated on 2024/07/10 3:42pm */
+/* updated on 2024/07/18 */
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
   line-height: inherit;
   font-size: inherit;
@@ -16701,7 +16770,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
   height: 100%;
   display: inline-flex;
   flex-shrink: 0;
-  flex-grow: 1;
+  flex-grow: 0;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
@@ -16759,7 +16828,7 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
   background-image: url("https://www.octranspo.com/images/files/icons/route_rapid.svg");
 }
 .rt-type--frequent {
-  background-image: url("https://www.octranspo.com/images/files/icons/route_frequent_nwtb.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/route_frequent-nwtb.svg");
 }
 .rt-type--local {
   background-image: url("https://www.octranspo.com/images/files/icons/route_local.svg");

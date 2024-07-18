@@ -1,5 +1,5 @@
 /*****grid styles start *****/
-/* updated on 2024/07/05 11:14am */
+/* updated on 2024/07/18 */
 ul.grid.grid--3col{
     margin-left: 0;
     padding-left: 0;
@@ -10,6 +10,11 @@ ul.grid.grid--3col{
     flex-direction: column;
     gap: 1rem;
     flex-grow: 0;
+}
+.grid.reverse{
+    &:first-child {
+        order: 2;
+    }
 }
 .grid{
     display: grid;
@@ -28,7 +33,18 @@ ul.grid.grid--3col{
 
     &-fluid{
         grid-template-columns: auto;
+    }
+    &-flow-col{
         grid-auto-flow: column;
+    }
+    
+    &--2row{
+        display: grid;
+        gap: 1rem;
+        @include media-breakpoint-up(sm) {
+            grid-template-rows: 1fr 1fr;
+
+        }
     }
 
     &-1fr-2fr{
@@ -42,6 +58,7 @@ ul.grid.grid--3col{
             grid-template-columns: 2fr 1fr;
         }
     }
+    
     &__main{
         
     }
@@ -57,7 +74,7 @@ ul.grid.grid--3col{
 
     &--2col{
         display: grid;
-	    gap: 1rem;
+        gap: 1rem;
         @include media-breakpoint-up(sm) {
             grid-template-columns: 1fr 1fr;
 
