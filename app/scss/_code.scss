@@ -1,5 +1,5 @@
 /*Code styles start*/
-/* updated on 2024/07/10 */
+/* updated on 2024/07/25 */
 
 pre {
 	background: var(--gray--25);
@@ -24,6 +24,11 @@ pre {
     background-color: transparent;
     border-radius: 4px;
     height: fit-content;
+    width: 100%;
+
+    &.dark-mode{
+        background-color: var(--charcoal--800);
+    }
 }
 
 code {

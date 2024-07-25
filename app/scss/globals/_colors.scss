@@ -1,13 +1,13 @@
 /*Colours start*/
-/* updated on 2024/07/18 */
+/* updated on 2024/07/25 */
 
 :root {
     --line1--50:  #FCF4F0;
     --line1--100: #FCE4D9;
     --line1--200: #FFB099;
     --line1--300: #FF8173;
-    --line1--400: #FF7575;
-    --line1--500: #FF3F3E;
+    --line1--400: #FF3F3E;
+    --line1--500: #E83037;
     --line1--600: #D30F1D;
     --line1--700: #A30812;
     --line1--800: #69050C;
@@ -65,33 +65,41 @@
     --local--600:#6D6E70; 
     --local--700:#545557; 
     --local--800:#363738;
-    --transparent--50: hsl(0, 0%, 100%, 10%); 
+    --transparent--50: hsl(0, 0%, 100%, 15%); 
     --transparent--100: hsl(0, 0%, 100%, 25%); 
     --transparent--200: hsl(0, 0%, 100%, 40%); 
     --transparent--500: hsl(0, 0%, 100%, 60%); 
     --transparent--800: hsl(0, 0%, 100%, 95%); 
-    --gray--25: #fcfcfc;
+    --gray--25: #FCFCFC;
     --gray--50: #F8F8F8;
-    --gray--100: #E8EAED;
-    --gray--200: #CED6DE;
+    --gray--100: #edeff2;
+    --gray--200: #d5dbe2;
     --gray--300: #BEC7D4;
     --gray--400: #A8B0BB;
     --gray--500: #88909A;
     --gray--600: #616977;
     --gray--700: #353A43;
     --gray--800: #231F20;
-    --charcoal--50: hsl(249, 14%, 26%,5%);
-    --charcoal--100: hsl(249, 14%, 26%,15%);
+    --charcoal--50: hsl(249, 14%, 26%,7%);
+    --charcoal--100: hsl(249, 14%, 26%,12%);
     --charcoal--500: #9491A1;
     --charcoal--600: #646171;
     --charcoal--700: #514E5F;
     --charcoal--800: #3D3A4D;
+    --charcoal--900: #23212c;
     --nwtb--100: hsl(215, 62%, 82%);
     --nwtb--700: hsl(215, 62%, 32%);
     --nwtb--800: hsl(215, 62%, 22%);
     --accessible-blue: #0079C1;
     --success-green: #45A041;
     --special: #7637C7;
+    --overlay--50: hsl(0, 0%, 0%, 5%);
+    --overlay--100: hsl(0, 0%, 0%, 10%);
+    --overlay--200: hsl(0, 0%, 0%, 25%);
+    --overlay--300: hsl(0, 0%, 0%, 40%);
+    --overlay--400: hsl(0, 0%, 0%, 55%);
+    --overlay--500: hsl(0, 0%, 0%, 75%);
+    --overlay--500: hsl(0, 0%, 0%, 80%);
 
     //Semantic colours
     --link:var(--line4--600);
@@ -147,7 +155,6 @@
     --critical-bg-border-color: var(--line1--500);
     --critical-bg-icon-color: var(--line1--600);
     --critical-text-color: var(--line1--800);
-   
     --success-bg-color: var(--line2--100);
     --success-bg-dark-color: var(--line2--200);
     --success-bg-border-color: var(--line2--500);
@@ -166,9 +173,23 @@
     --neutral-bg-icon-color: var(--gray--600);
     --neutral-text-color: var(--gray--800);
 
-    // component colours
-    --prm-button: var(--line1--600);
-    --prm-button-hover: var(--line1--700);
+    // button colours (dm = dark mode)
+    --prm-btn-color: var(--line1--600);
+    --prm-btn-color-hover: var(--line1--700);
+    --prm-btn-color-dm: var(--line1--500);
+    --prm-btn-color-dm-hover: var(--line1--600);
+
+    --scd-btn-border-color: var(--line1--600);
+    --scd-btn-border-color-dm: var(--line1--500);
+
+    --ter-btn-color: var(--gray--100);
+    --ter-btn-color-hover: var(--gray--200);
+    --ter-btn-color-dm: var(--transparent--50);
+    --ter-btn-color-dm-hover: var(--transparent--100);
+
+    --btn-active-color: var(--charcoal--800);
+    --btn-dm-hover: #141926;
+
 }  
 
 .swatch{

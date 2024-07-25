@@ -1,236 +1,774 @@
 // buttons
+/*Button styles*/
+/*Last updated: 2024/07/25 1:11pm*/
+/* reviewed styles */
+//boiler plate
 
-.btn{
-    display: flex;
-    gap: 0.25rem;
-    align-items:center ;
-    justify-content:center ;
-    height: 2rem;
-    width: fit-content;
-    padding: 0.5rem 0.6rem 0.4rem;
-    border-radius: 100rem;
-    font-weight: 600;
-    transition: all 100ms ease-out;
-    font-size: 0.875rem;
-    text-decoration: none;
-    background-color: var(--neutral-bg-color);
-    color: var(--neutral-text-color);
+.btn {
+	color: var(--charcoal--800);
+	background-color: var(--ter-btn-color);
+	display: flex;
+	gap: 0.25rem;
+	align-items: center;
+	justify-content: center;
+	min-height: 2.5rem;
+	width: fit-content;
+	padding: 0.5rem 0.75rem 0.4rem 1rem;
+	border-radius: 100rem;
+	font-weight: 700;
+	line-height: 1.15;
+	font-size: $btn-font-md;
+	text-decoration: none;
+	outline-offset: 0;
 
-    &-arrow-only{
-        padding: 0;
-        width: 2rem;
-        flex-shrink: 0;
-    }
-    
-    &-text-only{
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        border: none !important;
-        background-color: transparent !important;
-    }
-    
-    
-    
-    
-    
-    &:hover.btn--arrow::after{
-        transform: translateX(2px);
-    }
-    
-    
-    
-    &-lg{
-        font-size: 1rem;
-        height: 2.75rem;
-        padding: 0.5rem 1.25rem 0.4rem;
-        &.btn-arrow-only{
-            padding: 0;
-            width: 2.75rem;
-        }
-    }
+	//buttons have default arrow
+	&::after {
+		content: "";
+		display: block;
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 1.25rem;
+		min-width: 1.25rem;
+		height: 1.25rem;
+	}
 
-
-    &__arrow{
-        &::after{
-            content: "";
-            display: block;
-            background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 1rem;
-            height: 1rem; 
-            }
-            &.btn-lg::after{
-                width: 1.125rem;
-                height: 1.125rem; 
-            }
-    }
-    
-
-
-
-
-
-    &-primary{
-        background-color: transparent;
-        border: solid 1px var(--line1--600);
-        &::after{
-            background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
-        }
-        &:hover{
-            border: solid 1.25px var(--line1--500);
-        }
-    }
-
-    &.btn-line2{
-        background-color: transparent;
-        border: solid 1px var(--line2--600);
-        &:hover{
-            border: solid 1.25px var(--line2--500);
-        }
-    }
-
-    &.btn-line3{
-        background-color: transparent;
-        border: solid 1px var(--line3--600);
-        &:hover{
-            border: solid 1.25px var(--line3--500);
-        }
-    }
-
-    &.btn-line4{
-        background-color: transparent;
-        border: solid 1px var(--line4--600);
-        &:hover{
-            border: solid 1.25px var(--line4--500);
-        }
-    }
-    &-secondary{
-        background-color: transparent;
-        border: solid 1px var(--charcoal--800);
-        &:hover{
-            border: solid 1.25px var(--charcoal--800);
-        }
-    }
-
-
-
-    &-white{
-        background-color: transparent;
-        color: #fff;
-        border: solid 1px transparent;
-        background-color: var(--transparent--50);
-        &:hover{
-            background-color: var(--transparent--100);
-            color: white;
-        }
-
-        &::after{
-            background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg")
-        }
-    }
-
-    
-    
-    &-tertiary{
-        color: var(--charcoal--800);
-        border: solid 1px transparent;
-        background-color: var(--gray--100);
-        &:hover{
-            background-color: var(--gray--200);
-        }
-        &.btn-line1{
-            color: var(--line1--700);
-            background-color: var(--line1--100);
-            border: none;
-            &:hover{
-                border: none;
-                background-color: var(--line1--100);
-            }
-        }
-        
-        &.btn-line2{
-            color: var(--line2--700);
-            background-color: var(--line2--100);
-            border: none;
-            &:hover{
-                border: none;
-                background-color: var(--line2--100);
-            }
-        }
-        &.btn-line3{
-            color: var(--line3--700);
-            background-color: var(--line3--100);
-            border: none;
-            &:hover{
-                border: none;
-                background-color: var(--line3--100);
-            }
-        }
-        
-        &.btn-line4{
-            color: var(--line4--700);
-            background-color: var(--line4--100);
-            border: none;
-            &:hover{
-                border: none;
-                background-color: var(--line4--100);
-            }
-        }
-    }
-
-    &-solid{
-        &::after{
-            background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
-        }
-        &.btn-primary{
-            color: #fff;
-            background-color: var(--line1--600); ;
-            border: solid 1px var(--line1--600);
-            &:hover{
-                background-color: var(--line1--500); ;
-                border: solid 1px var(--line1--500);
-            }
-        }
-        &.btn-line2{
-            color: #fff;
-            background-color: var(--line2--600);
-            border: solid 1px var(--line2--600);
-            &:hover{
-                background-color: var(--line2--500); ;
-                border: solid 1px var(--line2--500);
-            }
-        }
-        &.btn-line3{
-            color: #fff;
-            background-color: var(--line3--600);
-            border: solid 1px var(--line3--600);
-            &:hover{
-                background-color: var(--line3--500); ;
-                border: solid 1px var(--line3--500);
-            }
-        }
-        &.btn-line4{
-            color: #fff;
-            background-color: var(--line4--600);
-            border: solid 1px var(--line4--600);
-            &:hover{
-                background-color: var(--line4--500); ;
-                border: solid 1px var(--line4--500);
-            }
-        }
-        &.btn-secondary{
-            color: #fff;
-            background-color: var(--charcoal--800);
-            border: solid 1px var(--charcoal--800);
-            &:hover{
-                background-color: var(--charcoal--700); ;
-                border: solid 1px var(--charcoal--700);
-            }
-        }
-        
-        
-        
-    }
-
+	// btn responsive behaviour
+	@include media-breakpoint-down(sm) {
+		font-size: $btn-font-sm;
+		min-height: 1.875rem;
+		padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+		&::after,
+		&.btn-leading-icon::before {
+			width: 1rem;
+			min-width: 1rem;
+			height: 1rem;
+		}
+	}
 }
+
+.btn-icon-only {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+}
+
+
+// button transitions
+.btn,
+.btn::after,
+.btn::before {
+	transition: all 100ms ease-out;
+}
+
+// small btn styles
+.btn-sm,
+.filter-bar .btn {
+	font-size: $btn-font-sm;
+	min-height: 1.875rem;
+	padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+	&::after {
+		width: 1rem;
+		min-width: 1rem;
+		height: 1rem;
+	}
+	&:active,
+	&.active {
+		background-color: var(--charcoal--800);
+	}
+}
+
+// filter bar
+.filter-bar {
+	display: flex;
+	gap: 0.25rem;
+	flex-wrap: wrap;
+	.btn {
+		&::after {
+			content: none;
+			display: none;
+		}
+		padding: 0.5rem 1rem;
+	}
+}
+
+// tertiary button
+.btn.btn-tertiary,
+.filter-bar .btn {
+	background-color: var(--ter-btn-color);
+
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+	}
+
+	&:hover {
+		background-color: var(--ter-btn-color-hover);
+	}
+
+	&.dark-mode {
+		background-color: var(--ter-btn-color-dm);
+		border: solid 1px var(--ter-btn-color-dm);
+
+		&:hover {
+			background-color: var(--ter-btn-color-dm-hover);
+			color: white;
+		}
+	}
+}
+
+// icon styles: text only, leading, icon only, trailing
+//
+
+// Primary button
+.btn.btn-primary {
+	color: #fff;
+	background-color: var(--prm-btn-color);
+	outline-offset: 2px;
+
+	&:hover {
+		background-color: var(--prm-btn-color-hover);
+		border: none;
+	}
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+	}
+
+	&.dark-mode {
+		-webkit-text-stroke: var(--charcoal--800);
+		font-weight: 700;
+		background-color: var(--prm-btn-color);
+		border: solid 1px var(--transparent--50);
+
+		&:hover {
+			background-color: var(--prm-btn-color-hover);
+			border: solid 1px white;
+		}
+	}
+}
+//	Secondary button
+
+.btn.btn {
+	&-secondary,
+	&-line1 {
+		&.dark-mode:hover {
+			color: var(--line1--500);
+		}
+	}
+}
+
+.btn-secondary,
+.btn-line1,
+.btn-line2,
+.btn-line3,
+.btn-line4,
+.btn-frequent,
+.btn-connexion,
+.btn-local {
+	color: var(--charcoal--800);
+	background-color: transparent;
+	border: solid 1px var(--scd-btn-border-color);
+	outline-offset: 4px;
+	&:hover {
+		box-shadow: var(--scd-btn-border-color) 0px 0px 0px 1.5px, $elevation1;
+	}
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+	}
+
+	&.dark-mode {
+		border: solid 1px var(--scd-btn-border-color-dm);
+		background-color: transparent;
+		&:hover {
+			box-shadow: var(--scd-btn-border-color-dm) 0px 0px 0px 1.5px;
+		}
+	}
+}
+
+// Line & route button icon
+.btn-line1,
+.btn-line2,
+.btn-line3,
+.btn-line4 {
+	&.btn-leading-icon{
+			&::before {
+				background-image: url("https://www.octranspo.com/images/files/icons/transport_train.svg");
+			}
+			&.active,
+			&:active,
+			&:active:hover,
+			&.active:hover{
+				&::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/transport_train-white.svg");
+				}
+				
+			}
+			
+			
+	}
+	
+}
+.btn-frequent,
+.btn-connexion,
+.btn-local {
+	&.btn-leading-icon {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/transport_bus.svg");
+		}
+		&.active,
+			&:active,
+			&:active:hover,
+			&.active:hover{
+				&::before {
+					background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-white.svg");
+				}
+				
+			}
+	}
+}
+
+// Line & route button icon on hover
+
+.btn-leading-icon:hover.btn {
+	&-frequent {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-frequent.svg");
+		}
+	}
+	&-connexion {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-connexion.svg");
+		}
+	}
+	&-local {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-local.svg");
+		}
+	}
+	&-line1 {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line1.svg");
+		}
+	}
+	&-line2 {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line2.svg");
+		}
+	}
+	&-line3 {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line3.svg");
+		}
+	}
+	&-line4 {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line4.svg");
+		}
+	}
+}
+
+// O-train extension button
+.btn-extension,
+.btn-line2-4 {
+	outline-offset: 3px;
+	&:before {
+		transition: all 100ms ease-out;
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: 2px;
+		border-radius: inherit; /* !importanté */
+		background-color: white;
+		z-index: -1;
+	}
+	&:hover {
+		color: var(--prm-btn-color);
+	}
+	&:hover:before {
+		background-color: var(--gray--50);
+	}
+	position: relative;
+	z-index: 1;
+	background: $grad-all;
+	color: var(--charcoal--800);
+	border-image: 1/1px;
+	background-clip: padding-box;
+
+	&.dark-mode {
+		background-color: inherit !important;
+		color: white;
+		background: $grad-all-dm;
+		&:before {
+			background-color: inherit;
+		}
+		&:hover::before {
+			background-color: var(--btn-dm-hover);
+		}
+	}
+}
+
+// Line 2 & 4 launch
+.btn-line2-4 {
+	background: $grad-2-4;
+	&.dark-mode {
+		background: $grad-2-4-dm;
+	}
+}
+
+// overriding colours for lines & routes
+
+.btn- {
+	&line2 {
+		border: solid 1px var(--line2);
+		&:hover {
+			box-shadow:$elevation1, var(--line2) 0px 0px 0px 1.5px;
+			color: var(--line2--600);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line2.svg");
+			}
+		}
+	}
+	&line3 {
+		border: solid 1px var(--line3);
+		&:hover {
+			box-shadow:$elevation1, var(--line3) 0px 0px 0px 1.5px;
+			color: var(--line3--600);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line3.svg");
+			}
+		}
+	}
+	&line4 {
+		border: solid 1px var(--line4);
+		&:hover {
+			box-shadow:$elevation1, var(--line4) 0px 0px 0px 1.5px;
+			color: var(--line4--600);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line4.svg");
+			}
+		}
+	}
+	&frequent {
+		border: solid 1px var(--frequent);
+		&:hover {
+			box-shadow:$elevation1, var(--frequent) 0px 0px 0px 1.5px;
+			color: var(--frequent--600);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-frequent.svg");
+			}
+		}
+	}
+	&connexion {
+		border: solid 1px var(--connexion);
+		&:hover {
+			box-shadow:$elevation1, var(--connexion) 0px 0px 0px 1.5px;
+			color: var(--connexion--600);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-connexion.svg");
+			}
+		}
+	}
+	&local {
+		border: solid 1px var(--local);
+		&:hover {
+			box-shadow:$elevation1, var(--local) 0px 0px 0px 1.5px;
+			color: var(--local--600);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-local.svg");
+			}
+		}
+	}
+}
+
+.btn.btn-text {
+	background-color: transparent;
+	padding: 0.5rem 0 0;
+	margin: 0 0 0.5rem;
+	border-radius: 0;
+	min-height: fit-content;
+	border-bottom: 1px solid transparent;
+	&:not(.dark-mode):hover {
+		color: var(--prm-btn-color);
+		border-bottom: 1px solid var(--prm-btn-color);
+	}
+}
+
+.btn.btn-elevated,
+.back-to-top-btn,
+.search-btn,
+.prev-btn,
+.next-btn {
+	outline-offset: 4px;
+	background-color: white;
+	box-shadow: $elevation1;
+	border: 2px solid white;
+
+	&:hover {
+		border: 2px solid var(--prm-btn-color);
+		color: var(--prm-btn-color);
+		&::after {
+			background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line1.svg");
+		}
+	}
+}
+
+.dark-mode.btn {
+	// Dark modes universal styles
+	&-secondary,
+	&-primary,
+	&-tertiary,
+	&-text,
+	&-line1,
+	&-line2,
+	&-line3,
+	&-line4,
+	&-frequent,
+	&-connexion,
+	&-local,
+	&-extension,
+	&-line2-4 {
+		color: #fff;
+		&::after {
+			background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+		}
+	}
+
+	&-secondary,
+	&-line1,
+	&-line2,
+	&-line3,
+	&-line4,
+	&-frequent,
+	&-connexion,
+	&-local,
+	&-extension,
+	&-line2-4 {
+		&:hover {
+			background-color: var(--overlay--500);
+		}
+	}
+
+	// dark mode style for text button
+	&-text:hover {
+		border-bottom: 1px solid white;
+	}
+
+	// dark mode for line & routes buttons
+
+	// &-line1 {
+	// 	border: solid 1px var(--line1--500);
+	// 	&:hover {
+	// 		box-shadow: var(--line1--500) 0px 0px 0px 1px;
+	// 		color: var(--line1--500);
+	// 	}
+	// }
+	&-line2 {
+		border: solid 1px var(--line2--500);
+		&:hover {
+			box-shadow: var(--line2--500) 0px 0px 0px 1px;
+			color: var(--line2--500);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line2-dm.svg");
+			}
+		}
+	}
+	&-line3 {
+		border: solid 1px var(--line3--500);
+		&:hover {
+			box-shadow: var(--line3--500) 0px 0px 0px 1px;
+			color: var(--line3--500);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line3-dm.svg");
+			}
+		}
+	}
+	&-line4 {
+		border: solid 1px var(--line4--500);
+		&:hover {
+			box-shadow: var(--line4--500) 0px 0px 0px 1px;
+			color: var(--line4--500);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line4-dm.svg");
+			}
+		}
+	}
+
+	&-frequent {
+		border: solid 1px var(--frequent--500);
+		&:hover {
+			box-shadow: var(--frequent--500) 0px 0px 0px 1px;
+			color: var(--frequent--500);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-frequent-dm.svg");
+			}
+		}
+	}
+	&-connexion {
+		border: solid 1px var(--connexion--500);
+		&:hover {
+			box-shadow: var(--connexion--500) 0px 0px 0px 1px;
+			color: var(--connexion--500);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-connexion-dm.svg");
+			}
+		}
+	}
+	&-local {
+		border: solid 1px var(--local--500);
+		&:hover {
+			box-shadow: var(--local--500) 0px 0px 0px 1px;
+			color: var(--local--500);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-local-dm.svg");
+			}
+		}
+	}
+}
+
+//hover mode
+
+.btn {
+	&-secondary,
+	&-line1,
+	&-extension,
+	&-line2-4,
+	&-text {
+		&:not(.dark-mode):hover {
+			color: var(--prm-btn-color);
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-red.svg");
+			}
+		}
+	}
+}
+
+//dark mode + hover
+.dark-mode.btn {
+	&-secondary,
+	&-line1 {
+		&:hover {
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-red-dm.svg");
+			}
+		}
+	}
+}
+
+// Active mode
+.btn {
+	&-secondary,
+	&-primary,
+	&-tertiary,
+	&-filter,
+	&-line1,
+	&-line2,
+	&-line3,
+	&-line4,
+	&-frequent,
+	&-connexion,
+	&-local {
+		&:active,
+		&.active,
+		&:active:hover,
+		&.active:hover {
+			color: white;
+			background-color: var(--btn-active-color);
+			box-shadow: none;
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+			}
+		}
+	}
+}
+
+// Active mode
+// + Dark mode
+.dark-mode.btn {
+	&-secondary,
+	&-primary,
+	&-tertiary,
+	&-line1,
+	&-line2,
+	&-line3,
+	&-line4,
+	&-frequent,
+	&-connexion,
+	&-local {
+		&:active,
+		&:active:hover,
+		&.active,
+		&.active:hover {
+			border: inherit;
+			background-color: white;
+			color: var(--charcoal--800);
+			box-shadow: none;
+			&::after {
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+			}
+		}
+	}
+}
+
+// Leading icon variations
+
+
+.btn.btn-icon--map {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/resource_map.svg");
+	}
+}
+.btn.btn-icon--pdf {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/resource_pdf.svg");
+	}
+}
+.btn.btn-icon--image {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/resource_image.svg");
+	}
+}
+.btn.btn-icon--schedules {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/resource_schedules.svg");
+	}
+}
+.btn.btn-icon--download {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/resource_download.svg");
+	}
+}
+.btn.btn-icon--email {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/contact_email.svg");
+	}
+}
+.btn.btn-icon--tty {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/contact_tty.svg");
+	}
+}
+.btn.btn-icon--fax {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/contact_fax.svg");
+	}
+}
+.btn.btn-icon--phone {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/contact_phone.svg");
+	}
+}
+
+// Trailing icon variations + elevated button style
+
+.search-btn {
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_search.svg");
+	}
+	&:hover::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_search-red.svg");
+	}
+}
+.next-btn {
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-right.svg");
+	}
+	&:hover::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-right-red.svg");
+	}
+}
+.prev-btn {
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-left.svg");
+	}
+	&:hover::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-left-red.svg");
+	}
+}
+.back-to-top-btn {
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-up.svg");
+	}
+	&:hover::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-up-red.svg");
+	}
+}
+
+// Trailing small, tertiary icon variations
+
+
+.btn-tertiary, .btn-tertiary:hover,.btn-tertiary:active:hover{
+	&.btn-icon--external::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/resource_external.svg");
+	}
+	&.btn-icon--load-more::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down.svg");
+	}
+	&.btn-icon--load-less::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-up.svg");
+	}
+}
+
+
+// leading small, tertiary icon buttons
+.btn-leading-icon,
+.btn-icon--map,
+.btn-icon--pdf,
+.btn-icon--image,
+.btn-icon--schedules,
+.btn-icon--download,
+.btn-icon--email,
+.btn-icon--tty,
+.btn-icon--fax,
+.btn-icon--phone {
+	padding: 0.5rem 1rem 0.4rem 1rem;
+
+	&::before {
+		content: "";
+		display: block;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 1.25rem;
+		min-width: 1.25rem;
+		height: 1.25rem;
+	}
+	&::after {
+		content: none;
+		display: none;
+	}
+
+	&.btn-sm {
+		padding: 0.4rem 0.75rem 0.4rem 0.75rem;
+
+		&::before {
+			width: 1rem;
+			min-width: 1rem;
+			height: 1rem;
+		}
+	}
+
+	
+}
+
+.btn-leading-icon,
+.btn-icon--map,
+.btn-icon--pdf,
+.btn-icon--image,
+.btn-icon--schedules,
+.btn-icon--download,
+.btn-icon--email,
+.btn-icon--tty,
+.btn-icon--fax,
+.btn-icon--phone,
+.btn-icon--external,
+.btn-icon--load-more,
+.btn-icon--load-less {
+	&:active:hover, &:active, &.active, &.active:hover{
+		background-color: var(--ter-btn-color-hover);
+		color: var(--charcoal--800);
+	} 
+}
+
+/*End Button styles*/

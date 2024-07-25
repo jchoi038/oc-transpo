@@ -1,5 +1,5 @@
 /* link styles start*/
-/* Last updated: 2024/07/18 */
+/* Last updated: 2024/07/25 */
 .link-stack{
     gap: 0;
     li {
@@ -41,11 +41,12 @@ a.map-link, a.pdf-link{
 }
 
 //hover
-a:not(.btn):hover{
+.content-container a:not(.btn):hover{
     background-color: var(--gray--50);
     border-radius: 4px;
     text-decoration: none;
 }
+
 // styles
 
 a.external-link,
