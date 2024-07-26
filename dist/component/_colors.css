@@ -1,6 +1,6 @@
 
 /*Colours start*/
-/* updated on 2024/07/25 */
+/* updated on 2024/07/26 */
 :root {
   --line1--50: #FCF4F0;
   --line1--100: #FCE4D9;
@@ -160,7 +160,7 @@
   --prm-btn-color-dm: var(--line1--500);
   --prm-btn-color-dm-hover: var(--line1--600);
   --scd-btn-border-color: var(--line1--600);
-  --scd-btn-border-color-dm: var(--line1--500);
+  --scd-btn-border-color-dm: white;
   --ter-btn-color: var(--gray--100);
   --ter-btn-color-hover: var(--gray--200);
   --ter-btn-color-dm: var(--transparent--50);
