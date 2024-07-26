@@ -29,11 +29,1042 @@
         <link href="https://www.octranspo.com/images/files/dist/_tables.css" rel="stylesheet" />
         <link href="https://www.octranspo.com/images/files/dist/_toc.css" rel="stylesheet" />
         <link href="https://www.octranspo.com/images/files/dist/_icons.css" rel="stylesheet" />
-        <!-- <link rel="stylesheet" href="../../dist/custom-style.css" /> -->
+        <link rel="stylesheet" href="../../dist/custom-style.css" />
         <!-- TOC -->
         <div class="toc sticky"></div>
+        <!-- updates -->
+        <div class="note" >
+                <p class="note__title">Page updates</p>
+            <ul class="note__desc" style="max-height: 300px; overflow-y: scroll;">
+                <li>7/26/2024: UPDATE Secondary dark-mode button</li>
+                <li>7/26/2024: ADD tertiary external button</li>
+                <li>7/25/2024: ADD buttons section</li>
+                <li>7/22/2024: ADD tables section</li>
+                <li>7/19/2024: ADD fully completed Icons section</li>
+                <li>7/19/2024: ADD fully completed Official Web Colours section</li>
+            </ul>
+        </div>
         
-        
+        <!-- Icons -->
+        <section class="section" id="style-guide-icons">
+            <h2>Icons</h2>
+            <strong>
+                <p>How to use these components</p>
+            </strong>
+            <p>Add the following style sheets to the top your content</p>
+            <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot;
+                href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_icons.css&quot;
+                &#x2F;&gt; </p>
+
+            <!-- naming convention guide -->
+            <section>
+                <h3>Icon naming convention guide</h3>
+                <strong>
+                    <p>Format:</p>
+                </strong>
+                <pre style="display: inline-block;" class="flex flex-jc-c">
+                    <span style=" padding: 0.25rem 0.5rem; border-radius: 4px; background-color: var(--line1--100); color: var(--line1--600);">[A]</span>
+                    <span style=" padding: 0.25rem 0.5rem; border-radius: 4px; background-color: var(--line2--100); color: var(--line2--600);">_</span>
+                    <span style=" padding: 0.25rem 0.5rem; border-radius: 4px; background-color: var(--line3--100); color: var(--line3--600);">[B]</span>
+                    <span style=" padding: 0.25rem 0.5rem; border-radius: 4px; background-color: var(--line4--100); color: var(--line4--600);">.svg</span></pre>
+                <div class="grid">
+                    <div>
+                        <span
+                            style=" padding: 0.25rem 0.5rem; border-radius: 4px; background-color: var(--line1--100); color: var(--line1--600);">[A]</span>
+                        <p><strong>Category Name:</strong></p>
+                        <li>Pick a category from the following options:<span class="code"> 'line' / 'route' /
+                                'transport' /
+                                'semantic' / 'accessibility' / 'station' / 'resource' / 'destination' / 'interactive' /
+                                'contact' /
+                                'detour' / 'map' / 'tags' / 'service' / 'msc' / 'link-icon'</span></li>
+                        <li>Use lowercase letters only.</li>
+                    </div>
+                    <div>
+                        <span
+                            style=" padding: 0.25rem 0.5rem; border-radius: 4px; background-color: var(--line3--100); color: var(--line3--600);">[B]</span>
+                        <p><strong>Icon Name:</strong></p>
+                        <li>Name the icon using kebab-case format.</li>
+                        <li>Correct: happy-goat</li>
+                        <li>Incorrect: happyGoat, happy_goat</li>
+                        <li>Use lowercase letters only.</li>
+                    </div>
+                    <div>
+                        <span
+                            style=" padding: 0.25rem 0.5rem; border-radius: 4px; background-color: var(--line2--100); color: var(--line2--600);">_</span>
+                        <p><strong>Linking [A] and [B]</strong></p>
+                        <li>Combine the category name and icon name with an underscore _.</li>
+                        <li>Example:<span class="code">'contact_email.svg'</span></li>
+                    </div>
+                    <div>
+                        <span
+                            style=" padding: 0.25rem 0.5rem; border-radius: 4px; background-color: var(--line4--100); color: var(--line4--600);">.svg</span>
+                        </pre>
+                        <p><strong>Upload format</strong></p>
+                        <li>upload your icon in <span>'.svg'</span> format</li>
+                    </div>
+                </div>
+            </section>
+            <!-- upload directoru -->
+            <section>
+                <h3>Upload directory</h3>
+                <p>All icons are to be saved in </p>
+                <pre class="code flex flex-jc-c">Assets/Uploads/icons</pre>
+            </section>
+            <!-- Icon sizes -->
+            <section>
+                <h3>Icon sizes</h3>
+                <p>Classes <span class="code">"xs-icon" /"sm-icon" /"md-icon" /"lg-icon"</span> can be applied to
+                    manually control the size of the icons.</p>
+                <div class="example grid--2col">
+                    <div>
+                        <p>No class applied:</p>
+                        <img src="https://www.octranspo.com/images/files/icons/service_TNSB.png" alt="">
+
+                    </div>
+                    <div>
+                        <p>classes applied:</p>
+                        <img class="xs-icon" src="https://www.octranspo.com/images/files/icons/service_TNSB.png" alt="">
+                        <img class="sm-icon" src="https://www.octranspo.com/images/files/icons/service_TNSB.png" alt="">
+                        <img class="md-icon" src="https://www.octranspo.com/images/files/icons/service_TNSB.png" alt="">
+                        <img class="lg-icon" src="https://www.octranspo.com/images/files/icons/service_TNSB.png" alt="">
+                    </div>
+                    <div>
+                        <p>No class applied:</p>
+                        <img src="https://www.octranspo.com/images/files/icons/route_connexion.svg" alt="">
+                    </div>
+                    <div>
+                        <p>classes applied:</p>
+                        <img class="xs-icon" src="https://www.octranspo.com/images/files/icons/route_connexion.svg"
+                            alt="">
+                        <img class="sm-icon" src="https://www.octranspo.com/images/files/icons/route_connexion.svg"
+                            alt="">
+                        <img class="md-icon" src="https://www.octranspo.com/images/files/icons/route_connexion.svg"
+                            alt="">
+                        <img class="lg-icon" src="https://www.octranspo.com/images/files/icons/route_connexion.svg"
+                            alt="">
+                    </div>
+                    <div>
+                        <p>No class applied:</p>
+                        <img src="https://www.octranspo.com/uploads/news/My_ParaTranspo_English.png" alt="">
+                    </div>
+                    <div>
+                        <p>classes applied:</p>
+                        <img class="xs-icon" src="https://www.octranspo.com/uploads/news/My_ParaTranspo_English.png"
+                            alt="">
+                        <img class="sm-icon" src="https://www.octranspo.com/uploads/news/My_ParaTranspo_English.png"
+                            alt="">
+                        <img class="md-icon" src="https://www.octranspo.com/uploads/news/My_ParaTranspo_English.png"
+                            alt="">
+                        <img class="lg-icon" src="https://www.octranspo.com/uploads/news/My_ParaTranspo_English.png"
+                            alt="">
+                    </div>
+                </div>
+                <pre>
+&lt;img class&#x3D;&quot;xs-icon&quot; src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;service_TNSB.png&quot; alt&#x3D;&quot;&quot;&gt;
+&lt;img class&#x3D;&quot;sm-icon&quot; src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;service_TNSB.png&quot; alt&#x3D;&quot;&quot;&gt;
+&lt;img class&#x3D;&quot;md-icon&quot; src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;service_TNSB.png&quot; alt&#x3D;&quot;&quot;&gt;
+&lt;img class&#x3D;&quot;lg-icon&quot; src&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;icons&#x2F;service_TNSB.png&quot; alt&#x3D;&quot;&quot;&gt;
+                </pre>
+
+            </section>
+            <!-- list of icons and url -->
+            <section>
+                <h3>Icon url & filenames</h3>
+                <section class="sub-section">
+                    <p>All icons urls will have the format, if not stated otherwise <code
+                            style="color: var(--line4--600);">"https://www.octranspo.com/images/files/icons/"</code> +
+                        <code style="color: var(--line1--600);">"filename"</code></p>
+                    example: <code
+                        style="color: var(--line4--600);">https://www.octranspo.com/images/files/icons/</code><code
+                        style="color: var(--line1--600);">line_1.svg</code>
+                </section>
+                <section class="sub-section">
+                    <h4>Routes & Lines</h4>
+                    <div class="grid--2col">
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_1.svg" alt=""></dt>
+                            <dd><a href="https://www.octranspo.com/images/files/icons/line_1.svg">line_1.svg</a></dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_2.svg" alt=""></dt>
+                            <dd><a href="https://www.octranspo.com/images/files/icons/line_2.svg">line_2.svg</a></dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_3.svg" alt=""></dt>
+                            <dd><a href="https://www.octranspo.com/images/files/icons/line_3.svg">line_3.svg</a></dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_4.svg" alt=""></dt>
+                            <dd><a href="https://www.octranspo.com/images/files/icons/line_4.svg">line_4.svg</a></dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_R1.svg" alt=""></dt>
+                            <dd><a href="https://www.octranspo.com/images/files/icons/line_R1.svg">line_R1.svg</a></dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_R2.svg" alt=""></dt>
+                            <dd><a href="https://www.octranspo.com/images/files/icons/line_R2.svg">line_R2.svg</a></dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_R3.svg" alt=""></dt>
+                            <dd><a href="https://www.octranspo.com/images/files/icons/line_R3.svg">line_R3.svg</a></dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_R4.svg" alt=""></dt>
+                            <dd><a href="https://www.octranspo.com/images/files/icons/line_R4.svg">line_R4.svg</a></dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_R1-blank.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/line_R1-blank.svg">line_R1-blank.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_R2-blank.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/line_R2-blank.svg">line_R2-blank.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_R3-blank.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/line_R3-blank.svg">line_R3-blank.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/line_R4-blank.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/line_R4-blank.svg">line_R4-blank.svg</a>
+                            </dd>
+                        </dl>
+
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_connexion.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_connexion.svg">route_connexion.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_connexion-ltd.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_connexion-ltd.svg">route_connexion-ltd.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_frequent-nwtb.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_frequent-nwtb.svg">route_frequent-nwtb.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_frequent-ltd-nwtb.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_frequent-ltd-nwtb.svg">route_frequent-ltd-nwtb.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_local.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_local.svg">route_local.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_local-ltd.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_local-ltd.svg">route_local-ltd.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_rapid.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_rapid.svg">route_rapid.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_rapid-ltd.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_rapid-ltd.svg">route_rapid-ltd.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_night.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_night.svg">route_night.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_frequent.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_frequent.svg">route_frequent.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/route_frequent-ltd.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/route_frequent-ltd.svg">route_frequent-ltd.svg</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Transportation modes</h4>
+                    <div class="grid--2col">
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_bus.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_bus.svg">transport_bus.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_train.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_train.svg">transport_train.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_para.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_para.svg">transport_para.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_mobility-device.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_mobility-device.svg">transport_mobility-device.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_walk.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_walk.svg">transport_walk.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_bike.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_bike.svg">transport_bike.svg</a>
+                            </dd>
+
+                        </dl>
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_bus-square.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_bus-square.svg">transport_bus-square.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_train-square.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_train-square.svg">transport_train-square.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_para-square.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_para-square.svg">transport_para-square.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_mobility-device-square.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_mobility-device-square.svg">transport_mobility-device-square.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_walk-square.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_walk-square.svg">transport_walk-square.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/transport_bike-square.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/transport_bike-square.svg">transport_bike-square.svg</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+
+                <section class="sub-section">
+                    <h4>Semantic</h4>
+                    <div class="grid--2col">
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/semantic_warning-grey-circled.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/semantic_warning-grey-circled.svg">semantic_warning-grey-circled.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/semantic_warning-yellow-circled.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/semantic_warning-yellow-circled.svg">semantic_warning-yellow-circled.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/semantic_warning-red-circled.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/semantic_warning-red-circled.svg">semantic_warning-red-circled.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/semantic_info-circled.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/semantic_info-circled.svg">semantic_info-circled.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/semantic_success-circled.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/semantic_success-circled.svg">semantic_success-circled.svg</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Accessibility</h4>
+                    <div class="grid--2col">
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/accessibility_accessible.svg"
+                                    alt=""></dt>
+                            <dd>
+                                <a
+                                    href="https://www.octranspo.com/images/files/icons/accessibility_accessible.svg">accessibility_accessible.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/accessibility_accessible-forward.svg"
+                                    alt=""></dt>
+                            <dd>
+                                <a
+                                    href="https://www.octranspo.com/images/files/icons/accessibility_accessible-forward.svg">accessibility_accessible-forward.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/accessibility_elevators.svg"
+                                    alt=""></dt>
+                            <dd>
+                                <a
+                                    href="https://www.octranspo.com/images/files/icons/accessibility_elevators.svg">accessibility_elevators.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/accessibility_escalators.svg"
+                                    alt=""></dt>
+                            <dd>
+                                <a
+                                    href="https://www.octranspo.com/images/files/icons/accessibility_escalators.svg">accessibility_escalators.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/accessibility_hearing-impaired.svg"
+                                    alt=""></dt>
+                            <dd>
+                                <a
+                                    href="https://www.octranspo.com/images/files/icons/accessibility_hearing-impaired.svg">accessibility_hearing-impaired.svg</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section class="sub-section">
+
+                    <h4>Resource links, resources, contacts</h4>
+                    <div class="grid--2col">
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_download.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_download.svg">link-icon_download.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_email.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_email.svg">link-icon_email.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_external.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_external.svg">link-icon_external.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_image.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_image.svg">link-icon_image.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_map.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_map.svg">link-icon_map.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_pdf.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_pdf.svg">link-icon_pdf.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_phone.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_phone.svg">link-icon_phone.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_schedules.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_schedules.svg">link-icon_schedules.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_tty.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_tty.svg">link-icon_tty.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_arrow-right.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/link-icon_arrow-right.svg">link-icon_arrow-right.svg</a>
+                            </dd>
+                            <!-- <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_arrow-left.svg" alt=""></dt>
+                            <dd>link-icon_arrow-left.svg</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_arrow-up.svg" alt=""></dt>
+                            <dd>link-icon_arrow-up.svg</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/link-icon_arrow-down.svg" alt=""></dt>
+                            <dd>link-icon_arrow-down.svg</dd> -->
+                        </dl>
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/resource_download.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/resource_download.svg">resource_download.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/resource_external.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/resource_external.svg">resource_external.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/resource_image.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/resource_image.svg">resource_image.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/resource_map.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/resource_map.svg">resource_map.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/resource_pdf.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/resource_pdf.svg">resource_pdf.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/resource_schedules.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/resource_schedules.svg">resource_schedules.svg</a>
+                            </dd>
+                        </dl>
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/contact_phone.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/contact_phone.svg">contact_phone.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/contact_tty.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/contact_tty.svg">contact_tty.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/contact_mail.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/contact_mail.svg">contact_mail.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/contact_email.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/contact_email.svg">contact_email.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/contact_website.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/contact_website.svg">contact_website.svg*</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/contact_video-relay.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/contact_video-relay.svg">contact_video-relay.svg*</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Destinations</h4>
+                    <div class="grid--2col">
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/destination_activity.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/destination_activity.svg">destination_activity.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/destination_airport.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/destination_airport.svg">destination_airport.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/destination_event.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/destination_event.svg">destination_event.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/destination_library.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/destination_library.svg">destination_library.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/destination_scenery.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/destination_scenery.svg">destination_scenery.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/destination_school.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/destination_school.svg">destination_school.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/destination_shopping.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/destination_shopping.svg">destination_shopping.svg</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section class="sub-section">
+
+                    <h4>Interactive / functional</h4>
+                    <div class="grid--2col">
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_arrow-left.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_arrow-left.svg">interactive_arrow-left.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg">interactive_arrow-right.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_arrow-down.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_arrow-down.svg">interactive_arrow-down.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_arrow-up.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_arrow-up.svg">interactive_arrow-up.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_chevron-left.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_chevron-left.svg">interactive_chevron-left.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_chevron-right.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_chevron-right.svg">interactive_chevron-right.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_chevron-down.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_chevron-down.svg">interactive_chevron-down.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_chevron-up.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_chevron-up.svg">interactive_chevron-up.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_plus.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_plus.svg">interactive_plus.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_minus.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_minus.svg">interactive_minus.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_close.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_close.svg">interactive_close.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/interactive_search.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_search.svg">interactive_search.svg</a>
+                            </dd>
+                        </dl>
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg">interactive_arrow-right-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg">interactive_arrow-right-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_arrow-down-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_arrow-down-white.svg">interactive_arrow-down-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_arrow-up-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_arrow-up-white.svg">interactive_arrow-up-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_chevron-left-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_chevron-left-white.svg">interactive_chevron-left-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_chevron-right-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_chevron-right-white.svg">interactive_chevron-right-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_chevron-down-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_chevron-down-white.svg">interactive_chevron-down-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_chevron-up-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_chevron-up-white.svg">interactive_chevron-up-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_plus-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_plus-white.svg">interactive_plus-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_minus-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_minus-white.svg">interactive_minus-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_close-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_close-white.svg">interactive_close-white.svg</a>
+                            </dd>
+                            <dt style="background-color: var(--gray--500);"><img
+                                    src="https://www.octranspo.com/images/files/icons/interactive_search-white.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/interactive_search-white.svg">interactive_search-white.svg</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section class="sub-section">
+
+                    <h4>Stations</h4>
+                    <div class="grid--2col">
+                        <dl class="icon-list code">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_after-hours-entrance.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_after-hours-entrance.svg">station_after-hours-entrance.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_airport.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_airport.svg">station_airport.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_bike-boarding-zone.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_bike-boarding-zone.svg">station_bike-boarding-zone.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_bike-rack-support.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_bike-rack-support.svg">station_bike-rack-support.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_bike-repair-station.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_bike-repair-station.svg">station_bike-repair-station.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_bus-stop.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_bus-stop.svg">station_bus-stop.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_customer-service.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_customer-service.svg">station_customer-service.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_entrance.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_entrance.svg">station_entrance.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_escalators.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_escalators.svg">station_escalators.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_fare-gate.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_fare-gate.svg">station_fare-gate.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_fare-machine.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_fare-machine.svg">station_fare-machine.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_happy-goat.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_happy-goat.svg">station_happy-goat.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_hospital.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_hospital.svg">station_hospital.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_info.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_info.svg">station_info.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_MUP.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_MUP.svg">station_MUP.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_park-n-ride.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_park-n-ride.svg">station_park-n-ride.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_pick-up-drop-off-zone.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_pick-up-drop-off-zone.svg">station_pick-up-drop-off-zone.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_public-washroom.svg"
+                                    alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_public-washroom.svg">station_public-washroom.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_stairs.svg" alt=""></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_stairs.svg">station_stairs.svg</a>
+                            </dd>
+                            <dt><img src="https://www.octranspo.com/images/files/icons/station_taxi-zone.svg" alt="">
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_taxi-zone.svg">station_taxi-zone.svg</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section class="sub-section">
+
+                    <h4>Services</h4>
+                    <div class="">
+                        <dl class="icon-list code bordered">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_transecure.svg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_transecure.svg">service_transecure.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_alerts.svg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_alerts.svg">service_alerts.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_bikesecure.svg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_bikesecure.svg">service_bikesecure.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_customer-service.svg" />
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_customer-service.svg">service_customer-service.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_live-video-chat.svg" />
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_live-video-chat.svg">service_live-video-chat.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_nightstop.svg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_nightstop.svg">service_nightstop.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_odt.svg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_odt.svg">service_odt.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_opayment.svg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_opayment.svg">service_opayment.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_para.svg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_para.svg">service_para.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_pnr.svg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_pnr.svg">service_pnr.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/service_TNSB.png" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/service_TNSB.png">service_TNSB.png</a>
+                            </dd>
+                        </dl>
+
+                        <p>List of service logos that have unique urls:</p>
+                        <dl class="icon-list code bordered">
+                            <dt class="header-row">Icon</dt>
+                            <dd class="header-row">File name</dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/themes/user/site/octranspo/assets/img/travel-planner.svg" />
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/themes/user/site/octranspo/assets/img/travel-planner.svg">https://www.octranspo.com/themes/user/site/octranspo/assets/img/travel-planner.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/uploads/news/My_ParaTranspo_English.png" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/uploads/news/My_ParaTranspo_English.png">https://www.octranspo.com/uploads/news/My_ParaTranspo_English.png</a>
+                            </dd>
+                            <dt><img class="sm-icon" alt=""
+                                    src="https://www.octranspo.com/uploads/news/My_ParaTranspo_French.png" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/uploads/news/My_ParaTranspo_French.png">https://www.octranspo.com/uploads/news/My_ParaTranspo_French.png</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/icons/station_customer-service.svg" />
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/icons/station_customer-service.svg">https://www.octranspo.com/images/files/icons/station_customer-service.svg</a>
+                            </dd>
+                            <dt><img class="sm-icon" src="https://www.octranspo.com/images/files/parapay_logo_en.png" />
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/parapay_logo_en.png">https://www.octranspo.com/images/files/parapay_logo_en.png</a>
+                            </dd>
+                            <dt><img class="sm-icon" alt=""
+                                    src="https://www.octranspo.com/images/files/parapay_logo_fr.png" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/parapay_logo_fr.png">https://www.octranspo.com/images/files/parapay_logo_fr.png</a>
+                            </dd>
+                            <dt><img class="sm-icon" alt=""
+                                    src="https://www.octranspo.com/images/files/riding/Safe-Stop-Bus-Card-2013_FR.jpg" />
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/riding/Safe-Stop-Bus-Card-2013_FR.jpg">https://www.octranspo.com/images/files/riding/Safe-Stop-Bus-Card-2013_FR.jpg</a>
+                            </dd>
+                            <dt><img class="sm-icon" src="https://www.octranspo.com/uploads/Safe-Stop.jpg" /></dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/uploads/Safe-Stop.jpg">https://www.octranspo.com/uploads/Safe-Stop.jpg</a>
+                            </dd>
+                            <dt><img class="sm-icon"
+                                    src="https://www.octranspo.com/images/files/Cooperative-Seating_Sieges-Partage.jpg" />
+                            </dt>
+                            <dd><a
+                                    href="https://www.octranspo.com/images/files/Cooperative-Seating_Sieges-Partage.jpg">https://www.octranspo.com/images/files/Cooperative-Seating_Sieges-Partage.jpg</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+
+
+            </section>
+        </section>
+
+        <!-- Official Line & Route colours -->
+        <section class="section" id="style-guide-line-colours">
+            <h2>Official Web Colours</h2>
+            <p>Official Web Line & Route Colours (NWTB)</p>
+            <p>Web & Line colours chosen align with colours stated on the 2023 Marketing campaign manual.</p>
+            <p>Slight modification to some colours to adhere to web standards</p>
+            <p>Address to 2023 Marketing campaign manual:<span class="code"> V:\Publicinfo\Marketing\2023
+                    Marketing\O-Train X Branding (Acart)\Acart Branding Guidelines</span></p>
+            <strong>
+                <p>How to use these components</p>
+            </strong>
+            <p>Add the following style sheets to the top your content</p>
+            <p class="code">&lt;link rel&#x3D;&quot;stylesheet&quot;
+                href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_colors.css&quot;
+                &#x2F;&gt; </p>
+            <table class="fluid transparent">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Example</th>
+                        <th>CSS variable</th>
+                        <th>Name</th>
+                        <th>RGB</th>
+                        <th>HEX</th>
+                        <th>Contrast (against&nbsp;#fff)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="square-swatch" style="background-color: var(--line1);">.</span></td>
+                        <td>
+                            <div class="flex flex-ai-c" style="height: 100%;"><img src="https://www.octranspo.com/images/files/icons/line_1.svg" alt=""></div>
+                        </td>
+                        <td><code>var(--line1)</code></td>
+                        <td>Line 1</td>
+                        <td>rgb(211, 15, 29)</td>
+                        <td>#D30F1D</td>
+                        <td>4.5+</td>
+                    </tr>
+                    <tr>
+                        <td><span class="square-swatch" style="background-color: var(--line2);">.</span></td>
+                        <td>
+                            <div class="flex flex-ai-c" style="height: 100%;"><img src="https://www.octranspo.com/images/files/icons/line_2.svg" alt=""></div>
+                        </td>
+                        <td><code>var(--line2)</code></td>
+                        <td>Line 2</td>
+                        <td>rgb(101, 162, 51)</td>
+                        <td>#65A233</td>
+                        <td>3.0+</td>
+                    </tr>
+                    <tr>
+                        <td><span class="square-swatch" style="background-color: var(--line3);">.</span></td>
+                        <td>
+                            <div class="flex flex-ai-c" style="height: 100%;"><img src="https://www.octranspo.com/images/files/icons/line_3.svg" alt=""></div>
+                        </td>
+                        <td><code>var(--line3)</code></td>
+                        <td>Line 3</td>
+                        <td>rgb(143, 114, 0)</td>
+                        <td>#8F7200</td>
+                        <td>4.5+</td>
+                    </tr>
+                    <tr>
+                        <td><span class="square-swatch" style="background-color: var(--line4);">.</span></td>
+                        <td>
+                            <div class="flex flex-ai-c" style="height: 100%;"><img src="https://www.octranspo.com/images/files/icons/line_4.svg" alt=""></div>
+                        </td>
+                        <td><code>var(--line4)</code></td>
+                        <td>Line 4</td>
+                        <td>rgb(0, 154, 214)</td>
+                        <td>#009AD6</td>
+                        <td>3.0+</td>
+                    </tr>
+                    <tr>
+                        <td><span class="square-swatch" style="background-color: var(--frequent);">.</span></td>
+                        <td>
+                            <div class="flex flex-ai-c" style="height: 100%;"><img src="https://www.octranspo.com/images/files/icons/route_frequent-nwtb.svg" alt=""></div>
+                        </td>
+                        <td><code>var(--frequent)</code></td>
+                        <td>Frequent</td>
+                        <td>rgb(0, 87, 184)</td>
+                        <td>#0057B8</td>
+                        <td>4.5+</td>
+                    </tr>
+                    <tr>
+                        <td><span class="square-swatch" style="background-color: var(--connexion);">.</span></td>
+                        <td>
+                            <div class="flex flex-ai-c" style="height: 100%;"><img src="https://www.octranspo.com/images/files/icons/route_connexion.svg" alt=""></div>
+                        </td>
+                        <td><code>var(--connexion)</code></td>
+                        <td>Connexion</td>
+                        <td>rgb(182, 107, 148)</td>
+                        <td>#B66B94</td>
+                        <td>4.5+</td>
+                    </tr>
+                    <tr>
+                        <td><span class="square-swatch" style="background-color: var(--local);">.</span></td>
+                        <td>
+                            <div class="flex flex-ai-c" style="height: 100%;"><img src="https://www.octranspo.com/images/files/icons/route_local.svg" alt=""></div>
+                        </td>
+                        <td><code>var(--local)</code></td>
+                        <td>Local</td>
+                        <td>rgb(109, 110, 114)</td>
+                        <td>#6D6E70</td>
+                        <td>4.5+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         <!-- inline styles -->
         <section class="section" id="styleguide-inline">
             <h2>Inline styles</h2>
@@ -425,6 +1456,408 @@
                     &lt;/li&gt;
                 &lt;/ul&gt;
                                         </pre> -->
+
+            </section>
+        </section>
+
+        <!-- Buttons -->
+        <section class="section" id="style-guide-buttons">
+            <h2>Buttons</h2>
+            <strong>
+                <p>How to use these components</p>
+            </strong>
+            <p>Add the following style sheet to the top your content</p>
+            <div class="note code">
+                <p>&lt;link rel&#x3D;&quot;stylesheet&quot;
+                    href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_inline.css&quot;
+                    &#x2F;&gt; </p>
+                <p>&lt;link rel&#x3D;&quot;stylesheet&quot;
+                    href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_colors.css&quot;
+                    &#x2F;&gt; </p>
+            </div>
+            <section class="sub-section">
+                <h3>Usage guide & component Library </h3>
+                <section class="sub-section">
+                    <h4>Primary buttons</h4>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-primary">Primary</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Primary&lt;&#x2F;a&gt;</pre>
+                    <div>
+                    <div class="example dark-mode flex flex-jc-c">
+                        <a href="" class="btn dark-mode btn-primary">Primary</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-primary dark-mode&quot;&gt;Button&lt;&#x2F;a&gt;</pre>
+                    <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Use sparingly for the most critical actions.</li>
+                            <li>Limit to one per page or section to avoid confusion and maintain focus.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Secondary buttons</h4>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-secondary">Secondary</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-secondary&quot;&gt;Button&lt;&#x2F;a&gt;</pre>
+                    <div class="example flex flex-jc-c dark-mode">
+                        <a href="" class="btn btn-secondary dark-mode">Secondary</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-secondary dark-mode&quot;&gt;Button&lt;&#x2F;a&gt;</pre>
+                    <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Use for less important actions than primary buttons but still require emphasis.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Small, secondary buttons</h4>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-secondary btn-sm">small + secondary</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-secondary btn-sm&quot;&gt;Button&lt;&#x2F;a&gt;</pre>
+                    <div>
+                    <div class="example flex flex-jc-c dark-mode">
+                        <a href="" class="btn btn-secondary btn-sm dark-mode">small + secondary</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-secondary btn-sm&quot;&gt;Button&lt;&#x2F;a&gt;</pre>
+                    <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Use within components to save space and reduce visual emphasis.</li>
+                            <li>Example: Action buttons under headings, cards, banners etc.</li>
+                                                </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Tertiary buttons</h4>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-tertiary">Tertiary</a>
+                        <a href="" class="btn btn-tertiary btn-icon--external">External</a>
+
+
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary&quot;&gt;Button&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-icon--external&quot;&gt;External&lt;&#x2F;a&gt;</pre>
+                    <div class="example flex flex-jc-c dark-mode">
+                        <a href="" class="btn btn-tertiary dark-mode">Tertiary</a>
+                        <a href="" class="btn btn-tertiary btn-icon--external dark-mode">External</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary dark-mode&quot;&gt;Button&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-icon--external&quot;&gt;External&lt;&#x2F;a&gt;</pre>
+                    <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Use for actions needing the least emphasis, making them available without distracting from primary or secondary actions.</li>
+                            <li>Example: Support actions that provide additional options or information.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Small, tertiary buttons</h4>
+                    <div class="example flex flex-jc-c">
+                        <div class="flex flex-jc-c pb-2" style="width: 100%;"><a href="" class="btn btn-tertiary btn-sm">Default</a></div>
+                        <a href="" class="btn btn-tertiary btn-icon--map btn-sm">Map</a>
+                        <a href="" class="btn btn-tertiary btn-icon--pdf btn-sm">PDF</a>
+                        <a href="" class="btn btn-tertiary btn-icon--image btn-sm">Image</a>
+                        <a href="" class="btn btn-tertiary btn-icon--schedules btn-sm">Schedules</a>
+                        <a href="" class="btn btn-tertiary btn-icon--download btn-sm">Download</a>
+                        <a href="" class="btn btn-tertiary btn-icon--email btn-sm">Email</a>
+                        <a href="" class="btn btn-tertiary btn-icon--tty btn-sm">TTY</a>
+                        <a href="" class="btn btn-tertiary btn-icon--phone btn-sm">Phone</a>
+                        <a href="" class="btn btn-tertiary btn-icon--external btn-sm">External</a>
+                        <a href="" class="btn btn-tertiary btn-icon--load-more btn-sm">Load more</a>
+                        <a href="" class="btn btn-tertiary btn-icon--load-less btn-sm">Load less</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm&quot;&gt;Button&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--map&quot;&gt;Map&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--pdf&quot;&gt;PDF&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--image&quot;&gt;Image&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--schedules&quot;&gt;Schedules&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--download&quot;&gt;Download&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--email&quot;&gt;Email&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--tty&quot;&gt;TTY&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--phone&quot;&gt;Phone&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--external&quot;&gt;External&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--load-more&quot;&gt;Load more&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm btn-icon--load-less&quot;&gt;Load less&lt;&#x2F;a&gt;</pre>
+                    <div>
+                    <div class="example flex flex-jc-c dark-mode">
+                        <a href="" class="btn btn-tertiary btn-sm dark-mode">Default</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-tertiary btn-sm&quot;&gt;Button&lt;&#x2F;a&gt;</pre>
+                    <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Use within components to save space and reduce visual emphasis.</li>
+                            <li>Use where smaller, less intrusive buttons are needed to maintain a clean layout.</li>
+                            <li>Resource Buttons: Use as resource links or actions requiring minimal emphasis and space.</li>
+                            <li>Within Components: Use for less critical actions within components.</li>
+                                                </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Text buttons</h4>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-text">Text button</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-text&quot;&gt;Button&lt;&#x2F;a&gt;</pre>
+                    <div class="example flex flex-jc-c dark-mode">
+                        <a href="" class="btn btn-text dark-mode">Text button</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-text&quot;&gt;Button&lt;&#x2F;a&gt;</pre>
+                    <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Under, beside headings </li>
+                            <li>example “view all news”, “explore more blogs”</li>
+                                                                        </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Elevated buttons</h4>
+                    <div class="example flex flex-jc-c">
+                        <div class="flex flex-jc-c pb-2" style="width: 100%;"><a href="" class="btn btn-elevated">Elevated</a></div>
+                        <a href="" class="btn btn-elevated">Default</a>
+                        <a href="" class="btn back-to-top-btn">Back to top</a>
+                        <a href="" class="btn search-btn">Search</a>
+                    </div>
+<pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-elevated&quot;&gt;Default&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn back-to-top-btn&quot;&gt;Back to top&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn search-btn&quot;&gt;Search&lt;&#x2F;a&gt;
+</pre>
+                    <div class="example flex flex-jc-c">
+                        <div class="flex flex-jc-c pb-2" style="width: 100%;" ><a href="" class="btn btn-elevated btn-icon-only"><span class="visuallyhidden">Go</span></a></div>
+                        <a href="" class="btn btn-elevated btn-icon-only"><span class="visuallyhidden">Go</span></a>
+                        <a href="" class="btn search-btn btn-icon-only"><span class="visuallyhidden">Search</span></a>
+                        <a href="" class="btn prev-btn btn-icon-only"><span class="visuallyhidden">Previous</span></a>
+                        <a href="" class="btn next-btn btn-icon--next btn-icon-only"><span class="visuallyhidden">Next</span></a>
+                    </div>
+<pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-elevated btn-icon-only&quot;&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Go&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn search-btn btn-icon-only&quot;&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Search&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn prev-btn btn-icon-only&quot;&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Previous&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn next-btn btn-icon--next btn-icon-only&quot;&gt;&lt;span class&#x3D;&quot;visuallyhidden&quot;&gt;Next&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+</pre>
+                    <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Back to Top Buttons: Return users to the top of a page, often fixed in position.</li>
+                            <li>Slide Carousel Controls: Navigate carousel slides left or right.</li>
+                            <li>Search Buttons: Initiate a search action, typically in search bars or navigation menus.</li>
+                            <li>Component Navigation (Tab Left/Right): Navigate between tabs or sections within a component.</li>
+                                                                        </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Line & route buttons</h4>
+                    <div class="example flex flex-jc-c">
+                            <a href="" class="btn btn-leading-icon btn-line1">Line 1</a>
+                            <a href="" class="btn btn-leading-icon btn-line2">Line 2</a>
+                            <a href="" class="btn btn-leading-icon btn-line3">Line 3</a>
+                            <a href="" class="btn btn-leading-icon btn-line4">Line 4</a>
+                            <a href="" class="btn btn-leading-icon btn-frequent">Frqnt</a>
+                            <a href="" class="btn btn-leading-icon btn-connexion">Cnnxn</a>
+                            <a href="" class="btn btn-leading-icon btn-local">Local</a>
+                    </div>
+<pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon btn-line1&quot;&gt;Line 1&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon btn-line2&quot;&gt;Line 2&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon btn-line3&quot;&gt;Line 3&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon btn-line4&quot;&gt;Line 4&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon btn-frequent&quot;&gt;Frqnt&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon btn-connexion&quot;&gt;Cnnxn&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon btn-local&quot;&gt;Local&lt;&#x2F;a&gt;
+</pre>
+                    <div class="example flex flex-jc-c dark-mode">
+                            <a href="" class="btn btn-leading-icon dark-mode btn-line1">Line 1</a>
+                            <a href="" class="btn btn-leading-icon dark-mode btn-line2">Line 2</a>
+                            <a href="" class="btn btn-leading-icon dark-mode btn-line3">Line 3</a>
+                            <a href="" class="btn btn-leading-icon dark-mode btn-line4">Line 4</a>
+                            <a href="" class="btn btn-leading-icon dark-mode btn-frequent">Frqnt</a>
+                            <a href="" class="btn btn-leading-icon dark-mode btn-connexion">Cnnxn</a>
+                            <a href="" class="btn btn-leading-icon dark-mode btn-local">Local</a>
+                    </div>
+<pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon dark-mode btn-line1&quot;&gt;Line 1&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon dark-mode btn-line2&quot;&gt;Line 2&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon dark-mode btn-line3&quot;&gt;Line 3&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon dark-mode btn-line4&quot;&gt;Line 4&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon dark-mode btn-frequent&quot;&gt;Frqnt&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon dark-mode btn-connexion&quot;&gt;Cnnxn&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-leading-icon dark-mode btn-local&quot;&gt;Local&lt;&#x2F;a&gt;
+</pre>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-line1">Line 1</a>
+                        <a href="" class="btn btn-line2">Line 2</a>
+                        <a href="" class="btn btn-line3">Line 3</a>
+                        <a href="" class="btn btn-line4">Line 4</a>
+                        <a href="" class="btn btn-frequent">Frqnt</a>
+                        <a href="" class="btn btn-connexion">Cnnxn</a>
+                        <a href="" class="btn btn-local">Local</a>
+                    </div>
+<pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-line1&quot;&gt;Line 1&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-line2&quot;&gt;Line 2&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-line3&quot;&gt;Line 3&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-line4&quot;&gt;Line 4&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-frequent&quot;&gt;Frqnt&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-connexion&quot;&gt;Cnnxn&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-local&quot;&gt;Local&lt;&#x2F;a&gt;
+</pre>
+                    <div class="example flex flex-jc-c dark-mode">
+                        <a href="" class="btn dark-mode btn-line1">Line 1</a>
+                        <a href="" class="btn dark-mode btn-line2">Line 2</a>
+                        <a href="" class="btn dark-mode btn-line3">Line 3</a>
+                        <a href="" class="btn dark-mode btn-line4">Line 4</a>
+                        <a href="" class="btn dark-mode btn-frequent">Frqnt</a>
+                        <a href="" class="btn dark-mode btn-connexion">Cnnxn</a>
+                        <a href="" class="btn dark-mode btn-local">Local</a>
+                    </div>
+<pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn dark-mode btn-line1&quot;&gt;Line 1&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn dark-mode btn-line2&quot;&gt;Line 2&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn dark-mode btn-line3&quot;&gt;Line 3&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn dark-mode btn-line4&quot;&gt;Line 4&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn dark-mode btn-frequent&quot;&gt;Frqnt&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn dark-mode btn-connexion&quot;&gt;Cnnxn&lt;&#x2F;a&gt;
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn dark-mode btn-local&quot;&gt;Local&lt;&#x2F;a&gt;
+</pre>
+                    <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Route-Specific Actions: Use buttons with specific colors for actions or information related to the route or line.</li>
+                            <li>Example: Learn more about Line 1, view Line 2 stations.</li>
+                        </ul>
+                        <strong>
+                            <p>When NOT to use:</p>
+                        </strong>
+                        <ul class="checklist checklist--x">
+                            <li>Avoid using these buttons for unrelated actions or information.</li>
+                            <li>Example: Do not use Line 1 color for Line 2 information or actions.</li>
+                            <li>Avoid using as generic download or learn more buttons.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>O-Train Extension button</h4>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-extension">O-Train Extension</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-extension&quot;&gt;O-Train Extension&lt;&#x2F;a&gt;.</pre>
+                    <div>
+                    <div class="example dark-mode flex flex-jc-c">
+                        <a href="" class="btn btn-extension dark-mode">O-Train Extension</a>
+
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-extension dark-mode&quot;&gt;O-Train Extension&lt;&#x2F;a&gt;.</pre>
+                        <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Use for actions related to O-Train extension.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Line 2 & 4 Launch</h4>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-line2-4">Line 2 & 4</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-line2-4&quot;&gt;Line 2 & 4&lt;&#x2F;a&gt;.</pre>
+                    <div>
+                    <div class="example dark-mode flex flex-jc-c">
+                        <a href="" class="btn btn-line2-4 dark-mode">Line 2 & 4</a>
+
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-line2-4 dark-mode&quot;&gt;Line 2 & 4&lt;&#x2F;a&gt;.</pre>
+                        <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Use for actions related to the launch of Line 2 & 4.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h4>Line 1 & 3 Launch</h4>
+                    <div class="example flex flex-jc-c">
+                        <a href="" class="btn btn-line1-3">Line 1 & 3</a>
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-line1-3&quot;&gt;Line 1 & 3&lt;&#x2F;a&gt;.</pre>
+                    <div>
+                    <div class="example dark-mode flex flex-jc-c">
+                        <a href="" class="btn btn-line1-3 dark-mode">Line 1 & 3</a>
+
+                    </div>
+                    <pre>
+&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;btn btn-line1-3 dark-mode&quot;&gt;Line 1 & 3&lt;&#x2F;a&gt;.</pre>
+                        <div>
+                        <strong>
+                            <p>When to use:</p>
+                        </strong>
+                        <ul class="checklist">
+                            <li>Use for actions related to the launch of Line 2 & 4.</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="sub-section">
+                <h3>Specs & interactive states</h3>
+                <section>
+                    <h4>Button specs (default)</h4>
+                    <div class="example flex flex-ai-c flex-dir-col">
+                        <a href="" class="btn">Default</a>
+                    </div>
+                    <img src="https://www.octranspo.com/images/files/styleguide2024/component_specs-buton-size.png" alt="">
+                </section>
+                <section>
+                    <h4>Small button specs <span class="code">.btn-sm applied</span></h4>
+                    <div class="example flex flex-ai-c flex-dir-col">
+                        <a href="" class="btn btn-sm">Small</a>
+                    </div>
+                    <img src="https://www.octranspo.com/images/files/styleguide2024/component_specs-sm-buton-size.png" alt="">
+                </section>
+                <p>More specs to be added later</p>
 
             </section>
         </section>
@@ -970,6 +2403,841 @@
                 </div>
             </section>
         </section>
+
+       <!-- Tables -->
+       <section class="section" id="style-guide-tables">
+        <h2>Tables</h2>
+        <strong>
+            <p>How to use these components</p>
+        </strong>
+        <p>Add the following style sheets to the top your content</p>
+        <p class="code note">&lt;link rel&#x3D;&quot;stylesheet&quot;
+            href&#x3D;&quot;https:&#x2F;&#x2F;www.octranspo.com&#x2F;images&#x2F;files&#x2F;dist&#x2F;_tables.css&quot;
+            &#x2F;&gt; </p>
+        <h3>Table guide</h3>
+<ul>
+<li>th text should be left aligned (this is the default setting)</li>
+<li>For tables with 3 or more columns, wrap table in div with class="table-container" to have scrollable x-overflow</li>
+<li>Table captions should be filled out</li>
+</ul>
+        <h3>Specific tables</h3>
+        <section class="sub-section">
+            <h4>Station stops & services table</h4>
+            <div class="example">
+                <table class="station-table">
+                    <thead>
+                        <tr>
+                            <th>Bayview A</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="rt rt-11">11</span> Bayshore [BLU]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="rt rt-12">12</span> Tunney's Pasture [BLU]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="rt rt-13">13</span> Tunney's Pasture [GOW]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="rt rt-N57">N57</span> Bayshore [BOW]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="rt rt-N61">N61</span> Stittsville [BOW]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="rt rt-N75">N75</span> Barrhaven Centre [BOW]
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <pre>
+&lt;table class&#x3D;&quot;station-table&quot;&gt;
+&lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Bayview A&lt;&#x2F;th&gt;
+    &lt;&#x2F;tr&gt;
+&lt;&#x2F;thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;span class&#x3D;&quot;rt rt-11&quot;&gt;11&lt;&#x2F;span&gt; Bayshore [BLU]
+        &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;</pre>
+        </section>
+        <section class="sub-section">
+
+                <h4>Transcript tables</h4>
+                <p><strong>Features</strong></p>
+                <ul>
+                    <li>Collapses to one column in mobile screen sizes</li>
+                    <li>Wraps the text descriptions (third column) in square brackets"[" & "]"</li>
+                </ul>
+                <div class="example">
+                    <table class="transcript-table">
+                        <caption>[enter table caption here]</caption>
+                        <thead class="visually-hidden-for-mobile">
+                            <tr>
+                                <th>Time</th>
+                                <th>Transcript</th>
+                                <th>Text description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00:01</td>
+                                <td>Lorem ipsum</td>
+                                <td>OC Transpo and Para Transpo Log on screen</td>
+                            </tr>
+                            <tr>
+                                <td>03:00</td>
+                                <td>An even better Para Transpo is here.</td>
+                                <td>A bus is driving down the street.</td>
+                            </tr>
+                            <tr>
+                                <td>06:07</td>
+                                <td>OC Transpo introduces: “My Para Transpo”</td>
+                                <td>A hand with a mobile phone is displayed with the My Para Transpo application
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre>
+&lt;table class&#x3D;&quot;transcript-table&quot;&gt;
+&lt;caption&gt;[enter table caption here]&lt;&#x2F;caption&gt;
+&lt;thead class&#x3D;&quot;visually-hidden-for-mobile&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Time&lt;&#x2F;th&gt;
+        &lt;th&gt;Transcript&lt;&#x2F;th&gt;
+        &lt;th&gt;Text description&lt;&#x2F;th&gt;
+    &lt;&#x2F;tr&gt;
+&lt;&#x2F;thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;00:01&lt;&#x2F;td&gt;
+        &lt;td&gt;Lorem ipsum&lt;&#x2F;td&gt;
+        &lt;td&gt;OC Transpo and Para Transpo Log on screen&lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;
+</pre>
+        </section>
+        <section class="sub-section">
+            <h4>Fares table</h4>
+        <div class="example flex flex-dir-col flex-ai-c">
+            
+            <p>Example: Fare pricing table</p>
+            <table class="fares-table">
+                <thead>
+                    <tr>
+                        <th>Eligible Groups</th>
+                    <th>Per-ride fare</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td>Persons who are blind or partially sighted</td>
+                        <td>
+                            <p class="tag tag-type__success">Free</p>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Children under 12</td>
+                        <td>
+                            <p class="tag tag-type__success">Free</p>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Seniors, 65+</td>
+                        <td>$2.90</td>
+                    </tr>
+                    <tr>
+                        <td>Equipass (Low income)</td>
+                        <td>$1.75</td>
+                    </tr>
+                    <tr>
+                        <td>Community (Persons receiving ODSP benefits)</td>
+                        <td>$1.75</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <pre>
+&lt;table class&#x3D;&quot;fares-table&quot;&gt;
+&lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Eligible Groups&lt;&#x2F;th&gt;
+    &lt;th&gt;Per-ride fare&lt;&#x2F;th&gt;
+&lt;&#x2F;tr&gt;
+&lt;&#x2F;thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Persons who are blind or partially sighted&lt;&#x2F;td&gt;
+        &lt;td&gt;
+            &lt;p class&#x3D;&quot;tag tag-type__success&quot;&gt;Free&lt;&#x2F;p&gt;
+        &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;
+        </pre>
+        </section>
+        <section class="sub-section">
+            <h4>Hours of operation table</h4>
+            <div class="example flex flex-dir-col flex-ai-c">
+                  <table class="hours-table">
+                    <tbody>
+                        <tr>
+                            <td>Monday to Friday</td>
+                            <td>7 am - 9 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8 am - 9 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>9 am - 5 pm</td>
+                        </tr>
+                    </tbody>
+                  </table>
+
+
+            </div>
+            <pre>
+&lt;table class&#x3D;&quot;hours-table&quot;&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Monday to Friday&lt;&#x2F;td&gt;
+        &lt;td&gt;7 am - 9 pm&lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Saturday&lt;&#x2F;td&gt;
+        &lt;td&gt;8 am - 9 pm&lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Sunday&lt;&#x2F;td&gt;
+        &lt;td&gt;9 am - 5 pm&lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;
+</pre>
+        </section>
+        <section class="sub-section">
+            <h3>Table behaviours</h3>
+            <section>
+                <h4>Horizontally scrolling tables</h4>
+                <div class="example">
+                    <div class="overflow-x-container">
+                        <table class="light">
+                            <thead>
+                                <tr>
+                                    <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                    </td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                    </td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                    </td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                    </td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <pre>
+&lt;div class&#x3D;&quot;overflow-x-container&quot;&gt;
+    &lt;table&gt;
+        ...
+    &lt;&#x2F;table&gt;
+&lt;&#x2F;div&gt;
+                </pre>
+            </section>
+            <section>
+                <h4>Fluid tables (auto width columns)</h4>
+                <div class="example">    
+                    <table class="fluid">
+                        <thead class="visually-hidden-for-mobile">
+                            <tr>
+                                <th>Project</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Project title
+                                </th>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                                </td>
+                                <td>
+                                    <p class="tag tag-type__info">In&nbsp;progess</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>      
+                </div>
+                <pre>
+&lt;table class&#x3D;&quot;fluid&quot;&gt;
+    ...
+&lt;&#x2F;table&gt;
+                </pre>
+            </section>
+            <section>
+                <h4>Collapsing (collapse to one column in mobile view)</h4>
+                <div class="example">
+                    <table class="table__behaviour--collapse">
+                        <thead class="">
+                            <tr>
+                                <th>Project</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <!-- <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Project title
+                                
+                                </td><td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                                </td>
+                                <td>
+                                    <p class="tag tag-type__info">In&nbsp;progess</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <pre>
+&lt;table class&#x3D;&quot;table__behaviour--collapse&quot;&gt;
+    ...
+&lt;&#x2F;table&gt;
+                </pre>
+            </section>
+            <section>
+                <h4>Sticky column + horizontally scrolling table</h4>
+                <p>
+                    At small screens only: Sticky left Header column and autoflow-x
+                </p>
+                <ul class="checklist">
+                    <li>Horizontal scroll at mobile screens</li>
+                    <li>Sticky left Header column</li>
+                </ul>
+                <div class="example">
+                    <div class="overflow-x-container">
+                        <table class="sticky-table">
+                            <thead class="empty-corner">
+                                <tr>
+                                    <th>
+                                    </th>
+                                    <th>
+                                        Header&nbsp;1
+                                    </th>
+                                    <th>
+                                        Header&nbsp;2
+                                    </th>
+                                    <th>
+                                        Header&nbsp;3
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <div>Header</div>
+                                    </th>
+                                    <td>cell content</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quia sunt quisquam
+                                        provident consequuntur porro fuga cupiditate, eligendi cumque ipsa, asperiores
+                                        dignissimos quam minima omnis animi. Iusto, voluptatibus cumque. Id.</td>
+                                    <td>cell content</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div>Header</div>
+                                    </th>
+                                    <td>cell content</td>
+                                    <td>
+                                        <p>
+                                            Lorem ipsum dolor sit, amet consectetur
+                                            adipisicing elit. Vitae dolorem soluta
+                                            aliquid est alias atque architecto,
+                                            rerum optio quibusdam eaque.
+                                        </p>
+                                    </td>
+                                    <td>cell content</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div>Header</div>
+                                    </th>
+                                    <td>cell content</td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae qui placeat sequi in
+                                        magnam quo.
+                                    </td>
+                                    <td>cell content lorem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h3>Utility classes</h3>
+            <p class="code">.dark</p>
+            <p>Applies a dark background to thead</p>
+            <div class="example flex flex-jc-c">
+                <div>
+                    <table class="dark">
+                        <thead>
+                            <tr>
+                              <th>Title</th>
+                              <th>Title</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lorem ipsum</td>
+                                <td>123</td>
+                            </tr>
+                            
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <pre>
+&lt;table class&#x3D;&quot;dark&quot;&gt;</pre>
+<p class="code">.transparent</p>
+<p>Applies a transparent background to thead</p>
+<div class="example flex flex-jc-c">
+    <div>
+        <table class="transparent">
+            <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Title</th>
+                </tr>
+              </thead>
+            <tbody>
+                <tr>
+                    <td>Lorem ipsum</td>
+                    <td>123</td>
+                </tr>
+                
+            </tbody>
+          </table>
+    </div>
+</div>
+<pre>
+&lt;table class&#x3D;&quot;transparent&quot;&gt;</pre>
+<p class="code">.small-table</p>
+<p>Reduces table font size from 1rem -> 0.875 rem (14 px)</p>
+<p>Reduces padding around cells</p>
+            <div class="example flex flex-jc-c">
+                <div>
+                    <table class="small-table">
+                        <thead>
+                            <tr>
+                              <th>Title</th>
+                              <th>Title</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lorem ipsum</td>
+                                <td>123</td>
+                            </tr>
+                            
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <pre>
+&lt;table class&#x3D;&quot;small-table&quot;&gt;</pre>
+            <p class="code">.width-to-fit</p>
+            <p>Shrink table width to fit to contents</p>
+            <div class="example flex flex-jc-c">
+                <div>
+                    <table class="width-to-fit">
+                        <thead>
+                            <tr>
+                              <th>Title</th>
+                              <th>Title</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lorem ipsum</td>
+                                <td>123</td>
+                            </tr>
+                            
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <pre>
+&lt;table class&#x3D;&quot;width-to-fit&quot;&gt;</pre>
+            <p class="code">.bordered</p>
+            <p>apply a border around the table</p>
+            <div class="example">
+                <div>
+                    <table class="bordered">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <pre>
+&lt;table class&#x3D;&quot;bordered&quot;&gt;</pre>
+<p class="code">.extra-padding</p>
+<p>increase the padding around contents of the cells</p>
+            <div class="example">
+                <table class="extra-padding">
+                    <thead>
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                            </td>
+                            <td>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, ex.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <pre>
+&lt;table class&#x3D;&quot;extra-padding&quot;&gt;</pre>
+<p class="code">.wide</p>
+            <div class="example">    
+                <p>Apply <span class="code">.wide</span> to &lt;th&gt; to make column widths wider for text heavy cells to be more readable at smaller viewport widths</p>
+                <div class="overflow-x-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Normal</th>
+                                <th class="wide">Wide applied</th>
+                                <th>Normal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet</td>
+                                <td>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id vero qui illo? Est dolore minus eligendi quia illo numquam, aspernatur aperiam quo ipsa ullam repellendus id. Officiis accusamus doloremque odio.
+                                    Maiores aliquam distinctio unde consectetur tempora provident exercitationem, hic doloribus architecto deserunt quis nobis! Dolore aliquid, rem quasi eligendi tempore deleniti quas delectus repellendus quibusdam culpa exercitationem, ipsa perspiciatis voluptas.
+                                </td>
+                                <td>Lorem ipsum dolor sit amet</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <pre>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Normal&lt;&#x2F;th&gt;
+            &lt;th class&#x3D;&quot;wide&quot;&gt;Wide applied&lt;&#x2F;th&gt;
+            &lt;th&gt;Normal&lt;&#x2F;th&gt;
+        &lt;&#x2F;tr&gt;
+    &lt;&#x2F;thead&gt;
+    &lt;tbody&gt;
+    ...
+    &lt;&#x2F;tbody&gt;
+&lt;&#x2F;table&gt;
+            </pre>
+            <div class="example">
+                <p class="code">.fluid</p>
+                <p>Auto adjust column with to the contents of the cells</p>
+                <table class="fluid">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Project title
+                            
+                            </td><td>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                            </td>
+                            <td>
+                                <p class="tag tag-type__info">In&nbsp;progess</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <pre>
+&lt;table class&#x3D;&quot;fluid&quot;&gt;</pre>
+        </section>
+        <section>
+            <h3>Pre-built tables</h3>
+            <p>Examples of combing different table utility classes and behaviour classes</p>
+            <section>
+                <h4>Service types table</h4>
+                <p class="code">.table__behaviour--collapse + .fluid + .bordered</p>
+                <div class="example">
+                    <table class="table__behaviour--collapse fluid bordered" summary="Transit network service types with colours and symbols">
+                        <thead>
+                            <tr>
+                                <th>Colours &amp; Symbols</th>
+                                <th>Service Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="https://www.octranspo.com/images/files/icons/line_1.svg " alt="">
+                                    <img src="https://www.octranspo.com/images/files/icons/line_2.svg " alt="">
+                                    <img src="https://www.octranspo.com/images/files/icons/line_4.svg " alt="">
+                                </td>
+                                <td><strong>O-Train</strong>
+                                <p>Quick, frequent station-to-station train service on dedicated rail lines with no level crossings</p>
+                                </td>
+                
+                            </tr>
+                            <tr>
+                                <td>
+                                <p><img alt="Route icons for Rapid service" src="https://www.octranspo.com/images/files/icons/route_rapid.svg" title="Route icons for Rapid service"></p>
+                                </td>
+                                <td><strong><a href="#Rapid" title="Read more about Rapid service">Rapid</a></strong><ul>
+                                    <li>Quick, station-to-station bus service along the Transitway or highway</li>
+                                    <li>Operates 7 days a week</li>
+                                </ul></td>
+                
+                            </tr>
+                            <tr>
+                                <td>
+                                <p><img class="sm-icon" alt="Route icons for Night service" src="https://www.octranspo.com/images/files/icons/route_night.svg" title="Route icon for Night service" width="53px;"></p>
+                                </td>
+                                <td><strong><a href="https://www.octranspo.com/en/our-services/bus-o-train-network/service-types/night-service">Night</a></strong><ul>
+                                    <li>Overnight, station-to-station bus service when Line 1 closes for the day</li>
+                                    <li>Operates 7 days a week</li>
+                                </ul></td>
+                
+                            </tr>
+                            <tr>
+                                <td>
+                                <p>
+                                    <img alt="Route icons for Frequent service" id="frequentIcon" src="https://www.octranspo.com/images/files/icons/route_frequent.svg" title="Route icons for Frequent service">
+                                    <img alt="Route icons for Frequent service" id="frequentIcon" src="https://www.octranspo.com/images/files/icons/route_frequent-ltd.svg" title="Route icons for Frequent service">
+                                </p>
+                                </td>
+                                <td><strong><a href="#Frequent" title="Read more about Frequent service">Frequent</a></strong>
+                                    <ul>
+                                        <li>Service every 15 minutes or less from 6 am to 6 pm on weekdays</li>
+                                        <li>Operates 7 days a week along main roads</li>
+                                    </ul></td>
+                
+                            </tr>
+                            <tr>
+                                <td>
+                                <p><img alt="Route icons for Connexion service" id="connexionIcon" src="https://www.octranspo.com/images/files/icons/route_connexion.svg" title="Route icons for Connexion service"></p>
+                                </td>
+                                <td><strong><a href="#Connexion" title="Read more about Connexion service">Connexion</a></strong>
+                                    <ul>
+                                        <li>Quick, convenient connection from home to Line 1</li>
+                                        <li>Operates weekday rush-hours only, both in the morning and returning home in the afternoon</li>
+                                    </ul></td>
+                
+                            </tr>
+                            <tr>
+                
+                                <td>
+                                <p><img alt="Route icons for Local service" id="localIcon" src="https://www.octranspo.com/images/files/icons/route_local.svg"></p>
+                                </td>
+                                <td><strong><a href="#Local" title="Read more about Local service">Local</a></strong>
+                                    <ul>
+                                        <li>Custom routing to local destinations</li>
+                                    </ul></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><span class="rt rt-type--local_l">600s<span class="visuallyhidden">Limited Local Route</span></span></p>
+                                </td>
+                                <td><strong><a href="https://www.octranspo.com/en/plan-your-trip/ottawa-destinations/high-schools-middle-schools/">School</a></strong><ul>
+                                    <li>Custom service from home to school</li>
+                                    <li>No service on school holidays</li>
+                                </ul></td>
+                
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><span class="rt rt-type--local_l">300s<span class="visuallyhidden"> Route icons for Shopper service</span></span>
+                                </p></td>
+                                <td><strong><a href="https://www.octranspo.com/en/our-services/bus-o-train-network/service-types/shopper-routes">Shopper</a></strong><ul>
+                                    <li>Free weekly trips to and from the mall for rural Ottawa communities</li>
+                                </ul></td>
+                
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><span class="rt rt-type--local_l">400s<span class="visuallyhidden"> Route icons for Event service</span></span>
+                                </p></td>
+                                <td><strong>Event</strong>
+                                    <ul>
+                                        <li>Direct route to events at <a href="https://www.octranspo.com/ottawa-destinations/td-place">Lansdowne</a>&nbsp;or the <a href="https://www.octranspo.com/en/ottawa-destinations/canadian-tire-centre">Canadian Tire Centre</a></li>
+                                    </ul></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="https://www.octranspo.com/images/files/icons/line_R1.svg " alt="">
+                                    <img src="https://www.octranspo.com/images/files/icons/line_R2.svg " alt="">
+                                    <img src="https://www.octranspo.com/images/files/icons/line_R4.svg " alt="">
+                                <p></p>
+                                <!--<p><img alt="Route icons for R2 service" id="r2Icon" src="https://www.octranspo.com/images/files/service_type_symbols/r2.png" title="Route icons for R2 service" /></p>-->
+                            </td>
+                                <td><strong>Replacement bus service</strong>
+                                    <ul>
+                                        <li>May be deployed when the O-Train is not running during regular service hours</li>
+                                        <li>Serves all O-Train stations on the line&nbsp;and only makes limited stops along the way</li>
+                                        <li>If an O-Train line&nbsp;is partially closed, may run only along the closed portion</li>
+                                    </ul>
+                                </td>
+                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <h4>Status table</h4>
+                <p class="code">.fluid + .table__behaviour--collapse + .extra-padding</p>
+                <div class="example">
+                    <table class="fluid table__behaviour--collapse extra-padding">
+                        <thead class="visually-hidden-for-mobile">
+                            <tr>
+                                <th>Project</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <!-- <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Project title
+                
+                                </td><td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                                </td>
+                                <td>
+                                    <p class="tag tag-type__info">In&nbsp;progess</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Project title
+                
+                                </td><td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                                </td>
+                                <td>
+                                    <p class="tag tag-type__success">Complete</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Project title
+                
+                                </td><td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                                </td>
+                                <td>
+                                    <p class="tag tag-type__warning">Paused</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Project title
+                
+                                </td><td>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni laboriosam quae quos, omnis quam saepe autem officiis nisi quasi? Quo, aut eius soluta necessitatibus modi id perferendis repellat nostrum.
+                                </td>
+                                <td>
+                                    <p class="tag tag-type__critical">Cancelled</p>
+                                </td>
+                            </tr>
+                
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </section>
 
 
     </div>
