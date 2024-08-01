@@ -1,12 +1,71 @@
+/* Banner styles start */
+/*Last updated: 2024/08/01*/
+//reviewed
+
+// reset from OC styles
+.banner__title, .banner__body {
+    margin: 0;
+}
+
+
+
+//not reviewed
+.icon-banner{
+    .banner__logo{
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 2.5rem;
+        border-radius: $radius-sm;
+        overflow: hidden;
+    }
+
+    .banner__content{
+        width: 100%;
+    }
+}
+
+.banner.img-banner{
+    display: flex;
+    padding: 0rem;
+    .banner__content{
+        padding: 1rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        .banner__body{
+            flex-grow: 1;
+            @include media-breakpoint-down(sm) {
+                font-size: $ui-body-size-sm;
+            }
+            
+        }
+
+    }
+    .banner__img{
+        min-width: 160px;
+        width: 160px;
+        @include media-breakpoint-down(sm) {
+            min-width: 130px;
+            width: 130px;
+        }
+    }
+}
+
+.banner__img > img{
+    height: 100%;
+    object-fit: cover
+}
 
 .banner {
-	border: 1px solid var(--gray--100);
-	padding: 1.5rem 1rem;
+	padding: 1rem;
 	gap: 1rem;
     position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
     margin: 1rem 0;
+    background-color: white;
+    box-shadow: $banner-shadow;
 
     &::before{
         content: "";
@@ -52,20 +111,34 @@
 
     &__content {
         width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
         @include media-breakpoint-up(md) {
             width: 75%;
             }
         }
-	
+	&__btns {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    
 
 	&__title {
-        font-size: 1.5rem;
+        font-size: $ui-title-size-md;
         color: var(--charcoal--800);
-		font-weight: 700;
+		font-weight: $ui-title-font-weight;
         line-height: 1.15;
+        margin-bottom: 1rem;
+        padding-right: 36px;
 	}
 	&__body {
         margin-bottom: 1.5rem;
+        color: var(--text-color-light);
+        
 	}
 
     &--key-to-icons{
@@ -115,11 +188,12 @@
         }
 
         .banner__content {
-            width: 80%;
+            width: 100%;
             @include media-breakpoint-up(md) {
-                width: 75%;
+                width: 100%;
                 }
             }
+        
     }
 
     
@@ -131,3 +205,5 @@
     
     }
 }
+
+/* END Banner styles start */

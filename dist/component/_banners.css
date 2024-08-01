@@ -1,0 +1,189 @@
+
+/* Banner styles start */
+/*Last updated: 2024/08/01*/
+.banner__title, .banner__body {
+  margin: 0;
+}
+
+.icon-banner .banner__logo {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.icon-banner .banner__content {
+  width: 100%;
+}
+
+.h-banner.banner, .banner.img-banner {
+  display: flex;
+  padding: 0rem;
+}
+.h-banner.banner .banner__content, .banner.img-banner .banner__content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.h-banner.banner .banner__content .banner__body, .banner.img-banner .banner__content .banner__body {
+  flex-grow: 1;
+}
+@media (max-width: 767.98px) {
+  .h-banner.banner .banner__content .banner__body, .banner.img-banner .banner__content .banner__body {
+    font-size: 0.875rem;
+  }
+}
+.h-banner.banner .banner__img, .banner.img-banner .banner__img {
+  min-width: 160px;
+  width: 160px;
+}
+@media (max-width: 767.98px) {
+  .h-banner.banner .banner__img, .banner.img-banner .banner__img {
+    min-width: 130px;
+    width: 130px;
+  }
+}
+
+.banner__img > img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner {
+  padding: 1rem;
+  gap: 1rem;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1rem 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 8px;
+}
+.banner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+.banner.fullwidth, .banner .stretch {
+  overflow: visible;
+  border: none;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.banner.fullwidth::before, .banner .stretch::before {
+  width: 1000rem;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: -500rem;
+}
+.banner.dark::before {
+  background-color: var(--charcoal--800);
+}
+.banner.dark p.banner__title {
+  color: #fff;
+}
+.banner.dark p.banner__body {
+  color: var(--transparent--800);
+}
+.banner__content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .banner__content {
+    width: 75%;
+  }
+}
+.banner__btns {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.banner__title {
+  font-size: 1.125rem;
+  color: var(--charcoal--800);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  padding-right: 36px;
+}
+.banner__body {
+  margin-bottom: 1.5rem;
+  color: var(--text-color-light);
+}
+.banner--key-to-icons {
+  background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_2.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: contain;
+  background-position-x: calc(100% + 20vw);
+}
+@media (min-width: 768px) {
+  .banner--key-to-icons {
+    background-size: contain;
+    background-position-x: calc(100% - 1rem);
+  }
+}
+.banner--transparency {
+  background-image: url("https://www.octranspo.com/images/files/banners/banner_transparency-test.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: contain;
+  background-position-x: calc(100% + 20vw);
+}
+@media (min-width: 768px) {
+  .banner--transparency {
+    background-size: contain;
+    background-position-x: calc(100% - 1rem);
+  }
+}
+.banner--new-ways-to-bus, .banner--nwtb {
+  background-image: url("https://www.octranspo.com/images/files/banners/banner_new-ways-to-bus.svg");
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position-x: 80%;
+  background-position-y: 50%;
+}
+.banner--new-ways-to-bus::before, .banner--nwtb::before {
+  background-color: var(--nwtb--800);
+}
+@media (min-width: 768px) {
+  .banner--new-ways-to-bus, .banner--nwtb {
+    background-size: cover;
+    background-position-x: center;
+  }
+}
+.banner--new-ways-to-bus p, .banner--nwtb p {
+  text-shadow: rgba(0, 0, 0, 0.45) 0px 0px 5px;
+}
+.banner--new-ways-to-bus p.banner__title, .banner--nwtb p.banner__title {
+  color: #fff;
+}
+.banner--new-ways-to-bus p.banner__body, .banner--nwtb p.banner__body {
+  color: var(--transparent--800);
+}
+.banner--new-ways-to-bus .banner__content, .banner--nwtb .banner__content {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .banner--new-ways-to-bus .banner__content, .banner--nwtb .banner__content {
+    width: 100%;
+  }
+}
+.banner--key-to-icons.dark {
+  background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_dark.svg");
+}
+
+/* END Banner styles start */
