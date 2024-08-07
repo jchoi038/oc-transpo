@@ -25,14 +25,19 @@ ul.toc__items {
     }
     &__container{
         width: fit-content;
+
         @media (min-width: 1200px) {
             padding: 1rem;
             padding-top: 0;
-            background-color: white;
+            // background-color: white;
             border-radius: 0.5rem;
         }
     }
     &.sticky{
+        .toc__container{
+            width: fit-content;
+            
+        }
         @include media-breakpoint-up(xl) {
             position: sticky;
             top: 0rem;
@@ -63,8 +68,8 @@ ul.toc__items {
         color: var(--line4--600);
         font-size: 0.875rem;
         // text-decoration: none;
-        @include media-breakpoint-up(xl){
-            text-decoration: none;
+
+        text-decoration: none;
             padding: 0.125rem 0.5rem;
             color: var(--gray--500);
             border-left: 2px solid var(--gray--200);
@@ -72,10 +77,12 @@ ul.toc__items {
             display: flex;
             align-items: center;
             gap: 0.25rem;
-        }
         
         
         &:hover{
+            text-decoration:underline;
+                background-color: var(--line4--50);
+                border-radius: 0 !important;
             @include media-breakpoint-up(xl){
                 text-decoration:underline;
                 background-color: var(--line4--50);
