@@ -1,5 +1,5 @@
 /****table styles ******/
-/** updated on: 2024/07/18 **/
+/** updated on: 2024/07/22 3:56pm**/
 // overiding styles from oc styles
 main thead td, main thead th{
 	box-shadow: none;
@@ -22,7 +22,7 @@ table{
 	width: 100%;
 	height: fit-content;
 	
-	&.width-to-fit, &.sticky-table{
+	&.width-to-fit, &.sticky-table, &.hours-table, &.fares-table{
 		width: auto;
 	}
 
@@ -211,6 +211,16 @@ table.bordered  {
 		}
 	}
 }
+
+table.table__behaviour--collapse.bordered{
+	@include media-breakpoint-down(xs) {
+		tbody {
+			border-left: none;
+			border-right: none;
+		}
+	}
+}
+
 // table alignment
 
 table{
@@ -253,7 +263,7 @@ table{
 
 //station table
 
-table.station-table{
+table.station-table, table.stop-table{
 	border-collapse: separate;
 	border-radius: 0.5rem;
 	overflow: hidden;
@@ -286,7 +296,7 @@ table {
 	}
 	// heading backgrounds
 	thead tr th{
-		background-color: transparent;
+		background-color: var(--gray--100);
 		color: var(--charcoal--800);
 		border: none;
 	}
@@ -295,9 +305,16 @@ table {
 		background-color: white;
 	}
 
-	&.light, &.station-table{
+	&.light, &.station-table, &.transcript-table, &.service-types-table{
 		tr th{
 			background-color: var(--gray--100);
+		}
+	}
+
+	&.transparent{
+		tr th{
+			background-color: transparent;
+			color: var(--charcoal--800);
 		}
 	}
 	&.dark{
@@ -634,6 +651,20 @@ table {
 			flex-direction: column;
 			border-top: none;
 		}
+	}
+
+	thead {
+		@include media-breakpoint-down(xs) {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+    }
 	}
 }
 
