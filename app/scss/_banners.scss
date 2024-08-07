@@ -1,5 +1,5 @@
 /* Banner styles start */
-/*Last updated: 2024/08/07 2:23pm*/
+/*Last updated: 2024/08/07 2:38pm*/
 
 // reset from OC styles
 .banner__title,
@@ -18,11 +18,12 @@
 		}
     }
 }
-.banner .btn{
-    margin-bottom: 0;
-	transition: none;
-}
 
+.banner .btn{
+	margin-bottom: 0;
+	transition: none;
+	transition: background-color 0.1s ease-in-out;
+}
 
 .banner:not(.prevent-default) .btn {
 	@include media-breakpoint-down(xs) {
@@ -33,6 +34,8 @@
 		width: 100%;
 		height: 100%;
 		}
+
+
 }
 
 .banner {
@@ -319,4 +322,4 @@
 	}
 }
 
-/* END Banner styles start */
+/* END Banner styles */

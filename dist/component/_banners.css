@@ -1,6 +1,6 @@
 
 /* Banner styles start */
-/*Last updated: 2024/08/07 2:23pm*/
+/*Last updated: 2024/08/07 2:38pm*/
 .banner__title,
 .banner__body {
   margin: 0;
@@ -19,6 +19,7 @@
 .banner .btn {
   margin-bottom: 0;
   transition: none;
+  transition: background-color 0.1s ease-in-out;
 }
 
 @media (max-width: 575.98px) {
@@ -289,4 +290,4 @@
   background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_dark.svg");
 }
 
-/* END Banner styles start */
+/* END Banner styles */
