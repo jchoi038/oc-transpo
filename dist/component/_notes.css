@@ -1,7 +1,9 @@
-
 /*Note styles*/
-/* updated on 2024/07/18 */
+/* updated on 2024/8/7 */
 /* overriding */
+.note {
+  box-shadow: none;
+}
 .note p.note__title, .note .note__desc {
   margin-top: 0;
 }
@@ -11,13 +13,14 @@
   position: relative;
   padding: 1rem;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-size: 0.875rem;
   align-items: flex-start;
   gap: 0.5rem;
   border-radius: 0.5rem;
   height: -moz-fit-content;
   height: fit-content;
+  display: block;
 }
 .note .note__title {
   flex-grow: 1;
