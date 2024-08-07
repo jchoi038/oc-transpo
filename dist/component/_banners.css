@@ -46,6 +46,9 @@
     box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 15px;
   }
 }
+.banner .rt {
+  text-shadow: none;
+}
 
 .banner {
   padding: 1rem;
