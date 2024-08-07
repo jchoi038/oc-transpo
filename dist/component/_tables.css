@@ -1,6 +1,6 @@
 
 /****table styles ******/
-/** updated on: 2024/07/18 **/
+/** updated on: 2024/07/22 3:56pm**/
 main thead td, main thead th {
   box-shadow: none;
 }
@@ -19,7 +19,7 @@ table {
   height: -moz-fit-content;
   height: fit-content;
 }
-table.width-to-fit, table.sticky-table {
+table.width-to-fit, table.sticky-table, table.hours-table, table.fares-table {
   width: auto;
 }
 @media (max-width: 991.98px) {
@@ -147,6 +147,13 @@ table.bordered thead.empty-corner tr th:last-of-type, table.bordered thead.empty
   border-right: 1px solid var(--border-color);
 }
 
+@media (max-width: 575.98px) {
+  table.table__behaviour--collapse.bordered tbody {
+    border-left: none;
+    border-right: none;
+  }
+}
+
 table tbody tr th {
   align-content: start;
 }
@@ -200,15 +207,19 @@ table.detour-table tr th, table.detour-table thead.blue-header th:nth-child(even
   color: var(--transparent--800);
 }
 table thead tr th {
-  background-color: transparent;
+  background-color: var(--gray--100);
   color: var(--charcoal--800);
   border: none;
 }
 table thead.empty-corner tr th {
   background-color: white;
 }
-table.light tr th, table.station-table tr th {
+table.light tr th, table.station-table tr th, table.transcript-table tr th, table.service-types-table tr th {
   background-color: var(--gray--100);
+}
+table.transparent tr th {
+  background-color: transparent;
+  color: var(--charcoal--800);
 }
 table.dark tr th {
   background-color: var(--charcoal--800);
@@ -445,6 +456,19 @@ table.sticky-table tbody th:first-child {
     display: flex;
     flex-direction: column;
     border-top: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .table__behaviour--collapse thead, .transcript-table thead {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
   }
 }
 
