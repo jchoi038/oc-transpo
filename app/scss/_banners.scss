@@ -1,209 +1,318 @@
 /* Banner styles start */
-/*Last updated: 2024/08/01*/
-//reviewed
+/*Last updated: 2024/08/07 2:23pm*/
 
 // reset from OC styles
-.banner__title, .banner__body {
-    margin: 0;
+.banner__title,
+.banner__body {
+	margin: 0;
+}
+/*reviewed below*/
+
+
+// body (description) padding, margins
+.banner__body{
+    &:not(:last-child){
+        margin-bottom: 2rem;
+        @include media-breakpoint-down(xs) {
+			margin-bottom: 0.5em;
+		}
+    }
+}
+.banner .btn{
+    margin-bottom: 0;
+	transition: none;
 }
 
 
-
-//not reviewed
-.icon-banner{
-    .banner__logo{
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-        width: 2.5rem;
-        border-radius: $radius-sm;
-        overflow: hidden;
-    }
-
-    .banner__content{
-        width: 100%;
-    }
-}
-
-.banner.img-banner{
-    display: flex;
-    padding: 0rem;
-    .banner__content{
-        padding: 1rem;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        .banner__body{
-            flex-grow: 1;
-            @include media-breakpoint-down(sm) {
-                font-size: $ui-body-size-sm;
-            }
-            
-        }
-
-    }
-    .banner__img{
-        min-width: 160px;
-        width: 160px;
-        @include media-breakpoint-down(sm) {
-            min-width: 130px;
-            width: 130px;
-        }
-    }
-}
-
-.banner__img > img{
-    height: 100%;
-    object-fit: cover
+.banner:not(.prevent-default) .btn {
+	@include media-breakpoint-down(xs) {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		}
 }
 
 .banner {
-	padding: 1rem;
+    @include media-breakpoint-up(sm) {
+        min-height: 160px;
+    }
+	
+	@include media-breakpoint-down(xs) {
+		box-shadow: $elevation1;
+		transition: $transition-1;
+        &:hover{
+			box-shadow: $elevation2;
+		}
+    }
+	
+}
+
+//custom image backgrounds
+
+// general
+.banner{
+    padding: 1rem;
+    @include media-breakpoint-down(xs) {
+        padding: 0.75rem;
+    }
 	gap: 1rem;
-    position: relative;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    margin: 1rem 0;
-    background-color: white;
-    box-shadow: $banner-shadow;
+	@include media-breakpoint-down(sm) {
+		gap: 0.25rem;
+	}
+	position: relative;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	margin: 0  0 1rem 0;
+	background-color: white;
+	box-shadow: $banner-shadow;
 
-    &::before{
-        content: "";
-        display: block;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        z-index: -1;
-    }
-    &.fullwidth, .stretch{
-        overflow: visible;
-        border: none;
-        border-radius: 0;
-        padding-left: 0;
-        padding-right: 0;
-        &::before{
-            // position: absolute;
-            // background-color: var(--charcoal--800);
-            width: 1000rem;
-            height: 100%;
-            top:0;
-            bottom: 0;
-            left: -500rem;
-        }
-        
-    }
-
-    &.dark{
-        &::before{
-            background-color: var(--charcoal--800);
-        }
-        p.banner__title {
-            color: #fff;
-        }
-        p.banner__body {
-            color: var(--transparent--800);
-        }
-    }
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: -1;
+	}
+    
+}
 
 
 
-    &__content {
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        
-        @include media-breakpoint-up(md) {
-            width: 75%;
-            }
-        }
+//not reviewed below
+.icon-banner {
+	.banner__logo {
+		position: absolute;
+		top: 0.75rem;
+		right: 0.75rem;
+		width: 2.75rem;
+		border-radius: 0.5rem;
+		overflow: hidden;
+		// box-shadow: $general-shadow1;
+		@include media-breakpoint-down(sm) {
+			width: 2.25rem;
+		}
+	}
+
+	.banner__content {
+		padding-right: 42px;
+	}
+}
+
+.banner.img-banner {
+	display: flex;
+	padding: 0rem;
+	.banner__content {
+		padding: 1rem;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		.banner__body {
+			flex-grow: 1;
+		}
+	}
+	.banner__img {
+		min-width: 160px;
+		width: 160px;
+		@include media-breakpoint-down(xs) {
+			min-width: 130px;
+			width: 130px;
+		}
+	}
+}
+
+.banner__img > img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.banner {
+	
+	&.fullwidth,
+	&.stretch {
+		@include media-breakpoint-up(sm) {
+			overflow: visible;
+			border: none;
+			border-radius: 0;
+			padding-left: 0;
+			padding-right: 0;
+			box-shadow: none;
+			&::before {
+				box-shadow: $banner-shadow;
+				// position: absolute;
+				background-color: inherit;
+				width: 1000rem;
+				height: 100%;
+				top: 0;
+				bottom: 0;
+				left: -500rem;
+			}
+		}
+		
+	}
+
+	&.dark,
+	&.dark-mode {
+		background-color: var(--charcoal--800);
+		p,
+		.btn {
+			text-shadow: $text-shadow;
+
+		}
+		&::before {
+			background-color: var(--charcoal--800);
+		}
+		p.banner__title {
+			color: #fff;
+		}
+		p.banner__body {
+			color: var(--transparent--800);
+            text-shadow: $text-shadow;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
 	&__btns {
-        display: flex;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-    }
-    
-    
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+
+	}
+
+
 
 	&__title {
-        font-size: $ui-title-size-md;
-        color: var(--charcoal--800);
+		font-size: $ui-title-size-md;
+		color: var(--charcoal--800);
 		font-weight: $ui-title-font-weight;
-        line-height: 1.15;
-        margin-bottom: 1rem;
-        padding-right: 36px;
+		line-height: 1.15;
+		margin-bottom: 1em;
+		@include media-breakpoint-down(xs) {
+			font-size: $ui-title-size-xs;
+			margin-bottom: 0.5em;
+            font-weight: 700;
+		}
 	}
 	&__body {
-        margin-bottom: 1.5rem;
-        color: var(--text-color-light);
-        
+		color: var(--text-color-light);
+		@include media-breakpoint-down(xs) {
+			font-size: $ui-body-size-xs;
+		}
 	}
 
-    &--key-to-icons{
-        background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_2.svg");
-        background-repeat: no-repeat;
-        background-position-y: center;
-        background-size: contain;
-        background-position-x: calc(100% + 20vw);
-        @include media-breakpoint-up(md) {
-            background-size: contain;
-            background-position-x: calc(100% - 1rem);
-            }
-        }
-    &--transparency{
-        background-image: url("https://www.octranspo.com/images/files/banners/banner_transparency-test.svg");
-        background-repeat: no-repeat;
-        background-position-y: center;
-        background-size: contain;
-        background-position-x: calc(100% + 20vw);
-        @include media-breakpoint-up(md) {
-            background-size: contain;
-            background-position-x: calc(100% - 1rem);
-            }
-        }
-    &--new-ways-to-bus, &--nwtb{
-        background-image: url("https://www.octranspo.com/images/files/banners/banner_new-ways-to-bus.svg");
-        background-repeat: no-repeat;
-        background-size: 200%;
-        background-position-x: 80%;
-        background-position-y: 50%;
-        &::before{
-            background-color: var(--nwtb--800);
-        }
-        @include media-breakpoint-up(md) {
-            background-size: cover;
-            background-position-x: center;
+}
 
-        }
-        p {
-            text-shadow: $text-shadow;
-        }
-        p.banner__title {
-            color: #fff;
-        }
-        p.banner__body {
-            color: var(--transparent--800);
-        }
+// custom banners
 
-        .banner__content {
-            width: 100%;
-            @include media-breakpoint-up(md) {
-                width: 100%;
-                }
-            }
-        
-    }
-
-    
-
+.banner{
 	
+	&--key-to-icons {
+		background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_2.svg");
+		background-repeat: no-repeat;
+		background-position-y: center;
+		background-size: contain;
+		background-position-x: 100%;
+		p {
+			text-shadow: $text-shadow-white;
+		}
+		@include media-breakpoint-up(xs) {
+			background-size: contain;
+			background-position-x: calc(100% - 1rem);
+		}
+		.banner__content {
+			padding-right: 48px;
+		}
+	}
 
-    &--key-to-icons.dark{
-        background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_dark.svg");
-    
+	&--transparency {
+		background-image: url("https://www.octranspo.com/images/files/banners/banner_transparency-test.svg");
+		background-repeat: no-repeat;
+		background-position-y: center;
+		background-size: contain;
+		background-position-x: calc(100% + 20vw);
+		@include media-breakpoint-up(md) {
+			background-size: contain;
+			background-position-x: calc(100% - 1rem);
+		}
+	}
+
+	&--new-ways-to-bus,
+	&--nwtb {
+		background-image: url("https://www.octranspo.com/images/files/banners/banner_new-ways-to-bus.svg");
+		background-repeat: no-repeat;
+        background-size: cover;
+		background-position-x: 80%;
+		background-position-y: 50%;
+		background-color: var(--nwtb--800);
+		&::before {
+		}
+		@include media-breakpoint-up(sm) {
+			background-position-y: 50%;
+		}
+		p {
+			text-shadow: $text-shadow;
+		}
+		p.banner__title {
+			color: #fff;
+		}
+		p.banner__body {
+			color: var(--transparent--800);
+		}
+
+
+		.banner__content {
+			width: 100%;
+			@include media-breakpoint-up(md) {
+				width: 100%;
+			}
+		}
+	}
+    &--line2-4, &--line1, &--line1-3, &--key-to-icons, &--nwtb{
+    .banner__content {
+        padding-right: 48px;
     }
+}
+    &--line2-4, &--line1, &--line1-3{
+
+        background-size: 90%;
+		background-repeat: no-repeat;
+		background-position: bottom -6rem right -5rem ;
+		@include media-breakpoint-down(md) {
+            background-position: bottom -10vw right 0px;
+			background-size: 100%;
+			padding-bottom: 4rem;
+		}
+        .banner__content{
+            @include media-breakpoint-down(sm) {
+                padding-right: 0;
+            }
+        }
+    }
+
+	&--line2-4 {
+		background-image: url("https://www.octranspo.com/images/files/line-2-2.png");
+	}
+
+	&--line1 {
+		background-image: url("https://www.octranspo.com/images/files/graphics/West_Line1_Red_B.png");
+	}
+	&--line1-3 {
+		background-image: url("https://www.octranspo.com/images/files/line-1-2.png");
+	}
+
+	&--key-to-icons.dark {
+		background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_dark.svg");
+	}
 }
 
 /* END Banner styles start */
