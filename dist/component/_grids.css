@@ -1,6 +1,6 @@
 
 /*****grid styles start *****/
-/* updated on 2024/07/18 */
+/* updated on 2024/08/7 */
 ul.grid.grid--3col {
   margin-left: 0;
   padding-left: 0;
@@ -67,22 +67,22 @@ ul.grid.grid--3col {
     grid-template-columns: 1fr 1fr;
   }
 }
-.grid--3col, .grid-3-2-2-1 {
+.grid--3col, .grid-3-2-2-1\  {
   display: grid;
   gap: 1rem;
 }
 @media (min-width: 576px) {
-  .grid--3col, .grid-3-2-2-1 {
+  .grid--3col, .grid-3-2-2-1\  {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 768px) {
-  .grid--3col, .grid-3-2-2-1 {
+  .grid--3col, .grid-3-2-2-1\  {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 992px) {
-  .grid--3col, .grid-3-2-2-1 {
+  .grid--3col, .grid-3-2-2-1\  {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -131,6 +131,10 @@ ul.grid.grid--3col {
   .section-row-2fr-1fr {
     grid-template-columns: 2fr 1fr;
   }
+}
+
+.gap-0 {
+  gap: 0rem;
 }
 
 .gap-sm {

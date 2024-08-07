@@ -1,5 +1,5 @@
 /*****grid styles start *****/
-/* updated on 2024/07/18 */
+/* updated on 2024/08/7 */
 ul.grid.grid--3col{
     margin-left: 0;
     padding-left: 0;
@@ -80,7 +80,7 @@ ul.grid.grid--3col{
 
         }
     }
-    &--3col, &-3-2-2-1 {
+    &--3col, &-3-2-2-1\ {
         display: grid;
         gap: 1rem ;
     
@@ -152,7 +152,9 @@ ul.grid.grid--3col{
         }
     }
 
-
+.gap-0{
+    gap: 0rem;
+}
 
 .gap-sm{
     gap: 1rem;
