@@ -1,16 +1,8 @@
 /*lists start*/
-/* last updated: 7/25/2024 */
+/* last updated: 8/7/2024 */
 
-// override oc styles
+// reset oc styles
 
-.basic-content ol li, .basic-content ul.checklist li, .content-container ol li, .content-container ul.checklist li, .ready-for-rail ol li, .ready-for-rail ul.checklist li{
-    padding-left: 0;
-}
-
-.basic-content ol, .basic-content ul.checklist, .content-container ol, .content-container ul.checklist, .ready-for-rail ol, .ready-for-rail ul.checklist{
-    margin-left: 0;
-    padding-left: 0;
-}
 
 ul p {
     margin-top: 0;

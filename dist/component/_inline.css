@@ -8,9 +8,8 @@
 
 
 
-
 /****Routes & lines styles ******/
-/* updated on 2024/07/18 */
+/* updated on 2024/8/7 */
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
   line-height: inherit;
   font-size: inherit;
@@ -32,13 +31,14 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
   padding: 0.125em;
   font-weight: 600;
   font-size: 0.875em;
+  text-shadow: none;
 }
 
-h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, h1 .rt-type--rapid, h2 .rt-type--line1, h2 .rt-type--line2, h2 .rt-type--line3, h2 .rt-type--line4, h2 .rt-type--rapid, h3 .rt-type--line1, h3 .rt-type--line2, h3 .rt-type--line3, h3 .rt-type--line4, h3 .rt-type--rapid, h4 .rt-type--line1, h4 .rt-type--line2, h4 .rt-type--line3, h4 .rt-type--line4, h4 .rt-type--rapid, h5 .rt-type--line1, h5 .rt-type--line2, h5 .rt-type--line3, h5 .rt-type--line4, h5 .rt-type--rapid, h6 .rt-type--line1, h6 .rt-type--line2, h6 .rt-type--line3, h6 .rt-type--line4, h6 .rt-type--rapid {
+h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, h1 .rt-type--rapid, h1 .rt-type--bus, h2 .rt-type--line1, h2 .rt-type--line2, h2 .rt-type--line3, h2 .rt-type--line4, h2 .rt-type--rapid, h2 .rt-type--bus, h3 .rt-type--line1, h3 .rt-type--line2, h3 .rt-type--line3, h3 .rt-type--line4, h3 .rt-type--rapid, h3 .rt-type--bus, h4 .rt-type--line1, h4 .rt-type--line2, h4 .rt-type--line3, h4 .rt-type--line4, h4 .rt-type--rapid, h4 .rt-type--bus, h5 .rt-type--line1, h5 .rt-type--line2, h5 .rt-type--line3, h5 .rt-type--line4, h5 .rt-type--rapid, h5 .rt-type--bus, h6 .rt-type--line1, h6 .rt-type--line2, h6 .rt-type--line3, h6 .rt-type--line4, h6 .rt-type--rapid, h6 .rt-type--bus {
   width: 1.25em;
 }
 
-.rt-type--line1, .rt-type--line2, .rt-type--line3, .rt-type--line4, .rt-type--rapid {
+.rt-type--line1, .rt-type--line2, .rt-type--line3, .rt-type--line4, .rt-type--rapid, .rt-type--bus {
   width: 1.5rem;
 }
 
@@ -57,6 +57,9 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
 }
 .rt-type--line4 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_4-blank.svg");
+}
+.rt-type--bus {
+  background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-circled.svg");
 }
 .rt-type--R1 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R1-blank.svg");
@@ -311,18 +314,8 @@ a.schedules-link::before {
 
 /* End link styles*/
 
-
 /*lists start*/
-/* last updated: 7/25/2024 */
-.basic-content ol li, .basic-content ul.checklist li, .content-container ol li, .content-container ul.checklist li, .ready-for-rail ol li, .ready-for-rail ul.checklist li {
-  padding-left: 0;
-}
-
-.basic-content ol, .basic-content ul.checklist, .content-container ol, .content-container ul.checklist, .ready-for-rail ol, .ready-for-rail ul.checklist {
-  margin-left: 0;
-  padding-left: 0;
-}
-
+/* last updated: 8/7/2024 */
 ul p {
   margin-top: 0;
 }
