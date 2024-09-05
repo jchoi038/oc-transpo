@@ -10,6 +10,19 @@
     margin: 0;
     margin-bottom: 0.5rem;
     line-height: 115%;
+    font-weight: 500;
+    transition: all 0.1s ease-in-out;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+
+.news-card .tag, .news-tag{
+    background-color: var(--charcoal--50);
+    &:hover{
+        background-color: var(--charcoal--800);
+        color: white;
+    }
 }
 
 .tag{
@@ -52,10 +65,16 @@
             padding: 3px 0.6rem 2px 0.6rem;
         }
         &__keyword{
+            padding-left: 0;
+            padding-right: 0;
             background-color: transparent;
             font-weight: 700;
             text-transform: uppercase;
             color: var(--charcoal--800);
+            
+            &.dark-mode{
+                color: white
+            }
         }
     }
 }

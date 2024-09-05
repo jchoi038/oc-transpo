@@ -1,31 +1,156 @@
-.basic-card{
-	background-color: white;
-	box-shadow: $elevation1;
+/* Card styles start */
+/* last updated 2024/07/29*/
+// reviewed
+// reset
 
-	&:hover{
-		box-shadow: $elevation2;
-	}
-
-	.card__icon{
-		height: $icon-size-md;
-		align-self: flex-start;
-	}
-	.card__title{
-		font-size: $ui-title-size-md;
-		font-weight: 600;
-	}
-
+.fares .fares-card {
+	border: none;
+	box-shadow: none;
+	border-top: none;
+	padding: 0;
+	text-align: left;
+	margin-bottom: 0;
 }
-.card{
-	padding: 1rem;
+
+.card.elevated {
+}
+
+// ul cards margins
+ul.card-list, .card ul {
+	padding: 0;
+	margin: 0;
+	margin-left: 0;
+	list-style-type: none;
+	li{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	li:not(:last-of-type){
+		border-bottom: 1px solid var(--border-color);
+		padding-bottom: 0.5em;
+		margin-bottom: 0.5em;
+
+	}
+}
+
+// basic card styles
+
+.card,
+.fares .fares-card,
+ul.card-list li {
+	box-shadow: $elevation1;
+	padding: 1.25rem;
 	border-radius: $radius-md;
 	transition: background-color ease-out 0.2s;
 	transition: box-shadow ease-out 0.2s;
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	background-color: white;
+	margin-bottom: 0;
+	color: var(--caption-color);
 
-	.clickable-card-link{
+	&__title,
+	h2,
+	h3 {
+		color: var(--charcoal--800);
+		font-size: $ui-title-size-md;
+		font-weight: 600;
+		margin-bottom: 1em;
+	}
+
+	&__body {
+		flex-grow: 1;
+	}
+}
+
+// card body color
+.card__body p, .card__body li{
+	color: var(--caption-color);
+}
+
+// list within cards
+.card ul.bulleted-list {
+	margin: 0;
+	margin-left: 1rem;
+	list-style-type: disc;
+}
+
+// icon size
+
+.card {
+	& > img:first-of-type {
+		height: $icon-size-md;
+		width: auto;
+		border-radius: 2px;
+		overflow: hidden;
+		align-self: flex-start;
+	}
+	&.card-size--lg > img:first-of-type {
+		height: $icon-size-xl;
+	}
+	&.card-size--sm > img:first-of-type {
+		height: $icon-size-sm;
+	}
+}
+
+.card-size {
+	&--sm {
+		padding: 0.75rem;
+		.card__title {
+			font-size: $ui-title-size-sm;
+		}
+		.card__body {
+			font-size: $ui-body-size-sm;
+		}
+	}
+	&--lg {
+		padding: 2rem;
+		.card__title {
+			font-size: $ui-title-size-lg;
+		}
+	}
+}
+
+// card colours
+
+.card.bg-- {
+	&line1,
+	&line2,
+	&line3,
+	&line4,
+	&frequent,
+	&connexion,
+	&local,
+	&neutral,
+	&inactive {
+		box-shadow: none;
+	}
+}
+
+// not reviewed
+
+.basic-card {
+	background-color: white;
+	box-shadow: $elevation1;
+
+	&:hover {
+		box-shadow: $elevation2;
+	}
+
+	.card > img {
+		height: $icon-size-md;
+		align-self: flex-start;
+	}
+	.card__title {
+		font-size: $ui-title-size-md;
+		font-weight: 600;
+	}
+}
+.card {
+	.clickable-card-link,
+	&__link {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -36,24 +161,16 @@
 		border-radius: 0.5rem;
 		// color: transparent;
 		font-size: 0;
-	}
-	&__icon{
-		width: auto;
-		height: 1.5rem;
-		border-radius: 2px;
-		overflow: hidden;
-	}
-
-
-	&__body{
-		flex-grow: 1;
+		border-radius: inherit;
+		transition: background-color 0.15s ease-in-out;
+		border: 2px solid var(--transparent--800);
+		transition: border-color 0.15s ease-in-out;
+		&:hover {
+			border: 2px solid var(--charcoal--800);
+		}
 	}
 
-	&__title{
-		color: var(--heading-color);
-		font-weight: 700;
-	}
-		.arrow-container{
+	.arrow-container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -63,61 +180,60 @@
 		margin-left: auto;
 		padding: 0.125rem;
 		color: var(--charcoal--800);
-		border:1px solid var(--charcoal--800);
+		border: 1px solid var(--charcoal--800);
 	}
-
 }
 
 //Type
 
-.card__type{
+.card__type {
 	//clickable
-	&--feature{
+	&--feature {
 		background-color: white;
 		border: var(--border-color) 1px solid;
 		flex: 1 0 8rem;
 		max-width: 10rem;
-		.card__title{
+		.card__title {
 			font-weight: 600;
 			font-size: 0.9rem;
 		}
-		.card__body{
+		.card__body {
 			font-size: 0.9rem;
 		}
 	}
 
-	&--image{
+	&--image {
 		flex-direction: row;
 		align-items: center;
 		gap: 1rem;
 		border: var(--border-color) 1px solid;
 		padding: 0;
 		padding-right: 1rem;
-		.card__image{
+		.card__image {
 			width: 4rem;
 			height: 4rem;
 		}
 	}
-	
 
 	// not clickable (default
 }
 
-
 //behaviour {
-.card__behaviour--mobile-friendly, .card__type--feature{
+.card__behaviour--mobile-friendly,
+.card__type--feature {
 	//hide detailed at small screens
-	@include media-breakpoint-down(xs){
+	@include media-breakpoint-down(xs) {
 		flex-direction: row;
 		gap: 1rem;
 	}
-	.card__icon{
+	.card > img {
 		flex-shrink: 0;
 	}
-	.card__title, .card__icon{
+	.card__title,
+	.card > img {
 		margin: 0;
 	}
-	.card__body{
+	.card__body {
 		@include media-breakpoint-down(xs) {
 			position: absolute !important;
 			width: 1px !important;
@@ -134,260 +250,517 @@
 
 //style
 
-.card__style{
+.card__style {
 	// subtle
-	&--subtle.card{
-	
-		&.card__color--white{
+	&--subtle.card {
+		&.card__color--white {
 			background-color: white;
 			border: var(--border-color) 1px solid;
-			.arrow-container{
+			.arrow-container {
 				color: var(--charcoal--800);
-				border:1px solid var(--charcoal--800);
+				border: 1px solid var(--charcoal--800);
 			}
 		}
-		&.card__color--transparent{
+		&.card__color--transparent {
 			background-color: var(--transparent--800);
 			border: var(--border-color) 1px solid;
-			.arrow-container{
+			.arrow-container {
 				color: var(--charcoal--800);
-				border:1px solid var(--charcoal--800);
+				border: 1px solid var(--charcoal--800);
 			}
 		}
-		&.card__color--line1{
+		&.card__color--line1 {
 			background-color: var(--line1--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--line1--600);
-				border:1px solid var(--line1--600);
+				border: 1px solid var(--line1--600);
 			}
 		}
-		&.card__color--line2{
+		&.card__color--line2 {
 			background-color: var(--line2--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--line2--600);
-				border:1px solid var(--line2--600);
+				border: 1px solid var(--line2--600);
 			}
 		}
-		&.card__color--line3{
+		&.card__color--line3 {
 			background-color: var(--line3--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--line3--600);
-				border:1px solid var(--line3--600);
+				border: 1px solid var(--line3--600);
 			}
 		}
-		&.card__color--line4{
+		&.card__color--line4 {
 			background-color: var(--line4--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--line4--600);
-				border:1px solid var(--line4--600);
+				border: 1px solid var(--line4--600);
 			}
 		}
-		&.card__color--frequent{
+		&.card__color--frequent {
 			background-color: var(--frequent--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--frequent--600);
-				border:1px solid var(--frequent--600);
+				border: 1px solid var(--frequent--600);
 			}
 		}
-		&.card__color--connexion{
+		&.card__color--connexion {
 			background-color: var(--connexion--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--connexion--600);
-				border:1px solid var(--connexion--600);
+				border: 1px solid var(--connexion--600);
 			}
 		}
-		&.card__color--local{
+		&.card__color--local {
 			background-color: var(--local--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--local--600);
-				border:1px solid var(--local--600);
+				border: 1px solid var(--local--600);
 			}
 		}
-		&.card__color--charcoal{
+		&.card__color--charcoal {
 			background-color: var(--charcoal--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--charcoal--800);
-				border:1px solid var(--charcoal--800);
+				border: 1px solid var(--charcoal--800);
 			}
 		}
-		&.card__color--neutral{
+		&.card__color--neutral {
 			background-color: var(--gray--50);
-			.arrow-container{
+			.arrow-container {
 				color: var(--gray--800);
-				border:1px solid var(--gray--800);
+				border: 1px solid var(--gray--800);
 			}
 		}
-		&:hover,&:focus,&:active{
+		&:hover,
+		&:focus,
+		&:active {
 			fill: white;
 			background-color: white;
 			box-shadow: $card-shadow;
-			.arrow-container{
-				border-width: 2px
-
+			.arrow-container {
+				border-width: 2px;
 			}
-			.card__title{
+			.card__title {
 				text-decoration: underline;
 			}
-			
 		}
-
 	}
 	// bold
 
-	&--bold.card{
+	&--bold.card {
 		transition: background-color ease-out 0.2s;
-		&.card__color--line1{
+		&.card__color--line1 {
 			background-color: var(--line1--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--line1--600);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--line1--600);
-				border:1px solid var(--line1--600);
+				border: 1px solid var(--line1--600);
 			}
 		}
-		&.card__color--line2{
+		&.card__color--line2 {
 			background-color: var(--line2--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--line2--600);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--line2--600);
-				border:1px solid var(--line2--600);
+				border: 1px solid var(--line2--600);
 			}
 		}
-		&.card__color--line3{
+		&.card__color--line3 {
 			background-color: var(--line3--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--line3--600);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--line3--600);
-				border:1px solid var(--line3--600);
+				border: 1px solid var(--line3--600);
 			}
 		}
-		&.card__color--line4{
+		&.card__color--line4 {
 			background-color: var(--line4--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--line4--600);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--line4--600);
-				border:1px solid var(--line4--600);
+				border: 1px solid var(--line4--600);
 			}
 		}
-		&.card__color--frequent{
+		&.card__color--frequent {
 			background-color: var(--frequent--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--frequent--600);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--frequent--600);
-				border:1px solid var(--frequent--600);
+				border: 1px solid var(--frequent--600);
 			}
 		}
-		&.card__color--connexion{
+		&.card__color--connexion {
 			background-color: var(--connexion--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--connexion--600);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--connexion--600);
-				border:1px solid var(--connexion--600);
+				border: 1px solid var(--connexion--600);
 			}
 		}
-		&.card__color--local{
+		&.card__color--local {
 			background-color: var(--local--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--local--600);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--local--600);
-				border:1px solid var(--local--600);
+				border: 1px solid var(--local--600);
 			}
 		}
-		&.card__color--charcoal{
+		&.card__color--charcoal {
 			background-color: var(--charcoal--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--charcoal--800);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--charcoal--800);
-				border:1px solid var(--charcoal--800);
+				border: 1px solid var(--charcoal--800);
 			}
 		}
-		&.card__color--neutral{
+		&.card__color--neutral {
 			background-color: var(--gray--50);
-			&:hover,&:focus,&:active{
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: var(--gray--600);
 			}
-			.arrow-container{
+			.arrow-container {
 				background-color: var(--gray--800);
-				border:1px solid var(--gray--800);
+				border: 1px solid var(--gray--800);
 			}
 		}
-		&:hover,&:focus,&:active{
+		&:hover,
+		&:focus,
+		&:active {
 			fill: white;
 			box-shadow: $card-shadow;
-			p{
+			p {
 				color: white !important;
 			}
-			.card__title{
+			.card__title {
 				text-decoration: underline;
 			}
 		}
 	}
 }
 // icon
-.card__icon{
+.card > img {
 	align-self: flex-start;
 	margin-bottom: 0.5rem;
 }
 //sizes
-.card__size{
-	
-	&--sm{
-		.card__icon{
+.card__size {
+	&--sm {
+		.card > img {
 			height: $icon-size-sm;
 			align-self: flex-start;
 		}
-		.card__title{
+		.card__title {
 			font-size: $ui-title-size-sm;
-			font-weight: 700;
+			font-weight: 600;
 		}
-		.card__body{
+		.card__body {
 			font-size: $ui-body-size-sm;
 		}
 	}
-	&--md{
-		.card__icon{
-			height: $icon-size-md;
-			align-self: flex-start;
-		}
-		.card__title{
-			font-size: $ui-title-size-md;
-			font-weight: 600;
-		}
-	}
-	&--lg{
-		.card__icon{
+	&--lg {
+		.card > img {
 			height: $icon-size-lg;
 			align-self: flex-start;
 		}
-		.card__title{
+		.card__title {
 			font-size: $ui-title-size-lg;
 			font-weight: 600;
 		}
 	}
 }
 
+//arrow card
+
+.arrow-card {
+	.card__title::after {
+		content: "";
+		width: 1.5rem;
+		height: 1.5rem;
+		display: inline-block;
+		flex-shrink: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0;
+		background-size: 100%;
+		vertical-align: text-bottom;
+		margin-left: 0.5rem;
+		margin-bottom: 1px;
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-circled.svg");
+	}
+}
+
+// quick links card
+
+.quick-link-card {
+	text-decoration: none;
+	&.clean .card__title {
+		@include media-breakpoint-up(sm) {
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	.card__title {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		font-size: $ui-title-size-xs;
+		font-weight: 600;
+		color: var(--charcoal--800);
+		justify-content: space-between;
+		margin-bottom: 0;
+		@include media-breakpoint-up(sm) {
+			font-size: $ui-title-size-sm;
+
+			&::after {
+				// content: "";
+				width: 1.25rem;
+				height: 1.25rem;
+				display: inline-block;
+				flex-shrink: 0;
+				background-repeat: no-repeat;
+				background-position: center center;
+				margin: 0;
+				background-size: 100%;
+				vertical-align: text-bottom;
+				margin-left: 0.5rem;
+				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-circled.svg");
+			}
+		}
+	}
+
+	&:hover {
+		box-shadow: $elevation2;
+	}
+
+	// Main icon
+
+	&::before {
+		content: "";
+		width: 1.25rem;
+		height: 1.25rem;
+		display: inline-block;
+		flex-shrink: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0;
+		margin-bottom: 0.5rem;
+		background-size: 100%;
+		vertical-align: text-bottom;
+		@include media-breakpoint-up(sm) {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+	}
+
+	&.sparkle {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/sparkle.svg");
+		}
+	}
+	&.walk {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-5min.svg");
+		}
+	}
+	&.schedules {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/resource_schedules.svg");
+		}
+	}
+	&.parking {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/service_pnr-red.svg");
+		}
+	}
+	&.map {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/resource_map-green.svg");
+		}
+	}
+	&.tour-360 {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/resource-360-gold.svg");
+		}
+	}
+	&.washroom {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/station_public-washroom-blue.svg");
+		}
+	}
+	&.connection {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/misc-transfer.svg");
+		}
+	}
+}
+
+// decorative card
+
+.decor-card{
+	padding-bottom: 8rem;
+	overflow: hidden;
+	padding: 2.5rem;
+	flex: 1 1 240px;
+
+	.card__title{
+		font-weight: 600;
+		text-align: center;
+		font-size: $ui-title-size-lg;
+		margin-bottom: 1.5em;
+		line-height: 1.15em;
+	}
+	&::before{
+		content: "";
+		align-self: center;
+		width: 5rem;
+		height: 5rem;
+		display: inline-block;
+		flex-shrink: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0;
+		margin-bottom: 1rem;
+		background-size: 100%;
+		vertical-align: text-bottom;
+		@include media-breakpoint-up(sm) {
+			
+		}
+	}
+	&.within-5km {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-5min.svg");
+		}
+	}
+	&.nearby {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-nearby.svg");
+		}
+	}
+	&.fares-made-easy {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-fares-made-easy.svg");
+		}
+	}
+	&.wayfinding {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-wayfinding.svg");
+		}
+	}
+	&.accessibility {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-accessibility.svg");
+		}
+	}
+	&.cyclist {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-cyclist.svg");
+		}
+	}
+	&.safety {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-safety.svg");
+		}
+	}
+	&.comfort {
+		&::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/graphic-comfort.svg");
+		}
+	}
+}
+
+
+
 //icon card
 
 // tags
-.tag__location--corner{
-	
+.tag__location--corner {
 }
 
 //features card - not clickable
-.card__type--features{
+.card__type--features {
 }
+// Card colors
+
+
+.card.red, .card.line1, .card.comfort{
+	.card__title{
+		color: var(--line1);
+	}
+}
+
+.card.green, .card.line2, .card.fares-made-easy{
+	.card__title{
+		color: var(--line2);
+	}
+}
+
+.card.gold, .card.line3, .card.safety{
+	.card__title{
+		color: var(--line3);
+	}
+}
+
+.card.blue, .card.line4, .decor-card.blue, .card.wayfinding{
+	.card__title{
+		color: var(--line4);
+	}
+}
+
+.card.purple, .card.cyclist{
+	.card__title{
+		color: var(--connexion);
+	}
+}
+
+.card.navy, .decor-card.navy{
+	.card__title{
+		color: var(--frequent);
+	}
+}
+.card.accessibility, .card.accessible-blue{
+	.card__title{
+		color: var(--accessible);
+	}
+}
+
+.card.station-info-card{
+	height: fit-content;
+}
+/* End Cards */

@@ -93,7 +93,7 @@
     --accessible-blue: #0079C1;
     --success-green: #45A041;
     --special: #7637C7;
-    --overlay--50: hsl(0, 0%, 0%, 5%);
+    --overlay--50: rgba(0, 0, 0, 0.05);
     --overlay--100: hsl(0, 0%, 0%, 10%);
     --overlay--200: hsl(0, 0%, 0%, 25%);
     --overlay--300: hsl(0, 0%, 0%, 40%);
@@ -101,7 +101,7 @@
     --overlay--500: hsl(0, 0%, 0%, 75%);
     --overlay--500: hsl(0, 0%, 0%, 80%);
 
-    //Semantic colours
+    //component colours
     --link:var(--line4--600);
     --link-hover:var(--line4--700);
 
@@ -167,17 +167,20 @@
     --info-bg-icon-color: var(--frequent--600);
     --info-text-color: var(--frequent--800);
     
-    --neutral-bg-color: var(--charcoal--50);
+    --neutral-bg-color: var(--gray--50);
     --neutral-bg-dark-color: var(--gray--200);
     --neutral-bg-border-color: var(--gray--500);
     --neutral-bg-icon-color: var(--gray--600);
     --neutral-text-color: var(--gray--800);
 
+    --accessible: var(--frequent);
+
+
     // button colours (dm = dark mode)
     --prm-btn-color: var(--line1--600);
     --prm-btn-color-hover: var(--line1--700);
-    --prm-btn-color-dm: var(--line1--500);
-    --prm-btn-color-dm-hover: var(--line1--600);
+    --prm-btn-color-dm: var(--line1--400);
+    --prm-btn-color-dm-hover: var(--line1--400);
 
     --scd-btn-border-color: var(--line1--600);
     --scd-btn-border-color-dm: white;
@@ -208,5 +211,18 @@
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 0.25rem;
+}
+
+.green-text{
+    color: var(--line2--600);
+}
+.blue-text{
+    color: var(--line4--600);
+}
+.red-text{
+    color: var(--line1--600);
+}
+.gold-text{
+    color: var(--line3--600);
 }
 /*end Colors*/

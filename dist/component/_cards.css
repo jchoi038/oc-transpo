@@ -1,0 +1,343 @@
+
+/* Card styles start */
+/* last updated 2024/07/29*/
+.card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px;
+  transition: background-color ease-out 0.2s;
+  transition: box-shadow ease-out 0.2s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+}
+.card > img {
+  width: auto;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 2rem;
+  align-self: flex-start;
+}
+.card__body {
+  flex-grow: 1;
+}
+.card__title {
+  color: var(--heading-color);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.basic-card {
+  background-color: white;
+  box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px;
+}
+.basic-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 15px;
+}
+.basic-card .card > img {
+  height: 2rem;
+  align-self: flex-start;
+}
+.basic-card .card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.card .clickable-card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  font-size: 0;
+}
+.card .arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999rem;
+  margin-left: auto;
+  padding: 0.125rem;
+  color: var(--charcoal--800);
+  border: 1px solid var(--charcoal--800);
+}
+
+.card__type--feature {
+  background-color: white;
+  border: var(--border-color) 1px solid;
+  flex: 1 0 8rem;
+  max-width: 10rem;
+}
+.card__type--feature .card__title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.card__type--feature .card__body {
+  font-size: 0.9rem;
+}
+.card__type--image {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  border: var(--border-color) 1px solid;
+  padding: 0;
+  padding-right: 1rem;
+}
+.card__type--image .card__image {
+  width: 4rem;
+  height: 4rem;
+}
+
+@media (max-width: 575.98px) {
+  .card__behaviour--mobile-friendly, .card__type--feature {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+.card__behaviour--mobile-friendly .card > img, .card__type--feature .card > img {
+  flex-shrink: 0;
+}
+.card__behaviour--mobile-friendly .card__title, .card__behaviour--mobile-friendly .card > img, .card__type--feature .card__title, .card__type--feature .card > img {
+  margin: 0;
+}
+@media (max-width: 575.98px) {
+  .card__behaviour--mobile-friendly .card__body, .card__type--feature .card__body {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+}
+
+.card__style--subtle.card.card__color--white {
+  background-color: white;
+  border: var(--border-color) 1px solid;
+}
+.card__style--subtle.card.card__color--white .arrow-container {
+  color: var(--charcoal--800);
+  border: 1px solid var(--charcoal--800);
+}
+.card__style--subtle.card.card__color--transparent {
+  background-color: var(--transparent--800);
+  border: var(--border-color) 1px solid;
+}
+.card__style--subtle.card.card__color--transparent .arrow-container {
+  color: var(--charcoal--800);
+  border: 1px solid var(--charcoal--800);
+}
+.card__style--subtle.card.card__color--line1 {
+  background-color: var(--line1--50);
+}
+.card__style--subtle.card.card__color--line1 .arrow-container {
+  color: var(--line1--600);
+  border: 1px solid var(--line1--600);
+}
+.card__style--subtle.card.card__color--line2 {
+  background-color: var(--line2--50);
+}
+.card__style--subtle.card.card__color--line2 .arrow-container {
+  color: var(--line2--600);
+  border: 1px solid var(--line2--600);
+}
+.card__style--subtle.card.card__color--line3 {
+  background-color: var(--line3--50);
+}
+.card__style--subtle.card.card__color--line3 .arrow-container {
+  color: var(--line3--600);
+  border: 1px solid var(--line3--600);
+}
+.card__style--subtle.card.card__color--line4 {
+  background-color: var(--line4--50);
+}
+.card__style--subtle.card.card__color--line4 .arrow-container {
+  color: var(--line4--600);
+  border: 1px solid var(--line4--600);
+}
+.card__style--subtle.card.card__color--frequent {
+  background-color: var(--frequent--50);
+}
+.card__style--subtle.card.card__color--frequent .arrow-container {
+  color: var(--frequent--600);
+  border: 1px solid var(--frequent--600);
+}
+.card__style--subtle.card.card__color--connexion {
+  background-color: var(--connexion--50);
+}
+.card__style--subtle.card.card__color--connexion .arrow-container {
+  color: var(--connexion--600);
+  border: 1px solid var(--connexion--600);
+}
+.card__style--subtle.card.card__color--local {
+  background-color: var(--local--50);
+}
+.card__style--subtle.card.card__color--local .arrow-container {
+  color: var(--local--600);
+  border: 1px solid var(--local--600);
+}
+.card__style--subtle.card.card__color--charcoal {
+  background-color: var(--charcoal--50);
+}
+.card__style--subtle.card.card__color--charcoal .arrow-container {
+  color: var(--charcoal--800);
+  border: 1px solid var(--charcoal--800);
+}
+.card__style--subtle.card.card__color--neutral {
+  background-color: var(--gray--50);
+}
+.card__style--subtle.card.card__color--neutral .arrow-container {
+  color: var(--gray--800);
+  border: 1px solid var(--gray--800);
+}
+.card__style--subtle.card:hover, .card__style--subtle.card:focus, .card__style--subtle.card:active {
+  fill: white;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+.card__style--subtle.card:hover .arrow-container, .card__style--subtle.card:focus .arrow-container, .card__style--subtle.card:active .arrow-container {
+  border-width: 2px;
+}
+.card__style--subtle.card:hover .card__title, .card__style--subtle.card:focus .card__title, .card__style--subtle.card:active .card__title {
+  text-decoration: underline;
+}
+.card__style--bold.card {
+  transition: background-color ease-out 0.2s;
+}
+.card__style--bold.card.card__color--line1 {
+  background-color: var(--line1--50);
+}
+.card__style--bold.card.card__color--line1:hover, .card__style--bold.card.card__color--line1:focus, .card__style--bold.card.card__color--line1:active {
+  background-color: var(--line1--600);
+}
+.card__style--bold.card.card__color--line1 .arrow-container {
+  background-color: var(--line1--600);
+  border: 1px solid var(--line1--600);
+}
+.card__style--bold.card.card__color--line2 {
+  background-color: var(--line2--50);
+}
+.card__style--bold.card.card__color--line2:hover, .card__style--bold.card.card__color--line2:focus, .card__style--bold.card.card__color--line2:active {
+  background-color: var(--line2--600);
+}
+.card__style--bold.card.card__color--line2 .arrow-container {
+  background-color: var(--line2--600);
+  border: 1px solid var(--line2--600);
+}
+.card__style--bold.card.card__color--line3 {
+  background-color: var(--line3--50);
+}
+.card__style--bold.card.card__color--line3:hover, .card__style--bold.card.card__color--line3:focus, .card__style--bold.card.card__color--line3:active {
+  background-color: var(--line3--600);
+}
+.card__style--bold.card.card__color--line3 .arrow-container {
+  background-color: var(--line3--600);
+  border: 1px solid var(--line3--600);
+}
+.card__style--bold.card.card__color--line4 {
+  background-color: var(--line4--50);
+}
+.card__style--bold.card.card__color--line4:hover, .card__style--bold.card.card__color--line4:focus, .card__style--bold.card.card__color--line4:active {
+  background-color: var(--line4--600);
+}
+.card__style--bold.card.card__color--line4 .arrow-container {
+  background-color: var(--line4--600);
+  border: 1px solid var(--line4--600);
+}
+.card__style--bold.card.card__color--frequent {
+  background-color: var(--frequent--50);
+}
+.card__style--bold.card.card__color--frequent:hover, .card__style--bold.card.card__color--frequent:focus, .card__style--bold.card.card__color--frequent:active {
+  background-color: var(--frequent--600);
+}
+.card__style--bold.card.card__color--frequent .arrow-container {
+  background-color: var(--frequent--600);
+  border: 1px solid var(--frequent--600);
+}
+.card__style--bold.card.card__color--connexion {
+  background-color: var(--connexion--50);
+}
+.card__style--bold.card.card__color--connexion:hover, .card__style--bold.card.card__color--connexion:focus, .card__style--bold.card.card__color--connexion:active {
+  background-color: var(--connexion--600);
+}
+.card__style--bold.card.card__color--connexion .arrow-container {
+  background-color: var(--connexion--600);
+  border: 1px solid var(--connexion--600);
+}
+.card__style--bold.card.card__color--local {
+  background-color: var(--local--50);
+}
+.card__style--bold.card.card__color--local:hover, .card__style--bold.card.card__color--local:focus, .card__style--bold.card.card__color--local:active {
+  background-color: var(--local--600);
+}
+.card__style--bold.card.card__color--local .arrow-container {
+  background-color: var(--local--600);
+  border: 1px solid var(--local--600);
+}
+.card__style--bold.card.card__color--charcoal {
+  background-color: var(--charcoal--50);
+}
+.card__style--bold.card.card__color--charcoal:hover, .card__style--bold.card.card__color--charcoal:focus, .card__style--bold.card.card__color--charcoal:active {
+  background-color: var(--charcoal--800);
+}
+.card__style--bold.card.card__color--charcoal .arrow-container {
+  background-color: var(--charcoal--800);
+  border: 1px solid var(--charcoal--800);
+}
+.card__style--bold.card.card__color--neutral {
+  background-color: var(--gray--50);
+}
+.card__style--bold.card.card__color--neutral:hover, .card__style--bold.card.card__color--neutral:focus, .card__style--bold.card.card__color--neutral:active {
+  background-color: var(--gray--600);
+}
+.card__style--bold.card.card__color--neutral .arrow-container {
+  background-color: var(--gray--800);
+  border: 1px solid var(--gray--800);
+}
+.card__style--bold.card:hover, .card__style--bold.card:focus, .card__style--bold.card:active {
+  fill: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+.card__style--bold.card:hover p, .card__style--bold.card:focus p, .card__style--bold.card:active p {
+  color: white !important;
+}
+.card__style--bold.card:hover .card__title, .card__style--bold.card:focus .card__title, .card__style--bold.card:active .card__title {
+  text-decoration: underline;
+}
+
+.card > img {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.card__size--sm .card > img {
+  height: 1.5rem;
+  align-self: flex-start;
+}
+.card__size--sm .card__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.card__size--sm .card__body {
+  font-size: 0.875rem;
+}
+.card__size--lg .card > img {
+  height: 2.5rem;
+  align-self: flex-start;
+}
+.card__size--lg .card__title {
+  font-size: 1.3755rem;
+  font-weight: 600;
+}
+
+/* End Cards */

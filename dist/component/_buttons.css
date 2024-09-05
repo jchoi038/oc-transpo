@@ -1,0 +1,754 @@
+
+/*Button styles*/
+/*Last updated: 2024/08/16 11:19pm*/
+a.learn-more {
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    background-image: none;
+  }
+  
+  /* reviewed styles */
+  *:not(.homepage-widgets__widget) > .btn,
+  *:not(.homepage-widgets__widget) > a.learn-more {
+    color: var(--charcoal--800);
+    background-color: var(--ter-btn-color);
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.5rem 0.75rem 0.5rem 1rem;
+    border-radius: 100rem;
+    font-weight: 600;
+    line-height: 1.15;
+    font-size: 0.925rem;
+    text-decoration: none;
+    outline-offset: 0;
+    margin-bottom: 0.5rem;
+  }
+  *:not(.homepage-widgets__widget) > .btn::after,
+  *:not(.homepage-widgets__widget) > a.learn-more::after {
+    content: "";
+    display: block;
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.25rem;
+    min-width: 1.25rem;
+    height: 1.25rem;
+  }
+  @media (max-width: 767.98px) {
+    *:not(.homepage-widgets__widget) > .btn,
+    *:not(.homepage-widgets__widget) > a.learn-more {
+      font-size: 0.8125rem;
+      min-height: 1.875rem;
+      padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+    }
+    *:not(.homepage-widgets__widget) > .btn::after, *:not(.homepage-widgets__widget) > .btn.btn-leading-icon::before,
+    *:not(.homepage-widgets__widget) > a.learn-more::after,
+    *:not(.homepage-widgets__widget) > a.learn-more.btn-leading-icon::before {
+      width: 1rem;
+      min-width: 1rem;
+      height: 1rem;
+    }
+  }
+  *:not(.homepage-widgets__widget) > .btn-icon-only {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  *:not(.homepage-widgets__widget) > .btn,
+  *:not(.homepage-widgets__widget) > .btn::after,
+  *:not(.homepage-widgets__widget) > .btn::before {
+    transition: all 100ms ease-out;
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn,
+  *:not(.homepage-widgets__widget) > .btn-sm,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn {
+    font-size: 0.8125rem;
+    min-height: 1.875rem;
+    padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn::after,
+  *:not(.homepage-widgets__widget) > .btn-sm::after,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn::after {
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem;
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn:active, *:not(.homepage-widgets__widget) > .banner .btn.active,
+  *:not(.homepage-widgets__widget) > .btn-sm:active,
+  *:not(.homepage-widgets__widget) > .btn-sm.active,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn:active,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn.active {
+    background-color: var(--charcoal--800);
+  }
+  *:not(.homepage-widgets__widget) > .filter-bar {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+  *:not(.homepage-widgets__widget) > .filter-bar .btn {
+    padding: 0.5rem 1rem;
+  }
+  *:not(.homepage-widgets__widget) > .filter-bar .btn::after {
+    content: none;
+    display: none;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-tertiary,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn,
+  *:not(.homepage-widgets__widget) > .banner .btn:not(.override) {
+    background-color: var(--ter-btn-color);
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-tertiary::after,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn::after,
+  *:not(.homepage-widgets__widget) > .banner .btn:not(.override)::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-tertiary:hover,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn:hover,
+  *:not(.homepage-widgets__widget) > .banner .btn:not(.override):hover {
+    background-color: var(--ter-btn-color-hover);
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-tertiary.dark-mode,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn.dark-mode,
+  *:not(.homepage-widgets__widget) > .banner .btn:not(.override).dark-mode {
+    background-color: var(--ter-btn-color-dm);
+    border: solid 1px var(--ter-btn-color-dm);
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-tertiary.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .filter-bar .btn.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .banner .btn:not(.override).dark-mode:hover {
+    background-color: var(--ter-btn-color-dm-hover);
+    color: white;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-primary {
+    color: #fff;
+    background-color: var(--prm-btn-color);
+    outline-offset: 2px;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-primary:hover {
+    background-color: var(--prm-btn-color-hover);
+    border: none;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-primary::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-primary.dark-mode {
+    -webkit-text-stroke: var(--charcoal--800);
+    font-weight: 700;
+    background-color: var(--prm-btn-color);
+    border: solid 1px var(--transparent--50);
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-primary.dark-mode:hover {
+    background-color: var(--prm-btn-color-hover);
+    border: solid 1px white;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-line1.dark-mode:hover {
+    color: var(--line1--400);
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-secondary.dark-mode:hover {
+    color: white;
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn-secondary,
+  *:not(.homepage-widgets__widget) > .banner .banner__btns > a:nth-of-type(2),
+  *:not(.homepage-widgets__widget) > .btn-secondary,
+  *:not(.homepage-widgets__widget) > .btn-line1,
+  *:not(.homepage-widgets__widget) > .btn-line2,
+  *:not(.homepage-widgets__widget) > .btn-line3,
+  *:not(.homepage-widgets__widget) > .btn-line4,
+  *:not(.homepage-widgets__widget) > .btn-frequent,
+  *:not(.homepage-widgets__widget) > .btn-connexion,
+  *:not(.homepage-widgets__widget) > .btn-local {
+    color: var(--charcoal--800);
+    background-color: white;
+    border: solid 1px var(--scd-btn-border-color);
+    outline-offset: 4px;
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn-secondary:hover,
+  *:not(.homepage-widgets__widget) > .banner .banner__btns > a:nth-of-type(2):hover,
+  *:not(.homepage-widgets__widget) > .btn-secondary:hover,
+  *:not(.homepage-widgets__widget) > .btn-line1:hover,
+  *:not(.homepage-widgets__widget) > .btn-line2:hover,
+  *:not(.homepage-widgets__widget) > .btn-line3:hover,
+  *:not(.homepage-widgets__widget) > .btn-line4:hover,
+  *:not(.homepage-widgets__widget) > .btn-frequent:hover,
+  *:not(.homepage-widgets__widget) > .btn-connexion:hover,
+  *:not(.homepage-widgets__widget) > .btn-local:hover {
+    box-shadow: var(--scd-btn-border-color) 0px 0px 0px 1.5px, rgba(3, 2, 2, 0.12) 0px 2px 10px;
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn-secondary::after,
+  *:not(.homepage-widgets__widget) > .banner .banner__btns > a:nth-of-type(2)::after,
+  *:not(.homepage-widgets__widget) > .btn-secondary::after,
+  *:not(.homepage-widgets__widget) > .btn-line1::after,
+  *:not(.homepage-widgets__widget) > .btn-line2::after,
+  *:not(.homepage-widgets__widget) > .btn-line3::after,
+  *:not(.homepage-widgets__widget) > .btn-line4::after,
+  *:not(.homepage-widgets__widget) > .btn-frequent::after,
+  *:not(.homepage-widgets__widget) > .btn-connexion::after,
+  *:not(.homepage-widgets__widget) > .btn-local::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn-secondary.dark-mode,
+  *:not(.homepage-widgets__widget) > .banner .banner__btns > a:nth-of-type(2).dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-secondary.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-line1.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-line2.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-line3.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-line4.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-frequent.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-connexion.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-local.dark-mode {
+    border: solid 1px var(--line1--400);
+    background-color: transparent;
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn-secondary.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .banner .banner__btns > a:nth-of-type(2).dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .btn-secondary.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .btn-line1.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .btn-line2.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .btn-line3.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .btn-line4.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .btn-frequent.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .btn-connexion.dark-mode:hover,
+  *:not(.homepage-widgets__widget) > .btn-local.dark-mode:hover {
+    box-shadow: var(--line1--400) 0px 0px 0px 1px;
+  }
+  *:not(.homepage-widgets__widget) > .btn-secondary.dark-mode.dark-mode {
+    border: solid 1px var(--scd-btn-border-color-dm);
+    background-color: transparent;
+  }
+  *:not(.homepage-widgets__widget) > .btn-secondary.dark-mode.dark-mode:hover {
+    box-shadow: var(--scd-btn-border-color-dm) 0px 0px 0px 1px;
+  }
+  *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon.dark-mode::before, *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon.active::before, *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon:active::before, *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon:active:hover::before, *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon.dark-mode::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon.active::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon:active::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon.dark-mode::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon.active::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon:active::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon.dark-mode::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon.active::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon:active::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon.active:hover::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-white.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon.dark-mode.active::before, *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon.dark-mode:active::before, *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon.dark-mode:active:hover::before, *:not(.homepage-widgets__widget) > .btn-line1.btn-leading-icon.dark-mode.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon.dark-mode.active::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon.dark-mode:active::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon.dark-mode:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line2.btn-leading-icon.dark-mode.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon.dark-mode.active::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon.dark-mode:active::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon.dark-mode:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line3.btn-leading-icon.dark-mode.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon.dark-mode.active::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon.dark-mode:active::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon.dark-mode:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line4.btn-leading-icon.dark-mode.active:hover::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon.dark-mode::before, *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon.active::before, *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon:active::before, *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon:active:hover::before, *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon.dark-mode::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon.active::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon:active::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon.dark-mode::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon.active::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon:active::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon.active:hover::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-white.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon.dark-mode.active::before, *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon.dark-mode:active::before, *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon.dark-mode:active:hover::before, *:not(.homepage-widgets__widget) > .btn-frequent.btn-leading-icon.dark-mode.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon.dark-mode.active::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon.dark-mode:active::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon.dark-mode:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-connexion.btn-leading-icon.dark-mode.active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon.dark-mode.active::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon.dark-mode:active::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon.dark-mode:active:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-local.btn-leading-icon.dark-mode.active:hover::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-leading-icon:hover.btn-frequent::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-frequent.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-leading-icon:hover.btn-connexion::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-connexion.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-leading-icon:hover.btn-local::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-local.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-leading-icon:hover.btn-line1::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line1.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-leading-icon:hover.btn-line2::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line2.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-leading-icon:hover.btn-line3::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line3.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-leading-icon:hover.btn-line4::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line4.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-leading-icon:hover.btn-frequent::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-frequent-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-leading-icon:hover.btn-connexion::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-connexion-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-leading-icon:hover.btn-local::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_bus-local-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-leading-icon:hover.btn-line1::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line1-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-leading-icon:hover.btn-line2::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line2-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-leading-icon:hover.btn-line3::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line3-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-leading-icon:hover.btn-line4::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/transport_train-line4-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-extension,
+  *:not(.homepage-widgets__widget) > .btn-line2-4,
+  *:not(.homepage-widgets__widget) > .btn-line1-3 {
+    outline-offset: 3px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to left, #65A233, #01A1DD, #D30F1D, #AF882D);
+    color: var(--charcoal--800);
+    -o-border-image: 1/1px;
+       border-image: 1/1px;
+    background-clip: padding-box;
+  }
+  *:not(.homepage-widgets__widget) > .btn-extension:before,
+  *:not(.homepage-widgets__widget) > .btn-line2-4:before,
+  *:not(.homepage-widgets__widget) > .btn-line1-3:before {
+    transition: all 100ms ease-out;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 2px;
+    border-radius: inherit; /* !importanté */
+    background-color: white;
+    z-index: -1;
+  }
+  *:not(.homepage-widgets__widget) > .btn-extension:hover,
+  *:not(.homepage-widgets__widget) > .btn-line2-4:hover,
+  *:not(.homepage-widgets__widget) > .btn-line1-3:hover {
+    color: var(--prm-btn-color);
+  }
+  *:not(.homepage-widgets__widget) > .btn-extension:hover:before,
+  *:not(.homepage-widgets__widget) > .btn-line2-4:hover:before,
+  *:not(.homepage-widgets__widget) > .btn-line1-3:hover:before {
+    background-color: var(--gray--50);
+  }
+  *:not(.homepage-widgets__widget) > .btn-extension.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-line2-4.dark-mode,
+  *:not(.homepage-widgets__widget) > .btn-line1-3.dark-mode {
+    background-color: inherit !important;
+    color: white;
+    background: linear-gradient(to left, #74B824, #3EB4FF, #FF3F3E, #DAAB01);
+  }
+  *:not(.homepage-widgets__widget) > .btn-extension.dark-mode:before,
+  *:not(.homepage-widgets__widget) > .btn-line2-4.dark-mode:before,
+  *:not(.homepage-widgets__widget) > .btn-line1-3.dark-mode:before {
+    background-color: inherit;
+  }
+  *:not(.homepage-widgets__widget) > .btn-extension.dark-mode:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line2-4.dark-mode:hover::before,
+  *:not(.homepage-widgets__widget) > .btn-line1-3.dark-mode:hover::before {
+    background-color: var(--btn-dm-hover);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line2-4 {
+    background: linear-gradient(to left, #65A233, #01A1DD);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line2-4.dark-mode {
+    background: linear-gradient(to left, #74B824, #3EB4FF);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line1-3 {
+    background: linear-gradient(to left, #D30F1D, #AF882D);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line1-3.dark-mode {
+    background: linear-gradient(to left, #FF3F3E, #DAAB01);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line2 {
+    border: solid 1px var(--line2);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line2:hover {
+    box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px, var(--line2) 0px 0px 0px 1.5px;
+    color: var(--line2--600);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line2:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line2.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-line3 {
+    border: solid 1px var(--line3);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line3:hover {
+    box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px, var(--line3) 0px 0px 0px 1.5px;
+    color: var(--line3--600);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line3:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line3.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-line4 {
+    border: solid 1px var(--line4);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line4:hover {
+    box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px, var(--line4) 0px 0px 0px 1.5px;
+    color: var(--line4--600);
+  }
+  *:not(.homepage-widgets__widget) > .btn-line4:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line4.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-frequent {
+    border: solid 1px var(--frequent);
+  }
+  *:not(.homepage-widgets__widget) > .btn-frequent:hover {
+    box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px, var(--frequent) 0px 0px 0px 1.5px;
+    color: var(--frequent--600);
+  }
+  *:not(.homepage-widgets__widget) > .btn-frequent:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-frequent.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-connexion {
+    border: solid 1px var(--connexion);
+  }
+  *:not(.homepage-widgets__widget) > .btn-connexion:hover {
+    box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px, var(--connexion) 0px 0px 0px 1.5px;
+    color: var(--connexion--600);
+  }
+  *:not(.homepage-widgets__widget) > .btn-connexion:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-connexion.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-local {
+    border: solid 1px var(--local);
+  }
+  *:not(.homepage-widgets__widget) > .btn-local:hover {
+    box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px, var(--local) 0px 0px 0px 1.5px;
+    color: var(--local--600);
+  }
+  *:not(.homepage-widgets__widget) > .btn-local:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-local.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-text {
+    background-color: transparent;
+    padding: 0.5rem 0 0;
+    margin: 0 0 0.5rem;
+    border-radius: 0;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    border-bottom: 1px solid transparent;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-text:not(.dark-mode):hover {
+    color: var(--prm-btn-color);
+    border-bottom: 1px solid var(--prm-btn-color);
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-elevated,
+  *:not(.homepage-widgets__widget) > .back-to-top-btn,
+  *:not(.homepage-widgets__widget) > .search-btn,
+  *:not(.homepage-widgets__widget) > .prev-btn,
+  *:not(.homepage-widgets__widget) > .next-btn {
+    outline-offset: 4px;
+    background-color: white;
+    box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px;
+    border: 2px solid white;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-elevated:hover,
+  *:not(.homepage-widgets__widget) > .back-to-top-btn:hover,
+  *:not(.homepage-widgets__widget) > .search-btn:hover,
+  *:not(.homepage-widgets__widget) > .prev-btn:hover,
+  *:not(.homepage-widgets__widget) > .next-btn:hover {
+    border: 2px solid var(--prm-btn-color);
+    color: var(--prm-btn-color);
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-elevated:hover::after,
+  *:not(.homepage-widgets__widget) > .back-to-top-btn:hover::after,
+  *:not(.homepage-widgets__widget) > .search-btn:hover::after,
+  *:not(.homepage-widgets__widget) > .prev-btn:hover::after,
+  *:not(.homepage-widgets__widget) > .next-btn:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line1.svg");
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn.dark-mode {
+    color: #fff;
+  }
+  *:not(.homepage-widgets__widget) > .banner .btn.dark-mode::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary, *:not(.homepage-widgets__widget) > .dark-mode.btn-text, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion, *:not(.homepage-widgets__widget) > .dark-mode.btn-local, *:not(.homepage-widgets__widget) > .dark-mode.btn-extension, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2-4, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1-3 {
+    color: #fff;
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-text::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-local::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-extension::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2-4::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1-3::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-local:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-extension:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2-4:hover {
+    background-color: var(--overlay--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-text:hover {
+    border-bottom: 1px solid white;
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line2 {
+    border: solid 1px var(--line2--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line2:hover {
+    box-shadow: var(--line2--400) 0px 0px 0px 1px;
+    color: var(--line2--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line2:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line2-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line3 {
+    border: solid 1px var(--line3--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line3:hover {
+    box-shadow: var(--line3--400) 0px 0px 0px 1px;
+    color: var(--line3--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line3:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line3-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line4 {
+    border: solid 1px var(--line4--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line4:hover {
+    box-shadow: var(--line4--400) 0px 0px 0px 1px;
+    color: var(--line4--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line4:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line4-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent {
+    border: solid 1px var(--frequent--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent:hover {
+    box-shadow: var(--frequent--400) 0px 0px 0px 1px;
+    color: var(--frequent--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-frequent-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion {
+    border: solid 1px var(--connexion--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion:hover {
+    box-shadow: var(--connexion--400) 0px 0px 0px 1px;
+    color: var(--connexion--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-connexion-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-local {
+    border: solid 1px var(--local--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-local:hover {
+    box-shadow: var(--local--400) 0px 0px 0px 1px;
+    color: var(--local--400);
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-local:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-local-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-secondary:not(.dark-mode):hover, *:not(.homepage-widgets__widget) > .btn-line1:not(.dark-mode):hover, *:not(.homepage-widgets__widget) > .btn-extension:not(.dark-mode):hover, *:not(.homepage-widgets__widget) > .btn-line2-4:not(.dark-mode):hover, *:not(.homepage-widgets__widget) > .btn-line1-3:not(.dark-mode):hover, *:not(.homepage-widgets__widget) > .btn-text:not(.dark-mode):hover {
+    color: var(--prm-btn-color);
+  }
+  *:not(.homepage-widgets__widget) > .btn-secondary:not(.dark-mode):hover::after, *:not(.homepage-widgets__widget) > .btn-line1:not(.dark-mode):hover::after, *:not(.homepage-widgets__widget) > .btn-extension:not(.dark-mode):hover::after, *:not(.homepage-widgets__widget) > .btn-line2-4:not(.dark-mode):hover::after, *:not(.homepage-widgets__widget) > .btn-line1-3:not(.dark-mode):hover::after, *:not(.homepage-widgets__widget) > .btn-text:not(.dark-mode):hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-red.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-line1:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-red-dm.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-secondary:active, *:not(.homepage-widgets__widget) > .btn-secondary.active, *:not(.homepage-widgets__widget) > .btn-secondary:active:hover, *:not(.homepage-widgets__widget) > .btn-secondary.active:hover, *:not(.homepage-widgets__widget) > .btn-primary:active, *:not(.homepage-widgets__widget) > .btn-primary.active, *:not(.homepage-widgets__widget) > .btn-primary:active:hover, *:not(.homepage-widgets__widget) > .btn-primary.active:hover, *:not(.homepage-widgets__widget) > .btn-tertiary:active, *:not(.homepage-widgets__widget) > .btn-tertiary.active, *:not(.homepage-widgets__widget) > .btn-tertiary:active:hover, *:not(.homepage-widgets__widget) > .btn-tertiary.active:hover, *:not(.homepage-widgets__widget) > .btn-filter:active, *:not(.homepage-widgets__widget) > .btn-filter.active, *:not(.homepage-widgets__widget) > .btn-filter:active:hover, *:not(.homepage-widgets__widget) > .btn-filter.active:hover, *:not(.homepage-widgets__widget) > .btn-line1:active, *:not(.homepage-widgets__widget) > .btn-line1.active, *:not(.homepage-widgets__widget) > .btn-line1:active:hover, *:not(.homepage-widgets__widget) > .btn-line1.active:hover, *:not(.homepage-widgets__widget) > .btn-line2:active, *:not(.homepage-widgets__widget) > .btn-line2.active, *:not(.homepage-widgets__widget) > .btn-line2:active:hover, *:not(.homepage-widgets__widget) > .btn-line2.active:hover, *:not(.homepage-widgets__widget) > .btn-line3:active, *:not(.homepage-widgets__widget) > .btn-line3.active, *:not(.homepage-widgets__widget) > .btn-line3:active:hover, *:not(.homepage-widgets__widget) > .btn-line3.active:hover, *:not(.homepage-widgets__widget) > .btn-line4:active, *:not(.homepage-widgets__widget) > .btn-line4.active, *:not(.homepage-widgets__widget) > .btn-line4:active:hover, *:not(.homepage-widgets__widget) > .btn-line4.active:hover, *:not(.homepage-widgets__widget) > .btn-frequent:active, *:not(.homepage-widgets__widget) > .btn-frequent.active, *:not(.homepage-widgets__widget) > .btn-frequent:active:hover, *:not(.homepage-widgets__widget) > .btn-frequent.active:hover, *:not(.homepage-widgets__widget) > .btn-connexion:active, *:not(.homepage-widgets__widget) > .btn-connexion.active, *:not(.homepage-widgets__widget) > .btn-connexion:active:hover, *:not(.homepage-widgets__widget) > .btn-connexion.active:hover, *:not(.homepage-widgets__widget) > .btn-local:active, *:not(.homepage-widgets__widget) > .btn-local.active, *:not(.homepage-widgets__widget) > .btn-local:active:hover, *:not(.homepage-widgets__widget) > .btn-local.active:hover {
+    color: transparent;
+    background-color: var(--btn-active-color);
+    box-shadow: none;
+  }
+  *:not(.homepage-widgets__widget) > .btn-secondary:active::after, *:not(.homepage-widgets__widget) > .btn-secondary.active::after, *:not(.homepage-widgets__widget) > .btn-secondary:active:hover::after, *:not(.homepage-widgets__widget) > .btn-secondary.active:hover::after, *:not(.homepage-widgets__widget) > .btn-primary:active::after, *:not(.homepage-widgets__widget) > .btn-primary.active::after, *:not(.homepage-widgets__widget) > .btn-primary:active:hover::after, *:not(.homepage-widgets__widget) > .btn-primary.active:hover::after, *:not(.homepage-widgets__widget) > .btn-tertiary:active::after, *:not(.homepage-widgets__widget) > .btn-tertiary.active::after, *:not(.homepage-widgets__widget) > .btn-tertiary:active:hover::after, *:not(.homepage-widgets__widget) > .btn-tertiary.active:hover::after, *:not(.homepage-widgets__widget) > .btn-filter:active::after, *:not(.homepage-widgets__widget) > .btn-filter.active::after, *:not(.homepage-widgets__widget) > .btn-filter:active:hover::after, *:not(.homepage-widgets__widget) > .btn-filter.active:hover::after, *:not(.homepage-widgets__widget) > .btn-line1:active::after, *:not(.homepage-widgets__widget) > .btn-line1.active::after, *:not(.homepage-widgets__widget) > .btn-line1:active:hover::after, *:not(.homepage-widgets__widget) > .btn-line1.active:hover::after, *:not(.homepage-widgets__widget) > .btn-line2:active::after, *:not(.homepage-widgets__widget) > .btn-line2.active::after, *:not(.homepage-widgets__widget) > .btn-line2:active:hover::after, *:not(.homepage-widgets__widget) > .btn-line2.active:hover::after, *:not(.homepage-widgets__widget) > .btn-line3:active::after, *:not(.homepage-widgets__widget) > .btn-line3.active::after, *:not(.homepage-widgets__widget) > .btn-line3:active:hover::after, *:not(.homepage-widgets__widget) > .btn-line3.active:hover::after, *:not(.homepage-widgets__widget) > .btn-line4:active::after, *:not(.homepage-widgets__widget) > .btn-line4.active::after, *:not(.homepage-widgets__widget) > .btn-line4:active:hover::after, *:not(.homepage-widgets__widget) > .btn-line4.active:hover::after, *:not(.homepage-widgets__widget) > .btn-frequent:active::after, *:not(.homepage-widgets__widget) > .btn-frequent.active::after, *:not(.homepage-widgets__widget) > .btn-frequent:active:hover::after, *:not(.homepage-widgets__widget) > .btn-frequent.active:hover::after, *:not(.homepage-widgets__widget) > .btn-connexion:active::after, *:not(.homepage-widgets__widget) > .btn-connexion.active::after, *:not(.homepage-widgets__widget) > .btn-connexion:active:hover::after, *:not(.homepage-widgets__widget) > .btn-connexion.active:hover::after, *:not(.homepage-widgets__widget) > .btn-local:active::after, *:not(.homepage-widgets__widget) > .btn-local.active::after, *:not(.homepage-widgets__widget) > .btn-local:active:hover::after, *:not(.homepage-widgets__widget) > .btn-local.active:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion.active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-local:active, *:not(.homepage-widgets__widget) > .dark-mode.btn-local:active:hover, *:not(.homepage-widgets__widget) > .dark-mode.btn-local.active, *:not(.homepage-widgets__widget) > .dark-mode.btn-local.active:hover {
+    border: inherit;
+    background-color: white;
+    color: var(--charcoal--800);
+    box-shadow: none;
+  }
+  *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-secondary.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-primary.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-tertiary.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line1.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line2.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line3.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-line4.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-frequent.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-connexion.active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-local:active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-local:active:hover::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-local.active::after, *:not(.homepage-widgets__widget) > .dark-mode.btn-local.active:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--map::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/resource_map.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--pdf::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/resource_pdf.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--image::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/resource_image.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--schedules::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/resource_schedules.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--download::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/resource_download.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--email::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/contact_email.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--tty::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/contact_tty.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--fax::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/contact_fax.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-icon--phone::before {
+    background-image: url("https://www.octranspo.com/images/files/icons/contact_phone.svg");
+  }
+  *:not(.homepage-widgets__widget) > .search-btn::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_search.svg");
+  }
+  *:not(.homepage-widgets__widget) > .search-btn:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_search-red.svg");
+  }
+  *:not(.homepage-widgets__widget) > .next-btn::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-right.svg");
+  }
+  *:not(.homepage-widgets__widget) > .next-btn:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-right-red.svg");
+  }
+  *:not(.homepage-widgets__widget) > .prev-btn::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-left.svg");
+  }
+  *:not(.homepage-widgets__widget) > .prev-btn:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-left-red.svg");
+  }
+  *:not(.homepage-widgets__widget) > .back-to-top-btn::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-up.svg");
+  }
+  *:not(.homepage-widgets__widget) > .back-to-top-btn:hover::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-up-red.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-tertiary.btn-icon--external::after,
+  *:not(.homepage-widgets__widget) > .btn-tertiary:hover.btn-icon--external::after,
+  *:not(.homepage-widgets__widget) > .btn-tertiary:active:hover.btn-icon--external::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/resource_external.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-tertiary.dark-mode.btn-icon--external::after,
+  *:not(.homepage-widgets__widget) > .btn-tertiary:hover.dark-mode.btn-icon--external::after,
+  *:not(.homepage-widgets__widget) > .btn-tertiary:active:hover.dark-mode.btn-icon--external::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/resource_external-white.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-tertiary.btn-icon--load-more::after,
+  *:not(.homepage-widgets__widget) > .btn-tertiary:hover.btn-icon--load-more::after,
+  *:not(.homepage-widgets__widget) > .btn-tertiary:active:hover.btn-icon--load-more::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-down.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn-tertiary.btn-icon--load-less::after,
+  *:not(.homepage-widgets__widget) > .btn-tertiary:hover.btn-icon--load-less::after,
+  *:not(.homepage-widgets__widget) > .btn-tertiary:active:hover.btn-icon--load-less::after {
+    background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-up.svg");
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-leading-icon, *:not(.homepage-widgets__widget) > .btn.btn-icon--map, *:not(.homepage-widgets__widget) > .btn.btn-icon--pdf, *:not(.homepage-widgets__widget) > .btn.btn-icon--image, *:not(.homepage-widgets__widget) > .btn.btn-icon--schedules, *:not(.homepage-widgets__widget) > .btn.btn-icon--download, *:not(.homepage-widgets__widget) > .btn.btn-icon--email, *:not(.homepage-widgets__widget) > .btn.btn-icon--tty, *:not(.homepage-widgets__widget) > .btn.btn-icon--fax, *:not(.homepage-widgets__widget) > .btn.btn-icon--phone {
+    padding: 0.5rem 1rem 0.4rem 1rem;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-leading-icon::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--map::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--pdf::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--image::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--schedules::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--download::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--email::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--tty::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--fax::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--phone::before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.25rem;
+    min-width: 1.25rem;
+    height: 1.25rem;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-leading-icon::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--map::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--pdf::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--image::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--schedules::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--download::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--email::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--tty::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--fax::after, *:not(.homepage-widgets__widget) > .btn.btn-icon--phone::after {
+    content: none;
+    display: none;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-leading-icon.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--map.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--pdf.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--image.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--schedules.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--download.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--email.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--tty.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--fax.btn-sm, *:not(.homepage-widgets__widget) > .btn.btn-icon--phone.btn-sm {
+    padding: 0.4rem 0.75rem 0.4rem 0.75rem;
+  }
+  *:not(.homepage-widgets__widget) > .btn.btn-leading-icon.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--map.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--pdf.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--image.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--schedules.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--download.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--email.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--tty.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--fax.btn-sm::before, *:not(.homepage-widgets__widget) > .btn.btn-icon--phone.btn-sm::before {
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem;
+  }
+  *:not(.homepage-widgets__widget) > .btn-icon--map:active:hover, *:not(.homepage-widgets__widget) > .btn-icon--map:active, *:not(.homepage-widgets__widget) > .btn-icon--map.active, *:not(.homepage-widgets__widget) > .btn-icon--map.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--pdf:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--pdf:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--pdf.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--pdf.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--image:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--image:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--image.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--image.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--schedules:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--schedules:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--schedules.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--schedules.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--download:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--download:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--download.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--download.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--email:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--email:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--email.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--email.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--tty:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--tty:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--tty.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--tty.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--fax:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--fax:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--fax.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--fax.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--phone:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--phone:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--phone.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--phone.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--external:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--external:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--external.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--external.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--load-more:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--load-more:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--load-more.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--load-more.active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--load-less:active:hover,
+  *:not(.homepage-widgets__widget) > .btn-icon--load-less:active,
+  *:not(.homepage-widgets__widget) > .btn-icon--load-less.active,
+  *:not(.homepage-widgets__widget) > .btn-icon--load-less.active:hover {
+    background-color: var(--ter-btn-color-hover);
+    color: var(--charcoal--800);
+  }
+  

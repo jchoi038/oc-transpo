@@ -1,4 +1,31 @@
 /*Util start*/
+
+// backgrounds
+
+.bg--{
+    &line1, &line2, &line3, &line4, &frequent, &connexion, &local, &neutral, &inactive{
+		box-shadow: none;
+	}
+    &transparent,&transparent .card{
+		background-color: var(--transparent--800);
+		color: var(--transparent--7000);
+	}
+	&line1,&line1 .card{ background-color: var(--line1--50);}
+	&line2,&line2 .card{ background-color: var(--line2--50);}
+	&line3,&line3 .card{ background-color: var(--line3--50);}
+	&line4,&line4 .card{ background-color: var(--line4--50);}
+	&frequent,&frequent .card{ background-color: var(--frequent--50);}
+	&connexion,&connexion .card{ background-color: var(--connexion--50);}
+	&local,&local .card{ background-color: var(--local--50);}
+	&charcoal,&charcoal .card{ background-color: var(--charcoal--50);}
+	&neutral,&neutral .card{ background-color: var(--gray--50);}
+}
+
+//stretch
+
+// .stretch is compatible only with the full with template structions (i.e. fares template)
+
+// old
 section.divided{
     margin-bottom: 20rem;
 }
@@ -67,6 +94,12 @@ section.divided{
     gap: 2rem;
 }
 
+.p-0{
+    padding: 0rem;
+}
+.p-1{
+    padding: 1rem;
+}
 
 .m-0 {
     margin: 0;
@@ -225,6 +258,12 @@ section.divided{
 
 .flex-ai-c {
     align-items: center;
+}
+
+// NWTB launch
+
+.nwtb-launch{
+    opacity: 0%;
 }
 
 /*end Util*/

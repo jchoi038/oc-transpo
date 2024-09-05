@@ -1,6 +1,6 @@
 
 /* Banner styles start */
-/*Last updated: 2024/08/07 2:38pm*/
+/*Last updated: 2024/08/08 3:09 pm*/
 .banner__title,
 .banner__body {
   margin: 0;
@@ -8,7 +8,7 @@
 
 /*reviewed below*/
 .banner__body:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 @media (max-width: 575.98px) {
   .banner__body:not(:last-child) {
@@ -33,11 +33,6 @@
   }
 }
 
-@media (min-width: 576px) {
-  .banner {
-    min-height: 160px;
-  }
-}
 @media (max-width: 575.98px) {
   .banner {
     box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px;
@@ -51,8 +46,20 @@
   text-shadow: none;
 }
 
+.banner .banner__content {
+  padding-right: 3rem;
+}
+@media (min-width: 768px) {
+  .banner .banner__content {
+    max-width: 80%;
+  }
+}
+.banner.text-banner .banner__content {
+  padding-right: 0;
+}
+
 .banner {
-  padding: 1rem;
+  padding: 1.25rem;
   gap: 1rem;
   position: relative;
   border-radius: 0.5rem;
@@ -95,15 +102,13 @@
     width: 2.25rem;
   }
 }
-.icon-banner .banner__content {
-  padding-right: 42px;
-}
 
 .banner.img-banner {
   display: flex;
   padding: 0rem;
 }
 .banner.img-banner .banner__content {
+  max-width: 100%;
   padding: 1rem;
   flex-grow: 1;
   display: flex;
@@ -118,8 +123,8 @@
 }
 @media (max-width: 575.98px) {
   .banner.img-banner .banner__img {
-    min-width: 130px;
-    width: 130px;
+    min-width: 100px;
+    width: 100px;
   }
 }
 
@@ -140,12 +145,38 @@
   }
   .banner.fullwidth::before, .banner.stretch::before {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
     background-color: inherit;
-    width: 1000rem;
+    width: 100vw;
     height: 100%;
     top: 0;
     bottom: 0;
-    left: -500rem;
+    margin-left: calc((-100vw + 540px) / 2 - 15px);
+    padding-left: -2rem;
+  }
+}
+@media (min-width: 768px) {
+  .banner.fullwidth::before, .banner.stretch::before {
+    width: 100vw;
+    margin-left: calc((-100vw + 720px) / 2 - 27.5px);
+  }
+}
+@media (min-width: 992px) {
+  .banner.fullwidth::before, .banner.stretch::before {
+    width: 100vw;
+    margin-left: calc(-12.5vw - 27.5px);
+  }
+}
+@media (min-width: 1200px) {
+  .banner.fullwidth::before, .banner.stretch::before {
+    width: 100vw;
+    margin-left: calc(-12.5vw - 27.5px);
+  }
+}
+@media (min-width: 1400px) {
+  .banner.fullwidth::before, .banner.stretch::before {
+    width: 100vw;
+    margin-left: calc((-100vw + 1440px) / 2 - 180px - 27.5px);
   }
 }
 .banner.dark, .banner.dark-mode {
@@ -154,7 +185,7 @@
 .banner.dark p,
 .banner.dark .btn, .banner.dark-mode p,
 .banner.dark-mode .btn {
-  text-shadow: -1px 1px 0 var(--gray--800), 1px 1px 0 var(--gray--800), 1px -1px 0 var(--gray--800), -1px -1px 0 var(--gray--800);
+  text-shadow: -1px 1px 0 var(--charcoal--800), 1px 1px 0 var(--charcoal--800), 1px -1px 0 var(--charcoal--800), -1px -1px 0 var(--charcoal--800);
 }
 .banner.dark::before, .banner.dark-mode::before {
   background-color: var(--charcoal--800);
@@ -164,7 +195,7 @@
 }
 .banner.dark p.banner__body, .banner.dark-mode p.banner__body {
   color: var(--transparent--800);
-  text-shadow: -1px 1px 0 var(--gray--800), 1px 1px 0 var(--gray--800), 1px -1px 0 var(--gray--800), -1px -1px 0 var(--gray--800);
+  text-shadow: -1px 1px 0 var(--charcoal--800), 1px 1px 0 var(--charcoal--800), 1px -1px 0 var(--charcoal--800), -1px -1px 0 var(--charcoal--800);
 }
 .banner__content {
   display: flex;
@@ -186,7 +217,7 @@
 @media (max-width: 575.98px) {
   .banner__title {
     font-size: 0.875rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
     font-weight: 700;
   }
 }
@@ -205,14 +236,15 @@
   background-position-y: center;
   background-size: contain;
   background-position-x: 100%;
-  background-size: contain;
-  background-position-x: calc(100% - 1rem);
 }
 .banner--key-to-icons p {
   text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
 }
-.banner--key-to-icons .banner__content {
-  padding-right: 48px;
+@media (min-width: 576px) {
+  .banner--key-to-icons {
+    background-size: contain;
+    background-position-x: calc(100% - 1rem);
+  }
 }
 .banner--transparency {
   background-image: url("https://www.octranspo.com/images/files/banners/banner_transparency-test.svg");
@@ -241,7 +273,7 @@
   }
 }
 .banner--new-ways-to-bus p, .banner--nwtb p {
-  text-shadow: -1px 1px 0 var(--gray--800), 1px 1px 0 var(--gray--800), 1px -1px 0 var(--gray--800), -1px -1px 0 var(--gray--800);
+  text-shadow: -1px 1px 0 var(--charcoal--800), 1px 1px 0 var(--charcoal--800), 1px -1px 0 var(--charcoal--800), -1px -1px 0 var(--charcoal--800);
 }
 .banner--new-ways-to-bus p.banner__title, .banner--nwtb p.banner__title {
   color: #fff;
@@ -252,28 +284,21 @@
 .banner--new-ways-to-bus .banner__content, .banner--nwtb .banner__content {
   width: 100%;
 }
-@media (min-width: 768px) {
-  .banner--new-ways-to-bus .banner__content, .banner--nwtb .banner__content {
-    width: 100%;
-  }
-}
-.banner--line2-4 .banner__content, .banner--line1 .banner__content, .banner--line1-3 .banner__content, .banner--key-to-icons .banner__content, .banner--nwtb .banner__content {
-  padding-right: 48px;
-}
 .banner--line2-4, .banner--line1, .banner--line1-3 {
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: bottom -6rem right -5rem;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 575.98px) {
   .banner--line2-4, .banner--line1, .banner--line1-3 {
     background-position: bottom -10vw right 0px;
     background-size: 100%;
     padding-bottom: 4rem;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   .banner--line2-4 .banner__content, .banner--line1 .banner__content, .banner--line1-3 .banner__content {
+    width: 100%;
     padding-right: 0;
   }
 }

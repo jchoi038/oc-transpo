@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9"
+        title="octranspo-main-css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../dist/custom-style.css" />
+
+    <title>Our stations</title>
+</head>
+
+<body class="main-content" id="top">
+    <h1>Template guide</h1>
+
+    <!-- copy below -->
+    <section><p>⬆️ Above h1 station banner is <strong>auto generated</strong> depending on page title text content</p>
+    <p>h1 of "Template Guide" is currently replicating data for Bayview station</p></section>
+
+    <section>
+        <h2>Prebuilt pages</h2>
+        <p><strong>Check out the station pages for the Line 2 & 4 launch to see how the data is dynamically populated for the each station</strong></p>
+        
+        <section id="line2Stns">
+        </section>
+        <section id="line4Stns">
+        </section>
+        <div class="note">
+            <p>*Baseline will become&nbsp;Algonquin</p>
+            <p>**Carling will become Dow&#39;s Lake</p>
+        </div>
+    </section>
+
+    
+
+
+    <!-- New style guide component for station banner for use in station pages-->
+    <link href="/images/files/dist/custom-style.css" rel="stylesheet" />
+    <section>
+        <p><strong>Overview:</strong></p>
+        <p>These instructions will allow styling of the page h1 and automatically add the corret set of icons for the
+            station
+            (lines icons (if applicable) , train icon (if applicable), and bus icon (if applicable))</p>
+        <p><strong>How to use:</strong></p>
+        <p>1. Change The title field to a station name (This is important because the title will be set to the text
+            content
+            of
+            the h1 which will be used in looking up data files with the js script)</p>
+        <p>2. Add the following style sheet link to the top of the body:</p>
+        <p class="code">&lt;link href=&quot;/images/files/dist/custom-style.css&quot; rel=&quot;stylesheet&quot; /&gt;</p>
+        <p>3. Add the following js script to the end of the body:&nbsp;&nbsp;</p>
+        <p class="code">&lt;script src=&quot;/images/files/app/stations-template.js&quot;&gt;&lt;/script&gt;&lt;script
+            src=&quot;/images/files/app/stations-template.js&quot;&gt;&lt;/script&gt;</p>
+        <div class="note note-type__warning">
+            This component only works on wide page templates
+        </div>
+    </section>
+
+    <section>
+        <h2>Quick links (Auto generated)</h2>
+        <div class="example">
+            <div id="quicklinks-container" class="grid grid-5-4-2-2"></div>
+        </div>
+        <pre>&lt;div id&#x3D;&quot;quicklinks-container&quot; class&#x3D;&quot;grid grid-5-4-2-2&quot;&gt;&lt;&#x2F;div&gt;</pre>
+        <p class="note">All quick link cards are all auto generated depending on station data & page sections</p>
+        <ul>
+            <li>
+                <p>Schedules card generated<strong> IF </strong>station schedule link exists in stations.json</p>
+            </li>
+            <li>
+                <p>Station layout card generated<strong> IF </strong>section with &lt;section&gt;id="section_station-layout" &lt;/section&gt; </p>
+            </li>
+            <li>
+                <p>Amenities card generated<strong> IF </strong>section with &lt;section&gt;id="amenities" &lt;/section&gt; </p>
+            </li>
+            <li>
+                <p>Boarding locations card generated<strong> IF </strong>section with &lt;section&gt;id="stops" &lt;/section&gt; exists AND<strong> IF </strong>Train or Bus stops exist in stopRecipes.json</p>
+            </li>
+            <li>
+                <p>360-Deg tour card generated<strong> IF </strong>section with &lt;section&gt;id="360" &lt;/section&gt; exists AND<strong> IF </strong>360 url exist in stations.json</p>
+            </li>
+            <li>
+                <p>Waht's nearby card generated<strong> IF </strong>section with &lt;section&gt;id="nearby" &lt;/section&gt; exists on page</p>
+            </li>
+            <li>
+                <p>Parking card generated<strong> IF </strong>section with &lt;section&gt;id="360" &lt;/section&gt; exists AND<strong> IF </strong>360 url exist in stations.json</p>
+            </li>
+        </ul>
+    </section>
+
+    <div class="example">
+        <div id="section_station-layout" class="grid--2col">
+            <p><img class="station-layout-map"  id="zoomPanObj"/></p>
+        </div>
+    </div>
+    <pre></pre>
+    
+    <h2>360 Tour section (Auto generated)</h2>
+    <div class="example">
+        <section class="sub-section" id="360"></section>
+    </div>
+    <pre>&lt;section class&#x3D;&quot;sub-section&quot; id&#x3D;&quot;360&quot;&gt;&lt;&#x2F;section&gt;</pre>
+
+    <section class="section example" id="amenities">
+        <div class="grid--3col">
+            <ul id="fares-made-easy-card-content">
+                <li>
+                    <p>Insert custom content in bulleted list: Fares made easy card</p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: Fares made easy card</p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: Fares made easy card</p>
+                </li>
+            </ul>
+            <ul id="wayfinding-card-content">
+                <li>
+                    <p>Insert custom content in bulleted list: Wayfinding card</p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: Wayfinding card</p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: Wayfinding card</p>
+                </li>
+            </ul>
+            <ul id="accessibiliy-card-content">
+                <li>
+                    <p>Insert custom content in bulleted list: accessibility card </p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: accessibility card </p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: accessibility card </p>
+                </li>
+            </ul>
+            <ul id="cyclist-card-content">
+                <li>
+                    <p>Insert custom content in bulleted list: cyclist amenities card </p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: cyclist amenities card </p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: cyclist amenities card </p>
+                </li>
+            </ul>
+            <ul id="safety-card-content">
+                <li>
+                    <p>Insert custom content in bulleted list: safety and security card</p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: safety and security card</p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: safety and security card</p>
+                </li>
+            </ul>
+            <ul id="comfort-card-content">
+                <li>
+                    <p>Insert custom content in bulleted list: comfort and convenience card</p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: comfort and convenience card</p>
+                </li>
+                <li>
+                    <p>Insert custom content in bulleted list: comfort and convenience card</p>
+                </li>
+            </ul>
+        </div>
+        <pre>
+&lt;ul id&#x3D;&quot;fares-made-easy-card-content&quot;&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ul id&#x3D;&quot;wayfinding-card-content&quot;&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ul id&#x3D;&quot;accessibiliy-card-content&quot;&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ul id&#x3D;&quot;cyclist-card-content&quot;&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ul id&#x3D;&quot;safety-card-content&quot;&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ul id&#x3D;&quot;comfort-card-content&quot;&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+        </pre>
+    </section>
+
+    <section>
+
+        <h2>Station boarding info & NWTB Boarding locations (Auto generated)</h2>
+
+        <div class="grid--3col example">
+            <div></div>
+            <div id="stops">
+                <div class="sub-section" id="train-boarding-info"></div>
+                <div class="sub-section" id="bus-boarding-info"></div>
+            </div>
+        </div>
+        <strong>
+            <p>How to use:</p>
+        </strong>
+        <p>Add the following div in the section of the page you would wish the train boarding info to be populated</p>
+
+        <pre>&lt;div class=&quot;sub-section&quot; id=&quot;train-boarding-info&quot;&gt;&lt;/div&gt;&nbsp;</pre>
+        <pre>&lt;div class&#x3D;&quot;sub-section&quot; id&#x3D;&quot;bus-boarding-info&quot;&gt;&lt;&#x2F;div&gt;</pre>
+
+    </section>
+
+    <section>
+        <h2>Station hero banner (Auto generated)</h2>
+        <div id="station-hero-banner" class="hero-banner">
+            <img id="station-hero-img">
+        </div>
+        <strong>
+            <p>How to use:</p>
+        </strong>
+        <p>Add the following div to the top of the body (below the styles link)</p>
+        <pre>
+        &lt;div id&#x3D;&quot;station-hero-banner&quot; class&#x3D;&quot;hero-banner&quot;&gt;
+        &lt;img id&#x3D;&quot;station-hero-img&quot;&gt;
+        &lt;&#x2F;div&gt;</pre>
+        <p>Hero banner image & contents of station information card is dynamically populated depending on the station
+        </p>
+        <p>the src of the hero banner background image is dynamically populated depending on the station</p>
+        <p>This src is from JSON file: data/stations.JSON any changes can be manipulated by changing the data in this
+            JSON
+            file
+        </p>
+        <div class="note note-type__warning">
+            This component only works on wide page templates
+        </div>
+        <div class="note note-type__warning">
+            Some station do not have hero banners yet assigned.
+        </div>
+    </section>
+
+    <section>
+        <h2>Station info card (Auto generated)</h2>
+
+            <div class="grid--3col example">
+                <div></div>
+                <div id="station-info-card" class="card station-info-card">
+                    <div id="station-info-card-title" class="card__title"></div>
+                    <ul id="station-info-card-body" class="card__body">
+                    </ul>
+                </div>
+            </div>
+        <pre>
+&lt;div id&#x3D;&quot;station-info-card&quot; class&#x3D;&quot;card station-info-card&quot;&gt;
+    &lt;div id&#x3D;&quot;station-info-card-title&quot; class&#x3D;&quot;card__title&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;ul id&#x3D;&quot;station-info-card-body&quot; class&#x3D;&quot;card__body&quot;&gt;
+    &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt; </pre>
+    </section>
+
+    <div class="example">
+        <section class="section" id="nearby">
+            <div class="flex" id="nearby-content">
+                <ul id="within-5km-card-content">
+                    <li>
+                        <p>Place "places within 5km" content in bulleted list</p>
+                    </li>
+                    <li>
+                        <p>Place "places within 5km" content in bulleted list</p>
+                    </li>
+                    <li>
+                        <p>Place "places within 5km" content in bulleted list</p>
+                    </li>
+                </ul>
+                <ul id="also-nearby-card-content">
+                    <li>
+                        <p>Place "also near by content" in bulleted list</p>
+                    </li>
+                    <li>
+                        <p>Place "also near by content" in bulleted list</p>
+                    </li>
+                    <li>
+                        <p>Place "also near by content" in bulleted list</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <pre>
+&lt;section class&#x3D;&quot;section&quot; id&#x3D;&quot;nearby&quot;&gt;
+    &lt;div class&#x3D;&quot;flex&quot; id&#x3D;&quot;nearby-content&quot;&gt;
+        &lt;ul id&#x3D;&quot;within-5km-card-content&quot;&gt;
+            &lt;li&gt;
+                &lt;p&gt;Place &quot;places within 5km&quot; content in bulleted list&lt;&#x2F;p&gt;
+            &lt;&#x2F;li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Place &quot;places within 5km&quot; content in bulleted list&lt;&#x2F;p&gt;
+            &lt;&#x2F;li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Place &quot;places within 5km&quot; content in bulleted list&lt;&#x2F;p&gt;
+            &lt;&#x2F;li&gt;
+        &lt;&#x2F;ul&gt;
+        &lt;ul id&#x3D;&quot;also-nearby-card-content&quot;&gt;
+            &lt;li&gt;
+                &lt;p&gt;Place &quot;also near by content&quot; in bulleted list&lt;&#x2F;p&gt;
+            &lt;&#x2F;li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Place &quot;also near by content&quot; in bulleted list&lt;&#x2F;p&gt;
+            &lt;&#x2F;li&gt;
+            &lt;li&gt;
+                &lt;p&gt;Place &quot;also near by content&quot; in bulleted list&lt;&#x2F;p&gt;
+            &lt;&#x2F;li&gt;
+        &lt;&#x2F;ul&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;section&gt;
+    </pre>
+
+    <div class="example">
+        <section class="section" id="explore">
+            <h2>Learn more</h2>
+            <div id="station-about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quasi reprehenderit
+                asperiores nam commodi ipsa pariatur possimus tenetur amet, consectetur voluptas dolorem neque culpa
+                voluptatem? Doloremque qui delectus repellendus quis.
+            </div>
+            <div class="quick-facts banner">
+                <h3>Station facts & updates</h3>
+                <ul>
+                    <li class="update">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        <p> </p>
+                    </li>
+                    <li class="update">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        <p> </p>
+                    </li>
+                    <li class="fact">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        <p> </p>
+                    </li>
+                    <li class="fact">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        <p> </p>
+                    </li>
+                    <li class="update">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        <p> </p>
+                    </li>
+                    <li class="fact">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        <p> </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <pre>
+        &lt;section class&#x3D;&quot;section&quot; id&#x3D;&quot;explore&quot;&gt;
+            &lt;h2&gt;Learn more&lt;&#x2F;h2&gt;
+            &lt;div id&#x3D;&quot;station-about&quot;&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quasi reprehenderit
+                asperiores nam commodi ipsa pariatur possimus tenetur amet, consectetur voluptas dolorem neque culpa
+                voluptatem? Doloremque qui delectus repellendus quis.
+            &lt;&#x2F;div&gt;
+            &lt;div class&#x3D;&quot;quick-facts banner&quot;&gt;
+                &lt;h3&gt;Station facts &amp; updates&lt;&#x2F;h3&gt;
+                &lt;ul&gt;
+                    &lt;li class&#x3D;&quot;update&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        &lt;p&gt; &lt;&#x2F;p&gt;
+                    &lt;&#x2F;li&gt;
+                    &lt;li class&#x3D;&quot;update&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        &lt;p&gt; &lt;&#x2F;p&gt;
+                    &lt;&#x2F;li&gt;
+                    &lt;li class&#x3D;&quot;fact&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        &lt;p&gt; &lt;&#x2F;p&gt;
+                    &lt;&#x2F;li&gt;
+                    &lt;li class&#x3D;&quot;fact&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        &lt;p&gt; &lt;&#x2F;p&gt;
+                    &lt;&#x2F;li&gt;
+                    &lt;li class&#x3D;&quot;update&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        &lt;p&gt; &lt;&#x2F;p&gt;
+                    &lt;&#x2F;li&gt;
+                    &lt;li class&#x3D;&quot;fact&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis eaque odit minima
+                        repellat perspiciatis aliquid.
+                        &lt;p&gt; &lt;&#x2F;p&gt;
+                    &lt;&#x2F;li&gt;
+                &lt;&#x2F;ul&gt;
+            &lt;&#x2F;div&gt;
+        &lt;&#x2F;section&gt;
+    </pre>
+
+
+
+    <script src="/images/files/app/stations.js"></script>
+
+
+    <!-- copy above -->
+
+    <!-- <script src="/app/js/stations-template.js"></script> -->
+    <script src="/app/js/stations.js"></script>
+
+
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 /* Banner styles start */
-/*Last updated: 2024/08/07 2:38pm*/
+/*Last updated: 2024/08/08 3:09 pm*/
 
 // reset from OC styles
 .banner__title,
@@ -8,18 +8,17 @@
 }
 /*reviewed below*/
 
-
 // body (description) padding, margins
-.banner__body{
-    &:not(:last-child){
-        margin-bottom: 2rem;
-        @include media-breakpoint-down(xs) {
+.banner__body {
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+		@include media-breakpoint-down(xs) {
 			margin-bottom: 0.5em;
 		}
-    }
+	}
 }
 
-.banner .btn{
+.banner .btn {
 	margin-bottom: 0;
 	transition: none;
 	transition: background-color 0.1s ease-in-out;
@@ -33,38 +32,49 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		}
-
-
+	}
 }
 
 .banner {
-    @include media-breakpoint-up(sm) {
-        min-height: 160px;
-    }
-	
 	@include media-breakpoint-down(xs) {
 		box-shadow: $elevation1;
 		transition: $transition-1;
-        &:hover{
+		&:hover {
 			box-shadow: $elevation2;
 		}
-    }
+	}
 
-	.rt{
+	.rt {
 		text-shadow: none;
 	}
-	
+}
+
+// padding content padding & width
+.banner {
+	.banner__content {
+		padding-right: 3rem;
+		@include media-breakpoint-up(md) {
+			max-width: 80%;
+		}
+	}
+
+	&.text-banner {
+		.banner__content {
+			padding-right: 0;
+		}
+	}
 }
 
 //custom image backgrounds
 
 // general
-.banner{
-    padding: 1rem;
-    @include media-breakpoint-down(xs) {
-        padding: 0.75rem;
-    }
+.banner,
+.station-banner,
+.hero-banner {
+	padding: 1.25rem;
+	@include media-breakpoint-down(xs) {
+		padding: 0.75rem;
+	}
 	gap: 1rem;
 	@include media-breakpoint-down(sm) {
 		gap: 0.25rem;
@@ -72,24 +82,27 @@
 	position: relative;
 	border-radius: 0.5rem;
 	overflow: hidden;
-	margin: 0  0 1rem 0;
-	background-color: white;
-	box-shadow: $banner-shadow;
+}
 
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		z-index: -1;
-	}
-    
+.banner::before,
+.station-banner::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
 }
 
 
+
+.banner {
+	margin: 0 0 1rem 0;
+	background-color: white;
+	box-shadow: $banner-shadow;
+}
 
 //not reviewed below
 .icon-banner {
@@ -103,11 +116,9 @@
 		// box-shadow: $general-shadow1;
 		@include media-breakpoint-down(sm) {
 			width: 2.25rem;
+			// to compensate from container padding offests 27.5px - 16px
+			margin-left: -11.5px;
 		}
-	}
-
-	.banner__content {
-		padding-right: 42px;
 	}
 }
 
@@ -115,6 +126,7 @@
 	display: flex;
 	padding: 0rem;
 	.banner__content {
+		max-width: 100%;
 		padding: 1rem;
 		flex-grow: 1;
 		display: flex;
@@ -127,8 +139,8 @@
 		min-width: 160px;
 		width: 160px;
 		@include media-breakpoint-down(xs) {
-			min-width: 130px;
-			width: 130px;
+			min-width: 100px;
+			width: 100px;
 		}
 	}
 }
@@ -138,28 +150,257 @@
 	object-fit: cover;
 }
 
-.banner {
-	
-	&.fullwidth,
-	&.stretch {
-		@include media-breakpoint-up(sm) {
-			overflow: visible;
-			border: none;
-			border-radius: 0;
-			padding-left: 0;
-			padding-right: 0;
-			box-shadow: none;
-			&::before {
-				box-shadow: $banner-shadow;
-				// position: absolute;
-				background-color: inherit;
-				width: 1000rem;
-				height: 100%;
-				top: 0;
-				bottom: 0;
-				left: -500rem;
-			}
+//station banner breakpoints
+.quick-facts::before,
+.banner.stretch::before,
+.banner.fullwidth::before,
+.station-banner::before {
+	//mobile sizes
+	margin-left: calc(-15px - 27.5px);
+	width: 100vw;
+}
+
+.hero-banner img {
+	//mobile sizes
+	margin-left: calc(-30px);
+	width: 100vw;
+}
+
+.station-banner,
+.quick-facts {
+	@include media-breakpoint-down(sm) {
+		
+		span.rt {
+			text-align: left;
+			font-size: 0.6em;
+			// font-weight: 700;
+			line-height: 1.15em;
 		}
+		img.inline-icon {
+			height: 1.625rem;
+		}
+		& > span:first-of-type {
+			margin-right: 1rem;
+			line-height: 1.15;
+			margin-left: -15px;
+			font-size: 1.75rem;
+		}
+
+		span.station-banner__title{
+			font-size: 1.25rem;
+		}
+
+		& > *:last-child {
+			margin-right: -15px;
+		}
+	}
+}
+
+// station banner styles
+
+.station-banner,
+.hero-banner {
+	overflow: visible;
+	border: none;
+	border-radius: 0;
+	padding-left: 0;
+	padding-right: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+	&::before {
+		box-shadow: none;
+		background-color: inherit;
+	}
+}
+
+.station-banner::before,
+.hero-banner img {
+	box-shadow: none;
+	background-color: inherit;
+}
+
+.station-banner {
+	background-color: #231F20;
+	color: #fff;
+	padding-top: 0;
+	padding-bottom: 0;
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+
+	&__title{
+		text-align: center;
+		margin-right: auto;
+		box-sizing: border-box;
+		flex-grow: 1;
+	}
+
+	.rt{
+		margin-right: 0.125em;
+	}
+
+
+	.logo{
+		width: 2em;
+		@include media-breakpoint-down(sm) {
+				width: 1.5em;
+				margin-left: calc(-27.5px + 16px);
+		}
+	}
+	&-lines {
+		padding-left: auto;
+		display: inline;
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-right: 12.5%;
+	}
+}
+
+
+.hero-banner img{
+	width: 100vw !important;
+	min-width: 100vw !important;
+}
+
+.quick-facts::before,
+.banner.stretch::before,
+.banner.fullwidth::before{
+	width: calc(100vw - 2px) !important;
+	min-width: calc(100vw - 2px) !important;
+}
+
+
+
+.hero-banner img,
+.quick-facts::before,
+.banner.stretch::before,
+.banner.fullwidth::before {
+
+	@include media-breakpoint-up(sm) {
+		//  > 576
+
+		width: calc(100vw - 1px) !important;
+		min-width: calc(100vw - 1px) !important;
+	}
+	@include media-breakpoint-up(md) {
+		// > > 768
+
+		// To compensate for pre-existing page template styles
+		width: calc(100vw - 10px) !important;
+		min-width: calc(100vw - 10px) !important;
+	}
+	@include media-breakpoint-up(lg) {
+		// > 992 px
+
+		// To compensate for pre-exisinting page template styles
+		width: calc(100vw - 16px) !important;
+		min-width: calc(100vw - 16px) !important;
+	}
+	@include media-breakpoint-up(xl) {
+		// > 1200 px
+
+		// To compensate for pre-exisinting page template styles
+		width: calc(100vw - 16px) !important;
+		min-width: calc(100vw - 16px) !important;
+	}
+	@media (min-width: 1400px) {
+		// > 1400px
+
+		width:0 calc(100vw - 10px) !important;
+		min-width:0 calc(100vw - 10px) !important;
+	}
+}
+
+// .stretch is compatible only with the full with template structions (i.e. fares template)
+
+.station-banner,
+.hero-banner,
+.quick-facts,
+.banner.stretch,
+.banner.fullwidth {
+	@include media-breakpoint-up(sm) {
+		//  > 576
+		overflow: visible;
+		border: none;
+		border-radius: 0;
+		padding-left: 0;
+		padding-right: 0;
+		box-shadow: none;}
+	}
+
+	
+.station-banner::before,
+.quick-facts::before,
+.banner.stretch::before,
+.banner.fullwidth::before {
+	@include media-breakpoint-up(sm) {
+		//  > 576
+		
+			box-shadow: $banner-shadow;
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+			background-color: inherit;
+			width: calc(100vw - 11px);
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			// To compensate for pre-existing page template styles
+			margin-left: calc((-100vw + 540px) / 2 - 27.5px);
+			padding-left: -2rem;
+		
+	}
+
+}
+
+
+
+.station-banner::before,
+.hero-banner img,
+.quick-facts::before,
+.banner.stretch::before,
+.banner.fullwidth::before {
+	@include media-breakpoint-up(sm) {
+		//  > 576
+		
+			width: calc(100vw - 11px);
+			// To compensate for pre-existing page template styles
+			margin-left: calc((-100vw + 540px) / 2 - 27.5px);
+			padding-left: -2rem;
+		
+	}
+	@include media-breakpoint-up(md) {
+		// > > 768
+		 
+			// To compensate for pre-existing page template styles
+			width: calc(100vw - 10px);
+			margin-left: calc((-100vw + 720px) / 2 - 27.5px);
+		
+	}
+	@include media-breakpoint-up(lg) {
+		// > 992 px
+		 
+			// To compensate for pre-exisinting page template styles
+			width: calc(100vw - 8px);
+			margin-left: calc(-12.5vw - 27.5px);
+		
+	}
+	@include media-breakpoint-up(xl) {
+		// > 1200 px
+		 
+			// To compensate for pre-exisinting page template styles
+			width: calc(100vw - 9px);
+
+			margin-left: calc(-12.5vw - 27.5px);
+		
+	}
+	@media (min-width: 1400px) {
+		// > 1400px
+		 
+			width: calc(100vw - 2px);
+
+			// To compensate for pre-exisinting page template styles
+			//calc (100vw -1440 px = remaining width)/2 - (12.5% of max width of 1440px) - (margin left on container)
+			margin-left: calc((-100vw + 1440px) / 2 - (1440px * 0.125) - 27.5px);
 		
 	}
 
@@ -169,7 +410,6 @@
 		p,
 		.btn {
 			text-shadow: $text-shadow;
-
 		}
 		&::before {
 			background-color: var(--charcoal--800);
@@ -179,7 +419,7 @@
 		}
 		p.banner__body {
 			color: var(--transparent--800);
-            text-shadow: $text-shadow;
+			text-shadow: $text-shadow;
 		}
 	}
 
@@ -193,10 +433,7 @@
 		display: flex;
 		gap: 0.5rem;
 		flex-wrap: wrap;
-
 	}
-
-
 
 	&__title {
 		font-size: $ui-title-size-md;
@@ -206,8 +443,8 @@
 		margin-bottom: 1em;
 		@include media-breakpoint-down(xs) {
 			font-size: $ui-title-size-xs;
-			margin-bottom: 0.5em;
-            font-weight: 700;
+			margin-bottom: 0.75em;
+			font-weight: 700;
 		}
 	}
 	&__body {
@@ -216,13 +453,11 @@
 			font-size: $ui-body-size-xs;
 		}
 	}
-
 }
 
 // custom banners
 
-.banner{
-	
+.banner {
 	&--key-to-icons {
 		background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_2.svg");
 		background-repeat: no-repeat;
@@ -232,12 +467,9 @@
 		p {
 			text-shadow: $text-shadow-white;
 		}
-		@include media-breakpoint-up(xs) {
+		@include media-breakpoint-up(sm) {
 			background-size: contain;
 			background-position-x: calc(100% - 1rem);
-		}
-		.banner__content {
-			padding-right: 48px;
 		}
 	}
 
@@ -255,9 +487,12 @@
 
 	&--new-ways-to-bus,
 	&--nwtb {
+		color: white !important;
+		box-shadow: none;
+		text-shadow: $text-shadow;
 		background-image: url("https://www.octranspo.com/images/files/banners/banner_new-ways-to-bus.svg");
 		background-repeat: no-repeat;
-        background-size: cover;
+		background-size: cover;
 		background-position-x: 80%;
 		background-position-y: 50%;
 		background-color: var(--nwtb--800);
@@ -276,35 +511,34 @@
 			color: var(--transparent--800);
 		}
 
-
 		.banner__content {
 			width: 100%;
-			@include media-breakpoint-up(md) {
-				width: 100%;
-			}
 		}
 	}
-    &--line2-4, &--line1, &--line1-3, &--key-to-icons, &--nwtb{
-    .banner__content {
-        padding-right: 48px;
-    }
-}
-    &--line2-4, &--line1, &--line1-3{
-
-        background-size: 90%;
+	&--line2-4,
+	&--line1,
+	&--line1-3,
+	&--key-to-icons,
+	&--nwtb {
+	}
+	&--line2-4,
+	&--line1,
+	&--line1-3 {
+		background-size: 90%;
 		background-repeat: no-repeat;
-		background-position: bottom -6rem right -5rem ;
-		@include media-breakpoint-down(md) {
-            background-position: bottom -10vw right 0px;
+		background-position: bottom -6rem right -5rem;
+		@include media-breakpoint-down(xs) {
+			background-position: bottom -10vw right 0px;
 			background-size: 100%;
 			padding-bottom: 4rem;
 		}
-        .banner__content{
-            @include media-breakpoint-down(sm) {
-                padding-right: 0;
-            }
-        }
-    }
+		.banner__content {
+			@include media-breakpoint-down(xs) {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+	}
 
 	&--line2-4 {
 		background-image: url("https://www.octranspo.com/images/files/line-2-2.png");
@@ -321,5 +555,84 @@
 		background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_dark.svg");
 	}
 }
+
+// section banners
+
+.quick-facts.banner {
+	box-shadow: none;
+	display: block;
+	&::before {
+		box-shadow: none;
+	}
+	background-color: var(--line4--50);
+	ul {
+		margin: 0;
+		list-style-type: none;
+		display: flex;
+		gap: 0.5rem;
+		width: 100%;
+		overflow-x: scroll;
+		padding-left: 0;
+	}
+	ul > li {
+		flex: 0 0 240px;
+		border-radius: 0.5rem;
+		background-color: var(--transparent--800);
+		padding: 1rem;
+		line-height: 1.5em;
+	}
+}
+
+.hero-banner {
+	box-shadow: none;
+	overflow-y: clip;
+	position: relative;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	display: flex;
+	margin-bottom: 1rem;
+	min-height: 480px;
+	align-items: center;
+	@include media-breakpoint-up(sm) {
+		
+	}
+	img {
+		box-shadow: none;
+		min-height: 100%;
+		height: -webkit-fill-available;
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		width: fit-content;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-y: center;
+		background-position-x: center;
+
+		&::after {
+			background: rgba(0, 0, 0, 0.25);
+			background-size: cover;
+			background-blend-mode: multiply;
+			background-repeat: no-repeat;
+		}
+			@media (min-width: 1400px) {
+					margin-left: calc((-100vw + 1440px) / 2 - 180px - 20px)
+				
+					
+			}
+		
+
+	}
+	.station-info-card {
+		width: 100%;
+		@include media-breakpoint-up(sm) {
+			flex: 0 0 400px;
+		}
+	}
+}
+
+
 
 /* END Banner styles */

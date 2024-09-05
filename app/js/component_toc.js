@@ -1,7 +1,6 @@
 /* toc start */
 let toc = document.getElementsByClassName("toc");
 let sections = document.getElementsByClassName("section");
-console.log(sections)
 // toc.className = "toc--list";
 
 if (toc) {
@@ -11,7 +10,12 @@ if (toc) {
 
 	let toc_title = document.createElement("p");
 	toc_title.className = "toc__title";
-	toc_title.textContent = "On this page:";
+
+	if (checkPageLanguage() === "french"){
+		toc_title.textContent = "Sur cette page";
+	} else {
+		toc_title.textContent = "On this page";
+	}
 	toc_container.appendChild(toc_title);
 
 
@@ -67,6 +71,15 @@ if (toc) {
 	});
 }
 
+
+function checkPageLanguage(){
+	currentUrl = window.location.href;
+	console.log(currentUrl)
+	if(currentUrl.indexOf("/fr/") != -1){
+		return ("french")
+	}
+	return ("english")
+}
 
 
 /* end toc */

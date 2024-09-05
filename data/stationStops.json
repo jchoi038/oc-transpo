@@ -1,6 +1,7 @@
 [
         {
         "id" : "AIR",
+        "station_560": "3039",
         "station_name" : "Airport",
         "station_desc" : "lorem ipsum",
         "station_type" : {
@@ -12,17 +13,14 @@
         },
         "stops" : [
             {
-                "stop_name":"...bound platform ",
-                "routes": "4 South Keys"
-            },
-            {
-                "stop_name":"...bound platform",
-                "routes": "4 Airport"
+                "stop_name":"AIRPORT / AÉROPORT",
+                "routes" : "N98 Rideau [BOW]"
             }
         ]
     },
     {
         "id" : "BAR",
+        "station_560": "3045",
         "station_name" : "Barrhaven Centre",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -45,6 +43,7 @@
     },
     {
         "id" : "BAS",
+        "station_560": "3017",
         "station_name" : "Baseline (Algonquin)",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -87,6 +86,7 @@
     },
     {
         "id" : "BYS",
+        "station_560": "3050",
         "station_name" : "Bayshore",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -117,6 +117,7 @@
     },
     {
         "id" : "BAY",
+        "station_560": "3060",
         "station_name" : "Bayview",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -127,22 +128,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
-            {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            },
             {
                 "stop_name" : "Bayview A",
                 "routes" : "11 Bayshore [BLU], 12 Tunney's Pasture [BLU], 13 Tunney's Pasture [GOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
@@ -155,6 +140,7 @@
     },
     {
         "id" : "BEA",
+        "station_560": "3049",
         "station_name" : "Beatrice",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -177,6 +163,7 @@
     },
     {
         "id" : "BIL",
+        "station_560": "3034",
         "station_name" : "Billings Bridge",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -205,7 +192,7 @@
             },
             {
                 "stop_name" : "Billings Bridge 3c (E)",
-                "routes" : "600s School Routes Only"
+                "routes" : "600s School Routes Only [GOW]"
             },
             {
                 "stop_name" : "Billings Bridge 4b",
@@ -223,6 +210,7 @@
     },
     {
         "id" : "BLA",
+        "station_560": "3027",
         "station_name" : "Blair",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -233,14 +221,7 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
+            
             {
                 "stop_name" : "Blair A",
                 "routes" : "15 Parliament / Parlement [GOW], 24 Chapel Hill/ Compass [GRY], 24 St-Laurent [GRY], 25 Wateridge [BLU], 125 Aviation Museum / Musée de l’Aviation [GOW], 222 Vars [PUR], 228 Navan-Sarsfield [PUR]"
@@ -273,6 +254,7 @@
     },
     {
         "id" : "BOW",
+        "station_560": "3067",
         "station_name" : "Bowesville",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -283,18 +265,12 @@
             "bus" : false
         },
         "stops" : [
-            {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            }
+            
         ]
     },
     {
         "id" : "CAN",
+        "station_560": "3059",
         "station_name" : "Canadian Tire Centre",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -317,6 +293,7 @@
     },
     {
         "id" : "CAR",
+        "station_560": "5813",
         "station_name" : "Carleton",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -328,14 +305,6 @@
         },
         "stops" : [
             {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            },
-            {
                 "stop_name" : "Carleton U",
                 "routes" : "7 St-Laurent [BLU], 10 Hurdman [BLU], 48 Hurdman [GRY], 111 Baseline [BOW]"
             }
@@ -343,6 +312,7 @@
     },
     {
         "id" : "CHA",
+        "station_560": "3074",
         "station_name" : "Chapel Hill",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -365,6 +335,7 @@
     },
     {
         "id" : "COR",
+        "station_560": "3065",
         "station_name" : "Corso Italia",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -375,18 +346,12 @@
             "bus" : false
         },
         "stops" : [
-            {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            }
+            
         ]
     },
     {
         "id" : "CYR",
+        "station_560": "3026",
         "station_name" : "Cyrville",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -398,14 +363,6 @@
         },
         "stops" : [
             {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
-            {
                 "stop_name" : "Cyrville / Cummings (C)",
                 "routes" : "N39 Rideau [BOW]"
             }
@@ -413,6 +370,7 @@
     },
     {
         "id" : "DOM",
+        "station_560": "3013",
         "station_name" : "Dominion",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -439,6 +397,7 @@
     },
     {
         "id" : "DOW",
+        "station_560": "3061",
         "station_name" : "Dow's Lake",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -449,18 +408,12 @@
             "bus" : false
         },
         "stops" : [
-            {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            }
+            
         ]
     },
     {
         "id" : "EAG",
+        "station_560": "3055",
         "station_name" : "Eagleson",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -491,6 +444,30 @@
     },
     {
         "id" : "ELM",
+        "station_560": "8813",
+        "station_name" : "Elmvale",
+        "station_desc" : "[insert description]",
+        "station_type" : {
+            "line_1" : false,
+            "line_2" : false,
+            "line_3" : "",
+            "line_4" : false,
+            "bus" : true
+        },
+        "stops" : [
+            {
+                "stop_name" : "Elmvale A",
+                "routes" : "5 Rideau [BLU], 40 Greenboro [BLU], 41 Billings Bridge [BLU], 48 Carleton [GRY], 49 Billings Bridge [GRY]"
+            },
+            {
+                "stop_name" : "Elmvale B",
+                "routes" : "5 Elmvale [BLU], 40 St-Laurent [BLU], 41 St-Laurent [BLU], 48 Hurdman [GRY], 49 Elmvale [GRY]"
+            }
+        ]
+    },
+    {
+        "id" : "ELM",
+        "station_560": "8810 / 8810",
         "station_name" : "Elmvale",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -513,6 +490,7 @@
     },
     {
         "id" : "FAL",
+        "station_560": "3043",
         "station_name" : "Fallowfield",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -535,6 +513,7 @@
     },
     {
         "id" : "GRE",
+        "station_560": "3037",
         "station_name" : "Greenboro",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -545,14 +524,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            },
             {
                 "stop_name" : "Greenboro 1A (B)",
                 "routes" : "6 Rockcliffe [BLU], 40 St-Laurent [BLU], 43 Karsh [GOW], 90 Hurdman [BLU], 92 Walkley / Hurdman [GOW], 98 Hawthorne [BLU], 116 Baseline [GRY], 117 Baseline [GOW], 197 Uplands [GRY], 198 Limebank [GOW], 294 Lester [PUR], 304 Osgoode [GOW]"
@@ -569,6 +540,7 @@
     },
     {
         "id" : "HER",
+        "station_560": "3035",
         "station_name" : "Heron",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -603,6 +575,7 @@
     },
     {
         "id" : "HUR",
+        "station_560": "3023",
         "station_name" : "Hurdman",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -613,14 +586,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "Hurdman A",
                 "routes" : "N39 Place d'Orléans [BOW], N39 Rideau [BOW], N45 Hospital / Hôpital [BOW], N45 Rideau [BOW], N98 Rideau [BOW], N98 Airport / Aéroport [BOW]"
@@ -645,6 +610,7 @@
     },
     {
         "id" : "INN",
+        "station_560": "3057",
         "station_name" : "Innovation",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -667,6 +633,7 @@
     },
     {
         "id" : "IRI",
+        "station_560": "3016",
         "station_name" : "Iris",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -689,6 +656,7 @@
     },
     {
         "id" : "JEA",
+        "station_560": "3070",
         "station_name" : "Jeanne d'Arc",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -731,6 +699,7 @@
     },
     {
         "id" : "LEE",
+        "station_560": "3022",
         "station_name" : "Lees",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -741,14 +710,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "Lees A",
                 "routes" : "10 Main [BLU], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], N45 Rideau [BOW], 56 Tunney's Pasture [GRY], 85 Bayshore [BLU], N98 Rideau [BOW], N98 Airport / Aéroport [BOW]"
@@ -761,6 +722,7 @@
     },
     {
         "id" : "LEI",
+        "station_560": "3041",
         "station_name" : "Leitrim",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -771,14 +733,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            },
             {
                 "stop_name" : "Leitrim A",
                 "routes" : "93 Leitrim [GRY], 94 Leitrim [GOW]"
@@ -791,6 +745,7 @@
     },
     {
         "id" : "LIM",
+        "station_560": "3068",
         "station_name" : "Limebank",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -849,6 +804,7 @@
     },
     {
         "id" : "LIN",
+        "station_560": "3014",
         "station_name" : "Lincoln Fields",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -895,6 +851,7 @@
     },
     {
         "id" : "LON",
+        "station_560": "3046",
         "station_name" : "Longfields",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -917,6 +874,7 @@
     },
     {
         "id" : "LYC",
+        "station_560": "3030",
         "station_name" : "Lycée Claudel",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -939,6 +897,7 @@
     },
     {
         "id" : "LYO",
+        "station_560": "3051",
         "station_name" : "Lyon",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -949,14 +908,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "Lyon A",
                 "routes" : "10 Hurdman [BLU], 12 Tunney's Pasture [BLU], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
@@ -970,6 +921,7 @@
     },
     {
         "id" : "MAC",
+        "station_560": "3000",
         "station_name" : "Mackenzie King",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -992,6 +944,7 @@
     },
     {
         "id" : "MAR",
+        "station_560": "3047",
         "station_name" : "Marketplace",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1015,6 +968,7 @@
     },
     {
         "id" : "MIL",
+        "station_560": "3076",
         "station_name" : "Millennium",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1037,6 +991,7 @@
     },
     {
         "id" : "MOD",
+        "station_560": "3042",
         "station_name" : "Moodie",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1079,6 +1034,7 @@
     },
     {
         "id" : "MOO",
+        "station_560": "3063",
         "station_name" : "Mooney's Bay",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1090,14 +1046,6 @@
         },
         "stops" : [
             {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            },
-            {
                 "stop_name" : "Heron At Mooney's Bay Stn. (A)",
                 "routes" : "88 Hurdman [BLU], 90 Hurdman [BLU], 111 Billings Bridge / Carleton [BLU], 112 Billings Bridge [GRY], 456 Lansdowne [GOW]"
             }
@@ -1105,6 +1053,7 @@
     },
     {
         "id" : "PAR",
+        "station_560": "3052",
         "station_name" : "Parliament",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1115,14 +1064,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "Parliament / Parlement A",
                 "routes" : "6 Rockcliffe [BLU], 7 St-Laurent [BLU], 10 Main [BLU], 11 Waller [BLU], 12 Blair [BLU], 15 Blair [GOW], 17 Wateridge [GOW], 19 Hurdman [GRY], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
@@ -1135,6 +1076,7 @@
     },
     {
         "id" : "PIM",
+        "station_560": "3010",
         "station_name" : "Pimisi",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1145,14 +1087,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "Pimisi A",
                 "routes" : "8 Gatineau [GRY], 13 Gatineau [GOW]"
@@ -1173,6 +1107,7 @@
     },
     {
         "id" : "PIN",
+        "station_560": "3019",
         "station_name" : "Pinecrest",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1199,6 +1134,7 @@
     },
     {
         "id" : "PLA",
+        "station_560": "3028",
         "station_name" : "Place d'Orléans",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1233,6 +1169,7 @@
     },
     {
         "id" : "PLE",
+        "station_560": "3033",
         "station_name" : "Pleasant Park",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1263,6 +1200,7 @@
     },
     {
         "id" : "QUE",
+        "station_560": "3015",
         "station_name" : "Queensway",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1297,6 +1235,7 @@
     },
     {
         "id" : "RID",
+        "station_560": "3009",
         "station_name" : "Rideau",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1307,14 +1246,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "Rideau A",
                 "routes" : "5 Elmvale [BLU], 6 Greenboro [BLU], 7 Carleton [BLU], 12 Tunney's Pasture [BLU], 14 Tunney's Pasture [BLU], 15 Parliament / Parlement [GOW], 17 Parliament / Parlement [GOW], 18 Billings Bridge [GRY], 20 Rideau [GRY], N39 Rideau [BOW], N45 Rideau [BOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW], N98 Rideau [BOW], 450 Lansdowne [GOW]"
@@ -1335,6 +1266,7 @@
     },
     {
         "id" : "RVS",
+        "station_560": "3032",
         "station_name" : "Riverside",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1357,6 +1289,7 @@
     },
     {
         "id" : "RVV",
+        "station_560": "3040",
         "station_name" : "Riverview",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1379,6 +1312,7 @@
     },
     {
         "id" : "SMY",
+        "station_560": "3031",
         "station_name" : "Smyth",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1401,6 +1335,7 @@
     },
     {
         "id" : "SOU",
+        "station_560": "3038",
         "station_name" : "South Keys",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1411,14 +1346,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            },
             {
                 "stop_name":" ",
                 "routes": "4 South Keys"
@@ -1443,6 +1370,7 @@
     },
     {
         "id" : "STL",
+        "station_560": "3025",
         "station_name" : "St-Laurent",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1453,14 +1381,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "St-Laurent A",
                 "routes" : "24 Chapel Hill/ Compass [GRY], 40 Greenboro [BLU], 41 Billings Bridge [BLU], 47 Hawthorne [GOW], 302 Cumberland [GOW], 451 Lansdowne [GOW]"
@@ -1481,6 +1401,7 @@
     },
     {
         "id" : "STR",
+        "station_560": "3044",
         "station_name" : "Strandherd",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1503,6 +1424,7 @@
     },
     {
         "id" : "TRN",
+        "station_560": "3018",
         "station_name" : "Teron",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1525,6 +1447,7 @@
     },
     {
         "id" : "TRR",
+        "station_560": "3058",
         "station_name" : "Terry Fox",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1555,6 +1478,7 @@
     },
     {
         "id" : "TRE",
+        "station_560": "3024",
         "station_name" : "Tremblay",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1565,14 +1489,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "Tremblay / Via Rail ( A )",
                 "routes" : "N39 Place d'Orléans [BOW]"
@@ -1585,6 +1501,7 @@
     },
     {
         "id" : "TRI",
+        "station_560": "3029",
         "station_name" : "Trim",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1607,6 +1524,7 @@
     },
     {
         "id" : "TUN",
+        "station_560": "3011",
         "station_name" : "Tunney's Pasture",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1617,14 +1535,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
             {
                 "stop_name" : "Tunney's Pasture A",
                 "routes" : "256 Bridlewood [PUR], 265 Terry Fox [PUR]"
@@ -1657,6 +1567,7 @@
     },
     {
         "id" : "UOT",
+        "station_560": "3021",
         "station_name" : "uOttawa",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1667,26 +1578,12 @@
             "bus" : false
         },
         "stops" : [
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            },
-            {
-                "stop_name":"Westbound platform",
-                "routes": "1 Tunney's Pasture"
-            },
-            {
-                "stop_name":"Eastbound platform",
-                "routes": "1 Blair"
-            }
+            
         ]
     },
     {
         "id" : "UPL",
+        "station_560": "3069",
         "station_name" : "Uplands",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1709,6 +1606,7 @@
     },
     {
         "id" : "WAL",
+        "station_560": "3036",
         "station_name" : "Walkley",
         "station_desc" : "[insert description]",
         "station_type" : {
@@ -1719,14 +1617,6 @@
             "bus" : true
         },
         "stops" : [
-            {
-                "stop_name":"Southbound platform",
-                "routes": "2 South Keys"
-            },
-            {
-                "stop_name":"Northbound platform",
-                "routes": "2 Bayview"
-            },
             {
                 "stop_name" : "Walkley 1A (B)",
                 "routes" : "44 Hurdman [BLU], 98 Hawthorne [BLU], 304 Osgoode [GOW]"
@@ -1755,6 +1645,7 @@
     },
     {
         "id" : "WES",
+        "station_560": "3012",
         "station_name" : "Westboro",
         "station_desc" : "[insert description]",
         "station_type" : {

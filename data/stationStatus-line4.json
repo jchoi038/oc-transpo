@@ -1,0 +1,14 @@
+[
+    {
+        "station": "Airport",
+        "status": "FALSE"
+    },
+    {
+        "station": "South Keys",
+        "status": "FALSE"
+    },
+    {
+        "station": "Uplands",
+        "status": "FALSE"
+    }
+]

@@ -77,7 +77,16 @@
 }
 // end
 
-.new.accordion-container{
+// alerts accordions
+
+.row--alerts-page .accordion-container .alert h3.accordion{
+	font-size: 1.125rem;
+
+}
+
+//  new
+
+.new.accordion-container, .row--alerts-page .accordion-container{
 	width: 100%;
 	letter-spacing: 0px;
 	

@@ -1,13 +1,33 @@
 /* link styles start*/
-/* Last updated: 2024/07/25 */
-.link-stack{
+/* Last updated: 2024/08/14 */
+ul.link-cluster{
+    margin: 0;
+    padding: 0;
+    display: grid;
     gap: 0;
+    border: 1px solid var(--border-color);
+    
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
     li {
+        margin: 0;
         display: flex;
         align-items: center;
         padding: 1rem;
+
         &:hover{
             background-color: var(--gray--50);
+            border-radius: $radius-sm;
         }
     }
 }
@@ -41,9 +61,8 @@ a.map-link, a.pdf-link{
 }
 
 //hover
-.content-container a:not(.btn):hover{
-    background-color: var(--gray--50);
-    border-radius: 4px;
+.content-container a:not(.btn):hover, a:not(.learn-more):hover {
+    // background-color: var(--gray--50);
     text-decoration: none;
 }
 
@@ -73,7 +92,8 @@ a.map-link,
 a.image-link,
 a.email-link,
 a.phone-link,
-a.tty-link {
+a.tty-link,
+a.schedules-link {
     &::before{
         content: "";
         width: 1.15em;
@@ -96,7 +116,8 @@ li.resource-li{
     a.image-link,
     a.email-link,
     a.phone-link,
-    a.tty-link {
+    a.tty-link,
+    a.schedules-link {
         &::before{
             content: "";
             margin-right: 0.75em;
@@ -113,7 +134,7 @@ a.image-link::before { background-image: url(https://www.octranspo.com/images/fi
 a.email-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_email.svg);}
 a.phone-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_phone.svg);}    
 a.tty-link::before {background-image: url(https://www.octranspo.com/images/files/icons/link-icon_TTY.svg);}    
+a.schedules-link::before {background-image: url(https://www.octranspo.com/images/files/icons/resource_schedules.svg);}    
 
 
 /* End link styles*/
-

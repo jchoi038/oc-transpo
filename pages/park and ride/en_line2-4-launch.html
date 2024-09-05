@@ -1,0 +1,4320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9"
+		title="octranspo-main-css" rel="stylesheet" />
+
+	<!-- <link rel="stylesheet" href="./style.css" /> -->
+
+	<title>Park & Ride</title>
+</head>
+
+<body class="main-content">
+
+	<!-- <link href="https://www.octranspo.com/images/files/dist/_code.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_cards.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_colors.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_util.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_tags.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_layout.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_grids.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_notes.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_inline.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_tables.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_toc.css" rel="stylesheet" />
+	<link href="https://www.octranspo.com/images/files/dist/_icons.css" rel="stylesheet" /> -->
+	<!-- copy below -->
+	<link href="/images/files/dist/custom-style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../dist/custom-style.css" />
+
+	<style type="text/css">
+		#PR-page .hidden,
+		#PR-page .mobile-only {
+			display: none;
+			opacity: 0;
+		}
+
+
+		@media (max-width: 575.98px) {
+			#PR-page .mobile-only {
+				display: block;
+				opacity: 100%;
+			}
+		}
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			scroll-behavior: smooth;
+		}
+
+		
+
+		/* pnr icons */
+
+		.icon {
+			/* height: 1.125em; */
+			pointer-events: none;
+			display: flex;
+			align-items: baseline;
+			gap: 0.25rem;
+		}
+
+		.icon.icon-md {
+			height: 1.5em;
+			gap: 0.5rem;
+		}
+
+		/* Permit cards */
+		.permit-types--price {
+			font-size: 4rem;
+			margin-bottom: 1.5rem;
+		}
+
+		@media (max-width: 767.98px) {
+			.permit-types--price {
+				font-size: 2.5rem;
+			}
+		}
+
+
+		#PR-permit-types .contact {
+			text-align: center;
+			max-width: 700px;
+			width: 100%;
+		}
+
+		/* section: Gold permit availability */
+		#PR-page-gold-permit-availability td {
+			font-size: 1rem;
+		}
+
+		#PR-page-gold-permit-availability {
+			font-weight: 700;
+			font-size: 1rem;
+		}
+
+		#PR-page-gold-permit-availability .status--avail {
+			color: #038700;
+		}
+
+		#PR-page .drop-down-container {
+			width: 100%;
+			/* max-width: 500px; */
+			position: relative;
+			margin-bottom: 0.5rem;
+			/* background-color: #fff; */
+		}
+
+		#PR-page .drop-down-button {
+			/* padding:1rem; */
+			display: inline-block;
+			/* border-radius: 4px; */
+			border: #e9eaed solid 2px;
+			/* border-bottom: #e9eaed solid 2px; */
+			width: 100%;
+			/* min-width: 400px; */
+			font-size: 1rem;
+			color: #000;
+			font-weight: 400;
+			background-color: #fff;
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 0.5rem;
+		}
+
+		@media (max-width: 767.98px) {
+			#PR-page .drop-down-button {
+				width: 100%;
+			}
+		}
+
+		#PR-page .drop-down-button input {
+			text-align: left;
+			background-color: #fff;
+			padding: 1rem;
+			font-weight: 400;
+			font-size: 1.125rem;
+			cursor: pointer;
+		}
+
+		#PR-page .drop-down-button.active input {
+			background-color: rgb(247, 247, 247);
+		}
+
+
+		#PR-page .drop-down-button.active,
+		#PR-page .drop-down-button:focus {
+			background-color: #fff;
+			border-bottom: #000 solid 2px;
+		}
+
+		#PR-page .drop-down-button.active .drop-down-container {
+			visibility: visible;
+		}
+
+		#PR-page .drop-down-button a {
+			color: #000;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#PR-page .drop-down-button .chevron {
+			content: "";
+			color: #fff;
+			display: inline-block;
+			width: 1rem;
+			height: 1rem;
+			background-repeat: no-repeat;
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/chevron-down-solid.svg");
+			margin-right: 4px;
+			transform: rotate(0deg);
+			/* transition: transform 0.15s ease-in; */
+			position: absolute;
+			right: 1rem;
+			top: calc(50% - 8px);
+		}
+
+		#PR-page .drop-down-button .chevron.up {
+			transform: rotate(-180deg);
+		}
+
+		/* icons */
+		.gold-star::before {
+			display: inline-block;
+			content: "";
+			pointer-events: none;
+		}
+
+		.icon-sm {
+			display: flex;
+			/* align-items: center; */
+			gap: 0.25rem;
+		}
+
+		.icon-sm::before {
+			content: "";
+			height: 1.25em;
+			width: 1.25em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			flex-shrink: 0;
+			text-decoration: none;
+			/* display: flex; */
+			justify-content: center;
+			align-items: center;
+		}
+
+		.icon-md::before {
+			content: "";
+			height: 2em;
+			width: 2em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-shrink: 0;
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.icon-lg::before {
+			content: "";
+			height: 2.5em;
+			width: 2.5em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-shrink: 0;
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+		}
+
+		.icon-after-sm::after {
+			content: "";
+			height: 1.25em;
+			width: 1.25em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-shrink: 0;
+			text-decoration: none;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.icon-after-lg::after {
+			content: "";
+			height: 2.5em;
+			width: 2.5em;
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-shrink: 0;
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+		}
+
+		.icon-after--circled-arrow::after {
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/arrow-in-circle.svg");
+		}
+
+		.icon--pdf::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/PDF-icon-blue.svg");
+		}
+
+		.icon--travel-planner::before {
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/travel-planner-icon.svg");
+		}
+
+		.icon--schedules::before {
+			background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconStopSchedules.png");
+		}
+
+		.icon--ext::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/arrow-link-blue.svg");
+			height: 1.05rem;
+		}
+
+		.icon--soldout::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/sold-out.svg");
+		}
+
+		.icon--available::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
+		}
+
+		.icon--available-greenBG::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/Check-green.svg");
+		}
+
+		.icon--star::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/Service_gold-parking.svg");
+		}
+
+		.icon--warning::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/alert_warning.svg");
+		}
+
+		.icon-after--park-ride::after {
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg");
+		}
+
+		.icon--park-ride::before {
+			background-image: url("https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg");
+		}
+
+		.icon--permit::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/tag_permit.svg");
+		}
+
+		.icon--free::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/tag_free.svg");
+		}
+
+		.icon--limitedfree::before {
+			background-image: url("https://www.octranspo.com/images/files/icons/tag_freewithnote.svg");
+		}
+
+		/* Parking lot Info box section */
+
+
+
+		@media (max-width: 767.98px) {
+			.select-option-content {
+				padding: 0;
+				background-color: #fff;
+				border: none;
+				box-shadow: none;
+			}
+		}
+
+		.select-option-content--image-container {
+			height: 300px;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+		}
+
+		.select-option-content--image-container>img {
+			width: 100%;
+		}
+
+		.select-option-content--body {
+			padding: 0.5rem 0;
+			color: #222;
+			border-bottom: #e9eaed solid 2px;
+		}
+
+		.parking-lot-content {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 2rem;
+			border-radius: 0.5rem;
+			background-color: var(--gray--25);
+			padding: 1.5rem;
+			/*: 1px solid #e9eaed; */
+			/* padding-top: 1.5rem; */
+		}
+
+		.parking-lot-content .info-group,
+		.parking-lot-content>div:first-child>div {
+			/* margin-bottom: 2rem; */
+			padding: 2rem 0 2rem;
+		}
+
+		.parking-lot-content .info-group.location .body {
+			padding-bottom: 1rem;
+		}
+
+		.parking-lot-content .info-group:not(:last-of-type),
+		.parking-lot-content>div:first-child>div {
+			border-bottom: 1px solid #e9eaed;
+			/* padding-bottom: 0.75rem; */
+		}
+
+		.info-group--offers li {
+			display: flex;
+			gap: 1rem;
+		}
+
+		ul.info-group--offers {
+			margin-left: 0 !important;
+			padding-left: 0 !important;
+		}
+
+		.info-group--offers li img {
+			background-color: #000;
+			border-radius: 999px;
+			content: "";
+			width: 42px;
+			height: 42px;
+		}
+
+		.info-group--offers svg {
+			flex-shrink: 0;
+		}
+
+		.parking-lot-content ul {
+			padding: 0 0 1.5rem 0;
+			margin: 0;
+		}
+
+		.parking-lot-content li {
+
+			/* display: flex; */
+			gap: 1rem;
+			align-items: flex-start;
+			padding: 0;
+			line-height: 150%;
+			list-style: none;
+		}
+
+		.parking-lot-content .info-group--resources li a {
+			display: flex;
+			gap: 0.5rem;
+			align-items: center;
+			padding: 0;
+			line-height: 100%;
+		}
+
+		.info-group--offers {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 1.5rem;
+			/* row-gap: 1rem; */
+			/* border-bottom: 1px solid #e9eaed; */
+		}
+
+		#PR-page .info-group--offers p {
+			margin-bottom: 0;
+		}
+
+		.info-group--offers .important-announcement {
+			grid-column: 1 / 3;
+		}
+
+		.important-announcement a {
+			padding: 0;
+			margin: 0;
+		}
+
+		.parking-lot-content p {
+			margin-bottom: 0.25rem;
+			margin-top: 0rem;
+		}
+
+		.info-group--offers__stats {
+			font-weight: 700;
+			font-size: 1rem;
+			color: #000;
+			/* margin-bottom: 0; */
+		}
+
+
+
+		@media (max-width: 992px) {
+			.select-option-content--image-container {
+				display: none;
+			}
+
+			.info-group--offers {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.info-group--offers svg {
+				flex-shrink: 0;
+			}
+
+			.select-option-content .parking-lot-content {
+				grid-template-columns: 1fr;
+				gap: 0;
+			}
+
+			.select-option-content.active .select-option-content--body {
+				/* max-height: 60vh; */
+				/* overflow-y: scroll; */
+				transition: max-height 1s ease-in;
+				/* border-radius: 10px; */
+			}
+
+			.all-select-option-contents {
+				/* overflow: hidden; */
+				position: relative;
+				background-color: #fff;
+			}
+
+			.parking-lot-content .info-group {
+				border-bottom: 1px solid #e9eaed;
+				padding-bottom: 1.5rem;
+			}
+
+			#PR-parking-lots ul {
+				list-style-type: none;
+			}
+
+		}
+	</style>
+	<div class="toc sticky"></div>
+	<div id="page">
+		<section class="section" id="intro" style="margin-top: 2rem">
+			<h2>Overview</h2>
+
+			<div>
+				<p><em>Leave the driving to us!</em></p>
+
+				<p>
+					We offer over 9,000 free spaces at Park &amp; Ride lots across
+					Ottawa and
+					<a href="https://www.octranspo.com/en/our-services/park-ride/rural-park-ride/"
+						target="_blank">nearby rural areas</a>.
+				</p>
+
+				<p>
+					All Park &amp; Ride lots offer easy access to major stations
+					and/or Connexion routes.
+				</p>
+				<a class="map-link mb-1"
+					href="https://www.octranspo.com/images/files/maps/carte-parc-o-bus-park-ride-map.pdf"
+					target="_blank">Map of Park &amp; Ride locations</a>
+
+				<div class="banner icon-banner note">
+					<img class="banner__logo" src="https://www.octranspo.com/images/files/icons/service_pnr.svg">
+					<div class="banner__content">
+						<p class="note__title">Tip</p>
+						<p class="note__body">
+							Look for the Park &amp; Ride symbol for easy wayfinding at the station.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="note note__type--info">
+				<div class="note__desc">
+					<p>Please note that overnight parking is not permitted in any parking lots.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="parking-lots">
+			<h2 class="section-title">Park &amp; Ride Lots</h2>
+
+			<div class="section-intro mb-2">
+				<p>
+					Many of our parking lots are free, but not all.
+					<a href="select">Select a parking lot</a> to see all parking lot
+					details such as number of free parking spaces, accessible spaces, EV
+					charging station, Gold permit spaces, Gold permit availability and
+					more.
+				</p>
+			</div>
+
+
+			<p class="font-weight-600" for="PR-dropdown" style="margin-bottom: 4px; display: block">
+				Select a Park &amp; Ride lot:
+			</p>
+
+			<div class="select-options-grid grid--3col mb-1" id="select">
+				<a class="select-option" select-option-id="Baseline" href="#baseline">
+					<span class="icons" data-switch="1 1-l 1"><span>Baseline</span></span>
+				</a>
+				<a class="select-option" select-option-id="Blair" href="#blair">
+					<img style="width: 24px; height: 24px;"
+						src="https://www.octranspo.com/images/files/icons/line_1.svg" alt="Line 1 connection">
+					<span class="icons" data-switch="1 0 0 1">
+						<span>Blair</span></span></a>
+
+				<a class="select-option launch2-4" select-option-id="Bowesville" href="#bowesville">
+					<img style="width: 24px; height: 24px;"
+						src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="Line 2 connection">
+					<span class="icons" data-switch="1 0 0 1">
+						<span>Bowesville</span></span></a>
+				<a class="select-option" select-option-id="ChapelHill" href="#chapelhill"><span class="icons"
+						data-switch="0 1 0"><span>Chapel Hill</span></span>
+				</a>
+				<a class="select-option" select-option-id="Eagleson" href="#eagleson">
+					<span class="icons" data-switch="1 1 1"><span>Eagleson</span></span>
+				</a>
+				<a class="select-option" select-option-id="Fallowfield" href="#fallowfield">
+					<span class="icons" data-switch="1 1 0"><span>Fallowfield</span></span>
+				</a>
+				<a class="select-option" select-option-id="Greenboro" href="#greenboro">
+
+					<img class="launch2-4" style="width: 24px; height: 24px;"
+						src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="Line 2 connection">
+					<span class="icons" data-switch="1 1 1"><span>Greenboro</span></span>
+				</a>
+				<a class="select-option" select-option-id="Innovation" href="#innovation">
+					<span class="icons" data-switch="0 1 0"><span>Innovation</span></span>
+				</a>
+				<a class="select-option" select-option-id="JDA" href="#JDA">
+					<span class="icons" data-switch="0 0 0 1"><span>Jeanne d&rsquo;Arc</span></span>
+				</a>
+				<a class="select-option" select-option-id="Leitrim" href="#leitrim">
+
+					<img class="launch2-4" style="width: 24px; height: 24px;"
+						src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="Line 2 connection">
+					<span class="icons" data-switch="0 1 0"><span>Leitrim</span></span>
+				</a>
+				<a class="select-option" select-option-id="Millennium" href="#millennium">
+					<span class="icons" data-switch="0 1 0"><span>Millennium</span></span>
+				</a>
+				<a class="select-option" select-option-id="Nepeanwoods" href="#nepeanwoods">
+					<span class="icons" data-switch="0 1 0"><span>Nepean Woods</span></span>
+				</a>
+				<a class="select-option" select-option-id="PDA" href="#PDA">
+					<span class="icons" data-switch="1 1 1"><span>Place d&rsquo;Orl&eacute;ans</span></span>
+				</a>
+				<a class="select-option" select-option-id="Rayfriel" href="#rayfriel">
+					<span class="icons" data-switch="0 0 0 1"><span>Ray Friel</span></span>
+				</a>
+				<a class="select-option" select-option-id="Riverview" href="#riverview">
+					<span class="icons" data-switch="0 1 0"><span>Riverview</span></span>
+				</a>
+				<a class="select-option" select-option-id="Strandherd" href="#strandherd">
+					<span class="icons" data-switch="0 1 0"><span>Strandherd</span></span>
+				</a>
+				<a class="select-option" select-option-id="Terryfox" href="#terryfox">
+					<span class="icons" data-switch="0 1 1"><span>Terry Fox</span>
+					</span>
+				</a>
+				<a class="select-option" select-option-id="Trim" href="#trim">
+					<span class="icons" data-switch="0 1 0"><span>Trim</span></span>
+				</a>
+			</div>
+
+
+			<div class="note">
+				<p class="note__title">Legend:</p>
+				<p class="icon">
+					<img alt="'Permit' in blue font with a light blue background"
+						src="https://www.octranspo.com/images/files/icons/tag_permit.svg" />
+					- Permit-required lot
+				</p>
+				<p class="icon">
+					<img alt="'FREE' in green font with a light green background"
+						src="https://www.octranspo.com/images/files/icons/tag_free.svg" />
+					- Free parking available
+				</p>
+				<p class="icon">
+					<img alt="'FREE' in green font with a light green background with white diagonal stripes"
+						src="https://www.octranspo.com/images/files/icons/tag_freewithnote.svg" />
+					- Limited free parking available
+				</p>
+				<p class="icon-sm icon--warning">
+					- Parking spaces fills up quickly
+				</p>
+				<p class="icon-sm icon--star">- Gold permit parking lot</p>
+			</div>
+
+			<div class="all-select-option-contents active" id="details">
+				<div class="select-option-content" select-option-id="Baseline" id="baseline">
+					<div class="parking-lot--info-box--heading">
+						<h3>Baseline</h3>
+					</div>
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Baseline">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Baseline Park &amp; Ride is located directly south
+											of&nbsp;Algonquin College - Building CA - Algonquin
+											Centre for Construction Excellence.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/Baseline_Area_Map_December_2023.pdf"
+											target="_blank">Download the area map for Baseline Station</a>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												The entrance to the parking lot is located at the
+												intersection at Woodroffe Ave. (west side) / Parkglen
+												Dr.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">67</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces<a href="note-1">*</a>
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">7</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M20.5 12.5L23.1915 18.2955L29.535 19.0643L24.8549 23.415L26.084 29.6857L20.5 26.579L14.916 29.6857L16.1451 23.415L11.465 19.0643L17.8085 18.2955L20.5 12.5Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">7</p>
+
+												<p class="info-group--offers__name">
+													Gold permit spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+									<p class="note" id="note-1">*The Baseline Park &amp; Ride is not available to
+										Algonquin College students, staff, or visitors.</p>
+								</div>
+
+								<div class="">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Baseline Park &amp; Ride provides easy access to Baseline
+										Station.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=SH915"
+												target="_blank">Stop schedules for Baseline Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/en/our-services/stations-2/baseline1"
+												target="_blank">Baseline Station layout map and connecting routes</a>
+
+								</div>
+
+								<div class="" data-station="Baseline">
+									<h4>Related resources</h4>
+
+									<ul>
+										<li>
+											<a class="pdf-link"
+												href="https://www.octranspo.com/images/files/maps/permit/baseline_GPmap.pdf"
+												target="_blank">Download the Gold permit parking map for Baseline</a>
+										</li>
+										<li>
+											<a class="pdf-link"
+												href="https://www.octranspo.com/images/files/maps/area_map/BAS.pdf"
+												target="_blank">Download the area map for Baseline Station</a>
+
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="card">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+
+									<p class="tag tag-type__success">
+										Available
+									</p>
+									<p>This parking lot offers Gold permits.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>
+										This parking lot offers limited<a href="note-baseline-2">*</a>
+										free parking.
+									</p>
+
+
+									<div class="flex-dir-col">
+										<p><strong>Hours of free parking:</strong></p>
+										<div>
+											<p>
+												<span class="--day">Mon<span class="visually-hidden">day</span> &ndash;
+													Fri<span class="visually-hidden">day</span>: </span><span
+													class="--time">After 11 am</span>
+
+											</p>
+											<p>
+												<span class="--day">Weekends: </span><span class="--time">Free</span>
+											</p>
+											<p>
+												<span class="--day">Holidays: </span><span class="--time">Free</span>
+											</p>
+										</div>
+									</div>
+
+									<p class="icon-sm icon--warning note" id="note-baseline-2">
+										<small>*Permits are required to park before 11 am on
+											weekdays</small>
+									</p>
+
+									<p class="icon-sm icon--warning note">
+										<small>Parking spaces at Baseline fill up fast! On an average
+											weekday, this lot is full by 9 am.</small>
+									</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJ64HCdiIHzkwRdglQXhrekfo&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Baseline Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3017</strong> or
+										</li>
+										<li>
+											Text <strong>3017</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class=" launch2-4 select-option-content" select-option-id="Bowesville" id="#PR-bowesville">
+					<div class="parking-lot--info-box--heading">
+						<h3>Bowesville</h3>
+					</div>
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Bowesville Park & Ride is Located near the Manotick Station neighbourhood and close to Riverside South and Barrhaven
+										</p>
+									</div>
+
+									<!-- <div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>...</p>
+										</div>
+									</div> -->
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewBox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">782</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewBox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">19</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewBox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 25.5H20V23.5H16V21.5H19V19.5H16V17.5H20V15.5H14V25.5ZM23.5 25.5H25.5L28 15.5H26L24.5 21.5L23 15.5H21L23.5 25.5ZM10 29.5V11.5H32V29.5H10ZM12 27.5H30V13.5H12V27.5Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">4</p>
+
+												<p class="info-group--offers__name">
+													EV charging stations (<a
+														href="https://ottawa.ca/en/living-ottawa/environment-conservation-and-climate/climate-change-and-energy/electric-vehicles#section-ea37d0ec-670c-4f00-a53c-340ccb58cd2e"
+														target="_blank">level 2</a>)
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Bowesville Park & Ride provides easy access to Bowesville Station.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=RE901">Stop
+												schedules for Bowesville Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/en/our-services/stations-2/bowesville-01"
+												target="_blank">Bowesville Station layout map and connecting
+												routes</a>
+
+								</div>
+
+							</div>
+
+							<div class="column gap">
+								<div class="card basic-card">
+									<img class="card__icon"
+										src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="">
+									<p class="card__title">Line 2 connection</p>
+									<p>This Park &amp; Ride provides connection to Line 2</p>
+								</div>
+								<div class="card">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag">Unavailable</p>
+
+									<p>Gold permits are not sold at this location.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJmQCaqvANzkwRSL_3wonE3L4&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Chapel Hill
+										Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href="tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3067</strong> or
+										</li>
+										<li>
+											Text <strong>3067</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+
+											<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="select-option-content" select-option-id="Blair" id="blair">
+					<div class="parking-lot--info-box--heading">
+						<h3>Blair (Telesat)</h3>
+					</div>
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Blair">
+									<h4>Location</h4>
+
+									<p class="body">
+										Blair Park &amp; Ride is located at 1580 Telesat Court,
+										directly across the Queensway Park.
+									</p>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												The entrance to the parking lot is found at the end of
+												Telesat Ct. Please look out for the Park &amp; Ride
+												sign
+												<img alt="white car icon encircled by a black background" height="20"
+													src="https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg"
+													width="20" />
+												near the Queensway Park for easy wayfinding.
+											</p>
+										</div>
+									</div>
+									<!-- <a target="_blank" class="pdf-link" href="-">Download the area map for Blair Station</a> -->
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M20.5 12.5L23.1915 18.2955L29.535 19.0643L24.8549 23.415L26.084 29.6857L20.5 26.579L14.916 29.6857L16.1451 23.415L11.465 19.0643L17.8085 18.2955L20.5 12.5Z"
+													fill="black"></path>
+											</svg>
+
+											<div>
+												<p class="info-group--offers__stats">17</p>
+
+												<p class="info-group--offers__name">
+													Gold permit spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Blair">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Blair Park &amp; Ride provides easy access to Blair
+										Station.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=EE902">Stop
+												schedules for Blair Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/blair1/"
+												target="_blank">Blair Station layout map and connecting routes</a>
+
+								</div>
+
+								<div class="" data-station="Blair">
+									<h4>Related resources</h4>
+
+									<ul>
+										<li>
+											<a class="pdf-link"
+												href="https://www.octranspo.com/images/files/maps/permit/telesat_GPmap.pdf"
+												target="_blank">Download the Gold permit parking map for Blair</a>
+
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="card basic-card">
+									<img class="card__icon"
+										src="https://www.octranspo.com/images/files/icons/line_1.svg" alt="">
+									<p class="card__title">Line 1 connection</p>
+									<p>This Park & Ride provides connection to Line 1</p>
+								</div>
+								<div class="card">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag tag-type__warning">Sold out</p>
+
+									<p>Gold permits are sold out at this parking lot.</p>
+
+									<h5>Join the waitlist:</h5>
+
+									<a class="btn btn-tertiary btn-sm btn-icon--phone" href="tel:613-842-3777"
+										target="_blank"
+										title="Call the Park &amp; Ride Adminstrator at 613-842-3777">Call sales</a>
+									<a class="btn btn-tertiary btn-sm btn-icon--email"
+										href="mailto:parkandridepermits@ottawa.ca?subject=Park%20%26%20Ride%20permits"
+										target="_blank">Email sales</a>
+								</div>
+
+								<div class="card basic-card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__warning">
+										Very limited
+									</p>
+
+									<p>
+										Free parking in this lot cannot be guaranteed at any time.
+										A Gold Permit is strongly recommended.
+									</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJLeYHpcAPzkwRHq46AuUXT9E&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Blair Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3027</strong> or
+										</li>
+										<li>
+											Text <strong>3027</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content" select-option-id="ChapelHill" id="chapelhill">
+					<div class="parking-lot--info-box--heading">
+						<h3>Chapel Hill</h3>
+					</div>
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Chapel Hill">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Chapel Hill Park &amp; Ride is located at the northeast
+											corner of Brian Coburn Blvd. and Navan Rd.
+										</p>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												There are two entrances to Chapel Hill Park &amp;
+												Ride:
+											</p>
+
+											<p>
+												<strong>On Navan Road:</strong> West of the roundabout
+												at Brian Coburn Blvd. / Navan Rd.
+											</p>
+
+											<p>
+												<strong>On Brian Coburn Boulevard:</strong> East of
+												the roundabout at Brian Coburn Blvd.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">255</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">8</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 25.5H20V23.5H16V21.5H19V19.5H16V17.5H20V15.5H14V25.5ZM23.5 25.5H25.5L28 15.5H26L24.5 21.5L23 15.5H21L23.5 25.5ZM10 29.5V11.5H32V29.5H10ZM12 27.5H30V13.5H12V27.5Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">2</p>
+
+												<p class="info-group--offers__name">
+													EV charging stations (<a
+														href="https://ottawa.ca/en/living-ottawa/environment-conservation-and-climate/climate-change-and-energy/electric-vehicles#section-ea37d0ec-670c-4f00-a53c-340ccb58cd2e"
+														target="_blank">level 2</a>)
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Chapel Hill">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Chapel Hill Park &amp; Ride provides easy access to
+										Connexion routes.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=EI900">Stop
+												schedules for Chapel Hill Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/chapel-hill1/"
+												target="_blank">Chapel Hill Station layout map and connecting
+												routes</a>
+
+								</div>
+
+								<div class="">
+									<h4>Related resources</h4>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/pdf_archive/Chapel-Hill-PnR_EN.pdf"
+										target="_blank">Download the Gold permit parking map for Chapel Hill</a>
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="card">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag">Unavailable</p>
+
+									<p>Gold permits are not sold at this location.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJmQCaqvANzkwRSL_3wonE3L4&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Chapel Hill
+										Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3074</strong> or
+										</li>
+										<li>
+											Text <strong>3074</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content" select-option-id="Eagleson" id="eagleson">
+					<div class="parking-lot--info-box--heading">
+						<h3>Eagleson</h3>
+
+					</div>
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Eagleson">
+									<h4>Location</h4>
+									<div class="body">
+										<p>
+											Eagleson Park &amp; Ride is located at Highway 417 and
+											Eagleson Rd.<br />
+											The<strong> East lot</strong> is located beside Eagleson
+											Station.<br />
+											The<strong> West lot</strong> is located across the
+											street of Eagleson Station.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/EAG.pdf"
+											target="_blank">Download the area map for Eagleson Station</a>
+									</div>
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+										<div class="accordion-content">
+											<p>
+												The entrances to Eagleson Park &amp; Ride are located
+												on Eagleson Road, south of Highway 417.
+											</p>
+											<p>
+												The<strong> East lot </strong> entrance is located at
+												the intersection at Eagleson Road (east side) /
+												Transitway, just before the 417 eastbound on-ramp.
+											</p>
+											<p>
+												The<strong> West lot</strong> on the west side of
+												Eagleson Road further down south past Eagleson 3A.
+												Prepare to turn right into the parking lot entrance as
+												you pass Eagleson 3A.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="">
+									<h4>Types of parking spaces</h4>
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+											<div>
+												<p class="info-group--offers__stats">1109</p>
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">18</p>
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M20.5 12.5L23.1915 18.2955L29.535 19.0643L24.8549 23.415L26.084 29.6857L20.5 26.579L14.916 29.6857L16.1451 23.415L11.465 19.0643L17.8085 18.2955L20.5 12.5Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">77</p>
+												<p class="info-group--offers__name">
+													Gold permit spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M18.5 33V26.75H16V18C16 16.9583 16.3646 16.0729 17.0938 15.3438C17.8229 14.6146 18.7083 14.25 19.75 14.25C20.7917 14.25 21.6771 14.6146 22.4062 15.3438C23.1354 16.0729 23.5 16.9583 23.5 18C24.25 18.3125 24.8542 18.8125 25.3125 19.5C25.7708 20.1875 26 20.9375 26 21.75V26.75H22.25V33H18.5ZM19.75 13C19.0625 13 18.4737 12.755 17.9837 12.265C17.4937 11.775 17.2492 11.1867 17.25 10.5C17.25 9.8125 17.495 9.22375 17.985 8.73375C18.475 8.24375 19.0633 7.99917 19.75 8C20.4375 8 21.0263 8.245 21.5163 8.735C22.0063 9.225 22.2508 9.81334 22.25 10.5C22.25 11.1875 22.005 11.7763 21.515 12.2663C21.025 12.7563 20.4367 13.0008 19.75 13Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">2</p>
+												<p class="info-group--offers__name">
+													Expecting mother spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="" data-station="Eagleson">
+									<h4>Connecting stations and routes</h4>
+									<p>
+										Eagleson Park &amp; Ride provides easy access to Eagleson
+										Station and Connexion routes.
+									</p>
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=WI900">Stop
+												schedules for Eagleson Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/eagleson1/"
+												target="_blank">Eagleson Station layout map and connecting routes</a>
+										</li>
+									</ul>
+								</div>
+								<div class="" data-station="Eagleson">
+									<h4>Related resources</h4>
+									<ul>
+										<li>
+											<a class="pdf-link"
+												href="https://www.octranspo.com/images/files/maps/area_map/EAG.pdf"
+												target="_blank">Download the area map for Eagleson Station</a>
+										</li>
+										<li>
+											<a class="pdf-link"
+												href="https://www.octranspo.com/images/files/maps/permit/eagleson_east_GPmap.gif"
+												target="_blank">Download the Gold permit parking map for Eagleson</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="column gap">
+								<div class="card">
+									<p class="card__title">
+										Gold permit
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+									<p>This parking lot offers Gold permits.</p>
+								</div>
+								<div class="card">
+									<p class="card__title">
+										Free parking
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+									<p>This parking lot offers free parking.</p>
+									<p class="icon-sm icon--warning note">
+										<small>Parking spaces at Eagleson fill up fast! Consider
+											parking at one of our other Park &amp; Ride lots in
+											Kanata for your commute.</small>
+									</p>
+								</div>
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJPV7OO-__zUwRHUevR6dl0Zc&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+									<ul class="">
+										<li>
+										</li>
+									</ul>
+									<p class="">
+										For routes &amp; next departure times at Eagleson Station:
+									</p>
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3055</strong> or
+										</li>
+										<li>
+											Text <strong>3055</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="select-option-content" select-option-id="Fallowfield" id="fallowfield">
+					<div class="parking-lot--info-box--heading">
+						<h3>Fallowfield</h3>
+
+					</div>
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Fallowfield">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Fallowfield Park &amp; Ride is located at 100 Via Park
+											Place.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/FAL.pdf"
+											target="_blank">Download the area map for Fallowfield Station</a>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												The entrance to Fallowfield Park &amp; Ride is located
+												at the intersection at Fallowfield Rd. (north side) /
+												Via Park Place.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">1704</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">28</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M20.5 12.5L23.1915 18.2955L29.535 19.0643L24.8549 23.415L26.084 29.6857L20.5 26.579L14.916 29.6857L16.1451 23.415L11.465 19.0643L17.8085 18.2955L20.5 12.5Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">21</p>
+
+												<p class="info-group--offers__name">
+													Gold permit spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M18.5 33V26.75H16V18C16 16.9583 16.3646 16.0729 17.0938 15.3438C17.8229 14.6146 18.7083 14.25 19.75 14.25C20.7917 14.25 21.6771 14.6146 22.4062 15.3438C23.1354 16.0729 23.5 16.9583 23.5 18C24.25 18.3125 24.8542 18.8125 25.3125 19.5C25.7708 20.1875 26 20.9375 26 21.75V26.75H22.25V33H18.5ZM19.75 13C19.0625 13 18.4737 12.755 17.9837 12.265C17.4937 11.775 17.2492 11.1867 17.25 10.5C17.25 9.8125 17.495 9.22375 17.985 8.73375C18.475 8.24375 19.0633 7.99917 19.75 8C20.4375 8 21.0263 8.245 21.5163 8.735C22.0063 9.225 22.2508 9.81334 22.25 10.5C22.25 11.1875 22.005 11.7763 21.515 12.2663C21.025 12.7563 20.4367 13.0008 19.75 13Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">3</p>
+
+												<p class="info-group--offers__name">
+													Expecting mother spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 25.5H20V23.5H16V21.5H19V19.5H16V17.5H20V15.5H14V25.5ZM23.5 25.5H25.5L28 15.5H26L24.5 21.5L23 15.5H21L23.5 25.5ZM10 29.5V11.5H32V29.5H10ZM12 27.5H30V13.5H12V27.5Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">4</p>
+
+												<p class="info-group--offers__name">
+													EV charging stations
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Fallowfield">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Fallowfield Park &amp; Ride provides easy access to
+										Fallowfield Station and Connexion routes.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=SL910">Stop
+												schedules for Fallowfield Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/fallowfield1/"
+												target="_blank">Fallowfield Station layout map and connecting
+												routes</a>
+
+								</div>
+
+								<div class="" data-station="Fallowfield">
+									<h4>Related resources</h4>
+
+									<ul>
+										<li>
+											<a class="pdf-link"
+												href="https://www.octranspo.com/images/files/maps/area_map/FAL.pdf"
+												target="_blank">Download the area map for Fallowfield Station</a>
+										</li>
+										<li>
+											<a class="pdf-link"
+												href="https://www.octranspo.com/images/files/maps/permit/fallowfield_GPmap.pdf"
+												target="_blank">Download the Gold permit parking map for
+												Fallowfield</a>
+
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="card">
+									<p class="card__title">
+										Gold permit
+									</p>
+
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers Gold permits.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJ-UpNdGn9zUwR9230Zc3lsyA&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Fallowfield
+										Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3043</strong> or
+										</li>
+										<li>
+											Text <strong>3043</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content" select-option-id="Greenboro" id="greenboro">
+					<div class="parking-lot--info-box--heading">
+						<h3>Greenboro</h3>
+
+					</div>
+
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Greenboro">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Greenboro Park &amp; Ride is located at Bank St. and
+											Johnston Rd.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/GRE.pdf"
+											target="_blank">Download the area map for Greenboro Station</a>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												The entrance to Greenboro Park &amp; Ride is located
+												at the intersection at Bank St. (west side). /
+												Johnstron Rd.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">498</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">18</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M20.5 12.5L23.1915 18.2955L29.535 19.0643L24.8549 23.415L26.084 29.6857L20.5 26.579L14.916 29.6857L16.1451 23.415L11.465 19.0643L17.8085 18.2955L20.5 12.5Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">90</p>
+
+												<p class="info-group--offers__name">
+													Gold permit spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M18.5 33V26.75H16V18C16 16.9583 16.3646 16.0729 17.0938 15.3438C17.8229 14.6146 18.7083 14.25 19.75 14.25C20.7917 14.25 21.6771 14.6146 22.4062 15.3438C23.1354 16.0729 23.5 16.9583 23.5 18C24.25 18.3125 24.8542 18.8125 25.3125 19.5C25.7708 20.1875 26 20.9375 26 21.75V26.75H22.25V33H18.5ZM19.75 13C19.0625 13 18.4737 12.755 17.9837 12.265C17.4937 11.775 17.2492 11.1867 17.25 10.5C17.25 9.8125 17.495 9.22375 17.985 8.73375C18.475 8.24375 19.0633 7.99917 19.75 8C20.4375 8 21.0263 8.245 21.5163 8.735C22.0063 9.225 22.2508 9.81334 22.25 10.5C22.25 11.1875 22.005 11.7763 21.515 12.2663C21.025 12.7563 20.4367 13.0008 19.75 13Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">2</p>
+
+												<p class="info-group--offers__name">
+													Expecting mother spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Greenboro">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Greenboro Park &amp; Ride provides easy access to
+										Greenboro Station.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=RF900">Stop
+												schedules for Greenboro Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/greenboro1"
+												target="_blank">Greenboro Station layout map and connecting routes</a>
+
+								</div>
+
+								<div class="" data-station="Greenboro">
+									<h4>Related resources</h4>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/GRE.pdf"
+										target="_blank">Download the area map for Greenboro Station</a>
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="launch2-4 card basic-card">
+									<img class="card__icon"
+										src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="">
+									<p class="card__title">Line 2 connection</p>
+									<p>This Park &amp; Ride provides connection to Line 2</p>
+								</div>
+								<div class="card">
+									<p class="card__title">
+										Gold permit
+									</p>
+
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers Gold permits.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+
+									<p class="icon-sm icon--warning note">
+										<small>Parking spaces at Greenboro fill up fast! On an average
+											weekday, this lot is full by 8 am.</small>
+									</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJY-xF-L0IzkwRPQSNXUk9kXs&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Greenboro
+										Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3037</strong> or
+										</li>
+										<li>
+											Text <strong>3037</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content" select-option-id="Innovation" id="innovation">
+					<div class="parking-lot--info-box--heading">
+						<h3>Innovation</h3>
+					</div>
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Innovation">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Innovation Park &amp; Ride is located at Innovation Dr.
+											and Terry Fox Dr.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/INN.pdf"
+											target="_blank">Download the area map for Innovation Station</a>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												There are two entrances to Innovation Park &amp; Ride:
+											</p>
+
+											<p>
+												<strong>On Terry Fox Road:</strong> At the
+												intersection at Terry Fox Dr. (south side) /
+												Transitway
+											</p>
+
+											<p>
+												<strong>On Innovation Drive (west side):</strong>
+												Between Terry Fox Dr. and Goulbourn Forced Rd. Prepare
+												to turn into the parking lot access point at the Park
+												&amp; Ride sign.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">246</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">8</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Innovation">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Innovation Park &amp; Ride provides easy access to
+										Innovation Station.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=WM900">Stop
+												schedules for Innovation Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/innovation1/"
+												target="_blank">Innovation Station layout map and connecting
+												routes</a>
+
+								</div>
+
+								<div class="" data-station="Innovation">
+									<h4>Related resources</h4>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/INN.pdf"
+										target="_blank">Download the area map for Innovation Station</a>
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="card unavailable">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag">Unavailable</p>
+
+									<p>Gold permits are not sold at this location.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJ8XdvMYT_0UwRy5jFVIhvhjQ&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Innovation
+										Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3057</strong> or
+										</li>
+										<li>
+											Text <strong>3057</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content" select-option-id="JDA" id="JDA">
+					<div class="parking-lot--info-box--heading">
+						<h3>Jeanne d&rsquo;Arc</h3>
+
+					</div>
+
+					<div class="parking-lot--info-box--body">
+
+						<div class="parking-lot-content">
+							<div class="column ">
+
+								<div class="" data-station="Jeanne d’Arc">
+									<h4>Location</h4>
+
+									<div class="body mb-1">
+										<p>
+											Jeanne d&rsquo;Arc Park &amp; Ride is located at the Bob
+											MacQuarrie Recreation Complex on Youville Dr. and Jeanne
+											d&rsquo;Arc Blvd.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/JDARC.pdf"
+											target="_blank">Download the area map for Jeanne d&rsquo;Arc Station</a>
+									</div>
+
+									<div class="note note__type--warning">
+										<p class="note__title">Relocation notice</p>
+										<div class="note__desc">
+											<p>From <strong>Monday, August 19 until further notice</strong> Jeanne d’Arc
+												Park and Ride will undergo temporary relocations to accommodate
+												skatepark construction.</p>
+											<p>Jeanne d'Arc Park & Ride permit holders are asked to park in other open
+												parts of the parking area surrounding the Bob MacQuarrie Recreation
+												Compex building.</p>
+										</div>
+									</div>
+
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												The Jeanne d&rsquo;Arc Park &amp; Ride is located at
+												the the back of Bob MacQuarrie Recreation Complex.
+												Look out for Park &amp; Ride posts indicating the
+												parking spaces for permit holders.
+											</p>
+										</div>
+									</div>
+
+
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">50</p>
+
+												<p class="info-group--offers__name">
+													Permit Parking spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Jeanne d’Arc">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Jeanne d&rsquo;Arc Park &amp; Ride provides easy access to
+										Jeanne d&rsquo;Arc Station and Connexion routes.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=EK900">Stop
+												schedules for Jeanne d&rsquo;Arc Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/jeanne-darc1/"
+												target="_blank">Jeanne d&rsquo;Arc Station layout map and connecting
+												routes</a>
+
+								</div>
+
+								<div class="" data-station="Jeanne d’Arc">
+									<h4>Related resources</h4>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/JDARC.pdf"
+										target="_blank">Download the area map for Jeanne d&rsquo;Arc Station</a>
+								</div>
+							</div>
+
+							<div class="column gap">
+
+								<div class="card basic-card">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag">Unavailable</p>
+
+									<p>Gold permits are not sold at this location.</p>
+								</div>
+
+								<div class="card unavailable">
+									<p class="card__title">
+										Free parking
+									</p>
+
+									<p class="tag">
+										Unavailable
+									</p>
+
+									<p>
+										<a href="permit-types">Regular Parking Permits</a>&nbsp;are required.
+									</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJHc0AoL0RzkwRNRUcwCqVioQ&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Jeanne
+										d&rsquo;Arc Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3070</strong> or
+										</li>
+										<li>
+											Text <strong>3070</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content old" select-option-id="Leitrim" id="leitrim">
+					<div class="parking-lot--info-box--heading">
+						<h3>Leitrim</h3>
+					</div>
+
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Leitrim">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Leitrim Park &amp; Ride is located on Gilligan Rd.,
+											south of Leitrim Rd. and west of Albion Rd.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/LEI.pdf"
+											target="_blank">Download the area map for Leitrim Station</a>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												The entrance to Leitrim Park &amp; Ride is found at
+												the end of Gilligan Rd. Please look out for the Park
+												&amp; Ride sign
+												<img alt="white car icon encircled by a black background" height="20"
+													src="https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg"
+													width="20" />
+												for easy wayfinding.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewBox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">45</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewBox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">2</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Leitrim">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Leitrim Park &amp; Ride provides easy access to Leitrim
+										Station and Connexion routes.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=RE920">Stop
+												schedules for Leitrim Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/leitrim1/"
+												target="_blank">Leitrim Station layout map and connecting routes</a>
+
+								</div>
+
+								<div class="" data-station="Leitrim">
+									<h4>Related resources</h4>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/LEI.pdf"
+										target="_blank">Download the area map for Leitrim Station</a>
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="launch2-4 card basic-card">
+									<img class="card__icon"
+										src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="">
+									<p class="card__title">Line 2 connection</p>
+									<p>This Park &amp; Ride provides connection to Line 2</p>
+								</div>
+								<div class="card basic-card">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag">Unavailable</p>
+
+									<p>Gold permits are not sold at this location.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJCXTilcYJzkwRcBZEJRp4NsU&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Leitrim Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3041</strong> or
+										</li>
+										<li>
+											Text <strong>3041</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content launch2-4" select-option-id="Leitrim" id="leitrim">
+					<div class="parking-lot--info-box--heading">
+						<h3>Leitrim</h3>
+					</div>
+
+					<div class=" parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Leitrim">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Leitrim Park &amp; Ride is located on Gilligan Rd.,
+											south of Leitrim Rd. and west of Albion Rd.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/LEI.pdf"
+											target="_blank">Download the area map for Leitrim Station</a>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												The entrance to Leitrim Park &amp; Ride is found at
+												the end of Gilligan Rd. Please look out for the Park
+												&amp; Ride sign
+												<img alt="white car icon encircled by a black background" height="20"
+													src="https://staging.octranspo1.com/themes/user/site/octranspo/assets/img/stage-2/park-ride.svg"
+													width="20" />
+												for easy wayfinding.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewBox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">300+</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewBox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">9</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewBox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 25.5H20V23.5H16V21.5H19V19.5H16V17.5H20V15.5H14V25.5ZM23.5 25.5H25.5L28 15.5H26L24.5 21.5L23 15.5H21L23.5 25.5ZM10 29.5V11.5H32V29.5H10ZM12 27.5H30V13.5H12V27.5Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">2</p>
+
+												<p class="info-group--offers__name">
+													EV charging stations
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Leitrim">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Leitrim Park &amp; Ride provides easy access to Leitrim
+										Station and Connexion routes.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=RE920">Stop
+												schedules for Leitrim Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/leitrim1/"
+												target="_blank">Leitrim Station layout map and connecting routes</a>
+
+								</div>
+
+								<div class="" data-station="Leitrim">
+									<h4>Related resources</h4>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/LEI.pdf"
+										target="_blank">Download the area map for Leitrim Station</a>
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="card basic-card">
+									<img class="card__icon"
+										src="https://www.octranspo.com/images/files/icons/line_2.svg" alt="">
+									<p class="card__title">Line 2 connection</p>
+									<p>This Park &amp; Ride provides connection to Line 2</p>
+								</div>
+								<div class="card basic-card">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag">Unavailable</p>
+
+									<p>Gold permits are not sold at this location.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJCXTilcYJzkwRcBZEJRp4NsU&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Leitrim Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href="tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3041</strong> or
+										</li>
+										<li>
+											Text <strong>3041</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+
+											<small class="note">Standard rates apply.</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="select-option-content" select-option-id="Millennium" id="millennium">
+					<div class="parking-lot--info-box--heading">
+						<h3>Millennium</h3>
+					</div>
+
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Millennium">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Millennium Park &amp; Ride is located east of Trim Rd.
+											on Millennium Blvd.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/MIL.pdf"
+											target="_blank">Download the area map for Millennium Station</a>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												The entrance to Millennium Park &amp; Ride is found on
+												Millennium Blvd. (south side) a few metres east of the
+												roundabout at Trim Rd. / Millennium Blvd. right next
+												to Millennium Park Stadium.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">164</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">7</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Millennium">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Millennium Park &amp; Ride provides easy access to
+										Millennium Station.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=EQ900">Stop
+												schedules for Millennium Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/millennium1/"
+												target="_blank">Millennium Station layout map and connecting
+												routes</a>
+
+								</div>
+
+								<div class="" data-station="Millennium">
+									<h4>Related resources</h4>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/MIL.pdf"
+										target="_blank">Download the area map for Millennium Station</a>
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="card unavailable">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag">Unavailable</p>
+
+									<p>Gold permits are not sold at this location.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJr8bchuESzkwRIlOIJ311mEg&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Millennium
+										Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3076</strong> or
+										</li>
+										<li>
+											Text <strong>3076</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content" select-option-id="NepeanWoods" id="nepeanwoods">
+					<div class="parking-lot--info-box--heading">
+						<h3>Nepean Woods</h3>
+					</div>
+					<div class="parking-lot--info-box--body">
+						<div class="parking-lot-content">
+							<div class="column ">
+								<div class="" data-station="Nepean Woods">
+									<h4>Location</h4>
+
+									<div class="body">
+										<p>
+											Nepean Woods Park &amp; Ride is located near the corner
+											of Woodroffe Ave. and Strandherd Dr.
+										</p>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/NEP.pdf"
+											target="_blank">Download the area map for Nepean Woods Station</a>
+									</div>
+
+									<div class="faq-accordion">
+										<h5 class="accordion">Access points</h5>
+
+										<div class="accordion-content">
+											<p>
+												There are two entrances to Nepean Woods Park &amp;
+												Ride:
+											</p>
+
+											<p>
+												<strong>On Strandherd Dr:</strong> The entrance is
+												located on Strandherd Dr. (south side) across from
+												Movati Athletic and Grovehurst Park.
+											</p>
+
+											<p>
+												<strong>On Crestway Dr:</strong> The entrance is
+												located on Crestway Dr. (east side) a few metres south
+												of the intersection at Strandherd Dr. / Crestway Dr.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="">
+									<h4>Types of parking spaces</h4>
+
+									<ul class="info-group--offers">
+										<li>
+											<div>
+												<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+													xmlns="http://www.w3.org/2000/svg">
+													<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+													<path
+														d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+														fill="black"></path>
+												</svg>
+											</div>
+
+											<div>
+												<p class="info-group--offers__stats">278</p>
+
+												<p class="info-group--offers__name">
+													Free parking spaces
+												</p>
+											</div>
+										</li>
+										<li>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+													fill="black"></path>
+											</svg>
+											<div>
+												<p class="info-group--offers__stats">9</p>
+
+												<p class="info-group--offers__name">
+													Accessible spaces
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="" data-station="Nepean Woods">
+									<h4>Connecting stations and routes</h4>
+
+									<p>
+										Nepean Woods Park &amp; Ride provides easy access to
+										Nepean Woods Station.
+									</p>
+
+									<ul>
+										<li>
+											<a class="schedules-link"
+												href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=SL990">Stop
+												schedules for Nepean Woods Station</a>
+										</li>
+										<li>
+											<a class="arrow-link"
+												href="https://www.octranspo.com/our-services/stations-2/nepean-woods1/"
+												target="_blank">Nepean Woods Station layout map and connecting
+												routes</a>
+
+								</div>
+
+								<div class="" data-station="Nepean Woods">
+									<h4>Related resources</h4>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/NEP.pdf"
+										target="_blank">Download the area map for Nepean Woods Station</a>
+								</div>
+							</div>
+
+							<div class="column gap">
+								<div class="card unavailable">
+									<p class="card__title">
+										Gold permit
+
+									</p>
+									<p class="tag">Unavailable</p>
+
+									<p>Gold permits are not sold at this location.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">
+										Free parking
+
+									</p>
+									<p class="tag tag-type__success">
+										Available
+									</p>
+
+									<p>This parking lot offers free parking.</p>
+								</div>
+
+								<div class="card">
+									<p class="card__title">Routes &amp; next departures</p>
+
+									<a class="arrow-link"
+										href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJkwi8-NTizUwRSxPkx67yuq4&amp;OriginType=ExternalLocation&amp;showOptions=true"
+										target="_blank">Use the Travel Planner to plan your trip.</a>
+
+
+
+									<p class="">
+										For routes &amp; next departure times at Nepean Woods
+										Station:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>3048</strong> or
+										</li>
+										<li>
+											Text <strong>3048</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+									<small class="note">Standard rates apply.</small>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="select-option-content" select-option-id="PDA" id="PDA">
+					<div class="parking-lot--info-box--heading">
+						<h3>Place d&rsquo;Orl&eacute;ans</h3>
+					</div>
+
+					<div class="parking-lot--info-box--body">
+						<div class="column ">
+							<div class="" data-station="Place d’Orleans">
+								<h4>Location</h4>
+
+								<div class="body">
+									<p>
+										Place d&rsquo;Orl&eacute;ans Park &amp; Ride is located
+										across Hwy 174 from the Place d&rsquo;Orl&eacute;ans
+										Shopping Centre.
+									</p>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/ORL.pdf"
+										target="_blank">Download the area map for Place d&rsquo;Orl&eacute;ans
+										Station</a>
+								</div>
+
+								<div class="faq-accordion">
+									<h5 class="accordion">Access points</h5>
+
+									<div class="accordion-content">
+										<p>
+											The entrance to Place d&rsquo;Orl&eacute;ans Park
+											&amp; Ride is located on Champlain St. (west side)
+											just before the westbound on-ramp to Hwy 174.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="">
+								<h4>Types of parking spaces</h4>
+
+								<ul class="info-group--offers">
+									<li>
+										<div>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+													fill="black"></path>
+											</svg>
+										</div>
+
+										<div>
+											<p class="info-group--offers__stats">427</p>
+
+											<p class="info-group--offers__name">
+												Free parking spaces
+											</p>
+										</div>
+									</li>
+									<li>
+										<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path
+												d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+												fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">16</p>
+
+											<p class="info-group--offers__name">
+												Accessible spaces
+											</p>
+										</div>
+									</li>
+									<li>
+										<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path
+												d="M20.5 12.5L23.1915 18.2955L29.535 19.0643L24.8549 23.415L26.084 29.6857L20.5 26.579L14.916 29.6857L16.1451 23.415L11.465 19.0643L17.8085 18.2955L20.5 12.5Z"
+												fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">90</p>
+
+											<p class="info-group--offers__name">
+												Gold permit spaces
+											</p>
+										</div>
+									</li>
+									<li>
+										<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path
+												d="M18.5 33V26.75H16V18C16 16.9583 16.3646 16.0729 17.0938 15.3438C17.8229 14.6146 18.7083 14.25 19.75 14.25C20.7917 14.25 21.6771 14.6146 22.4062 15.3438C23.1354 16.0729 23.5 16.9583 23.5 18C24.25 18.3125 24.8542 18.8125 25.3125 19.5C25.7708 20.1875 26 20.9375 26 21.75V26.75H22.25V33H18.5ZM19.75 13C19.0625 13 18.4737 12.755 17.9837 12.265C17.4937 11.775 17.2492 11.1867 17.25 10.5C17.25 9.8125 17.495 9.22375 17.985 8.73375C18.475 8.24375 19.0633 7.99917 19.75 8C20.4375 8 21.0263 8.245 21.5163 8.735C22.0063 9.225 22.2508 9.81334 22.25 10.5C22.25 11.1875 22.005 11.7763 21.515 12.2663C21.025 12.7563 20.4367 13.0008 19.75 13Z"
+												fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">2</p>
+
+											<p class="info-group--offers__name">
+												Expecting mother spaces
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Place d’Orléans">
+								<h4>Connecting stations and routes</h4>
+
+								<p>
+									Place d&rsquo;Orl&eacute;ans Park &amp; Ride provides easy
+									access to Place d&rsquo;Orl&eacute;ans Station and
+									Connexion routes.
+								</p>
+
+								<ul>
+									<li>
+										<a class="schedules-link"
+											href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=EP960">Stop
+											schedules for Place d&rsquo;Orl&eacute;ans
+											Station</a>
+									</li>
+									<li>
+										<a class="arrow-link"
+											href="https://www.octranspo.com/our-services/stations-2/place-dorleans1/"
+											target="_blank">Place d&rsquo;Orl&eacute;ans Station layout map and
+											connecting routes</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Place d’Orleans">
+								<h4>Related resources</h4>
+
+								<ul>
+									<li>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/permit/orleans_GPmap.pdf"
+											target="_blank">Download the Gold permit parking map for Place
+											d&rsquo;Orl&eacute;ans</a>
+									</li>
+									<li>
+										<a class="pdf-link"
+											href="https://www.octranspo.com/images/files/maps/area_map/ORL.pdf"
+											target="_blank">Download the area map for Place
+											d&rsquo;Orl&eacute;ans Station</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="column gap">
+							<div class="card">
+								<p class="card__title">
+									Gold permit
+
+								</p>
+								<p class="tag tag-type__success">
+									Available
+								</p>
+
+								<p>This parking lot offers Gold permits.</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">
+									Free parking
+
+								</p>
+								<p class="tag tag-type__success">
+									Available
+								</p>
+
+								<p>This parking lot offers free parking.</p>
+
+								<p class="icon-sm icon--warning note">
+									<small>Parking spaces at Place d&rsquo;Orl&eacute;ans fill up
+										fast! On an average weekday, this lot is full by 8 am.
+										Consider parking at Trim or Millennium Park &amp; Ride
+										for your commute.</small>
+								</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">Routes &amp; next departures</p>
+
+								<a class="arrow-link"
+									href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJrat7FXkRzkwRK0lGX-bNHLc&amp;OriginType=ExternalLocation&amp;showOptions=true"
+									target="_blank">Use the Travel Planner to plan your trip.</a>
+
+								<ul class="">
+									<li>
+									</li>
+								</ul>
+
+								<p class="">
+									For routes &amp; next departure times at Place
+									d&rsquo;Orl&eacute;ans Station:
+								</p>
+
+								<ul class="">
+									<li>
+										Call
+										<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+										followed by <strong>3075</strong> or
+									</li>
+									<li>
+										Text <strong>3075</strong> to
+										<a href="tel:560-560" target="_blank">560-560</a>
+									</li>
+								</ul>
+								<small class="note">Standard rates apply.</small>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="select-option-content" select-option-id="Rayfriel" id="ray-friel">
+				<div class="parking-lot--info-box--heading">
+					<h3>Ray Friel</h3>
+				</div>
+				<div class="parking-lot--info-box--body">
+					<div class="parking-lot-content">
+						<div class="column ">
+							<div class="" data-station="Ray Friel">
+								<h4>Location</h4>
+
+								<div class="body">
+									<p>
+										Ray Friel Park &amp; Ride is located at the Ray Friel
+										Recreation Complex on Tenth Line Rd.&nbsp;
+									</p>
+								</div>
+
+								<div class="faq-accordion">
+									<h5 class="accordion">Access points</h5>
+
+									<div class="accordion-content">
+										<p>
+											The designated parking spots for permit holders are
+											the parking spaces along Tenth Line Rd. and furthest
+											away from the Ottawa Public Library. Please view the
+											parking lot map to see the spots available for
+											parking.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="">
+								<h4>Types of parking spaces</h4>
+
+								<ul class="info-group--offers">
+									<li>
+										<div>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+													fill="black"></path>
+											</svg>
+										</div>
+
+										<div>
+											<p class="info-group--offers__stats">8</p>
+
+											<p class="info-group--offers__name">
+												Permit Parking spaces
+											</p>
+										</div>
+									</li>
+									<li>
+										<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path
+												d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+												fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">2</p>
+
+											<p class="info-group--offers__name">
+												Accessible spaces
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Ray Friel">
+								<h4>Connecting stations and routes</h4>
+
+								<p>
+									Ray Friel Park &amp; Ride provides easy access to
+									Connexion routes.
+								</p>
+
+								<p>Nearby stop schedules:</p>
+
+								<ul>
+									<li>
+										<a class="schedules-link"
+											href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=EO102">Stop
+											schedules for stop #6356 on Tenth Line Rd.</a>
+									</li>
+									<li>
+										<a class="schedules-link"
+											href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=EO355">Stop
+											schedules for stop #2766 on Bottriell Way.</a><br />
+										&nbsp;
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Rayfriel">
+								<h4>Related resources</h4>
+								<a class="pdf-link"
+									href="https://www.octranspo.com/images/files/maps/permit/RayFriel_GPmap.pdf"
+									target="_blank">Download the permit parking map for Ray Friel</a>
+							</div>
+						</div>
+
+						<div class="column gap">
+							<div class="card basic-card">
+								<p class="card__title">
+									Gold permit
+								</p>
+								<p class="tag">Unavailable</p>
+
+								<p>Gold permits are not sold at this location.</p>
+							</div>
+
+							<div class="card basic-card">
+								<p class="card__title">
+									Free parking
+
+								</p>
+								<p class="tag">
+									Unavailable
+								</p>
+
+								<p>
+									<a href="permit-types">Regular Parking Permits</a> are
+									required to park in this lot.
+								</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">Routes &amp; next departures</p>
+
+								<a class="arrow-link"
+									href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJiWJzpDUSzkwRh0BlJEjCH8w&amp;OriginType=ExternalLocation&amp;showOptions=true"
+									target="_blank">Use the Travel Planner to plan your trip.</a>
+
+								<ul class="">
+									<li>
+									</li>
+								</ul>
+
+								<div class="pb-1">
+									<p class="">
+										For routes &amp; next departure times at #6356 on Tenth
+										Line Rd:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>6356&nbsp;</strong> or
+										</li>
+										<li>
+											Text <strong>6356&nbsp;</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+								</div>
+
+								<div>
+									<p class="">
+										For routes &amp; next departure times at #2766 on
+										Bottriell Way:
+									</p>
+
+									<ul class="">
+										<li>
+											Call
+											<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+											followed by <strong>2766</strong> or
+										</li>
+										<li>
+											Text <strong>2766</strong> to
+											<a href="tel:560-560" target="_blank">560-560</a>
+										</li>
+									</ul>
+								</div>
+								<small class="note">Standard rates apply.</small>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="select-option-content" select-option-id="Riverview" id="riverview">
+				<div class="parking-lot--info-box--heading">
+					<h3>Riverview</h3>
+				</div>
+				<div class="parking-lot--info-box--body">
+					<div class="parking-lot-content">
+						<div class="column ">
+							<div class="" data-station="Riverview">
+								<h4>Location</h4>
+
+								<div class="body">
+									<p>
+										Riverview Park &amp; Ride is located on Earl Armstrong
+										Rd.
+									</p>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/RIVR.pdf"
+										target="_blank">Download the area map for Riverview Station</a>
+								</div>
+
+								<div class="faq-accordion">
+									<h5 class="accordion">Access points</h5>
+
+									<div class="accordion-content">
+										<p>
+											The entrance to Riverview Park &amp; Ride is located
+											on Earl Armstrong Rd. (south side) between Brian Good
+											Ave. and River Rd.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="">
+								<h4>Types of parking spaces</h4>
+
+								<ul class="info-group--offers">
+									<li>
+										<div>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+													fill="black"></path>
+											</svg>
+										</div>
+
+										<div>
+											<p class="info-group--offers__stats">246</p>
+
+											<p class="info-group--offers__name">
+												Free parking spaces
+											</p>
+										</div>
+									</li>
+									<li>
+										<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path
+												d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+												fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">8</p>
+
+											<p class="info-group--offers__name">
+												Accessible spaces
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Riverview">
+								<h4>Connecting stations and routes</h4>
+
+								<p>
+									Riverview Park &amp; Ride provides easy access to
+									Riverview Station.
+								</p>
+
+								<ul>
+									<li>
+										<a class="schedules-link"
+											href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=RR910">Stop
+											schedules for Riverview Station</a>
+									</li>
+									<li>
+										<a class="arrow-link"
+											href="https://www.octranspo.com/our-services/stations-2/riverview1/"
+											target="_blank">Riverview Station layout map and connecting routes</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Riverview">
+								<h4>Related resources</h4>
+								<a class="pdf-link" href="https://www.octranspo.com/images/files/maps/area_map/RIVR.pdf"
+									target="_blank">Download the area map for Riverview Station</a>
+							</div>
+						</div>
+
+						<div class="column gap">
+							<div class="card unavailable">
+								<p class="card__title">
+									Gold permit
+
+								</p>
+								<p class="tag">Unavailable</p>
+
+								<p>Gold permits are not sold at this location.</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">
+									Free parking
+
+								</p>
+								<p class="tag tag-type__success">
+									Available
+								</p>
+
+								<p>This parking lot offers free parking.</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">Routes &amp; next departures</p>
+
+								<a class="arrow-link"
+									href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJrycrBCDjzUwRw2vAzjzjah8&amp;OriginType=ExternalLocation&amp;showOptions=true"
+									target="_blank">Use the Travel Planner to plan your trip.</a>
+
+								<ul class="">
+									<li>
+									</li>
+								</ul>
+
+								<p class="">
+									For routes &amp; next departure times at Riverview
+									Station:
+								</p>
+
+								<ul class="">
+									<li>
+										Call
+										<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+										followed by <strong>3040</strong> or
+									</li>
+									<li>
+										Text <strong>3040</strong> to
+										<a href="tel:560-560" target="_blank">560-560</a>
+									</li>
+								</ul>
+								<small class="note">Standard rates apply.</small>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="select-option-content" select-option-id="Strandherd" id="strandherd">
+				<div class="parking-lot--info-box--heading">
+					<h3>Strandherd</h3>
+				</div>
+				<div class="parking-lot--info-box--body">
+					<div class="parking-lot-content">
+						<div class="column ">
+							<div class="" data-station="Strandherd">
+								<h4>Location</h4>
+
+								<div class="body">
+									<p>
+										Strandherd Park &amp; Ride is located at 3680 Strandherd
+										Dr.
+									</p>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/STR.pdf"
+										target="_blank">Download the area map for Strandherd Station</a>
+								</div>
+
+								<div class="faq-accordion">
+									<h5 class="accordion">Access points</h5>
+
+									<div class="accordion-content">
+										<p>
+											The entrance to Strandherd Park &amp; Ride is located
+											on Strandherd Dr. (north side), a few metres west of
+											the intersection at Strandherd Dr. / Riocan Ave.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="">
+								<h4>Types of parking spaces</h4>
+
+								<ul class="info-group--offers">
+									<li>
+										<div>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+													fill="black"></path>
+											</svg>
+										</div>
+
+										<div>
+											<p class="info-group--offers__stats">246</p>
+
+											<p class="info-group--offers__name">
+												Free parking spaces
+											</p>
+										</div>
+									</li>
+									<li>
+										<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path
+												d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+												fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">8</p>
+
+											<p class="info-group--offers__name">
+												Accessible spaces
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Strandherd">
+								<h4>Connecting stations and routes</h4>
+
+								<p>
+									Strandherd Park &amp; Ride provides easy access to
+									Strandherd Station and Connexion routes.
+								</p>
+
+								<ul>
+									<li>
+										<a class="schedules-link"
+											href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=SL950">Stop
+											schedules for Strandherd Station</a>
+									</li>
+									<li>
+										<a class="arrow-link"
+											href="https://www.octranspo.com/our-services/stations-2/strandherd1/"
+											target="_blank">Strandherd Station layout map and connecting
+											routes</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Strandherd">
+								<h4>Related resources</h4>
+								<a class="pdf-link" href="https://www.octranspo.com/images/files/maps/area_map/STR.pdf"
+									target="_blank">Download the area map for Strandherd Station</a>
+							</div>
+						</div>
+
+						<div class="column gap">
+							<div class="card unavailable">
+								<p class="card__title">
+									Gold permit
+
+								</p>
+								<p class="tag">Unavailable</p>
+
+								<p>Gold permits are not sold at this location.</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">
+									Free parking
+
+								</p>
+								<p class="tag tag-type__success">
+									Available
+								</p>
+
+								<p>This parking lot offers free parking.</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">Routes &amp; next departures</p>
+
+								<a class="arrow-link"
+									href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJ8dMW2t_8zUwRG--4DXEeMM0&amp;OriginType=ExternalLocation&amp;showOptions=true"
+									target="_blank">Use the Travel Planner to plan your trip.</a>
+
+								<ul class="">
+									<li>
+									</li>
+								</ul>
+
+								<p class="">
+									For routes &amp; next departure times at Strandherd
+									Station:
+								</p>
+
+								<ul class="">
+									<li>
+										Call
+										<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+										followed by <strong>3044</strong> or
+									</li>
+									<li>
+										Text <strong>3044</strong> to
+										<a href="tel:560-560" target="_blank">560-560</a>
+									</li>
+								</ul>
+								<small class="note">Standard rates apply.</small>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="select-option-content" select-option-id="Terryfox" id="terryfox">
+				<div class="parking-lot--info-box--heading">
+					<h3>Terry Fox</h3>
+				</div>
+				<div class="parking-lot--info-box--body">
+					<div class="parking-lot-content">
+						<div class="column ">
+							<div class="" data-station="Terry Fox">
+								<h4>Location</h4>
+
+								<div class="body">
+									<p>
+										Terry Fox Park &amp; Ride is located beside the Kanata
+										City Walk Centrum Shopping Centre off of Highway 417.
+									</p>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/TFO.pdf"
+										target="_blank">Download the area map for Terry Fox Station</a>
+								</div>
+
+								<div class="faq-accordion">
+									<h5 class="accordion">Access points</h5>
+
+									<div class="accordion-content">
+										<p>
+											The entrance to Terry Fox Park &amp; Ride is on Roland
+											Michener Dr. located behind the Landmark Cinemas
+											Kanata and west of Terry Fox Station.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="">
+								<h4>Types of parking spaces</h4>
+
+								<ul class="info-group--offers">
+									<li>
+										<div>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+													fill="black"></path>
+											</svg>
+										</div>
+
+										<div>
+											<p class="info-group--offers__stats">246</p>
+
+											<p class="info-group--offers__name">
+												Free parking spaces
+											</p>
+										</div>
+									</li>
+									<li>
+										<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path
+												d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+												fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">8</p>
+
+											<p class="info-group--offers__name">
+												Accessible spaces
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Terry Fox">
+								<h4>Connecting stations and routes</h4>
+
+								<p>
+									Terry Fox Park &amp; Ride provides easy access to Terry
+									Fox Station.
+								</p>
+
+								<ul>
+									<li>
+										<a class="schedules-link"
+											href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=WH920">Stop
+											schedules for Terry Fox Station</a>
+									</li>
+									<li>
+										<a class="arrow-link"
+											href="https://www.octranspo.com/our-services/stations-2/terry-fox1/"
+											target="_blank">Terry Fox Station layout map and connecting routes</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Terry Fox">
+								<h4>Related resources</h4>
+								<a class="pdf-link" href="https://www.octranspo.com/images/files/maps/area_map/TFO.pdf"
+									target="_blank">Download the area map for Terry Fox Station</a>
+							</div>
+						</div>
+
+						<div class="column gap">
+							<div class="card unavailable">
+								<p class="card__title">
+									Gold permit
+
+								</p>
+								<p class="tag">Unavailable</p>
+
+								<p>Gold permits are not sold at this location.</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">
+									Free parking
+
+								</p>
+								<p class="tag tag-type__success">
+									Available
+								</p>
+
+								<p>This parking lot offers free parking.</p>
+
+								<p class="icon-sm icon--warning pt-1_2">
+									<small>Parking spaces at Terry Fox fill up fast! On an average
+										weekday, this lot is full by 9:30 am.</small>
+								</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">Routes &amp; next departures</p>
+
+								<a class="arrow-link"
+									href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJV-A__Yn_zUwR17sJCeczPQU&amp;OriginType=ExternalLocation&amp;showOptions=true"
+									target="_blank">Use the Travel Planner to plan your trip.</a>
+
+								<ul class="">
+									<li>
+									</li>
+								</ul>
+
+								<p class="">
+									For routes &amp; next departure times at Terry Fox
+									Station:
+								</p>
+
+								<ul class="">
+									<li>
+										Call
+										<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+										followed by <strong>3058</strong> or
+									</li>
+									<li>
+										Text <strong>3058</strong> to
+										<a href="tel:560-560" target="_blank">560-560</a>
+									</li>
+								</ul>
+								<small class="note">Standard rates apply.</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="select-option-content" select-option-id="Trim" id="trim">
+				<div class="parking-lot--info-box--heading">
+					<h3>Trim</h3>
+				</div>
+				<div class="parking-lot--info-box--body">
+					<div class="parking-lot-content">
+						<div class="column ">
+							<div class="" data-station="Trim">
+								<h4>Location</h4>
+
+								<div class="body">
+									<p>
+										Trim Park &amp; Ride is located at Trim Rd. and Hwy 174.
+									</p>
+									<a class="pdf-link"
+										href="https://www.octranspo.com/images/files/maps/area_map/TRI.pdf"
+										target="_blank">Download the area map for Trim Station</a>
+								</div>
+
+								<div class="faq-accordion">
+									<h5 class="accordion">Access points</h5>
+
+									<div class="accordion-content">
+										<p>
+											The entrance to Trim Park &amp; Ride is located on S
+											Frontage (south side) west of the intersection at S
+											Frontage / Trim and east to Trim bus stop 2A.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="">
+								<h4>Types of parking spaces</h4>
+
+								<ul class="info-group--offers">
+									<li>
+										<div>
+											<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+												xmlns="http://www.w3.org/2000/svg">
+												<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+												<path
+													d="M14 18.5L15.5 14H26.5L28 18.5M26.5 23.5C26.1022 23.5 25.7206 23.342 25.4393 23.0607C25.158 22.7794 25 22.3978 25 22C25 21.6022 25.158 21.2206 25.4393 20.9393C25.7206 20.658 26.1022 20.5 26.5 20.5C26.8978 20.5 27.2794 20.658 27.5607 20.9393C27.842 21.2206 28 21.6022 28 22C28 22.3978 27.842 22.7794 27.5607 23.0607C27.2794 23.342 26.8978 23.5 26.5 23.5ZM15.5 23.5C15.1022 23.5 14.7206 23.342 14.4393 23.0607C14.158 22.7794 14 22.3978 14 22C14 21.6022 14.158 21.2206 14.4393 20.9393C14.7206 20.658 15.1022 20.5 15.5 20.5C15.8978 20.5 16.2794 20.658 16.5607 20.9393C16.842 21.2206 17 21.6022 17 22C17 22.3978 16.842 22.7794 16.5607 23.0607C16.2794 23.342 15.8978 23.5 15.5 23.5ZM27.92 13.5C27.72 12.92 27.16 12.5 26.5 12.5H15.5C14.84 12.5 14.28 12.92 14.08 13.5L12 19.5V27.5C12 27.7652 12.1054 28.0196 12.2929 28.2071C12.4804 28.3946 12.7348 28.5 13 28.5H14C14.2652 28.5 14.5196 28.3946 14.7071 28.2071C14.8946 28.0196 15 27.7652 15 27.5V26.5H27V27.5C27 27.7652 27.1054 28.0196 27.2929 28.2071C27.4804 28.3946 27.7348 28.5 28 28.5H29C29.2652 28.5 29.5196 28.3946 29.7071 28.2071C29.8946 28.0196 30 27.7652 30 27.5V19.5L27.92 13.5Z"
+													fill="black"></path>
+											</svg>
+										</div>
+
+										<div>
+											<p class="info-group--offers__stats">246</p>
+
+											<p class="info-group--offers__name">
+												Free parking spaces
+											</p>
+										</div>
+									</li>
+									<li>
+										<svg fill="none" height="42" viewbox="0 0 41 42" width="41"
+											xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path
+												d="M23.9019 24.7551L24.9016 26.4861C24.5368 27.4885 23.9302 28.3854 23.1356 29.0971C22.341 29.8088 21.383 30.3133 20.3466 30.5658C19.3101 30.8183 18.2274 30.8111 17.1945 30.5447C16.1615 30.2783 15.2103 29.761 14.4253 29.0387C13.6403 28.3165 13.0458 27.4115 12.6945 26.4043C12.3432 25.3971 12.246 24.3187 12.4115 23.2649C12.577 22.2111 13.0002 21.2144 13.6434 20.3634C14.2866 19.5124 15.13 18.8334 16.0986 18.3866L16.2004 19.9047C15.4661 20.3561 14.8589 20.9873 14.4361 21.7385C14.0134 22.4898 13.7891 23.3364 13.7844 24.1985C13.7798 25.0605 13.9948 25.9095 14.4094 26.6653C14.8239 27.4211 15.4242 28.0589 16.1537 28.5183C16.8831 28.9777 17.7176 29.2436 18.5783 29.2909C19.4391 29.3383 20.2977 29.1655 21.0731 28.7889C21.8485 28.4123 22.5152 27.8443 23.0101 27.1385C23.5051 26.4327 23.812 25.6124 23.9019 24.7551ZM17.6074 14.6192C17.6657 14.6282 17.725 14.6282 17.7833 14.6192C18.1924 14.5734 18.5701 14.3779 18.8435 14.0702C19.117 13.7626 19.2669 13.3646 19.2644 12.953C19.268 12.6178 19.1716 12.2892 18.9875 12.0092C18.8033 11.7291 18.5399 11.5104 18.2307 11.3809C17.9216 11.2513 17.5809 11.217 17.2521 11.2822C16.9234 11.3473 16.6215 11.5091 16.3852 11.7468C16.1489 11.9844 15.9888 12.2872 15.9254 12.6163C15.8621 12.9454 15.8983 13.2859 16.0296 13.5943C16.1608 13.9027 16.381 14.165 16.6621 14.3475C16.9432 14.5301 17.2723 14.6247 17.6074 14.6192ZM29.641 25.4493C29.5765 25.3396 29.4846 25.2486 29.3742 25.1853C29.2638 25.1219 29.1388 25.0885 29.0115 25.0883C28.8873 25.0906 28.766 25.1258 28.6598 25.1902L27.5768 25.8103L26.179 23.3111L25.2534 21.7282C25.1224 21.4976 24.9326 21.3058 24.7033 21.1724C24.474 21.0391 24.2134 20.9689 23.9482 20.9692H19.6624L19.5791 19.7473H22.9855C23.1712 19.7267 23.3427 19.6383 23.4673 19.4992C23.5919 19.36 23.6608 19.1797 23.6608 18.9929C23.6608 18.8061 23.5919 18.6258 23.4673 18.4866C23.3427 18.3474 23.1712 18.2591 22.9855 18.2385H19.468L19.3384 16.3872C19.3104 16.0057 19.1395 15.6488 18.8597 15.388C18.58 15.1271 18.2121 14.9815 17.8296 14.9802H17.7278C17.3315 15.004 16.9608 15.184 16.6971 15.4808C16.4333 15.7775 16.298 16.1667 16.3208 16.563L16.4319 18.2385L16.5429 19.7195L16.691 21.9226C16.7206 22.2937 16.8863 22.6408 17.1563 22.8971C17.4262 23.1534 17.7814 23.3008 18.1536 23.3111H23.4761L24.2629 24.6718L25.0497 26.088L25.855 27.495L26.2993 28.2633L29.391 26.4768C29.4799 26.4308 29.5582 26.3667 29.621 26.2888C29.6838 26.2109 29.7297 26.1208 29.7558 26.0241C29.782 25.9275 29.7877 25.8265 29.7727 25.7276C29.7577 25.6286 29.7223 25.5339 29.6687 25.4493H29.641Z"
+												fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">8</p>
+
+											<p class="info-group--offers__name">
+												Accessible spaces
+											</p>
+										</div>
+									</li>
+									<li class="launch2-4">
+										<svg fill="none" height="42" viewBox="0 0 41 42" width="41" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="20.5" cy="21" fill="#EBEBEB" r="20.5"></circle>
+											<path d="M14 25.5H20V23.5H16V21.5H19V19.5H16V17.5H20V15.5H14V25.5ZM23.5 25.5H25.5L28 15.5H26L24.5 21.5L23 15.5H21L23.5 25.5ZM10 29.5V11.5H32V29.5H10ZM12 27.5H30V13.5H12V27.5Z" fill="black"></path>
+										</svg>
+										<div>
+											<p class="info-group--offers__stats">6</p>
+
+											<p class="info-group--offers__name">
+												EV charging stations (<a href="https://ottawa.ca/en/living-ottawa/environment-conservation-and-climate/climate-change-and-energy/electric-vehicles#section-ea37d0ec-670c-4f00-a53c-340ccb58cd2e" target="_blank">level 2</a>)
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Trim">
+								<h4>Connecting stations and routes</h4>
+
+								<p>
+									Trim Park &amp; Ride provides easy access to Trim Station.
+								</p>
+
+								<ul>
+									<li>
+										<a class="schedules-link"
+											href="https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&amp;StopIdentifier=EO920">Stop
+											schedules for Trim Station</a>
+									</li>
+									<li>
+										<a class="arrow-link"
+											href="https://www.octranspo.com/our-services/stations-2/trim1/"
+											target="_blank">Trim Station layout map and connecting routes</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="" data-station="Trim">
+								<h4>Related resources</h4>
+								<a class="pdf-link" href="https://www.octranspo.com/images/files/maps/area_map/TRI.pdf"
+									target="_blank">Download the area map for Trim Station</a>
+							</div>
+						</div>
+
+						<div class="column gap">
+							<div class="card unavailable">
+								<p class="card__title">
+									Gold permit
+
+								</p>
+								<p class="tag">Unavailable</p>
+
+								<p>Gold permits are not sold at this location.</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">
+									Free parking
+
+								</p>
+								<p class="tag tag-type__success">
+									Available
+								</p>
+
+								<p>This parking lot offers free parking.</p>
+							</div>
+
+							<div class="card">
+								<p class="card__title">Routes &amp; next departures</p>
+
+								<a class="arrow-link"
+									href="https://plan.octranspo.com/plan/TravelPlans?OriginIdentifier=ChIJpz7XIOsTzkwRfm-9iP6mCCQ&amp;OriginType=ExternalLocation&amp;showOptions=true"
+									target="_blank">Use the Travel Planner to plan your trip.</a>
+
+								<ul class="">
+									<li>
+									</li>
+								</ul>
+
+								<p class="">
+									For routes &amp; next departure times at Trim Station:
+								</p>
+
+								<ul class="">
+									<li>
+										Call
+										<a href=" tel:613-560-1000" target="_blank">613-560-1000</a>
+										followed by <strong>3029</strong> or
+									</li>
+									<li>
+										Text <strong>3029</strong> to
+										<a href="tel:560-560" target="_blank">560-560</a>
+									</li>
+								</ul>
+								<small class="note">Standard rates apply.</small>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="section" id="permit-types">
+			<h2>Types of monthly permits</h2>
+
+			<div class="grid--2col">
+				<div class="card card-size--lg">
+					<div class="permit-types--card--content">
+						<strong>
+							<p style="text-align: center; font-size: 1.25rem;">Regular permit</p>
+						</strong>
+
+						<p class="permit-types--price blue-text mb-2" style="text-align: center;">
+							{oc_grid_fares:fo-prp}<span>/mo</span>
+							<span class="visually-hidden">nth</span>
+						</p>
+
+						<p class="card__body">
+							Grants access to permit-required lots, seven days a week.
+						<p class="font-weight-600">Permit-required lots:</p>
+
+						<ul>
+							<li class="flex gap-1_2 icon-sm icon--available-greenBG">
+								Baseline (before 11 am)
+							</li>
+							<li class="flex gap-1_2 icon-sm icon--available-greenBG">
+								Jeanne d&rsquo;Arc
+							</li>
+							<li class="flex gap-1_2 icon-sm icon--available-greenBG">
+								Ray Friel
+							</li>
+						</ul>
+						</p>
+
+
+					</div>
+				</div>
+
+				<div class="card card-size--lg">
+					<div class="permit-types--card--content">
+						<strong>
+							<p style="text-align: center; font-size: 1.25rem;">Gold permit</p>
+						</strong>
+
+						<p class="permit-types--price gold-text mb-2" style="text-align: center;">
+							{oc_grid_fares:fo-gpp}<span>/mo</span>
+							<span class="visually-hidden">nth</span>
+						</p>
+
+						<div class="card__body">
+							<p>
+								Gold Park &amp; Ride permits guarantee parking seven days a
+								week.
+							</p>
+							<p class="note">
+								Permits are limited and sold on a first come, first serve basis.
+								<a href="parking-lots" target="_blank">Select a parking lot</a>
+								with a gold permit parking lot icon
+								<img alt="blue star icon with a light blue background" class="gold-star"
+									src="https://www.octranspo.com/images/files/icons/Service_gold-parking.svg" />
+								to see if Gold permits are available
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="purchasing">
+			<h2>Purchasing Permits</h2>
+
+			<p>
+				To buy a Permit, call
+				<a href="tel:613-842-3777" target="_blank"
+					title="Call the Park &amp; Ride Adminstrator at 613-842-3777">613-842-3777</a>
+				or email
+				<a href="mailto:parkandridepermits@ottawa.ca?subject=Park%20%26%20Ride%20permits"
+					target="_blank">parkandridepermits@ottawa.ca</a>. Permits are on sale between the 15th of the
+				previous month to the
+				14th of the current month.
+			</p>
+
+			<div class="faq-accordion">
+				<h4 class="accordion">Eligibility</h4>
+
+				<div class="accordion-content">
+					<p>
+						To purchase a Park &amp; Ride permit, a valid transit monthly pass
+						for the same month must be purchased. Customers will be asked to
+						produce their current monthly pass to purchase a permit.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="automatic">
+			<h2>Automatic renewal plan for Gold permits</h2>
+
+			<div class="text-content mb-1">
+				<p>
+					With automatic renewal, you avoid making monthly trips to buy a
+					permit and don&rsquo;t have to worry about Gold permits being sold
+					out. Here&rsquo;s how it works:
+				</p>
+
+				<div class="faq-accordion">
+					<h4 class="accordion">How to purchase</h4>
+
+					<div class="accordion-content">
+						<p>
+							Call the Gold Pass Administrator at
+							<a href="tel:613-842-3777" target="_blank"
+								title="Call the Park &amp; Ride Adminstrator at 613-842-3777">613-842-3777</a>
+							to order your monthly permit or Gold permit.
+						</p>
+
+						<p>
+							Your permit will be mailed to you automatically before the first
+							of each month.
+						</p>
+
+						<div class="side-note">
+							<p class="side-note--title">Tip</p>
+
+							<p class="side-note--text">
+								The first time you order, call before the 20th day of the
+								month, to allow sufficient time for mailing.
+							</p>
+						</div>
+					</div>
+
+					<h4 class="accordion">Payment Methods</h4>
+
+					<div class="accordion-content">
+						<p>
+							Pay with a credit card (MasterCard, Visa or American Express).
+							We&rsquo;ll deduct the cost of your permit each month around the
+							15th.
+						</p>
+					</div>
+
+					<h4 class="accordion">How to cancel your automatic renewal plan</h4>
+
+					<div class="accordion-content">
+						<p>
+							You may cancel the automatic deduction any time before the 10th
+							of the preceding month.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="contact">
+			<h2>Contact the Park & Ride Administrator</h2>
+			<div class="banner icon-banner">
+				<img class="banner__logo"
+					src="https://www.octranspo.com/images/files/icons/service_customer-service.svg">
+				<div class="banner__content">
+					<p class="banner__title">Questions about our Park &amp; Ride lots or Permits?</p>
+					<p class="banner__body">
+						Contact our Park &amp; Ride Administrator!
+					</p>
+					<div class="banner__btns">
+						<a href="tel:613-842-3777" title="Learn more about OC Transpo's Travel Planner"
+							class="btn btn-tertiary btn-sm btn-icon--phone">Call</a>
+						<a href="mailto:parkandridepermits@ottawa.ca"
+							title="Plan my trip using OC Transpo's Travel Planner"
+							class="btn btn-tertiary btn-sm btn-icon--email">Email</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<h2>Related Pages</h2>
+
+	</div>
+	<script src="/images/files/app/pnr.js"></script>
+	<script src="/images/files/app/component_toc.js"></script>
+	<script src="/images/files/app/component_select-options.js"></script>
+
+	<!-- copy above -->
+	<script src="../../app/js/toc_script.js"></script>
+	<script src="../../app/js/pnr.js"></script>
+	<script src="../../app/js/component_select-options.js"></script>
+</body>
+
+</html>

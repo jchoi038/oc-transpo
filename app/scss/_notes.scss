@@ -30,6 +30,10 @@
         padding-top: 0.25rem;
     }
 
+    .note__body{
+        margin-bottom: 0;
+    }
+
     &.note__type{
         &--info, &--success,&--warning, &--urgent{
             > * {

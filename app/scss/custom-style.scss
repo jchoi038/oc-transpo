@@ -54,66 +54,72 @@ $grid-columns:      8; // Sets the grid to 8 columns wide
 $grid-gutter-width: 55px; //Default width between columns
 $transition-collapse: none;
 
-@import "globals"; //new
-
 @import "reset"; // reset to reduce browser display inconsistencies
 @import "bootstrap/mixins"; // common sass mixins. see https://gist.github.com/anschaef/d7552885c0e1f127cf8830d3bbf6e4b1 for more information.
 @import "bootstrap/bootstrap-grid"; // bootstrap grid
+
 // @import "bootstrap/navbar"; // bootstrap navbar. used for mobile nav
 @import "bootstrap/transitions"; // bootstrap css transitions
 @import "typography"; // general font and header styles
 // @import "navigation"; // main/footer nav
-@import "homepage"; // homepage styles
-@import "fares"; // page styles
+// @import "fares"; // page styles
 // @import "page"; // page styles
-@import "costs"; // page styles
-@import "accessibility"; // Accessibile transit section styles
-@import "busfleets"; // Bus fleets page styles
-@import "routes"; // Route schedules page styles
-@import "destinations"; // Ottawa Destinations section styles
-@import "stations"; // Stations section styles
-@import "alerts"; // Alerts page + homepage alerts styles
-@import "alert-registration"; // Alert registration application styles
-@import "contact"; // Contact page styles
-@import "search"; // Search results page styles
-@import "reports-stats"; // Reports & Stats page styles
-@import "jquery.fancybox"; // fancybox modal window styles
-@import "ready-for-rail"; // ready for rail page styles
-@import "otrain-launch"; // LRT launch styles (animated logo, countdown, welcome aboard nav
-@import "service-change"; // Service change styles - countdown, logo image, modal pop-up
-@import "virtual-museum"; // Virtual Museum styles (timeline, before/after and colourized images)
-@import "print"; // print styles
-@import "stage-2"; // Stage 2 styles
-@import "stage2-page"; // Stage 2 Style Guide 
+// @import "costs"; // page styles
+// @import "accessibility"; // Accessibile transit section styles
+// @import "busfleets"; // Bus fleets page styles
+// @import "routes"; // Route schedules page styles
+// @import "destinations"; // Ottawa Destinations section styles
+// @import "homepage"; // Homepage
+// @import "stations"; // Stations section styles
+// @import "alerts"; // Alerts page + homepage alerts styles
+// @import "alert-registration"; // Alert registration application styles
+// @import "contact"; // Contact page styles
+// @import "search"; // Search results page styles
+// @import "reports-stats"; // Reports & Stats page styles
+// @import "jquery.fancybox"; // fancybox modal window styles
+// @import "ready-for-rail"; // ready for rail page styles
+// @import "otrain-launch"; // LRT launch styles (animated logo, countdown, welcome aboard nav
+// @import "service-change"; // Service change styles - countdown, logo image, modal pop-up
+// @import "virtual-museum"; // Virtual Museum styles (timeline, before/after and colourized images)
+// @import "print"; // print styles
+// @import "stage-2"; // Stage 2 styles
+// @import "stage2-page"; // Stage 2 Style Guide 
+// @import "bread-crumbs";
+// @import "carousel";//new
+// @import "entrance-sign";//new
 
 
 
+/*NEW Below*/
+
+@import "globals"; //new
 @import "badges";//new
 @import "tables"; //new
 @import "containers"; //new
 @import "lists"; //new
 @import "flex"; //new
+@import "banners";//new
 @import "buttons"; //new
 @import "grid";//new
 @import "notes";//new
 @import "cards";//new
+@import "news-cards";//new
 @import "tabs";//new
 @import "layout";//new
 @import "accordion";//new
 @import "util";//new
-@import "banners";//new
 @import "code";//new
 @import "tags";//new
 @import "images";//new
 @import "toc";//new
 @import "links";//new
-@import "carousel";//new
 @import "select-options";//new
-@import "fields";//new
 @import "icons";//new
 @import "routes-lines";//new
-@import "entrance-sign";//new
-// @import "bread-crumbs";
+
+
+
+
 
 
 
@@ -168,54 +174,6 @@ $transition-collapse: none;
 	}
 }
 
-
-
-a.blue-button {
-	background-color: #016b9d;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 35px;
-    display: inline-block;
-    text-decoration: none;
-    padding: 0px 25px 0px 10px;
-    background-image: url(../img/right_white_arrow.svg);
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-}
-
-a.learn-more{
-	color: #000000;	
-	font-size: 15px;
-	font-weight: bold;	
-	text-decoration: none;
-	display: inline-block;
-	background-image: url(../img/right-arrow.svg);
-	background-repeat: no-repeat;
-    background-position: 100% center;
-    padding-right: 16px;
-}
-
-h2.border-blue{
-	&:before{
-		border-top: 4px solid #016b9d;
-		content: "";
-		width: 64px;
-		display: block;
-		margin-bottom: 20px;
-	}
-}
-
-h2.border-green{
-	&:before{
-		border-top: 4px solid #37B249;
-		content: "";
-		width: 64px;
-		display: block;
-		margin-bottom: 20px;
-	}
-}
 
 //image-gallery-carousel-main class is for the photo galleries on the main site only
 //using different class since main site has narrower grid

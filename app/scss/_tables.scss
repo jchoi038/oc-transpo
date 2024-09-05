@@ -14,6 +14,8 @@ table tr td{
 	align-content: start;
 }
 
+// flex tbody
+
 
 
 // Table width
@@ -43,7 +45,7 @@ table{
 
 table {
 	margin: none;
-	margin-bottom: 1rem;
+	margin-bottom: 0.25rem;
 	.emptyCell {
 		background: none !important;
 		box-shadow: none !important;
@@ -262,6 +264,48 @@ table{
 }
 
 //station table
+
+#bus-boarding-info tbody{
+	gap: 0;
+		max-height: 50vh;
+		display: block;
+		overflow-y: scroll;
+		border-radius: 0 0 0.5rem 0.5rem;
+	
+}
+
+table.boarding-locations{
+	border-collapse: separate;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	border: 1px solid var(--border-color);
+	caption{
+		font-size: 1rem;
+    	font-weight: 700;
+		&.banner--nwtb{
+			padding-right: 25%;
+		}
+	}
+	tbody{
+		
+		
+		tr{
+			border: none;
+			// border-bottom: 1px solid var(--border-color);
+			border-right: 1px solid var(--border-color);
+			display: flex;
+			align-items: center;
+		}
+		tr td{
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+		tr td:first-of-type{
+			width: 100%;
+		}
+	}
+}
 
 table.station-table, table.stop-table{
 	border-collapse: separate;

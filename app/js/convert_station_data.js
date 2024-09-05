@@ -1,13 +1,84 @@
 var dynamicArea = document.getElementById("dynamic-area")
+var station_560key = new Map(
+	[
+		[3009, "Rideau"],
+		[3010, "Pimisi"],
+		[3011, "Tunney's Pasture"],
+		[3012, "Westboro"],
+		[3013, "Dominion"],
+		[3017, "Baseline (Algonquin)"],
+		[3018, "Teron"],
+		[3021, "uOttawa"],
+		[3022, "Lees"],
+		[3023, "Hurdman"],
+		[3024, "Tremblay"],
+		[3025, "St-Laurent"],
+		[3026, "Cyrville"],
+		[3027, "Blair"],
+		[3029, "Trim"],
+		[3031, "Smyth"],
+		[3032, "Riverside"],
+		[3034, "Billings Bridge"],
+		[3035, "Heron"],
+		[3036, "Walkley"],
+		[3037, "Greenboro"],
+		[3038, "South Keys"],
+		[3039, "Airport"],
+		[3040, "Riverview"],
+		[3041, "Leitrim"],
+		[3043, "Fallowfield"],
+		[3044, "Strandherd"],
+		[3045, "Barrhaven Centre"],
+		[3048, "Nepean Woods"],
+		[3049, "Beatrice"],
+		[3050, "Bayshore"],
+		[3051, "Lyon"],
+		[3052, "Parliament / Parlement"],
+		[3055, "Eagleson"],
+		[3058, "Terry Fox"],
+		[3059, "Canadian Tire Centre"],
+		[3060, "Bayview"],
+		[3061, "Dow's Lake"],
+		[3063, "Mooney's Bay"],
+		[3065, "Corso Italia"],
+		[3067, "Bowesville"],
+		[3068, "Limebank"],
+		[3069, "Uplands"],
+		[3074, "Chapel Hill"],
+		[5813, "Carleton"],
+		[8813, "Elmvale"],
+		[8810, "Elmvale"],
+		[3057, "Innovation"],
+		[3016, "Iris"],
+		[3070, "Jeanne d'Arc"],
+		[3014, "Lincoln Fields"],
+		[3046, "Longfields"],
+		[3030, "Lycée Claudel"],
+		[3000, "Mackenzie King"],
+		[3047, "Marketplace"],
+		[3076, "Millennium"],
+		[3042, "Moodie"],
+		[3019, "Pinecrest"],
+		[3028, "Place d'Orléans"],
+		[3033, "Pleasant Park"],
+		[3015, "Queensway"],
+	].sort()
+);
+
+var line1Stations = [3060, 3027, 3026, 3023, 3022, 3051, 3052, 3010, 3009, 3025, 3024, 3011, 3021];
+var line2Stations = [3060, 3067, 5813, 3065, 3061, 3037, 3041, 3068, 3063, 3038, 3036];
+var line4Stations = [3039, 3038, 3069];
+var busStations = [3045, 3017, 3050, 3060, 3049, 3034, 3059, 5813, 3074, 3013, 3055, 3043, 3037, 3035, 3023, 3057, 3016, 3070, 3022, 3041, 3068, 3014, 3046, 3030, 3051, 3000, 3047, 3076, 3042, 3063, 3048, 3052, 3010, 3019, 3028, 3033, 3015, 3009, 3032, 3040, 3031, 3038, 3025, 3044, 3018, 3058, 3024, 3029, 3011, 3021, 3036, 3012]
+
 fetch("/data/stationStops.json")
     .then( response => response.json())
     .then(stationdata => {
         // sort station data alphabetically
         stationdata.sort(function (a,b) {
-            if (a.name < b.name) {
+            if (a.station_560 < b.station_560) {
                 return -1
             }
-            if (a.name > b.name) {
+            if (a.station_560 > b.station_560) {
                 return 1
             }
             return 0
@@ -17,34 +88,40 @@ fetch("/data/stationStops.json")
             var section = document.createElement("section")
             let section_table = document.createElement("section")
             var station_name = document.createElement("h2")
-            var h2 = document.createElement("h3") 
+            var station_560 = document.createElement("strong")
             var disclaimer = document.createElement("p") 
             var desc = document.createElement("p")
             var banner = document.createElement("div")
             var info = document.createElement("div")
-            banner.classList.add("banner")
-            banner.classList.add("banner--nwtb")
-            info.classList.add("note")
-            info.classList.add("note__type--info")
-            h2.textContent = "New stops and service"
-            desc.textContent = station.station_desc
-            disclaimer.textContent = ""
-            banner.innerHTML = 
-            `<div class="banner__content">
-                <p class="banner__title">New Ways to Bus Are Coming Your Way</p>
-                <p class="banner__body">
-                    Frequent. Local. Connected.
-                </p>
-                <a class="btn btn__arrow btn-white borderless" href="https://www.octranspo.com/en/plan-your-trip/service-changes/new-ways-to-bus">
-                    Learn more
-                </a>
-            </div>`
-            info.innerHTML = 
-            `
-                <p class="note__title">Effective xx date: The following stops and services will replace the current.</p>
-                <p class="note__body"></p>
+            station_560.textContent = station.station_560
+            console.log(station_560)
+            /** uncomment for description**/
+            // desc.textContent = station.station_desc
+            // disclaimer.textContent = ""
+
+            /** uncomment for banner, info note**/
+            // banner.classList.add("banner")
+            // banner.classList.add("banner--nwtb")
+            // banner.innerHTML = 
+            // `<div class="banner__content">
+            //     <p class="banner__title">New Ways to Bus Are Coming Your Way</p>
+            //     <p class="banner__body">
+            //         Frequent. Local. Connected.
+            //     </p>
+            //     <a class="btn btn__arrow btn-white borderless" href="https://www.octranspo.com/en/plan-your-trip/service-changes/new-ways-to-bus">
+            //         Learn more
+            //     </a>
+            // </div>`
+            
+            /** uncomment for info note**/
+            // info.classList.add("note")
+            // info.classList.add("note__type--info")
+            // info.innerHTML = 
+            // `
+            //     <p class="note__title">The following stops and services will take effect on xx date</p>
+            //     <p class="note__body"></p>
                 
-            `
+            // `
             
             
 
@@ -82,8 +159,8 @@ fetch("/data/stationStops.json")
             station_name.appendChild(stationName)
             dynamicArea.appendChild(section)
             section.appendChild(station_name)
+            section.appendChild(station_560)
             section.appendChild(desc)
-            section.appendChild(h2)
             section.appendChild(disclaimer)
             section.appendChild(info)
             section.appendChild(section_table)
@@ -92,73 +169,31 @@ fetch("/data/stationStops.json")
             section.setAttribute("id", station.station_name)
             
 
-            for (var stop of station.stops ){
-                section_table.classList.add('grid--2col')
-                let table = document.createElement("table")
-                let thead = document.createElement("thead")
-                let tr = document.createElement("tr")
-                let tbody = document.createElement("tbody")
-                thead.appendChild(tr)
-                table.appendChild(thead)
-                table.appendChild(tbody)
-                table.classList.add("light")
-                table.classList.add("station-table")
-                let row_stopName = document.createElement("th")
-                let routes = createCommaSeperatedtoArray(stop.routes)
-                row_stopName.textContent = stop.stop_name
-                tr.appendChild(row_stopName)
-                section_table.appendChild(table)
-                section.appendChild(section_table)
-                
-                for (var route of routes){
-                    let row = document.createElement("tr")
-                    let cell = document.createElement("td")
-                    if (route.split(" ")[0] > 4){
-                        let route_icon = route.split("[")[1].replace("]","")
-                        console.log(route_icon)
-                        switch (route_icon) {
-                            case 'BLU' : route_icon = "frequent"
-                            case 'BOW' :
-                            case 'GRY' :
-                            case 'GOW' :
-                            case 'PUR' :
-                        }
-                    }
-                    route = route.split("[")[0]
-                    cell.textContent = route
-
-                    // replace the first word (which is the route number) of each cell to wrap with <span>
-                    cell.innerHTML = cell.textContent.replace(/^(<[^\/]*[^>]*>)*(\w+\b)/g, '$1<span>$2</span>')
-                    
-                    row.appendChild(cell)
-                    tbody.appendChild(row)
-                }
-            }
             section.appendChild(banner)
         }
         
-        let span_s = document.getElementById("dynamic-area").getElementsByTagName('span')
-        let routeNumbers = getRouteNumber(span_s)
-        addRouteClass(routeNumbers, span_s)
+        // let span_s = document.getElementById("dynamic-area").getElementsByTagName('span')
+        // let routeNumbers = getRouteNumber(span_s)
+        // addRouteClass(routeNumbers, span_s)
     })
 
 function createCommaSeperatedtoArray(originalString){
     return separatedArray = originalString.split(', ');
 }
 
-function getRouteNumber(data){
-    let routeNumbers = []
-    for(let i = 0; i < data.length; i++){
-        routeNumbers[i] =  data[i].textContent
-    }
-    return routeNumbers
+// function getRouteNumber(data){
+//     let routeNumbers = []
+//     for(let i = 0; i < data.length; i++){
+//         routeNumbers[i] =  data[i].textContent
+//     }
+//     return routeNumbers
     
-}
+// }
 
-function addRouteClass(routeNumbers, span_s){
-    for(let i = 0; i < span_s.length; i++){
-        span_s[i].classList.add('rt') 
-        span_s[i].classList.add('rt-'+routeNumbers[i]) 
-    }
-}
+// function addRouteClass(routeNumbers, span_s){
+//     for(let i = 0; i < span_s.length; i++){
+//         span_s[i].classList.add('rt') 
+//         span_s[i].classList.add('rt-type--'+routeNumbers[i]) 
+//     }
+// }
 

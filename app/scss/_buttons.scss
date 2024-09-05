@@ -1,19 +1,25 @@
 // buttons
 /*Button styles*/
-/*Last updated: 2024/08/07*/
+/*Last updated: 2024/08/16 11:19pm*/
 // reset
-a.learn-more{
+a.learn-more {
 	color: #000000;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    background-image: none;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	display: flex;
+	background-image: none;
 }
 /* reviewed styles */
 //boiler plate
 
-.btn, a.learn-more {
+a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
+	// button transitions
+	&,
+	&::after,
+	&::before {
+		transition: all 100ms ease-out;
+	}
 	color: var(--charcoal--800);
 	background-color: var(--ter-btn-color);
 	display: flex;
@@ -22,11 +28,11 @@ a.learn-more{
 	justify-content: center;
 	min-height: 2.5rem;
 	width: fit-content;
-	padding: 0.5rem 0.75rem 0.4rem 1rem;
+	padding: 0.5rem 0.75rem 0.5rem 1rem;
 	border-radius: 100rem;
 	font-weight: 600;
 	line-height: 1.15;
-	font-size: $btn-font-md;
+	font-size: $btn-font-size;
 	text-decoration: none;
 	outline-offset: 0;
 	margin-bottom: 0.5rem;
@@ -55,21 +61,15 @@ a.learn-more{
 			height: 1rem;
 		}
 	}
+
+	.btn-icon-only {
+		width: 2.5rem;
+		height: 2.5rem;
+		padding: 0;
+		margin: 0;
+	}
 }
 
-.btn-icon-only {
-	width: 2.5rem;
-	height: 2.5rem;
-	padding: 0;
-	margin: 0;
-}
-
-// button transitions
-.btn,
-.btn::after,
-.btn::before {
-	transition: all 100ms ease-out;
-}
 
 // small btn styles
 .banner .btn,
@@ -172,7 +172,8 @@ a.learn-more{
 	}
 }
 
-.banner .btn-secondary, .banner .banner__btns>a:nth-of-type(2),
+.banner .btn-secondary,
+.banner .banner__btns > a:nth-of-type(2),
 .btn-secondary,
 .btn-line1,
 .btn-line2,
@@ -208,9 +209,8 @@ a.learn-more{
 		&:hover {
 			box-shadow: var(--scd-btn-border-color-dm) 0px 0px 0px 1px;
 		}
-	}																					
+	}
 }
-
 
 // Line & route button icon
 .btn-line1,
@@ -505,12 +505,11 @@ a.learn-more{
 
 // Banner darkmode button
 
-.banner .btn.dark-mode{
-		color: #fff;
-		&::after {
-			background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
-		}
-	
+.banner .btn.dark-mode {
+	color: #fff;
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
+	}
 }
 // dark mode button for buttons
 
@@ -529,8 +528,7 @@ a.learn-more{
 	&-local,
 	&-extension,
 	&-line2-4,
-	&-line1-3
-	{
+	&-line1-3 {
 		color: #fff;
 		&::after {
 			background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
@@ -823,8 +821,7 @@ a.learn-more{
 }
 
 // leading small, tertiary icon buttons
-.btn{
-
+.btn {
 	&.btn-leading-icon,
 	&.btn-icon--map,
 	&.btn-icon--pdf,
@@ -836,7 +833,7 @@ a.learn-more{
 	&.btn-icon--fax,
 	&.btn-icon--phone {
 		padding: 0.5rem 1rem 0.4rem 1rem;
-	
+
 		&::before {
 			content: "";
 			display: block;
@@ -850,10 +847,10 @@ a.learn-more{
 			content: none;
 			display: none;
 		}
-	
+
 		&.btn-sm {
 			padding: 0.4rem 0.75rem 0.4rem 0.75rem;
-	
+
 			&::before {
 				width: 1rem;
 				min-width: 1rem;
