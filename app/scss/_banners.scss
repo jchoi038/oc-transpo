@@ -18,6 +18,58 @@
 	}
 }
 
+.banner {
+	&.dark,
+	&.dark-mode {
+		background-color: var(--charcoal--800);
+		p,
+		.btn {
+			text-shadow: $text-shadow;
+		}
+		&::before {
+			background-color: var(--charcoal--800);
+		}
+		p.banner__title {
+			color: #fff;
+		}
+		p.banner__body {
+			color: var(--transparent--800);
+			text-shadow: $text-shadow;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__btns {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	&__title {
+		font-size: $ui-title-size-md;
+		color: var(--charcoal--800);
+		font-weight: $ui-title-font-weight;
+		line-height: 1.15;
+		margin-bottom: 1em;
+		@include media-breakpoint-down(xs) {
+			font-size: $ui-title-size-xs;
+			margin-bottom: 0.75em;
+			font-weight: 700;
+		}
+	}
+	&__body {
+		color: var(--text-color-light);
+		@include media-breakpoint-down(xs) {
+			font-size: $ui-body-size-xs;
+		}
+	}
+}
+
 .banner .btn {
 	margin-bottom: 0;
 	transition: none;
@@ -402,56 +454,6 @@
 			//calc (100vw -1440 px = remaining width)/2 - (12.5% of max width of 1440px) - (margin left on container)
 			margin-left: calc((-100vw + 1440px) / 2 - (1440px * 0.125) - 27.5px);
 		
-	}
-
-	&.dark,
-	&.dark-mode {
-		background-color: var(--charcoal--800);
-		p,
-		.btn {
-			text-shadow: $text-shadow;
-		}
-		&::before {
-			background-color: var(--charcoal--800);
-		}
-		p.banner__title {
-			color: #fff;
-		}
-		p.banner__body {
-			color: var(--transparent--800);
-			text-shadow: $text-shadow;
-		}
-	}
-
-	&__content {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-
-	&__btns {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-	}
-
-	&__title {
-		font-size: $ui-title-size-md;
-		color: var(--charcoal--800);
-		font-weight: $ui-title-font-weight;
-		line-height: 1.15;
-		margin-bottom: 1em;
-		@include media-breakpoint-down(xs) {
-			font-size: $ui-title-size-xs;
-			margin-bottom: 0.75em;
-			font-weight: 700;
-		}
-	}
-	&__body {
-		color: var(--text-color-light);
-		@include media-breakpoint-down(xs) {
-			font-size: $ui-body-size-xs;
-		}
 	}
 }
 
