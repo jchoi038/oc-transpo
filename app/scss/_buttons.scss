@@ -13,47 +13,26 @@ a.learn-more {
 /* reviewed styles */
 //boiler plate
 
-a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
-	// button transitions
-	&,
-	&::after,
-	&::before {
-		transition: all 100ms ease-out;
-	}
-	color: var(--charcoal--800);
-	background-color: var(--ter-btn-color);
-	display: flex;
-	gap: 0.25rem;
-	align-items: center;
-	justify-content: center;
-	min-height: 2.5rem;
-	width: fit-content;
+// button padding
+.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only) {
 	padding: 0.5rem 0.75rem 0.5rem 1rem;
-	border-radius: 100rem;
-	font-weight: 600;
-	line-height: 1.15;
-	font-size: $btn-font-size;
-	text-decoration: none;
-	outline-offset: 0;
-	margin-bottom: 0.5rem;
 
-	//buttons have default arrow
-	&::after {
-		content: "";
-		display: block;
-		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
-		background-repeat: no-repeat;
-		background-size: contain;
-		width: 1.25rem;
-		min-width: 1.25rem;
-		height: 1.25rem;
+	@include media-breakpoint-down(sm) {
+		padding: 0.4rem 0.5rem 0.4rem 0.75rem;
 	}
+}
+
+// button size & padding
+.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm),
+a.learn-more {
+	min-height: 2.5rem;
+	font-size: $btn-font-size;
+	margin-bottom: 0.5rem;
 
 	// btn responsive behaviour
 	@include media-breakpoint-down(sm) {
 		font-size: $btn-font-sm;
 		min-height: 1.875rem;
-		padding: 0.4rem 0.5rem 0.4rem 0.75rem;
 		&::after,
 		&.btn-leading-icon::before {
 			width: 1rem;
@@ -61,32 +40,59 @@ a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
 			height: 1rem;
 		}
 	}
-
-	.btn-icon-only {
-		width: 2.5rem;
-		height: 2.5rem;
-		padding: 0;
-		margin: 0;
-	}
 }
 
-
-// small btn styles
-.banner .btn,
-.btn-sm,
-.filter-bar .btn {
+.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button).btn-sm {
 	font-size: $btn-font-sm;
 	min-height: 1.875rem;
 	padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+}
+
+// border radius{
+
+.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-text) {
+	border-radius: 100rem;
+}
+
+// general
+
+.btn:not(.green-btn).btn:not(.btn--all-alerts).btn:not(.blue-button),
+a.learn-more {
+	display: flex;
+	gap: 0.25em;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	font-weight: 600;
+	line-height: 1.15;
+	text-decoration: none;
+	outline-offset: 0;
+
+	//buttons have default arrow
 	&::after {
-		width: 1rem;
-		min-width: 1rem;
-		height: 1rem;
+		content: "";
+		display: block;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 1.25rem;
+		min-width: 1.25rem;
+		height: 1.25rem;
 	}
-	&:active,
-	&.active {
-		background-color: var(--charcoal--800);
-	}
+}
+
+.btn-icon-only {
+	width: 2.5rem;
+	min-width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+}
+
+// button transitions
+.btn,
+.btn::after,
+.btn::before {
+	transition: all 100ms ease-out;
 }
 
 // filter bar
@@ -108,6 +114,7 @@ a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
 .filter-bar .btn,
 .banner .btn:not(.override) {
 	background-color: var(--ter-btn-color);
+	color: var(--charcoal--800);
 
 	&::after {
 		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
@@ -351,6 +358,9 @@ a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
 .btn-extension,
 .btn-line2-4,
 .btn-line1-3 {
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+	}
 	outline-offset: 3px;
 	&:before {
 		transition: all 100ms ease-out;
@@ -473,6 +483,7 @@ a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
 
 .btn.btn-text {
 	background-color: transparent;
+	color: var(--charcoal--800);
 	padding: 0.5rem 0 0;
 	margin: 0 0 0.5rem;
 	border-radius: 0;
@@ -489,6 +500,11 @@ a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
 .search-btn,
 .prev-btn,
 .next-btn {
+	background-color: var(--ter-btn-color);
+	color: var(--charcoal--800);
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+	}
 	outline-offset: 4px;
 	background-color: white;
 	box-shadow: $elevation1;
@@ -878,6 +894,23 @@ a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
 	&.active:hover {
 		background-color: var(--ter-btn-color-hover);
 		color: var(--charcoal--800);
+	}
+}
+
+// small btn styles
+.banner .btn,
+.btn-sm,
+.filter-bar .btn {
+	min-height: 1.875rem;
+	padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+	&::after {
+		width: 1rem;
+		min-width: 1rem;
+		height: 1rem;
+	}
+	&:active,
+	&.active {
+		background-color: var(--charcoal--800);
 	}
 }
 

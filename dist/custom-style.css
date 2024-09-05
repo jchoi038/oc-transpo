@@ -2889,77 +2889,82 @@ a.learn-more {
 }
 
 /* reviewed styles */
-a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
-  color: var(--charcoal--800);
-  background-color: var(--ter-btn-color);
-  display: flex;
-  gap: 0.25rem;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.5rem;
-  width: -moz-fit-content;
-  width: fit-content;
+.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only) {
   padding: 0.5rem 0.75rem 0.5rem 1rem;
-  border-radius: 100rem;
-  font-weight: 600;
-  line-height: 1.15;
+}
+@media (max-width: 767.98px) {
+  .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only) {
+    padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+  }
+}
+
+.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm),
+a.learn-more {
+  min-height: 2.5rem;
   font-size: 0.925rem;
-  text-decoration: none;
-  outline-offset: 0;
   margin-bottom: 0.5rem;
 }
-a.learn-more, a.learn-more::after, a.learn-more::before, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button), .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button)::after, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button)::before {
-  transition: all 100ms ease-out;
+@media (max-width: 767.98px) {
+  .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm),
+  a.learn-more {
+    font-size: 0.8125rem;
+    min-height: 1.875rem;
+  }
+  .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm)::after, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm).btn-leading-icon::before,
+  a.learn-more::after,
+  a.learn-more.btn-leading-icon::before {
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem;
+  }
 }
-a.learn-more::after, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button)::after {
+
+.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button).btn-sm {
+  font-size: 0.8125rem;
+  min-height: 1.875rem;
+  padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+}
+
+.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-text) {
+  border-radius: 100rem;
+}
+
+.btn:not(.green-btn).btn:not(.btn--all-alerts).btn:not(.blue-button),
+a.learn-more {
+  display: flex;
+  gap: 0.25em;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  line-height: 1.15;
+  text-decoration: none;
+  outline-offset: 0;
+}
+.btn:not(.green-btn).btn:not(.btn--all-alerts).btn:not(.blue-button)::after,
+a.learn-more::after {
   content: "";
   display: block;
-  background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 1.25rem;
   min-width: 1.25rem;
   height: 1.25rem;
 }
-@media (max-width: 767.98px) {
-  a.learn-more, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
-    font-size: 0.8125rem;
-    min-height: 1.875rem;
-    padding: 0.4rem 0.5rem 0.4rem 0.75rem;
-  }
-  a.learn-more::after, a.learn-more.btn-leading-icon::before, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button)::after, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button).btn-leading-icon::before {
-    width: 1rem;
-    min-width: 1rem;
-    height: 1rem;
-  }
-}
-a.learn-more .btn-icon-only, .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) .btn-icon-only {
+
+.btn-icon-only {
   width: 2.5rem;
+  min-width: 2.5rem;
   height: 2.5rem;
   padding: 0;
   margin: 0;
 }
 
-.banner .btn,
-.btn-sm,
-.filter-bar .btn {
-  font-size: 0.8125rem;
-  min-height: 1.875rem;
-  padding: 0.4rem 0.5rem 0.4rem 0.75rem;
-}
-.banner .btn::after,
-.btn-sm::after,
-.filter-bar .btn::after {
-  width: 1rem;
-  min-width: 1rem;
-  height: 1rem;
-}
-.banner .btn:active, .banner .btn.active,
-.btn-sm:active,
-.btn-sm.active,
-.filter-bar .btn:active,
-.filter-bar .btn.active {
-  background-color: var(--charcoal--800);
+.btn,
+.btn::after,
+.btn::before {
+  transition: all 100ms ease-out;
 }
 
 .filter-bar {
@@ -2979,6 +2984,7 @@ a.learn-more .btn-icon-only, .btn:not(.green-btn):not(.btn--all-alerts):not(.blu
 .filter-bar .btn,
 .banner .btn:not(.override) {
   background-color: var(--ter-btn-color);
+  color: var(--charcoal--800);
 }
 .btn.btn-tertiary::after,
 .filter-bar .btn::after,
@@ -3232,6 +3238,11 @@ a.learn-more .btn-icon-only, .btn:not(.green-btn):not(.btn--all-alerts):not(.blu
      border-image: 1/1px;
   background-clip: padding-box;
 }
+.btn-extension::after,
+.btn-line2-4::after,
+.btn-line1-3::after {
+  background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
+}
 .btn-extension:before,
 .btn-line2-4:before,
 .btn-line1-3:before {
@@ -3352,6 +3363,7 @@ a.learn-more .btn-icon-only, .btn:not(.green-btn):not(.btn--all-alerts):not(.blu
 
 .btn.btn-text {
   background-color: transparent;
+  color: var(--charcoal--800);
   padding: 0.5rem 0 0;
   margin: 0 0 0.5rem;
   border-radius: 0;
@@ -3369,10 +3381,19 @@ a.learn-more .btn-icon-only, .btn:not(.green-btn):not(.btn--all-alerts):not(.blu
 .search-btn,
 .prev-btn,
 .next-btn {
+  background-color: var(--ter-btn-color);
+  color: var(--charcoal--800);
   outline-offset: 4px;
   background-color: white;
   box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px;
   border: 2px solid white;
+}
+.btn.btn-elevated::after,
+.back-to-top-btn::after,
+.search-btn::after,
+.prev-btn::after,
+.next-btn::after {
+  background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
 }
 .btn.btn-elevated:hover,
 .back-to-top-btn:hover,
@@ -3660,6 +3681,27 @@ a.learn-more .btn-icon-only, .btn:not(.green-btn):not(.btn--all-alerts):not(.blu
 .btn-icon--load-less.active:hover {
   background-color: var(--ter-btn-color-hover);
   color: var(--charcoal--800);
+}
+
+.banner .btn,
+.btn-sm,
+.filter-bar .btn {
+  min-height: 1.875rem;
+  padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+}
+.banner .btn::after,
+.btn-sm::after,
+.filter-bar .btn::after {
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+}
+.banner .btn:active, .banner .btn.active,
+.btn-sm:active,
+.btn-sm.active,
+.filter-bar .btn:active,
+.filter-bar .btn.active {
+  background-color: var(--charcoal--800);
 }
 
 /*End Button styles*/
