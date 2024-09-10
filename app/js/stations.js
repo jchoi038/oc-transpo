@@ -8,14 +8,7 @@ var section_nearby = document.getElementById("nearby");
 var section_360 = document.getElementById("360");
 var section_explore = document.getElementById("explore");
 
-// if (lang == "fr") {
-// 	var section_stationLayout = document.getElementById("carte");
-// 	var section_amenities = document.getElementById("amenagements");
-// 	var section_stops = document.getElementById("arret");
-// 	var section_nearby = document.getElementById("proximite");
-// 	var section_360 = document.getElementById("360");
-// 	var section_explore = document.getElementById("savoir");
-// }
+//Change all section IDs to french ids if page is french
 if (lang == "fr") {
 	section_stationLayout.id = "carte";
 	section_amenities.id = "amenagements";
