@@ -331,13 +331,11 @@
 
 	@include media-breakpoint-up(sm) {
 		//  > 576
-
 		width: calc(100vw - 1px) !important;
 		min-width: calc(100vw - 1px) !important;
 	}
 	@include media-breakpoint-up(md) {
-		// > > 768
-
+		// > 768
 		// To compensate for pre-existing page template styles
 		width: calc(100vw - 10px) !important;
 		min-width: calc(100vw - 10px) !important;

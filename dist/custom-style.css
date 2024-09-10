@@ -2065,6 +2065,21 @@ table caption {
 }
 
 /**** end table styles ******/
+.flex.cards-overflow-x-container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0.5rem;
+  overflow-x: scroll;
+}
+@media (max-width: 575.98px) {
+  .flex.cards-overflow-x-container {
+    width: 100vw;
+    margin-left: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .icon-container {
   width: -moz-fit-content;
   width: fit-content;
@@ -2827,8 +2842,8 @@ a.learn-more {
   }
 }
 
-.btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only).btn-sm,
-.banner .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only) {
+.btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-text):not(.btn-icon-only).btn-sm,
+.banner .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-text):not(.btn-icon-only) {
   padding: 0.4rem 0.5rem 0.4rem 0.75rem;
 }
 
@@ -2865,13 +2880,6 @@ a.learn-more {
   height: 1rem;
 }
 
-.banner .btn::after,
-.btn-sm::after,
-.filter-bar .btn::after {
-  width: 1rem;
-  min-width: 1rem;
-  height: 1rem;
-}
 .banner .btn:active, .banner .btn.active,
 .btn-sm:active,
 .btn-sm.active,
@@ -4517,23 +4525,49 @@ ul.card-list li__body {
   background-image: url("https://www.octranspo.com/images/files/icons/station_public-washroom-blue.svg");
 }
 .quick-link-card.connection::before {
-  background-image: url("https://www.octranspo.com/images/files/icons/misc-transfer.svg");
+  background-image: url("https://www.octranspo.com/images/files/icons/station_bus-stop-purple.svg");
 }
 
-.decor-card {
-  padding-bottom: 8rem;
-  overflow: hidden;
-  padding: 2.5rem;
-  flex: 1 1 240px;
+.flex .decor-card {
+  flex: 1 1 300px;
 }
-.decor-card .card__title {
+
+.cards-overflow-x-container > * {
+  min-width: 360px;
+}
+@media (max-width: 575.98px) {
+  .cards-overflow-x-container > * {
+    min-width: 75vw;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+.decor-card, #fares-made-easy-card, #wayfinding-card, #accessibiliy-card, #cyclist-card, #safety-card, #comfort-card, #within-5km-card, #also-nearby-card {
+  padding-bottom: 8rem;
+  padding: 2.5rem;
+}
+@media (max-width: 575.98px) {
+  .decor-card, #fares-made-easy-card, #wayfinding-card, #accessibiliy-card, #cyclist-card, #safety-card, #comfort-card, #within-5km-card, #also-nearby-card {
+    font-size: 0.875rem;
+  }
+}
+.decor-card .card__title, #fares-made-easy-card .card__title, #wayfinding-card .card__title, #accessibiliy-card .card__title, #cyclist-card .card__title, #safety-card .card__title, #comfort-card .card__title, #within-5km-card .card__title, #also-nearby-card .card__title {
   font-weight: 600;
   text-align: center;
   font-size: 1.625rem;
   margin-bottom: 1.5em;
   line-height: 1.15em;
+  min-height: 60px;
 }
-.decor-card::before {
+@media (max-width: 575.98px) {
+  .decor-card .card__title, #fares-made-easy-card .card__title, #wayfinding-card .card__title, #accessibiliy-card .card__title, #cyclist-card .card__title, #safety-card .card__title, #comfort-card .card__title, #within-5km-card .card__title, #also-nearby-card .card__title {
+    margin-bottom: 1.25em;
+    min-height: 40px;
+    font-size: 1.125rem;
+  }
+}
+.decor-card::before, #fares-made-easy-card::before, #wayfinding-card::before, #accessibiliy-card::before, #cyclist-card::before, #safety-card::before, #comfort-card::before, #within-5km-card::before, #also-nearby-card::before {
   content: "";
   align-self: center;
   width: 5rem;
@@ -4547,28 +4581,34 @@ ul.card-list li__body {
   background-size: 100%;
   vertical-align: text-bottom;
 }
-.decor-card.within-5km::before {
+@media (max-width: 575.98px) {
+  .decor-card::before, #fares-made-easy-card::before, #wayfinding-card::before, #accessibiliy-card::before, #cyclist-card::before, #safety-card::before, #comfort-card::before, #within-5km-card::before, #also-nearby-card::before {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.decor-card.within-5km::before, #fares-made-easy-card.within-5km::before, #wayfinding-card.within-5km::before, #accessibiliy-card.within-5km::before, #cyclist-card.within-5km::before, #safety-card.within-5km::before, #comfort-card.within-5km::before, #within-5km-card.within-5km::before, #also-nearby-card.within-5km::before {
   background-image: url("https://www.octranspo.com/images/files/icons/graphic-5min.svg");
 }
-.decor-card.nearby::before {
+.decor-card.nearby::before, #fares-made-easy-card.nearby::before, #wayfinding-card.nearby::before, #accessibiliy-card.nearby::before, #cyclist-card.nearby::before, #safety-card.nearby::before, #comfort-card.nearby::before, #within-5km-card.nearby::before, #also-nearby-card.nearby::before {
   background-image: url("https://www.octranspo.com/images/files/icons/graphic-nearby.svg");
 }
-.decor-card.fares-made-easy::before {
+.decor-card.fares-made-easy::before, #fares-made-easy-card.fares-made-easy::before, #wayfinding-card.fares-made-easy::before, #accessibiliy-card.fares-made-easy::before, #cyclist-card.fares-made-easy::before, #safety-card.fares-made-easy::before, #comfort-card.fares-made-easy::before, #within-5km-card.fares-made-easy::before, #also-nearby-card.fares-made-easy::before {
   background-image: url("https://www.octranspo.com/images/files/icons/graphic-fares-made-easy.svg");
 }
-.decor-card.wayfinding::before {
+.decor-card.wayfinding::before, #fares-made-easy-card.wayfinding::before, #wayfinding-card.wayfinding::before, #accessibiliy-card.wayfinding::before, #cyclist-card.wayfinding::before, #safety-card.wayfinding::before, #comfort-card.wayfinding::before, #within-5km-card.wayfinding::before, #also-nearby-card.wayfinding::before {
   background-image: url("https://www.octranspo.com/images/files/icons/graphic-wayfinding.svg");
 }
-.decor-card.accessibility::before {
+.decor-card.accessibility::before, #fares-made-easy-card.accessibility::before, #wayfinding-card.accessibility::before, #accessibiliy-card.accessibility::before, #cyclist-card.accessibility::before, #safety-card.accessibility::before, #comfort-card.accessibility::before, #within-5km-card.accessibility::before, #also-nearby-card.accessibility::before {
   background-image: url("https://www.octranspo.com/images/files/icons/graphic-accessibility.svg");
 }
-.decor-card.cyclist::before {
+.decor-card.cyclist::before, #fares-made-easy-card.cyclist::before, #wayfinding-card.cyclist::before, #accessibiliy-card.cyclist::before, #cyclist-card.cyclist::before, #safety-card.cyclist::before, #comfort-card.cyclist::before, #within-5km-card.cyclist::before, #also-nearby-card.cyclist::before {
   background-image: url("https://www.octranspo.com/images/files/icons/graphic-cyclist.svg");
 }
-.decor-card.safety::before {
+.decor-card.safety::before, #fares-made-easy-card.safety::before, #wayfinding-card.safety::before, #accessibiliy-card.safety::before, #cyclist-card.safety::before, #safety-card.safety::before, #comfort-card.safety::before, #within-5km-card.safety::before, #also-nearby-card.safety::before {
   background-image: url("https://www.octranspo.com/images/files/icons/graphic-safety.svg");
 }
-.decor-card.comfort::before {
+.decor-card.comfort::before, #fares-made-easy-card.comfort::before, #wayfinding-card.comfort::before, #accessibiliy-card.comfort::before, #cyclist-card.comfort::before, #safety-card.comfort::before, #comfort-card.comfort::before, #within-5km-card.comfort::before, #also-nearby-card.comfort::before {
   background-image: url("https://www.octranspo.com/images/files/icons/graphic-comfort.svg");
 }
 

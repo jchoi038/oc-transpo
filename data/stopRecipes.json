@@ -2741,12 +2741,12 @@
 	},
 	{
 		"stop_560": 3034,
-		"name": "BILLINGS BRIDGE 1A",
+		"name": "1A",
 		"routes": "10 Main [BLU], 88 Bayshore [BLU], 90 Greenboro [BLU], 92 Greenboro [GOW], 98 Hawthorne [BLU]"
 	},
 	{
 		"stop_560": 3034,
-		"name": "BILLINGS BRIDGE 2A",
+		"name": "2A",
 		"routes": "10 Hurdman [BLU], 88 Hurdman [BLU], 90 Hurdman [BLU], 92 Hurdman [GOW], 98 Hurdman [BLU]"
 	},
 	{
@@ -2891,7 +2891,7 @@
 	},
 	{
 		"stop_560": 3034,
-		"name": "BILLINGS BRIDGE 3A",
+		"name": "3A",
 		"routes": "49 Billings Bridge [GRY]"
 	},
 	{
@@ -3096,27 +3096,27 @@
 	},
 	{
 		"stop_560": 3034,
-		"name": "BILLINGS BRIDGE 3B",
+		"name": "3B",
 		"routes": "18 Billings Bridge [GRY], 41 Billings Bridge [BLU], 44 Hurdman [BLU], 92 Hurdman [GOW], 111 Baseline [BLU], 112 Baseline [GRY], 304 Osgoode [GOW]"
 	},
 	{
 		"stop_560": 3034,
-		"name": "BILLINGS BRIDGE 3C (E)",
+		"name": "3C (E)",
 		"routes": "600s School Routes Only [GOW]"
 	},
 	{
 		"stop_560": 3034,
-		"name": "BILLINGS BRIDGE 4B",
+		"name": "4B",
 		"routes": "6 Greenboro [BLU], 41 St-Laurent [BLU], 48 Hurdman [GRY], 49 Elmvale [GRY], 92 Greenboro [GOW]"
 	},
 	{
 		"stop_560": 3034,
-		"name": "BILLINGS BRIDGE 4C",
+		"name": "4C",
 		"routes": "6 Rockcliffe [BLU], 18 St-Laurent [GRY], 48 Carleton [GRY], 111 Billings Bridge / Carleton [BLU], 112 Billings Bridge [GRY], 451 Lansdowne [GOW], 452 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3034,
-		"name": "BILLINGS BRIDGE 4D",
+		"name": "4D",
 		"routes": "44 Billings Bridge [BLU], 304 Billings Bridge [GOW]"
 	},
 	{
@@ -27565,7 +27565,7 @@
 	},
 	{
 		"stop_560": 3036,
-		"name": "WALKLEY 4B (E)",
+		"name": "E",
 		"routes": "44 Billings Bridge [BLU]"
 	},
 	{
@@ -27580,7 +27580,7 @@
 	},
 	{
 		"stop_560": 3036,
-		"name": "WALKLEY 4C (F)",
+		"name": "F",
 		"routes": "44 Hurdman [BLU]"
 	},
 	{

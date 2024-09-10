@@ -4,9 +4,12 @@
 		"station_560": "3039",
 		"connecting_stops": "3066",
 		"station_name": "Airport",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/Virtual_tours/Airport_VT_1.jpg",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/airport-2",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/airport-01",
+			"tour360": "https://my.matterport.com/show/?m=2LNFsmEbYQj"
 		},
 		"station_feature": {
 			"pnr": null
@@ -27,21 +30,20 @@
 		},
 		"station_name_fr": "Aéroport",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/Virtual_tours/Airport_VT_1.jpg",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "The station's entrance and lounge will extend from the terminal, while the station platform will align with the terminal's third level. "
+		}
 	},
 	{
 		"id": "BAR",
 		"station_560": "3045",
 		"connecting_stops": "",
 		"station_name": "Barrhaven Centre",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -64,21 +66,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "BAS",
 		"station_560": "3017",
 		"connecting_stops": "",
 		"station_name": "Algonquin",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BAS.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -101,21 +102,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/BAS.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "BAS",
 		"station_560": "3017",
 		"connecting_stops": "",
 		"station_name": "Baseline",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BAS.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": "",
 			"pnr": "#baseline"
@@ -139,21 +139,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/BAS.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "BYS",
 		"station_560": "3050",
 		"connecting_stops": "",
 		"station_name": "Bayshore",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BAY.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -176,23 +175,27 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/BAY.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "BAY",
 		"station_560": "3060",
 		"connecting_stops": "",
 		"station_name": "Bayview",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BYV.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/bayviw_2_1.jpg",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/bayview-2",
-			"prod": ""
+			"staging-fr":"https://staging.octranspo1.com/fr/nos-services/stations-fr-1/bayview-3",
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/bayview-01/",
+			"schedules": "https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&StopFilterIdentifier=T+BAS+PR&StopFilterType=3&StopIdentifier=SH930",
+			"tour360": "https://my.matterport.com/show/?m=tvVnUgKetMA",
+			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/bayview.jpg",
+			"pnr": ""
 		},
 		"station_feature": {
 			"pnr": null
@@ -211,23 +214,23 @@
 			"line_4": null,
 			"bus": true
 		},
+		"station_location": {
+			"address": "Ottawa, ON K1G 4J4",
+			"google_link": "https://maps.app.goo.gl/ytwW2Uf4fc3Yx4h38",
+			"access_point": "Bayview station is located near the eastern edge of Hintonburg, off Albert and Scott streets.",
+			"access_point-fr": "{french translation}"
+		},
 		"station_name_fr": "",
-		"station_address": "Ottawa, ON K1G 4J4",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/BYV.png",
-		"google_map_link": "https://maps.app.goo.gl/ytwW2Uf4fc3Yx4h38",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/bayviw_2_1.jpg",
-		"station_bsi": "",
-		"station_access": "Bayview station is located near the eastern edge of Hintonburg, off Albert and Scott streets.",
-		"station_360_url": "https://my.matterport.com/show/?m=tvVnUgKetMA",
-		"station_schedules_url": "https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&StopFilterIdentifier=T+BAS+PR&StopFilterType=3&StopIdentifier=SH930",
-		"station_nearby_map_url": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/bayview.jpg"
+		"station_bsi": ""
 	},
 	{
 		"id": "BEA",
 		"station_560": "3049",
 		"connecting_stops": "",
 		"station_name": "Beatrice",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BEA.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -250,21 +253,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/BEA.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "BLR",
 		"station_560": "3034",
 		"connecting_stops": "",
 		"station_name": "Billings Bridge",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BIB.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -287,21 +289,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/BIB.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "BLA",
 		"station_560": "3027",
 		"connecting_stops": "",
 		"station_name": "Blair",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BLR.png",
+			"hero_image": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Blair_01.jpg",
 			"staging": "",
 			"prod": "",
 			"pnr": "#blair"
@@ -325,24 +326,23 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/BLR.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Blair_01.jpg",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "BOW",
 		"station_560": "3067",
 		"connecting_stops": "",
 		"station_name": "Bowesville",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/bowesville.png",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/bowesville",
 			"prod": "",
-			"pnr":"#bowesville"
+			"pnr": "#bowesville"
 		},
 		"station_feature": {
 			"pnr": true
@@ -363,21 +363,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/bowesville.png",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "Bowesville Station is situated east of Bowesville Road and south of Earl Armstrong Road."
+		}
 	},
 	{
 		"id": "CAN",
 		"station_560": "3059",
 		"connecting_stops": "",
 		"station_name": "Canadian Tire Centre",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CTC.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -400,23 +399,23 @@
 		},
 		"station_name_fr": "Centre Canadian Tire",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/CTC.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "CAR",
 		"station_560": "3062",
 		"connecting_stops": "5813, 6610",
 		"station_name": "Carleton",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CRT.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/carleton.png",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/carleton-3",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/carleton-01/",
+			"tour360": "https://my.matterport.com/show/?m=eXKHPhX5Uhi"
 		},
 		"station_feature": {
 			"pnr": null
@@ -437,21 +436,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/CRT.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/carleton.png",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "The station is located at the intersection of Campus Avenue and Library Road. With entrances on both the east and west sides, the current fare-paid zone entrances will be maintained."
+		}
 	},
 	{
 		"id": "CHA",
 		"station_560": "3074",
 		"connecting_stops": "",
 		"station_name": "Chapel Hill",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CH.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -474,23 +472,22 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/CH.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "COR",
 		"station_560": "3065",
 		"connecting_stops": "8043, 8044",
 		"station_name": "Corso Italia",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/corso-italia.jpg",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/corso-italia-3",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/corso-italia-01"
 		},
 		"station_feature": {
 			"pnr": null
@@ -511,23 +508,23 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/corso-italia.jpg",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "Located north of Gladstone Avenue"
+		}
 	},
 	{
 		"id": "CYR",
 		"station_560": "3026",
 		"connecting_stops": "",
 		"station_name": "Cyrville",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CYR.png",
+			"hero_image": "",
 			"staging": "",
-			"prod": ""
+			"prod": "",
+			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/cyrville.jpg"
 		},
 		"station_feature": {
 			"pnr": null
@@ -548,21 +545,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/CYR.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/cyrville.jpg"
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "DOM",
 		"station_560": "3013",
 		"connecting_stops": "",
 		"station_name": "Dominion",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/DOM.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -585,21 +581,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/DOM.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "DOW",
 		"station_560": "3061",
 		"connecting_stops": "",
 		"station_name": "Dow’s Lake",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CAR.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/dows-lake.png",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/dows-lake",
 			"prod": ""
 		},
@@ -622,21 +617,20 @@
 		},
 		"station_name_fr": "Lac Dow",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/CAR.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/dows-lake.png",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "EAG",
 		"station_560": "3055",
 		"connecting_stops": "",
 		"station_name": "Eagleson",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/EAG.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -659,21 +653,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/EAG.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "ELM",
 		"station_560": "8813",
 		"connecting_stops": "",
 		"station_name": "Elmvale",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -696,21 +689,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "ELM",
 		"station_560": "8810 / 8810",
 		"connecting_stops": "",
 		"station_name": "Elmvale",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -733,21 +725,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "FAL",
 		"station_560": "3043",
 		"connecting_stops": "",
 		"station_name": "Fallowfield",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/FAL.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -770,24 +761,24 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/FAL.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "GRE",
 		"station_560": "3037",
 		"connecting_stops": "",
 		"station_name": "Greenboro",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/GRB.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/greenboro.png",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/greenboro",
-			"prod": "",
-			"pnr":"#greenboro"
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/greenboro-01/",
+			"pnr": "#greenboro",
+			"tour360": "https://my.matterport.com/show/?m=RzxqcncYJNY"
 		},
 		"station_feature": {
 			"pnr": true
@@ -808,21 +799,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/GRB.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/greenboro.png",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "Greenboro Station is situated on Bank Street, west of the Transitway Station."
+		}
 	},
 	{
 		"id": "HER",
 		"station_560": "3035",
 		"connecting_stops": "",
 		"station_name": "Heron",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/HER.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -845,21 +835,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/HER.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "HUR",
 		"station_560": "3023",
 		"connecting_stops": "",
 		"station_name": "Hurdman",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/HUR.png",
+			"hero_image": "https://www.octranspo.com/images/files/Aerial_perspective_of_Hurdman_Station.jpg",
 			"staging": "",
 			"prod": ""
 		},
@@ -882,21 +871,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "Ottawa, ON K1G 4J4",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/HUR.png",
 		"google_map_link": "https://maps.app.goo.gl/ytwW2Uf4fc3Yx4h38",
-		"station_hero_url": "https://www.octranspo.com/images/files/Aerial_perspective_of_Hurdman_Station.jpg",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "INN",
 		"station_560": "3057",
 		"connecting_stops": "",
 		"station_name": "Innovation",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/INN.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -919,21 +907,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/INN.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "IRI",
 		"station_560": "3016",
 		"connecting_stops": "",
 		"station_name": "Iris",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/IRS.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -956,21 +943,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/IRS.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "JEA",
 		"station_560": "3070",
 		"connecting_stops": "",
 		"station_name": "Jeanne d’Arc",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/JDARC.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -993,23 +979,23 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/JDARC.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "LEE",
 		"station_560": "3022",
 		"connecting_stops": "",
 		"station_name": "Lees",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/LEE.png",
+			"hero_image": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Lees_01.jpg",
 			"staging": "",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/lees1/"
+			
 		},
 		"station_feature": {
 			"pnr": null
@@ -1030,24 +1016,23 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/LEEOTT.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "LEI",
 		"station_560": "3041",
 		"connecting_stops": "",
 		"station_name": "Leitrim",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/LEI.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/leitrim.jpg",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/leitrim",
-			"prod": "",
-			"pnr":"#leitrim"
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/leitrim-01",
+			"pnr": "#leitrim"
 		},
 		"station_feature": {
 			"pnr": true
@@ -1055,7 +1040,7 @@
 		"station_type": {
 			"line_1": false,
 			"line_2": true,
-			"line_3": true,
+			"line_3": false,
 			"line_4": false,
 			"bus": true
 		},
@@ -1068,23 +1053,22 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/LEI.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/leitrim.jpg",
 		"station_bsi": "",
-		"station_access": "Leitrim Station is located south of Leitrim Road",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "Leitrim Station is located south of Leitrim Road"
+		}
 	},
 	{
 		"id": "LIM",
 		"station_560": "3068",
 		"connecting_stops": "",
 		"station_name": "Limebank",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "https://www.octranspo.com/images/files/stations/hero-images/limebank-june-2024.jpg",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/limebank",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/limebank-01/"
 		},
 		"station_feature": {
 			"pnr": null
@@ -1105,21 +1089,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stations/hero-images/limebank-june-2024.jpg",
 		"station_bsi": "",
-		"station_access": "Positioned west of Limebank Road, south of Earl Armstrong Road, and east of Main Street, it has a single entrance where fares are paid. This entrance provides access to Main Street, the northeast-west Connector Road, and the future southeast-west Connector Road.",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "Positioned west of Limebank Road, south of Earl Armstrong Road, and east of Main Street, it has a single entrance where fares are paid. This entrance provides access to Main Street, the northeast-west Connector Road, and the future southeast-west Connector Road."
+		}
 	},
 	{
 		"id": "LIN",
 		"station_560": "3014",
 		"connecting_stops": "",
 		"station_name": "Lincoln Fields",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/LIN.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1142,21 +1125,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/LIN.png",
-		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+			
+		}
 	},
 	{
 		"id": "LON",
 		"station_560": "3046",
 		"connecting_stops": "",
 		"station_name": "Longfields",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/LNGF.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1179,21 +1161,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/LNGF.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "LYC",
 		"station_560": "3030",
 		"connecting_stops": "",
 		"station_name": "Lycée Claudel",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/LYC.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1216,23 +1197,24 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/LYC.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "LYN",
 		"station_560": "3051",
 		"connecting_stops": "",
 		"station_name": "Lyon",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/LYN.png",
+			"hero_image": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Lyon_01.jpg",
 			"staging": "",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/lyon1",
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/lyon.jpg",
+			"tour360": "https://my.matterport.com/show/?m=7cjUe5vpCtg&brand=0"
 		},
 		"station_feature": {
 			"pnr": null
@@ -1253,21 +1235,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/LYN.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "MAC",
 		"station_560": "3000",
 		"connecting_stops": "",
 		"station_name": "Mackenzie King",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/MAC.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1290,21 +1271,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/MAC.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "MAR",
 		"station_560": "3047",
 		"connecting_stops": "",
 		"station_name": "Marketplace",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/MKPL.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1327,21 +1307,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/MKPL.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "MIL",
 		"station_560": "3076",
 		"connecting_stops": "",
 		"station_name": "Millennium",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/MIL.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1364,21 +1343,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/MIL.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "MOOD",
 		"station_560": "3042",
 		"connecting_stops": "",
 		"station_name": "Moodie",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/MOOD.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1401,23 +1379,24 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/MOOD.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "MOO",
 		"station_560": "3063",
 		"connecting_stops": "1342, 5602, 1123, 1004",
 		"station_name": "Mooney’s Bay",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/MOB.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/mooney-bay.png",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/mooneys-bay",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/mooneys-bay-01",
+			"tour360": "https://my.matterport.com/show/?m=99WMwSC5DUB"
+
 		},
 		"station_feature": {
 			"pnr": null
@@ -1438,21 +1417,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/MOB.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/mooney-bay.png",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "Mooney's Bay Station is south of Heron Road"
+		}
 	},
 	{
 		"id": "",
 		"station_560": "3048",
 		"connecting_stops": "",
 		"station_name": "Nepean Woods",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/NEP.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1475,23 +1453,23 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/NEP.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "SL990",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "PRL",
 		"station_560": "3052",
 		"connecting_stops": "",
 		"station_name": "Parliament",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/PRL.png",
+			"hero_image": "https://www.octranspo.com/images/files/Parliament_entrance.JPG",
 			"staging": "",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/parliament1",
+			"nearby_map" : "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/parliament.jpg"
 		},
 		"station_feature": {
 			"pnr": null
@@ -1512,23 +1490,23 @@
 		},
 		"station_name_fr": "Parlement",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/PRL.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "PIM",
 		"station_560": "3010",
 		"connecting_stops": "",
 		"station_name": "Pimisi",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/PIM.png",
+			"hero_image": "https://www.octranspo.com/images/files/Pimisi-station_platform_03.JPG",
 			"staging": "",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/pimisi1",
+			"nearby_map" : "https://www.octranspo.com/images/files/ready4rail/stations/nearby/pimisi.jpg"
 		},
 		"station_feature": {
 			"pnr": null
@@ -1549,21 +1527,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/PIM.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "PIN",
 		"station_560": "3019",
 		"connecting_stops": "",
 		"station_name": "Pinecrest",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/PIN.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1586,21 +1563,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/PIN.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "PLA",
 		"station_560": "3028",
 		"connecting_stops": "",
 		"station_name": "Place d’Orléans",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/ORL.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1623,21 +1599,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/ORL.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "PPK",
 		"station_560": "3033",
 		"connecting_stops": "",
 		"station_name": "Pleasant Park",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/PPK.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1660,21 +1635,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/PPK.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "QUE",
 		"station_560": "3015",
 		"connecting_stops": "",
 		"station_name": "Queensway",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/QWY.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1697,23 +1671,23 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/QWY.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "RID",
 		"station_560": "3009",
 		"connecting_stops": "",
 		"station_name": "Rideau",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/RID.png",
+			"hero_image": "https://www.octranspo.com/images/files/Rideau_station_entrance.JPG",
 			"staging": "",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/rideau1",
+			"nearby_map" :"https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/rideau.jpg"
 		},
 		"station_feature": {
 			"pnr": null
@@ -1734,21 +1708,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/RID.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "RVS",
 		"station_560": "3032",
 		"connecting_stops": "",
 		"station_name": "Riverside",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/RIV.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1771,21 +1744,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/RIV.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "RVV",
 		"station_560": "3040",
 		"connecting_stops": "",
 		"station_name": "Riverview",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/RIVR.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1808,21 +1780,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/RIVR.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "SMY",
 		"station_560": "3031",
 		"connecting_stops": "",
 		"station_name": "Smyth",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/SMY.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1845,23 +1816,22 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/SMY.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "SKE",
 		"station_560": "3038",
 		"connecting_stops": "",
 		"station_name": "South Keys",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/SouthKeys_3D_2.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/southkeys.png",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/south-keys-3",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/south-keys-01"
 		},
 		"station_feature": {
 			"pnr": null
@@ -1882,21 +1852,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/SKE.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/southkeys.png",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "STL",
 		"station_560": "3025",
 		"connecting_stops": "",
 		"station_name": "St-Laurent",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/STL.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1919,21 +1888,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/STL.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "South Keys Station is located next to the South Keys Shopping Centre"
+		}
 	},
 	{
 		"id": "STR",
 		"station_560": "3044",
 		"connecting_stops": "",
 		"station_name": "Strandherd",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/STR.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1956,21 +1924,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/STR.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "TRN",
 		"station_560": "3018",
 		"connecting_stops": "",
 		"station_name": "Teron",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -1993,21 +1960,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "TRR",
 		"station_560": "3058",
 		"connecting_stops": "",
 		"station_name": "Terry Fox",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/TFO.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2030,21 +1996,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/TFO.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "TRE",
 		"station_560": "3024",
 		"connecting_stops": "",
 		"station_name": "Tremblay",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/TRE.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2067,21 +2032,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/TRE.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "TRI",
 		"station_560": "3029",
 		"connecting_stops": "",
 		"station_name": "Trim",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/TRI.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2104,23 +2068,23 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/TRI.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "TUN",
 		"station_560": "3011",
 		"connecting_stops": "",
 		"station_name": "Tunney’s Pasture",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/TUP.png",
+			"hero_image": "https://www.octranspo.com/images/files/tunneys_full.JPG",
 			"staging": "",
-			"prod": ""
+			"prod": "",
+			"nearby_map" : "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/tunneys.jpg"
 		},
 		"station_feature": {
 			"pnr": null
@@ -2141,21 +2105,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/TUP.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/tunneys_full.JPG",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "UOT",
 		"station_560": "3021",
 		"connecting_stops": "",
 		"station_name": "uOttawa",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/OTT.png",
+			"hero_image": "https://www.octranspo.com/images/files/uOttawa.JPG",
 			"staging": "",
 			"prod": ""
 		},
@@ -2178,23 +2141,22 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/OTT.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/uOttawa.JPG",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "UPL",
 		"station_560": "3069",
 		"connecting_stops": "",
 		"station_name": "Uplands",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/renderings/uplands_station.jpg",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/uplands-3",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/uplands-01/"
 		},
 		"station_feature": {
 			"pnr": null
@@ -2215,23 +2177,23 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/renderings/uplands_station.jpg",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "Uplands Station is conveniently located right next to the EY Centre, with a direct sidewalk connection to the centre."
+		}
 	},
 	{
 		"id": "WAL",
 		"station_560": "3036",
 		"connecting_stops": "",
 		"station_name": "Walkley",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/WAL.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/walkley.jpg",
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/walkley",
-			"prod": ""
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/walkley-01",
+			"tour360" :"https://my.matterport.com/show/?m=ynebV6qyxph"
 		},
 		"station_feature": {
 			"pnr": null
@@ -2252,21 +2214,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/WAL.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/walkley.jpg",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": "Walkley Station is east of the Southeast Transitway Station on Walkley Road"
+		}
 	},
 	{
 		"id": "WES",
 		"station_560": "3012",
 		"connecting_stops": "",
 		"station_name": "Westboro",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/WEB.png",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2289,23 +2250,22 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/WEB.png",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "",
 		"station_560": "3061",
 		"connecting_stops": "6655, 6657, 8014, 7369",
 		"station_name": "Carling",
-		"station_urls": {
-			"staging": "",
-			"prod": ""
+		"station_url": {
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CARL.png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/dows-lake.png",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations1/dows-lake",
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/dows-lake-01"
 		},
 		"station_feature": {
 			"pnr": null
@@ -2326,21 +2286,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "https://www.octranspo.com/images/files/maps/station_layout/CARL.png",
 		"google_map_link": "",
-		"station_hero_url": "https://www.octranspo.com/images/files/stage2/dows-lake.png",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": " the station is found just north of Carling Avenue. It is conveniently connected to an adjacent multi-use pathway (MUP) on the east."
+		}
 	},
 	{
 		"id": "",
 		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "Montréal",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2363,21 +2322,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "",
 		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "Convent Glen",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2400,21 +2358,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "",
 		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "Kichi Zìbì",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2437,21 +2394,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "",
 		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "Sherbourne",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2474,21 +2430,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "",
 		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "New Orchard",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2511,21 +2466,20 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	},
 	{
 		"id": "",
 		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "Queensview",
-		"station_urls": {
+		"station_url": {
+			"layout_map": "",
+			"hero_image": "",
 			"staging": "",
 			"prod": ""
 		},
@@ -2548,13 +2502,10 @@
 		},
 		"station_name_fr": "",
 		"station_address": "",
-		"station_layout_map_url": "",
 		"google_map_link": "",
-		"station_hero_url": "",
 		"station_bsi": "",
-		"station_access": "",
-		"station_360_url": "",
-		"station_schedules_url": "",
-		"station_nearby_map_url": ""
+		"station_location": {
+			"access_point": ""
+		}
 	}
 ]

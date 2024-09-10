@@ -1,3 +1,15 @@
+.flex.cards-overflow-x-container{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+    overflow-x: scroll;
+    @include media-breakpoint-down(xs) {
+        width: 100vw;
+        margin-left: -30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
 .icon-container{
     width: fit-content;
     display: inline-flex;

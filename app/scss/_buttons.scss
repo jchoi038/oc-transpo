@@ -24,11 +24,11 @@ a.learn-more {
 	}
 }
 
-.btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(
-		.btn-sm
-	):not(.btn-text):not(.btn-icon-only).btn-sm,
+// small button padding
+
+.btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-text):not(.btn-icon-only).btn-sm,
 .banner
-	.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(
+	.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(
 		.btn-text
 	):not(.btn-icon-only) {
 	padding: 0.4rem 0.5rem 0.4rem 0.75rem;
@@ -69,11 +69,7 @@ a.learn-more {
 .banner .btn,
 .btn-sm,
 .filter-bar .btn {
-	&::after {
-		width: 1rem;
-		min-width: 1rem;
-		height: 1rem;
-	}
+	
 	&:active,
 	&.active {
 		background-color: var(--charcoal--800);

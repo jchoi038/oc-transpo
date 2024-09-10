@@ -34,8 +34,10 @@ ul.card-list, .card ul {
 	}
 }
 
-// basic card styles
 
+
+
+// basic card styles
 .card,
 .fares .fares-card,
 ul.card-list li {
@@ -626,18 +628,37 @@ ul.card-list li {
 	}
 	&.connection {
 		&::before {
-			background-image: url("https://www.octranspo.com/images/files/icons/misc-transfer.svg");
+			background-image: url("https://www.octranspo.com/images/files/icons/station_bus-stop-purple.svg");
 		}
 	}
 }
 
+
+
+.flex{
+	.decor-card{
+		flex: 1 1 300px;
+	}
+}
+
+.cards-overflow-x-container{
+	> * {
+		min-width: 360px;
+		@include media-breakpoint-down(xs) {
+			min-width: 75vw;
+			height: fit-content;
+        }
+	}
+}
 // decorative card
 
-.decor-card{
+.decor-card, #fares-made-easy-card, #wayfinding-card, #accessibiliy-card, #cyclist-card, #safety-card, #comfort-card, #within-5km-card, #also-nearby-card {
 	padding-bottom: 8rem;
-	overflow: hidden;
 	padding: 2.5rem;
-	flex: 1 1 240px;
+
+	@include media-breakpoint-down(xs) {
+		font-size: $ui-body-size-sm;
+	}
 
 	.card__title{
 		font-weight: 600;
@@ -645,6 +666,12 @@ ul.card-list li {
 		font-size: $ui-title-size-lg;
 		margin-bottom: 1.5em;
 		line-height: 1.15em;
+		min-height: 60px;
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 1.25em;
+			min-height: 40px;
+			font-size: $ui-title-size-md;
+		}
 	}
 	&::before{
 		content: "";
@@ -659,7 +686,9 @@ ul.card-list li {
 		margin-bottom: 1rem;
 		background-size: 100%;
 		vertical-align: text-bottom;
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-down(xs) {
+			width: 3rem;
+			height: 3rem;
 			
 		}
 	}
@@ -720,6 +749,7 @@ ul.card-list li {
 
 
 .card.red, .card.line1, .card.comfort{
+	
 	.card__title{
 		color: var(--line1);
 	}
