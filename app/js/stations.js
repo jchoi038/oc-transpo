@@ -230,8 +230,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				// populate hero image
 				if (matchingStation.station_url.hero_image) {
 					createHeroBanner(matchingStation.station_url.hero_image);
-				} else if (matchingStation.station_url.layout_map) {
-					createHeroBanner("https://www.octranspo.com/images/files/maps/network_maps/rapidmap.png");
+				} else if (matchingStation.station_type.bus == true){
+					createHeroBanner("https://www.octranspo.com/images/files/bus-hero.jpg");
 				}
 
 				// populate 360 tour section
