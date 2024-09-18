@@ -10,6 +10,20 @@
   
   /* Basic styles */
 
+.foot-note{
+    padding-left: 1rem;
+    border-left: 2px solid var(--gray--100);
+    font-size:0.875rem;
+
+    .note__title{
+        color: var(--caption-color);
+        flex-grow: 1;
+        font-weight: 700;
+        line-height: 1.15em;
+        padding-top: 0.25rem;
+    }
+}
+
 .note{
     position: relative;
     padding: 1rem;
@@ -21,6 +35,10 @@
     border-radius: $radius-md;
     height: fit-content;
     display: block;
+
+    .note__text-content{
+        margin-bottom: 2rem;
+    }
 
 
     .note__title{

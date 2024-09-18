@@ -12,7 +12,8 @@
 	margin-bottom: 0;
 }
 
-.card.elevated {
+.card, .card__link{
+	transition: box-shadow 0.2s ease-in-out;
 }
 
 // ul cards margins
@@ -39,7 +40,7 @@ ul.card-list, .card ul {
 
 // basic card styles
 .card,
-.fares .fares-card,
+.fares .fares-card, .img-card,
 ul.card-list li {
 	box-shadow: $elevation1;
 	padding: 1.25rem;
@@ -82,7 +83,7 @@ ul.card-list li {
 // icon size
 
 .card {
-	& > img:first-of-type {
+	> img:first-of-type {
 		height: $icon-size-md;
 		width: auto;
 		border-radius: 2px;
@@ -150,9 +151,14 @@ ul.card-list li {
 		font-weight: 600;
 	}
 }
-.card {
+.card, .img-card{
 	.clickable-card-link,
+
+	.btn{
+		z-index: 1;
+	}
 	&__link {
+		outline-offset:-1px;
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -167,11 +173,11 @@ ul.card-list li {
 		transition: background-color 0.15s ease-in-out;
 		border: 2px solid var(--transparent--800);
 		transition: border-color 0.15s ease-in-out;
-		&:hover {
-			border: 2px solid var(--charcoal--800);
-		}
 	}
-
+	&:hover {
+		box-shadow: $elevation2;
+	}
+	
 	.arrow-container {
 		display: flex;
 		justify-content: center;
@@ -183,6 +189,19 @@ ul.card-list li {
 		padding: 0.125rem;
 		color: var(--charcoal--800);
 		border: 1px solid var(--charcoal--800);
+	}
+}
+
+//image card
+.img-card{
+	overflow: hidden;
+	.card__img-container {
+		overflow: hidden;
+		margin: -1.25rem -1.25rem 1rem;
+		img{
+			width: 100%;
+			height: auto;
+		}
 	}
 }
 
@@ -475,7 +494,7 @@ ul.card-list li {
 	}
 }
 // icon
-.card > img {
+.card:not(.img-card) > img {
 	align-self: flex-start;
 	margin-bottom: 0.5rem;
 }
@@ -509,7 +528,7 @@ ul.card-list li {
 //arrow card
 
 .arrow-card {
-	.card__title::after {
+	&::after {
 		content: "";
 		width: 1.5rem;
 		height: 1.5rem;
@@ -520,7 +539,7 @@ ul.card-list li {
 		margin: 0;
 		background-size: 100%;
 		vertical-align: text-bottom;
-		margin-left: 0.5rem;
+		margin-left: auto;
 		margin-bottom: 1px;
 		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-circled.svg");
 	}
@@ -791,6 +810,7 @@ ul.card-list li {
 }
 
 .card.station-info-card{
+	margin: 1rem 0;
 	height: fit-content;
 }
 /* End Cards */

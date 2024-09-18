@@ -14,14 +14,20 @@ a.learn-more {
 //boiler plate
 
 // button padding
-.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(
-		.btn-text
-	):not(.btn-icon-only) {
+.btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(
+	.btn-text
+):not(.btn-icon-only){
 	padding: 0.5rem 0.75rem 0.5rem 1rem;
 
 	@include media-breakpoint-down(sm) {
 		padding: 0.4rem 0.5rem 0.4rem 0.75rem;
 	}
+}
+
+// input button
+
+input.search-btn{
+	padding: 0.5rem 1rem 0.4rem !important;
 }
 
 // small button padding
@@ -525,7 +531,7 @@ a.learn-more {
 
 .btn.btn-elevated,
 .back-to-top-btn,
-.search-btn,
+.search-btn, input.search-btn,
 .prev-btn,
 .next-btn {
 	background-color: var(--ter-btn-color);
@@ -535,7 +541,7 @@ a.learn-more {
 	}
 	outline-offset: 4px;
 	background-color: white;
-	box-shadow: $elevation1;
+	box-shadow: $elevation3;
 	border: 2px solid white;
 
 	&:hover {
@@ -812,7 +818,7 @@ a.learn-more {
 
 // Trailing icon variations + elevated button style
 
-.search-btn {
+.search-btn, input.search-btn {
 	&::after {
 		background-image: url("https://www.octranspo.com/images/files/icons/interactive_search.svg");
 	}
@@ -837,6 +843,13 @@ a.learn-more {
 	}
 }
 .back-to-top-btn {
+	&.sticky{
+		position: sticky;
+		bottom: 30px;
+		text-align: right;
+		white-space: nowrap;
+		margin-left: auto;
+	}
 	&::after {
 		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-up.svg");
 	}

@@ -308,3 +308,239 @@
 		font-weight: 600;
 	}
 }
+
+// Feature tab
+
+.features--container {
+	display: flex;
+	gap: 3rem;
+	width: 100%;
+	height: max-content;
+}
+
+.features--list{
+	
+	width: 360px;
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+		margin: 0;
+		color: #5b5a5a;
+	}
+	
+	li > p{
+		pointer-events: none;
+	}
+}
+
+.features--image-container {
+	position: relative;
+	flex-grow: 1;
+	display: inline-flex;
+	overflow: visible;
+	aspect-ratio: 4/3;
+}
+
+.feature--image {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100vw;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: 0;
+	position: absolute;
+	max-height: 100vh;
+	transition: all 100ms;
+}
+
+.feature--image.hidden {
+	/* visibility: none; */
+	z-index: -1;
+}
+
+.feature--image.active {
+	/* visibility: visible; */
+	z-index: 100;
+}
+
+.feature--image[data-featureID="TP"] {
+	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_TP.png");
+}
+
+.feature--image[data-featureID="RS"] {
+	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_RS.png");
+}
+
+.feature--image[data-featureID="SS"] {
+	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_SS.png");
+}
+
+.feature--image[data-featureID="ND"] {
+	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_ND.png");
+}
+
+.features--list ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	margin: 0;
+	color: var(--charcoal--800);
+}
+
+.feature--description {
+	margin: 0 0 0 3.5rem;
+}
+
+.feature--link {
+	margin-bottom: 0;
+}
+
+.features--list li {
+	/* background-color: #f1f1f1; */
+	border-radius: 10px;
+	padding: 1.25rem;
+	transition: all 100ms;
+	cursor: pointer;
+	/* border: 1px solid var(--gray-100); */
+	margin: 0;
+	gap: 1rem;
+}
+
+@media (max-width: 575.98px) {
+	.features--list {
+		width: 100%;
+		pointer-events: none;
+	}
+	.features--list ul {
+		gap: 0;
+	}
+
+	.features--list li {
+		background-color: none;
+		/* border-bottom: 1px solid var(--gray-100); */
+		border-radius: none;
+		padding: 0 0 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.features--list li.feature-tab-mobile {
+	border-radius: 0;
+}
+
+.features--list li:hover,
+.features--list li:focus-visible,
+.feature-tab.active {
+	background-color: #fff;
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+	margin-left: -0.25rem;
+}
+
+.feature--title {
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	font-size: 1.125rem;
+	display: flex;
+	/* flex-direction: column;
+	align-items: flex-start; */
+}
+
+.feature--description {
+	color: var(--caption-color);
+}
+
+.icon::before {
+	content: "";
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	flex-shrink: 0;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon--m {
+	gap: 1rem;
+}
+
+.icon--sm::before {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.icon--m::before {
+	height: 1.5em;
+	width: 2.5rem;
+}
+
+.icon--TP::before {
+	background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconTravelPlans.png");
+}
+
+.icon--RS::before {
+	background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconRouteSchedules.png");
+}
+
+.icon--SS::before {
+	background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconStopSchedules.png");
+}
+
+.icon--ND::before {
+	background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconNextRides.png");
+}
+
+@media (max-width: 575.98px) {
+	.mobile-hide {
+		display: none;
+	}
+}
+
+@media (min-width: 576px) {
+	.mobile-only {
+		display: none;
+	}
+}
+
+.features--list li.feature-tab-mobile {
+	border-radius: 0;
+}
+
+.features--list li:hover,
+.features--list li:focus-visible,
+.feature-tab.active {
+	background-color: #fff;
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+	margin-left: -0.25rem;
+}
+
+.pill-tab{
+	background-color: var(--gray--50) ;
+	border-radius: $radius-pill;
+	padding: 0.125rem;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	button.tab{
+		padding: 0.5rem 1rem;
+		color: var(--charcoal--800);
+		border-radius: $radius-pill;
+		background-image: none;
+		font-size: 1rem;
+		font-weight: 600;
+		margin: 0;
+		background-color: transparent;
+		border: none;
+		&[aria-current="true"]{
+			color: white;
+			background-color: var(--charcoal--800);
+		}
+
+	}
+}

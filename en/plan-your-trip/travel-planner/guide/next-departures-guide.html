@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://staging.octranspo1.com/themes/user/site/octranspo/assets/css/styles.css?v=1.0.9"
+		title="octranspo-main-css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="./TPG_style.css" /> -->
+	<link rel="stylesheet" href="/dist/custom-style.css" />
+</head>
+
+<body>
+	<!-- copy below -->
+	<link href="/images/files/dist/custom-style.css" rel="stylesheet" />
+
+	<div class="intro">
+
+		<p>
+			In this guide, you will lean how to use the the Travel
+			Planner&#39;s&nbsp;<a href="https://plan.octranspo.com/plan/StopSchedules"><img
+					alt="Next departures feature icon" height="20"
+					src="https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconNextRides.png"
+					width="30" /></a><a
+				href="https://plan.octranspo.com/plan/NextDepartures">Next&nbsp;Departures&nbsp;feature.</a>
+		</p>
+
+		<p>
+			Follow the&nbsp;step-by-step instructions to get next
+			departure times for a specific stop.
+		</p>
+
+		<div class="note note__type--warning">
+			<p class="note__title">Departures are not real-time</p>
+			<div class="note__desc">
+				<p>Departures are based on scheduled times.
+					<em>The Travel Planner is currently unable to give
+						departure times adjusted with real-time (GPS) data</em>. For real-time departures, use the
+					<a href="https://www.octranspo.com/en/#next-trip">Next Departures widget on our homepage</a>
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="sub-section tabs">
+		<div class="generic-tab stepper" role="tablist">
+			<button aria-controls="ND-step1" class="tablink" id="ND-tab-1" name="ND-tab-1" role="tab" tabindex="0">
+				<span class="tablink--step-number">Step 1</span>
+				<span class="tablink--step-label mobile-hide">Select your stop</span></button><button
+				aria-controls="ND-step2" class="tablink" id="ND-tab-2" name="ND-tab-2" role="tab" tabindex="-1">
+				<span class="tablink--step-number">Step 2</span>
+				<span class="tablink--step-label mobile-hide">Click on &ldquo;Next
+					Departures&rdquo;</span></button><button aria-controls="ND-step3" class="tablink" id="ND-tab-3"
+				name="ND-tab-3" role="tab" tabindex="-1">
+				<span class="tablink--step-number">Step 3</span>
+				<span class="tablink--step-label mobile-hide">Get next departures for your routes (optional)</span>
+			</button>
+		</div>
+
+		<div aria-labelledby="ND-tab-1" class="tabcontent" id="ND-step1" role="tabpanel" tabindex="0">
+			<h2>Step 1: Selecting a stop</h2>
+
+			<p>You can look up a stop using any of the following options:</p>
+
+			<ul class="grid--3col grid">
+				<li class="note">
+					<div class="note__text-content">
+						<p class="note__title">
+							Type in
+							the stop
+						</p>
+
+						<p class="note__body">
+							Enter a stop number or station name and click on
+							the corresponding suggestion
+						</p>
+					</div>
+					<img alt="" class="card--image"
+						src="https://www.octranspo.com/images/files/files/travel_planner/help_images/select-stop_option_type-stop-number.png" />
+				</li>
+				<li class="note">
+					<div class="note__text-content">
+						<p class="note__title">
+							Pick a
+							location on the map
+						</p>
+
+						<p class="note__body">
+							Pick a location on the map and search for nearby
+							stops
+						</p>
+					</div>
+					<img alt="" class="card--image"
+						src="https://www.octranspo.com/images/files/files/travel_planner/help_images/select-stop_option_pick-location-on-map.png" />
+				</li>
+				<li class="note">
+					<div class="note__text-content">
+						<p class="note__title">
+							Enter an
+							address and lookup nearby stops
+						</p>
+
+						<ol class="note__body">
+							<li>Enter an address</li>
+							<li>
+								Click on the drop-down icon to browse through
+								nearby stops in that area
+							</li>
+						</ol>
+					</div>
+					<img alt="" class="card--image"
+						src="https://www.octranspo.com/images/files/files/travel_planner/help_images/select-stop_option_type-address.png" />
+				</li>
+				<li class="note">
+					<div class="note__text-content">
+						<p class="note__title">
+							Detect
+							your GPS location (for mobile users)
+						</p>
+
+						<p class="note__body">
+							If you have enabled GPS on your mobile device,
+							you can set your origin or destination to your
+							current location.
+						</p>
+					</div>
+					<img alt="" class="card--image"
+						src="https://www.octranspo.com/images/files/files/travel_planner/help_images/select-stop_option_GPS_ND.png" />
+				</li>
+				<li class="note">
+					<div class="note__text-content">
+						<p class="note__title">
+							Next Depatures history<a href="#ND-step1-optionE"><span class="visuallyhidden"> footnote </span>*</a>
+						</p>
+
+						<div class="note__body">
+							<p>
+								If you have previously obtained the next departures for a stop, you can
+								click the history icon (round arrow with a
+								clock dial) to select it without looking it
+								up again
+							</p>
+
+							<p>
+								(stop history icon only shows up if you have
+								previously looked up a stop)
+							</p>
+						</div>
+					</div>
+					<img alt="" class="card--image"
+						src="https://www.octranspo.com/images/files/files/travel_planner/help_images/select-stop_option_history.png" />
+				</li>
+			</ul>
+
+			<p class="foot-note" id="ND-step1-optionE">
+				<sup>*</sup>In order to save your history, you need to allow
+				cookies and not be in a &ldquo;private&rdquo; or
+				&ldquo;incognito&rdquo; window.
+			</p>
+		</div>
+
+		<div aria-labelledby="ND-tab-2" class="tabcontent" id="ND-step2" role="tabpanel" tabindex="0">
+			<h2>
+				Step 2: Click on &ldquo;Next Departures&rdquo;
+			</h2>
+
+			<div class="note__text-content">
+				<p>
+					Once you&#39;ve selected the stop, press on the
+					&quot;Next Departures&quot; a to continue.
+				</p>
+			</div>
+		</div>
+
+		<div aria-labelledby="ND-tab-3" class="tabcontent" id="ND-step3" role="tabpanel" tabindex="0">
+			<h2>
+				Step 3: Get departures for specific routes serving a stop
+			</h2>
+
+			<p>
+				Follow steps below to narrow your results to show the next
+				departures for only the routes you want (for example, only
+				routes heading downtown):
+			</p>
+
+			<ol class="grid--2col grid">
+				<li class="note">
+					<div class="note__text-content">
+
+						<p class="note__body">
+							From your &ldquo;next departure&rdquo; results
+							screen, click on the downward arrow next to
+							&ldquo;All routes&rdquo; to view the routes
+							serving the selected stop.
+						</p>
+					</div>
+					<img alt="screenshot of next departures results with cursor on dropdown icon"
+						class="card--image"
+						src="https://www.octranspo.com/images/files/files/travel_planner/help_images/ND_step3-dropdown.png " />
+				</li>
+				<li class="note">
+					<div class="note__text-content">
+
+						<p class="note__body">
+							Click the checkbox next to &ldquo;All
+							routes&rdquo; to deselect it. Check the boxes
+							for routes you want to include, then collapse
+							the list of routes by pressing the up-arrow icon
+							to view passing time
+						</p>
+					</div>
+					<img alt="screenshot of dropdown open and cursor unchecking all check boxes and then selecting one checkbox for 11 Parliament"
+						class="card--image"
+						src="https://www.octranspo.com/images/files/files/travel_planner/help_images/ND_step3-checkbox.png" />
+				</li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="banner banner--key-to-icons stretch">
+		<div class="banner__content">
+			<p class="banner__title">Find out the meaning of icons</p>
+			<p class="banner__body">
+				Visit out Key to Icons page to find out the meaning of the icons used throughout our page
+			</p>
+			<a class="btn" href="" title="Visit the Key to icons page">
+				Key to icons page
+			</a>
+		</div>
+	</div>
+	<!-- copy above -->
+	<script src="/app/js/mainv=1.0.6.js"></script>
+</body>
+
+</html>

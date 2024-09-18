@@ -1,22 +1,24 @@
-@use './bootstrap/mixins/breakpoints';
+@use "./bootstrap/mixins/breakpoints";
 
 // reset
 
-.basic-content, .content-container, .ready-for-rail{
+.basic-content,
+.content-container,
+.ready-for-rail {
 	letter-spacing: 0;
 }
 /* Typography */
 
-$base-grey: #2D2D2D;
+$base-grey: #2d2d2d;
 $base-med-grey: #898989;
 $button-grey: #010101;
 $base-black: #000;
-$base-red: #B31010;
+$base-red: #b31010;
 $base-blue: #016b9d;
 
 body {
 	color: $base-grey;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-display: fallback;
 	line-height: 1.25;
 }
@@ -38,32 +40,43 @@ a {
 	color: $base-blue;
 }
 
-b{
+b {
 	font-weight: 600;
-} 
+}
 strong {
 	font-weight: bold;
 }
 
-i, em {
+i,
+em {
 	font-style: italic;
 }
 
-
-
-.row--basic-content-main{
-	&p, dt,dd, li,strong {
+.row--basic-content-main {
+	&p,
+	dt,
+	dd,
+	li,
+	strong {
 		line-height: 1.5rem;
-
 	}
 }
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	line-height: 1.15rem;
 	margin-bottom: 0.75em;
 	font-weight: 600;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
 	// margin: 0.25em 0 0.25em 0;
 	font-weight: normal;
 	padding: 0.5em 0 0 0;
@@ -80,6 +93,7 @@ h1 {
 	margin: 0;
 	margin-bottom: 2rem;
 }
+
 h2 {
 	font-size: 31px;
 	font-size: 1.9rem;
@@ -101,15 +115,15 @@ h3 {
 }
 
 h4 {
-	font-size:20px;
-	font-size:1.25rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	@include media-breakpoint-up(md) {
 		font-size: 22px;
 		font-size: 1.4rem;
 	}
 }
 
-h5{
+h5 {
 	font-size: 1.45rem;
 }
 
@@ -148,112 +162,123 @@ sub {
 	}
 }
 
+// new
+
+.subtitle {
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: var(--off-black);
+	font-weight: 700;
+	margin: 0;
+}
+
+.font-weight-600 {
+	font-weight: 600;
+}
+
+.font-weight-700 {
+	font-weight: 700;
+}
 
 // new
 
+p,
+dt,
+dd {
+	// margin: 16px 0;
+	margin: 0 0 0.5rem;
+	color: var(--text-color);
+	line-height: 1.5;
+}
 
-	.subtitle {
-		text-transform: uppercase;
-		font-size: 1rem;
-		color: var(--off-black);
-		font-weight: 700;
-		margin: 0;
-	}
-	
-	.font-weight-600 {
-		font-weight: 600;
-	}
-	
-	.font-weight-700 {
-		font-weight: 700;
-	}
-	
-	// new
-	
-	
-	p, dt,dd{
-		// margin: 16px 0;
-		margin: 0 0 0.5rem;
-		color: var(--text-color);
-		line-height: 1.5;
-	}
-	
-	.caption, figcaption, figcaption p{
-		font-style: italic;
-		color: var(--caption-color);
-		text-align: left ;
-		font-size: 0.875rem;
-		padding: 0.25rem 0;
-	}
-	
-	h1, h2, h3, h4, h5, h6, th{
-		color: var(--heading-color);
-		margin: 0;
-		padding: 0;
-		margin-bottom: 0.5em;
-		line-height: 1.15em;
-	}
+.caption,
+figcaption,
+figcaption p {
+	font-style: italic;
+	color: var(--caption-color);
+	text-align: left;
+	font-size: 0.875rem;
+	padding: 0.25rem 0;
+}
 
-	h1{
-		font-size: 2rem;
-		font-weight: 600;
-		@include media-breakpoint-up(md){
-			font-size: 3rem;
-		}
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+	color: var(--heading-color);
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0.5em;
+	line-height: 1.15em;
+}
 
-	h1.station-banner
-	
-	h2{
-		font-size: 2rem;
-		font-weight: 600;
-		@include media-breakpoint-down(xs){
-			font-size: 1.8rem;
-		}
+h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	@include media-breakpoint-up(md) {
+		font-size: 3rem;
 	}
-	h3{
-		font-size: 1.5rem;
-		font-weight: 600;
-		@include media-breakpoint-down(xs){
-			font-size: 1.6rem;
-		}
+}
+
+h2, .quick-facts h2 span.rt {
+	font-size: 2rem;
+	font-weight: 600;
+	@include media-breakpoint-down(xs) {
+		font-size: 1.8rem;
 	}
-	h4{
-		font-size: 1.375rem;
-		font-weight: 600;
-		@include media-breakpoint-down(xs){
-			font-size: 1.4rem;
-		}
+}
+h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	@include media-breakpoint-down(xs) {
+		font-size: 1.6rem;
 	}
-	h5{
+}
+h4 {
+	font-size: 1.375rem;
+	font-weight: 600;
+	@include media-breakpoint-down(xs) {
+		font-size: 1.4rem;
+	}
+}
+h5 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	@include media-breakpoint-down(xs) {
 		font-size: 1.25rem;
-		font-weight: 600;
-		@include media-breakpoint-down(xs){
-			font-size: 1.25rem;
-		}
 	}
-	h6{
-		font-size: 1.125rem;
-		font-weight: 600;
-		@include media-breakpoint-down(xs){
-			font-size: 1.1rem;
-		}
+}
+h6 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	@include media-breakpoint-down(xs) {
+		font-size: 1.1rem;
 	}
-	
-	hgroup{
-		h1, h2, h3, h4, h5, h6, th{
-			color: var(--heading-color);
-			line-height: 1.15em;
-			margin-bottom: 0.5rem;
-		}
+}
+
+hgroup {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	th {
+		color: var(--heading-color);
+		line-height: 1.15em;
+		margin-bottom: 0.5rem;
 	}
-	
-	.subhead, hgroup p{
-		text-transform: uppercase;
-		color: var(--caption-color);
-		font-size: 1.5rem;
-		font-weight: 700;
-		line-height: 1.15;
-		text-transform: uppercase;
-	}
-	
+}
+
+.subhead,
+hgroup p {
+	text-transform: uppercase;
+	color: var(--caption-color);
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.15;
+	text-transform: uppercase;
+}

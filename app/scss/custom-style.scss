@@ -60,7 +60,7 @@ $transition-collapse: none;
 
 // @import "bootstrap/navbar"; // bootstrap navbar. used for mobile nav
 @import "bootstrap/transitions"; // bootstrap css transitions
-@import "typography"; // general font and header styles
+
 // @import "navigation"; // main/footer nav
 // @import "fares"; // page styles
 // @import "page"; // page styles
@@ -116,6 +116,10 @@ $transition-collapse: none;
 @import "select-options";//new
 @import "icons";//new
 @import "routes-lines";//new
+@import "forms";//new
+@import "line-routing";//new
+
+@import "typography"; // general font and header styles
 
 
 

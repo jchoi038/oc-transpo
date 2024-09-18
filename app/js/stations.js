@@ -1,23 +1,7 @@
 /* This code is for dynamically styling the station page h1 banner */
 const lang = checkPageLanguage();
 
-var section_stationLayout = document.getElementById("layout");
-var section_amenities = document.getElementById("amenities");
-var section_stops = document.getElementById("stops");
-var section_nearby = document.getElementById("nearby");
-var section_360 = document.getElementById("360");
-var section_explore = document.getElementById("explore");
-
-//Change all section IDs to french ids if page is french
-if (lang == "fr") {
-	section_stationLayout.id = "carte";
-	section_amenities.id = "amenagements";
-	section_stops.id = "arret";
-	section_nearby.id = "proximite";
-	section_360.id = "360";
-	section_explore.id = "savoir";
-}
-
+// Initialize variables
 const h1Element = document.querySelector("h1");
 var quicklinks_container = document.getElementById("quicklinks-container");
 var stationType = document.createElement("p");
@@ -31,127 +15,164 @@ var section_busBoardingLocations = document.getElementById("bus-boarding-info");
 var section_trainBoarding = document.getElementById("train-boarding-info");
 var jsDisabled = document.getElementById("js-disabled");
 
-addCardTags();
-transformExploreSection();
+// get all page main sections
+var section_stationLayout = document.getElementById("layout");
+var section_amenities = document.getElementById("amenities");
+var section_stops = document.getElementById("stops");
+var section_nearby = document.getElementById("nearby");
+var section_360 = document.getElementById("360");
+var section_explore = document.getElementById("explore");
 
-// Creating layouts
-quicklinks_container.className = "grid grid-5-4-2-2";
-section_stationLayout.className = "grid grid-2fr-1fr";
-section_amenities.className = "flex cards-overflow-x-container";
-section_nearby.className = "flex";
-section_trainBoarding.className = "sub-section";
-section_busBoardingLocations.className = "sub-section";
-const nearby_within5km_card = document.getElementById("within-5km-card");
-nearby_within5km_card
-	? createDecorCard(
-			nearby_within5km_card,
-			"card decor-card within-5km navy",
-			lang == "en"
-				? "Places of interest within 5 min"
-				: "Sites d'intérêt à moins de 5 minutes"
-	  )
-	: "";
-const nearby_alsoNearby_card = document.getElementById("also-nearby-card");
-nearby_alsoNearby_card
-	? createDecorCard(
-			nearby_alsoNearby_card,
-			"card decor-card nearby blue",
-			lang == "en" ? "Also close-by" : "Aussi à proximité"
-	  )
-	: "";
-const amenities_faresMadeEasy_card = document.getElementById(
-	"fares-made-easy-card"
-);
+// build Back to top button
+buildBackToTopBtn()
 
-amenities_faresMadeEasy_card
-	? createDecorCard(
-			amenities_faresMadeEasy_card,
-			"card decor-card fares-made-easy",
-			lang == "en" ? "Fares made easy" : "Paiement facile"
-	  )
-	: "";
+function buildBackToTopBtn(){
+	const backToTopBtn = document.createElement("a");
+	
+	lang == "en" ? backToTopBtn.textContent = "Back to top" : backToTopBtn.textContent = "Retour en haut"
+	backToTopBtn.className = "btn sticky back-to-top-btn"
+	backToTopBtn.href = "#top"
 
-const amenities_wayfinding_card = document.getElementById("wayfinding-card");
+	document.querySelector("body").appendChild(backToTopBtn)
+}
 
-amenities_wayfinding_card
-	? createDecorCard(
-			amenities_wayfinding_card,
-			"card decor-card wayfinding",
-			lang == "en" ? "Navigation and wayfinding" : "Déplacement et orientation"
-	  )
-	: "";
-const amenities_accessibility_card =
-	document.getElementById("accessibiliy-card");
-amenities_accessibility_card
-	? createDecorCard(
-			amenities_accessibility_card,
-			"card decor-card accessibility",
-			lang == "en" ? "Accessibility" : "Accessibilité"
-	  )
-	: "";
-const amenities_cyclist_card = document.getElementById("cyclist-card");
+// IF french page, translate section ids
+if (lang == "fr") {
+	section_stationLayout.id = "carte";
+	section_amenities.id = "amenagements";
+	section_stops.id = "arret";
+	section_nearby.id = "proximite";
+	section_360.id = "360";
+	section_explore.id = "savoir";
+}
 
-amenities_cyclist_card
-	? createDecorCard(
-			amenities_cyclist_card,
-			"card decor-card cyclist",
-			lang == "en" ? "Cyclist amenities" : "Aménagements pour les cyclistes"
-	  )
-	: "";
+/*** Build foundations for major sections  IF the section exists***/
 
-const amenities_safety_card = document.getElementById("safety-card");
-amenities_safety_card
-	? createDecorCard(
-			amenities_safety_card,
-			"card decor-card safety",
-			lang == "en" ? "Safety & security" : "Sécurité et sûreté"
-	  )
-	: "";
-const amenities_comfort_card = document.getElementById("comfort-card");
+if (quicklinks_container) {
+	quicklinks_container.className = "grid grid-5-4-2-2";
+}
 
-amenities_comfort_card
-	? createDecorCard(
-			amenities_comfort_card,
-			"card decor-card comfort",
-			lang == "en" ? "Comfort and convenience" : "Confort et commodité"
-	  )
-	: "";
+if (section_stationLayout) {
+	buildStationLayoutSectionLayout();
+}
+
+if (section_stops) {
+	buildStopsSectionLayout();
+}
+if (section_amenities) {
+	section_amenities.className = "flex cards-overflow-x-container";
+	createSectionH2(
+		lang == "en" ? "Features & amenities" : "Am&eacute;nagements",
+		section_amenities
+	);
+
+	const amenities_faresMadeEasy_card = document.getElementById(
+		"fares-made-easy-card"
+	);
+
+	amenities_faresMadeEasy_card
+		? createDecorCard(
+				amenities_faresMadeEasy_card,
+				"card decor-card fares-made-easy",
+				lang == "en" ? "Fares made easy" : "Paiement facile"
+		  )
+		: "";
+
+	const amenities_wayfinding_card = document.getElementById("wayfinding-card");
+
+	amenities_wayfinding_card
+		? createDecorCard(
+				amenities_wayfinding_card,
+				"card decor-card wayfinding",
+				lang == "en"
+					? "Navigation and wayfinding"
+					: "D&eacute;placement et orientation"
+		  )
+		: "";
+	const amenities_accessibility_card =
+		document.getElementById("accessibiliy-card");
+	amenities_accessibility_card
+		? createDecorCard(
+				amenities_accessibility_card,
+				"card decor-card accessibility",
+				lang == "en" ? "Accessibility" : "Accessibilit&eacute;"
+		  )
+		: "";
+	const amenities_cyclist_card = document.getElementById("cyclist-card");
+
+	amenities_cyclist_card
+		? createDecorCard(
+				amenities_cyclist_card,
+				"card decor-card cyclist",
+				lang == "en" ? "Cyclist amenities" : "Am&eacute;nagements pour les cyclistes"
+		  )
+		: "";
+
+	const amenities_safety_card = document.getElementById("safety-card");
+	amenities_safety_card
+		? createDecorCard(
+				amenities_safety_card,
+				"card decor-card safety",
+				lang == "en" ? "Safety & security" : "S&eacute;curit&eacute; et s&ucirc;ret&eacute;"
+		  )
+		: "";
+	const amenities_comfort_card = document.getElementById("comfort-card");
+
+	amenities_comfort_card
+		? createDecorCard(
+				amenities_comfort_card,
+				"card decor-card comfort",
+				lang == "en" ? "Comfort and convenience" : "Confort et commodit&eacute;"
+		  )
+		: "";
+}
+
+if (section_nearby) {
+	section_nearby.className = "flex";
+	createSectionH2(
+		lang == "en" ? "What's nearby" : "&Agrave; proximit&eacute;",
+		section_nearby
+	);
+
+	const nearby_within5km_card = document.getElementById("within-5km-card");
+	nearby_within5km_card
+		? createDecorCard(
+				nearby_within5km_card,
+				"card decor-card within-5km navy",
+				lang == "en"
+					? "Places of interest within 5 min"
+					: "Sites d'intérêt à moins de 5 minutes"
+		  )
+		: "";
+	const nearby_alsoNearby_card = document.getElementById("also-nearby-card");
+	nearby_alsoNearby_card
+		? createDecorCard(
+				nearby_alsoNearby_card,
+				"card decor-card nearby blue",
+				lang == "en" ? "Also close-by" : "Aussi à proximité"
+		  )
+		: "";
+}
+
+if (section_explore) {
+	createSectionH2(
+		lang == "en" ? "Learn more" : "En savoir plus",
+		section_explore
+	);
+	buildExploreSection();
+	addCardTags();
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	jsDisabled?.remove();
-	const originalContent = h1Element.textContent; // Get the original text content
+	const originalContent = h1Element.textContent.replace("’","'"); // Get the original text content
 
-	if (section_stationLayout) {
-		createSectionH2(
-			lang == "en" ? "Station layout" : "Carte de la station",
-			section_stationLayout
-		);
-	}
-	if (section_explore) {
-		createSectionH2(
-			lang == "en" ? "Learn more" : "En savoir plus",
-			section_explore
-		);
-	}
 	/***********  Part 1 ***********/
 	// Add the 'station-banner' class
 	h1Element.classList.add("station-banner");
 	// Wrap the existing content in a <span>
 	h1Element.innerHTML = `<span class="station-banner__title">${originalContent}</span>`; // Wrap it in a <span>
-
-	//add h2 titles to sections
-	section_nearby
-		? createSectionH2(
-				lang == "en" ? "What's nearby" : "Que trouve-t-on à proximité?",
-				section_nearby
-		  )
-		: "";
-	section_amenities
-		? createSectionH2(
-				lang == "en" ? "Features & amenities" : "Aménagements",
-				section_amenities
-		  )
-		: "";
 
 	// Create the new elements
 	const logo = document.createElement("img");
@@ -230,8 +251,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				// populate hero image
 				if (matchingStation.station_url.hero_image) {
 					createHeroBanner(matchingStation.station_url.hero_image);
-				} else if (matchingStation.station_type.bus == true){
-					createHeroBanner("https://www.octranspo.com/images/files/bus-hero.jpg");
+				} else {
+					// TBD
 				}
 
 				// populate 360 tour section
@@ -257,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					let altText =
 						lang == "en"
 							? `Map of Places of interest within a 5-minute walk of ${matchingStation.station_name} Station`
-							: `{Map of Places of interest within a 5-minute walk of ${matchingStation.station_name} Station} Sites d'intérêt à moins de 5 km`;
+							: `{Map of Places of interest within a 5-minute walk of ${matchingStation.station_name} Station} Sites d'intÃ©rÃªt Ã  moins de 5 km`;
 
 					//createFancyImageComponent function will have two variables: image src and alt text
 					let nearby_map = createFancyboxContainer(nearby_map_url, altText);
@@ -309,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (matchingStation.station_type.line_4 == true) {
 						stationLines.appendChild(line4.cloneNode(true));
 					}
-				
+
 					if (
 						matchingStation.station_type.line_1 == true ||
 						matchingStation.station_type.line_2 == true ||
@@ -335,8 +356,8 @@ document.addEventListener("DOMContentLoaded", () => {
 									: "Stations du transport en commun";
 						}
 					}
-				
-					return stationType
+
+					return stationType;
 				}
 				function styleStationBanner(h1Element, matchingStation) {
 					// Check which lines or bus services the station belongs to and append the icons accordingly
@@ -345,7 +366,6 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 					if (matchingStation.station_type.line_2 == true) {
 						h1Element.appendChild(line2.cloneNode(true)); // Add Line 1 number
-				
 					}
 					if (matchingStation.station_type.line_3 == true) {
 						h1Element.appendChild(line3.cloneNode(true)); // Add Line 1 number
@@ -353,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (matchingStation.station_type.line_4 == true) {
 						h1Element.appendChild(line4.cloneNode(true)); // Add Line 1 number
 					}
-				
+
 					if (
 						matchingStation.station_type.line_1 == true ||
 						matchingStation.station_type.line_2 == true ||
@@ -373,12 +393,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 				}
 
-				styleStationBanner(h1Element, matchingStation)
-				getStationType(matchingStation, stationType)
-
-
-
-
+				styleStationBanner(h1Element, matchingStation);
+				getStationType(matchingStation, stationType);
 			} else {
 				console.error("No matching station found.");
 			}
@@ -396,15 +412,23 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 					//end
 				})
-				.then(()=> {
+				.then(() => {
 					infoCard
-					? createStationInfoCard(infoCard, lang, matchingStation, stationLines, stationRoutes, stationType): "";
-				})
+						? buildStationInfoCard(
+								infoCard,
+								lang,
+								matchingStation,
+								stationLines,
+								stationRoutes,
+								stationType
+						)
+						: "";
+				});
 
 			// /***********  Part 3 ***********/
 			// /* Add station status  */
-		})
-		// .catch((error) => console.error("Error fetching JSON:", error));
+		});
+	// .catch((error) => console.error("Error fetching JSON:", error));
 
 	function createSection() {
 		var section = document.createElement("section");
@@ -423,13 +447,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-
-
-
-
 function createSectionH2(title, section) {
 	let sectionTitle = document.createElement("h2");
-	sectionTitle.textContent = title;
+	sectionTitle.innerHTML = title;
 	sectionTitle.style.width = "100%";
 	sectionTitle.style.gridColumn = "1/-1";
 	section.insertAdjacentElement("beforebegin", sectionTitle);
@@ -462,13 +482,6 @@ function initializeQuickLinksSection(matchingStation) {
 				titleAttr: `View ${matchingStation.station_name} Station layout`,
 			},
 			{
-				id: `quicklinks-card_amenities`,
-				href: `#amenities`,
-				className: `card quick-link-card washroom`,
-				textContent: `Amenities`,
-				titleAttr: `View ${matchingStation.station_name} Station features & amenities`,
-			},
-			{
 				id: `quicklinks-card_connections`,
 				href: `#stops`,
 				className: `card quick-link-card connection`,
@@ -476,11 +489,11 @@ function initializeQuickLinksSection(matchingStation) {
 				titleAttr: `View ${matchingStation.station_name} Station boarding locations`,
 			},
 			{
-				id: `quicklinks-card_tour360`,
-				href: `#360`,
-				className: `card quick-link-card tour-360`,
-				textContent: `360° tour`,
-				titleAttr: `Explore ${matchingStation.station_name} Station with 360-Deg virtual tour`,
+				id: `quicklinks-card_amenities`,
+				href: `#amenities`,
+				className: `card quick-link-card washroom`,
+				textContent: `Amenities`,
+				titleAttr: `View ${matchingStation.station_name} Station features & amenities`,
 			},
 			{
 				id: `quicklinks-card_nearby`,
@@ -488,6 +501,13 @@ function initializeQuickLinksSection(matchingStation) {
 				className: `card quick-link-card walk`,
 				textContent: `Nearby`,
 				titleAttr: `Explore what's nearby ${matchingStation.station_name} Station`,
+			},
+			{
+				id: `quicklinks-card_tour360`,
+				href: `#360`,
+				className: `card quick-link-card tour-360`,
+				textContent: `360-Deg tour`,
+				titleAttr: `Explore ${matchingStation.station_name} Station with 360-Deg virtual tour`,
 			},
 			{
 				id: `quicklinks-card_explore`,
@@ -525,15 +545,15 @@ function initializeQuickLinksSection(matchingStation) {
 				id: `quicklinks-card_amenities`,
 				href: `#amenagements`,
 				className: `card quick-link-card washroom`,
-				textContent: `Aménagements`,
+				textContent: `Am&eacute;nagements`,
 				titleAttr: `Voir les amenagements de la station ${matchingStation.station_name}`,
 			},
 			{
 				id: `quicklinks-card_connections`,
 				href: `#arret`,
 				className: `card quick-link-card connection`,
-				textContent: `Arrêts`,
-				titleAttr: `Consulter les arrêts et les services de bus dans la station ${matchingStation.station_name}`,
+				textContent: `Service et arr&ecirc;ts`,
+				titleAttr: `Consulter les arrÃªts et les services de bus dans la station ${matchingStation.station_name}`,
 			},
 			{
 				id: `quicklinks-card_tour360`,
@@ -546,8 +566,8 @@ function initializeQuickLinksSection(matchingStation) {
 				id: `quicklinks-card_nearby`,
 				href: `#proximite`,
 				className: `card quick-link-card walk`,
-				textContent: `À proximité`,
-				titleAttr: `voir ce qu'il y a à proximité`,
+				textContent: `&Agrave; proximit&eacute;`,
+				titleAttr: `voir ce qu'il y a Ã  &Agrave; proximit&eacute;`,
 			},
 			{
 				id: `quicklinks-card_explore`,
@@ -621,9 +641,14 @@ function checkConditionToAppendQuickLinkElement(
 
 	//Only create Connections quicklink card if page has section with id="stops"
 	if (
-		document.getElementById("stops") &&
+		section_stops &&
 		link.id == "quicklinks-card_connections"
 	) {
+		quicklinks_container?.appendChild(anchorElement);
+	}
+
+	//Only create AMENITIES quicklink card if station has Nearby section
+	if (section_nearby && link.id == "quicklinks-card_nearby") {
 		quicklinks_container?.appendChild(anchorElement);
 	}
 
@@ -657,7 +682,7 @@ function createQuickLinkCardElement(
 
 	const span = document.createElement("span");
 	span.className = "card__title";
-	span.textContent = textContent;
+	span.innerHTML = textContent;
 
 	a.appendChild(span);
 	return a;
@@ -785,7 +810,7 @@ function createTrainBoardingInfoTable(station) {
 	// Loop through the stations and create rows
 	if (
 		station.station_type.line_1 &&
-		station.station_name != "Tunney’s Pasture"
+		station.station_name != "Tunneyâ€™s Pasture"
 	) {
 		addRow(tbody, "Tunney's Pasture", "line1", "1", "West");
 	}
@@ -982,7 +1007,14 @@ function buildRouteListParagraph(tbody) {
 	return stationRoutes;
 	// appendListItem(cardBody, title, content);
 }
-function createStationInfoCard(infoCard, lang, matchingStation, lines, routes, stationType) {
+function buildStationInfoCard(
+	infoCard,
+	lang,
+	matchingStation,
+	lines,
+	routes,
+	stationType
+) {
 	// Add the card and station-info-card classes to the div
 	infoCard.classList.add("card", "station-info-card");
 
@@ -1033,7 +1065,10 @@ function createStationInfoCard(infoCard, lang, matchingStation, lines, routes, s
 		address.href = matchingStation.station_location.google_link;
 	}
 	if (matchingStation.station_location.access_point) {
-		accessPoint.textContent = matchingStation.station_location.access_point;
+		lang == "fr" ? 
+		accessPoint.textContent = matchingStation.station_location.access_point_fr
+		: accessPoint.textContent = matchingStation.station_location.access_point;
+		
 	} else {
 		accessPoint.textContent = "";
 	}
@@ -1085,7 +1120,7 @@ function createDecorCard(card, classList, title) {
 	// Create the <h4> element for the title
 	const titleElement = document.createElement("h4");
 	titleElement.classList.add("card__title");
-	titleElement.textContent = title;
+	titleElement.innerHTML = title;
 
 	// Append the <h4> title to the new <div>
 
@@ -1154,17 +1189,19 @@ function populate360Section(url) {
 
 	let listItems = [
 		"<strong>Easy navigation:</strong> Simply use your mouse to explore the interior of the station. Change floors effortlessly by clicking on the 'Station Level guide' located at the bottom left.",
-		"<strong>Discover station Features:</strong> Click on the red and white ‘O’ buttons scattered around the station for detailed information about its features.",
+		"<strong>Discover station Features:</strong> Click on the red and white â€˜Oâ€™ buttons scattered around the station for detailed information about its features.",
 		"<strong>Tour date:</strong> Note that this tour was recorded in 2024. Any fencing visible in the tour has now been removed.",
 		"<strong>Loading time:</strong> After pressing 'Play', please wait momentarily for the tour to load completely for an uninterrupted experience.",
 	];
 
 	if (lang == "fr") {
 		listItems = [
-			"<strong>Navigation facile :</strong> Utilisez simplement votre souris pour explorer l'intérieur de la station. Changez d'étage facilement en cliquant sur le « Guide des niveaux de la station » situé en bas à gauche.</li>",
-			"<strong>Découvrez les fonctionnalités de la station :</strong> Cliquez sur les boutons rouges et blancs en forme de « O » dispersés autour de la station pour obtenir des informations détaillées sur ses fonctionnalités.</li>",
-			"<strong>Date de la visite :</strong> Notez que cette visite a été enregistrée en mars 2019. Toutes les clôtures visibles dans la visite ont maintenant été retirées.</li>",
-			"<strong>Temps de chargement :</strong> Après avoir appuyé sur « Lire », veuillez patienter un instant pour que la visite se charge complètement afin de profiter d'une expérience ininterrompue.</li>",
+			
+"<strong>Navigation facile :</strong> Utilisez simplement votre souris pour explorer l&#39;int&eacute;rieur de la station. Changez d&#39;&eacute;tage facilement en cliquant sur le &laquo; Guide des niveaux de la station &raquo; situ&eacute; en bas &agrave; gauche.",
+"<strong>D&eacute;couvrez les fonctionnalit&eacute;s de la station :</strong> Cliquez sur les boutons rouges et blancs en forme de &laquo; O &raquo; dispers&eacute;s autour de la station pour obtenir des informations d&eacute;taill&eacute;es sur ses fonctionnalit&eacute;s.",
+"<strong>Date de la visite :</strong> Notez que cette visite a &eacute;t&eacute; enregistr&eacute;e en mars 2019. Toutes les cl&ocirc;tures visibles dans la visite ont maintenant &eacute;t&eacute; retir&eacute;es.",
+"<strong>Temps de chargement :</strong> Apr&egrave;s avoir appuy&eacute; sur &laquo; Lire &raquo;, veuillez patienter un instant pour que la visite se charge compl&egrave;tement afin de profiter d&#39;une exp&eacute;rience ininterrompue."
+
 		];
 	}
 
@@ -1206,7 +1243,7 @@ function createFancyboxContainer(url, altText) {
 	return figure;
 }
 
-function transformExploreSection() {
+function buildExploreSection() {
 	// Create and add the h2 element for the title
 
 	// Create a new div to wrap the paragraphs
@@ -1264,7 +1301,7 @@ function addCardTags() {
 		const tagText = isUpdate
 			? lang == "en"
 				? "Update"
-				: "Mise à jour"
+				: "Mise Ã  jour"
 			: lang == "en"
 			? "Quick facts"
 			: "Faits en bref";
@@ -1282,201 +1319,26 @@ function addCardTags() {
 	});
 }
 
-/******** Part III: auto generating list of stations */
-// Helper function to create line icon elements
-const createLineIcon = (lineNumber, lang) => {
-	const line = document.createElement("span");
-	line.className = `rt rt-type--line${lineNumber}`;
-	line.innerHTML =
-		lang === "en"
-			? `<span class="visuallyhidden">Line </span>${lineNumber}`
-			: `<span class="visuallyhidden">Ligne </span>${lineNumber}`;
-	return line;
-};
-
-// Helper function to create transport icons (train/bus)
-const createIconElement = (iconName, altText) => {
-	const icon = document.createElement("img");
-	icon.className = "inline-icon";
-	icon.alt = altText;
-	icon.src = `https://www.octranspo.com/images/files/icons/${iconName}.svg`;
-	return icon;
-};
-
-// Train and bus icons
-const trainIcon = createIconElement("transport_train", "O-Train station");
-const busIcon = createIconElement("transport_bus", "Transitway station");
-const pnrIcon = createIconElement("service_pnr.svg", "Park & Ride available");
-
-// Append section headers with icons and titles
-const appendSectionHeader = (sectionId, title, icon, icon2) => {
-	const section = document.getElementById(sectionId);
-	if (section) {
-		const header = document.createElement("h2");
-		header.className = "flex flex-ai-c";
-		header.appendChild(icon);
-		icon2 ? header.appendChild(icon2) : "";
-		header.append(` ${title}`);
-		section.prepend(header);
-	}
-};
-
-// Add section headers with line icons instead of numbers
-appendSectionHeader(
-	"line1Stns",
-	"Line 1 stations",
-	trainIcon.cloneNode(true),
-	createLineIcon(1, lang)
-);
-appendSectionHeader(
-	"future_line1Stns",
-	"Future Line 1 stations",
-	trainIcon.cloneNode(true),
-	createLineIcon(1, lang)
-);
-appendSectionHeader(
-	"line2Stns",
-	"Line 2 stations",
-	trainIcon.cloneNode(true),
-	createLineIcon(2, lang)
-);
-appendSectionHeader(
-	"line3Stns",
-	"Line 3 stations",
-	trainIcon.cloneNode(true),
-	createLineIcon(3, lang)
-);
-appendSectionHeader(
-	"future_line3Stns",
-	"Future Line 3 stations",
-	trainIcon.cloneNode(true),
-	createLineIcon(3, lang)
-);
-appendSectionHeader(
-	"line4Stns",
-	"Line 4 stations",
-	trainIcon.cloneNode(true),
-	createLineIcon(4, lang)
-);
-appendSectionHeader("busStns", "Transit Stations", busIcon.cloneNode(true), "");
-
-fetch("/data/stations.json")
-	// fetch("/images/files/data/stations.json")
-	.then((response) => response.json())
-	.then((stations) => {
-		populateStationSections(stations);
-	});
-
-function populateStationSections(stations) {
-	// Loop through each station in the stations array
-	stations.forEach((station) => {
-		// Check if the station belongs to Line 1
-		if (station.station_completed.line_1 == true) {
-			addStationToSection("line1Stns", station);
-		} else if (station.station_completed.line_1 == false) {
-			addStationToSection("future_line1Stns", station);
-		}
-
-		// Check if the station belongs to Line 2
-		if (station.station_completed.line_2 == true) {
-			addStationToSection("line2Stns", station);
-		}
-
-		// Check if the station belongs to Line 3
-		if (station.station_completed.line_3 == true) {
-			addStationToSection("line3Stns", station);
-		} else if (station.station_completed.line_3 == false) {
-			addStationToSection("future_line3Stns", station);
-		}
-
-		// Check if the station belongs to Line 4
-		if (station.station_completed.line_4 == true) {
-			addStationToSection("line4Stns", station);
-		}
-
-		// Check if the station has bus service
-		if (station.station_type.bus) {
-			addStationToSection("busStns", station);
-		}
-	});
-}
-
-// Helper function to add a station to a specific section
-function addStationToSection(sectionId, station) {
-	const section = document.getElementById(sectionId);
-	if (section) {
-		section.querySelector(".select-options-grid")
-			? ""
-			: appendGrid(section, "select-options-grid");
-		// Create a new div element to represent the station
-		const stationA = document.createElement("a");
-		stationA.className = "select-option";
-		stationA.href = station.station_url.staging;
-
-		// Populate the div with the station's information and icons
-		stationA.innerHTML = `
-                <div class="name">
-                    <p>${station.station_name}</p>
-                </div>
-            `;
-
-		// Check station features (train connections, pnr, accessible... etc)
-		const lineIcons = checkStationFeatures(station, lang);
-
-		// Append the line icons to the stationDiv
-		lineIcons.forEach((icon) => stationA.appendChild(icon));
-
-		// Append the stationDiv to the section
-		section.querySelector(".select-options-grid").appendChild(stationA);
-	}
-}
-
-function appendGrid(section, gridType) {
-	gridContainer = document.createElement("div");
-	gridContainer.className = gridType;
-	section.appendChild(gridContainer);
-}
-
-function checkStationFeatures(station, lang) {
-	const lineIcons = [];
-	// checking the station type AND if it is finished construction
-	if (station.station_type.line_1) {
-		lineIcons.push(createLineIcon(1, lang));
-	}
-	if (station.station_type.line_2) {
-		lineIcons.push(createLineIcon(2, lang));
-	}
-	if (station.station_type.line_3) {
-		lineIcons.push(createLineIcon(3, lang));
-	}
-	if (station.station_type.line_4) {
-		lineIcons.push(createLineIcon(4, lang));
-	}
-	if (station.station_type.bus) {
-		lineIcons.push(createIconElement("transport_bus", "Transitway station"));
-	}
-	if (station.station_feature.pnr) {
-		lineIcons.push(createIconElement("service_pnr", "Park & Ride station"));
-	}
-	return lineIcons;
-}
-
 function createHeroBanner(url) {
 	// Get the station-hero-banner div
 	const heroBanner = document.getElementById("station-hero-banner");
-
-	// Add the hero-banner class to the div
-	heroBanner.classList.add("hero-banner");
-
 	// Create the img element
 	const heroImg = document.createElement("img");
 
-	// Set the id and style with background-image for the img element
-	heroImg.id = "station-hero-img";
-	heroImg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(${url})`;
+	if (heroBanner){
+		// Add the hero-banner class to the div
+		heroBanner?.classList.add("hero-banner");
+		// Append the img to the hero-banner div
+		heroBanner.appendChild(heroImg);
+	}
 
-	// Append the img to the hero-banner div
-	heroBanner.appendChild(heroImg);
+	if (heroImg) {
+		// Set the id and style with background-image for the img element
+		heroImg.id = "station-hero-img";
+		heroImg.style.backgroundImage = `url(${url})`;
+	}
+
+	
 }
 
 function createLayout(section, layoutClass) {
@@ -1493,4 +1355,19 @@ function createLayout(section, layoutClass) {
 
 	// Append the layout div back into the section element
 	section.appendChild(layoutDiv);
+}
+function buildStationLayoutSectionLayout() {
+	section_stationLayout.className = "section flex";
+	createSectionH2(
+		lang == "en" ? "Station layout" : "Carte de la station",
+		section_stationLayout
+	);
+}
+
+function buildStopsSectionLayout() {
+	section_stops.className = "section grid--2col";
+	createSectionH2(
+		lang == "en" ? "Boarding locations" : "Zones d'embarquement",
+		section_stops
+	);
 }

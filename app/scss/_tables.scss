@@ -610,6 +610,7 @@ dl {
 		grid-template-columns: auto 1fr;
 		dd,
 		dt {
+			background-color: white;
 			border-bottom: 1px solid var(--gray--100);
 			padding: 0.3rem 0.5rem 0.2rem 0.5rem;
 			margin: 0;

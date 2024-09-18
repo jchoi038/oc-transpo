@@ -1,6 +1,7 @@
 /*****grid styles start *****/
 /* updated on 2024/08/7 */
-ul.grid.grid--3col{
+
+ul.grid--3col, ul.grid--2col{
     margin-left: 0;
     padding-left: 0;
 }
@@ -219,7 +220,4 @@ ul.grid.grid--3col{
     gap: 5rem;
 }
 
-.grid#quicklinks-container{
-    margin-top: -2rem;
-}
 /*****grid styles End *****/

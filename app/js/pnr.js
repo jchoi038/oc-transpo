@@ -1,20 +1,20 @@
 
 // get list of elements with the class="select-options"
 options = document.getElementsByClassName("select-option");
-pageLang = checkPageLanguage();
+lang = checkPageLanguage();
 
 
 function checkPageLanguage(){
 	currentUrl = window.location.href;
 	console.log(currentUrl)
 	if(currentUrl.indexOf("/fr/") != -1){
-		return ("french")
+		return ("fr")
 	}
-	return ("english")
+	return ("fr")
 }
 
 // english
-if (pageLang == "english"){
+if (lang == "en"){
 // add pnr icons to select options english
 for (let i = 0; i < options.length; i++) {
 	var iconsContainer = options[i].getElementsByClassName("icons");
@@ -61,16 +61,16 @@ for (let i = 0; i < options.length; i++) {
 	const freeTagLimited = document.createElement("img");
 	freeTagLimited.setAttribute(
 		"src",
-		"https://www.octranspo.com/images/files/icons/tag_freewithnote.svg"
+		lang == "en" ? "https://www.octranspo.com/images/files/icons/tag_freewithnote.svg" : "https://www.octranspo.com/images/files/icons/tag_freewithnote-fr.svg"
 		// "https://www.octranspo.com/images/files/icons/tag_free-limited_fr_v2.svg"
 	);
 	freeTagLimited.setAttribute(
 		"alt",
-		"'FREE' in green font with a light green background with white diagonal stripes"
+		lang == "en" ? "Limited free parking available" : "Places gratuites limitées"
 	);
 	freeTagLimited.setAttribute(
 		"title",
-		"This Park & Ride lot offers limited free parking"
+		lang == "en" ? "This Park & Ride lot offers limited free parking" : "Places gratuites disponibles"
 	);
 
 	const quickTag = document.createElement("img");
@@ -103,7 +103,7 @@ for (let i = 0; i < options.length; i++) {
 
 
 // french
-if (pageLang == "french"){
+if (lang == "fr"){
 
 // get tag value
 

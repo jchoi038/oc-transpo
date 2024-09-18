@@ -1,0 +1,32 @@
+.drop-down-container{
+    align-items: center;
+    background: #fff;
+    border: 3px solid var(--frequent--400);
+    border-radius: .5rem;
+    display: flex;
+    padding: 1rem .25rem;
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+form.station-search-form{
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+    @include media-breakpoint-down(xs) {
+    }
+    button{
+        position: absolute;
+        font-size: 0.925rem ;
+        right: 2rem ;
+        bottom: 0;
+    }
+}
+
+select{
+    margin-bottom: 2rem;
+    max-width: 400px;
+    width: 100%;
+}

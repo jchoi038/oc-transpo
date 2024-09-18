@@ -1008,267 +1008,6 @@ html {
   }
 }
 
-.basic-content, .content-container, .ready-for-rail {
-  letter-spacing: 0;
-}
-
-/* Typography */
-body {
-  color: #2D2D2D;
-  font-family: "Open Sans", sans-serif;
-  font-display: fallback;
-  line-height: 1.25;
-}
-
-::-moz-selection {
-  background: #2D2D2D;
-  color: #fff;
-}
-
-::selection {
-  background: #2D2D2D;
-  color: #fff;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-a {
-  color: #016b9d;
-}
-
-b {
-  font-weight: 600;
-}
-
-strong {
-  font-weight: bold;
-}
-
-i, em {
-  font-style: italic;
-}
-
-.row--basic-content-mainp, .row--basic-content-main dt, .row--basic-content-main dd, .row--basic-content-main li, .row--basic-content-main strong {
-  line-height: 1.5rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.15rem;
-  margin-bottom: 0.75em;
-  font-weight: 600;
-}
-
-h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  padding: 0.5em 0 0 0;
-}
-
-h1 {
-  font-size: 2.3rem;
-  line-height: 1.15;
-  font-weight: normal;
-  margin: 0;
-  margin-bottom: 2rem;
-}
-@media (min-width: 768px) {
-  h1 {
-    font-size: 64px;
-    font-size: 4rem;
-  }
-}
-
-h2 {
-  font-size: 31px;
-  font-size: 1.9rem;
-  line-height: 1;
-}
-@media (min-width: 768px) {
-  h2 {
-    font-size: 44px;
-    font-size: 2.75rem;
-  }
-}
-
-h3 {
-  font-size: 22px;
-  font-size: 1.4rem;
-  line-height: 1;
-}
-@media (min-width: 768px) {
-  h3 {
-    font-size: 32px;
-    font-size: 2rem;
-  }
-}
-
-h4 {
-  font-size: 20px;
-  font-size: 1.25rem;
-}
-@media (min-width: 768px) {
-  h4 {
-    font-size: 22px;
-    font-size: 1.4rem;
-  }
-}
-
-h5 {
-  font-size: 1.45rem;
-}
-
-sup {
-  font-size: 75%;
-  vertical-align: top;
-  vertical-align: super;
-}
-
-sub {
-  bottom: -0.25em;
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-.section--accessible-transit h1 {
-  font-size: 32px;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1;
-  margin: 0 0 1em;
-}
-@media (min-width: 768px) {
-  .section--accessible-transit h1 {
-    font-size: 50px;
-    font-size: 3.125rem;
-  }
-}
-
-.cke_contents_ltr sub {
-  bottom: -0.5em;
-}
-.cke_contents_ltr sup sub {
-  bottom: -0.65em;
-}
-
-.subtitle {
-  text-transform: uppercase;
-  font-size: 1rem;
-  color: var(--off-black);
-  font-weight: 700;
-  margin: 0;
-}
-
-.font-weight-600 {
-  font-weight: 600;
-}
-
-.font-weight-700 {
-  font-weight: 700;
-}
-
-p, dt, dd {
-  margin: 0 0 0.5rem;
-  color: var(--text-color);
-  line-height: 1.5;
-}
-
-.caption, figcaption, figcaption p {
-  font-style: italic;
-  color: var(--caption-color);
-  text-align: left;
-  font-size: 0.875rem;
-  padding: 0.25rem 0;
-}
-
-h1, h2, h3, h4, h5, h6, th {
-  color: var(--heading-color);
-  margin: 0;
-  padding: 0;
-  margin-bottom: 0.5em;
-  line-height: 1.15em;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-@media (min-width: 768px) {
-  h1 {
-    font-size: 3rem;
-  }
-}
-
-h1.station-banner h2 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-@media (max-width: 575.98px) {
-  h1.station-banner h2 {
-    font-size: 1.8rem;
-  }
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-@media (max-width: 575.98px) {
-  h3 {
-    font-size: 1.6rem;
-  }
-}
-
-h4 {
-  font-size: 1.375rem;
-  font-weight: 600;
-}
-@media (max-width: 575.98px) {
-  h4 {
-    font-size: 1.4rem;
-  }
-}
-
-h5 {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-@media (max-width: 575.98px) {
-  h5 {
-    font-size: 1.25rem;
-  }
-}
-
-h6 {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-@media (max-width: 575.98px) {
-  h6 {
-    font-size: 1.1rem;
-  }
-}
-
-hgroup h1, hgroup h2, hgroup h3, hgroup h4, hgroup h5, hgroup h6, hgroup th {
-  color: var(--heading-color);
-  line-height: 1.15em;
-  margin-bottom: 0.5rem;
-}
-
-.subhead, hgroup p {
-  text-transform: uppercase;
-  color: var(--caption-color);
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.15;
-  text-transform: uppercase;
-}
-
 /*NEW Below*/
 /*Colours start*/
 /* updated on 2024/07/26 */
@@ -1361,6 +1100,8 @@ hgroup h1, hgroup h2, hgroup h3, hgroup h4, hgroup h5, hgroup h6, hgroup th {
   --nwtb--100: hsl(215, 62%, 82%);
   --nwtb--700: hsl(215, 62%, 32%);
   --nwtb--800: hsl(215, 62%, 22%);
+  --nwtb--800: rgb(21, 50, 91);
+  --nwtb--800: #15325b;
   --accessible-blue: #0079C1;
   --success-green: #45A041;
   --special: #7637C7;
@@ -1968,6 +1709,7 @@ dl.icon-list {
 }
 dl.icon-list dd,
 dl.icon-list dt {
+  background-color: white;
   border-bottom: 1px solid var(--gray--100);
   padding: 0.3rem 0.5rem 0.2rem 0.5rem;
   margin: 0;
@@ -2065,6 +1807,10 @@ table caption {
 }
 
 /**** end table styles ******/
+#quicklinks-container {
+  margin-top: 1rem;
+}
+
 .flex.cards-overflow-x-container {
   display: flex;
   flex-wrap: nowrap;
@@ -2288,6 +2034,18 @@ ul.checklist--x li::before {
   }
 }
 
+.banner--sm .banner__title {
+  font-size: 0.9375rem;
+  margin-bottom: 0.75em;
+  font-weight: 700;
+}
+.banner--sm .banner__body:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.banner--sm .banner__body {
+  font-size: 0.8125rem;
+}
+
 .banner .btn {
   margin-bottom: 0;
   transition: none;
@@ -2311,7 +2069,7 @@ ul.checklist--x li::before {
     transition: all 100ms ease-out;
   }
   .banner:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 13px;
   }
 }
 .banner .rt {
@@ -2497,7 +2255,7 @@ ul.checklist--x li::before {
   flex-grow: 1;
 }
 .station-banner .rt {
-  margin-right: 0.125em;
+  margin-right: 0;
 }
 .station-banner .logo {
   width: 2em;
@@ -2724,7 +2482,7 @@ ul.checklist--x li::before {
 }
 @media (max-width: 575.98px) {
   .banner--line2-4, .banner--line1, .banner--line1-3 {
-    background-position: bottom -10vw right 0px;
+    background-position: bottom -2rem right 0px;
     background-size: 100%;
     padding-bottom: 4rem;
   }
@@ -2734,6 +2492,15 @@ ul.checklist--x li::before {
     width: 100%;
     padding-right: 0;
   }
+}
+.banner--line2-4.banner--sm, .banner--line1.banner--sm, .banner--line1-3.banner--sm {
+  background-position: bottom -2rem right 0px;
+  background-size: 100%;
+  padding-bottom: 4rem;
+}
+.banner--line2-4.banner--sm .banner__content, .banner--line1.banner--sm .banner__content, .banner--line1-3.banner--sm .banner__content {
+  width: 100%;
+  padding-right: 0;
 }
 .banner--line2-4 {
   background-image: url("https://www.octranspo.com/images/files/line-2-2.png");
@@ -2763,7 +2530,7 @@ ul.checklist--x li::before {
   gap: 0.5rem;
   width: 100%;
   overflow-x: scroll;
-  padding-left: 0;
+  padding: 2rem 0;
 }
 .quick-facts.banner ul > li {
   flex: 0 0 240px;
@@ -2771,6 +2538,18 @@ ul.checklist--x li::before {
   background-color: var(--transparent--800);
   padding: 1rem;
   line-height: 1.5em;
+}
+.quick-facts.banner.line1 {
+  background-color: var(--line1--50);
+}
+.quick-facts.banner.line2 {
+  background-color: var(--line2--50);
+}
+.quick-facts.banner.line3 {
+  background-color: var(--line3--50);
+}
+.quick-facts.banner.line4 {
+  background-color: var(--line4--50);
 }
 
 .hero-banner {
@@ -2816,7 +2595,7 @@ ul.checklist--x li::before {
 }
 @media (min-width: 576px) {
   .hero-banner .station-info-card {
-    flex: 0 0 400px;
+    flex: 0 0 300px;
   }
 }
 
@@ -2833,13 +2612,17 @@ a.learn-more {
 }
 
 /* reviewed styles */
-.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only) {
+.btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only) {
   padding: 0.5rem 0.75rem 0.5rem 1rem;
 }
 @media (max-width: 767.98px) {
-  .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only) {
+  .btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(.btn-text):not(.btn-icon-only) {
     padding: 0.4rem 0.5rem 0.4rem 0.75rem;
   }
+}
+
+input.search-btn {
+  padding: 0.5rem 1rem 0.4rem !important;
 }
 
 .btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-text):not(.btn-icon-only).btn-sm,
@@ -3341,26 +3124,26 @@ a.learn-more::after {
 
 .btn.btn-elevated,
 .back-to-top-btn,
-.search-btn,
+.search-btn, input.search-btn,
 .prev-btn,
 .next-btn {
   background-color: var(--ter-btn-color);
   color: var(--charcoal--800);
   outline-offset: 4px;
   background-color: white;
-  box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px;
+  box-shadow: rgba(0, 0, 0, 0.36) 0px 4px 13px;
   border: 2px solid white;
 }
 .btn.btn-elevated::after,
 .back-to-top-btn::after,
-.search-btn::after,
+.search-btn::after, input.search-btn::after,
 .prev-btn::after,
 .next-btn::after {
   background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
 }
 .btn.btn-elevated:hover,
 .back-to-top-btn:hover,
-.search-btn:hover,
+.search-btn:hover, input.search-btn:hover,
 .prev-btn:hover,
 .next-btn:hover {
   border: 2px solid var(--prm-btn-color);
@@ -3368,7 +3151,7 @@ a.learn-more::after {
 }
 .btn.btn-elevated:hover::after,
 .back-to-top-btn:hover::after,
-.search-btn:hover::after,
+.search-btn:hover::after, input.search-btn:hover::after,
 .prev-btn:hover::after,
 .next-btn:hover::after {
   background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-line1.svg");
@@ -3523,10 +3306,10 @@ a.learn-more::after {
   background-image: url("https://www.octranspo.com/images/files/icons/contact_phone.svg");
 }
 
-.search-btn::after {
+.search-btn::after, input.search-btn::after {
   background-image: url("https://www.octranspo.com/images/files/icons/interactive_search.svg");
 }
-.search-btn:hover::after {
+.search-btn:hover::after, input.search-btn:hover::after {
   background-image: url("https://www.octranspo.com/images/files/icons/interactive_search-red.svg");
 }
 
@@ -3544,6 +3327,13 @@ a.learn-more::after {
   background-image: url("https://www.octranspo.com/images/files/icons/interactive_chevron-left-red.svg");
 }
 
+.back-to-top-btn.sticky {
+  position: sticky;
+  bottom: 30px;
+  text-align: right;
+  white-space: nowrap;
+  margin-left: auto;
+}
 .back-to-top-btn::after {
   background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-up.svg");
 }
@@ -3649,7 +3439,7 @@ a.learn-more::after {
 /*End Button styles*/
 /*****grid styles start *****/
 /* updated on 2024/08/7 */
-ul.grid.grid--3col {
+ul.grid--3col, ul.grid--2col {
   margin-left: 0;
   padding-left: 0;
 }
@@ -3856,10 +3646,6 @@ ul.grid.grid--3col {
   gap: 5rem;
 }
 
-.grid#quicklinks-container {
-  margin-top: -2rem;
-}
-
 /*****grid styles End *****/
 /*Note styles*/
 /* updated on 2024/8/7 */
@@ -3872,6 +3658,19 @@ ul.grid.grid--3col {
 }
 
 /* Basic styles */
+.foot-note {
+  padding-left: 1rem;
+  border-left: 2px solid var(--gray--100);
+  font-size: 0.875rem;
+}
+.foot-note .note__title {
+  color: var(--caption-color);
+  flex-grow: 1;
+  font-weight: 700;
+  line-height: 1.15em;
+  padding-top: 0.25rem;
+}
+
 .note {
   position: relative;
   padding: 1rem;
@@ -3884,6 +3683,9 @@ ul.grid.grid--3col {
   height: -moz-fit-content;
   height: fit-content;
   display: block;
+}
+.note .note__text-content {
+  margin-bottom: 2rem;
 }
 .note .note__title {
   flex-grow: 1;
@@ -4009,6 +3811,10 @@ ul.grid.grid--3col {
   margin-bottom: 0;
 }
 
+.card, .card__link {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
 ul.card-list, .card ul {
   padding: 0;
   margin: 0;
@@ -4027,7 +3833,7 @@ ul.card-list li:not(:last-of-type), .card ul li:not(:last-of-type) {
 }
 
 .card,
-.fares .fares-card,
+.fares .fares-card, .img-card,
 ul.card-list li {
   box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px;
   padding: 1.25rem;
@@ -4046,7 +3852,9 @@ ul.card-list li {
 .card h3,
 .fares .fares-card__title,
 .fares .fares-card h2,
-.fares .fares-card h3,
+.fares .fares-card h3, .img-card__title,
+.img-card h2,
+.img-card h3,
 ul.card-list li__title,
 ul.card-list li h2,
 ul.card-list li h3 {
@@ -4056,7 +3864,7 @@ ul.card-list li h3 {
   margin-bottom: 1em;
 }
 .card__body,
-.fares .fares-card__body,
+.fares .fares-card__body, .img-card__body,
 ul.card-list li__body {
   flex-grow: 1;
 }
@@ -4110,7 +3918,7 @@ ul.card-list li__body {
   box-shadow: rgba(3, 2, 2, 0.12) 0px 2px 10px;
 }
 .basic-card:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 13px;
 }
 .basic-card .card > img {
   height: 2rem;
@@ -4121,7 +3929,13 @@ ul.card-list li__body {
   font-weight: 600;
 }
 
-.card .clickable-card-link, .card__link {
+.card .clickable-card-link,
+.card .btn, .img-card .clickable-card-link,
+.img-card .btn {
+  z-index: 1;
+}
+.card__link, .img-card__link {
+  outline-offset: -1px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -4136,10 +3950,10 @@ ul.card-list li__body {
   border: 2px solid var(--transparent--800);
   transition: border-color 0.15s ease-in-out;
 }
-.card .clickable-card-link:hover, .card__link:hover {
-  border: 2px solid var(--charcoal--800);
+.card:hover, .img-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 13px;
 }
-.card .arrow-container {
+.card .arrow-container, .img-card .arrow-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4150,6 +3964,18 @@ ul.card-list li__body {
   padding: 0.125rem;
   color: var(--charcoal--800);
   border: 1px solid var(--charcoal--800);
+}
+
+.img-card {
+  overflow: hidden;
+}
+.img-card .card__img-container {
+  overflow: hidden;
+  margin: -1.25rem -1.25rem 1rem;
+}
+.img-card .card__img-container img {
+  width: 100%;
+  height: auto;
 }
 
 .card__type--feature {
@@ -4404,7 +4230,7 @@ ul.card-list li__body {
   text-decoration: underline;
 }
 
-.card > img {
+.card:not(.img-card) > img {
   align-self: flex-start;
   margin-bottom: 0.5rem;
 }
@@ -4429,7 +4255,7 @@ ul.card-list li__body {
   font-weight: 600;
 }
 
-.arrow-card .card__title::after {
+.arrow-card::after {
   content: "";
   width: 1.5rem;
   height: 1.5rem;
@@ -4440,7 +4266,7 @@ ul.card-list li__body {
   margin: 0;
   background-size: 100%;
   vertical-align: text-bottom;
-  margin-left: 0.5rem;
+  margin-left: auto;
   margin-bottom: 1px;
   background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-circled.svg");
 }
@@ -4482,7 +4308,7 @@ ul.card-list li__body {
   }
 }
 .quick-link-card:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 13px;
 }
 .quick-link-card::before {
   content: "";
@@ -4641,6 +4467,7 @@ ul.card-list li__body {
 }
 
 .card.station-info-card {
+  margin: 1rem 0;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -4666,7 +4493,7 @@ ul.card-list li__body {
 .homepage-news__recent .news-card:hover,
 .related-news .news-card:hover,
 * .news-card:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 13px;
   background-color: var(--gray--50);
 }
 .homepage-news__featured .news-card .content,
@@ -4818,7 +4645,7 @@ ul.card-list li__body {
   transition: box-shadow 0.2s ease-in-out;
 }
 .spotlight-card:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 13px;
   transition: all-shadow 0.2s ease-in-out;
 }
 .spotlight-card::before {
@@ -5138,6 +4965,235 @@ ul.card-list li__body {
   flex: 1 1 30%;
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+.features--container {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.features--list {
+  width: 360px;
+}
+.features--list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin: 0;
+  color: #5b5a5a;
+}
+.features--list li > p {
+  pointer-events: none;
+}
+
+.features--image-container {
+  position: relative;
+  flex-grow: 1;
+  display: inline-flex;
+  overflow: visible;
+  aspect-ratio: 4/3;
+}
+
+.feature--image {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  position: absolute;
+  max-height: 100vh;
+  transition: all 100ms;
+}
+
+.feature--image.hidden {
+  /* visibility: none; */
+  z-index: -1;
+}
+
+.feature--image.active {
+  /* visibility: visible; */
+  z-index: 100;
+}
+
+.feature--image[data-featureID=TP] {
+  background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_TP.png");
+}
+
+.feature--image[data-featureID=RS] {
+  background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_RS.png");
+}
+
+.feature--image[data-featureID=SS] {
+  background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_SS.png");
+}
+
+.feature--image[data-featureID=ND] {
+  background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_ND.png");
+}
+
+.features--list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin: 0;
+  color: var(--charcoal--800);
+}
+
+.feature--description {
+  margin: 0 0 0 3.5rem;
+}
+
+.feature--link {
+  margin-bottom: 0;
+}
+
+.features--list li {
+  /* background-color: #f1f1f1; */
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: all 100ms;
+  cursor: pointer;
+  /* border: 1px solid var(--gray-100); */
+  margin: 0;
+  gap: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .features--list {
+    width: 100%;
+    pointer-events: none;
+  }
+  .features--list ul {
+    gap: 0;
+  }
+  .features--list li {
+    background-color: none;
+    /* border-bottom: 1px solid var(--gray-100); */
+    border-radius: none;
+    padding: 0 0 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.features--list li.feature-tab-mobile {
+  border-radius: 0;
+}
+
+.features--list li:hover,
+.features--list li:focus-visible,
+.feature-tab.active {
+  background-color: #fff;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  margin-left: -0.25rem;
+}
+
+.feature--title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  display: flex;
+  /* flex-direction: column;
+  align-items: flex-start; */
+}
+
+.feature--description {
+  color: var(--caption-color);
+}
+
+.icon::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon--m {
+  gap: 1rem;
+}
+
+.icon--sm::before {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon--m::before {
+  height: 1.5em;
+  width: 2.5rem;
+}
+
+.icon--TP::before {
+  background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconTravelPlans.png");
+}
+
+.icon--RS::before {
+  background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconRouteSchedules.png");
+}
+
+.icon--SS::before {
+  background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconStopSchedules.png");
+}
+
+.icon--ND::before {
+  background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconNextRides.png");
+}
+
+@media (max-width: 575.98px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .mobile-only {
+    display: none;
+  }
+}
+.features--list li.feature-tab-mobile {
+  border-radius: 0;
+}
+
+.features--list li:hover,
+.features--list li:focus-visible,
+.feature-tab.active {
+  background-color: #fff;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  margin-left: -0.25rem;
+}
+
+.pill-tab {
+  background-color: var(--gray--50);
+  border-radius: 999rem;
+  padding: 0.125rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.pill-tab button.tab {
+  padding: 0.5rem 1rem;
+  color: var(--charcoal--800);
+  border-radius: 999rem;
+  background-image: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+.pill-tab button.tab[aria-current=true] {
+  color: white;
+  background-color: var(--charcoal--800);
 }
 
 /*Layout styles*/
@@ -5782,6 +5838,7 @@ pre {
   overflow: auto;
   box-shadow: none;
   margin-bottom: 1rem;
+  max-height: 600px;
 }
 
 .example {
@@ -6236,7 +6293,7 @@ a.schedules-link::before {
   .select-options-grid {
     overflow-y: scroll;
     grid-template-columns: 1fr;
-    max-height: 500px;
+    max-height: 400px;
     border: 1px solid #e9eaed;
     border-radius: 10px;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
@@ -6602,6 +6659,413 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
 }
 
 /****End Routes & lines styles ******/
+.drop-down-container {
+  align-items: center;
+  background: #fff;
+  border: 3px solid var(--frequent--400);
+  border-radius: 0.5rem;
+  display: flex;
+  padding: 1rem 0.25rem;
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
+
+form.station-search-form {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+form.station-search-form button {
+  position: absolute;
+  font-size: 0.925rem;
+  right: 2rem;
+  bottom: 0;
+}
+
+select {
+  margin-bottom: 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.station_li .inline-icon {
+  margin-right: 0.25rem;
+}
+
+#line1Stns[data_display_mode=routing] ul::before,
+#future_line1Stns[data_display_mode=routing] ul::before,
+#line1Stns_east[data_display_mode=routing] ul::before,
+#line1Stns_west[data_display_mode=routing] ul::before {
+  background: var(--line1);
+}
+
+#line2Stns[data_display_mode=routing] ul::before {
+  background: var(--line2);
+}
+
+#line3Stns[data_display_mode=routing] ul::before, #line3Stns_west[data_display_mode=routing] ul::before {
+  background: var(--line3);
+}
+
+#line4Stns[data_display_mode=routing] ul::before {
+  background: var(--line4);
+}
+
+[data_display_mode=routing] a.select-option {
+  border: none;
+}
+[data_display_mode=routing] ul {
+  position: relative;
+}
+[data_display_mode=routing] ul::before {
+  content: "";
+  position: absolute;
+  width: 0.7rem;
+  border-radius: 999px;
+  height: 100%;
+  z-index: -1;
+}
+[data_display_mode=routing] li {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+}
+[data_display_mode=routing] li::before {
+  content: "";
+  display: block;
+  min-width: 0.5rem;
+  max-width: 0.5rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  margin-top: 0.4rem;
+  min-height: 0.5rem;
+  max-height: 0.5rem;
+  background-color: white;
+  border-radius: 999px;
+}
+[data_display_mode=routing] li:hover a {
+  background-color: var(--gray--100);
+  border-radius: 0.5rem;
+}
+[data_display_mode=routing] .station_li {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--link);
+}
+[data_display_mode=routing] .station_li .station-name {
+  color: var(--link);
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+ul.line-routing {
+  margin-left: 0;
+  padding-left: 0;
+}
+ul.line-routing li {
+  padding-left: 0;
+}
+
+.basic-content,
+.content-container,
+.ready-for-rail {
+  letter-spacing: 0;
+}
+
+/* Typography */
+body {
+  color: #2d2d2d;
+  font-family: "Open Sans", sans-serif;
+  font-display: fallback;
+  line-height: 1.25;
+}
+
+::-moz-selection {
+  background: #2d2d2d;
+  color: #fff;
+}
+
+::selection {
+  background: #2d2d2d;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+a {
+  color: #016b9d;
+}
+
+b {
+  font-weight: 600;
+}
+
+strong {
+  font-weight: bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+.row--basic-content-mainp,
+.row--basic-content-main dt,
+.row--basic-content-main dd,
+.row--basic-content-main li,
+.row--basic-content-main strong {
+  line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.15rem;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  padding: 0.5em 0 0 0;
+}
+
+h1 {
+  font-size: 2.3rem;
+  line-height: 1.15;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 31px;
+  font-size: 1.9rem;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 44px;
+    font-size: 2.75rem;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  h4 {
+    font-size: 22px;
+    font-size: 1.4rem;
+  }
+}
+
+h5 {
+  font-size: 1.45rem;
+}
+
+sup {
+  font-size: 75%;
+  vertical-align: top;
+  vertical-align: super;
+}
+
+sub {
+  bottom: -0.25em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.section--accessible-transit h1 {
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 1em;
+}
+@media (min-width: 768px) {
+  .section--accessible-transit h1 {
+    font-size: 50px;
+    font-size: 3.125rem;
+  }
+}
+
+.cke_contents_ltr sub {
+  bottom: -0.5em;
+}
+.cke_contents_ltr sup sub {
+  bottom: -0.65em;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--off-black);
+  font-weight: 700;
+  margin: 0;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+p,
+dt,
+dd {
+  margin: 0 0 0.5rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.caption,
+figcaption,
+figcaption p {
+  font-style: italic;
+  color: var(--caption-color);
+  text-align: left;
+  font-size: 0.875rem;
+  padding: 0.25rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  color: var(--heading-color);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.15em;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h2, .quick-facts h2 span.rt {
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  h2, .quick-facts h2 span.rt {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+
+h4 {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+
+h6 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  h6 {
+    font-size: 1.1rem;
+  }
+}
+
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4,
+hgroup h5,
+hgroup h6,
+hgroup th {
+  color: var(--heading-color);
+  line-height: 1.15em;
+  margin-bottom: 0.5rem;
+}
+
+.subhead,
+hgroup p {
+  text-transform: uppercase;
+  color: var(--caption-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
 .clearfix:after {
   visibility: hidden;
   display: block;
