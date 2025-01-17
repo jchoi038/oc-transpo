@@ -1,5 +1,5 @@
 #quicklinks-container{
-    margin-top: 1rem;
+    margin-top: -2rem;
 }
 
 .flex.cards-overflow-x-container{
@@ -12,6 +12,16 @@
         margin-left: -30px;
         padding-left: 30px;
         padding-right: 30px;
+    }
+}
+.image-container{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    img{
+        object-fit: cover;
     }
 }
 .icon-container{
@@ -65,3 +75,15 @@
 
 }
 
+.btn-container{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0 ;
+    align-items: top;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+.card .btn-container{
+    padding: 0;
+    gap: 0.5rem;
+}

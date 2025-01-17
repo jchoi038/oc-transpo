@@ -11,7 +11,13 @@
 		ul::before {
 			background: var(--line1);
 		}
+		&.heading-display-none{
+			&> h2{
+				display: none !important
+			}
+		}
 	}
+	
 }
 #line2Stns[data_display_mode="routing"] {
 	ul::before {
@@ -97,4 +103,19 @@ ul.line-routing{
 	li{
 		padding-left: 0;
 	}
+}
+
+#line1Stns,
+#line2Stns,
+#line3Stns,
+#line4Stns,
+#future_line1Stns,
+#line1Stns_east,
+#line1Stns_west {
+	&.heading-display-none {
+		h2 {
+			display: none !important;
+		}
+	}
+
 }

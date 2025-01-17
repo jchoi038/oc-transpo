@@ -17,6 +17,7 @@ a.learn-more {
 .btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-sm):not(
 	.btn-text
 ):not(.btn-icon-only){
+	
 	padding: 0.5rem 0.75rem 0.5rem 1rem;
 
 	@include media-breakpoint-down(sm) {
@@ -33,7 +34,7 @@ input.search-btn{
 // small button padding
 
 .btn.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(.btn-text):not(.btn-icon-only).btn-sm,
-.banner
+.banner:not(.section)
 	.btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button):not(
 		.btn-text
 	):not(.btn-icon-only) {
@@ -61,7 +62,7 @@ a.learn-more {
 }
 
 .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button).btn-sm,
-.banner .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
+.banner:not(.section) .btn:not(.green-btn):not(.btn--all-alerts):not(.blue-button) {
 	font-size: $btn-font-sm;
 	min-height: 1.875rem;
 	&::after {
@@ -72,7 +73,7 @@ a.learn-more {
 }
 
 // small btn styles
-.banner .btn,
+.banner:not(.section) .btn,
 .btn-sm,
 .filter-bar .btn {
 	
@@ -145,8 +146,7 @@ a.learn-more {
 
 // tertiary button
 .btn.btn-tertiary,
-.filter-bar .btn,
-.banner .btn:not(.override) {
+.filter-bar .btn {
 	background-color: var(--ter-btn-color);
 	color: var(--charcoal--800);
 
@@ -213,8 +213,8 @@ a.learn-more {
 	}
 }
 
-.banner .btn-secondary,
-.banner .banner__btns > a:nth-of-type(2),
+.banner:not(.section) .btn-secondary,
+.banner:not(.section) .banner:not(.section__btns) > a:nth-of-type(2),
 .btn-secondary,
 .btn-line1,
 .btn-line2,
@@ -224,7 +224,7 @@ a.learn-more {
 .btn-connexion,
 .btn-local {
 	color: var(--charcoal--800);
-	background-color: white;
+	background-color: transparent;
 	border: solid 1px var(--scd-btn-border-color);
 	outline-offset: 4px;
 	&:hover {
@@ -423,11 +423,11 @@ a.learn-more {
 	background-clip: padding-box;
 
 	&.dark-mode {
-		background-color: inherit !important;
+		background-color: var(--charcoal--800);
 		color: white;
 		background: $grad-all-dm;
 		&:before {
-			background-color: inherit;
+			background-color: var(--charcoal--800);
 		}
 		&:hover::before {
 			background-color: var(--btn-dm-hover);
@@ -518,7 +518,7 @@ a.learn-more {
 .btn.btn-text {
 	background-color: transparent;
 	color: var(--charcoal--800);
-	padding: 0.5rem 0 0;
+	padding: 0;
 	margin: 0 0 0.5rem;
 	border-radius: 0;
 	min-height: fit-content;
@@ -526,6 +526,9 @@ a.learn-more {
 	&:not(.dark-mode):hover {
 		color: var(--prm-btn-color);
 		border-bottom: 1px solid var(--prm-btn-color);
+	}
+	&::after {
+		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right.svg");
 	}
 }
 
@@ -555,7 +558,7 @@ a.learn-more {
 
 // Banner darkmode button
 
-.banner .btn.dark-mode {
+.banner:not(.section) .btn.dark-mode {
 	color: #fff;
 	&::after {
 		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-right-white.svg");
@@ -815,6 +818,16 @@ a.learn-more {
 		background-image: url("https://www.octranspo.com/images/files/icons/contact_phone.svg");
 	}
 }
+.btn.btn-icon--para {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/transport_para.svg");
+	}
+}
+.btn.btn-icon--plan {
+	&::before {
+		background-image: url("https://www.octranspo.com/images/files/icons/travelplanner_trip-plan.svg");
+	}
+}
 
 // Trailing icon variations + elevated button style
 
@@ -888,7 +901,9 @@ a.learn-more {
 	&.btn-icon--email,
 	&.btn-icon--tty,
 	&.btn-icon--fax,
-	&.btn-icon--phone {
+	&.btn-icon--phone,
+	&.btn-icon--para,
+	&.btn-icon--plan {
 		padding: 0.5rem 1rem 0.4rem 1rem;
 
 		&::before {

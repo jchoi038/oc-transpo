@@ -6,18 +6,19 @@
     --line1--100: #FCE4D9;
     --line1--200: #FFB099;
     --line1--300: #FF8173;
+    --line1--350: #FF5C5C;
     --line1--400: #FF3F3E;
     --line1--500: #E83037;
-    --line1--600: #D30F1D;
+    --line1--600: #d30f1d;
     --line1--700: #A30812;
-    --line1--800: #69050C;
-    --line2--50: #F4FAE4;
+    --line1--800: #57050A;
+    --line2--50:  #F4FAE4;
     --line2--100: #DFF2C9;
     --line2--200: #AEDA8D;
-    --line2--300: #94CD68;
+    --line2--300: #91C959;
     --line2--400: #74B824;
-    --line2--500: #65A233;
-    --line2--600: #508028;
+    --line2--500: #65a233;
+    --line2--600: #508128;
     --line2--700: #38591C;
     --line2--800: #1C2E0D;
     --line3--50: #FFFBE5;
@@ -26,33 +27,33 @@
     --line3--300:#FED335;
     --line3--400:#DAAB01;
     --line3--500:#B58800;
-    --line3--600:#8F7200;
+    --line3--600:#8f7200;
     --line3--700:#665200;
     --line3--800:#473900;
     --line4--50: #F2FAFF; 
     --line4--100:#DBF1FF;
-    --line4--200:#B4E2FF;
+    --line4--200:#A7DDFF;
     --line4--300:#78CBFF; 
     --line4--400:#3EB4FF; 
-    --line4--500:#009AD6; 
+    --line4--500:#009ad6; 
     --line4--600:#0980A5; 
     --line4--700:#07607C; 
     --line4--800:#043442; 
-    --frequent--50: #EFF6FF; 
+    --frequent--50:  #EFF6FF; 
     --frequent--100: #DBEBFF;
-    --frequent--200: #A0CBFF;
+    --frequent--200: #ADD2FF;
     --frequent--300: #6EB0FF;
-    --frequent--400: #3893FF;
-    --frequent--500: #2C7BD9;
-    --frequent--600: #1A559B;
+    --frequent--400: #5298F2;
+    --frequent--500: #3A85E8;
+    --frequent--600: #0057B8;
     --frequent--700: #0F3869;
     --frequent--800: #0C294A;
-    --connexion--50: #FDF4F9; 
-    --connexion--100: #FAE2F1;
-    --connexion--200: #F4BCDE;
+    --connexion--50:  #FDF4F9; 
+    --connexion--100: #FBE5F3;
+    --connexion--200: #F4C2E1;
     --connexion--300: #EE9ACD;
     --connexion--400: #EA83C1;
-    --connexion--500: #CF6EA8;
+    --connexion--500: #B46C93;
     --connexion--600: #AC5B8C;
     --connexion--700: #772F5A;
     --connexion--800: #4F2A40;
@@ -62,24 +63,26 @@
     --local--300:#D0D0D0; 
     --local--400:#B0B1B5; 
     --local--500:#86878A; 
-    --local--600:#6D6E70; 
+    --local--600:#6D6E72; 
     --local--700:#545557; 
     --local--800:#363738;
     --transparent--50: hsl(0, 0%, 100%, 15%); 
     --transparent--100: hsl(0, 0%, 100%, 25%); 
     --transparent--200: hsl(0, 0%, 100%, 40%); 
     --transparent--500: hsl(0, 0%, 100%, 60%); 
+    --transparent--700: hsl(0, 0%, 100%, 75%); 
     --transparent--800: hsl(0, 0%, 100%, 95%); 
-    --gray--25: #FCFCFC;
-    --gray--50: #F8F8F8;
-    --gray--100: #edeff2;
-    --gray--200: #d5dbe2;
-    --gray--300: #BEC7D4;
+    --gray--25:  #FCFCFC;
+    --gray--50:  #F8F8F8;
+    --gray--100: #EDEFF2;
+    --gray--200: #D5DBE2;
+    --gray--300: #C1C9D4;
     --gray--400: #A8B0BB;
     --gray--500: #88909A;
-    --gray--600: #616977;
-    --gray--700: #353A43;
-    --gray--800: #231F20;
+    --gray--600: #6A707C;
+    --gray--700: #4A515E;
+    --gray--800: #1F2020;
+    --charcoal--25: hsl(249, 14%, 26%,2.5%);
     --charcoal--50: hsl(249, 14%, 26%,7%);
     --charcoal--100: hsl(249, 14%, 26%,12%);
     --charcoal--500: #9491A1;
@@ -117,10 +120,10 @@
     --local:#6D6E70;
 
     //text colors
-    --text-color-light: var(--gray--600);
     --text-color: var(--gray--700);
-    --heading-color: var(--gray--800);
     --caption-color: var(--gray--600);
+    --text-color-light: var(--gray--600);
+    --heading-color: var(--gray--800);
     --ui-title-color: var(--charcoal--800);
     --ui-title-color-light: var(--charcoal--600);
 
@@ -157,6 +160,7 @@
     --critical-bg-border-color: var(--line1--500);
     --critical-bg-icon-color: var(--line1--600);
     --critical-text-color: var(--line1--800);
+
     --success-bg-color: var(--line2--100);
     --success-bg-dark-color: var(--line2--200);
     --success-bg-border-color: var(--line2--500);
@@ -213,18 +217,27 @@
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 0.25rem;
+    text-align: center;
+
+    &.high-contrast{
+        color: white;
+    }
+    &.med-contrast{
+        color: white;
+        font-weight: 700;
+    }
 }
 
 .green-text{
-    color: var(--line2--600);
+    color: var(--line2--600) !important;
 }
 .blue-text{
-    color: var(--line4--600);
+    color: var(--line4--600) !important;
 }
 .red-text{
-    color: var(--line1--600);
+    color: var(--line1--600) !important;
 }
 .gold-text{
-    color: var(--line3--600);
+    color: var(--line3--600) !important;
 }
 /*end Colors*/

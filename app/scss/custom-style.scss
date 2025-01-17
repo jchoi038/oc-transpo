@@ -88,42 +88,42 @@ $transition-collapse: none;
 // @import "carousel";//new
 // @import "entrance-sign";//new
 
-
-
-/*NEW Below*/
-
+/*NEW Judy's style start*/
 @import "globals"; //new
-@import "badges";//new
-@import "tables"; //new
-@import "containers"; //new
-@import "lists"; //new
-@import "flex"; //new
-@import "banners";//new
-@import "buttons"; //new
-@import "grid";//new
-@import "notes";//new
-@import "cards";//new
-@import "news-cards";//new
-@import "tabs";//new
-@import "layout";//new
-@import "accordion";//new
-@import "util";//new
-@import "code";//new
-@import "tags";//new
-@import "images";//new
-@import "toc";//new
-@import "links";//new
-@import "select-options";//new
-@import "icons";//new
-@import "routes-lines";//new
-@import "forms";//new
-@import "line-routing";//new
+.content-container{
+	@import "badges";//new
+	@import "tables"; //new
+	@import "containers"; //new
+	@import "lists"; //new
+	@import "flex"; //new
+	@import "banners";//new
+	@import "buttons"; //new
+	@import "grid";//new
+	@import "notes";//new
+	@import "cards";//new
+	// @import "news-cards";//new
+	@import "tabs";//new
+	@import "layout";//new
+	@import "accordion";//new
+	@import "util";//new
+	@import "code";//new
+	@import "tags";//new
+	@import "images";//new
+	@import "toc";//new
+	@import "links";//new
+	@import "select-options";//new
+	@import "icons";//new
+	@import "routes-lines";//new
+	@import "forms";//new
+	@import "line-routing";//new
+	@import "print";//new
+	@import "typography"; // general font and header styles
+	@import "assets"; //
+	@import "iframe"; // 
+}
 
-@import "typography"; // general font and header styles
 
-
-
-
+// Judy's style end
 
 
 

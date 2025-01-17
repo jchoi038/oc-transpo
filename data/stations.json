@@ -4,12 +4,20 @@
 		"station_560": 3039,
 		"connecting_stops": "3066",
 		"station_name": "Airport",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": true,
+			"bus": false
+		},
 		"station_name_fr": "Aéroport",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/airport-2",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/airport-01",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/aeroport-01/",
-			"layout_map": "",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_4_stations/STATION_airport.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/Virtual_tours/Airport_VT_1.jpg",
 			"tour360": "https://my.matterport.com/show/?m=2LNFsmEbYQj",
@@ -18,7 +26,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": false,
+			"accessible": true,
+			"airport": true
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -27,21 +38,9 @@
 			"line_3": 2,
 			"line_4": 3
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": true,
-			"bus": false
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": true,
 			"bus": null
 		},
-		
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -57,6 +56,15 @@
 		"station_560": 3017,
 		"connecting_stops": "",
 		"station_name": "Algonquin",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": false,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/algonquin-01/",
@@ -70,7 +78,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": true
+			"pnr": true,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -79,21 +90,9 @@
 			"line_3": 3,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": false,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": true
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -109,6 +108,15 @@
 		"station_560": 3045,
 		"connecting_stops": "",
 		"station_name": "Barrhaven Centre",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/barrhaven-centre1",
@@ -122,7 +130,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -131,21 +142,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -161,6 +160,15 @@
 		"station_560": 3017,
 		"connecting_stops": "",
 		"station_name": "Baseline",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/baseline1",
@@ -174,7 +182,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -183,21 +194,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -213,6 +212,15 @@
 		"station_560": 3050,
 		"connecting_stops": "",
 		"station_name": "Bayshore",
+		"station_type": {
+			"transitway": "west",
+			"line_1": false,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/bayshore1",
@@ -226,30 +234,21 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
-		"station_extension": "",
+		"station_extension": "west",
 		"routing_index": {
 			"line_1": null,
 			"line_2": null,
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": true
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -265,11 +264,20 @@
 		"station_560": 3060,
 		"connecting_stops": "",
 		"station_name": "Bayview",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": true,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/bayview-2",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/bayview-01/",
 			"prod_fr": "/fr/nos-services/stations-3/bayview-02",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BYV.png",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_bayview.jpg",
 			"schedules": "https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&StopFilterIdentifier=T+BAS+PR&StopFilterType=3&StopIdentifier=SH930",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/bayviw_2_1.jpg",
 			"tour360": "https://my.matterport.com/show/?m=tvVnUgKetMA",
@@ -278,7 +286,10 @@
 			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/bayview.jpg"
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -287,21 +298,9 @@
 			"line_3": 11,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": true,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": true,
-			"line_3": false,
-			"line_4": null,
 			"bus": true
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -317,6 +316,15 @@
 		"station_560": 3049,
 		"connecting_stops": "",
 		"station_name": "Beatrice",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/beatrice1",
@@ -330,7 +338,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -339,21 +350,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -369,6 +368,15 @@
 		"station_560": 3034,
 		"connecting_stops": "",
 		"station_name": "Billings Bridge",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/billings-bridge1",
@@ -382,7 +390,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -391,21 +402,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -421,6 +420,15 @@
 		"station_560": 3027,
 		"connecting_stops": "",
 		"station_name": "Blair",
+		"station_type": {
+			"transitway": "east",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/blair1",
@@ -434,7 +442,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": true
+			"pnr": true,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -443,21 +454,9 @@
 			"line_3": 22,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -473,11 +472,20 @@
 		"station_560": 3067,
 		"connecting_stops": "",
 		"station_name": "Bowesville",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/bowesville",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/bowesville-01",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/bowesville-02/",
-			"layout_map": "",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_bowesville.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/bowesville.png",
 			"tour360": "",
@@ -486,7 +494,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": true
+			"pnr": true,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -495,21 +506,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": false,
-			"bus": false
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -525,6 +524,15 @@
 		"station_560": 3059,
 		"connecting_stops": "",
 		"station_name": "Canadian Tire Centre",
+		"station_type": {
+			"transitway": "west",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "Centre Canadian Tire",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/canadian-tire-centre1",
@@ -538,7 +546,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -547,21 +558,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "Centre Canadian Tire",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -577,11 +576,20 @@
 		"station_560": 3062,
 		"connecting_stops": "5813, 6610",
 		"station_name": "Carleton",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/carleton-3",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/carleton-01/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/carleton-02/",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CRT.png",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_carleton.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/carleton.png",
 			"tour360": "https://my.matterport.com/show/?m=eXKHPhX5Uhi",
@@ -590,7 +598,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -599,21 +610,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -625,62 +624,19 @@
 		}
 	},
 	{
-		"id": "",
-		"station_560": 3061,
-		"connecting_stops": "6655, 6657, 8014, 7369",
-		"station_name": "Carling",
-		"station_url": {
-			"staging": "https://staging.octranspo1.com/en/our-services/stations1/dows-lake",
-			"prod": "https://www.octranspo.com/en/our-services/stations-2/dows-lake-01",
-			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/lac-dow-01/",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CARL.png",
-			"schedules": "",
-			"hero_image": "https://www.octranspo.com/images/files/stage2/dows-lake.png",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null
-		},
-		"station_extension": "",
-		"routing_index": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": 2,
-			"line_4": null
-		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": false,
-			"line_4": false,
-			"bus": true
-		},
-		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
-			"bus": null
-		},
-		"station_name_fr": "",
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": " the station is found just north of Carling Avenue. It is conveniently connected to an adjacent multi-use pathway (MUP) on the east.",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
 		"id": "CHA",
 		"station_560": 3074,
 		"connecting_stops": "",
 		"station_name": "Chapel Hill",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/chapel-hill1",
@@ -694,7 +650,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -703,21 +662,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -733,6 +680,15 @@
 		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "Convent Glen",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": null,
+			"line_3": true,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/convent-glen/",
@@ -746,7 +702,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -755,21 +714,9 @@
 			"line_3": 25,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": true,
-			"line_4": null,
-			"bus": null
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -785,11 +732,20 @@
 		"station_560": 3065,
 		"connecting_stops": "8043, 8044",
 		"station_name": "Corso Italia",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/corso-italia-3",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/corso-italia-01",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/corso-italia-02/",
-			"layout_map": "",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_corso-italia.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/corso-italia.jpg",
 			"tour360": "",
@@ -798,7 +754,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -807,21 +766,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": false,
-			"bus": false
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -837,6 +784,15 @@
 		"station_560": 3026,
 		"connecting_stops": "",
 		"station_name": "Cyrville",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/cyrville1",
@@ -850,7 +806,10 @@
 			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/cyrville.jpg"
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -859,21 +818,9 @@
 			"line_3": 21,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -889,6 +836,15 @@
 		"station_560": 3013,
 		"connecting_stops": "",
 		"station_name": "Dominion",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/dominion1",
@@ -902,7 +858,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -911,21 +870,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -941,12 +888,21 @@
 		"station_560": 3061,
 		"connecting_stops": "",
 		"station_name": "Dow's Lake",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "Lac Dow",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/dows-lake",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/dows-lake-01",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/lac-dow-01/",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/CAR.png",
-			"schedules": "",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_dows-lake.jpg",
+			"schedules": "https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&StopFilterIdentifier=T+CARLG&StopFilterType=3&StopIdentifier=NB990",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/dows-lake.png",
 			"tour360": "",
 			"pnr": "",
@@ -954,7 +910,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -963,26 +922,14 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": false,
-			"bus": false
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "Lac Dow",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
 		"station_location": {
-			"access_point": "",
+			"access_point": "Dow's Lake Station lies on the Rideau Canal. The station is found just north of Carling Avenue. It is conveniently connected to an adjacent multi-use pathway (MUP) on the east.",
 			"address": "",
 			"google_link": "",
 			"access_point-fr": ""
@@ -993,6 +940,15 @@
 		"station_560": 3055,
 		"connecting_stops": "",
 		"station_name": "Eagleson",
+		"station_type": {
+			"transitway": "west",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/eagleson1",
@@ -1006,7 +962,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1015,21 +974,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1045,6 +992,15 @@
 		"station_560": 3043,
 		"connecting_stops": "",
 		"station_name": "Fallowfield",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/fallowfield1",
@@ -1053,12 +1009,16 @@
 			"schedules": "https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&StopFilterIdentifier=T+FAL&StopFilterType=3&StopIdentifier=SL910",
 			"hero_image": "",
 			"tour360": "",
-			"pnr": "",
+			"pnr": "#fallowfield",
 			"staging-fr": "",
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": true,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null,
+			"via": true
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1067,21 +1027,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1097,11 +1045,20 @@
 		"station_560": 3037,
 		"connecting_stops": "",
 		"station_name": "Greenboro",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/greenboro",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/greenboro-01/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/greenboro-02/",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/GRB.png",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_greenboro.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/greenboro.png",
 			"tour360": "https://my.matterport.com/show/?m=RzxqcncYJNY",
@@ -1110,7 +1067,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": true
+			"pnr": true,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1119,21 +1079,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1149,6 +1097,15 @@
 		"station_560": 3035,
 		"connecting_stops": "",
 		"station_name": "Heron",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/heron1",
@@ -1162,7 +1119,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1171,21 +1131,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1201,6 +1149,15 @@
 		"station_560": 3023,
 		"connecting_stops": "",
 		"station_name": "Hurdman",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/hurdman1",
@@ -1214,7 +1171,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1223,21 +1183,9 @@
 			"line_3": 18,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "Ottawa, ON K1G 4J4",
 		"google_map_link": "https://maps.app.goo.gl/ytwW2Uf4fc3Yx4h38",
 		"station_bsi": "",
@@ -1253,6 +1201,15 @@
 		"station_560": 3057,
 		"connecting_stops": "",
 		"station_name": "Innovation",
+		"station_type": {
+			"transitway": "west",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/innovation1",
@@ -1266,7 +1223,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1275,21 +1235,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1305,6 +1253,15 @@
 		"station_560": 3016,
 		"connecting_stops": "",
 		"station_name": "Iris",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": true,
+			"line_2": false,
+			"line_3": false,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/iris1",
@@ -1318,7 +1275,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -1327,21 +1287,9 @@
 			"line_3": 4,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": false,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1357,6 +1305,15 @@
 		"station_560": 3070,
 		"connecting_stops": "",
 		"station_name": "Jeanne d'Arc",
+		"station_type": {
+			"transitway": "east",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/jeanne-darc1",
@@ -1370,7 +1327,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -1379,21 +1339,9 @@
 			"line_3": 24,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1408,7 +1356,16 @@
 		"id": "",
 		"station_560": 3013,
 		"connecting_stops": "",
-		"station_name": "Kichi Zìbì",
+		"station_name": "Kichi Zìbì",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": null,
+			"line_3": true,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/kichi-zibi-01",
@@ -1422,7 +1379,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -1431,21 +1391,9 @@
 			"line_3": 8,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": true,
-			"line_4": null,
-			"bus": null
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1461,6 +1409,15 @@
 		"station_560": 3022,
 		"connecting_stops": "",
 		"station_name": "Lees",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/lees1",
@@ -1474,7 +1431,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1483,21 +1443,9 @@
 			"line_3": 17,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1513,11 +1461,20 @@
 		"station_560": 3041,
 		"connecting_stops": "",
 		"station_name": "Leitrim",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": true,
+			"line_3": false,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/leitrim",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/leitrim-01",
 			"prod_fr": "/fr/nos-services/stations-3/leitrim-02",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/LEI.png",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_leitrim.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/leitrim.jpg",
 			"tour360": "",
@@ -1526,7 +1483,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": true
+			"pnr": true,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1535,21 +1495,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": false,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1565,11 +1513,20 @@
 		"station_560": 3068,
 		"connecting_stops": "",
 		"station_name": "Limebank",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/limebank",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/limebank-01/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/limebank-02/",
-			"layout_map": "",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_limebank.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stations/hero-images/limebank-june-2024.jpg",
 			"tour360": "",
@@ -1578,7 +1535,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1587,21 +1547,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1617,6 +1565,15 @@
 		"station_560": 3014,
 		"connecting_stops": "",
 		"station_name": "Lincoln Fields",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/lincoln-fields1",
@@ -1630,7 +1587,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -1639,21 +1599,9 @@
 			"line_3": 5,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": true
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1669,6 +1617,15 @@
 		"station_560": 3046,
 		"connecting_stops": "",
 		"station_name": "Longfields",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/longfields1",
@@ -1682,7 +1639,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1691,21 +1651,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1721,6 +1669,15 @@
 		"station_560": 3030,
 		"connecting_stops": "",
 		"station_name": "Lycée Claudel",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/lycee-claudel1",
@@ -1734,7 +1691,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1743,21 +1703,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1773,6 +1721,15 @@
 		"station_560": 3051,
 		"connecting_stops": "",
 		"station_name": "Lyon",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/lyon1",
@@ -1786,7 +1743,10 @@
 			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/lyon.jpg"
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1795,21 +1755,9 @@
 			"line_3": 13,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1825,6 +1773,15 @@
 		"station_560": 3000,
 		"connecting_stops": "",
 		"station_name": "Mackenzie King",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/mackenzie-king1",
@@ -1838,7 +1795,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1847,21 +1807,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1877,6 +1825,15 @@
 		"station_560": 3047,
 		"connecting_stops": "",
 		"station_name": "Marketplace",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/marketplace1",
@@ -1890,7 +1847,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1899,21 +1859,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1929,6 +1877,15 @@
 		"station_560": 3076,
 		"connecting_stops": "",
 		"station_name": "Millennium",
+		"station_type": {
+			"transitway": "east",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/millennium1",
@@ -1942,7 +1899,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1951,21 +1911,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -1981,6 +1929,15 @@
 		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "Montréal",
+		"station_type": {
+			"transitway": "east",
+			"line_1": true,
+			"line_2": null,
+			"line_3": true,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/montreal/",
@@ -1994,7 +1951,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -2003,21 +1963,9 @@
 			"line_3": 23,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": true,
-			"line_4": null,
-			"bus": null
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2033,6 +1981,15 @@
 		"station_560": 3042,
 		"connecting_stops": "",
 		"station_name": "Moodie",
+		"station_type": {
+			"transitway": "west",
+			"line_1": false,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/moodie1",
@@ -2046,30 +2003,21 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
-		"station_extension": "",
+		"station_extension": "west",
 		"routing_index": {
 			"line_1": null,
 			"line_2": null,
 			"line_3": 1,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": true
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2085,11 +2033,20 @@
 		"station_560": 3063,
 		"connecting_stops": "1342, 5602, 1123, 1004",
 		"station_name": "Mooney's Bay",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/mooneys-bay",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/mooneys-bay-01",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/mooneys-bay-02/",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/MOB.png",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_mooneys-bay.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/mooney-bay.png",
 			"tour360": "https://my.matterport.com/show/?m=99WMwSC5DUB",
@@ -2098,7 +2055,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2107,21 +2067,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2137,6 +2085,15 @@
 		"station_560": 3048,
 		"connecting_stops": "",
 		"station_name": "Nepean Woods",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": false,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/nepean-woods1",
@@ -2150,7 +2107,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2159,21 +2119,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": false,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "SL990",
@@ -2189,6 +2137,15 @@
 		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "New Orchard",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": null,
+			"line_3": true,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/new-orchard/",
@@ -2202,7 +2159,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -2211,21 +2171,9 @@
 			"line_3": 6,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": true,
-			"line_4": null,
-			"bus": null
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2241,6 +2189,15 @@
 		"station_560": 3052,
 		"connecting_stops": "",
 		"station_name": "Parliament",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "Parlement",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/parliament1",
@@ -2254,7 +2211,10 @@
 			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/parliament.jpg"
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2263,21 +2223,9 @@
 			"line_3": 14,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "Parlement",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2293,6 +2241,15 @@
 		"station_560": 3010,
 		"connecting_stops": "",
 		"station_name": "Pimisi",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/pimisi1",
@@ -2306,7 +2263,10 @@
 			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/pimisi.jpg"
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2315,21 +2275,9 @@
 			"line_3": 12,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2345,6 +2293,15 @@
 		"station_560": 3019,
 		"connecting_stops": "",
 		"station_name": "Pinecrest",
+		"station_type": {
+			"transitway": "west",
+			"line_1": false,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/pinecrest1",
@@ -2358,30 +2315,21 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
-		"station_extension": "",
+		"station_extension": "west",
 		"routing_index": {
 			"line_1": null,
 			"line_2": null,
 			"line_3": 3,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": true
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2397,6 +2345,15 @@
 		"station_560": 3028,
 		"connecting_stops": "",
 		"station_name": "Place d'Orléans",
+		"station_type": {
+			"transitway": "east",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/place-dorleans",
@@ -2410,7 +2367,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": true
+			"pnr": true,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -2419,21 +2379,9 @@
 			"line_3": 26,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2449,6 +2397,15 @@
 		"station_560": 3033,
 		"connecting_stops": "",
 		"station_name": "Pleasant Park",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/pleasant-park1",
@@ -2462,7 +2419,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2471,21 +2431,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2501,6 +2449,15 @@
 		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "Queensview",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": null,
+			"line_3": true,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/queensview1/",
@@ -2514,30 +2471,21 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": true,
+			"airport": null
 		},
-		"station_extension": "",
+		"station_extension": "west",
 		"routing_index": {
 			"line_1": null,
 			"line_2": null,
 			"line_3": 4,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": true,
-			"line_4": null,
-			"bus": null
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2553,6 +2501,15 @@
 		"station_560": 3015,
 		"connecting_stops": "",
 		"station_name": "Queensway",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/queensway1",
@@ -2566,7 +2523,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2575,21 +2535,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2605,6 +2553,15 @@
 		"station_560": 3009,
 		"connecting_stops": "",
 		"station_name": "Rideau",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/rideau1",
@@ -2618,7 +2575,10 @@
 			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/rideau.jpg"
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2627,21 +2587,9 @@
 			"line_3": 15,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2657,6 +2605,15 @@
 		"station_560": 3032,
 		"connecting_stops": "",
 		"station_name": "Riverside",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/riverside1",
@@ -2670,7 +2627,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2679,21 +2639,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2709,6 +2657,15 @@
 		"station_560": 3040,
 		"connecting_stops": "",
 		"station_name": "Riverview",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/riverview1",
@@ -2722,7 +2679,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2731,21 +2691,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2761,6 +2709,15 @@
 		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "Sherbourne",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": null,
+			"line_3": true,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/sherbourne1/",
@@ -2774,7 +2731,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -2783,21 +2743,9 @@
 			"line_3": 7,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": true,
-			"line_4": null,
-			"bus": null
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2813,6 +2761,15 @@
 		"station_560": 3031,
 		"connecting_stops": "",
 		"station_name": "Smyth",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/smyth1",
@@ -2826,7 +2783,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2835,21 +2795,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2865,11 +2813,20 @@
 		"station_560": 3038,
 		"connecting_stops": "",
 		"station_name": "South Keys",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": true,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/south-keys-3",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/south-keys-01",
 			"prod_fr": "/fr/nos-services/stations-3/south-keys2",
-			"layout_map": "https://www.octranspo.com/images/files/SouthKeys_3D_2.png",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_south-keys.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/southkeys.png",
 			"tour360": "",
@@ -2878,7 +2835,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2887,21 +2847,9 @@
 			"line_3": 2,
 			"line_4": 1
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": true,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": true,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2917,6 +2865,15 @@
 		"station_560": 3025,
 		"connecting_stops": "",
 		"station_name": "St-Laurent",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/st-laurent1",
@@ -2930,7 +2887,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2939,21 +2899,9 @@
 			"line_3": 20,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -2969,6 +2917,15 @@
 		"station_560": 3044,
 		"connecting_stops": "",
 		"station_name": "Strandherd",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/strandherd1",
@@ -2982,7 +2939,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2991,21 +2951,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3021,6 +2969,15 @@
 		"station_560": 3018,
 		"connecting_stops": "",
 		"station_name": "Teron",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/teron1",
@@ -3034,7 +2991,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3043,21 +3003,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3073,6 +3021,15 @@
 		"station_560": 3058,
 		"connecting_stops": "",
 		"station_name": "Terry Fox",
+		"station_type": {
+			"transitway": "west",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/terry-fox1",
@@ -3086,7 +3043,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": false,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3095,21 +3055,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3125,6 +3073,15 @@
 		"station_560": 3024,
 		"connecting_stops": "",
 		"station_name": "Tremblay",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/tremblay1",
@@ -3138,7 +3095,11 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null,
+			"via": true
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3147,21 +3108,9 @@
 			"line_3": 19,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3177,6 +3126,15 @@
 		"station_560": 3029,
 		"connecting_stops": "",
 		"station_name": "Trim",
+		"station_type": {
+			"transitway": "east",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/trim",
@@ -3190,7 +3148,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": true
+			"pnr": true,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -3199,21 +3160,9 @@
 			"line_3": 27,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": false,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3229,6 +3178,15 @@
 		"station_560": 3011,
 		"connecting_stops": "",
 		"station_name": "Tunney's Pasture",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/tunneys-pasture1",
@@ -3242,7 +3200,10 @@
 			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/tunneys.jpg"
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3251,21 +3212,9 @@
 			"line_3": 10,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3281,6 +3230,15 @@
 		"station_560": 3021,
 		"connecting_stops": "",
 		"station_name": "uOttawa",
+		"station_type": {
+			"transitway": "",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/uottawa1",
@@ -3294,7 +3252,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3303,21 +3264,9 @@
 			"line_3": 16,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": false
-		},
 		"station_completed": {
-			"line_1": true,
-			"line_2": null,
-			"line_3": false,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3333,11 +3282,20 @@
 		"station_560": 3069,
 		"connecting_stops": "",
 		"station_name": "Uplands",
+		"station_type": {
+			"transitway": "",
+			"line_1": false,
+			"line_2": false,
+			"line_3": null,
+			"line_4": true,
+			"bus": false
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/uplands-3",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/uplands-01",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/uplands-02/",
-			"layout_map": "",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_4_stations/STATION_uplands.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/renderings/uplands_station.jpg",
 			"tour360": "",
@@ -3346,7 +3304,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": false,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3355,21 +3316,9 @@
 			"line_3": 2,
 			"line_4": 2
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": true,
-			"bus": false
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": true,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3385,11 +3334,20 @@
 		"station_560": 3036,
 		"connecting_stops": "",
 		"station_name": "Walkley",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": false,
+			"line_2": true,
+			"line_3": null,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "https://staging.octranspo1.com/en/our-services/stations1/walkley",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/walkley-01",
 			"prod_fr": "/fr/nos-services/stations-3/walkley2",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/WAL.png",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_walkley.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/walkley.jpg",
 			"tour360": "https://my.matterport.com/show/?m=ynebV6qyxph",
@@ -3398,7 +3356,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3407,21 +3368,9 @@
 			"line_3": 2,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": false,
-			"line_2": true,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": null,
-			"line_2": true,
-			"line_3": null,
-			"line_4": null,
 			"bus": null
 		},
-		"station_name_fr": "",
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",
@@ -3437,6 +3386,15 @@
 		"station_560": 3012,
 		"connecting_stops": "",
 		"station_name": "Westboro",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": true,
+			"line_2": false,
+			"line_3": true,
+			"line_4": false,
+			"bus": true
+		},
+		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/westboro1",
@@ -3450,7 +3408,10 @@
 			"nearby_map": ""
 		},
 		"station_feature": {
-			"pnr": null
+			"pnr": null,
+			"bus_stop": true,
+			"accessible": true,
+			"airport": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -3459,21 +3420,321 @@
 			"line_3": 9,
 			"line_4": null
 		},
-		"station_type": {
-			"line_1": true,
-			"line_2": false,
-			"line_3": true,
-			"line_4": false,
-			"bus": true
-		},
 		"station_completed": {
-			"line_1": false,
+			"bus": null
+		},
+		"station_address": "",
+		"google_map_link": "",
+		"station_bsi": "",
+		"station_location": {
+			"access_point": "",
+			"address": "",
+			"google_link": "",
+			"access_point-fr": ""
+		}
+	},
+	{
+		"id": "",
+		"station_560": null,
+		"connecting_stops": "",
+		"station_name": "Stittsville",
+		"station_type": {
+			"transitway": "west",
+			"line_1": null,
 			"line_2": null,
-			"line_3": false,
+			"line_3": null,
 			"line_4": null,
 			"bus": null
 		},
 		"station_name_fr": "",
+		"station_url": {
+			"staging": "",
+			"prod": "",
+			"prod_fr": "",
+			"layout_map": "",
+			"schedules": "",
+			"hero_image": "",
+			"tour360": "",
+			"pnr": "",
+			"staging-fr": "",
+			"nearby_map": ""
+		},
+		"station_feature": {
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": false,
+			"airport": null
+		},
+		"station_extension": "",
+		"routing_index": {
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null
+		},
+		"station_completed": {
+			"bus": null
+		},
+		"station_address": "",
+		"google_map_link": "",
+		"station_bsi": "",
+		"station_location": {
+			"access_point": "",
+			"address": "",
+			"google_link": "",
+			"access_point-fr": ""
+		}
+	},
+	{
+		"id": "",
+		"station_560": null,
+		"connecting_stops": "",
+		"station_name": "Crystal Bay",
+		"station_type": {
+			"transitway": "west",
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
+		"station_url": {
+			"staging": "",
+			"prod": "",
+			"prod_fr": "",
+			"layout_map": "",
+			"schedules": "",
+			"hero_image": "",
+			"tour360": "",
+			"pnr": "",
+			"staging-fr": "",
+			"nearby_map": ""
+		},
+		"station_feature": {
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": false,
+			"airport": null
+		},
+		"station_extension": "",
+		"routing_index": {
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null
+		},
+		"station_completed": {
+			"bus": null
+		},
+		"station_address": "",
+		"google_map_link": "",
+		"station_bsi": "",
+		"station_location": {
+			"access_point": "",
+			"address": "",
+			"google_link": "",
+			"access_point-fr": ""
+		}
+	},
+	{
+		"id": "",
+		"station_560": null,
+		"connecting_stops": "",
+		"station_name": "Bells Corners",
+		"station_type": {
+			"transitway": "west",
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
+		"station_url": {
+			"staging": "",
+			"prod": "",
+			"prod_fr": "",
+			"layout_map": "",
+			"schedules": "",
+			"hero_image": "",
+			"tour360": "",
+			"pnr": "",
+			"staging-fr": "",
+			"nearby_map": ""
+		},
+		"station_feature": {
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": false,
+			"airport": null
+		},
+		"station_extension": "",
+		"routing_index": {
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null
+		},
+		"station_completed": {
+			"bus": null
+		},
+		"station_address": "",
+		"google_map_link": "",
+		"station_bsi": "",
+		"station_location": {
+			"access_point": "",
+			"address": "",
+			"google_link": "",
+			"access_point-fr": ""
+		}
+	},
+	{
+		"id": "",
+		"station_560": null,
+		"connecting_stops": "",
+		"station_name": "CitiGate",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
+		"station_url": {
+			"staging": "",
+			"prod": "",
+			"prod_fr": "",
+			"layout_map": "",
+			"schedules": "",
+			"hero_image": "",
+			"tour360": "",
+			"pnr": "",
+			"staging-fr": "",
+			"nearby_map": ""
+		},
+		"station_feature": {
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": false,
+			"airport": null
+		},
+		"station_extension": "",
+		"routing_index": {
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null
+		},
+		"station_completed": {
+			"bus": null
+		},
+		"station_address": "",
+		"google_map_link": "",
+		"station_bsi": "",
+		"station_location": {
+			"access_point": "",
+			"address": "",
+			"google_link": "",
+			"access_point-fr": ""
+		}
+	},
+	{
+		"id": "",
+		"station_560": null,
+		"connecting_stops": "",
+		"station_name": "Cambrian",
+		"station_type": {
+			"transitway": "southwest",
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
+		"station_url": {
+			"staging": "",
+			"prod": "",
+			"prod_fr": "",
+			"layout_map": "",
+			"schedules": "",
+			"hero_image": "",
+			"tour360": "",
+			"pnr": "",
+			"staging-fr": "",
+			"nearby_map": ""
+		},
+		"station_feature": {
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": false,
+			"airport": null
+		},
+		"station_extension": "",
+		"routing_index": {
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null
+		},
+		"station_completed": {
+			"bus": null
+		},
+		"station_address": "",
+		"google_map_link": "",
+		"station_bsi": "",
+		"station_location": {
+			"access_point": "",
+			"address": "",
+			"google_link": "",
+			"access_point-fr": ""
+		}
+	},
+	{
+		"id": "",
+		"station_560": null,
+		"connecting_stops": "",
+		"station_name": "Hawthorne",
+		"station_type": {
+			"transitway": "southeast",
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null,
+			"bus": null
+		},
+		"station_name_fr": "",
+		"station_url": {
+			"staging": "",
+			"prod": "",
+			"prod_fr": "",
+			"layout_map": "",
+			"schedules": "",
+			"hero_image": "",
+			"tour360": "",
+			"pnr": "",
+			"staging-fr": "",
+			"nearby_map": ""
+		},
+		"station_feature": {
+			"pnr": null,
+			"bus_stop": null,
+			"accessible": false,
+			"airport": null
+		},
+		"station_extension": "",
+		"routing_index": {
+			"line_1": null,
+			"line_2": null,
+			"line_3": null,
+			"line_4": null
+		},
+		"station_completed": {
+			"bus": null
+		},
 		"station_address": "",
 		"google_map_link": "",
 		"station_bsi": "",

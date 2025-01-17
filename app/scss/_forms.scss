@@ -30,3 +30,9 @@ select{
     max-width: 400px;
     width: 100%;
 }
+label{
+    display: flex;
+    margin-bottom: 4px;
+    align-items: center;
+    font-weight: 700;
+}

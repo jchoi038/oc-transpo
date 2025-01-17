@@ -1,36 +1,39 @@
 /****table styles ******/
 /** updated on: 2024/07/22 3:56pm**/
 // overiding styles from oc styles
-main thead td, main thead th{
+main thead td,
+main thead th {
 	box-shadow: none;
 }
 
-main tbody p{
+main tbody p {
 	font-size: inherit;
-    font-weight: 400;
+	font-weight: 400;
 }
 //alginment
-table tr td{
+table tr td {
 	align-content: start;
 }
 
 // flex tbody
 
-
-
 // Table width
 
-table{
+table {
 	width: 100%;
 	height: fit-content;
-	
-	&.width-to-fit, &.sticky-table, &.hours-table, &.fares-table{
+
+	&.width-to-fit,
+	&.sticky-table,
+	&.hours-table,
+	&.fares-table {
 		width: auto;
 	}
 
 	thead {
 		th {
-			&.readable, &.wide {
+			&.readable,
+			&.wide {
 				@include media-breakpoint-down(md) {
 					min-width: 30vw;
 				}
@@ -39,8 +42,7 @@ table{
 				}
 			}
 		}
-	}	
-
+	}
 }
 
 table {
@@ -50,13 +52,12 @@ table {
 		background: none !important;
 		box-shadow: none !important;
 	}
-	
 
 	&.small-table {
-		table tbody tr td, table tbody tr th{
+		table tbody tr td,
+		table tbody tr th {
 			padding: 0.25rem 1rem;
 		}
-		
 	}
 	&.table-border {
 		tbody {
@@ -68,98 +69,90 @@ table {
 			}
 		}
 	}
-
-	
 }
 
-//hover effect 
+//hover effect
 table tbody {
 	tr:hover {
-		td{
-			background-color: var(--charcoal--50);
+		td {
+			background-color: var(--charcoal--25);
 		}
-		th{
+		th {
 			background-color: var(--gray--100);
 		}
 	}
 }
 
-table.transcript-table, table.table__behaviour--collapse {
+table.transcript-table,
+table.table__behaviour--collapse {
 	tr:hover {
-		
 		border-radius: 0.5rem;
-		
 	}
 }
 // Table padding
 table {
-	
-	tbody tr td, tbody tr th{
+	tbody tr td,
+	tbody tr th {
 		padding: 0.3em 1em;
-	}	
+	}
 	thead tr th {
-		padding: 0.5em 1em;		
+		padding: 0.5em 1em;
 	}
 
-	&.text-heavy-table, &.extra-padding, &.sticky-table {
-		tbody tr td, tbody tr th{
+	&.text-heavy-table,
+	&.extra-padding,
+	&.sticky-table {
+		tbody tr td,
+		tbody tr th {
 			padding: 1.5em 1em;
 		}
-		thead th{
+		thead th {
 			padding: 0.5em 1em;
 			// border-right: 1px solid var(--gray--200);
 		}
 	}
-		
 
-	&.transcript-table{
-		@include media-breakpoint-down(xs){
-			tbody tr td:first-of-type{
+	&.transcript-table {
+		@include media-breakpoint-down(xs) {
+			tbody tr td:first-of-type {
 				padding-top: 1em;
 			}
-			tbody tr td:last-of-type{
+			tbody tr td:last-of-type {
 				padding-bottom: 1em;
 			}
-			tbody tr td, tbody tr th{
+			tbody tr td,
+			tbody tr th {
 				padding-left: 0.5em;
 				padding-right: 0.5em;
-
 			}
-		}	
+		}
 	}
 
-	&.table__behaviour--collapse{
-		@include media-breakpoint-down(xs){
-			tbody tr td:first-of-type{
+	&.table__behaviour--collapse {
+		@include media-breakpoint-down(xs) {
+			tbody tr td:first-of-type {
 				padding-top: 1.5rem;
 			}
-			tbody tr td:last-of-type{
+			tbody tr td:last-of-type {
 				padding-bottom: 1.5rem;
-
 			}
-			tbody tr td{
+			tbody tr td {
 				padding-left: 0.25rem;
 				padding-right: 0.25rem;
 				padding-top: 0rem;
 				padding-bottom: 1rem;
 			}
-		}	
-	}
-	
-} 
-
-
-
-
-
-
-// table alignment
-table {
-	tbody tr td, thead tr th{
-		text-align: left;
+		}
 	}
 }
 
+// table alignment
+table {
+	tbody tr td,
+	thead tr th {
+		text-align: left;
+	}
+}
 
 // table heading color
 table th {
@@ -169,28 +162,27 @@ table th {
 // table border
 
 main tbody {
-	border: none
+	border: none;
 }
 
 table {
 	border-collapse: collapse;
-	tbody tr{
+	tbody tr {
 		border-top: 1px solid var(--border-color);
 		border-bottom: 1px solid var(--border-color);
 	}
 
-	tbody tr th{
+	tbody tr th {
 		border-bottom: 1px solid var(--border-color);
 		// border-right: 1px solid var(--border-color);
 	}
-	
 }
 
-table.bordered  {
-	border:none;
+table.bordered {
+	border: none;
 	border-collapse: collapse;
 
-	thead{
+	thead {
 		border: 1px solid var(--border-color);
 	}
 
@@ -198,23 +190,24 @@ table.bordered  {
 		border: 1px solid var(--border-color);
 	}
 
-	thead.empty-corner{
+	thead.empty-corner {
 		border: none;
 		z-index: 1;
 		border-right: 1px solid var(--border-color);
 		th {
 			background-color: 1px solid var(--gray--50);
 		}
-		tr th:not(:first-of-type){
+		tr th:not(:first-of-type) {
 			border-top: 1px solid var(--border-color);
 		}
-		tr th:last-of-type, tr th:first-of-type{
+		tr th:last-of-type,
+		tr th:first-of-type {
 			border-right: 1px solid var(--border-color);
 		}
 	}
 }
 
-table.table__behaviour--collapse.bordered{
+table.table__behaviour--collapse.bordered {
 	@include media-breakpoint-down(xs) {
 		tbody {
 			border-left: none;
@@ -225,16 +218,15 @@ table.table__behaviour--collapse.bordered{
 
 // table alignment
 
-table{
-	tbody tr th{
+table {
+	tbody tr th {
 		align-content: start;
 	}
 }
 
-
 /*Reset tables styles from OC & new styles*/
 // table fonts
-table{
+table {
 	thead tr th {
 		font-weight: 700;
 		font-size: 1rem;
@@ -246,68 +238,68 @@ table{
 		color: var(--charcoal--800);
 		line-height: 1.15;
 	}
-	tbody tr td{
+	tbody tr td {
 		font-size: 1rem;
 		font-weight: 400;
 		text-align: left;
 		line-height: 150%;
 		color: var(--gray--700);
 		line-height: 1.5;
-
 	}
-	&.small-table, &.transcript-table, &.detour-table{
-		tbody tr td,tbody tr th, thead tr th{
+	&.small-table,
+	&.transcript-table,
+	&.detour-table {
+		tbody tr td,
+		tbody tr th,
+		thead tr th {
 			font-size: 0.875rem !important;
 		}
 	}
-
 }
 
 //station table
 
-#bus-boarding-info tbody{
+#bus-boarding-info tbody {
 	gap: 0;
-		max-height: 50vh;
-		display: block;
-		overflow-y: scroll;
-		border-radius: 0 0 0.5rem 0.5rem;
-	
+	max-height: 50vh;
+	display: block;
+	overflow-y: scroll;
+	border-radius: 0 0 0.5rem 0.5rem;
 }
 
-table.boarding-locations{
+table.boarding-locations {
 	border-collapse: separate;
 	border-radius: 0.5rem;
 	overflow: hidden;
 	border: 1px solid var(--border-color);
-	caption{
+	caption {
 		font-size: 1rem;
-    	font-weight: 700;
-		&.banner--nwtb{
+		font-weight: 700;
+		&.banner--nwtb {
 			padding-right: 25%;
 		}
 	}
-	tbody{
-		
-		
-		tr{
+	tbody {
+		tr {
 			border: none;
 			// border-bottom: 1px solid var(--border-color);
 			border-right: 1px solid var(--border-color);
 			display: flex;
 			align-items: center;
 		}
-		tr td{
+		tr td {
 			display: flex;
 			align-items: center;
 			height: 100%;
 		}
-		tr td:first-of-type{
+		tr td:first-of-type {
 			width: 100%;
 		}
 	}
 }
 
-table.station-table, table.stop-table{
+table.station-table,
+table.stop-table {
 	border-collapse: separate;
 	border-radius: 0.5rem;
 	overflow: hidden;
@@ -332,66 +324,65 @@ table {
 		background-color: transparent;
 	}
 
-	&.detour-table{
-		tr th, thead.blue-header th:nth-child(even){
+	&.detour-table {
+		tr th,
+		thead.blue-header th:nth-child(even) {
 			background-color: var(--line4--700);
 			color: var(--transparent--800);
 		}
 	}
 	// heading backgrounds
-	thead tr th{
+	thead tr th {
 		background-color: var(--gray--100);
 		color: var(--charcoal--800);
 		border: none;
 	}
 
-	thead.empty-corner tr th{
+	thead.empty-corner tr th {
 		background-color: white;
 	}
 
-	&.light, &.station-table, &.transcript-table, &.service-types-table{
-		tr th{
+	&.light,
+	&.station-table,
+	&.transcript-table,
+	&.service-types-table {
+		tr th {
 			background-color: var(--gray--100);
 		}
 	}
 
-	&.transparent{
-		tr th{
+	&.transparent {
+		tr th {
 			background-color: transparent;
 			color: var(--charcoal--800);
 		}
 	}
-	&.dark{
-		tr th{
+	&.dark {
+		tr th {
 			background-color: var(--charcoal--800);
 			color: var(--transparent--800);
 		}
-		
 	}
-	
-	
-	tbody tr th{
+
+	tbody tr th {
 		background-color: var(--gray--100);
-		
 	}
 	//normal cell backgrounds
-	tbody tr td, tbody tr:nth-child(odd){
+	tbody tr td,
+	tbody tr:nth-child(odd) {
 		background-color: transparent;
 	}
 }
 
 //
 
-table tbody{
+table tbody {
 	box-shadow: none;
 }
-
-
 
 .responsive-table {
 	overflow-x: auto;
 }
-
 
 .auto-width,
 .fluid,
@@ -400,8 +391,8 @@ table tbody{
 }
 // transcript table styles
 
-.transcript-table{
-	tr{
+.transcript-table {
+	tr {
 		overflow: hidden;
 	}
 }
@@ -412,16 +403,15 @@ table tbody{
 	// 	width: fit-content;
 	// 	height: fit-content;
 	// }
-	
+
 	// @include media-breakpoint-down(xs) {
-		
+
 	// 	// padding for time stamp
 	// 	td:first-of-type{
 	// 		border-radius: 0.5rem;
 	// 	}
 	// }
 }
-
 
 table {
 	caption {
@@ -438,7 +428,6 @@ table {
 		vertical-align: bottom;
 		text-align: left;
 	}
-	
 
 	tr {
 		&:nth-of-type(odd) {
@@ -456,15 +445,10 @@ table {
 	}
 
 	&.table {
-
-			
-		
-	
 		tbody tr {
 			background-color: white;
 			border-bottom: 1px solid var(--gray--100);
 			font-weight: 400;
-
 		}
 	}
 }
@@ -473,11 +457,10 @@ table {
 table {
 	// dark header
 	&.dark {
-		tr th{
+		tr th {
 			background-color: var(--charcoal--800);
 		}
 	}
-
 }
 
 /* Transcript tables & small tables*/
@@ -499,13 +482,12 @@ table {
 			content: "]";
 		}
 	}
-		@include media-breakpoint-down(xs) {
-			tr{
-				border: none;
-			}
+	@include media-breakpoint-down(xs) {
+		tr {
+			border: none;
 		}
+	}
 }
-
 
 table {
 	/* toggle on/off to make zebra*/
@@ -621,8 +603,8 @@ dl {
 		dt {
 			display: flex;
 			justify-content: center;
-			align-items:flex-start;
-				// background-color: var(--gray--50);
+			align-items: flex-start;
+			// background-color: var(--gray--50);
 		}
 	}
 }
@@ -645,16 +627,14 @@ dl {
 	}
 }
 
-
-
-
 /*autoflow table*/
-.table-container,.overflow-x-container {
+.table-container,
+.overflow-x-container {
 	@include media-breakpoint-down(md) {
 		overflow-x: scroll;
 		position: relative;
 	}
-	table{
+	table {
 		width: auto;
 	}
 }
@@ -664,7 +644,8 @@ dl {
 .transcript-table,
 .detour-table,
 .table__behaviour {
-	&--xscroll, .table-container>table {
+	&--xscroll,
+	.table-container > table {
 		@include media-breakpoint-down(md) {
 			width: auto;
 		}
@@ -684,12 +665,11 @@ table {
 	}
 }
 
-.table__behaviour--collapse,  .transcript-table {
-	
+.table__behaviour--collapse,
+.transcript-table {
 	@include media-breakpoint-down(xs) {
-
 		// padding for last element
-		
+
 		//collapse
 		tr {
 			display: flex;
@@ -700,38 +680,106 @@ table {
 
 	thead {
 		@include media-breakpoint-down(xs) {
-            position: absolute !important;
-            width: 1px !important;
-            height: 1px !important;
-            padding: 0 !important;
-            margin: -1px !important;
-            overflow: hidden !important;
-            clip: rect(0, 0, 0, 0) !important;
-            white-space: nowrap !important;
-            border: 0 !important;
-    }
+			position: absolute !important;
+			width: 1px !important;
+			height: 1px !important;
+			padding: 0 !important;
+			margin: -1px !important;
+			overflow: hidden !important;
+			clip: rect(0, 0, 0, 0) !important;
+			white-space: nowrap !important;
+			border: 0 !important;
+		}
 	}
 }
 
 // detour table icons
-table.detour-table{
+table.detour-table {
 	text-align: left !important;
 	border: 1px solid var(--border-color);
 
 	tr {
 		border: 1px solid var(--border-color);
 	}
-
 }
 
-
 //table caption
-table caption{
+table caption {
 	caption-side: top;
 	text-align: left;
 	padding-bottom: 10px;
 	font-weight: bold;
 	color: var(--charcoal--800);
 }
+
+// Hours table
+table.hours-table{
+	tbody tr:first-of-type{
+		border-top: none;
+	}
+	tbody tr:last-of-type{
+		border-bottom: none;
+	}
+	tbody tr th {
+		background-color: transparent;
+	}
+}
+.note table.hours-table{
+	tbody tr th, tbody tr td {
+		background-color: transparent;
+		font-size: 0.875rem;
+	}
+}
+
+// formatting old route table styles
+table.charHeader{
+	background-size: 60%;
+	border-collapse: separate;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+	tbody th, tbody td{
+		border: none !important;
+		padding: 0.5rem !important;
+	}
+	tbody th {
+		/* padding-top: 0.5em; */
+		text-align: center !important;
+		/* vertical-align: middle; */
+		table-layout: auto;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 56px;
+		font-weight: 600;
+		display: inline-flex;
+		vertical-align: middle;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		/* border-collapse: separate; */
+		font-size: 14px;
+	}
+	tbody tr td:last-child{
+		text-align: center;
+		align-content: center;
+		font-size: 1rem;
+		font-weight: 700;
+
+	}
+}
+
+th.rt-frequent {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/frequent_empty.png"); color:white;}
+th.rt-frequent-ltd {background-color:white; background-image:url("https://www.octranspo.com/images/files/service_type_symbols/frequent_ltd.png"); color:#ef5323;}
+th.rt-local-ltd {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/local_limited_empty.png"); color:#6E6E70;}
+th.rt-local-reg {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/local_regular_empty.png"); color:white;}
+th.rt-rapid {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/rapid_empty.png"); color:white;}
+th.rt-rapid-ltd {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/rapid_limited_empty.png"); color:#0056B8;}
+th.rt-connexion {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/connexion_empty.png"); color:white;}
+th.rt-trillium {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/trillium_empty.png"); color:white;}
+th.rt-trillium-replace  {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/trillium_replace_empty.png"); color:#76BF43;}
+th.rt-confederation-replace {background-color:white; background-image:url("http://www.octranspo.com/images/files/route_types/line1_replace_empty.png");color:#EC1B2E; }
+th.rt-confederation {background-color:white; background-image:url("https://www.octranspo.com/images/files/route_types/line1_empty.png"); color:white;}
 
 /**** end table styles ******/

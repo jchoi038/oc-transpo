@@ -8586,12 +8586,12 @@
 	},
 	{
 		"stop_560": 3043,
-		"name": "FALLOWFIELD 1A",
+		"name": "1A",
 		"routes": "70 Limebank [GRY], 73 Limebank [GRY], 74 Limebank [BLU], 75 Cambrian [BLU], 173 Barrhaven Centre [GRY], 173 Citigate [GRY], 275 Half Moon Bay [PUR], 277 Nepean Woods [PUR], 279 Manotick [PUR], 305 North Gower [GOW]"
 	},
 	{
 		"stop_560": 3043,
-		"name": "FALLOWFIELD 2A",
+		"name": "2A",
 		"routes": "70 Fallowfield [GRY], 73 Fallowfield / Tunney's Pasture [GRY], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], 173 Barrhaven Centre [GRY], 173 Citigate [GRY], 275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR], 305 Carlingwood [GOW], 406 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 456 Lansdowne [GOW]"
 	},
 	{

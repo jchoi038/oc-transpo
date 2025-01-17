@@ -1,10 +1,7 @@
-/* News cards */
-.homepage-news__featured,
-.homepage-news__recent,
-.related-news,
-* {
-	.news-card {
-		transition: all 0.1s ease-in-out;
+/* new News cards */
+
+.news-card.short.news-card.large,.news-card{
+	transition: all 0.1s ease-in-out;
 		letter-spacing: 0;
 		border: none;
 		box-shadow: $elevation1;
@@ -26,6 +23,18 @@
 			height: fit-content;
 			background-color: transparent;
 			margin-bottom: 0.5rem;
+
+			h3 {
+				color: $ui-title-color;
+				font-weight: 600;
+				flex-grow: 1;
+				line-height: 1.3em;
+				margin-bottom: 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-size: $ui-title-size-sm;
+				display: -webkit-box;
+			}
 			.read-more {
 				position: absolute;
 				margin: 2px;
@@ -49,34 +58,7 @@
 				}
 			}
 		}
-
-		.content h3 {
-			color: $ui-title-color;
-			font-size: $ui-title-size-sm;
-			font-weight: 600;
-			flex-grow: 1;
-			line-height: 1.3em;
-			margin-bottom: 0;
-			height: 4em;
-			-webkit-line-clamp: 3;
-			/* autoprefixer: off */
-			-webkit-box-orient: vertical;
-			/* autoprefixer: on */
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: -webkit-box;
-			@include media-breakpoint-down(xs) {
-				font-size: $ui-title-size-xs;
-			}
-		}
-		img {
-			max-height: 4rem;
-			border-radius: $radius-md;
-
-			@include media-breakpoint-down(xs) {
-				max-height: 3.5rem;
-			}
-		}
+		
 
 		.tags {
 			position: relative;
@@ -101,8 +83,45 @@
 				}
 			}
 		}
+}
+.news-card.short {
+	.content h3 {
+		height: 4em;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		@include media-breakpoint-down(xs) {
+			font-size: $ui-title-size-xs;
+		}
+	}
+	img {
+		max-height: 4rem;
+		border-radius: $radius-md;
+
+		@include media-breakpoint-down(xs) {
+			max-height: 3.5rem;
+		}
 	}
 }
+
+.news-card.large {
+	.content h3 {
+		height: 4em;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		@include media-breakpoint-down(xs) {
+			font-size: $ui-title-size-xs;
+		}
+	}
+	img {
+		max-height: 134px;
+		border-radius: $radius-md;
+
+		@include media-breakpoint-down(xs) {
+			max-height: 3.5rem;
+		}
+	}
+}
+
 
 /* Spotlight cards */
 
@@ -189,7 +208,7 @@
 		flex-grow: 1;
 		line-height: 1.3em;
 		margin-bottom: 0;
-		-webkit-line-clamp: 3;
+		-webkit-line-clamp: 4;
 		/* autoprefixer: off */
 		-webkit-box-orient: vertical;
 		/* autoprefixer: on */

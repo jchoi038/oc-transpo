@@ -35,6 +35,11 @@ ul.card-list, .card ul {
 	}
 }
 
+// card body{
+.card .card__body{
+	flex-grow: 1;
+}
+
 
 
 
@@ -59,7 +64,7 @@ ul.card-list li {
 	h3 {
 		color: var(--charcoal--800);
 		font-size: $ui-title-size-md;
-		font-weight: 600;
+		font-weight: 700;
 		margin-bottom: 1em;
 	}
 
@@ -69,7 +74,7 @@ ul.card-list li {
 }
 
 // card body color
-.card__body p, .card__body li{
+.card__body, .card__body p, .card__body li{
 	color: var(--caption-color);
 }
 
@@ -81,26 +86,36 @@ ul.card-list li {
 }
 
 // icon size
+.card__icons{
+	margin-bottom: 0.5rem;
+	img{
+		height: 100%;
+	}
+}
 
 .card {
-	> img:first-of-type {
+	> .card__icons {
 		height: $icon-size-md;
 		width: auto;
 		border-radius: 2px;
 		overflow: hidden;
 		align-self: flex-start;
 	}
-	&.card-size--lg > img:first-of-type {
-		height: $icon-size-xl;
-	}
-	&.card-size--sm > img:first-of-type {
+	&.card-size--lg > {
+		img:first-of-type, .card__icons {
+				height: $icon-size-xl;
+			}
+		}
+	&.card-size--sm > { 
+		img:first-of-type {
 		height: $icon-size-sm;
-	}
+			}
+		}
 }
 
 .card-size {
 	&--sm {
-		padding: 0.75rem;
+		padding: 1.125rem;
 		.card__title {
 			font-size: $ui-title-size-sm;
 		}
@@ -113,6 +128,13 @@ ul.card-list li {
 		.card__title {
 			font-size: $ui-title-size-lg;
 		}
+	}
+}
+
+// alignment
+.card.center{
+	&__title{
+		
 	}
 }
 
@@ -151,13 +173,13 @@ ul.card-list li {
 		font-weight: 600;
 	}
 }
-.card, .img-card{
+.card, .img-card, .destination-card{
 	.clickable-card-link,
-
 	.btn{
 		z-index: 1;
 	}
 	&__link {
+		z-index: 1;
 		outline-offset:-1px;
 		position: absolute;
 		top: 0;
@@ -220,6 +242,7 @@ ul.card-list li {
 		}
 		.card__body {
 			font-size: 0.9rem;
+			
 		}
 	}
 
@@ -267,6 +290,14 @@ ul.card-list li {
 			border: 0 !important;
 		}
 	}
+}
+// padding-bottom
+
+.card >:not(:last-child){
+	margin-bottom: 1rem;
+}
+.card.card-size--sm >:not(:last-child){
+	margin-bottom: 0.25rem;
 }
 
 //style
@@ -541,6 +572,7 @@ ul.card-list li {
 		vertical-align: text-bottom;
 		margin-left: auto;
 		margin-bottom: 1px;
+		margin-top: auto;
 		background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-circled.svg");
 	}
 }
@@ -549,6 +581,7 @@ ul.card-list li {
 
 .quick-link-card {
 	text-decoration: none;
+	
 	&.clean .card__title {
 		@include media-breakpoint-up(sm) {
 			&::after {
@@ -557,41 +590,66 @@ ul.card-list li {
 		}
 	}
 
+	.quick-link__icon{
+		height: 20px;
+	}
+
 	.card__title {
 		display: flex;
 		align-items: center;
 		text-decoration: none;
 		font-size: $ui-title-size-xs;
 		font-weight: 600;
-		color: var(--charcoal--800);
+		color: var(--text--light);
 		justify-content: space-between;
 		margin-bottom: 0;
 		@include media-breakpoint-up(sm) {
 			font-size: $ui-title-size-sm;
 
-			&::after {
-				// content: "";
-				width: 1.25rem;
-				height: 1.25rem;
-				display: inline-block;
-				flex-shrink: 0;
-				background-repeat: no-repeat;
-				background-position: center center;
-				margin: 0;
-				background-size: 100%;
-				vertical-align: text-bottom;
-				margin-left: 0.5rem;
-				background-image: url("https://www.octranspo.com/images/files/icons/interactive_arrow-circled.svg");
-			}
+			
 		}
+	}
+
+	
+
+	&::after {
+		content: "";
+		width: 13px;
+		height: 100%;
+		display: inline-block;
+		flex-shrink: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0;
+		background-size: 100%;
+		vertical-align: text-bottom;
+		margin-left: 0.5rem;
+		background-image: url(https://www.octranspo.com/images/files/icons/interactive_chevron-right-gray--500.svg);
+		position: absolute;
+		right: 2px;
+		top: 0;
 	}
 
 	&:hover {
 		box-shadow: $elevation2;
+		color: var(--charcoal--800);
+		&::after{
+			background-image: url(https://www.octranspo.com/images/files/icons/interactive_chevron-right-charcoal.svg);
+
+		}
+
 	}
+	
 
 	// Main icon
-
+	&.sparkle,
+&.walk,
+&.schedules,
+&.parking,
+&.map,
+&.tour-360,
+&.washroom,
+&.connection{
 	&::before {
 		content: "";
 		width: 1.25rem;
@@ -609,6 +667,8 @@ ul.card-list li {
 			height: 1.5rem;
 		}
 	}
+}
+	
 
 	&.sparkle {
 		&::before {
@@ -810,7 +870,153 @@ ul.card-list li {
 }
 
 .card.station-info-card{
-	margin: 1rem 0;
+	margin: 2rem 0 2.5rem;
 	height: fit-content;
+}
+
+// Destination card
+
+.destination-card{
+	overflow: hidden;
+	border-radius: 16px;
+	box-shadow: $elevation1;
+	transition: all 0.1s ease-in-out;
+	display: flex;
+	
+	@include media-breakpoint-up(sm) {
+		flex-direction: column;
+        }
+	
+	&:hover{
+		box-shadow: $elevation2;
+	}
+
+	&__img{
+		height: 132px;
+		aspect-ratio: 1 / 1;
+		transition: all 0.15s ease-in;
+		border-radius: 16px;
+		overflow: hidden;
+		@include media-breakpoint-up(sm) {
+			aspect-ratio: 4/3;
+			height: auto;
+		}
+	}
+	&__text-content{
+		padding: 0.75rem;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+}
+	
+	&__title{
+		font-weight: bold;
+		font-size: 0.875rem;
+		text-align: left;
+		width: 100%;
+		margin: 0;
+		line-height: 125%;
+		margin-bottom: 8px;
+		display: flex;
+		gap: 0.25em;
+
+		@include media-breakpoint-up(sm) {
+            font-size: 1rem;
+			display: block;
+        }
+		&:not(.no-leading-icon)::before{
+			content: "";
+			display: flex;
+			width: 16px;
+			height: 16px;
+			background-size: cover;
+			margin-bottom: 0.25em;
+		}
+		
+	}
+	&__detail{
+		font-size: 11px;
+		color: var(--caption-color);
+	}
+	&.pnr{
+		.destination-card__title{
+			&::before{
+				background-image:url("https://www.octranspo.com/images/files/icons/service_pnr.svg")
+			}
+		}
+	}
+	&.school{
+		.destination-card__title{
+			&::before{
+				background-image:url("https://www.octranspo.com/images/files/icons/destination_school.svg")
+			}
+		}
+	}
+	&.scenery{
+		.destination-card__title{
+			&::before{
+				background-image:url("https://www.octranspo.com/images/files/icons/destination_scenery.svg")
+			}
+		}
+	}
+	&.shopping{
+		.destination-card__title{
+			&::before{
+				background-image:url("https://www.octranspo.com/images/files/icons/destination_shopping.svg")
+			}
+		}
+	}
+	&.airport{
+		.destination-card__title{
+			&::before{
+				background-image:url("https://www.octranspo.com/images/files/icons/destination_airport.svg")
+			}
+		}
+	}
+	&.library{
+		.destination-card__title{
+			&::before{
+				background-image:url("https://www.octranspo.com/images/files/icons/destination_library.svg")
+			}
+		}
+	}
+	&__link{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+}
+
+// Video card
+.video-card{
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	border-radius: 8px;
+	// box-shadow: $elevation1;
+	gap: 1rem;
+	overflow: hidden;
+	margin-bottom: 1rem;
+	@include media-breakpoint-down(xs) {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+	.iframe-container{
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	&__text-content{
+		font-size: 0.875rem
+	};
+	&__title{
+		font-size: 1.125rem;
+		font-weight: 700;
+		color: var(--heading-color);
+	}
 }
 /* End Cards */

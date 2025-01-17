@@ -381,6 +381,21 @@
 .feature--image[data-featureID="ND"] {
 	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_ND.png");
 }
+.feature--image[data-featureID="TP-fr"] {
+	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_TP-fr.png");
+}
+
+.feature--image[data-featureID="RS-fr"] {
+	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_RS-fr.png");
+}
+
+.feature--image[data-featureID="SS-fr"] {
+	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_SS-fr.png");
+}
+
+.feature--image[data-featureID="ND-fr"] {
+	background-image: url("https://www.octranspo.com/images/files/travel_planner/help_images/mockup_ND-fr.png");
+}
 
 .features--list ul {
 	list-style: none;
@@ -496,17 +511,7 @@
 	background-image: url("https://plan.octranspo.com/plan/Content/OcTranspoCustom/images/IconNextRides.png");
 }
 
-@media (max-width: 575.98px) {
-	.mobile-hide {
-		display: none;
-	}
-}
 
-@media (min-width: 576px) {
-	.mobile-only {
-		display: none;
-	}
-}
 
 .features--list li.feature-tab-mobile {
 	border-radius: 0;

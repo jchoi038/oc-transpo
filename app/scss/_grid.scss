@@ -82,9 +82,13 @@ ul.grid--3col, ul.grid--2col{
         gap: 1rem;
         @include media-breakpoint-up(sm) {
             grid-template-columns: 1fr 1fr;
-
+            &.reverse>:nth-child(odd){
+                order: 1;
+            }
         }
+        
     }
+    // 3 cols
     &--3col, &-3-2-2-1 {
         display: grid;
         gap: 1rem ;
@@ -93,11 +97,40 @@ ul.grid--3col, ul.grid--2col{
             grid-template-columns: 1fr 1fr;
         }
     
-        @include media-breakpoint-up(xl) {
+        @include media-breakpoint-up(lg) {
             grid-template-columns: 1fr 1fr 1fr;
         }
-    
     }
+    &-3-1-1-1 {
+        display: grid;
+        gap: 1rem ;
+
+    
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    &-3-2-2-2 {
+        grid-template-columns: 1fr 1fr;
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    &-3-3-2-2 {
+        grid-template-columns: 1fr 1fr;
+    
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    &-3-3-3-2 {
+        grid-template-columns: 1fr 1fr;
+    
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
     &--4col {
         display: grid;
         gap: 1rem ;
@@ -116,11 +149,47 @@ ul.grid--3col, ul.grid--2col{
     
     }
 
+    
+    &--5col {
+        display: grid; 
+        gap: 1rem ;
+        grid-template-columns: 1fr 1fr;
+        
+
+    
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    
+    }
+    &--6col {
+        display: grid;    
+        gap: 1rem ;
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+    
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    
+    }
+
     &--8col{
+        display: grid;    
+        gap: 1rem ;
+
         margin-bottom: 0;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
         @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        @include media-breakpoint-up(lg) {
             grid-template-columns: repeat(8, 1fr);
         }
     }
@@ -210,6 +279,13 @@ ul.grid--3col, ul.grid--2col{
     gap: 0rem;
 }
 
+.gap-0_25{
+    gap: 0.25rem;
+}
+.gap-0_5{
+    gap: 0.5rem;
+}
+
 .gap-sm{
     gap: 1rem;
 }
@@ -221,3 +297,21 @@ ul.grid--3col, ul.grid--2col{
 }
 
 /*****grid styles End *****/
+
+// Override padding
+@include media-breakpoint-down(xs) {
+    .fares{
+        h1 {text-align: left;}
+        & > .container{
+            padding: 0;
+            & > .row{
+                margin-left: 0;
+                margin-right: 0;
+                & > .col-xl, .col-xl-auto, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg, .col-lg-auto, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md, .col-md-auto, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm, .col-sm-auto, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col, .col-auto, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1{
+                    padding: 0;
+                }
+            } 
+        }
+    }
+    
+}

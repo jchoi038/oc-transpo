@@ -28,13 +28,17 @@
     position: relative;
     padding: 1rem;
     margin-top: 0;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
     font-size:0.875rem;
     align-items: flex-start;
     gap: 0.5rem;
     border-radius: $radius-md;
     height: fit-content;
     display: block;
+
+    ul:last-child{
+        padding-bottom: 0;
+    }
 
     .note__text-content{
         margin-bottom: 2rem;

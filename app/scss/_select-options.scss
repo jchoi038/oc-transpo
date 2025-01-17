@@ -49,6 +49,7 @@
     border-radius: 8px;
     padding: 1rem;
     gap: 0.25rem;
+    height: fit-content;
     p{
         margin: 0;
     }
@@ -135,12 +136,9 @@
 }
 
 .select-option-content {
-    /* padding: 1.5rem 2rem; */
     background-color: #fff;
-    /* border: #e9eaed solid 1px; */
-    /* box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.17); */
-    /* border-radius: 10px; */
-    margin-bottom: 7rem;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.17);
+    border-radius: 0.5rem;
 }
 
 .select-option-content--heading {

@@ -81,11 +81,11 @@ ul.toc__items {
         
         &:hover{
             text-decoration:underline;
-                background-color: var(--line4--50);
+                background-color: var(--line1--50);
                 border-radius: 0 !important;
             @include media-breakpoint-up(xl){
                 text-decoration:underline;
-                background-color: var(--line4--50);
+                background-color: var(--line1--50);
                 border-radius: 0 !important;
             }
             
@@ -93,9 +93,9 @@ ul.toc__items {
         &.active{
             @include media-breakpoint-up(xl){
                 font-weight: 700;
-                color: var(--line4--600);
-                background-color: var(--line4--50);
-                border-left: 2px solid var(--line4--600)
+                color: var(--line1--600);
+                background-color: var(--line1--50);
+                border-left: 2px solid var(--line1--600)
             }
             &:hover{
                 text-decoration: none;

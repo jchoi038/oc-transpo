@@ -53,7 +53,7 @@
 	&__title {
 		font-size: $ui-title-size-md;
 		color: var(--charcoal--800);
-		font-weight: $ui-title-font-weight;
+		font-weight: 700;
 		line-height: 1.15;
 		margin-bottom: 1em;
 		@include media-breakpoint-down(xs) {
@@ -93,16 +93,16 @@
 	transition: background-color 0.1s ease-in-out;
 }
 
-.banner:not(.prevent-default) .btn {
-	@include media-breakpoint-down(xs) {
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-}
+// .banner:not(.page-section):not(.prevent-default){
+// 	@include media-breakpoint-down(xs) {
+// 		opacity: 0;
+// 		position: relative;
+// 		top: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+// }
 
 .banner {
 	@include media-breakpoint-down(xs) {
@@ -152,6 +152,8 @@
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
+
+
 
 .banner::before,
 .station-banner::before {
@@ -220,13 +222,31 @@
 }
 
 //station banner breakpoints
-.quick-facts::before,
+.page-section::before,
 .banner.stretch::before,
 .banner.fullwidth::before,
 .station-banner::before {
 	//mobile sizes
 	margin-left: calc(-15px - 27.5px);
 	width: 100vw;
+}
+
+// page-section mobile behvaiour
+.page-section ul.mobile-y-scroll{
+	@include media-breakpoint-down(xs) {
+			@include media-breakpoint-down(xs) {
+				max-height: 54vh;
+				overflow-y: scroll;
+				li{
+					box-shadow: $card-shadow;
+				}
+	}
+	}
+}
+
+//background divider
+.page-section .bg.o{
+	
 }
 
 .hero-banner img {
@@ -236,7 +256,7 @@
 }
 
 .station-banner,
-.quick-facts {
+.page-section {
 	@include media-breakpoint-down(sm) {
 		
 		span.rt {
@@ -304,6 +324,10 @@
 		flex-grow: 1;
 	}
 
+	span.station-name{
+		margin-right: auto;
+	}
+
 	.rt{
 		margin-right: 0;
 	}
@@ -332,7 +356,7 @@
 	min-width: 100vw !important;
 }
 
-.quick-facts::before,
+.page-section::before,
 .banner.stretch::before,
 .banner.fullwidth::before{
 	width: calc(100vw - 2px) !important;
@@ -342,7 +366,7 @@
 
 
 .hero-banner img,
-.quick-facts::before,
+.page-section::before,
 .banner.stretch::before,
 .banner.fullwidth::before {
 
@@ -383,7 +407,7 @@
 
 .station-banner,
 .hero-banner,
-.quick-facts,
+.page-section,
 .banner.stretch,
 .banner.fullwidth {
 	@include media-breakpoint-up(sm) {
@@ -398,7 +422,7 @@
 
 	
 .station-banner::before,
-.quick-facts::before,
+.page-section::before,
 .banner.stretch::before,
 .banner.fullwidth::before {
 	@include media-breakpoint-up(sm) {
@@ -423,7 +447,7 @@
 
 .station-banner::before,
 .hero-banner img,
-.quick-facts::before,
+.page-section::before,
 .banner.stretch::before,
 .banner.fullwidth::before {
 	@include media-breakpoint-up(sm) {
@@ -513,6 +537,7 @@
 		background-position-x: 80%;
 		background-position-y: 50%;
 		background-color: var(--nwtb--800);
+		min-height: fit-content;
 		&::before {
 		}
 		@include media-breakpoint-up(sm) {
@@ -583,47 +608,191 @@
 	&--key-to-icons.dark {
 		background-image: url("https://www.octranspo.com/images/files/banners/banner_key-to-icons_dark.svg");
 	}
+
+	// &--line2-4.stretch,
+	// &--line1.stretch,
+	// &--line1-3.stretch {
+	// 	background-position: bottom -9rem right 0px;
+	// }
 }
 
 // section banners
 
-.quick-facts.banner {
+.page-section.banner {
+	padding-top: 5rem;
+	padding-bottom: 3rem;
+	&.reduced-padding{
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+	}
 	box-shadow: none;
 	display: block;
+	@include media-breakpoint-down(xs) {
+		padding-top: 2rem;
+	padding-bottom: 2rem;
+	}
+
+	hgroup{
+		margin-bottom: 3em;
+	}
+
+	&.image-divider{
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.grid--2col{
+			gap: 2rem;
+		}
+	}
+
+	.image-divider--content{
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	h2{
+		font-size: 2.5rem;
+	}
+	em{
+		font-size: larger;
+		font-weight: 700;
+		font-style: normal;
+		color: var(--charcoal--800);
+	}
 	&::before {
 		box-shadow: none;
 	}
-	background-color: var(--line4--50);
-	ul {
+	background-color: transparent;
+	ul:not(.no-cards) {
 		margin: 0;
 		list-style-type: none;
-		display: flex;
 		gap: 0.5rem;
 		width: 100%;
-		overflow-x: scroll;
-		padding: 2rem 0;
+		padding: 2rem 0.325rem;
 	}
-	ul > li {
+	ul:not(.no-cards) > li {
 		flex: 0 0 240px;
 		border-radius: 0.5rem;
 		background-color: var(--transparent--800);
 		padding: 1rem;
 		line-height: 1.5em;
+		color: var(--caption-color);
 	}
+	// o-logo graphic
+	&.o{
+		background-repeat: no-repeat;
+		background-position-y: -16rem;
+		background-position-x: -16rem;
+		min-height: 26rem;
+		align-content: center;
+	}
+	&.line1.o{
+		background-image: url("https://www.octranspo.com/images/files/graphics/o-line1.svg");
+	}
+	&.line2.o{
+		background-image: url("https://www.octranspo.com/images/files/graphics/o-line2.svg");
+	}
+	&.line3.o{
+		background-image: url("https://www.octranspo.com/images/files/graphics/o-line3.svg");
+	}
+	&.line4.o{
+		background-image: url("https://www.octranspo.com/images/files/graphics/o-line4.svg");
+	}
+	&.connexion.o{
+		background-image: url("https://www.octranspo.com/images/files/graphics/o-connexion.svg");
+	}
+	&.frequent.o{
+		background-image: url("https://www.octranspo.com/images/files/graphics/o-frequent.svg");
+	}
+	&.local.o{
+		background-image: url("https://www.octranspo.com/images/files/graphics/o-local.svg");
+	}
+	// other graphic
+
+	&.transecure, &.accessibility, &.fares, &.cycle, &.transit{
+		background-repeat: no-repeat;
+		min-height: 26rem;
+		align-content: center;
+		background-position-y: 1rem;
+		background-position-x: calc(100% - 1rem);
+		padding-top: 7rem;
+	}
+	&.transecure{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-transecure.svg"); }
+	&.accessibility{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-accessibility.svg"); }
+	&.fares{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-fares.svg"); }
+	&.cycle{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-cycle.svg"); }
+	&.transit{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-transit-red.svg"); }
+	&.transit.line2{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-transit-green.svg"); }
+	&.transit.line3{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-transit-gold.svg"); }
+	&.transit.line4{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-transit-blue.svg"); }
+	&.transit.frequent{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-transit-frequent-blue.svg"); }
+	&.transit.connexion{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-transit-connexion.svg"); }
+	&.transit.local{ background-image: url("https://www.octranspo.com/images/files/graphics/banner-transit-local.svg"); }
+
+	// solid graphics
+	&.ride-w-kids{
+		background-size: 20rem;
+		background-repeat: no-repeat;
+		background-position-y: 1rem;
+		background-position-x: calc(100% - 1rem);
+		padding-top: 7rem;
+	}
+	&.ride-w-kids{ background-image: url("https://www.octranspo.com/uploads/news/child-card.png"); }
+
 	
+	// basic color
 	&.line1{
 		background-color: var(--line1--50);
+		h2 {
+			color: var(--charcoal--800);
+		}
 	}
-	
-	&.line2{
+	&.line2, &.fares{
 		background-color: var(--line2--50);
+		h2 {
+			color: var(--line2--800);
+		}
 	}
-	
-	&.line3{
+	&.line3, &.transecure{
 		background-color: var(--line3--50);
+		h2 {
+			color: var(--line3--800);
+		}
 	}
 	&.line4{
 		background-color: var(--line4--50);
+		h2 {
+			color: var(--line4--800);
+		}
+	}
+	&.connexion, &.cycle{
+		background-color: var(--connexion--50);
+		h2 {
+			color: var(--connexion--800);
+		}
+	}
+	&.frequent, &.accessibility{
+		background-color: var(--frequent--50);
+		h2 {
+			color: var(--frequent--800);
+		};
+	}
+	&.local{
+		background-color: var(--gray--50);
+		h2 {
+			color: var(--local--800);
+		}
+	}
+	&.charcoal{
+		background-color: var(--charcoal--800);
+		h2{
+			color: white;
+		}
+	}
+	&.nwtb{
+		background-color: var(--nwtb--800);
+		h2{
+			color: white;
+		}
 	}
 }
 
@@ -635,7 +804,7 @@
 	padding-bottom: 2rem;
 	display: flex;
 	margin-bottom: 1rem;
-	min-height: 480px;
+	min-height: 600px;
 	align-items: center;
 	@include media-breakpoint-up(sm) {
 		

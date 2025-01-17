@@ -1,0 +1,33 @@
+// https://medium.com/@alvaro.saburido/applying-color-trends-in-sass-cf825d70f5fe
+/*color start*/
+$backgrounds: () !default;
+$backgrounds: map-merge((
+  line1-50:  var(--line1--50),
+  line2-50:  var(--line2--50),
+  line3-50: var(--line3--50),
+  line4-50: var(--line4--50),
+  frequent-50:  var(--frequent--50),
+  connexion-50:  var(--connexion--50),
+  local-50: var(--local--100),
+  line1-100:  var(--line1--100),
+  line2-100:  var(--line2--100),
+  line3-100: var(--line3--100),
+  line4-100: var(--line4--100),
+  frequent-100:  var(--frequent--100),
+  connexion-100:  var(--connexion--100),
+  local-100: var(--local--100)
+
+), $backgrounds);
+
+@mixin bg-color($parent, $color) {
+    #{$parent} {
+        background-color: $color !important;
+    }
+  }
+
+// color Classes 
+@each $color, $value in $backgrounds {
+    @include bg-color(".bg-#{$color}", $value);
+  }
+
+/*color End*/

@@ -1,0 +1,37 @@
+.asset-download{
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-right: 16px;
+    max-width: 400px;
+    margin-bottom: 0.5rem;
+    &--img-container{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 72px;
+        height: 72px;
+    }
+    &--label{
+        padding: 10px;
+        flex-grow: 1;
+
+    }
+    &::after{
+        content: "";
+		display: block;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 1.25rem;
+		min-width: 1.25rem;
+		height: 1.25rem;
+        background-image: url("https://www.octranspo.com/images/files/icons/resource_download.svg");
+    }
+    &:hover{
+        // border: 1px solid var(--link);
+    }
+}

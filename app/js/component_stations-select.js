@@ -1,7 +1,10 @@
 const lang = checkPageLanguage(window.location.href);
+
+// Initialize variables for station listing components
 const selectOptions = document.getElementsByTagName("select");
 const searchInputs = document.getElementsByTagName("input");
 const selects = document.getElementsByTagName("select");
+const lineRoutings_all = document.querySelectorAll(".line-routing");
 
 function checkPageLanguage(currentUrl) {
 	if (currentUrl.indexOf("/fr/") == -1) {
@@ -11,7 +14,9 @@ function checkPageLanguage(currentUrl) {
 	}
 }
 
-/******** Part ##: auto generating list of stations */
+
+
+/******** Part Station listing compoentns: auto generating list of stations */
 // Helper function to create line icon elements
 const createLineIcon = (lineNumber, lang) => {
 	const line = document.createElement("span");
@@ -38,10 +43,13 @@ const createIconElement = (iconName, altText) => {
 // Train and bus icons
 const trainIcon = createIconElement("transport_train", "O-Train station");
 const busIcon = createIconElement("transport_bus", "Transitway station");
-const pnrIcon = createIconElement("service_pnr-grey.svg", "Park & Ride available");
+const pnrIcon = createIconElement(
+	"service_pnr-grey.svg",
+	"Park & Ride available"
+);
 
 // Append section headers with icons and titles
-const appendSectionHeader = (hLevel, sectionId, title, icon, icon2) => {
+const appendStnListTitle = (hLevel, sectionId, title, icon, icon2) => {
 	const section = document.getElementById(sectionId);
 	if (section) {
 		const header = document.createElement(hLevel);
@@ -51,7 +59,9 @@ const appendSectionHeader = (hLevel, sectionId, title, icon, icon2) => {
 		header.appendChild(icon);
 		icon2 ? header.appendChild(icon2) : "";
 		if (section.getAttribute("data_display_mode") == "routing") {
-			lang == "en" ? title = title.replace("stations", "routing") : title = title.replace("Stations", "Itinéraire") 
+			lang == "en"
+				? (title = title.replace("stations", "routing"))
+				: (title = title.replace("Stations", "Itinéraire"));
 		}
 		header.append(`${title}`);
 		section.prepend(header);
@@ -59,59 +69,65 @@ const appendSectionHeader = (hLevel, sectionId, title, icon, icon2) => {
 };
 
 // Add section headers with line icons instead of numbers
-appendSectionHeader(
+appendStnListTitle(
 	"h3",
 	"line1Stns",
 	lang == "en" ? "Line 1 stations" : "Stations de la Ligne 1 :",
 	trainIcon.cloneNode(true),
 	createLineIcon(1, lang)
 );
-appendSectionHeader(
+appendStnListTitle(
 	"h3",
 	"line1Stns_east",
-	lang == "en" ? "Line 1 East extension stations" : "Stations de l’Extension de la Ligne 1 Est",
+	lang == "en"
+		? "Line 1 East extension stations"
+		: "Stations de l’Extension de la Ligne 1 Est",
 	trainIcon.cloneNode(true),
 	createLineIcon(1, lang)
 );
-appendSectionHeader(
+appendStnListTitle(
 	"h3",
 	"line1Stns_west",
-	lang == "en" ? "Line 1 West extension stations" : "Stations de l’Extension de la Ligne 1 Ouest",
+	lang == "en"
+		? "Line 1 West extension stations"
+		: "Stations de l’Extension de la Ligne 1 Ouest",
 	trainIcon.cloneNode(true),
 	createLineIcon(1, lang)
 );
-appendSectionHeader(
+appendStnListTitle(
 	"h3",
 	"line2Stns",
 	lang == "en" ? "Line 2 stations" : "Stations de la Ligne 2",
 	trainIcon.cloneNode(true),
 	createLineIcon(2, lang)
 );
-appendSectionHeader(
+appendStnListTitle(
 	"h3",
 	"line3Stns",
 	lang == "en" ? "Future Line 3 stations" : "Stations future de la Ligne 3",
 	trainIcon.cloneNode(true),
 	createLineIcon(3, lang)
 );
-appendSectionHeader(
+appendStnListTitle(
 	"h3",
 	"line3Stns_west",
-	lang == "en" ? "Line 3 extension stations" : "Stations de l’Extension de la Ligne 3",
+	lang == "en"
+		? "Line 3 extension stations"
+		: "Stations de l’Extension de la Ligne 3",
 	trainIcon.cloneNode(true),
 	createLineIcon(3, lang)
 );
-appendSectionHeader(
+appendStnListTitle(
 	"h3",
 	"line4Stns",
 	lang == "en" ? "Line 4 stations" : "Stations de la Ligne 4",
 	trainIcon.cloneNode(true),
 	createLineIcon(4, lang)
 );
-appendSectionHeader(
+appendStnListTitle(
 	"h3",
 	"busStns",
-	lang == "en" ? "Transit Stations" : "Stations d'autobus" ,
+	lang == "en" ? "Transit Stations" : "Stations d'autobus",
 	busIcon.cloneNode(true),
 	""
 );
@@ -122,28 +138,34 @@ fetch("/data/stations.json")
 	.then((stations) => {
 		// part 1 populate the stations in their respective sections
 		populateStationSections(stations);
-		let ALLlineRoutings = document.querySelectorAll(".line-routing")
 
-		for (lineRouting of ALLlineRoutings){
-			sortStationsByRoutingIndex(lineRouting)
-		}
-
-		for (inputElement of searchInputs) {
-			if (inputElement.hasAttribute("data-station-type")) {
-				populateStationInput(
-					inputElement,
-					stations,
-					inputElement.getAttribute("data-station-type")
-				);
+		if (lineRoutings_all) {
+			for (lineRouting of lineRoutings_all) {
+				sortStationsByRoutingIndex(lineRouting);
 			}
 		}
-		for (selectEl of selects) {
-			if (selectEl.hasAttribute("data-station-type")) {
-				populateStationSelect(
-					selectEl,
-					stations,
-					selectEl.getAttribute("data-station-type")
-				);
+
+		if (searchInputs) {
+			for (inputElement of searchInputs) {
+				if (inputElement.hasAttribute("data-station-type")) {
+					populateStationInput(
+						inputElement,
+						stations,
+						inputElement.getAttribute("data-station-type")
+					);
+				}
+			}
+		}
+
+		if (selects) {
+			for (selectEl of selects) {
+				if (selectEl.hasAttribute("data-station-type")) {
+					populateStationSelect(
+						selectEl,
+						stations,
+						selectEl.getAttribute("data-station-type")
+					);
+				}
 			}
 		}
 
@@ -179,7 +201,7 @@ function populateStationSections(stations) {
 		// Check if the station belongs to Line 3
 		if (station.station_type.line_3 == true) {
 			addStationsToSection("line3Stns", station);
-		} 
+		}
 		// else if (station.station_completed.line_3 == false) {
 		// 	addStationsToSection("future_line3Stns", station);
 		// }
@@ -209,13 +231,17 @@ function addStationsToSection(sectionId, station) {
 			// Create a new div element to represent the station
 			const stationA = document.createElement("a");
 			stationA.className = "select-option";
-			lang == "en" ? stationA.href = station.station_url.prod : stationA.href = station.station_url.prod_fr 
-			
-			let stationName = ""
-			if (lang == "fr"){
-				station.station_name_fr ? stationName = station.station_name_fr : stationName = station.station_name
+			lang == "en"
+				? (stationA.href = station.station_url.prod)
+				: (stationA.href = station.station_url.prod_fr);
+
+			let stationName = "";
+			if (lang == "fr") {
+				station.station_name_fr
+					? (stationName = station.station_name_fr)
+					: (stationName = station.station_name);
 			} else {
-				stationName = station.station_name
+				stationName = station.station_name;
 			}
 			// Populate the div with the station's information and icons
 			stationA.innerHTML = `
@@ -241,12 +267,20 @@ function addStationsToSection(sectionId, station) {
 			li.appendChild(stationA);
 
 			stationA.className = "station_li";
-			lang == "en" ? stationA.href = station.station_url.prod : stationA.href = station.station_url.prod_fr 
+			lang == "en"
+				? (stationA.href = station.station_url.prod)
+				: (stationA.href = station.station_url.prod_fr);
 
 			// Populate the div with the station's information and icons
 			stationA.innerHTML = `
 					<p class="station-name">
-						${lang == "fr" ? station.station_name_fr ? station.station_name_fr : station.station_name : station.station_name}
+						${
+							lang == "fr"
+								? station.station_name_fr
+									? station.station_name_fr
+									: station.station_name
+								: station.station_name
+						}
 					</p>
 				`;
 			// Check station features (train connections, pnr, accessible... etc)
@@ -281,9 +315,8 @@ function sortStationsByRoutingIndex(ul) {
 		// Parse as numbers to ensure proper numerical sorting
 		const indexA = parseFloat(a.getAttribute("data-routing-index"));
 		const indexB = parseFloat(b.getAttribute("data-routing-index"));
-		return  indexA - indexB; // Sort in ascending order
+		return indexA - indexB; // Sort in ascending order
 	});
-
 
 	// Remove the existing <li> elements
 	ul.innerHTML = "";
@@ -323,7 +356,9 @@ function checkStationFeatures(station, lang) {
 		lineIcons.push(createIconElement("transport_bus", "Transitway station"));
 	}
 	if (station.station_feature.pnr) {
-		lineIcons.push(createIconElement("service_pnr-grey", "Park & Ride station"));
+		lineIcons.push(
+			createIconElement("service_pnr-grey", "Park & Ride station")
+		);
 	}
 	return lineIcons;
 }
@@ -350,13 +385,12 @@ if (parentPage.includes("stations")) {
 }
 
 function handleStationSearchForm() {
-
 	const options = document.querySelectorAll("#all-stations option");
 
 	document
 		.getElementById("stationSearchForm")
-		.addEventListener('submit', function (event) {
-			console.log("form submitted")
+		.addEventListener("submit", function (event) {
+			console.log("form submitted");
 			event.stopPropagation(); // Stop propagation after showing the alert
 			event.preventDefault(); // Stop propagation after showing the alert
 		});
@@ -365,7 +399,7 @@ function handleStationSearchForm() {
 		.getElementById("stations-select-all")
 		.addEventListener("change", function (event) {
 			console.log("change detected");
-			
+
 			const inputValue = event.target.value;
 			const options = document.querySelectorAll("#all-stations option");
 			let found = false;
@@ -401,7 +435,7 @@ function populateStationInput(input, stations, stationType) {
 			// Create an option element
 			const option = document.createElement("option");
 			// Set the value attribute to the station_url.prod
-			
+
 			option.value = station.station_name;
 			option.setAttribute("data-url", station.station_url.prod);
 			// Set the text content to the station_name
@@ -409,17 +443,16 @@ function populateStationInput(input, stations, stationType) {
 			datalist.appendChild(option);
 		});
 	}
-	
+
 	if (stationType == "line1") {
 		datalist.id = "all-stations";
 		label.textContent = "Search for a Line 1 station";
 		label.setAttribute("for", input.id);
 		input.insertAdjacentElement("beforebegin", label);
-		input.placeholder = "Start typing for a station..."
+		input.placeholder = "Start typing for a station...";
 		// Loop through each station in the provided array
 		stations.forEach((station) => {
-
-			if (station.station_type.line_1 == true){
+			if (station.station_type.line_1 == true) {
 				// Create an option element
 				const option = document.createElement("option");
 				// Set the value attribute to the station_url.prod
@@ -437,11 +470,10 @@ function populateStationInput(input, stations, stationType) {
 		label.textContent = "Search for a Line 2 station";
 		label.setAttribute("for", input.id);
 		input.insertAdjacentElement("beforebegin", label);
-		input.placeholder = "Start typing for a station..."
+		input.placeholder = "Start typing for a station...";
 		// Loop through each station in the provided array
 		stations.forEach((station) => {
-
-			if (station.station_type.line_2 == true){
+			if (station.station_type.line_2 == true) {
 				// Create an option element
 				const option = document.createElement("option");
 				// Set the value attribute to the station_url.prod
@@ -458,11 +490,10 @@ function populateStationInput(input, stations, stationType) {
 		label.textContent = "Search for a Line 3 station";
 		label.setAttribute("for", input.id);
 		input.insertAdjacentElement("beforebegin", label);
-		input.placeholder = "Start typing for a station..."
+		input.placeholder = "Start typing for a station...";
 		// Loop through each station in the provided array
 		stations.forEach((station) => {
-
-			if (station.station_type.line_3 == true){
+			if (station.station_type.line_3 == true) {
 				// Create an option element
 				const option = document.createElement("option");
 				// Set the value attribute to the station_url.prod
@@ -479,11 +510,10 @@ function populateStationInput(input, stations, stationType) {
 		label.textContent = "Search for a Line 4 station";
 		label.setAttribute("for", input.id);
 		input.insertAdjacentElement("beforebegin", label);
-		input.placeholder = "Start typing for a station..."
+		input.placeholder = "Start typing for a station...";
 		// Loop through each station in the provided array
 		stations.forEach((station) => {
-
-			if (station.station_type.line_4 == true){
+			if (station.station_type.line_4 == true) {
 				// Create an option element
 				const option = document.createElement("option");
 				// Set the value attribute to the station_url.prod
@@ -496,7 +526,6 @@ function populateStationInput(input, stations, stationType) {
 		});
 	}
 
-
 	handleStationSearchForm();
 }
 
@@ -505,24 +534,39 @@ function populateStationSelect(select, stations, stationType) {
 	const label = document.createElement("label");
 	// create default option
 
-	if(stationType == "all"){
-		label.textContent = lang == "en" ? "All stations" : "Toutes les stations :" ;
-	} 
-	if(stationType == "line1"){
-		label.textContent = lang == "en" ? "All Line 1 stations" : "Toutes les stations de la Ligne 1 :" ;
-	} 
-	if(stationType == "line2"){
-		label.textContent = lang == "en" ? "All Line 2 stations" : "Toutes les stations de la Ligne 2 :" ;
-	} 
-	if(stationType == "line3"){
-		label.textContent = lang == "en" ? "All Line 3 stations" : "Toutes les stations de la Ligne 3 :" ;
-	} 
-	if(stationType == "line4"){
-		label.textContent = lang == "en" ? "All Line 4 stations" : "Toutes les stations de la Ligne 4 :" ;
-	} 
-	if(stationType == "bus"){
-		label.textContent = lang == "en" ? "All bus stations" : "Sélectionner une station d'autobus :" ;
-	} 
+	if (stationType == "all") {
+		label.textContent = lang == "en" ? "All stations" : "Toutes les stations :";
+	}
+	if (stationType == "line1") {
+		label.textContent =
+			lang == "en"
+				? "All Line 1 stations"
+				: "Toutes les stations de la Ligne 1 :";
+	}
+	if (stationType == "line2") {
+		label.textContent =
+			lang == "en"
+				? "All Line 2 stations"
+				: "Toutes les stations de la Ligne 2 :";
+	}
+	if (stationType == "line3") {
+		label.textContent =
+			lang == "en"
+				? "All Line 3 stations"
+				: "Toutes les stations de la Ligne 3 :";
+	}
+	if (stationType == "line4") {
+		label.textContent =
+			lang == "en"
+				? "All Line 4 stations"
+				: "Toutes les stations de la Ligne 4 :";
+	}
+	if (stationType == "bus") {
+		label.textContent =
+			lang == "en"
+				? "All bus stations"
+				: "Sélectionner une station d'autobus :";
+	}
 
 	label.setAttribute("for", select.id);
 	select.insertAdjacentElement("beforebegin", label);
@@ -533,31 +577,33 @@ function populateStationSelect(select, stations, stationType) {
 		// Set the value attribute to the station_url.prod
 		option.value = station.station_url.prod;
 
-		if (lang == "en"){
-			option.textContent = station.station_name
-		} if (lang == "fr"){
-			station.station_name_fr ? option.textContent = station.station_name_fr : option.textContent = station.station_name
-
+		if (lang == "en") {
+			option.textContent = station.station_name;
+		}
+		if (lang == "fr") {
+			station.station_name_fr
+				? (option.textContent = station.station_name_fr)
+				: (option.textContent = station.station_name);
 		}
 		// Set the text content to the station_name
 		// Append the option to the select element
 
-		if(stationType == "all"){
+		if (stationType == "all") {
 			select.appendChild(option);
 		}
-		if(stationType == "line1"){
+		if (stationType == "line1") {
 			station.station_type.line_1 == true ? select.appendChild(option) : "";
 		}
-		if(stationType == "line2"){
+		if (stationType == "line2") {
 			station.station_type.line_2 == true ? select.appendChild(option) : "";
 		}
-		if(stationType == "line3"){
+		if (stationType == "line3") {
 			station.station_type.line_3 == true ? select.appendChild(option) : "";
 		}
-		if(stationType == "line4"){
+		if (stationType == "line4") {
 			station.station_type.line_4 == true ? select.appendChild(option) : "";
 		}
-		if(stationType == "bus"){
+		if (stationType == "bus") {
 			station.station_type.bus == true ? select.appendChild(option) : "";
 		}
 	});

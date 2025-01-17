@@ -1,5 +1,14 @@
 /*Util start*/
+// overflow x-scroll
 
+.x-scroll {
+    &.banner ul {
+		display: flex;
+		width: 100%;
+		overflow-x: scroll;
+		padding: 2rem 0;
+	}
+}
 // backgrounds
 
 .bg--{
@@ -8,7 +17,7 @@
 	}
     &transparent,&transparent .card{
 		background-color: var(--transparent--800);
-		color: var(--transparent--7000);
+		color: var(--transparent--700);
 	}
 	&line1,&line1 .card{ background-color: var(--line1--50);}
 	&line2,&line2 .card{ background-color: var(--line2--50);}
@@ -34,8 +43,20 @@ section.divided{
 	// border-radius: 0.5rem;
 }
 
-.borderless,.no-border{
+.btn.no-arrow{
+    &::after{
+        display: none !important;
+        width: 0 !important;
+        min-width: 0 !important;
+        height: 0 !important;
+    }
+    padding: 0.5rem 0.75rem !important;
+}
+
+
+.borderless,.no-border, .borderless:hover,.no-border:hover{
     border:none !important;
+
 }
 
 .border-bottom {
@@ -87,12 +108,7 @@ section.divided{
     font-size: 0.875rem;
 }
 
-.gap-1{
-    gap: 1rem;
-}
-.gap-2{
-    gap: 2rem;
-}
+
 
 .p-0{
     padding: 0rem;
@@ -205,17 +221,17 @@ section.divided{
 }
 
 .hidden,
-			.mobile-only {
-				display: none;
-				opacity: 0;
-			}
+			// .mobile-only {
+			// 	display: none;
+			// 	opacity: 0;
+			// }
 
-			@media (max-width: 575.98px) {
-				.mobile-only {
-					display: block;
-					opacity: 100%;
-				}
-			}
+			// @media (max-width: 575.98px) {
+			// 	.mobile-only {
+			// 		display: block;
+			// 		opacity: 100%;
+			// 	}
+			// }
 
 // alignment
 .align {
@@ -244,10 +260,19 @@ section.divided{
     row-gap: 0.5rem;
 }
 
-.gap-1 {
+
+.gap-0{
+    gap: 0rem;
+}
+.gap-0_25em{
+    gap: 0.25em;
+}
+.gap-1{
     gap: 1rem;
 }
-
+.gap-2{
+    gap: 2rem;
+}
 .flex-jc-c {
     justify-content: center;
 }
@@ -263,7 +288,61 @@ section.divided{
 // NWTB launch
 
 .nwtb-launch{
-    opacity: 0%;
+    display: none;
 }
+
+.no-padding{
+    padding: 0;
+}
+
+// Fare change 2025
+
+.fares2024{
+    display: none !important;
+
+}
+.fares2025{
+    
+}
+
+// hr
+
+hr{
+    border-top:1px solid var(--charcoal--100)
+}
+
+// toc
+.toc{
+    .hide-from-toc{
+        visibility: hidden;
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+    }
+}
+// mobile only
+
+@media (max-width: 992px) {
+	.mobile-hide {
+		display: none;
+	}
+}
+
+// box-shadow{
+.elevation1{
+    box-shadow: $elevation1;
+}
+
+// radius
+.rounded-corners{
+    border-radius: 8px;
+}
+
 
 /*end Util*/

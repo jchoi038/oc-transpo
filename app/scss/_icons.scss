@@ -11,6 +11,7 @@
 }
 
 .xs-icon{
+    border-radius: 2px;
     height: 1.25rem;
     max-height: 1.25rem;
         @include media-breakpoint-down(sm) {
@@ -19,27 +20,21 @@
         }
 }
 .sm-icon{
+    border-radius: 2px;
     height: 1.75rem;
-    max-height: 1.75rem;
-        @include media-breakpoint-down(sm) {
-            height: 1.25rem;
-            max-height: 1.25rem;
-        }
 }
 
 .md-icon{
+    border-radius: 4px;
     height: 2.25rem;
-    @include media-breakpoint-down(sm) {
-        height: 1.25rem;
-        max-height: 1.25rem;
-    }
 }
 
 .lg-icon{
-    height: 3rem;
-    @include media-breakpoint-down(sm) {
-        height: 1.25rem;
-        max-height: 1.25rem;
-    }
+    border-radius: 6px;
+    height: 4rem;
+}
+.xl-icon{
+    border-radius: 6px;
+    height: 6rem;
 }
 /*END icon styles*/

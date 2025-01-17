@@ -106,15 +106,24 @@
 					}
 				}
 
+		// active accordion
+		.new.accordion.active+.accordion-content{
+			z-index: 1;
+		}
+		.new.accordion:not(.active)+.accordion-content{
+			z-index: -1;
+		}
+
 		// accordion content styles
 		
 		.new+.accordion-content{
+			
 			margin: 0;
 			height: 0px;
-			overflow-y: hidden;
+			// overflow-y: hidden;
 			opacity: 0;
 			transition: all 200ms ease-out;
-			background-color: var(--gray--50);
+			background-color: transparent;
 		}
 
 		.accordion.new{
@@ -143,8 +152,8 @@
 			//chevron icon styling
 			&::after{
 				content: "";
-				width: 1.125rem;
-				height: 1.125rem;
+				width: 19px;
+				height: 19px;
 				display: flex; 
 				flex-shrink: 0;
 				justify-content: center;
@@ -344,6 +353,10 @@
 		
 		.new.accordion__size{
 			
+			&--xs{
+				font-size: 0.875rem;
+				font-weight: 400;
+			}
 			&--sm{
 				font-size: $ui-title-size-sm;
 				font-weight: 700;
@@ -386,6 +399,7 @@
 	border: 1px solid var(--border-color);
 	border-radius: $radius-md;
 	height: fit-content;
+
 	
 	&__style--detached{
 		border: none;
@@ -397,6 +411,11 @@
 	}
 	
 
+}
+
+.accordion-content.short{
+	max-height: 50vh;
+	overflow-y: scroll;
 }
 
 /*End Accordion style*/
