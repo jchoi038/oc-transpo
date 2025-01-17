@@ -1,14 +1,16 @@
 //576, 768, 992, 1200
 $breakpoints-up: (
-    "small": 36em,
+    "xs": 0em,
+    "sm": 36em,
     "md": 50em,
-    "lg":62em,
+    "lg": 62em,
     "xl": 75em
 );
 
 // 575.98, 767.98, 991.98, 1199.98
 $breakpoints-down: (
-    "small": 35.99875em,
+    "xs": 0em,
+    "sm": 35.99875em,
     "md": 47.99875em,
     "lg": 61.99875em,
     "xl": 74.99875em
@@ -20,7 +22,7 @@ $breakpoints-down: (
     }
 };
 
-@mixin breakpoint-down($size){
+@mixin media-breakpoint-down($size){
     @media (max-width: map-get($breakpoints-down, $size)){
         @content
     }

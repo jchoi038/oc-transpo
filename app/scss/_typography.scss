@@ -1,7 +1,7 @@
-@use "./bootstrap/mixins/breakpoints";
+@use "./globals/breakpoints";
 
 //reset
-
+.content-container, .stage2-main{
 .basic-content, .ready-for-rail{
 	letter-spacing: 0;
 }
@@ -184,3 +184,4 @@ hgroup p {
 }
 
 
+}
