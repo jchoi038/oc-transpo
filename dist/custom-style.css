@@ -6411,14 +6411,12 @@ ul.line-routing li {
 .content-container h4,
 .content-container h5,
 .content-container h6,
-.content-container th,
 .stage2-main h1,
 .stage2-main h2,
 .stage2-main h3,
 .stage2-main h4,
 .stage2-main h5,
-.stage2-main h6,
-.stage2-main th {
+.stage2-main h6 {
   color: var(--heading-color);
   padding: 0;
   margin-bottom: 0.5em;
