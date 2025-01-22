@@ -1,5 +1,6 @@
 /* This code is for dynamically styling the station page h1 banner */
 const lang = checkPageLanguage(window.location.href);
+const site = checkSite(window.location.href)
 console.log(lang)
 const page = checkPage(window.location.href)
 
@@ -34,6 +35,14 @@ function checkPage(currentUrl) {
 		currentUrl.indexOf("nos-services/stations") > 0
 	) {
 		return "station";
+	}
+}
+
+function checkSite(currentUrl) {
+	if (currentUrl.indexOf("staging")) {
+		return "staging";
+	} else {
+		return "prod";
 	}
 }
 
@@ -738,6 +747,24 @@ if (page == "station") {
 
 			route_icon = route.split("[")[1].replace("]", "");
 			switch (route_icon) {
+				case "EXP":
+					route_icon = "E1";
+					break;
+				case "B2":
+					route_icon = "B2";
+					break;
+				case "ROW":
+					route_icon = "R1";
+					break;
+				case "R2":
+					route_icon = "R2";
+					break;
+				case "R3":
+					route_icon = "R3";
+					break;
+				case "R4":
+					route_icon = "R4";
+					break;
 				case "BLU":
 					route_icon = "frequent";
 					break;
@@ -766,8 +793,8 @@ if (page == "station") {
 			let stopName = document.createElement("span");
 			stopName.innerHTML = stop
 				// .replace(`${stationName.toUpperCase()} `, "")
-				.replace("(", "")
-				.replace(")", "");
+				// .replace("(", "")
+				// .replace(")", "");
 			// .replace(" ","&nbsp;");
 
 			// .slice(-1);
@@ -811,10 +838,12 @@ if (page == "station") {
 		if (tbody) {
 			const rows = Array.from(tbody.querySelectorAll("tr"));
 			rows.sort((rowA, rowB) => {
-				const valueA = rowA.querySelector("td").textContent.trim();
-				const valueB = rowB.querySelector("td").textContent.trim();
+				const valueA = rowA.querySelector("td").textContent.trim().replace("N","")
+				const valueB = rowB.querySelector("td").textContent.trim().replace("N","")
 				const numA = parseFloat(valueA) || 0; // Convert to number or default to 0
 				const numB = parseFloat(valueB) || 0; // Convert to number or default to 0
+
+				console.log(numA)
 				return numA - numB; // Numeric comparison
 			});
 			rows.forEach((row) => newTbody.appendChild(row.cloneNode(true)));
@@ -833,7 +862,7 @@ if (page == "station") {
 		const caption = document.createElement("caption");
 		lang == "en"
 			? (caption.textContent = "Train platforms")
-			: (caption.textContent = "french translation for {Train platforms}");
+			: (caption.textContent = "{Train platforms}");
 
 		table.appendChild(caption);
 
@@ -882,7 +911,7 @@ if (page == "station") {
 				addRow(tbody, "Bayview", "line2", "2", "Nord");
 			}
 			if (station.station_type.line_4 && station.station_name != "Airport" ) {
-				addRow(tbody, "Airport", "line4", "4", "Aéroport");
+				addRow(tbody, "Aéroport", "line4", "4", "Aéroport");
 			}
 			if (station.station_type.line_4 && station.station_name != "South Keys") {
 				addRow(tbody, "South Keys", "line4", "4", "South Keys");
@@ -940,10 +969,10 @@ if (page == "station") {
 		let thead = document.createElement("thead");
 		let caption = document.createElement("caption");
 		caption.textContent = "Train platform location";
-		caption.className = "banner banner--nwtb mb-0";
+		// caption.className = "banner banner--nwtb mb-0";
 		caption.style.borderRadius = "0.5rem 0.5rem 0 0";
-		caption.style.paddingTop = "0.5rem";
-		caption.style.paddingBottom = "0.5rem";
+		// caption.style.paddingTop = "0.5rem";
+		// caption.style.paddingBottom = "0.5rem";
 		let tbody = document.createElement("tbody");
 
 		// Create header row with "Route" and "Stop Name" (only once)
@@ -958,9 +987,9 @@ if (page == "station") {
 		headerRow.appendChild(row_stopNameHeader);
 
 		lang == "en"
-			? (caption.textContent = "New Ways to Bus boarding locations")
+			? (caption.textContent = "Bus boarding locations")
 			: (caption.textContent =
-					"French translation for {New Ways to Bus boarding locations}");
+					"{Bus boarding locations}");
 
 		thead.style.grid_column = "1 / -1";
 
@@ -984,8 +1013,8 @@ if (page == "station") {
 						appendRowsToBusBoardingTable(
 							tbody,
 							routes,
-							`${lang=="en" ? "#" : `n<sup>o</sup>`}${stop.stop_560}`,
-							matchingStation.station_name
+							`${stop.name} (${lang=="en" ? "#" : `n<sup>o</sup>`}${stop.stop_560})`,
+							`${matchingStation.station_name}`
 						);
 					}
 				}
@@ -998,11 +1027,7 @@ if (page == "station") {
 			table.appendChild(tbody);
 			table = reOrderTable(table);
 			section_busBoardingLocations.appendChild(table);
-			let noteText =
-				lang == "en"
-					? "New Ways to Bus bus service will begin [date]"
-					: "French translation needed {New Ways to Bus bus service will begin [date]}";
-			section_busBoardingLocations.appendChild(createInfoNote(noteText));
+			
 			table.className = "light boarding-locations";
 			// tbody.className = "grid--3col";
 			stationRoutes = buildRouteListParagraph(tbody);
@@ -1023,8 +1048,8 @@ if (page == "station") {
 		});
 
 		let routeListParagraph = document.createElement("p");
-		routeListParagraph.className = "p-1 bordered";
-		routeListParagraph.style.borderRadius = "0 0 0.5rem 0.5rem";
+		// routeListParagraph.className = "p-1 bordered";
+		routeListParagraph.style.lineHeight = "150%";
 
 		let content = document.createElement("div");
 		content.appendChild(routeListParagraph);
@@ -1036,12 +1061,15 @@ if (page == "station") {
 			routeListParagraph.appendChild(span);
 			routeListParagraph.appendChild(document.createTextNode(" ")); // Add space between spans
 		});
-		let title = document.createElement("p");
-		title.textContent = "New Ways to Bus service:";
-		title.className = "banner banner--nwtb mb-0";
-		title.style.borderRadius = "0.5rem 0.5rem 0 0";
-		title.style.paddingTop = "0.5rem";
-		title.style.paddingBottom = "0.5rem";
+		let title = document.createElement("strong");
+		title.textContent = 
+		lang == "en"
+		? "Bus service:"
+		: "{Bus service:}";
+		// title.className = "banner banner--nwtb mb-0";
+		// title.style.borderRadius = "0.5rem 0.5rem 0 0";
+		// title.style.paddingTop = "0.5rem";
+		// title.style.paddingBottom = "0.5rem";
 		//NWTB
 
 		stationRoutes.appendChild(title);
@@ -1062,13 +1090,16 @@ if (page == "station") {
 		infoCard.classList.add("card", "station-info-card");
 
 		// Create the title div
-		const cardTitle = document.createElement("div");
+		const cardTitle = document.createElement("p");
 		cardTitle.id = "station-info-card-title";
 		cardTitle.classList.add("card__title");
 
-		lang == "en"
-			? (cardTitle.textContent = "Station Information")
-			: (cardTitle.textContent = "{french trans needed}");
+		if (matchingStation.station_560) {
+			cardTitle.innerHTML =
+				lang == "en"
+					? `<span style="color: var(--caption-color);">560#</span> <strong>${matchingStation.station_560}</strong>`
+					: `<span style="color: var(--caption-color);">n<sup>o</sup>560</span> <strong>${matchingStation.station_560}</strong>`;
+		}
 
 		// Create the ul for the body
 		const cardBody = document.createElement("ul");
@@ -1082,23 +1113,21 @@ if (page == "station") {
 		//if 560 exists, add 560 to station info card
 		let basicStationInfo = document.createElement("div");
 		let no560 = document.createElement("p");
-		if (matchingStation.station_560) {
-			no560.innerHTML =
-				lang == "en"
-					? `560#: <strong>${matchingStation.station_560}</strong>`
-					: `n<sup>o</sup>560: <strong>${matchingStation.station_560}</strong>`;
-		}
+		// if (matchingStation.station_560) {
+		// 	no560.innerHTML =
+		// 		lang == "en"
+		// 			? `560#: <strong>${matchingStation.station_560}</strong>`
+		// 			: `n<sup>o</sup>560: <strong>${matchingStation.station_560}</strong>`;
+		// }
 
 		no560.textContent ? basicStationInfo.appendChild(no560) : "";
 		selectOptionType.textContent ? basicStationInfo.appendChild(selectOptionType) : "";
 		//
 
-		if (basicStationInfo.innerText) {
-			appendListItem(cardBody, "", basicStationInfo);
-		}
 		//if address exists
 		let address = document.createElement("a");
-		let accessPoint = document.createElement("p");
+		
+		let accessPoint = document.createElement("div");
 
 		if (
 			matchingStation.station_location.address &&
@@ -1108,24 +1137,30 @@ if (page == "station") {
 			address.href = matchingStation.station_location.google_link;
 		}
 		if (matchingStation.station_location.access_point) {
+			let title = document.createElement("strong");
+			title.textContent =
+				lang == "en" ? "Access points:" : "{Access points:}";
+			
 			lang == "fr"
-				? (accessPoint.textContent =
+				? (accessPoint.innerHTML =
 						matchingStation.station_location.access_point_fr)
-				: (accessPoint.textContent =
+				: (accessPoint.innerHTML =
 						matchingStation.station_location.access_point);
+
+			appendListItem(cardBody, title, accessPoint);
 		} else {
 			accessPoint.textContent = "";
 		}
+
 		let location = document.createElement("div");
 		address.textContent ? location.appendChild(address) : "";
-		accessPoint.textContent ? location.appendChild(accessPoint) : "";
 
 		if (location.textContent != "") {
 			appendListItem(cardBody, "", location);
 		}
 
 		if (lines.textContent != "") {
-			let title = document.createElement("p");
+			let title = document.createElement("strong");
 			title.textContent =
 				lang == "en" ? "O-Train Lines: " : "Lignes de l'O-Train";
 			appendListItem(cardBody, title, lines);
@@ -1226,7 +1261,7 @@ if (page == "station") {
 
 		// Create the <ul> element with class "card-list col"
 		const ulElement = document.createElement("ul");
-		ulElement.classList.add("card-list", "col");
+		ulElement.classList.add("col");
 
 		// Create the list items <li> elements and append them to the <ul>
 
@@ -1700,9 +1735,22 @@ function addStationsToSection(sectionId, station) {
 			// Create a new div element to represent the station
 			const stationA = document.createElement("a");
 			stationA.className = "select-option";
+
+			// for prod
 			lang == "en"
 				? (stationA.href = station.station_url.prod)
 				: (stationA.href = station.station_url.prod_fr);
+
+			// // For staging
+			// lang == "en"
+			// 	? (stationA.href = station.station_url.staging)
+			// 	: (stationA.href = station.station_url.staging_fr);
+
+			// if (station.station_url.staging){
+			// 	stationA.style.color = 'limegreen'
+			// } else{stationA.style.color = 'red' }
+			// // end For staging
+
 
 			let stationName = "";
 			if (lang == "fr") {
@@ -1738,6 +1786,7 @@ function addStationsToSection(sectionId, station) {
 				? (stationA.href = station.station_url.prod)
 				: (stationA.href = station.station_url.prod_fr);
 
+			
 			// Populate the div with the station's information and icons
 			stationA.innerHTML = `
 					<p class="station-name">

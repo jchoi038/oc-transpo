@@ -1,5 +1,10 @@
 [
 	{
+		"stop_560": 3069,
+		"name": "A",
+		"routes": "197 Uplands & Greenboro [GRY]"
+	},
+	{
 		"stop_560": 8767,
 		"name": "SUSSEX / RIDEAU FALLS",
 		"routes": "9 Rideau [GRY]"
@@ -2377,12 +2382,12 @@
 	{
 		"stop_560": 3060,
 		"name": "A",
-		"routes": "11 Bayshore [BLU], 12 Tunney's Pasture [BLU], 13 Tunney's Pasture [GOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
+		"routes": "B2 South Keys [B2], 1 Tunney’s Pasture [R1], 11 Bayshore [BLU], 12 Tunney's Pasture [BLU], 13 Tunney's Pasture [GOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
 	},
 	{
 		"stop_560": 3060,
 		"name": "B",
-		"routes": "11 Waller [BLU], 12 Blair [BLU], 13 Gatineau [GOW], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
+		"routes": "B2 Bayview [B2], 1 Blair [R1], 11 Waller [BLU], 12 Blair [BLU], 13 Gatineau [GOW], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
 	},
 	{
 		"stop_560": 8328,
@@ -3296,13 +3301,15 @@
 	},
 	{
 		"stop_560": 7030,
-		"name": "KING EDWARD / SOMERSET E ( A )",
-		"routes": "N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], 56 Tunney's Pasture [GRY], N98 Airport / Aéroport [BOW]"
+		"name": "A",
+		"name-alt": "King Edward / Somerset E (A)",
+		"routes": "R1 Lees [R1], 1 Blair [R1], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], 56 Tunney's Pasture [GRY], N98 Airport / Aéroport [BOW]"
 	},
 	{
 		"stop_560": "7031",
-		"name": "KING EDWARD / SOMERSET E ( B )",
-		"routes": "N39 Rideau [BOW], N45 Rideau [BOW], 56 King Edward [GRY], N98 Rideau [BOW]"
+		"name": "B",
+		"name-alt": "KING EDWARD / SOMERSET E ( B )",
+		"routes": "R1 Mackenzie King Bridge [R1], 1 Tunney’s Pasture [R1], N39 Rideau [BOW], N45 Rideau [BOW], 56 King Edward [GRY], N98 Rideau [BOW]"
 	},
 	{
 		"stop_560": 7613,
@@ -3401,13 +3408,13 @@
 	},
 	{
 		"stop_560": 3027,
-		"name": "BLAIR A",
+		"name": "A",
 		"routes": "15 Parliament / Parlement [GOW], 24 Chapel Hill/ Compass [GRY], 24 St-Laurent [GRY], 25 Wateridge [BLU], 125 Aviation Museum / Musée de l'Aviation [GOW], 222 Vars [PUR], 228 Navan-Sarsfield [PUR]"
 	},
 	{
 		"stop_560": 3027,
-		"name": "BLAIR B",
-		"routes": "38 Trim [GRY], 125 Blair [GOW], 237 Place d'Orléans [PUR]"
+		"name": "B",
+		"routes": "E1 Blair [EXP], E1 Lyon [EXP], 38 Trim [GRY], 125 Blair [GOW], 237 Place d'Orléans [PUR]"
 	},
 	{
 		"stop_560": "",
@@ -3971,13 +3978,14 @@
 	},
 	{
 		"stop_560": 3027,
-		"name": "BLAIR C",
-		"routes": "12 Blair [BLU], 15 Blair [GOW], 21 Blair [GOW], 23 Blair [GOW], 26 Blair [GOW], 30 Blair [GRY], 32 Blair [GOW], 33 Blair [GOW], 34 Blair [GRY], 35 Blair [GRY], 38 Blair [GRY], 39 Blair [BLU], 42 Blair [GRY], 221 Blair [PUR], 222 Blair [PUR], 228 Blair [PUR], 234 Blair [PUR], 237 Blair [PUR]"
+		"name": "C",
+		"routes": "E1 Downtown [EXP], 1 Tunney’s Pasture [R1], 12 Blair [BLU], 15 Blair [GOW], 21 Blair [GOW], 23 Blair [GOW], 26 Blair [GOW], 30 Blair [GRY], 32 Blair [GOW], 33 Blair [GOW], 34 Blair [GRY], 35 Blair [GRY], 38 Blair [GRY], 39 Blair [BLU], 42 Blair [GRY], 221 Blair [PUR], 222 Blair [PUR], 228 Blair [PUR], 234 Blair [PUR], 237 Blair [PUR]"
 	},
 	{
 		"stop_560": 6610,
-		"name": "UNIVERSITY / GYMNASIUM",
-		"routes": "7 St-Laurent [BLU], 10 Main [BLU], 48 Hurdman [GRY], 111 Carleton [BOW]"
+		"name": "B",
+		"name-alt": "UNIVERSITY / GYMNASIUM",
+		"routes": "B2 Bayview [B2], 7 St-Laurent [BLU], 10 Main [BLU], 48 Hurdman [GRY], 111 Carleton [BOW]"
 	},
 	{
 		"stop_560": 6611,
@@ -4376,13 +4384,15 @@
 	},
 	{
 		"stop_560": 6652,
-		"name": "PRESTON / GLADSTONE",
-		"routes": "8 Gatineau [GRY]"
+		"name": "D",
+		"name-alt": "PRESTON / GLADSTONE",
+		"routes": "B2 Bayview [B2], 8 Gatineau [GRY]"
 	},
 	{
 		"stop_560": 2358,
-		"name": "PRESTON / BALSAM",
-		"routes": "8 Dow's Lake / Lac Dow [GRY]"
+		"name": "C",
+		"name-alt": "PRESTON / BALSAM",
+		"routes": "B2 South Keys [B2], 8 Dow's Lake / Lac Dow [GRY]"
 	},
 	{
 		"stop_560": 6653,
@@ -4411,18 +4421,21 @@
 	},
 	{
 		"stop_560": 6655,
-		"name": "PRESTON / ADELINE",
-		"routes": "8 Dow's Lake / Lac Dow [GRY]"
+		"name": "C",
+		"name-alt": "PRESTON / ADELINE",
+		"routes": "B2 South Keys [B2], 8 Dow's Lake / Lac Dow [GRY]"
 	},
 	{
 		"stop_560": 2397,
-		"name": "PRESTON / CARLING (C)",
+		"name": "C",
+		"name-alt": "PRESTON / CARLING (C)",
 		"routes": "8 Dow's Lake / Lac Dow [GRY]"
 	},
 	{
 		"stop_560": 6657,
-		"name": "PRESTON / CARLING (D)",
-		"routes": "8 Gatineau [GRY]"
+		"name": "D",
+		"name-alt": "PRESTON / CARLING (D)",
+		"routes": "B2 Bayview [B2], 8 Gatineau [GRY]"
 	},
 	{
 		"stop_560": 8013,
@@ -4551,22 +4564,22 @@
 	},
 	{
 		"stop_560": 3027,
-		"name": "BLAIR D",
+		"name": "D",
 		"routes": "21 Canotek [GOW], 25 Millennium [BLU], 30 Millennium [GRY], 32 Chapel Hill [GOW], 33 Portobello [GOW], 34 Chapel Hill [GRY], 35 Avalon [GRY], 39 Millennium [BLU], 221 Cumberland [PUR], 234 Tenth Line [PUR]"
 	},
 	{
 		"stop_560": "3027",
-		"name": "BLAIR H",
+		"name": "H",
 		"routes": "451 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3027,
-		"name": "BLAIR H ",
+		"name": "H ",
 		"routes": "302 St-Laurent / Place d'Orléans [GOW]"
 	},
 	{
 		"stop_560": 3027,
-		"name": "BLAIR I",
+		"name": "I",
 		"routes": "12 Tunney's Pasture [BLU], 15 Parliament / Parlement [GOW], 23 Rothwell Heights [GOW], 24 Chapel Hill/ Compass [GRY], 26 Pineview [GOW], 39 Trim [BOW], N39 Rideau [BOW], 42 Hurdman [GRY], 302 Cumberland [GOW]"
 	},
 	{
@@ -5171,8 +5184,9 @@
 	},
 	{
 		"stop_560": 5813,
-		"name": "CARLETON U",
-		"routes": "7 St-Laurent [BLU], 10 Hurdman [BLU], 48 Hurdman [GRY], 111 Baseline [BOW]"
+		"name": "A",
+		"name-alt": "CARLETON U",
+		"routes": "B2 South Keys [B2], 7 St-Laurent [BLU], 10 Hurdman [BLU], 48 Hurdman [GRY], 111 Baseline [BOW]"
 	},
 	{
 		"stop_560": 3074,
@@ -5385,8 +5399,14 @@
 		"routes": "42 Blair [GRY]"
 	},
 	{
+		"stop_560": "3026",
+		"name": "B",
+		"routes": "R1 St-Laurent [R1]"
+	},
+	{
 		"stop_560": "1742",
-		"name": "CYRVILLE / CUMMINGS (C)",
+		"name": "C",
+		"name-alt": "CYRVILLE / CUMMINGS (C)",
 		"routes": "N39 Rideau [BOW]"
 	},
 	{
@@ -5431,7 +5451,8 @@
 	},
 	{
 		"stop_560": 1748,
-		"name": "CUMMINGS / CYRVILLE (D)",
+		"name": "D",
+		"name-alt": "CUMMINGS / CYRVILLE (D)",
 		"routes": "N39 Place d'Orléans [BOW], N39 Trim [BOW]"
 	},
 	{
@@ -8597,7 +8618,7 @@
 	{
 		"stop_560": 3037,
 		"name": "B",
-		"routes": "6 Rockcliffe [BLU], 40 St-Laurent [BLU], 43 Karsh [GOW], 90 Hurdman [BLU], 92 Walkley / Hurdman [GOW], 98 Hawthorne [BLU], 116 Baseline [GRY], 117 Baseline [GOW], 197 Uplands [GRY], 198 Limebank [GOW], 294 Lester [PUR], 304 Osgoode [GOW]"
+		"routes": "B2 South Keys [B2], 6 Rockcliffe [BLU], 40 St-Laurent [BLU], 43 Karsh [GOW], 90 Hurdman [BLU], 92 Walkley / Hurdman [GOW], 98 Hawthorne [BLU], 116 Baseline [GRY], 117 Baseline [GOW], 197 Uplands [GRY], 198 Limebank [GOW], 294 Lester [PUR], 304 Osgoode [GOW]"
 	},
 	{
 		"stop_560": 3037,
@@ -8607,11 +8628,12 @@
 	{
 		"stop_560": 3037,
 		"name": "A",
-		"routes": "43 Greenboro [GOW], 90 Greenboro [BLU], 92 Greenboro [GOW], 98 Hurdman [BLU], 116 Greenboro [GRY], 117 Greenboro [GOW], 304 Billings Bridge [GOW], 452 Lansdowne [GOW]"
+		"routes": "B2 Bayview [B2], 43 Greenboro [GOW], 90 Greenboro [BLU], 92 Greenboro [GOW], 98 Hurdman [BLU], 116 Greenboro [GRY], 117 Greenboro [GOW], 304 Billings Bridge [GOW], 452 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 5602,
-		"name": "HERON / BRONSON (B)",
+		"name": "B",
+		"name-alt": "HERON / BRONSON (B)",
 		"routes": "88 Bayshore [BLU], 90 Greenboro [BLU], 111 Baseline [BLU], 112 Baseline [GRY]"
 	},
 	{
@@ -10626,32 +10648,34 @@
 	},
 	{
 		"stop_560": 1123,
-		"name": "HERON / DATA CENTRE (D)",
-		"routes": "10 Main [BLU]"
+		"name": "D",
+		"name-alt": "HERON / DATA CENTRE (D)",
+		"routes": "B2 Bayview [B2], 10 Main [BLU]"
 	},
 	{
 		"stop_560": 3035,
-		"name": "HERON 1A",
-		"routes": "44 Hurdman [BLU], 98 Hawthorne [BLU], 304 Osgoode [GOW]"
+		"name": "1A",
+		"routes": "B2 South Keys [B2], 44 Hurdman [BLU], 98 Hawthorne [BLU], 304 Osgoode [GOW]"
 	},
 	{
 		"stop_560": 3035,
-		"name": "HERON 2A",
-		"routes": "44 Billings Bridge [BLU], 98 Hurdman [BLU], 304 Billings Bridge [GOW], 452 Lansdowne [GOW]"
+		"name": "2A",
+		"routes": "B2 Bayview [B2], 44 Billings Bridge [BLU], 98 Hurdman [BLU], 304 Billings Bridge [GOW], 452 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3035,
-		"name": "HERON 3A",
-		"routes": "10 Main [BLU], 88 Bayshore [BLU], 90 Greenboro [BLU], 111 Baseline [BLU], 112 Baseline [GRY]"
+		"name": "3A",
+		"routes": "B2 Bayview [B2], 10 Main [BLU], 88 Bayshore [BLU], 90 Greenboro [BLU], 111 Baseline [BLU], 112 Baseline [GRY]"
 	},
 	{
 		"stop_560": 3035,
-		"name": "HERON 4A",
-		"routes": "10 Hurdman [BLU], 88 Hurdman [BLU], 90 Hurdman [BLU], 111 Billings Bridge / Carleton [BLU], 112 Billings Bridge [GRY]"
+		"name": "4A",
+		"routes": "B2 South Keys [B2], 10 Hurdman [BLU], 88 Hurdman [BLU], 90 Hurdman [BLU], 111 Billings Bridge / Carleton [BLU], 112 Billings Bridge [GRY]"
 	},
 	{
 		"stop_560": 1342,
-		"name": "HERON AT MOONEY'S BAY STN. (A)",
+		"name": "A",
+		"name-alt": "HERON AT MOONEY'S BAY STN. (A)",
 		"routes": "88 Hurdman [BLU], 90 Hurdman [BLU], 111 Billings Bridge / Carleton [BLU], 112 Billings Bridge [GRY], 456 Lansdowne [GOW]"
 	},
 	{
@@ -11087,7 +11111,7 @@
 	{
 		"stop_560": 3023,
 		"name": "B",
-		"routes": "9 Hurdman [GRY], 10 Hurdman [BLU], 42 Hurdman [GRY], 44 Hurdman [BLU], 48 Hurdman [GRY], 88 Hurdman [BLU], 90 Hurdman [BLU], 92 Hurdman [GOW], 98 Hurdman [BLU]"
+		"routes": "R1 Blair [R1], 1 Tunney’s Pasture [R1], 9 Hurdman [GRY], 10 Hurdman [BLU], 42 Hurdman [GRY], 44 Hurdman [BLU], 48 Hurdman [GRY], 88 Hurdman [BLU], 90 Hurdman [BLU], 92 Hurdman [GOW], 98 Hurdman [BLU]"
 	},
 	{
 		"stop_560": 3023,
@@ -12536,12 +12560,14 @@
 	},
 	{
 		"stop_560": 8014,
-		"name": "CARLING / O-TRAIN STATION (A)",
+		"name": "A",
+		"name-alt": "CARLING / O-TRAIN STATION (A)",
 		"routes": "8 Experimental Farm / Ferme expérimentale [GOW], 56 Tunney's Pasture [GRY], 85 Bayshore [BLU]"
 	},
 	{
 		"stop_560": 7369,
-		"name": "CARLING / O-TRAIN STATION (B)",
+		"name": "B",
+		"name-alt": "CARLING / O-TRAIN STATION (B)",
 		"routes": "56 King Edward [GRY], 85 Lees [BLU]"
 	},
 	{
@@ -14091,8 +14117,8 @@
 	},
 	{
 		"stop_560": 3022,
-		"name": "LEES A",
-		"routes": "10 Main [BLU], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], N45 Rideau [BOW], 56 Tunney's Pasture [GRY], 85 Bayshore [BLU], N98 Rideau [BOW], N98 Airport / Aéroport [BOW]"
+		"name": "A",
+		"routes": "R1 Blair [R1], 1 Mackenzie King Bridge [R1], 10 Main [BLU], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], N45 Rideau [BOW], 56 Tunney's Pasture [GRY], 85 Bayshore [BLU], N98 Rideau [BOW], N98 Airport / Aéroport [BOW]"
 	},
 	{
 		"stop_560": 4944,
@@ -14246,7 +14272,7 @@
 	},
 	{
 		"stop_560": 3022,
-		"name": "LEES B",
+		"name": "B",
 		"routes": "10 Hurdman [BLU], 56 King Edward [GRY], 85 Lees [BLU]"
 	},
 	{
@@ -14976,8 +15002,9 @@
 	},
 	{
 		"stop_560": 1004,
-		"name": "BRONSON / HERON (C)",
-		"routes": "10 Hurdman [BLU]"
+		"name": "C",
+		"name-alt": "BRONSON / HERON (C)",
+		"routes": "B2 South Keys [B2], 10 Hurdman [BLU]"
 	},
 	{
 		"stop_560": 5626,
@@ -15511,23 +15538,36 @@
 	},
 	{
 		"stop_560": 3051,
-		"name": "LYON A",
+		"name": "A",
 		"routes": "10 Hurdman [BLU], 12 Tunney's Pasture [BLU], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
 	},
 	{
 		"stop_560": 3051,
-		"name": "LYON B",
+		"name": "B",
 		"routes": "10 Main [BLU], 12 Blair [BLU], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
 	},
 	{
-		"stop_560": 3000,
-		"name": "MACKENZIE KING 1A",
-		"routes": "10 Main [BLU], 11 Waller [BLU], 19 Hurdman [GRY]"
+		"stop_560": 3006,
+		"name": "Slater / Kent",
+		"routes": "R1 Blair [R1], E1 Blair [EXP]"
+	},
+	{
+		"stop_560": 3003,
+		"name": "E",
+		"name-alt": "Albert / Lyon",
+		"routes": "E1 Downtown [EXP], 1 Tunney’s Pasture [R1]"
 	},
 	{
 		"stop_560": 3000,
-		"name": "MACKENZIE KING 2A",
-		"routes": "10 Hurdman [BLU], 11 Bayshore [BLU], 19 Parliament / Parlement [GRY]"
+		"name": "E",
+		"name-alt": "Mackenzie King 1A",
+		"routes": "E1 Blair [EXP], 1 Blair [R1], 10 Main [BLU], 11 Waller [BLU], 19 Hurdman [GRY]"
+	},
+	{
+		"stop_560": 3000,
+		"name": "F",
+		"name-alt": "Mackenzie King 2A",
+		"routes": "E1 Lyon [EXP], 1 Tunney’s Pasture [R1], 10 Hurdman [BLU], 11 Bayshore [BLU], 19 Parliament / Parlement [GRY]"
 	},
 	{
 		"stop_560": 3047,
@@ -16026,7 +16066,8 @@
 	},
 	{
 		"stop_560": 3039,
-		"name": "AIRPORT / AÉROPORT",
+		"name": "A",
+		"name-alt": "AIRPORT / AÉROPORT",
 		"routes": "N98 Rideau [BOW]"
 	},
 	{
@@ -16466,8 +16507,8 @@
 	},
 	{
 		"stop_560": 3038,
-		"name": "(A)",
-		"routes": "6 Greenboro [BLU], 40 Greenboro [BLU], 43 Greenboro [GOW], 90 Greenboro [BLU], 92 Greenboro [GOW], 98 Hurdman [BLU], 116 Greenboro [GRY], 117 Greenboro [GOW], 197 Greenboro [GRY], 198 Greenboro [GOW], 294 Greenboro [PUR], 304 Billings Bridge [GOW], 452 Lansdowne [GOW]"
+		"name": "A",
+		"routes": "B2 South Keys [B2], B2 Bayview [B2], 6 Greenboro [BLU], 40 Greenboro [BLU], 43 Greenboro [GOW], 90 Greenboro [BLU], 92 Greenboro [GOW], 98 Hurdman [BLU], 116 Greenboro [GRY], 117 Greenboro [GOW], 197 Greenboro [GRY], 198 Greenboro [GOW], 294 Greenboro [PUR], 304 Billings Bridge [GOW], 452 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3042,
@@ -16486,7 +16527,7 @@
 	},
 	{
 		"stop_560": 3038,
-		"name": "(E)",
+		"name": "E",
 		"routes": "90 Hurdman [BLU], 92 Walkley / Hurdman [GOW], 116 Baseline [GRY], 117 Baseline [GOW], 197 Uplands [GRY], 198 Limebank [GOW]"
 	},
 	{
@@ -18151,33 +18192,45 @@
 	},
 	{
 		"stop_560": 3052,
-		"name": "PARLIAMENT / PARLEMENT A",
+		"name": "A",
 		"routes": "6 Rockcliffe [BLU], 7 St-Laurent [BLU], 10 Main [BLU], 11 Waller [BLU], 12 Blair [BLU], 15 Blair [GOW], 17 Wateridge [GOW], 19 Hurdman [GRY], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
 	},
 	{
 		"stop_560": 3052,
-		"name": "PARLIAMENT / PARLEMENT B",
+		"name": "B",
 		"routes": "6 Greenboro [BLU], 7 Carleton [BLU], 10 Hurdman [BLU], 11 Bayshore [BLU], 12 Tunney's Pasture [BLU], 15 Parliament / Parlement [GOW], 19 Parliament / Parlement [GRY], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW], 450 Lansdowne [GOW]"
 	},
 	{
+		"stop_560": 3007,
+		"name": "G",
+		"name-alt": "Slater / Bank",
+		"routes": "E1 Blair [EXP], 1 Blair [R1]"
+	},
+	{
+		"stop_560": 3002,
+		"name": "F",
+		"name-alt": "Albert / Bank",
+		"routes": "E1 Downtown [EXP], 1 Tunney’s Pasture [R1]"
+	},
+	{
 		"stop_560": 3010,
-		"name": "PIMISI A",
+		"name": "A",
 		"routes": "8 Gatineau [GRY], 13 Gatineau [GOW]"
 	},
 	{
 		"stop_560": 3010,
-		"name": "PIMISI B",
+		"name": "B",
 		"routes": "8 Dow's Lake / Lac Dow [GRY], 13 Tunney's Pasture [GOW]"
 	},
 	{
 		"stop_560": 3010,
-		"name": "PIMISI C",
-		"routes": "12 Tunney's Pasture [BLU], 13 Tunney's Pasture [GOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
+		"name": "C",
+		"routes": "R1 Tunney’s Pasture [R1], 12 Tunney's Pasture [BLU], 13 Tunney's Pasture [GOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
 	},
 	{
 		"stop_560": 3010,
-		"name": "PIMISI D",
-		"routes": "12 Blair [BLU], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
+		"name": "D",
+		"routes": "R1 Blair [R1], 12 Blair [BLU], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
 	},
 	{
 		"stop_560": 3019,
@@ -21171,17 +21224,17 @@
 	},
 	{
 		"stop_560": 3009,
-		"name": "RIDEAU A",
+		"name": "A",
 		"routes": "5 Elmvale [BLU], 6 Greenboro [BLU], 7 Carleton [BLU], 12 Tunney's Pasture [BLU], 14 Tunney's Pasture [BLU], 15 Parliament / Parlement [GOW], 17 Parliament / Parlement [GOW], 18 Billings Bridge [GRY], 20 Rideau [GRY], N39 Rideau [BOW], N45 Rideau [BOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW], N98 Rideau [BOW], 450 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3009,
-		"name": "RIDEAU B",
+		"name": "B",
 		"routes": "5 Rideau [BLU], 6 Rockcliffe [BLU], 7 St-Laurent [BLU], 12 Blair [BLU], 14 St-Laurent [BLU], 15 Blair [GOW], 17 Wateridge [GOW], 18 St-Laurent [GRY], 20 St-Laurent [GRY], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW], N98 Airport / Aéroport [BOW]"
 	},
 	{
 		"stop_560": 3009,
-		"name": "RIDEAU C",
+		"name": "C",
 		"routes": "9 Hurdman [GRY]"
 	},
 	{
@@ -22361,12 +22414,12 @@
 	},
 	{
 		"stop_560": 3038,
-		"name": "(B)",
+		"name": "B",
 		"routes": "40 St-Laurent [BLU], 294 Lester [PUR]"
 	},
 	{
 		"stop_560": 3038,
-		"name": "(C)",
+		"name": "C",
 		"routes": "6 Rockcliffe [BLU], 43 Karsh [GOW], 98 Hawthorne [BLU]"
 	},
 	{
@@ -23496,23 +23549,23 @@
 	},
 	{
 		"stop_560": 3038,
-		"name": "(D)",
+		"name": "D",
 		"routes": "N98 Airport / Aéroport [BOW], 304 Osgoode [GOW]"
 	},
 	{
 		"stop_560": 3025,
-		"name": "ST-LAURENT A",
+		"name": "A",
 		"routes": "24 Chapel Hill/ Compass [GRY], 40 Greenboro [BLU], 41 Billings Bridge [BLU], 47 Hawthorne [GOW], 302 Cumberland [GOW], 451 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3025,
-		"name": "ST-LAURENT B",
-		"routes": "18 St-Laurent [GRY], 40 St-Laurent [BLU], 41 St-Laurent [BLU], 47 St-Laurent [GOW], 302 St-Laurent / Place d'Orléans [GOW]"
+		"name": "B",
+		"routes": "R1 Blair [R1], 18 St-Laurent [GRY], 40 St-Laurent [BLU], 41 St-Laurent [BLU], 47 St-Laurent [GOW], 302 St-Laurent / Place d'Orléans [GOW]"
 	},
 	{
 		"stop_560": 3025,
-		"name": "ST-LAURENT C",
-		"routes": "7 St-Laurent [BLU], 14 St-Laurent [BLU], 19 Hurdman [GRY], 20 St-Laurent [GRY], 24 St-Laurent [GRY], N39 Place d'Orléans [BOW], N39 Trim [BOW], N39 Rideau [BOW]"
+		"name": "C",
+		"routes": "R1 Cyrville [R1], 7 St-Laurent [BLU], 14 St-Laurent [BLU], 19 Hurdman [GRY], 20 St-Laurent [GRY], 24 St-Laurent [GRY], N39 Place d'Orléans [BOW], N39 Trim [BOW], N39 Rideau [BOW]"
 	},
 	{
 		"stop_560": 4081,
@@ -23866,7 +23919,7 @@
 	},
 	{
 		"stop_560": 3025,
-		"name": "ST-LAURENT D",
+		"name": "D",
 		"routes": "7 Carleton [BLU], 14 Tunney's Pasture [BLU], 18 Billings Bridge [GRY], 19 Parliament / Parlement [GRY], 20 Rideau [GRY]"
 	},
 	{
@@ -24826,8 +24879,9 @@
 	},
 	{
 		"stop_560": 1369,
-		"name": "TREMBLAY / VIA RAIL ( A )",
-		"routes": "N39 Place d'Orléans [BOW]"
+		"name": "A",
+		"name-alt": "TREMBLAY / VIA RAIL ( A )",
+		"routes": "R1 Blair [R1], N39 Place d'Orléans [BOW]"
 	},
 	{
 		"stop_560": 6962,
@@ -25051,8 +25105,9 @@
 	},
 	{
 		"stop_560": "1371",
-		"name": "TREMBLAY / VIA RAIL ( B )",
-		"routes": "N39 Rideau [BOW], 451 Lansdowne [GOW]"
+		"name": "B",
+		"name-alt": "TREMBLAY / VIA RAIL ( B )",
+		"routes": "R1 Tunney’s Pasture [R1], N39 Rideau [BOW], 451 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3029,
@@ -26057,7 +26112,7 @@
 	{
 		"stop_560": 3011,
 		"name": "C",
-		"routes": "57 Tunney's Pasture [BLU], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], N61 Stittsville [BOW], 62 Tunney's Pasture [BLU], 63 Tunney's Pasture [BLU], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], N75 Barrhaven Centre [BOW], 80 Barrhaven Centre [BLU], 81 Tunney's Pasture [GRY], 82 Tunney's Pasture [GOW], 256 Tunney's Pasture [PUR], 261 Tunney's Pasture [PUR], 262 Tunney's Pasture [PUR], 263 Tunney's Pasture [PUR], 265 Tunney's Pasture [PUR], 266 Tunney's Pasture [PUR], 275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
+		"routes": "R1 Blair [R1], 1 Tunney's Pasture [R1], 57 Tunney's Pasture [BLU], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], N61 Stittsville [BOW], 62 Tunney's Pasture [BLU], 63 Tunney's Pasture [BLU], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], N75 Barrhaven Centre [BOW], 80 Barrhaven Centre [BLU], 81 Tunney's Pasture [GRY], 82 Tunney's Pasture [GOW], 256 Tunney's Pasture [PUR], 261 Tunney's Pasture [PUR], 262 Tunney's Pasture [PUR], 263 Tunney's Pasture [PUR], 265 Tunney's Pasture [PUR], 266 Tunney's Pasture [PUR], 275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
 	},
 	{
 		"stop_560": 3011,
@@ -26637,25 +26692,25 @@
 	{
 		"stop_560": 3036,
 		"name": "B",
-		"name-niu": "WALKLEY 1A (B)",
-		"routes": "44 Hurdman [BLU], 98 Hawthorne [BLU], 304 Osgoode [GOW]"
+		"name-alt": "WALKLEY 1A (B)",
+		"routes": "B2 South Keys [B2], 44 Hurdman [BLU], 98 Hawthorne [BLU], 304 Osgoode [GOW]"
 	},
 	{
 		"stop_560": 3036,
 		"name": "A",
-		"name-niu": "WALKLEY 2A (A)",
-		"routes": "44 Billings Bridge [BLU], 98 Hurdman [BLU], 304 Billings Bridge [GOW], 452 Lansdowne [GOW]"
+		"name-alt": "WALKLEY 2A (A)",
+		"routes": "B2 Bayview [B2], 44 Billings Bridge [BLU], 98 Hurdman [BLU], 304 Billings Bridge [GOW], 452 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3036,
 		"name": "D",
-		"name-niu": "WALKLEY 3A (D)",
+		"name-alt": "WALKLEY 3A (D)",
 		"routes": "92 Greenboro [GOW]"
 	},
 	{
 		"stop_560": 3036,
 		"name": "C",
-		"name-niu": "WALKLEY 4A (C)",
+		"name-alt": "WALKLEY 4A (C)",
 		"routes": "92 Walkley / Hurdman [GOW]"
 	},
 	{

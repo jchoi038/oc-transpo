@@ -740,16 +740,16 @@ ul.card-list li {
 	}
 
 	.card__title{
-		font-weight: 600;
+		font-weight: 700;
 		text-align: center;
-		font-size: $ui-title-size-lg;
+		font-size: 1.3rem;
 		margin-bottom: 1.5em;
 		line-height: 1.15em;
 		min-height: 60px;
 		@include media-breakpoint-down(xs) {
 			margin-bottom: 1.25em;
 			min-height: 40px;
-			font-size: $ui-title-size-md;
+			font-size: 1.2rem;
 		}
 	}
 	&::before{
@@ -872,6 +872,14 @@ ul.card-list li {
 .card.station-info-card{
 	margin: 2rem 0 2.5rem;
 	height: fit-content;
+	.card__title{
+		margin-top: 0;
+		font-size: 1.75rem;
+	}
+	width: 100%;
+	@include media-breakpoint-up(sm) {
+		flex: 0 0 364px;
+	}
 }
 
 // Destination card

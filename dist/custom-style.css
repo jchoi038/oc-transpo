@@ -427,7 +427,7 @@ table.sticky-table tbody tr th {
 table.text-heavy-table thead th, table.extra-padding thead th, table.sticky-table thead th {
   padding: 0.5em 1em;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   table.transcript-table tbody tr td:first-of-type {
     padding-top: 1em;
   }
@@ -440,7 +440,7 @@ table.text-heavy-table thead th, table.extra-padding thead th, table.sticky-tabl
     padding-right: 0.5em;
   }
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   table.table__behaviour--collapse tbody tr td:first-of-type {
     padding-top: 1.5rem;
   }
@@ -505,7 +505,7 @@ table.bordered thead.empty-corner tr th:first-of-type {
   border-right: 1px solid var(--border-color);
 }
 
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   table.table__behaviour--collapse.bordered tbody {
     border-left: none;
     border-right: none;
@@ -702,7 +702,7 @@ table.dark tr th {
 .transcript-table td:last-of-type::after {
   content: "]";
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .transcript-table tr {
     border: none;
   }
@@ -712,7 +712,7 @@ table {
   /* toggle on/off to make zebra*/
   /* toggle on/off for line seperated look */
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   table.cardify td,
   table.cardify th {
     padding: 0;
@@ -772,7 +772,7 @@ dl.text-list dt {
   padding: 0.5rem;
   border-bottom: 1px solid var(--gray--100);
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   dl.text-list {
     grid-template-columns: 1fr;
   }
@@ -861,7 +861,7 @@ table.sticky-table tbody th:first-child {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
 }
 
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .table__behaviour--collapse tr,
   .transcript-table tr {
     display: flex;
@@ -869,7 +869,7 @@ table.sticky-table tbody th:first-child {
     border-top: none;
   }
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .table__behaviour--collapse thead,
   .transcript-table thead {
     position: absolute !important;
@@ -1029,7 +1029,7 @@ th.rt-confederation {
   padding: 0.5rem;
   overflow-x: scroll;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .flex.cards-overflow-x-container {
     width: 100vw;
     margin-left: -30px;
@@ -1214,7 +1214,7 @@ th.rt-confederation {
 .banner__body:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .banner__body:not(:last-child) {
     margin-bottom: 0.5em;
   }
@@ -1255,7 +1255,7 @@ th.rt-confederation {
   line-height: 1.15;
   margin-bottom: 1em;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .banner__title {
     font-size: 0.9375rem;
     margin-bottom: 0.75em;
@@ -1265,7 +1265,7 @@ th.rt-confederation {
 .banner__body {
   color: var(--text-color-light);
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .banner__body {
     font-size: 0.8125rem;
   }
@@ -1289,7 +1289,7 @@ th.rt-confederation {
   transition: background-color 0.1s ease-in-out;
 }
 
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .banner {
     box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
     transition: all 100ms ease-out;
@@ -1323,7 +1323,7 @@ th.rt-confederation {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .banner,
   .station-banner,
   .hero-banner {
@@ -1389,7 +1389,7 @@ th.rt-confederation {
   min-width: 160px;
   width: 160px;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .banner.img-banner .banner__img {
     min-width: 100px;
     width: 100px;
@@ -1410,7 +1410,7 @@ th.rt-confederation {
   width: 100vw;
 }
 
-@media (max-width: 0em) and (max-width: 0em) {
+@media (max-width: 35.99875em) and (max-width: 35.99875em) {
   .page-section ul.mobile-y-scroll {
     max-height: 54vh;
     overflow-y: scroll;
@@ -1477,9 +1477,10 @@ th.rt-confederation {
 
 .station-banner {
   background-color: #231F20;
-  color: #fff;
-  padding-top: 0;
-  padding-bottom: 0;
+  color: #fff !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -1721,14 +1722,14 @@ th.rt-confederation {
   background-repeat: no-repeat;
   background-position: bottom -6rem right -5rem;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .banner--line2-4, .banner--line1, .banner--line1-3 {
     background-position: bottom -2rem right 0px;
     background-size: 100%;
     padding-bottom: 4rem;
   }
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .banner--line2-4 .banner__content, .banner--line1 .banner__content, .banner--line1-3 .banner__content {
     width: 100%;
     padding-right: 0;
@@ -1767,7 +1768,7 @@ th.rt-confederation {
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .page-section.banner {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -1984,14 +1985,6 @@ th.rt-confederation {
 @media (min-width: 1400px) {
   .hero-banner img {
     margin-left: calc((-100vw + 1440px) / 2 - 180px - 20px);
-  }
-}
-.hero-banner .station-info-card {
-  width: 100%;
-}
-@media (min-width: 36em) {
-  .hero-banner .station-info-card {
-    flex: 0 0 300px;
   }
 }
 
@@ -3125,7 +3118,7 @@ ul.grid--3col, ul.grid--2col {
 }
 
 /*****grid styles End *****/
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .fares h1 {
     text-align: left;
   }
@@ -3513,7 +3506,7 @@ ul.card-list li__body {
   height: 4rem;
 }
 
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .card__behaviour--mobile-friendly,
   .card__type--feature {
     flex-direction: row;
@@ -3530,7 +3523,7 @@ ul.card-list li__body {
 .card__type--feature .card > img {
   margin: 0;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .card__behaviour--mobile-friendly .card__body,
   .card__type--feature .card__body {
     position: absolute !important;
@@ -3890,7 +3883,7 @@ ul.card-list li__body {
 .cards-overflow-x-container > * {
   min-width: 360px;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .cards-overflow-x-container > * {
     min-width: 75vw;
     height: -moz-fit-content;
@@ -3902,24 +3895,24 @@ ul.card-list li__body {
   padding-bottom: 8rem;
   padding: 2.5rem;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .decor-card, #fares-made-easy-card, #wayfinding-card, #accessibiliy-card, #cyclist-card, #safety-card, #comfort-card, #within-5km-card, #also-nearby-card {
     font-size: 0.875rem;
   }
 }
 .decor-card .card__title, #fares-made-easy-card .card__title, #wayfinding-card .card__title, #accessibiliy-card .card__title, #cyclist-card .card__title, #safety-card .card__title, #comfort-card .card__title, #within-5km-card .card__title, #also-nearby-card .card__title {
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
-  font-size: 1.625rem;
+  font-size: 1.3rem;
   margin-bottom: 1.5em;
   line-height: 1.15em;
   min-height: 60px;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .decor-card .card__title, #fares-made-easy-card .card__title, #wayfinding-card .card__title, #accessibiliy-card .card__title, #cyclist-card .card__title, #safety-card .card__title, #comfort-card .card__title, #within-5km-card .card__title, #also-nearby-card .card__title {
     margin-bottom: 1.25em;
     min-height: 40px;
-    font-size: 1.125rem;
+    font-size: 1.2rem;
   }
 }
 .decor-card::before, #fares-made-easy-card::before, #wayfinding-card::before, #accessibiliy-card::before, #cyclist-card::before, #safety-card::before, #comfort-card::before, #within-5km-card::before, #also-nearby-card::before {
@@ -3936,7 +3929,7 @@ ul.card-list li__body {
   background-size: 100%;
   vertical-align: text-bottom;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .decor-card::before, #fares-made-easy-card::before, #wayfinding-card::before, #accessibiliy-card::before, #cyclist-card::before, #safety-card::before, #comfort-card::before, #within-5km-card::before, #also-nearby-card::before {
     width: 3rem;
     height: 3rem;
@@ -3999,6 +3992,16 @@ ul.card-list li__body {
   margin: 2rem 0 2.5rem;
   height: -moz-fit-content;
   height: fit-content;
+  width: 100%;
+}
+.card.station-info-card .card__title {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+@media (min-width: 36em) {
+  .card.station-info-card {
+    flex: 0 0 364px;
+  }
 }
 
 .destination-card {
@@ -4101,7 +4104,7 @@ ul.card-list li__body {
   overflow: hidden;
   margin-bottom: 1rem;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .video-card {
     display: flex;
     flex-direction: column;
@@ -5069,7 +5072,7 @@ section.divided {
   white-space: nowrap !important;
   border: 0 !important;
 }
-@media (max-width: 0em) {
+@media (max-width: 35.99875em) {
   .visually-hidden-for-mobile {
     position: absolute !important;
     width: 1px !important;
@@ -5955,7 +5958,7 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span {
 }
 
 .rt {
-  color: white;
+  color: white !important;
   text-align: center;
   width: 2.75em;
   display: inline-flex;
@@ -5985,8 +5988,8 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
   width: 1.5rem;
 }
 
-.rt-type--R1, .rt-type--R2, .rt-type--R3, .rt-type--R4, .rt-type--B2 {
-  padding: 0.75em 0.5em 0.75em 1.25em;
+.rt-type--R1, .rt-type--R2, .rt-type--R3, .rt-type--R4, .rt-type--B2, .rt-type--E1 {
+  padding: 0.5em 0.5em 0.5em 1.25em;
 }
 
 .rt-type--line1 {
@@ -6006,7 +6009,11 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
 }
 .rt-type--R1 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R1-blank.svg");
-  color: var(--line1--600);
+  color: var(--line1--600) !important;
+}
+.rt-type--E1 {
+  background-image: url("https://www.octranspo.com/images/files/icons/route_E1-blank.svg");
+  color: var(--line1--600) !important;
 }
 .rt-type--B2 {
   background-image: url("https://www.octranspo.com/images/files/icons/route_b2-blank.svg");
@@ -6014,15 +6021,15 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
 }
 .rt-type--R2 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R2-blank.svg");
-  color: var(--line2--500);
+  color: var(--line2--500) !important;
 }
 .rt-type--R3 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R3-blank.svg");
-  color: var(--line3--500);
+  color: var(--line3--500) !important;
 }
 .rt-type--R4 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R4-blank.svg");
-  color: var(--line4--500);
+  color: var(--line4--500) !important;
 }
 .rt-type--connexion {
   background-image: url("https://www.octranspo.com/images/files/icons/route_connexion.svg");
@@ -6038,15 +6045,15 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
 }
 .rt-type--connexion_l {
   background-image: url("https://www.octranspo.com/images/files/icons/route_connexion-ltd.svg");
-  color: var(--connexion--600);
+  color: var(--connexion--600) !important;
 }
 .rt-type--frequent_l {
   background-image: url("https://www.octranspo.com/images/files/icons/route_frequent-ltd-nwtb.svg");
-  color: var(--frequent--600);
+  color: var(--frequent--600) !important;
 }
 .rt-type--local_l {
   background-image: url("https://www.octranspo.com/images/files/icons/route_local-ltd.svg");
-  color: var(--local--600);
+  color: var(--local--600) !important;
 }
 
 .rt-1 {
@@ -6063,22 +6070,22 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
 }
 .rt-R1 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R1-blank.svg");
-  color: var(--line1--600);
+  color: var(--line1--600) !important;
   padding-left: 0.85em;
 }
 .rt-R2 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R2-blank.svg");
-  color: var(--line2--500);
+  color: var(--line2--500) !important;
   padding-left: 0.85em;
 }
 .rt-R3 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R3-blank.svg");
-  color: var(--line3--500);
+  color: var(--line3--500) !important;
   padding-left: 0.85em;
 }
 .rt-R4 {
   background-image: url("https://www.octranspo.com/images/files/icons/line_R4-blank.svg");
-  color: var(--line4--500);
+  color: var(--line4--500) !important;
   padding-left: 0.85em;
 }
 
@@ -6087,14 +6094,14 @@ h1 .rt-type--line1, h1 .rt-type--line2, h1 .rt-type--line3, h1 .rt-type--line4, 
 }
 .rt-39, .rt-N39, .rt-N39, .rt-N39, .rt-N45, .rt-N45, .rt-N57, .rt-N57, .rt-N61, .rt-N61, .rt-62, .rt-62, .rt-68, .rt-68, .rt-N75, .rt-N75, .rt-N98, .rt-N98, .rt-111, .rt-111 {
   background-image: url("https://www.octranspo.com/images/files/icons/route_frequent-ltd-nwtb.svg");
-  color: var(--frequent--600);
+  color: var(--frequent--600) !important;
 }
 .rt-8, .rt-8, .rt-9, .rt-9, .rt-18, .rt-18, .rt-19, .rt-19, .rt-20, .rt-20, .rt-24, .rt-24, .rt-24, .rt-24, .rt-30, .rt-30, .rt-31, .rt-31, .rt-33, .rt-33, .rt-34, .rt-34, .rt-35, .rt-35, .rt-36, .rt-36, .rt-38, .rt-38, .rt-42, .rt-42, .rt-48, .rt-48, .rt-49, .rt-49, .rt-51, .rt-51, .rt-53, .rt-53, .rt-56, .rt-56, .rt-58, .rt-58, .rt-60, .rt-60, .rt-67, .rt-67, .rt-67, .rt-70, .rt-70, .rt-73, .rt-73, .rt-81, .rt-81, .rt-82, .rt-82, .rt-86, .rt-86, .rt-93, .rt-93, .rt-99, .rt-99, .rt-110, .rt-110, .rt-110, .rt-110, .rt-112, .rt-112, .rt-116, .rt-116, .rt-138, .rt-138, .rt-161, .rt-161, .rt-162, .rt-162, .rt-163, .rt-163, .rt-165, .rt-165, .rt-168, .rt-168, .rt-173, .rt-173, .rt-189, .rt-189, .rt-197, .rt-197, .rt-198 {
   background-image: url("https://www.octranspo.com/images/files/icons/route_local.svg");
 }
 .rt-8, .rt-8, .rt-13, .rt-13, .rt-15, .rt-15, .rt-17, .rt-17, .rt-21, .rt-21, .rt-23, .rt-23, .rt-26, .rt-26, .rt-32, .rt-32, .rt-33, .rt-33, .rt-38, .rt-38, .rt-43, .rt-43, .rt-47, .rt-47, .rt-58, .rt-58, .rt-60, .rt-60, .rt-66, .rt-66, .rt-67, .rt-67, .rt-73, .rt-73, .rt-82, .rt-82, .rt-84, .rt-84, .rt-92, .rt-92, .rt-92, .rt-94, .rt-94, .rt-99, .rt-117, .rt-117, .rt-125, .rt-125, .rt-139, .rt-139, .rt-153, .rt-153, .rt-158, .rt-158, .rt-161, .rt-161, .rt-187, .rt-187, .rt-198, .rt-198, .rt-301, .rt-301, .rt-302, .rt-302, .rt-303, .rt-303, .rt-304, .rt-304, .rt-305, .rt-305, .rt-404, .rt-404, .rt-405, .rt-405, .rt-406, .rt-406, .rt-450, .rt-450, .rt-451, .rt-451, .rt-452, .rt-452, .rt-454, .rt-454, .rt-455, .rt-455, .rt-456, .rt-456 {
   background-image: url("https://www.octranspo.com/images/files/icons/route_local-ltd.svg");
-  color: var(--local--600);
+  color: var(--local--600) !important;
 }
 .rt-221, .rt-221, .rt-222, .rt-222, .rt-228, .rt-228, .rt-234, .rt-234, .rt-237, .rt-237, .rt-256, .rt-256, .rt-261, .rt-261, .rt-262, .rt-262, .rt-263, .rt-263, .rt-265, .rt-265, .rt-266, .rt-266, .rt-275, .rt-275, .rt-277, .rt-277, .rt-279, .rt-279, .rt-283, .rt-283, .rt-294, .rt-294, .rt-299, .rt-299 {
   background-image: url("https://www.octranspo.com/images/files/icons/route_connexion.svg");
@@ -6270,23 +6277,33 @@ ul.line-routing li {
     display: block;
   }
 }
-.content-container .basic-content, .content-container .ready-for-rail, .stage2-main .basic-content, .stage2-main .ready-for-rail {
+.content-container .basic-content,
+.content-container .ready-for-rail,
+.stage2-main .basic-content,
+.stage2-main .ready-for-rail {
   letter-spacing: 0;
 }
-.content-container body, .stage2-main body {
+.content-container body,
+.stage2-main body {
   font-family: "Open Sans", sans-serif;
   font-display: fallback;
   line-height: 1.25;
 }
-.content-container small, .content-container figcaption, .content-container .caption,
+.content-container small,
 .content-container figcaption,
-.content-container figcaption p, .stage2-main small, .stage2-main figcaption, .stage2-main .caption,
+.content-container .caption,
+.content-container figcaption,
+.content-container figcaption p,
+.stage2-main small,
+.stage2-main figcaption,
+.stage2-main .caption,
 .stage2-main figcaption,
 .stage2-main figcaption p {
   font-size: 0.833rem;
   color: var(--caption-color);
 }
-.content-container .subtitle, .stage2-main .subtitle {
+.content-container .subtitle,
+.stage2-main .subtitle {
   text-transform: uppercase;
   font-size: 0.875rem;
   color: var(--caption-color);
@@ -6294,54 +6311,71 @@ ul.line-routing li {
   margin: 0;
 }
 @media (min-width: 50em) {
-  .content-container .subtitle, .stage2-main .subtitle {
+  .content-container .subtitle,
+  .stage2-main .subtitle {
     font-size: 1rem;
   }
 }
-.content-container .subtitle.line1, .stage2-main .subtitle.line1 {
+.content-container .subtitle.line1,
+.stage2-main .subtitle.line1 {
   color: var(--line1);
 }
-.content-container .subtitle.line2, .stage2-main .subtitle.line2 {
+.content-container .subtitle.line2,
+.stage2-main .subtitle.line2 {
   color: var(--line2);
 }
-.content-container .subtitle.line3, .stage2-main .subtitle.line3 {
+.content-container .subtitle.line3,
+.stage2-main .subtitle.line3 {
   color: var(--line3);
 }
-.content-container .subtitle.line4, .stage2-main .subtitle.line4 {
+.content-container .subtitle.line4,
+.stage2-main .subtitle.line4 {
   color: var(--line4);
 }
-.content-container .subtitle.frequent, .stage2-main .subtitle.frequent {
+.content-container .subtitle.frequent,
+.stage2-main .subtitle.frequent {
   color: var(--frequent);
 }
-.content-container .subtitle.connexion, .stage2-main .subtitle.connexion {
+.content-container .subtitle.connexion,
+.stage2-main .subtitle.connexion {
   color: var(--connexion);
 }
-.content-container .font-weight-600, .stage2-main .font-weight-600 {
+.content-container .font-weight-600,
+.stage2-main .font-weight-600 {
   font-weight: 600;
 }
-.content-container .font-weight-700, .stage2-main .font-weight-700 {
+.content-container .font-weight-700,
+.stage2-main .font-weight-700 {
   font-weight: 700;
 }
 .content-container p,
 .content-container dt,
-.content-container dd, .stage2-main p,
+.content-container dd,
+.stage2-main p,
 .stage2-main dt,
 .stage2-main dd {
   margin: 0 0 0.5rem;
   color: var(--text-color);
   line-height: 1.5;
 }
-.content-container *:not(.main-nav) > ul, .content-container *:not(.main-nav) > ol, .stage2-main *:not(.main-nav) > ul, .stage2-main *:not(.main-nav) > ol {
+.content-container *:not(.main-nav) > ul,
+.content-container *:not(.main-nav) > ol,
+.stage2-main *:not(.main-nav) > ul,
+.stage2-main *:not(.main-nav) > ol {
   margin-bottom: 1rem;
 }
-.content-container *:not(.main-nav) > ul > li, .content-container *:not(.main-nav) > ol > li, .stage2-main *:not(.main-nav) > ul > li, .stage2-main *:not(.main-nav) > ol > li {
+.content-container *:not(.main-nav) > ul > li,
+.content-container *:not(.main-nav) > ol > li,
+.stage2-main *:not(.main-nav) > ul > li,
+.stage2-main *:not(.main-nav) > ol > li {
   margin: 0 0 0.5rem;
   line-height: 1.5;
   color: var(--text-color);
 }
 .content-container .caption,
 .content-container figcaption,
-.content-container figcaption p, .stage2-main .caption,
+.content-container figcaption p,
+.stage2-main .caption,
 .stage2-main figcaption,
 .stage2-main figcaption p {
   font-style: italic;
@@ -6351,11 +6385,16 @@ ul.line-routing li {
   font-weight: 300;
 }
 .content-container h1,
+.stage2-main h1 {
+  margin-bottom: 5rem;
+}
+.content-container h1,
 .content-container h2,
 .content-container h3,
 .content-container h4,
 .content-container h5,
-.content-container h6, .stage2-main h1,
+.content-container h6,
+.stage2-main h1,
 .stage2-main h2,
 .stage2-main h3,
 .stage2-main h4,
@@ -6372,7 +6411,8 @@ ul.line-routing li {
 .content-container h4,
 .content-container h5,
 .content-container h6,
-.content-container th, .stage2-main h1,
+.content-container th,
+.stage2-main h1,
 .stage2-main h2,
 .stage2-main h3,
 .stage2-main h4,
@@ -6384,52 +6424,68 @@ ul.line-routing li {
   margin-bottom: 0.5em;
   line-height: 1.15em;
 }
-.content-container h1, .stage2-main h1 {
+.content-container h1,
+.stage2-main h1 {
   font-size: 1.75rem;
 }
 @media (min-width: 50em) {
-  .content-container h1, .stage2-main h1 {
+  .content-container h1,
+  .stage2-main h1 {
     font-size: 3rem;
   }
 }
-.content-container h2, .content-container .quick-facts h2 span.rt, .stage2-main h2, .stage2-main .quick-facts h2 span.rt {
+.content-container h2,
+.content-container .quick-facts h2 span.rt,
+.stage2-main h2,
+.stage2-main .quick-facts h2 span.rt {
   font-size: 1.602rem;
 }
 @media (min-width: 50em) {
-  .content-container h2, .content-container .quick-facts h2 span.rt, .stage2-main h2, .stage2-main .quick-facts h2 span.rt {
+  .content-container h2,
+  .content-container .quick-facts h2 span.rt,
+  .stage2-main h2,
+  .stage2-main .quick-facts h2 span.rt {
     font-size: 2.125rem;
   }
 }
-.content-container h3, .stage2-main h3 {
+.content-container h3,
+.stage2-main h3 {
   font-size: 1.459rem;
   font-weight: 700;
 }
 @media (min-width: 50em) {
-  .content-container h3, .stage2-main h3 {
+  .content-container h3,
+  .stage2-main h3 {
     font-size: 1.5rem;
   }
 }
-.content-container h4, .stage2-main h4 {
+.content-container h4,
+.stage2-main h4 {
   font-size: 1.083rem;
 }
 @media (min-width: 50em) {
-  .content-container h4, .stage2-main h4 {
+  .content-container h4,
+  .stage2-main h4 {
     font-size: 1.28rem;
   }
 }
-.content-container h5, .stage2-main h5 {
+.content-container h5,
+.stage2-main h5 {
   font-size: 1.0313rem;
 }
 @media (min-width: 50em) {
-  .content-container h5, .stage2-main h5 {
+  .content-container h5,
+  .stage2-main h5 {
     font-size: 1.138rem;
   }
 }
-.content-container h6, .stage2-main h6 {
+.content-container h6,
+.stage2-main h6 {
   font-size: 1rem;
 }
 @media (min-width: 50em) {
-  .content-container h6, .stage2-main h6 {
+  .content-container h6,
+  .stage2-main h6 {
     font-size: 1.067rem;
   }
 }
@@ -6439,7 +6495,8 @@ ul.line-routing li {
 .content-container hgroup h4,
 .content-container hgroup h5,
 .content-container hgroup h6,
-.content-container hgroup th, .stage2-main hgroup h1,
+.content-container hgroup th,
+.stage2-main hgroup h1,
 .stage2-main hgroup h2,
 .stage2-main hgroup h3,
 .stage2-main hgroup h4,
@@ -6451,7 +6508,8 @@ ul.line-routing li {
   margin-bottom: 0.5rem;
 }
 .content-container .subhead,
-.content-container hgroup p, .stage2-main .subhead,
+.content-container hgroup p,
+.stage2-main .subhead,
 .stage2-main hgroup p {
   text-transform: uppercase;
   color: var(--caption-color);
