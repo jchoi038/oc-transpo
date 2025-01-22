@@ -4392,6 +4392,11 @@ ul.card-list li__body {
   height: -moz-max-content;
   height: max-content;
 }
+@media (min-width: 991.98px) {
+  .features--container.mobile-only {
+    display: none;
+  }
+}
 
 .features--list {
   width: 360px;

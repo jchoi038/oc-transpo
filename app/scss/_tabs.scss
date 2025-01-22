@@ -316,6 +316,11 @@
 	gap: 3rem;
 	width: 100%;
 	height: max-content;
+	@media (min-width: 991.98px) {
+		&.mobile-only {
+			display: none;
+		}
+	}
 }
 
 .features--list{
