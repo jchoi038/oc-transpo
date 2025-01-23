@@ -2143,6 +2143,7 @@ a.learn-more::after {
   color: #fff;
   background-color: var(--prm-btn-color);
   outline-offset: 2px;
+  border-color: transparent;
 }
 .btn.btn-primary:hover {
   background-color: var(--prm-btn-color-hover);
