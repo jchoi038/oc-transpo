@@ -28,6 +28,7 @@ var section_nearby = document.getElementById("nearby");
 var section_360 = document.getElementById("360");
 var section_explore = document.getElementById("explore");
 
+
 function checkPage(currentUrl) {
 	if (
 		currentUrl.indexOf("our-services/stations") > 0 ||
@@ -333,34 +334,51 @@ if (page == "station") {
 						section_nearby?.prepend(nearby_map);
 					}
 
-					//insert station layout url to all stationLayoutMap elements by looping through and adding urls
-					if (matchingStation.station_url.layout_map && stationLayoutMap) {
-						for (let i = 0; i < stationLayoutMap.length; i++) {
-							stationLayoutMap[
-								i
-							].src = `${matchingStation.station_url.layout_map}`;
-							if (lang == "en") {
-								stationLayoutMap[
-									i
-								].alt = `${matchingStation.station_name} Station layout`;
-							} else {
-								stationLayoutMap[
-									i
-								].alt = `Plan de la station ${matchingStation.station_name}`;
-							}
-						}
-					}
+					//insert station layout to station layout section
+					if (matchingStation.station_url.layout_map){
+						let figure = document.createElement("figure")
+						let figcaption = document.createElement("figcaption")
+						let layoutImg = document.createElement("img")
+						layoutImg.setAttribute("id", "zoomPanObj")
+						figcaption.innerHTML = lang == "en" ? `Station layout map for ${matchingStation.station_name} Station. <a target="_blank" href="${matchingStation.station_url.layout_map}">Download map</a>` : `Plan de la station ${matchingStation.station_name_fr}`;
+						layoutImg.alt = `${matchingStation.station_name} Station layout`;
+						layoutImg.src = matchingStation.station_url.layout_map;
+						figure.replaceChildren(layoutImg, figcaption)
+						section_stationLayout.replaceChildren(section_stops, figure)
+						
 
-					// place placeholder image if station layout map url DNE in json file
-					if (
-						matchingStation.station_url.layout_map == "" &&
-						section_stationLayout
-					) {
-						for (let i = 0; i < stationLayoutMap.length; i++) {
-							stationLayoutMap[i].src =
-								"https://staging.octranspo1.com/images/files/test/placeholder.png";
-						}
+					} else {
+						// remove layout section
+						section_stationLayout.remove()
+						document.getElementById("quicklinks-card_station-layout").remove()
 					}
+					
+
+					// if (matchingStation.station_url.layout_map && stationLayoutMap) {
+					// 	for (let i = 0; i < stationLayoutMap.length; i++) {
+					// 		stationLayoutMap[i].src = `${matchingStation.station_url.layout_map}`;
+					// 		if (lang == "en") {
+					// 			let figure = document.createElement("figure")
+					// 			let figcaption = document.createElement("figcaption")
+					// 			let layoutImg = document.createElement("img")
+					// 			layoutImg.setAttribute("id", "zoomPanObj")
+					// 			figcaption.textContent = `Station layout map for ${matchingStation} Station.`
+					// 			stationLayoutMap[i].alt = `${matchingStation.station_name} Station layout`;
+					// 			document.getElementById("layout").appendChild(figure)
+					// 			document.getElementById("layout").appendChild(figcaption)
+					// 			// figure.appendChild(layoutImg)
+					// 			// figure.appendChild(figcaption)
+
+								
+					// 		} else {
+					// 			stationLayoutMap[i].alt = `Plan de la station ${matchingStation.station_name}`;
+					// 		}
+					// 	}
+					// }
+
+					// ---
+
+					
 					function getStationType(matchingStation, selectOptionType) {
 						// Check which lines or bus services the station belongs to and append the icons accordingly
 						if (matchingStation.station_type.line_1 == true) {
@@ -737,6 +755,8 @@ if (page == "station") {
 
 	// create bus boarding table route stopRecipes.json
 	function appendRowsToBusBoardingTable(tbody, routes, stop) {
+		console.log(routes)
+
 		let rows = []; // Array to store the rows
 		for (var route of routes) {
 			let row = document.createElement("tr");
@@ -857,9 +877,11 @@ if (page == "station") {
 
 		// Create the caption
 		const caption = document.createElement("caption");
+		// const h3 = document.createElement("h3");
+		// caption.appendChild(h3)
 		lang == "en"
-			? (caption.textContent = "Train platforms")
-			: (caption.textContent = "{Train platforms}");
+			? (caption.textContent = "Train boarding locations")
+			: (caption.textContent = "{Train boarding locations}");
 
 		table.appendChild(caption);
 
@@ -868,27 +890,86 @@ if (page == "station") {
 		// tbody.className = "grid--2col";
 
 		// Loop through the stations and create rows
-		if (lang == "en"){
+		if (station.station_extension){
+			if (station.station_type.line_1){
+				const note = document.createElement("div");
+			note.innerHTML = lang == "en" ? 
+			`
+			<div class="note note__type--info">
+				<p class="note__title">This is a future O-Train Line <span class="rt rt-type--line1">1</span> ${station.station_extension == "west" ? "West" : "East"}  Extension station</p>
+				<div class="note__desc">
+					<p>${station.station_extension == "west" ? "West" : "Line 1 East"} Extension is coming in  ${station.station_extension == "west" ? "2026" : "2025"}. For more information, <a href="https://www.octranspo.com/en/o-train-extension">visit our O-Train Extension page</a>.</p>
+				</div>
+			</div>`
+			: `{...}`
+		
+			section_trainBoarding.appendChild(note);
+			}
+			if (station.station_type.line_3) {
+				const note = document.createElement("div");
+				note.innerHTML = `
+				<div class="note note__type--info">
+					<p class="note__title">This is a future O-Train Line <span class="rt rt-type--line3">3</span> station</p>
+					<div class="note__desc">
+						<p>Line 3 is a future line coming in 2026 and is not open at this time. For more information, <a href="https://www.octranspo.com/en/o-train-extension">visit our O-Train Extension page</a>.</p>
+					</div>
+				</div>`
+				section_trainBoarding.appendChild(note);
+				return
+			}
+			return
+		}
+		if (station.station_type.line_1){
+			
 			if (
-				station.station_type.line_1 &&
 				station.station_name != "Tunney's Pasture"
 			) {
-				addRow(tbody, "Tunney's Pasture", "line1", "1", "West");
+				addRow(tbody, "Tunney's Pasture", "line1", "1", "West Platform");
 			}
-			if (station.station_type.line_1 && station.station_name != "Blair") {
-				addRow(tbody, "Blair", "line1", "1", "East");
+			if (station.station_name != "Blair") {
+				addRow(tbody, "Blair", "line1", "1", "East Platform");
 			}
-			if (station.station_type.line_2 && station.station_name != "Limebank") {
-				addRow(tbody, "Limebank", "line2", "2", "South");
+		}
+		
+		if (lang == "en"){
+			if (station.station_type.line_2){
+				if (
+					station.station_name == "Carleton" ||
+					station.station_name == "Leitrim" ||
+					station.station_name == "Bowesville"
+				) {
+					addRow(tbody, "Bayview", "line2", "2", "North Platform");
+					addRow(tbody, "Limebank", "line2", "2", "South Platform");
+				}
+				else if (station.station_name == "Bayview") {
+					// addRow(tbody, "Bayview", "line2", "2", "South Platform 1");
+					addRow(tbody, "Limebank", "line2", "2", "South Platform 2");
+					addRow(tbody, "Limebank", "line2", "2", "South Platform 1 (off only)");
+				}
+				else if (station.station_name == "Limebank") {
+					addRow(tbody, "Bayview", "line2", "2", "North Platform 1 (off only)");
+					addRow(tbody, "Limebank", "line2", "2", "North Platform 2");
+				}
+				else if (station.station_name == "South Keys") {
+					addRow(tbody, "Bayview", "line2", "2", "North Platform 1");
+					addRow(tbody, "Limebank", "line2", "2", "South Platform 2");
+				}
+				else if (
+					station.station_name == "Dow's Lake" ||
+					station.station_name == "Mooney's Bay" ||
+					station.station_name == "Walkley" ||
+					station.station_name == "Greenboro" 
+				) {
+					addRow(tbody, "Bayview", "line2", "2", "All Trains (single track)");
+				}
 			}
-			if (station.station_type.line_2 && station.station_name != "Bayview") {
-				addRow(tbody, "Bayview", "line2", "2", "North");
-			}
-			if (station.station_type.line_4 && station.station_name != "Airport" ) {
+			
+					
+			if (station.station_type.line_4 && station.station_name != "Airport Platform" ) {
 				addRow(tbody, "Airport", "line4", "4", "Airport");
 			}
 			if (station.station_type.line_4 && station.station_name != "South Keys") {
-				addRow(tbody, "South Keys", "line4", "4", "South Keys");
+				addRow(tbody, "South Keys", "line4", "4", "South Keys Platform");
 			}
 		}
 		if (lang == "fr"){
@@ -917,30 +998,7 @@ if (page == "station") {
 		
 		// Append the tbody to the table
 		table.appendChild(tbody);
-
 		table = reOrderTable(table);
-
-		// Add the table to the DOM (e.g., in a specific container)
-		section_trainBoarding.appendChild(table);
-		if (lang == "en"){
-			if (
-				station.station_type.line_3
-			) {
-				console.log("line 3")
-				const note = document.createElement("div");
-				note.innerHTML = `
-				<div class="note note__type--info">
-					<p class="note__title">This is a future O-Train Line 3 station</p>
-					<div class="note__desc">
-						<p>Line 3 is a future line coming in 2027 and is not open at this time. For more information, visit our O-Train Extension site.</p>
-						<div class="btn-container"><a href="https://www.octranspo.com/en/o-train-extension" class="btn btn-extension">O-Train Extension</a></div>
-					</div>
-				</div>`
-				section_trainBoarding.appendChild(note);
-				return
-			}
-		}
-
 	}
 
 	// Helper function to add a row to the table
@@ -983,12 +1041,9 @@ if (page == "station") {
 		let table = document.createElement("table");
 		let thead = document.createElement("thead");
 		let caption = document.createElement("caption");
-		caption.textContent = "Train platform location";
-		// caption.className = "banner banner--nwtb mb-0";
-		caption.style.borderRadius = "0.5rem 0.5rem 0 0";
-		// caption.style.paddingTop = "0.5rem";
-		// caption.style.paddingBottom = "0.5rem";
 		let tbody = document.createElement("tbody");
+		let h3 = document.createElement("h3")
+		// caption.appendChild(h3)
 
 		// Create header row with "Route" and "Stop Name" (only once)
 		let headerRow = document.createElement("tr");
@@ -1042,13 +1097,12 @@ if (page == "station") {
 			table.appendChild(tbody);
 			table = reOrderTable(table);
 			section_busBoardingLocations.appendChild(table);
-			
 			table.className = "light boarding-locations";
 			// tbody.className = "grid--3col";
 			stationRoutes = buildRouteListParagraph(tbody);
-		}
-		if (tbody.innerHTML == "") {
-			section_busBoardingLocations?.remove();
+			console.log("hello")
+		}else if (tbody.innerHTML == "") {
+			section_busBoardingLocations.remove()
 		}
 	}
 	function buildRouteListParagraph(tbody) {
@@ -1114,6 +1168,8 @@ if (page == "station") {
 				lang == "en"
 					? `<span style="color: var(--caption-color);">560#</span> <strong>${matchingStation.station_560}</strong>`
 					: `<span style="color: var(--caption-color);">n<sup>o</sup>560</span> <strong>${matchingStation.station_560}</strong>`;
+		} else{
+			document.getElementById("station-info-card").remove()
 		}
 
 		// Create the ul for the body
@@ -1446,19 +1502,19 @@ if (page == "station") {
 		section.appendChild(layoutDiv);
 	}
 	function buildStationLayoutSectionLayout() {
-		section_stationLayout.className = "section flex";
-		createSectionH2(
-			lang == "en" ? "Station layout" : "Carte de la station",
-			section_stationLayout
-		);
+		section_stationLayout.className = "grid grid-1fr-2fr";
+		// createSectionH2(
+		// 	lang == "en" ? "Station layout" : "Carte de la station",
+		// 	section_stationLayout
+		// );
 	}
 
 	function buildStopsSectionLayout() {
-		section_stops.className = "section grid--2col";
-		createSectionH2(
-			lang == "en" ? "Boarding locations" : "Zones d'embarquement",
-			section_stops
-		);
+		section_stops.className = "flex";
+		// createSectionH2(
+		// 	lang == "en" ? "Boarding locations" : "Zones d'embarquement",
+		// 	section_stops
+		// );
 	}
 }
 

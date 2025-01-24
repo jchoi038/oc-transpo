@@ -1957,7 +1957,7 @@ th.rt-confederation {
   padding-bottom: 2rem;
   display: flex;
   margin-bottom: 1rem;
-  min-height: 600px;
+  min-height: 400px;
   align-items: center;
 }
 .hero-banner img {
@@ -3894,7 +3894,7 @@ ul.card-list li__body {
 
 .decor-card, #fares-made-easy-card, #wayfinding-card, #accessibiliy-card, #cyclist-card, #safety-card, #comfort-card, #within-5km-card, #also-nearby-card {
   padding-bottom: 8rem;
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 @media (max-width: 35.99875em) {
   .decor-card, #fares-made-easy-card, #wayfinding-card, #accessibiliy-card, #cyclist-card, #safety-card, #comfort-card, #within-5km-card, #also-nearby-card {
@@ -3907,7 +3907,6 @@ ul.card-list li__body {
   font-size: 1.3rem;
   margin-bottom: 1.5em;
   line-height: 1.15em;
-  min-height: 60px;
 }
 @media (max-width: 35.99875em) {
   .decor-card .card__title, #fares-made-easy-card .card__title, #wayfinding-card .card__title, #accessibiliy-card .card__title, #cyclist-card .card__title, #safety-card .card__title, #comfort-card .card__title, #within-5km-card .card__title, #also-nearby-card .card__title {
@@ -3919,8 +3918,8 @@ ul.card-list li__body {
 .decor-card::before, #fares-made-easy-card::before, #wayfinding-card::before, #accessibiliy-card::before, #cyclist-card::before, #safety-card::before, #comfort-card::before, #within-5km-card::before, #also-nearby-card::before {
   content: "";
   align-self: center;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   display: inline-block;
   flex-shrink: 0;
   background-repeat: no-repeat;

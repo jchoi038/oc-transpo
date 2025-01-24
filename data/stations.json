@@ -171,7 +171,7 @@
 		"station_name_fr": "",
 		"station_url": {
 			"staging": "",
-			"prod": "https://www.octranspo.com/en/our-services/stations-2/baseline1",
+			"prod": "https://www.octranspo.com/en/our-services/stations-2/algonquin-01",
 			"prod_fr": "/fr/nos-services/stations-3/baseline1",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BAS.png",
 			"schedules": "",
@@ -660,58 +660,6 @@
 			"line_1": null,
 			"line_2": null,
 			"line_3": 2,
-			"line_4": null
-		},
-		"station_completed": {
-			"bus": null
-		},
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": "",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
-		"id": "",
-		"station_560": null,
-		"connecting_stops": "",
-		"station_name": "Convent Glen",
-		"station_type": {
-			"transitway": "",
-			"line_1": true,
-			"line_2": null,
-			"line_3": true,
-			"line_4": null,
-			"bus": null
-		},
-		"station_name_fr": "",
-		"station_url": {
-			"staging": "",
-			"prod": "https://www.octranspo.com/en/our-services/stations-2/convent-glen/",
-			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/convent-glen-2/",
-			"layout_map": "",
-			"schedules": "",
-			"hero_image": "https://www.octranspo.com/images/files/stage2/renderings/convent_glen_station.png",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null,
-			"bus_stop": null,
-			"accessible": true,
-			"airport": null
-		},
-		"station_extension": "east",
-		"routing_index": {
-			"line_1": 23,
-			"line_2": null,
-			"line_3": 25,
 			"line_4": null
 		},
 		"station_completed": {
@@ -1926,7 +1874,7 @@
 	},
 	{
 		"id": "",
-		"station_560": null,
+		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "Montréal",
 		"station_type": {
@@ -2134,7 +2082,7 @@
 	},
 	{
 		"id": "",
-		"station_560": null,
+		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "New Orchard",
 		"station_type": {
@@ -2343,7 +2291,7 @@
 	{
 		"id": "PLA",
 		"station_560": 3028,
-		"connecting_stops": "",
+		"connecting_stops": "3075",
 		"station_name": "Place d'Orléans",
 		"station_type": {
 			"transitway": "east",
@@ -2446,7 +2394,7 @@
 	},
 	{
 		"id": "",
-		"station_560": null,
+		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "Queensview",
 		"station_type": {
@@ -2706,7 +2654,7 @@
 	},
 	{
 		"id": "",
-		"station_560": null,
+		"station_560": "",
 		"connecting_stops": "",
 		"station_name": "Sherbourne",
 		"station_type": {
@@ -3394,14 +3342,14 @@
 			"line_4": false,
 			"bus": true
 		},
-		"station_name_fr": "",
+		"station_name_fr": "Westboro",
 		"station_url": {
 			"staging": "",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/westboro1",
 			"prod_fr": "/fr/nos-services/stations-3/westboro2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/WEB.png",
 			"schedules": "",
-			"hero_image": "",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/westboro_station_1-min.jpg",
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
@@ -3418,318 +3366,6 @@
 			"line_1": 7,
 			"line_2": null,
 			"line_3": 9,
-			"line_4": null
-		},
-		"station_completed": {
-			"bus": null
-		},
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": "",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
-		"id": "",
-		"station_560": null,
-		"connecting_stops": "",
-		"station_name": "Stittsville",
-		"station_type": {
-			"transitway": "west",
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
-			"bus": null
-		},
-		"station_name_fr": "",
-		"station_url": {
-			"staging": "",
-			"prod": "",
-			"prod_fr": "",
-			"layout_map": "",
-			"schedules": "",
-			"hero_image": "",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null,
-			"bus_stop": null,
-			"accessible": false,
-			"airport": null
-		},
-		"station_extension": "",
-		"routing_index": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null
-		},
-		"station_completed": {
-			"bus": null
-		},
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": "",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
-		"id": "",
-		"station_560": null,
-		"connecting_stops": "",
-		"station_name": "Crystal Bay",
-		"station_type": {
-			"transitway": "west",
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
-			"bus": null
-		},
-		"station_name_fr": "",
-		"station_url": {
-			"staging": "",
-			"prod": "",
-			"prod_fr": "",
-			"layout_map": "",
-			"schedules": "",
-			"hero_image": "",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null,
-			"bus_stop": null,
-			"accessible": false,
-			"airport": null
-		},
-		"station_extension": "",
-		"routing_index": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null
-		},
-		"station_completed": {
-			"bus": null
-		},
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": "",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
-		"id": "",
-		"station_560": null,
-		"connecting_stops": "",
-		"station_name": "Bells Corners",
-		"station_type": {
-			"transitway": "west",
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
-			"bus": null
-		},
-		"station_name_fr": "",
-		"station_url": {
-			"staging": "",
-			"prod": "",
-			"prod_fr": "",
-			"layout_map": "",
-			"schedules": "",
-			"hero_image": "",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null,
-			"bus_stop": null,
-			"accessible": false,
-			"airport": null
-		},
-		"station_extension": "",
-		"routing_index": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null
-		},
-		"station_completed": {
-			"bus": null
-		},
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": "",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
-		"id": "",
-		"station_560": null,
-		"connecting_stops": "",
-		"station_name": "CitiGate",
-		"station_type": {
-			"transitway": "southwest",
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
-			"bus": null
-		},
-		"station_name_fr": "",
-		"station_url": {
-			"staging": "",
-			"prod": "",
-			"prod_fr": "",
-			"layout_map": "",
-			"schedules": "",
-			"hero_image": "",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null,
-			"bus_stop": null,
-			"accessible": false,
-			"airport": null
-		},
-		"station_extension": "",
-		"routing_index": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null
-		},
-		"station_completed": {
-			"bus": null
-		},
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": "",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
-		"id": "",
-		"station_560": null,
-		"connecting_stops": "",
-		"station_name": "Cambrian",
-		"station_type": {
-			"transitway": "southwest",
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
-			"bus": null
-		},
-		"station_name_fr": "",
-		"station_url": {
-			"staging": "",
-			"prod": "",
-			"prod_fr": "",
-			"layout_map": "",
-			"schedules": "",
-			"hero_image": "",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null,
-			"bus_stop": null,
-			"accessible": false,
-			"airport": null
-		},
-		"station_extension": "",
-		"routing_index": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null
-		},
-		"station_completed": {
-			"bus": null
-		},
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": "",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
-		"id": "",
-		"station_560": null,
-		"connecting_stops": "",
-		"station_name": "Hawthorne",
-		"station_type": {
-			"transitway": "southeast",
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
-			"line_4": null,
-			"bus": null
-		},
-		"station_name_fr": "",
-		"station_url": {
-			"staging": "",
-			"prod": "",
-			"prod_fr": "",
-			"layout_map": "",
-			"schedules": "",
-			"hero_image": "",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null,
-			"bus_stop": null,
-			"accessible": false,
-			"airport": null
-		},
-		"station_extension": "",
-		"routing_index": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": null,
 			"line_4": null
 		},
 		"station_completed": {

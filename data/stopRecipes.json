@@ -209,16 +209,8 @@
 		"name": "ACACIA / RIDEAU",
 		"routes": "6 Greenboro [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 1650,
 		"name": "MARIER / BEECHWOOD",
@@ -750,26 +742,6 @@
 		"routes": "19 Hurdman [GRY]"
 	},
 	{
-		"stop_560": 7095,
-		"name": "QUILL / QUEEN MARY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7098,
-		"name": "QUILL / QUEEN MARY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7096,
-		"name": "QUILL / GLYNN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7099,
-		"name": "QUILL / COLUMBUS",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8577,
 		"name": "DONALD / QUILL",
 		"routes": "19 Hurdman [GRY]"
@@ -793,31 +765,6 @@
 		"stop_560": 3578,
 		"name": "DONALD / TELFORD",
 		"routes": "19 Parliament / Parlement [GRY]"
-	},
-	{
-		"stop_560": 0,
-		"name": "DONALD / TELFORD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7404,
-		"name": "LOLA / DONALD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1517,
-		"name": "LOLA / DONALD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7267,
-		"name": "LOLA / KING GEORGE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7114,
-		"name": "LOLA / QUEEN MARY",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 7113,
@@ -848,16 +795,6 @@
 		"stop_560": 7117,
 		"name": "COVENTRY / BELFAST",
 		"routes": "18 Billings Bridge [GRY]"
-	},
-	{
-		"stop_560": 1977,
-		"name": "COVENTRY / ST-LAURENT MALL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1978,
-		"name": "COVENTRY / ST-LAURENT MALL",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 5867,
@@ -1316,44 +1253,40 @@
 	},
 	{
 		"stop_560": 3045,
-		"name": "BARRHAVEN CENTRE 1A",
+		"name": "1A",
 		"routes": "70 Fallowfield [GRY], 75 Cambrian [BLU], 80 Barrhaven Centre [BLU], 99 Barrhaven Centre / Weybridge [GRY], 110 Innovation/ Briarbrook [GRY], 173 Barrhaven Centre [GRY], 275 Half Moon Bay [PUR], 279 Manotick [PUR], 305 North Gower [GOW]"
 	},
 	{
 		"stop_560": 3045,
-		"name": "BARRHAVEN CENTRE 2A",
+		"name": "2A",
 		"routes": "70 Limebank [GRY], 75 Tunney's Pasture [BLU], 80 Barrhaven Centre [BLU], 99 Limebank [GRY], 110 Limebank [GRY], 173 Citigate [GRY], 275 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR], 305 Carlingwood [GOW], 406 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 456 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3017,
-		"name": "BASELINE 1A",
+		"name": "1A",
 		"routes": "68 Baseline [BLU], 88 Hurdman [BLU]"
 	},
 	{
 		"stop_560": 3017,
-		"name": "BASELINE 1B",
+		"name": "1B",
 		"routes": "111 Billings Bridge / Carleton [BLU], 112 Billings Bridge [GRY], 189 Colonnade [GRY], 305 North Gower [GOW]"
 	},
 	{
 		"stop_560": 3017,
-		"name": "BASELINE 1C",
+		"name": "1C",
 		"routes": "53 Tunney's Pasture [GRY], 82 Lincoln Fields / Tunney's Pasture [GRY], 84 Centrepointe [GOW], 87 Baseline [BLU], 116 Greenboro [GRY], 117 Greenboro [GOW], 187 Amberwood [GOW]"
 	},
 	{
 		"stop_560": 3017,
-		"name": "BASELINE 1D",
+		"name": "1D",
 		"routes": "73 Limebank [GOW], 74 Limebank [BLU], 75 Cambrian [BLU]"
 	},
 	{
 		"stop_560": 3017,
-		"name": "BASELINE 2A",
+		"name": "2A",
 		"routes": "68 Terry Fox [BLU], 87 Tunney's Pasture [BLU], 88 Bayshore [BLU], 116 Baseline [GRY], 117 Baseline [GOW], 187 Baseline [GOW], 305 Carlingwood [GOW], 406 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 456 Lansdowne [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 8216,
 		"name": "PLEASANT PARK / CABOT",
@@ -1475,26 +1408,6 @@
 		"routes": "44 Billings Bridge [BLU]"
 	},
 	{
-		"stop_560": 8359,
-		"name": "HERON / ST PATS H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "ALTA VISTA / ST PATRICK H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8425,
-		"name": "ALTA VISTA / RIDGEMONT",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "ALTA VISTA / AYERS",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8231,
 		"name": "HERON / ALTA VISTA",
 		"routes": "41 Billings Bridge [BLU], 92 Hurdman [GOW]"
@@ -1561,12 +1474,12 @@
 	},
 	{
 		"stop_560": 3017,
-		"name": "BASELINE 2B",
+		"name": "2B",
 		"routes": "53 Baseline [GRY], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], 82 Baseline [GRY], 84 Baseline [GOW], 111 Baseline [BLU], 112 Baseline [GRY], 189 Baseline [GRY]"
 	},
 	{
 		"stop_560": 3017,
-		"name": "BASELINE STN OFF ONLY",
+		"name": "STN OFF ONLY",
 		"routes": "275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
 	},
 	{
@@ -1648,36 +1561,6 @@
 		"stop_560": 1087,
 		"name": "WALKLEY / HEATHERINGTON",
 		"routes": "44 Hurdman [BLU], 92 Hurdman [GOW]"
-	},
-	{
-		"stop_560": 8387,
-		"name": "WALKLEY / HEATHERINGTON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8399,
-		"name": "WALKLEY / AD. 1690",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7201,
-		"name": "WALKLEY / AD. 1771",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7199,
-		"name": "WALKLEY / AD. 1771",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7202,
-		"name": "WALKLEY / HOLLY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7200,
-		"name": "WALKLEY / HOLLY",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 5806,
@@ -1879,61 +1762,17 @@
 		"name": "KILBORN / HAIG",
 		"routes": "48 Hurdman [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 5822,
 		"name": "Heron/ Jefferson",
@@ -2065,34 +1904,14 @@
 		"routes": "5 Rideau [BLU]"
 	},
 	{
-		"stop_560": 7238,
-		"name": "SMYTH / SOUTHHAVEN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7239,
-		"name": "SMYTH / HIGHLAND",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8565,
 		"name": "SMYTH / LYNDA",
 		"routes": "5 Elmvale [BLU]"
 	},
 	{
-		"stop_560": 8564,
-		"name": "SMYTH / LYNDA",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 7244,
 		"name": "SMYTH / ROGER GUINDON",
 		"routes": "5 Rideau [BLU]"
-	},
-	{
-		"stop_560": 0,
-		"name": "SMYTH / FRANCO-CITÉ",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 7242,
@@ -2215,11 +2034,6 @@
 		"routes": "49 Elmvale [GRY]"
 	},
 	{
-		"stop_560": 0,
-		"name": "DAUPHIN / TWEED",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8338,
 		"name": "PLEASANT PARK / DORVAL",
 		"routes": "49 Billings Bridge [GRY]"
@@ -2273,11 +2087,6 @@
 		"stop_560": 8340,
 		"name": "CANTERBURY / HALIFAX",
 		"routes": "48 Hurdman [GRY]"
-	},
-	{
-		"stop_560": 540,
-		"name": "CANTERBURY / CANTERBURY H.S.",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 8345,
@@ -2484,36 +2293,12 @@
 		"name": "RUSSELL / SOUTHVALE",
 		"routes": "41 Billings Bridge [BLU], 48 Carleton [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 7294,
 		"name": "RUSSELL / SOUTHVALE",
@@ -2649,16 +2434,8 @@
 		"name": "SHEFFIELD / AD. 2801",
 		"routes": "47 St-Laurent [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 7687,
 		"name": "BANK / SLATER",
@@ -2694,16 +2471,8 @@
 		"name": "SLATER / BAY",
 		"routes": "10 Main [BLU], 12 Blair [BLU], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 3049,
 		"name": "BEATRICE 1A",
@@ -2830,11 +2599,6 @@
 		"routes": "6 Rockcliffe [BLU], 20 St-Laurent [GRY]"
 	},
 	{
-		"stop_560": 501,
-		"name": "OLD ST PATRICK / DE LA SALLE H.S.",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 6828,
 		"name": "OLD ST PATRICK / BEAUSOLEIL",
 		"routes": "6 Greenboro [BLU], 20 Rideau [GRY]"
@@ -2899,26 +2663,10 @@
 		"name": "3A",
 		"routes": "49 Billings Bridge [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 6831,
 		"name": "SUSSEX / AD. 100",
@@ -3289,11 +3037,7 @@
 		"name": "GREENFIELD / GREENFIELD",
 		"routes": "N45 Rideau [BOW], N98 Rideau [BOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 7043,
 		"name": "GREENFIELD / HAVELOCK",
@@ -3401,11 +3145,7 @@
 		"name": "MAIN / HARVEY",
 		"routes": "N45 Rideau [BOW], N98 Rideau [BOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 3027,
 		"name": "A",
@@ -3416,16 +3156,8 @@
 		"name": "B",
 		"routes": "E1 Blair [EXP], E1 Lyon [EXP], 38 Trim [GRY], 125 Blair [GOW], 237 Place d'Orléans [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 2034,
 		"name": "ELGIN / ISABELLA",
@@ -3516,11 +3248,7 @@
 		"name": "MAIN / LEES",
 		"routes": "5 Rideau [BLU], 10 Hurdman [BLU], 18 St-Laurent [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6809,
 		"name": "MAIN / OBLATS",
@@ -3690,11 +3418,6 @@
 		"stop_560": 6773,
 		"name": "BANK / AYLMER",
 		"routes": "6 Rockcliffe [BLU], 7 St-Laurent [BLU], 451 Lansdowne [GOW], 452 Lansdowne [GOW]"
-	},
-	{
-		"stop_560": 3080,
-		"name": "BANK / WILTON",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 3080,
@@ -4602,61 +4325,29 @@
 		"name": "DES ALLUMETTIERES / LAURIER",
 		"routes": "8 Dow's Lake / Lac Dow [GRY], 13 Tunney's Pasture [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6532,
 		"name": "MAISONNEUVE / DES ALLUMETTIERES",
 		"routes": "8 Dow's Lake / Lac Dow [GRY], 13 Tunney's Pasture [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6531,
 		"name": "MAISONNEUVE / PAPINEAU",
 		"routes": "8 Dow's Lake / Lac Dow [GRY], 13 Tunney's Pasture [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 5742,
 		"name": "MAISONNEUVE / PLACE D'ACCUEIL",
 		"routes": "8 Dow's Lake / Lac Dow [GRY], 13 Tunney's Pasture [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
 	{
 		"stop_560": 6534,
 		"name": "LAURIER / MAISONNEUVE",
@@ -4857,11 +4548,7 @@
 		"name": "ST-LAURENT / MONTRÉAL",
 		"routes": "7 Carleton [BLU], 17 Wateridge [GOW], 20 St-Laurent [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1519,
 		"name": "BRITTANY / COLEFORD",
@@ -5745,26 +5432,14 @@
 		"name": "CARSONS / MONTRÉAL",
 		"routes": "25 Millennium [BLU], 125 Blair [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 4424,
 		"name": "CARSONS / BERMUDA",
 		"routes": "25 Millennium [BLU], 125 Blair [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 467,
 		"name": "DEN HAAG / MONTRÉAL",
@@ -5775,11 +5450,7 @@
 		"name": "DEN HAAG / CARWOOD",
 		"routes": "15 Parliament / Parlement [GOW], 25 Wateridge [BLU], 125 Aviation Museum / Musée de l'Aviation [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 469,
 		"name": "DEN HAAG / BOREALIS",
@@ -5875,61 +5546,11 @@
 		"name": "BATHGATE / OGILVIE",
 		"routes": "15 Parliament / Parlement [GOW], 25 Wateridge [BLU], 125 Aviation Museum / Musée de l'Aviation [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "8523",
-		"name": "PLUMBER / CLOSSE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "4436",
-		"name": "CHARLTON / PLUMBER",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "4437",
-		"name": "CHARLTON / ALLOWAY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "3316",
-		"name": "MATHESON / CHARLTON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "8522",
-		"name": "MATHESON / ALBORO",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "1400",
-		"name": "MATHESON / BATHGATE",
-		"routes": "School Routes Only"
-	},
+	
+	
+	
+	
+	
 	{
 		"stop_560": 1238,
 		"name": "OGILVIE / AVIATION",
@@ -6056,7 +5677,7 @@
 		"routes": "57 Tunney's Pasture [BLU], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], 62 Tunney's Pasture [BLU], 63 Tunney's Pasture [BLU], 66 Tunney's Pasture [GOW], 67 Tunney's Pasture [GOW], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], 82 Tunney's Pasture [GOW], 87 Tunney's Pasture [BLU], 265 Tunney's Pasture [PUR]"
 	},
 	{
-		"stop_560": 0,
+		"stop_560": 3013,
 		"name": "DOMINION STN OFF ONLY",
 		"routes": "256 Tunney's Pasture [PUR], 261 Tunney's Pasture [PUR], 262 Tunney's Pasture [PUR], 263 Tunney's Pasture [PUR], 266 Tunney's Pasture [PUR], 275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
 	},
@@ -6074,21 +5695,6 @@
 		"stop_560": 3055,
 		"name": "EAGLESON 3A",
 		"routes": "61 Stittsville [BLU], 67 Cope [GOW], 110 Limebank [GRY], 161 Hazeldean / Glen Cairn [GRY], 168 Hope Side [GRY], 301 Richmond [GOW], 303 Carp [GOW]"
-	},
-	{
-		"stop_560": "0549",
-		"name": "KENDER / OGILVIE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "0550",
-		"name": "OGILVIE / KENDER",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "0000",
-		"name": "OGILVIE / KENDER",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 8776,
@@ -6461,11 +6067,6 @@
 		"routes": "21 Canotek [GOW]"
 	},
 	{
-		"stop_560": 8728,
-		"name": "MONTRÉAL / R.R. 174",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 2369,
 		"name": "ST JOSEPH / R.R. 174",
 		"routes": "24 Chapel Hill/ Compass [GRY]"
@@ -6486,29 +6087,9 @@
 		"routes": "24 St-Laurent [GRY]"
 	},
 	{
-		"stop_560": 1539,
-		"name": "MONTRÉAL / SHEFFORD",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8702,
 		"name": "MONTRÉAL / SHEFFORD",
 		"routes": "21 Blair [GOW], 24 Chapel Hill/ Compass [GRY]"
-	},
-	{
-		"stop_560": 2563,
-		"name": "MONTRÉAL / MISS OTTAWA",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7952,
-		"name": "MONTRÉAL / SINCLAIR",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7953,
-		"name": "MONTRÉAL / LAPORTE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 8703,
@@ -6711,31 +6292,6 @@
 		"routes": "12 Blair [BLU], 24 St-Laurent [GRY]"
 	},
 	{
-		"stop_560": "8667",
-		"name": "OGILVIE / JASMINE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2578",
-		"name": "OGILVIE / AD. 1901",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "3557",
-		"name": "OGILVIE / ELMRIDGE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2579",
-		"name": "OGILVIE / JASMINE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "3558",
-		"name": "OGILVIE / 2ND ELMRIDGE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1975,
 		"name": "OGILVIE / L B PEARSON H.S.",
 		"routes": "12 Blair [BLU], 24 St-Laurent [GRY]"
@@ -6759,11 +6315,6 @@
 		"stop_560": 8656,
 		"name": "JASMINE / OGILVIE",
 		"routes": "12 Tunney's Pasture [BLU], 24 Chapel Hill/ Compass [GRY]"
-	},
-	{
-		"stop_560": "0000",
-		"name": "JASMINE / OGILVIE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 8657,
@@ -6845,11 +6396,7 @@
 		"name": "BEARBROOK / HORNET'S NEST PARK",
 		"routes": "24 Chapel Hill/ Compass [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 2589,
 		"name": "BEARBROOK / WESTPARK",
@@ -6946,39 +6493,9 @@
 		"routes": "24 St-Laurent [GRY]"
 	},
 	{
-		"stop_560": "8684",
-		"name": "NORTHPARK / BEARBROOK",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "8695",
-		"name": "NORTHPARK / BEARBROOK",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2600",
-		"name": "NORTHPARK / BURNVIEW",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2602",
-		"name": "NORTHPARK / RIDGEBURN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2601",
-		"name": "RIDGEBURN / DICEMAN",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8792,
 		"name": "Eastpark W Ridegburn FS",
 		"routes": "24 St-Laurent [GRY]"
-	},
-	{
-		"stop_560": "8196",
-		"name": "RIDGEBURN / EASTPARK",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 8793,
@@ -7019,11 +6536,6 @@
 		"stop_560": 2608,
 		"name": "EASTPARK / INNES",
 		"routes": "24 St-Laurent [GRY]"
-	},
-	{
-		"stop_560": "8952",
-		"name": "INNES / RONDEL",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 2610,
@@ -7070,11 +6582,7 @@
 		"name": "INNES / BEARBROOK",
 		"routes": "25 Wateridge [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 8682,
 		"name": "INNES / BEDDOE",
@@ -7086,11 +6594,6 @@
 		"routes": "25 Wateridge [BLU]"
 	},
 	{
-		"stop_560": "1866",
-		"name": "INNES / PÉPIN",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 2613,
 		"name": "INNES / TAUVETTE",
 		"routes": "25 Millennium [BLU]"
@@ -7099,41 +6602,6 @@
 		"stop_560": 2614,
 		"name": "INNES / TAUVETTE",
 		"routes": "25 Wateridge [BLU]"
-	},
-	{
-		"stop_560": "8678",
-		"name": "TAUVETTE / INNES",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2615",
-		"name": "TAUVETTE / AD. 19",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2616",
-		"name": "TAUVETTE / SOUTHPARK",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "8679",
-		"name": "SOUTHPARK / TAUVETTE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2618",
-		"name": "SOUTHPARK / WOODVIEW",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2619",
-		"name": "SOUTHPARK / WOODBURN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "8025",
-		"name": "SOUTHPARK / INNES",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 766,
@@ -7156,119 +6624,9 @@
 		"routes": "228 Blair [PUR]"
 	},
 	{
-		"stop_560": 8191,
-		"name": "ST JOSEPH / BEARBROOK",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8990,
 		"name": "ST JOSEPH / BEARBROOK",
 		"routes": "24 St-Laurent [GRY]"
-	},
-	{
-		"stop_560": 2630,
-		"name": "ST JOSEPH / AD. 1300",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2633,
-		"name": "ST JOSEPH / AD. 1207",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2631,
-		"name": "ST JOSEPH / HART",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2634,
-		"name": "ST JOSEPH / HART",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2635,
-		"name": "ST JOSEPH / AD. 1360",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2632,
-		"name": "ST JOSEPH / AD. 1360",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8194,
-		"name": "ST JOSEPH / RCMP",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8193,
-		"name": "ST JOSEPH / RCMP",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2636,
-		"name": "ST JOSEPH / AD. 1533",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2638,
-		"name": "ST JOSEPH / AD. 1533",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2637,
-		"name": "ST JOSEPH / GOLDEN VALLEY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2639,
-		"name": "ST JOSEPH / AD. 1510",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2640,
-		"name": "ST JOSEPH / FOREST VALLEY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8120,
-		"name": "ST JOSEPH / YOUVILLE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8100,
-		"name": "ST JOSEPH / AD. 1820",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2641,
-		"name": "ST JOSEPH / CHANTS D'OISEAUX",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2643,
-		"name": "ST JOSEPH / CHANTS D'OISEAUX",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2642,
-		"name": "ST JOSEPH / MARENGER",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2644,
-		"name": "ST JOSEPH / MARENGER",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8463,
-		"name": "ST JOSEPH / JEANNE D'ARC",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 9058,
-		"name": "RENAUD / PAGÉ",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 9059,
@@ -7711,16 +7069,6 @@
 		"routes": "32 Chapel Hill [GOW], 39 Trim [BOW], 138 Place d'Orléans [GRY]"
 	},
 	{
-		"stop_560": 8116,
-		"name": "ST JOSEPH / GREY NUNS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7794,
-		"name": "ST JOSEPH / NOTRE DAME",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": "8101",
 		"name": "ST JOSEPH / NOTRE DAME",
 		"routes": "39 Trim [BOW]"
@@ -7904,16 +7252,6 @@
 		"stop_560": 7741,
 		"name": "ORLÉANS / CARRIÈRE",
 		"routes": "34 Blair [GRY]"
-	},
-	{
-		"stop_560": 542,
-		"name": "CARRIÈRE/ ES Garneau",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 3655,
-		"name": "CARRIÈRE / ORLÉANS",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 7740,
@@ -8256,30 +7594,16 @@
 		"routes": "138 Hiawatha [GRY]"
 	},
 	{
-		"stop_560": "0000",
-		"name": "ORLÉANS / CAIRINE WILSON H.S.",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1534,
 		"name": "ORLÉANS / JEANNE D'ARC",
 		"routes": "138 Hiawatha [GRY]"
-	},
-	{
-		"stop_560": "0790",
-		"name": "ORLÉANS / CAIRINE WILSON H.S.",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 7929,
 		"name": "ORLÉANS / ST LOUIS",
 		"routes": "138 Place d'Orléans [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6960,
 		"name": "FORTUNE / ORLÉANS",
@@ -8637,11 +7961,6 @@
 		"routes": "88 Bayshore [BLU], 90 Greenboro [BLU], 111 Baseline [BLU], 112 Baseline [GRY]"
 	},
 	{
-		"stop_560": "0000",
-		"name": "ST. MATTHEW H.S.",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8166,
 		"name": "JEANNE D'ARC / ORLÉANS",
 		"routes": "38 Trim [GRY], 237 Place d'Orléans [PUR]"
@@ -8666,16 +7985,8 @@
 		"name": "JEANNE D'ARC / BILBERRY",
 		"routes": "38 Blair [GRY], 237 Blair [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 8152,
 		"name": "JEANNE D'ARC / AVIGNON",
@@ -8956,21 +8267,13 @@
 		"name": "ST JOSEPH / PRESTONE",
 		"routes": "36 Place d'Orléans [GRY], 302 St-Laurent / Place d'Orléans [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 8108,
 		"name": "ST JOSEPH / PRESTONE",
 		"routes": "36 Innes [GRY], 302 Cumberland [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 8893,
 		"name": "CENTRUM / PLACE D'ORLÉANS",
@@ -9262,76 +8565,6 @@
 		"routes": "234 Tenth Line [PUR]"
 	},
 	{
-		"stop_560": "8105",
-		"name": "PRESTWICK / DES ÉPINETTES",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "8176",
-		"name": "PRESTWICK / DES ÉPINETTES",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2714",
-		"name": "PRESTWICK / PAYETTE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2717",
-		"name": "PRESTWICK / PAYETTE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2715",
-		"name": "PRESTWICK / GALLOWAY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2718",
-		"name": "PRESTWICK / GALLOWAY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2719",
-		"name": "PRESTWICK / ROXDALE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2716",
-		"name": "PRESTWICK / ROXDALE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "5631",
-		"name": "PRESTWICK / AMIENS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "5630",
-		"name": "AMIENS / PRESTWICK",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2732",
-		"name": "PRESTONE / AMIENS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2720",
-		"name": "PRESTONE / HATFIELD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2733",
-		"name": "PRESTONE / DEAVY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "2721",
-		"name": "PRESTONE / DEAVY",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 5646,
 		"name": "PRESTONE / TOMPKINS",
 		"routes": "35 Blair [GRY]"
@@ -9556,11 +8789,7 @@
 		"name": "DÉCOEUR / JEROME JODOIN",
 		"routes": "32 Blair [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 5161,
 		"name": "DÉCOEUR / AUBÉPINES",
@@ -9571,11 +8800,7 @@
 		"name": "Decoeur/ Jerome Jodoin",
 		"routes": "234 Blair [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 686,
 		"name": "Decoeur/ Mountain Sorrel",
@@ -9771,21 +8996,8 @@
 		"name": "Frank Bender E Innes NS",
 		"routes": "36 Place d'Orléans [GRY]"
 	},
-	{
-		"stop_560": 0,
-		"name": "C.C MER BLEUE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 1688,
 		"name": "ST JOSEPH / TAYLOR CREEK",
@@ -9795,11 +9007,6 @@
 		"stop_560": 2745,
 		"name": "ST JOSEPH / TRIM",
 		"routes": "39 Millennium [BLU]"
-	},
-	{
-		"stop_560": "0748",
-		"name": "ST JOSEPH / TRIM",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 6475,
@@ -9941,21 +9148,9 @@
 		"name": "CHARLEMAGNE / VALIN",
 		"routes": "36 Place d'Orléans [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 7895,
 		"name": "CHARLEMAGNE / MERKLEY",
@@ -9981,11 +9176,7 @@
 		"name": "PORTOBELLO / AD. 1830",
 		"routes": "33 Portobello [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1250,
 		"name": "VALIN / PORTOBELLO",
@@ -10121,76 +9312,24 @@
 		"name": "PRINCESS LOUISE / CÉZANNE",
 		"routes": "33 Place d'Orleans / Blair [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 2758,
 		"name": "PRINCESS LOUISE / MONTCREST",
 		"routes": "33 Place d'Orleans / Blair [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 1655,
 		"name": "BOTTRIELL / CHARLEMAGNE",
@@ -10321,21 +9460,9 @@
 		"name": "GARDENWAY / ESPLANADE",
 		"routes": "35 Blair [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 1834,
 		"name": "GARDENWAY / ORCHARDVIEW",
@@ -10356,11 +9483,7 @@
 		"name": "ORCHARDVIEW / INNES",
 		"routes": "35 Avalon [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 7868,
 		"name": "PORTOBELLO / NESTING",
@@ -10587,29 +9710,14 @@
 		"routes": "39 Millennium [BLU]"
 	},
 	{
-		"stop_560": "0750",
-		"name": "TAYLOR CREEK / LACOLLE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 2778,
 		"name": "TAYLOR CREEK / LACOLLE",
 		"routes": "39 Millennium [BLU]"
 	},
 	{
-		"stop_560": "0751",
-		"name": "TAYLOR CREEK / LACOLLE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 2779,
 		"name": "TAYLOR CREEK / VIMONT",
 		"routes": "39 Millennium [BLU]"
-	},
-	{
-		"stop_560": "0752",
-		"name": "TAYLOR CREEK / VIMONT",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": "1406",
@@ -10620,11 +9728,6 @@
 		"stop_560": 2780,
 		"name": "TAYLOR CREEK / LACOLLE",
 		"routes": "39 Millennium [BLU]"
-	},
-	{
-		"stop_560": "1204",
-		"name": "TAYLOR CREEK / LACOLLE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 699,
@@ -10640,11 +9743,6 @@
 		"stop_560": 2781,
 		"name": "TAYLOR CREEK / TRIM",
 		"routes": "39 Millennium [BLU]"
-	},
-	{
-		"stop_560": "0753",
-		"name": "TAYLOR CREEK / TRIM",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 1123,
@@ -10758,16 +9856,7 @@
 		"name": "BRIAN COBURN / BOISFRANC",
 		"routes": "30 Millennium [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 3656,
-		"name": "Provence/ Innes",
-		"routes": "School Routes Only"
-	},
+	
 	{
 		"stop_560": 5911,
 		"name": "BRIAN COBURN / ESPRIT",
@@ -10792,11 +9881,6 @@
 		"stop_560": 332,
 		"name": "ESPRIT / GALLERIA",
 		"routes": "35 Blair [GRY]"
-	},
-	{
-		"stop_560": 789,
-		"name": "Gisele Lalonde",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 333,
@@ -10858,11 +9942,7 @@
 		"name": "TENTH LINE / INNES",
 		"routes": "31 Tenth Line [GRY], 234 Tenth Line [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1360,
 		"name": "ESPRIT / DU PLATEAU",
@@ -10919,16 +9999,6 @@
 		"routes": "35 Avalon [GRY]"
 	},
 	{
-		"stop_560": "3328",
-		"name": "MILLENNIUM / E.S. GISÈLE LALONDE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1290,
-		"name": "TRIM / INNES",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 9072,
 		"name": "TRIM / SALZBURG",
 		"routes": "25 Wateridge [BLU], 39 Blair [BLU]"
@@ -10959,21 +10029,6 @@
 		"routes": "30 Millennium [GRY]"
 	},
 	{
-		"stop_560": 1211,
-		"name": "TRIM / PINNACLE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1209,
-		"name": "TRIM / PINNACLE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1213,
-		"name": "TRIM / BRIAN COBURN",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 709,
 		"name": "MONTMERE / LINARIA",
 		"routes": "30 Blair [GRY]"
@@ -10999,19 +10054,9 @@
 		"routes": "30 Millennium [GRY]"
 	},
 	{
-		"stop_560": 1317,
-		"name": "BRIAN COBURN / TRIM",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 6923,
 		"name": "BRIAN COBURN / MONTMERE",
 		"routes": "30 Blair [GRY]"
-	},
-	{
-		"stop_560": 1215,
-		"name": "BRIAN COBURN / MONTMERE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 6922,
@@ -11033,26 +10078,10 @@
 		"name": "BRIAN COBURN / NANTES",
 		"routes": "30 Blair [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 5919,
 		"name": "HARVEST VALLEY / SPARKMAN",
@@ -11739,11 +10768,6 @@
 		"routes": "221 Blair [PUR]"
 	},
 	{
-		"stop_560": "3682",
-		"name": "OLD MONTRÉAL / AD. 1183",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1415,
 		"name": "COX COUNTRY / OLD MONTRÉAL",
 		"routes": "221 Blair [PUR]"
@@ -12098,11 +11122,7 @@
 		"name": "OLD MONTRÉAL / KINSELLA",
 		"routes": "221 Cumberland [PUR], 221 Blair [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 8045,
 		"name": "TOM BROWN ARENA",
@@ -12133,21 +11153,9 @@
 		"name": "SCOTT / HOLLAND",
 		"routes": "12 Blair [BLU], 13 Gatineau [GOW], 14 St-Laurent [BLU], 56 King Edward [GRY], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 8032,
 		"name": "Bayswater/ Somerset",
@@ -12203,41 +11211,13 @@
 		"name": "WELLINGTON / HOLLAND",
 		"routes": "11 Waller [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 5000,
 		"name": "HOLLAND / SCOTT",
@@ -12305,27 +11285,27 @@
 	},
 	{
 		"stop_560": 3016,
-		"name": "IRIS 1A",
+		"name": "1A",
 		"routes": "73 Limebank [GOW], 74 Limebank [BLU], 75 Cambrian [BLU], 305 North Gower [GOW]"
 	},
 	{
 		"stop_560": 3016,
-		"name": "IRIS 2A",
+		"name": "2A",
 		"routes": "73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], 305 Carlingwood [GOW]"
 	},
 	{
 		"stop_560": 3070,
-		"name": "JEANNE D'ARC 1A",
+		"name": "1A",
 		"routes": "34 Chapel Hill [GRY], 38 Trim [GRY], 237 Place d'Orléans [PUR]"
 	},
 	{
 		"stop_560": 3070,
-		"name": "JEANNE D'ARC 1B",
+		"name": "1B",
 		"routes": "32 Chapel Hill [GOW], 33 Portobello [GOW], 35 Avalon [GRY], 39 Millennium [BLU], 234 Tenth Line [PUR]"
 	},
 	{
 		"stop_560": 3070,
-		"name": "JEANNE D'ARC 2A",
+		"name": "2A",
 		"routes": "30 Blair [GRY], 32 Blair [GOW], 33 Blair [GOW], 34 Blair [GRY], 35 Blair [GRY], 38 Blair [GRY], 39 Blair [BLU], 234 Blair [PUR], 237 Blair [PUR], 405 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 455 Lansdowne [GOW]"
 	},
 	{
@@ -12493,11 +11473,7 @@
 		"name": "HOLLAND / CARLING",
 		"routes": "53 Tunney's Pasture [GRY], 80 Barrhaven Centre [BLU], 86 Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 8017,
 		"name": "CARLING / HOLLAND",
@@ -12600,11 +11576,7 @@
 		"name": "SCOTT / WESTERN",
 		"routes": "81 Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 7374,
 		"name": "SCOTT / ISLAND PARK",
@@ -12615,21 +11587,9 @@
 		"name": "SCOTT / ISLAND PARK",
 		"routes": "62 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 4841,
 		"name": "MCRAE / SCOTT",
@@ -12645,26 +11605,10 @@
 		"name": "MCRAE / RICHMOND",
 		"routes": "81 Bayshore [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 5615,
 		"name": "CHURCHILL / TRANSIT BRIDGE",
@@ -12777,17 +11721,13 @@
 	},
 	{
 		"stop_560": 3070,
-		"name": "JEANNE d'ARC 3A (D)",
+		"name": "3A",
+		"name-alt": "JEANNE d'ARC 3A (D)",
 		"routes": "31 Tenth Line [GRY], 138 Place d'Orléans [GRY]"
 	},
 	{
-		"stop_560": 0,
-		"name": "WESTBORO OFF ONLY",
-		"routes": "256 Tunney's Pasture [PUR], 261 Tunney's Pasture [PUR], 262 Tunney's Pasture [PUR], 263 Tunney's Pasture [PUR], 266 Tunney's Pasture [PUR], 275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
-	},
-	{
 		"stop_560": 3070,
-		"name": "JEANNE D'ARC 3B",
+		"name": "3B",
 		"routes": "30 Millennium [GRY], 31 Tenth Line [GRY], 138 Place d'Orléans [GRY]"
 	},
 	{
@@ -13010,11 +11950,7 @@
 		"name": "CARLING / ANNA - THE ROYAL",
 		"routes": "80 Barrhaven Centre [BLU], 85 Bayshore [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 2464,
 		"name": "WESTGATE MALL",
@@ -13030,11 +11966,7 @@
 		"name": "MERIVALE / CARLING",
 		"routes": "80 Barrhaven Centre [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1030,
 		"name": "MERIVALE / CARLING",
@@ -13570,16 +12502,7 @@
 		"name": "CARLING / BROADVIEW",
 		"routes": "85 Lees [BLU]"
 	},
-	{
-		"stop_560": 539,
-		"name": "Notre Dame H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 4910,
 		"name": "CARLING / BROADVIEW",
@@ -13765,21 +12688,9 @@
 		"name": "Laperriere/ Clyde N",
 		"routes": "53 Baseline [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 357,
 		"name": "Clyde N/ Laperriere",
@@ -13860,11 +12771,7 @@
 		"name": "RICHMOND / LOCKHART",
 		"routes": "11 Bayshore [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 7515,
 		"name": "RICHMOND / WOODROFFE",
@@ -14045,26 +12952,10 @@
 		"name": "CLARE / KIRKWOOD",
 		"routes": "51 Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 4860,
 		"name": "CHURCHILL / AVONDALE",
@@ -14085,34 +12976,18 @@
 		"name": "CHURCHILL / PRINCETON",
 		"routes": "51 Britannia [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 3070,
-		"name": "JEANNE D'ARC 4A",
+		"name": "4A",
 		"routes": "30 Blair [GRY], 31 Place d'Orléans [GRY], 32 Blair [GOW], 138 Hiawatha [GRY]"
 	},
 	{
 		"stop_560": 3070,
-		"name": "JEANNE D'ARC 4B",
+		"name": "4B",
 		"routes": "31 Place d'Orléans [GRY], 34 Chapel Hill [GRY], 38 Trim [GRY], 138 Hiawatha [GRY], 237 Place d'Orléans [PUR]"
 	},
 	{
@@ -14286,7 +13161,7 @@
 		"routes": "93 Rotary [GRY], 94 Dun Skipper [GOW]"
 	},
 	{
-		"stop_560": 0,
+		"stop_560": 3014,
 		"name": "LINCOLN FIELDS OFF ONLY",
 		"routes": "256 Tunney's Pasture [PUR], 261 Tunney's Pasture [PUR], 262 Tunney's Pasture [PUR], 263 Tunney's Pasture [PUR], 266 Tunney's Pasture [PUR], 275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
 	},
@@ -14355,11 +13230,7 @@
 		"name": "AMBLESIDE / NEW ORCHARD NORTH",
 		"routes": "11 Bayshore [BLU], 153 Lincoln Fields [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 4929,
 		"name": "RICHMOND / WOODROFFE",
@@ -14380,16 +13251,8 @@
 		"name": "RICHMOND / NEW ORCHARD",
 		"routes": "11 Bayshore [BLU], 153 Lincoln Fields [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 6257,
 		"name": "RICHMOND / EDGEWORTH",
@@ -14570,206 +13433,30 @@
 		"name": "BRITANNIA PARK LOOP",
 		"routes": "51 Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 0,
-		"name": "HOLY TRINITY H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 0,
-		"name": "JOHN MCCRAE H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "CEDARVIEW MIDDLE SCHOOL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "PIERRE-DE-BLOIS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "PIERRE-DE-BLOIS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "LOUIS RIEL H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 98,
-		"name": "LOUIS RIEL H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "MOTHER TERESA H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "CANTERBURY H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 0,
-		"name": "ST JOSEPH H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 0,
-		"name": "BELL H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "ST. PIUS H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "GLOUCESTER H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 96,
-		"name": "HILLCREST HIGH SCHOOL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 0,
-		"name": "SIR WILFRED LAURIER H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "ST. FRANCIS XAVIER H.S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 3068,
 		"name": "F",
@@ -14945,36 +13632,12 @@
 		"name": "HERON / GILLES",
 		"routes": "41 Billings Bridge [BLU], 92 Hurdman [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 3068,
 		"name": "G",
@@ -15028,7 +13691,7 @@
 	},
 	{
 		"stop_560": 3014,
-		"name": "LINCOLN FIELDS 1A",
+		"name": "1A",
 		"routes": "60 Cope [GOW], 61 Stittsville [BLU], 62 Stittsville [BLU], 63 Innovation/ Briarbrook [BLU], 66 Innovation [GOW], 67 Cope [GOW]"
 	},
 	{
@@ -15038,37 +13701,37 @@
 	},
 	{
 		"stop_560": 3014,
-		"name": "LINCOLN FIELDS 1B",
+		"name": "1B",
 		"routes": "73 Limebank [GOW], 74 Limebank [BLU], 75 Cambrian [BLU], 256 Bridlewood [PUR], 261 Kimpton [PUR], 262 Fernbank [PUR], 263 Richmond [PUR], 265 Terry Fox [PUR], 266 Springbrook [PUR], 404 Canadian Tire Ctr / Ctr Canadian Tire [GOW]"
 	},
 	{
 		"stop_560": 3014,
-		"name": "LINCOLN FIELDS 2A",
+		"name": "2A",
 		"routes": "57 Tunney's Pasture [BLU], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], 62 Tunney's Pasture [BLU], 63 Tunney's Pasture [BLU], 66 Tunney's Pasture [GOW], 67 Tunney's Pasture [GOW], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], 82 Lincoln Fields / Tunney's Pasture [GRY], 265 Tunney's Pasture [PUR]"
 	},
 	{
 		"stop_560": 3014,
-		"name": "LINCOLN FIELDS 3A",
+		"name": "3A",
 		"routes": "57 Tunney's Pasture [BLU], 82 Lincoln Fields / Tunney's Pasture [GRY]"
 	},
 	{
 		"stop_560": 3014,
-		"name": "LINCOLN FIELDS 3B",
+		"name": "3B",
 		"routes": "11 Waller [BLU], 51 Tunney's Pasture [GRY], N61 Stittsville [BOW], 85 Lees [BLU], 153 Carlingwood [GOW], 301 Carlingwood [GOW], 301 Richmond [GOW], 303 Carlingwood [GOW], 303 Carp [GOW], 305 Carlingwood [GOW], 305 North Gower [GOW]"
 	},
 	{
 		"stop_560": 3014,
-		"name": "LINCOLN FIELDS 4A",
+		"name": "4A",
 		"routes": "57 Carling Campus / Complexe Carling [BLU], 82 Baseline [GRY], 153 Lincoln Fields [GOW]"
 	},
 	{
 		"stop_560": 3014,
-		"name": "LINCOLN FIELDS 4B",
+		"name": "4B",
 		"routes": "11 Bayshore [BLU], 51 Britannia [GRY], 85 Bayshore [BLU]"
 	},
 	{
 		"stop_560": 3014,
-		"name": "LINCOLN FIELDS 5A",
+		"name": "5A",
 		"routes": "51 Britannia [GRY], 85 Bayshore [BLU], 301 Richmond [GOW], 303 Carp [GOW]"
 	},
 	{
@@ -15086,16 +13749,8 @@
 		"name": "LYCÉE CLAUDEL 1A",
 		"routes": "10 Main [BLU], 45 Hospital / Hôpital [BLU], 88 Bayshore [BLU], 90 Greenboro [BLU], 92 Greenboro [GOW], 98 Hawthorne [BLU], 451 Lansdowne [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 8287,
 		"name": "RIVERSIDE / RIDGEWOOD",
@@ -15187,44 +13842,9 @@
 		"routes": "90 Hurdman [BLU]"
 	},
 	{
-		"stop_560": 8483,
-		"name": "SPRINGLAND / WALKLEY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8482,
-		"name": "SPRINGLAND / WALTON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4131,
-		"name": "SPRINGLAND / MOONEY'S BAY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4130,
-		"name": "SPRINGLAND / MOONEY'S BAY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8264,
-		"name": "SPRINGLAND / NICHOLSON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8904,
-		"name": "SPRINGLAND / NICHOLSON",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 2449,
 		"name": "SPRINGLAND / RIDGEWOOD",
 		"routes": "90 Greenboro [BLU]"
-	},
-	{
-		"stop_560": 2412,
-		"name": "SPRINGLAND / NORBERRY",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 8903,
@@ -15276,20 +13896,11 @@
 		"name": "BROOKFIELD / FLANNERY",
 		"routes": "90 Greenboro [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 4138,
 		"name": "BROOKFIELD / HOBSON",
 		"routes": "90 Hurdman [BLU]"
-	},
-	{
-		"stop_560": 0,
-		"name": "BROOKFIELD/ BROOKFIELD H.S.",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 4139,
@@ -15351,61 +13962,13 @@
 		"name": "WALKLEY / THORNDALE",
 		"routes": "92 Walkley / Hurdman [GOW]"
 	},
-	{
-		"stop_560": 1595,
-		"name": "WALKLEY / MCCARTHY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4141,
-		"name": "WALKLEY / AD. 800",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8484,
-		"name": "WALKLEY / AD. 800",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4142,
-		"name": "WALKLEY / OTTERSON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 8486,
 		"name": "MCCARTHY / PROVOST",
@@ -15924,26 +14487,10 @@
 		"name": "TYLEE / DE NIVERVILLE",
 		"routes": "197 Greenboro [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 696,
 		"name": "2320 LESTER RD ",
@@ -15959,11 +14506,7 @@
 		"name": "LESTER / AIRPORT RAMP ",
 		"routes": "304 Billings Bridge [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6144,
 		"name": "AIRPORT / UPLANDS",
@@ -15994,56 +14537,18 @@
 		"name": "AIRPORT / AIRBUS PRIVATE",
 		"routes": "N98 Rideau [BOW], 197 Uplands [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 4213,
 		"name": "UPLANDS / RESEARCH",
 		"routes": "N98 Rideau [BOW], N98 Airport / Aéroport [BOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 1732,
-		"name": "LEITRIM / HIGH",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1739,
-		"name": "LEITRIM / BOWESVILLE",
-		"routes": "School Routes Only"
-	},
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 1157,
 		"name": "LEITRIM / ALBION",
@@ -16080,16 +14585,8 @@
 		"name": "MILLENNIUM 1A",
 		"routes": "25 Millennium [BLU], 30 Millennium [GRY], 39 Millennium [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 8668,
 		"name": "HUNT CLUB LOOP - STOP 1A",
@@ -16582,76 +15079,6 @@
 		"routes": "40 St-Laurent [BLU], 294 Lester [PUR]"
 	},
 	{
-		"stop_560": 1524,
-		"name": "BANK / ATHANS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8887,
-		"name": "BANK / ST-BERNARD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1971,
-		"name": "BANK / ST-BERNARD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4271,
-		"name": "BANK / ROSEBELLA",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4270,
-		"name": "BANK / ROSEBELLA",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1617,
-		"name": "ATHANS / COUNCILLOR'S",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4801,
-		"name": "ATHANS / BANK",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6142,
-		"name": "ATHANS / LEVADIA",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4273,
-		"name": "ATHANS / SIXTH",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4274,
-		"name": "SIXTH / ST BERNARD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4275,
-		"name": "SIXTH / ROSEBELLA",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4277,
-		"name": "SIXTH / ATHANS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4276,
-		"name": "SIXTH / ST BERNARD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8885,
-		"name": "SIXTH / ROSEBELLA",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8883,
 		"name": "Albion / Aladdin",
 		"routes": "294 Lester [PUR], 294 Greenboro [PUR]"
@@ -16762,39 +15189,14 @@
 		"routes": "304 Billings Bridge [GOW]"
 	},
 	{
-		"stop_560": 1352,
-		"name": "BANK / CONROY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6954,
-		"name": "CONROY / PARK",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1798,
 		"name": "BANK / LEITRIM ",
 		"routes": "304 Osgoode [GOW]"
 	},
 	{
-		"stop_560": 6955,
-		"name": "CONROY / PARK",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 3575,
 		"name": "BANK / LEITRIM ",
 		"routes": "304 Billings Bridge [GOW]"
-	},
-	{
-		"stop_560": 6956,
-		"name": "CONROY / LYNCH",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6957,
-		"name": "CONROY / LYNCH",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 3990,
@@ -16896,11 +15298,7 @@
 		"name": "FINDLAY CREEK / BUFFLEHEAD",
 		"routes": "93 Leitrim [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 5769,
 		"name": "ALBION / LEITRIM",
@@ -17050,11 +15448,6 @@
 		"stop_560": 3289,
 		"name": "FINDLAY CREEK / BANK",
 		"routes": "93 Rotary [GRY]"
-	},
-	{
-		"stop_560": 488,
-		"name": "FINDLAY CREEK / KELLY FARM",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 402,
@@ -17811,11 +16204,7 @@
 		"name": "BORBRIDGE / BRIAN GOOD",
 		"routes": "99 Limebank [GRY], 299 Limebank [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 508,
 		"name": "BORBRIDGE / CANVASBACK",
@@ -17846,11 +16235,7 @@
 		"name": "RIVER / SHORELINE",
 		"routes": "198 Limebank [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 2143,
 		"name": "RIVER / AD. 620",
@@ -17865,21 +16250,6 @@
 		"stop_560": 2145,
 		"name": "RIVER / RYEBURN",
 		"routes": "198 Limebank [GOW]"
-	},
-	{
-		"stop_560": 6947,
-		"name": "LIMEBANK / SPRATT",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1740,
-		"name": "LIMEBANK / LEITRIM",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1743,
-		"name": "LIMEBANK / LEITRIM",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 2154,
@@ -17950,16 +16320,6 @@
 		"stop_560": 3230,
 		"name": "SPRATT / LIMEBANK",
 		"routes": "99 Limebank [GRY]"
-	},
-	{
-		"stop_560": 8771,
-		"name": "St. Francis Xavier",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8769,
-		"name": "St. Francis Xavier",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 3218,
@@ -18086,11 +16446,7 @@
 		"name": "RIVER / HONEY GABLES",
 		"routes": "198 Limebank [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 4642,
 		"name": "Spratt / Poplin",
@@ -18106,11 +16462,7 @@
 		"name": "Spratt / Cambie",
 		"routes": "99 Barrhaven Centre / Weybridge [GRY], 299 Manotick [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 4636,
 		"name": "CAMBIE / CARNELIAN",
@@ -18250,7 +16602,7 @@
 	},
 	{
 		"stop_560": 3028,
-		"name": "PLACE D'ORLÉANS 1B",
+		"name": "1B",
 		"routes": "31 Place d'Orléans [GRY], 33 Portobello [GRY], 35 Avalon [GRY], 36 Innes [GRY], 38 Trim [GOW], 39 Millennium [BLU], 138 Place d'Orléans [GRY], 139 Petrie Island [GOW], 221 Cumberland [PUR], 234 Tenth Line [PUR]"
 	},
 	{
@@ -18668,11 +17020,7 @@
 		"name": "ANDERSON / LEITRIM",
 		"routes": "222 Blair [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 8277,
 		"name": "HERON / RIVERSIDE",
@@ -18747,16 +17095,6 @@
 		"stop_560": 6031,
 		"name": "FISHER / DEER PARK",
 		"routes": "86 Antares [GRY]"
-	},
-	{
-		"stop_560": 6032,
-		"name": "FISHER / DYNES",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 3661,
-		"name": "FISHER / ST. PIUS H.S.",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 6723,
@@ -19454,21 +17792,6 @@
 		"routes": "86 Tunney's Pasture [GRY]"
 	},
 	{
-		"stop_560": 1601,
-		"name": "PRINCE OF WALES / DEAKIN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1602,
-		"name": "PRINCE OF WALES / BLAZER",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 999,
-		"name": "PRINCE OF WALES / WATERFORD",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 6064,
 		"name": "Amberwood/ Prince of Wales",
 		"routes": "187 Amberwood [GOW]"
@@ -19549,51 +17872,6 @@
 		"routes": "187 Amberwood [GOW]"
 	},
 	{
-		"stop_560": 997,
-		"name": "FIFESHIRE / AMBERWOOD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 994,
-		"name": "FIFESHIRE / TENNYSON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6073,
-		"name": "TENNYSON / DENEWOOD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6075,
-		"name": "TENNYSON / CORDELL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6076,
-		"name": "TENNYSON / MAYO",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6074,
-		"name": "MAYO / TENNYSON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6077,
-		"name": "MAYO / BRISBANE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 996,
-		"name": "MAYO / BRISBANE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 995,
-		"name": "GREENSIDE / PROMENADE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1608,
 		"name": "MACFARLANE / GREENSIDE",
 		"routes": "117 Baseline [GOW]"
@@ -19653,11 +17931,7 @@
 		"name": "MACFARLANE / DEAKIN",
 		"routes": "117 Greenboro [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6089,
 		"name": "AURIGA / DEAKIN",
@@ -19762,11 +18036,6 @@
 		"stop_560": 5817,
 		"name": "WEST HUNT CLUB / LASER",
 		"routes": "116 Baseline [GRY]"
-	},
-	{
-		"stop_560": 6005,
-		"name": "Merivale H.S.",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 4022,
@@ -20029,19 +18298,9 @@
 		"routes": "53 Baseline [GRY], 80 Barrhaven Centre [BLU]"
 	},
 	{
-		"stop_560": "6131",
-		"name": "MERIVALE / BASIL MACDONALD",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 316,
 		"name": "MERIVALE / AD. 1642",
 		"routes": "53 Tunney's Pasture [GRY], 80 Barrhaven Centre [BLU]"
-	},
-	{
-		"stop_560": "7408",
-		"name": "BASIL MACDONALD / GRANT CARMAN",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 4027,
@@ -20114,11 +18373,6 @@
 		"routes": "189 Baseline [GRY]"
 	},
 	{
-		"stop_560": 0,
-		"name": "CHESTERTON / VIEWMOUNT",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 6003,
 		"name": "CHESTERTON / VIEWMOUNT",
 		"routes": "189 Colonnade [GRY]"
@@ -20172,16 +18426,6 @@
 		"stop_560": 4021,
 		"name": "VIEWMOUNT / GRANT CARMAN",
 		"routes": "112 Billings Bridge [GRY], 189 Baseline [GRY]"
-	},
-	{
-		"stop_560": "7265",
-		"name": "VIEWMOUNT / GRANT CARMAN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 0,
-		"name": "VIEWMOUNT / MERIVALE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 6006,
@@ -20560,13 +18804,8 @@
 	},
 	{
 		"stop_560": 3028,
-		"name": "PLACE D'ORLÉANS 2A",
+		"name": "2A",
 		"routes": "302 St-Laurent / Place d'Orléans [GOW]"
-	},
-	{
-		"stop_560": 707,
-		"name": "ALGONQUIN COLLEGE / ADJIDJÀK",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 717,
@@ -20744,19 +18983,9 @@
 		"routes": "84 Baseline [GOW]"
 	},
 	{
-		"stop_560": 2076,
-		"name": "CENTREPOINTE / CIMARRON",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 4531,
 		"name": "CENTREPOINTE / MARBLE ARCH",
 		"routes": "84 Baseline [GOW]"
-	},
-	{
-		"stop_560": 2075,
-		"name": "CENTREPOINTE / SUMMERWALK",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 8590,
@@ -20764,19 +18993,9 @@
 		"routes": "84 Baseline [GOW]"
 	},
 	{
-		"stop_560": 2074,
-		"name": "CENTREPOINTE / STONEBRIAR",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 8591,
 		"name": "CENTREPOINTE / MAPLE VIEW",
 		"routes": "84 Baseline [GOW]"
-	},
-	{
-		"stop_560": 2073,
-		"name": "CENTREPOINTE / DALECROFT",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 4532,
@@ -20784,19 +19003,9 @@
 		"routes": "84 Baseline [GOW]"
 	},
 	{
-		"stop_560": 2072,
-		"name": "CENTREPOINTE / ARBORDALE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 4533,
 		"name": "CENTREPOINTE / PINETRAIL",
 		"routes": "84 Baseline [GOW]"
-	},
-	{
-		"stop_560": 2071,
-		"name": "CENTREPOINTE / TALLWOOD",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 4523,
@@ -20805,17 +19014,18 @@
 	},
 	{
 		"stop_560": 3028,
-		"name": "PLACE D'ORLÉANS 2C",
+		"name": "2C",
 		"routes": "31 Tenth Line [GRY], 33 Place d'Orleans / Blair [GRY], 35 Blair [GRY], 36 Place d'Orléans [GRY], 38 Blair [GOW], 39 Blair [BLU], 138 Hiawatha [GRY], 139 Place d'Orléans [GOW], 237 Blair [PUR], 405 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 455 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3075,
-		"name": "PLACE D'ORLÉANS 4A",
+		"name": "4A",
 		"routes": "33 Blair [GOW], 35 Blair [GRY], 39 Blair [BLU], 221 Blair [PUR], 234 Blair [PUR], 405 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 455 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3028,
-		"name": "Place d'Orleans A (1A)",
+		"name": "1A",
+		"name-alt": "Place d'Orleans A (1A)",
 		"routes": "237 Place d'Orléans [PUR], 302 Cumberland [GOW]"
 	},
 	{
@@ -21018,26 +19228,10 @@
 		"name": "ERINDALE / MAITLAND",
 		"routes": "81 Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 2914,
 		"name": "IRIS / WOODROFFE",
@@ -21199,11 +19393,6 @@
 		"routes": "68 Baseline [BLU], 88 Hurdman [BLU]"
 	},
 	{
-		"stop_560": 2078,
-		"name": "BASELINE / COBDEN",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 3015,
 		"name": "QUEENSWAY 1A",
 		"routes": "73 Limebank [GOW], 74 Limebank [BLU], 75 Cambrian [BLU], 301 Carlingwood [GOW], 303 Carlingwood [GOW], 305 North Gower [GOW]"
@@ -21240,7 +19429,7 @@
 	},
 	{
 		"stop_560": 3016,
-		"name": "IRIS STN OFF ONLY",
+		"name": "Off only",
 		"routes": "275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
 	},
 	{
@@ -21338,21 +19527,7 @@
 		"name": "CRAIG HENRY / IVYLEA",
 		"routes": "82 Lincoln Fields / Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+
 	{
 		"stop_560": 1660,
 		"name": "MAJESTIC / WOODROFFE",
@@ -21403,76 +19578,22 @@
 		"name": "NEWHAVEN / KNOXDALE",
 		"routes": "82 Lincoln Fields / Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6951,
 		"name": "KNOXDALE / AURORA",
 		"routes": "82 Baseline [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 0,
-		"name": "LONGFIELD - DAVIDSON HEIGHTS H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 689,
-		"name": "LONGFIELD - DAVIDSON HEIGHTS H.S.",
-		"routes": "School Routes Only"
-	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 513,
 		"name": "WOODROFFE / STRANDHERD",
@@ -21569,26 +19690,6 @@
 		"routes": "173 Barrhaven Centre [GRY]"
 	},
 	{
-		"stop_560": 1861,
-		"name": "EARL MULLIGAN / WOODGATE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1862,
-		"name": "EARL MULLIGAN / WOODPARK",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4610,
-		"name": "EARL MULLIGAN / WOODROFFE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4612,
-		"name": "EARL MULLIGAN / WOODROFFE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 6603,
 		"name": "LONGFIELDS / WOODROFFE",
 		"routes": "73 Limebank [GRY]"
@@ -21627,16 +19728,6 @@
 		"stop_560": 4611,
 		"name": "WOODROFFE / FALLOWFIELD",
 		"routes": "74 Limebank [BLU]"
-	},
-	{
-		"stop_560": 4094,
-		"name": "EARL MULLIGAN / MOUNTSHANNON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4093,
-		"name": "EARL MULLIGAN / MOUNTSHANNON",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 3774,
@@ -21734,59 +19825,9 @@
 		"routes": "73 Fallowfield / Tunney's Pasture [GRY]"
 	},
 	{
-		"stop_560": 6457,
-		"name": "LONGFIELDS / BEATRICE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6427,
-		"name": "LONGFIELDS / HOBBLEBUSH",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4629,
-		"name": "LONGFIELDS / MOUNTSHANNON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4627,
-		"name": "LONGFIELDS / HOBBLEBUSH",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1116,
-		"name": "LONGFIELDS / MOUNTSHANNON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6470,
-		"name": "MOUNTSHANNON / DAVENTRY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4628,
-		"name": "LONGFIELDS / MOTHER TERESA H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 6467,
-		"name": "MOUNTSHANNON / DAVENTRY",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4630,
-		"name": "MOUNTSHANNON / BONITA",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1083,
 		"name": "MOUNTSHANNON / ORISKA",
 		"routes": "73 Limebank [GRY], 277 Nepean Woods [PUR]"
-	},
-	{
-		"stop_560": 4632,
-		"name": "MOUNTSHANNON / SUTCLIFFE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 1346,
@@ -21839,11 +19880,6 @@
 		"routes": "70 Fallowfield [GRY]"
 	},
 	{
-		"stop_560": 4634,
-		"name": "BERRIGAN / GREENBANK",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1045,
 		"name": "BERRIGAN / COLINDALE",
 		"routes": "70 Limebank [GRY]"
@@ -21852,11 +19888,6 @@
 		"stop_560": 2885,
 		"name": "BERRIGAN / EDGEWARE",
 		"routes": "70 Limebank [GRY]"
-	},
-	{
-		"stop_560": 4635,
-		"name": "BERRIGAN / GREENBANK",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 3665,
@@ -21902,11 +19933,6 @@
 		"stop_560": 1095,
 		"name": "STRANDHERD / BEATRICE",
 		"routes": "80 Barrhaven Centre [BLU]"
-	},
-	{
-		"stop_560": 1098,
-		"name": "STRANDHERD / BEATRICE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 2890,
@@ -22083,11 +20109,7 @@
 		"name": "BEATRICE / GLEESON",
 		"routes": "277 Nepean Woods [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 3764,
 		"name": "CRESTHAVEN / WOODROFFE",
@@ -22263,16 +20285,8 @@
 		"name": "PAUL METIVIER / GLENDORE",
 		"routes": "277 Nepean Woods [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 723,
 		"name": "PAUL METIVIER / CLEARBROOK",
@@ -22347,21 +20361,6 @@
 		"stop_560": 1221,
 		"name": "LONGFIELDS / CHAPMAN MILLS",
 		"routes": "99 Barrhaven Centre / Weybridge [GRY], 110 Innovation/ Briarbrook [GRY], 406 Canadian Tire Ctr / Ctr Canadian Tire [GOW]"
-	},
-	{
-		"stop_560": 1227,
-		"name": "LONGFIELDS / CHAPMAN MILLS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1229,
-		"name": "LONGFIELDS / PAUL METIVIER",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1234,
-		"name": "LONGFIELDS / PAUL METIVIER",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 1330,
@@ -22898,21 +20897,7 @@
 		"name": "APOLUNE / FLAGSTAFF",
 		"routes": "275 Tunney's Pasture [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 977,
-		"name": "LARKIN / FALLOWFIELD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 981,
-		"name": "LARKIN / FALLOWFIELD",
-		"routes": "School Routes Only"
-	},
+	
 	{
 		"stop_560": 2814,
 		"name": "LARKIN / LAMING",
@@ -22979,16 +20964,6 @@
 		"routes": "70 Limebank [GRY]"
 	},
 	{
-		"stop_560": 7217,
-		"name": "GREENBANK / HIGHBURY PARK",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7218,
-		"name": "GREENBANK / HIGHBURY PARK",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 7240,
 		"name": "Greenbank/ Ad.1581",
 		"routes": "70 Limebank [GRY]"
@@ -23012,11 +20987,6 @@
 		"stop_560": 847,
 		"name": "Golflinks/ Blackshire",
 		"routes": "275 Half Moon Bay [PUR]"
-	},
-	{
-		"stop_560": 964,
-		"name": "GREENBANK / MALVERN",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 453,
@@ -23253,50 +21223,14 @@
 		"name": "SHERWAY / FABLE",
 		"routes": "173 Barrhaven Centre [GRY]"
 	},
-	{
-		"stop_560": 732,
-		"name": "FABLE / WHELAN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 1130,
-		"name": "FABLE / MALVERN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 1135,
-		"name": "MALVERN / AD. 101",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 956,
 		"name": "EXETER / CHESTER",
 		"routes": "70 Limebank [GRY]"
-	},
-	{
-		"stop_560": 1133,
-		"name": "MALVERN / SHERWAY",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 1136,
@@ -23374,11 +21308,6 @@
 		"routes": "70 Fallowfield [GRY], 99 Barrhaven Centre / Weybridge [GOW], 110 Innovation/ Briarbrook [GRY]"
 	},
 	{
-		"stop_560": 5802,
-		"name": "ST JOSEPH H.S",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 2800,
 		"name": "RIVER MIST / CAMBRIAN",
 		"routes": "75 Cambrian [BLU]"
@@ -23422,21 +21351,6 @@
 		"stop_560": 2808,
 		"name": "RIVER MIST / KILBIRNIE",
 		"routes": "75 Cambrian [BLU]"
-	},
-	{
-		"stop_560": 2809,
-		"name": "KILBIRNIE / BREAKSTONE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2810,
-		"name": "KILBIRNIE / BREAKSTONE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2811,
-		"name": "KILBIRNIE / GREENBANK",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 342,
@@ -23609,11 +21523,6 @@
 		"routes": "82 Lincoln Fields / Tunney's Pasture [GRY]"
 	},
 	{
-		"stop_560": 1695,
-		"name": "GREENBANK / BASELINE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 4064,
 		"name": "GREENBANK / MONTEREY",
 		"routes": "82 Baseline [GRY]"
@@ -23648,46 +21557,22 @@
 		"name": "GREENBANK / BANNER",
 		"routes": "82 Lincoln Fields / Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1684,
 		"name": "GREENBANK / CANFIELD",
 		"routes": "82 Lincoln Fields / Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 1959,
 		"name": "GREENBANK / BELLMAN",
 		"routes": "82 Baseline [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 5622,
 		"name": "MCCLELLAN / PAULA",
@@ -23738,36 +21623,12 @@
 		"name": "MCCLELLAN / CAMWOOD",
 		"routes": "82 Lincoln Fields / Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 8062,
 		"name": "BELLMAN / MCCLELLAN",
@@ -23803,96 +21664,24 @@
 		"name": "BANNER / PARKMOUNT",
 		"routes": "82 Baseline [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 5590,
 		"name": "Pinecrest/ Fallis",
@@ -24013,26 +21802,10 @@
 		"name": "DUMAURIER / RAMSEY",
 		"routes": "81 Tunney's Pasture [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
 	{
 		"stop_560": 3044,
 		"name": "STRANDHERD 1A",
@@ -24042,21 +21815,6 @@
 		"stop_560": 3044,
 		"name": "STRANDHERD 2A",
 		"routes": "70 Limebank [GRY], 75 Tunney's Pasture [BLU], 173 Citigate [GRY], 275 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR], 305 Carlingwood [GOW], 406 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 456 Lansdowne [GOW]"
-	},
-	{
-		"stop_560": 951,
-		"name": "RICHMOND / BASELINE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1142,
-		"name": "RICHMOND / JOHN SUTHERLAND",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "1143",
-		"name": "RICHMOND / JOHN SUTHERLAND",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 6435,
@@ -24478,11 +22236,7 @@
 		"name": "MORRISON / DRAPER",
 		"routes": "82 Baseline [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 4069,
 		"name": "DRAPER / MORRISON",
@@ -24528,31 +22282,11 @@
 		"name": "WESTCLIFFE / SEYTON",
 		"routes": "57 Carling Campus / Complexe Carling [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
 	{
 		"stop_560": 917,
 		"name": "SEYTON / SONNET",
@@ -24799,64 +22533,9 @@
 		"routes": "57 Tunney's Pasture [BLU], 68 Baseline [BLU]"
 	},
 	{
-		"stop_560": 2872,
-		"name": "NORTHSIDE / THORNCLIFF",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 5296,
 		"name": "ROBERTSON / BASELINE",
 		"routes": "57 Carling Campus / Complexe Carling [BLU], 68 Terry Fox [BLU]"
-	},
-	{
-		"stop_560": 940,
-		"name": "NORTHSIDE / THORNCLIFF",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 939,
-		"name": "NORTHSIDE / THORNCLIFF",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5297,
-		"name": "NORTHSIDE / FOOTHILLS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5298,
-		"name": "NORTHSIDE / FOOTHILLS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4902,
-		"name": "LARKSPUR / NORTHSIDE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5301,
-		"name": "EATON / LYNHAR",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 2952,
-		"name": "CASSIDY / GRANGEMILL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1393,
-		"name": "CASSIDY / BRUIN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5303,
-		"name": "CASSIDY / GRANGEMILL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5302,
-		"name": "Bell H.S. N",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 1956,
@@ -25059,11 +22738,7 @@
 		"name": "CARLING / GRANDVIEW",
 		"routes": "57 Carling Campus / Complexe Carling [BLU], 58 Bayshore [GOW], 58 Complexe Carling Campus / Abbott POC [GRY], 66 Innovation [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1336,
 		"name": "MURMANSK RUN / CARLING CAMPUS",
@@ -25094,16 +22769,8 @@
 		"name": "MOODIE / AD. 185",
 		"routes": "57 Carling Campus / Complexe Carling [BLU], 58 Bayshore [GOW], 66 Innovation [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": "1371",
 		"name": "B",
@@ -25112,12 +22779,12 @@
 	},
 	{
 		"stop_560": 3029,
-		"name": "TRIM 1A",
+		"name": "1A",
 		"routes": "38 Trim [GRY], 39 Millennium [BLU], 139 Petrie Island [GOW], 221 Cumberland [PUR]"
 	},
 	{
 		"stop_560": 3029,
-		"name": "TRIM 2A",
+		"name": "2A",
 		"routes": "38 Blair [GRY], 39 Blair [BLU], 139 Place d'Orléans [GOW], 221 Blair [PUR], 405 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 455 Lansdowne [GOW]"
 	},
 	{
@@ -25291,50 +22958,16 @@
 		"routes": "66 Tunney's Pasture [GOW]"
 	},
 	{
-		"stop_560": 3278,
-		"name": "STIKINE / MARICONA WAY",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 3609,
 		"name": "GOLDRIDGE / CAMBIOR",
 		"routes": "265 Terry Fox [PUR]"
 	},
-	{
-		"stop_560": "3279",
-		"name": "STIKINE / NORTOBA",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 2499,
 		"name": "CAMPEAU / TERRY FOX",
@@ -25476,11 +23109,6 @@
 		"routes": "63 Tunney's Pasture [BLU], 110 Limebank [GRY]"
 	},
 	{
-		"stop_560": 1894,
-		"name": "MARCH / SOLANDT",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 7410,
 		"name": "SCHNEIDER / CARLING",
 		"routes": "63 Tunney's Pasture [BLU], 110 Limebank [GRY]"
@@ -25541,24 +23169,9 @@
 		"routes": "63 Innovation/ Briarbrook [BLU], 110 Innovation/ Briarbrook [GRY]"
 	},
 	{
-		"stop_560": 341,
-		"name": "KANATA / STIKINE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1296,
 		"name": "KANATA / WALDEN",
 		"routes": "161 Terry Fox [GRY], 265 Tunney's Pasture [PUR]"
-	},
-	{
-		"stop_560": 0,
-		"name": "RICHARDSON / ALL SAINTS H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1298,
-		"name": "KANATA / KEYROCK",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 868,
@@ -25614,16 +23227,6 @@
 		"stop_560": 7978,
 		"name": "TERON / PENFIELD",
 		"routes": "63 Innovation/ Briarbrook [BLU], 110 Innovation/ Briarbrook [GRY], 161 Terry Fox [GRY], 265 Terry Fox [PUR]"
-	},
-	{
-		"stop_560": 526,
-		"name": "PARKWAY / EARL OF MARCH H.S.",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 521,
-		"name": "Earl of March H.S.",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 6445,
@@ -25930,21 +23533,9 @@
 		"name": "GOULBOURN FORCED / BADGELEY",
 		"routes": "161 Hazeldean / Glen Cairn [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 1875,
 		"name": "WESLOCK / KNUDSON",
@@ -25980,11 +23571,7 @@
 		"name": "KNUDSON / WESLOCK",
 		"routes": "161 Terry Fox [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 5360,
 		"name": "KNUDSON / GOULDING",
@@ -26151,11 +23738,6 @@
 		"routes": "110 Limebank [GRY], 168 Hope Side [GRY]"
 	},
 	{
-		"stop_560": 6735,
-		"name": "EAGLESON / KAKULU",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 3300,
 		"name": "EAGLESON / SHATNER",
 		"routes": "110 Limebank [GRY], 168 Hope Side [GRY]"
@@ -26180,21 +23762,7 @@
 		"name": "Kakulu/ Barrow",
 		"routes": "161 Hazeldean / Glen Cairn [GRY]"
 	},
-	{
-		"stop_560": "1725",
-		"name": "KAKULU / BERNIER",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "5379",
-		"name": "KAKULU / CASTLEFRANK",
-		"routes": "School Routes Only"
-	},
+	
 	{
 		"stop_560": 842,
 		"name": "KATIMAVIK / EAGLESON",
@@ -26205,11 +23773,7 @@
 		"name": "KATIMAVIK / EAGLESON",
 		"routes": "61 Tunney's Pasture [BLU], 301 Carlingwood [GOW], 303 Carlingwood [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6174,
 		"name": "KATIMAVIK / CHIMO",
@@ -26249,11 +23813,6 @@
 		"stop_560": 1870,
 		"name": "KATIMAVIK / CHIMO",
 		"routes": "61 Stittsville [BLU], 67 Cope [GOW], 301 Richmond [GOW], 303 Carp [GOW]"
-	},
-	{
-		"stop_560": 452,
-		"name": "KATIMAVIK / MCGIBBON",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 6178,
@@ -26635,46 +24194,18 @@
 		"name": "PICKFORD / VICKERS",
 		"routes": "161 Terry Fox [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
 	{
 		"stop_560": 8408,
 		"name": "SHATNER / EAGLESON",
 		"routes": "110 Innovation/ Briarbrook [GRY], 168 Terry Fox [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 1718,
 		"name": "IRWIN GATE / PICKFORD",
@@ -26715,19 +24246,9 @@
 		"routes": "92 Walkley / Hurdman [GOW]"
 	},
 	{
-		"stop_560": "0000",
-		"name": "ABBEYHILL / SHERWOOD",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 808,
 		"name": "EAGLESON / HAZELDEAN",
 		"routes": "68 Terry Fox [BLU], 68 Baseline [BLU], 110 Limebank [GRY], 168 Hope Side [GRY]"
-	},
-	{
-		"stop_560": 4842,
-		"name": "EAGLESON / HAZELDEAN MALL",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 6243,
@@ -27064,11 +24585,7 @@
 		"name": "HARNESS / EQUESTRIAN",
 		"routes": "256 Bridlewood [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 998,
 		"name": "STONEHAVEN / EAGLESON",
@@ -27104,26 +24621,14 @@
 		"name": "EAGLESON / ROTHESAY",
 		"routes": "110 Innovation/ Briarbrook [GRY], 168 Terry Fox [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 5777,
 		"name": "EAGLESON / ROTHESAY",
 		"routes": "110 Limebank [GRY], 168 Hope Side [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 6197,
 		"name": "EAGLESON / AD. 500",
@@ -27148,11 +24653,6 @@
 		"stop_560": 5778,
 		"name": "EAGLESON / STONEHAVEN",
 		"routes": "110 Innovation/ Briarbrook [GRY], 168 Terry Fox [GRY]"
-	},
-	{
-		"stop_560": 1800,
-		"name": "EAGLESON / MICHAEL COWPLAND",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 5701,
@@ -27319,31 +24819,15 @@
 		"name": "STONEHAVEN / STONEMEADOW",
 		"routes": "110 Limebank [GRY], 168 Hope Side [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 1880,
 		"name": "BRIDGESTONE / STONEHAVEN",
 		"routes": "256 Bridlewood [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 636,
 		"name": "BRIDGESTONE / FOXHALL",
@@ -27519,46 +25003,14 @@
 		"name": "OLD RICHMOND / WEST HUNT CLUB",
 		"routes": "256 Tunney's Pasture [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 424,
 		"name": "HOPE SIDE / CROWNRIDGE",
@@ -27614,11 +25066,7 @@
 		"name": "ACCEPTANCE / HOPE SIDE",
 		"routes": "168 Terry Fox [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 3036,
 		"name": "E",
@@ -27648,16 +25096,6 @@
 		"stop_560": 1839,
 		"name": "CTC CYCLONE TAYLOR / FRANK FINNIGAN",
 		"routes": "162 Kanata West / Ouest [GRY]"
-	},
-	{
-		"stop_560": 7573,
-		"name": "TERRY FOX / TILLSONBURG",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7569,
-		"name": "TERRY FOX / RICHARDSON SIDE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 448,
@@ -27884,56 +25322,16 @@
 		"name": "KANATA / KIRKLAND",
 		"routes": "161 Hazeldean / Glen Cairn [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 9840,
 		"name": "Paine/ Brettonwood",
@@ -27960,26 +25358,6 @@
 		"routes": "162 Kanata West / Ouest [GRY]"
 	},
 	{
-		"stop_560": 1898,
-		"name": "MARCH ROAD / SOLANDT",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 7994,
-		"name": "MARCH ROAD / AD. 501",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1820,
-		"name": "MARCH ROAD / AD. 570",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 4877,
-		"name": "MARCH ROAD / TRILLIUM",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1262,
 		"name": "FLAMBOROUGH / LAXFORD",
 		"routes": "63 Innovation [BLU], 63 Tunney's Pasture [BLU]"
@@ -27999,31 +25377,14 @@
 		"name": "FLAMBOROUGH / KEIGHLEY",
 		"routes": "63 Innovation [BLU], 63 Tunney's Pasture [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1252,
 		"name": "HALTON / BRADY",
 		"routes": "110 Innovation [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": 4874,
-		"name": "HALTON / FLAMBOROUGH",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 6154,
 		"name": "FLAMBOROUGH/ HALTON",
@@ -28038,16 +25399,6 @@
 		"stop_560": 1253,
 		"name": "HALTON / BRADY",
 		"routes": "110 Limebank [GRY]"
-	},
-	{
-		"stop_560": 1254,
-		"name": "HALTON / WIMBLEDON",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1255,
-		"name": "HALTON / PEIKOFF",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 7999,
@@ -28079,11 +25430,7 @@
 		"name": "TERRY FOX / MARCH",
 		"routes": "63 Innovation/ Briarbrook [BLU], 66 Innovation [GOW], 110 Innovation [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 494,
 		"name": "HALTON / DUNOLLIE",
@@ -28094,31 +25441,15 @@
 		"name": "HALTON N DUNOLLIE NS",
 		"routes": "63 Tunney's Pasture [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 6155,
 		"name": "TERRY FOX / MARCH",
 		"routes": "63 Tunney's Pasture [BLU], 66 Tunney's Pasture [GOW], 110 Limebank [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 6959,
 		"name": "SHIRLEY'S BROOK / KINROSS",
@@ -28219,11 +25550,7 @@
 		"name": "LEGGET / AD. 515",
 		"routes": "63 Innovation/ Briarbrook [BLU]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1172,
 		"name": "SOLANDT / MARCH",
@@ -28294,21 +25621,9 @@
 		"name": "INNOVATION / TERRY FOX",
 		"routes": "63 Tunney's Pasture [BLU], 66 Tunney's Pasture [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 9048,
 		"name": "MARCONI / APPLECROSS",
@@ -28328,11 +25643,6 @@
 		"stop_560": 275,
 		"name": "MARCONI / SHIRLEY'S BROOK",
 		"routes": "110 Innovation [GRY]"
-	},
-	{
-		"stop_560": 9050,
-		"name": "MARCONI / KLONDIKE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 9051,
@@ -28439,11 +25749,7 @@
 		"name": "KLONDIKE N ROY ERRINGTON NS",
 		"routes": "110 Limebank [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1509,
 		"name": "OLD SECOND LINE / FORESTBROOK",
@@ -28461,93 +25767,31 @@
 	},
 	{
 		"stop_560": 3012,
-		"name": "WESTBORO A",
+		"name": "A",
 		"routes": "57 Carling Campus / Complexe Carling [BLU], 60 Cope [GOW], 61 Stittsville [BLU], 62 Stittsville [BLU], 63 Innovation/ Briarbrook [BLU], 66 Innovation [GOW], 67 Cope [GOW], 73 Limebank [GOW], 74 Limebank [BLU], 75 Cambrian [BLU], 81 Tunney's Pasture [GRY], 82 Baseline [GOW], 87 Baseline [BLU], 256 Bridlewood [PUR], 261 Kimpton [PUR], 262 Fernbank [PUR], 263 Richmond [PUR], 265 Terry Fox [PUR], 266 Springbrook [PUR], 404 Canadian Tire Ctr / Ctr Canadian Tire [GOW]"
 	},
 	{
 		"stop_560": 3012,
-		"name": "WESTBORO B",
+		"name": "B",
 		"routes": "57 Tunney's Pasture [BLU], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], 62 Tunney's Pasture [BLU], 63 Tunney's Pasture [BLU], 66 Tunney's Pasture [GOW], 67 Tunney's Pasture [GOW], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], 81 Bayshore [GRY], 82 Tunney's Pasture [GOW], 87 Tunney's Pasture [BLU], 265 Tunney's Pasture [PUR]"
 	},
-	{
-		"stop_560": 1728,
-		"name": "CEDARVIEW / AD. 2760",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 1709,
-		"name": "CEDARVIEW / FALLOWFIELD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5452,
-		"name": "CEDARVIEW / AD. 2760",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 532,
-		"name": "CEDARVIEW MIDDLE SCHOOL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 538,
-		"name": "CEDARVIEW MIDDLE SCHOOL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 1214,
 		"name": "MARAVISTA / COBBLE HILL",
 		"routes": "70 Limebank [GRY], 110 Limebank [GRY], 173 Barrhaven Centre [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 1829,
 		"name": "WEYBRIDGE / SEABURY",
 		"routes": "99 Barrhaven Centre / Weybridge [GOW]"
-	},
-	{
-		"stop_560": 1830,
-		"name": "WEYBRIDGE / DELMEADE",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 2077,
@@ -28689,11 +25933,7 @@
 		"name": "KENNEVALE / HUMMINGBIRD",
 		"routes": "173 Citigate [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 3391,
 		"name": "KENNEVALE / LAMPLIGHTERS",
@@ -28714,21 +25954,9 @@
 		"name": "KENNEVALE / COBBLE HILL",
 		"routes": "70 Limebank [GRY], 110 Limebank [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
 	{
 		"stop_560": 5470,
 		"name": "JOCKVALE / JENNIFER",
@@ -28748,16 +25976,6 @@
 		"stop_560": 5473,
 		"name": "JOCKVALE / LAMING",
 		"routes": "70 Limebank [GRY]"
-	},
-	{
-		"stop_560": 4977,
-		"name": "JOCKVALE / WEYBRIDGE",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5474,
-		"name": "JOCKVALE / BARRHAVEN UNITED CHURCH",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 5475,
@@ -28800,11 +26018,6 @@
 		"routes": "110 Limebank [GRY]"
 	},
 	{
-		"stop_560": 769,
-		"name": "STRANDHERD / LIEBE",
-		"routes": "School Routes Only"
-	},
-	{
 		"stop_560": 1791,
 		"name": "COBBLE HILL / FOSTERBROOK",
 		"routes": "70 Fallowfield [GRY], 110 Innovation/ Briarbrook [GRY], 173 Citigate [GRY]"
@@ -28818,41 +26031,6 @@
 		"stop_560": 1788,
 		"name": "COBBLE HILL / MARAVISTA",
 		"routes": "70 Fallowfield [GRY], 110 Innovation/ Briarbrook [GRY], 173 Citigate [GRY]"
-	},
-	{
-		"stop_560": 5373,
-		"name": "COBBLE HILL / MARA VISTA",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5371,
-		"name": "COBBLE HILL / HÉLÈNE-CAMPBELL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 5372,
-		"name": "COBBLE HILL / HÉLÈNE-CAMPBELL",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8028,
-		"name": "COBBLE HILL / FERGUS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8029,
-		"name": "COBBLE HILL / BARRY HELMAN",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8030,
-		"name": "COBBLE HILL / FALLOWFIELD",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 8031,
-		"name": "COBBLE HILL / FALLOWFIELD",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 4710,
@@ -28883,16 +26061,6 @@
 		"stop_560": 4715,
 		"name": "SYSTEMHOUSE / TRINITY CROSSING",
 		"routes": "70 Fallowfield [GRY], 110 Innovation/ Briarbrook [GRY], 173 Citigate [GRY]"
-	},
-	{
-		"stop_560": 824,
-		"name": "PIERRE-DE-BLOIS",
-		"routes": "School Routes Only"
-	},
-	{
-		"stop_560": 825,
-		"name": "PIERRE-DE-BLOIS",
-		"routes": "School Routes Only"
 	},
 	{
 		"stop_560": 911,
@@ -29159,16 +26327,8 @@
 		"name": "FALLOWFIELD / MOODIE",
 		"routes": "110 Limebank [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
 	{
 		"stop_560": 2227,
 		"name": "FALLOWFIELD / STEEPLE HILL",
@@ -29179,46 +26339,18 @@
 		"name": "FALLOWFIELD / STEEPLE HILL",
 		"routes": "110 Limebank [GRY]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 2233,
 		"name": "PERTH / EAGLESON",
 		"routes": "283 Munster Hamlet [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 1006,
 		"name": "FRANKTOWN / JOYS",
@@ -29479,36 +26611,12 @@
 		"name": "STITTSVILLE MAIN / BANDELIER",
 		"routes": "261 Tunney's Pasture [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
+	
 	{
 		"stop_560": 1589,
 		"name": "HAZELDEAN / STITTSVILLE MAIN",
@@ -29754,21 +26862,13 @@
 		"name": "STITTSVILLE MAIN / EAST HEALEY",
 		"routes": "263 Richmond [PUR], 301 Richmond [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 703,
 		"name": "STITTSVILLE MAIN / WEST RIDGE",
 		"routes": "263 Richmond [PUR], 301 Richmond [GOW]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
 	{
 		"stop_560": 762,
 		"name": "STITTSVILLE MAIN / WEST RIDGE",
@@ -30329,31 +27429,11 @@
 		"name": "TEMPLEFORD / COPE",
 		"routes": "168 Terry Fox [GRY], 256 Bridlewood [PUR]"
 	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
-	{
-		"stop_560": "",
-		"name": "",
-		"routes": "Stop Not In Use"
-	},
+	
+	
+	
+	
+	
 	{
 		"stop_560": 6936,
 		"name": "COPE / AKERSON",

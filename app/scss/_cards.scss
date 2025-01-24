@@ -733,7 +733,7 @@ ul.card-list li {
 
 .decor-card, #fares-made-easy-card, #wayfinding-card, #accessibiliy-card, #cyclist-card, #safety-card, #comfort-card, #within-5km-card, #also-nearby-card {
 	padding-bottom: 8rem;
-	padding: 2.5rem;
+	padding: 1.5rem;
 
 	@include media-breakpoint-down(xs) {
 		font-size: $ui-body-size-sm;
@@ -745,7 +745,6 @@ ul.card-list li {
 		font-size: 1.3rem;
 		margin-bottom: 1.5em;
 		line-height: 1.15em;
-		min-height: 60px;
 		@include media-breakpoint-down(xs) {
 			margin-bottom: 1.25em;
 			min-height: 40px;
@@ -755,8 +754,8 @@ ul.card-list li {
 	&::before{
 		content: "";
 		align-self: center;
-		width: 5rem;
-		height: 5rem;
+		width: 3rem;
+		height: 3rem;
 		display: inline-block;
 		flex-shrink: 0;
 		background-repeat: no-repeat;
