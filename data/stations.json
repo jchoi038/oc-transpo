@@ -1526,7 +1526,7 @@
 			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/limebank",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/limebank-01/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/limebank-02/",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_limebank.jpg",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_limebank_PUDO.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stations/hero-images/limebank-june-2024.jpg",
 			"tour360": "",
@@ -1979,7 +1979,7 @@
 	{
 		"id": "MOOD",
 		"station_560": 3042,
-		"connecting_stops": "",
+		"connecting_stops": "5284",
 		"station_name": "Moodie",
 		"station_type": {
 			"transitway": "west",

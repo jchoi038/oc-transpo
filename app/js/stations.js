@@ -1,7 +1,6 @@
 /* This code is for dynamically styling the station page h1 banner */
 const lang = checkPageLanguage(window.location.href);
 const site = checkSite(window.location.href)
-console.log(lang)
 const page = checkPage(window.location.href)
 
 // Initialize variables
@@ -842,8 +841,6 @@ if (page == "station") {
 				const valueB = rowB.querySelector("td").textContent.trim().replace("N","")
 				const numA = parseFloat(valueA) || 0; // Convert to number or default to 0
 				const numB = parseFloat(valueB) || 0; // Convert to number or default to 0
-
-				console.log(numA)
 				return numA - numB; // Numeric comparison
 			});
 			rows.forEach((row) => newTbody.appendChild(row.cloneNode(true)));
@@ -925,6 +922,24 @@ if (page == "station") {
 
 		// Add the table to the DOM (e.g., in a specific container)
 		section_trainBoarding.appendChild(table);
+		if (lang == "en"){
+			if (
+				station.station_type.line_3
+			) {
+				console.log("line 3")
+				const note = document.createElement("div");
+				note.innerHTML = `
+				<div class="note note__type--info">
+					<p class="note__title">This is a future O-Train Line 3 station</p>
+					<div class="note__desc">
+						<p>Line 3 is a future line coming in 2027 and is not open at this time. For more information, visit our O-Train Extension site.</p>
+						<div class="btn-container"><a href="https://www.octranspo.com/en/o-train-extension" class="btn btn-extension">O-Train Extension</a></div>
+					</div>
+				</div>`
+				section_trainBoarding.appendChild(note);
+				return
+			}
+		}
 
 	}
 

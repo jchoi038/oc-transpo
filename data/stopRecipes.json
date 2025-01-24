@@ -1571,22 +1571,22 @@
 	},
 	{
 		"stop_560": 3050,
-		"name": "BAYSHORE A",
+		"name": "A",
 		"routes": "11 Waller [BLU], 57 Tunney's Pasture [BLU], 58 Bayshore [GRY], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], 62 Tunney's Pasture [BLU], 81 Tunney's Pasture [GRY], 85 Lees [BLU], 88 Bayshore [BLU], 454 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3050,
-		"name": "BAYSHORE B",
+		"name": "B",
 		"routes": "11 Bayshore [BLU], 60 Cope [GOW], 61 Stittsville [BLU], 62 Stittsville [BLU], 63 Innovation/ Briarbrook [BLU], 66 Innovation [GOW], 81 Bayshore [GRY], 85 Bayshore [BLU], 158 Bayshore [GOW], 256 Bridlewood [PUR], 261 Kimpton [PUR], 262 Fernbank [PUR], 263 Richmond [PUR], 265 Terry Fox [PUR], 266 Springbrook [PUR], 404 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 406 Canadian Tire Ctr / Ctr Canadian Tire [GOW]"
 	},
 	{
 		"stop_560": 3050,
-		"name": "BAYSHORE B ",
+		"name": "B ",
 		"routes": "301 Carlingwood [GOW], 303 Carlingwood [GOW]"
 	},
 	{
 		"stop_560": 3050,
-		"name": "BAYSHORE C",
+		"name": "C",
 		"routes": "57 Carling Campus / Complexe Carling [BLU], 58 Complexe Carling Campus / Abbott POC [GRY], 67 Cope [GOW], 88 Hurdman [BLU], 158 Haanel [GOW], 301 Richmond [GOW], 303 Carp [GOW]"
 	},
 	{
@@ -3303,13 +3303,13 @@
 		"stop_560": 7030,
 		"name": "A",
 		"name-alt": "King Edward / Somerset E (A)",
-		"routes": "R1 Lees [R1], 1 Blair [R1], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], 56 Tunney's Pasture [GRY], N98 Airport / Aéroport [BOW]"
+		"routes": "1 Lees [R1], 1 Blair [R1], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], 56 Tunney's Pasture [GRY], N98 Airport / Aéroport [BOW]"
 	},
 	{
 		"stop_560": "7031",
 		"name": "B",
 		"name-alt": "KING EDWARD / SOMERSET E ( B )",
-		"routes": "R1 Mackenzie King Bridge [R1], 1 Tunney’s Pasture [R1], N39 Rideau [BOW], N45 Rideau [BOW], 56 King Edward [GRY], N98 Rideau [BOW]"
+		"routes": "1 Mackenzie King Bridge [R1], 1 Tunney’s Pasture [R1], N39 Rideau [BOW], N45 Rideau [BOW], 56 King Edward [GRY], N98 Rideau [BOW]"
 	},
 	{
 		"stop_560": 7613,
@@ -5401,7 +5401,7 @@
 	{
 		"stop_560": "3026",
 		"name": "B",
-		"routes": "R1 St-Laurent [R1]"
+		"routes": "1 St-Laurent [R1]"
 	},
 	{
 		"stop_560": "1742",
@@ -6047,12 +6047,12 @@
 	},
 	{
 		"stop_560": 3013,
-		"name": "DOMINION 1A",
+		"name": "1A",
 		"routes": "57 Carling Campus / Complexe Carling [BLU], 60 Cope [GOW], 61 Stittsville [BLU], 62 Stittsville [BLU], 63 Innovation/ Briarbrook [BLU], 66 Innovation [GOW], 67 Cope [GOW], 73 Limebank [GOW], 74 Limebank [BLU], 75 Cambrian [BLU], 82 Baseline [GOW], 87 Baseline [BLU], 256 Bridlewood [PUR], 261 Kimpton [PUR], 262 Fernbank [PUR], 263 Richmond [PUR], 265 Terry Fox [PUR], 266 Springbrook [PUR], 404 Canadian Tire Ctr / Ctr Canadian Tire [GOW]"
 	},
 	{
 		"stop_560": 3013,
-		"name": "DOMINION 2A",
+		"name": "2A",
 		"routes": "57 Tunney's Pasture [BLU], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], 62 Tunney's Pasture [BLU], 63 Tunney's Pasture [BLU], 66 Tunney's Pasture [GOW], 67 Tunney's Pasture [GOW], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], 82 Tunney's Pasture [GOW], 87 Tunney's Pasture [BLU], 265 Tunney's Pasture [PUR]"
 	},
 	{
@@ -11111,7 +11111,7 @@
 	{
 		"stop_560": 3023,
 		"name": "B",
-		"routes": "R1 Blair [R1], 1 Tunney’s Pasture [R1], 9 Hurdman [GRY], 10 Hurdman [BLU], 42 Hurdman [GRY], 44 Hurdman [BLU], 48 Hurdman [GRY], 88 Hurdman [BLU], 90 Hurdman [BLU], 92 Hurdman [GOW], 98 Hurdman [BLU]"
+		"routes": "1 Blair [R1], 1 Tunney’s Pasture [R1], 9 Hurdman [GRY], 10 Hurdman [BLU], 42 Hurdman [GRY], 44 Hurdman [BLU], 48 Hurdman [GRY], 88 Hurdman [BLU], 90 Hurdman [BLU], 92 Hurdman [GOW], 98 Hurdman [BLU]"
 	},
 	{
 		"stop_560": 3023,
@@ -14118,7 +14118,7 @@
 	{
 		"stop_560": 3022,
 		"name": "A",
-		"routes": "R1 Blair [R1], 1 Mackenzie King Bridge [R1], 10 Main [BLU], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], N45 Rideau [BOW], 56 Tunney's Pasture [GRY], 85 Bayshore [BLU], N98 Rideau [BOW], N98 Airport / Aéroport [BOW]"
+		"routes": "1 Blair [R1], 1 Mackenzie King Bridge [R1], 10 Main [BLU], N39 Place d'Orléans [BOW], N45 Hospital / Hôpital [BOW], N45 Rideau [BOW], 56 Tunney's Pasture [GRY], 85 Bayshore [BLU], N98 Rideau [BOW], N98 Airport / Aéroport [BOW]"
 	},
 	{
 		"stop_560": 4944,
@@ -15549,7 +15549,7 @@
 	{
 		"stop_560": 3006,
 		"name": "Slater / Kent",
-		"routes": "R1 Blair [R1], E1 Blair [EXP]"
+		"routes": "1 Blair [R1], E1 Blair [EXP]"
 	},
 	{
 		"stop_560": 3003,
@@ -16497,12 +16497,13 @@
 	},
 	{
 		"stop_560": 5284,
-		"name": "MOODIE / 417 ( MOODIE E)",
+		"name": "E",
+		"name-alt": "MOODIE / 417 ( MOODIE E)",
 		"routes": "57 Tunney's Pasture [BLU], 158 Haanel [GOW], 256 Bridlewood [PUR]"
 	},
 	{
 		"stop_560": 3042,
-		"name": "MOODIE B",
+		"name": "B",
 		"routes": "60 Cope [GOW], 61 Stittsville [BLU], 62 Stittsville [BLU], 63 Innovation/ Briarbrook [BLU], 67 Cope [GOW], 261 Kimpton [PUR], 262 Fernbank [PUR], 263 Richmond [PUR], 265 Terry Fox [PUR], 266 Springbrook [PUR], 404 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 406 Canadian Tire Ctr / Ctr Canadian Tire [GOW]"
 	},
 	{
@@ -16512,17 +16513,17 @@
 	},
 	{
 		"stop_560": 3042,
-		"name": "MOODIE B ",
+		"name": "B ",
 		"routes": "301 Richmond [GOW], 303 Carp [GOW]"
 	},
 	{
 		"stop_560": 3042,
-		"name": "MOODIE C",
+		"name": "C",
 		"routes": "57 Tunney's Pasture [BLU], 66 Tunney's Pasture [GOW]"
 	},
 	{
 		"stop_560": 3042,
-		"name": "MOODIE D",
+		"name": "D",
 		"routes": "57 Carling Campus / Complexe Carling [BLU]"
 	},
 	{
@@ -17972,7 +17973,7 @@
 	},
 	{
 		"stop_560": 3042,
-		"name": "MOODIE F",
+		"name": "F",
 		"routes": "57 Carling Campus / Complexe Carling [BLU]"
 	},
 	{
@@ -18225,26 +18226,26 @@
 	{
 		"stop_560": 3010,
 		"name": "C",
-		"routes": "R1 Tunney’s Pasture [R1], 12 Tunney's Pasture [BLU], 13 Tunney's Pasture [GOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
+		"routes": "1 Tunney’s Pasture [R1], 12 Tunney's Pasture [BLU], 13 Tunney's Pasture [GOW], N57 Bayshore [BOW], N61 Stittsville [BOW], N75 Barrhaven Centre [BOW]"
 	},
 	{
 		"stop_560": 3010,
 		"name": "D",
-		"routes": "R1 Blair [R1], 12 Blair [BLU], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
+		"routes": "1 Blair [R1], 12 Blair [BLU], N57 Rideau [BOW], N61 Rideau [BOW], N75 Rideau [BOW]"
 	},
 	{
 		"stop_560": 3019,
-		"name": "PINECREST A",
+		"name": "A",
 		"routes": "60 Cope [GOW], 61 Stittsville [BLU], 62 Stittsville [BLU], 301 Richmond [GOW], 303 Carp [GOW], 404 Canadian Tire Ctr / Ctr Canadian Tire [GOW], 406 Canadian Tire Ctr / Ctr Canadian Tire [GOW]"
 	},
 	{
 		"stop_560": 3019,
-		"name": "PINECREST B",
+		"name": "B",
 		"routes": "61 Tunney's Pasture [BLU], 62 Tunney's Pasture [BLU], 301 Carlingwood [GOW], 303 Carlingwood [GOW], 454 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3019,
-		"name": "PINECREST C",
+		"name": "C",
 		"routes": "63 Innovation/ Briarbrook [BLU], 66 Innovation [GOW], 67 Cope [GOW], 256 Bridlewood [PUR], 261 Kimpton [PUR], 262 Fernbank [PUR], 263 Richmond [PUR], 265 Terry Fox [PUR], 266 Springbrook [PUR]"
 	},
 	{
@@ -23560,12 +23561,12 @@
 	{
 		"stop_560": 3025,
 		"name": "B",
-		"routes": "R1 Blair [R1], 18 St-Laurent [GRY], 40 St-Laurent [BLU], 41 St-Laurent [BLU], 47 St-Laurent [GOW], 302 St-Laurent / Place d'Orléans [GOW]"
+		"routes": "1 Blair [R1], 18 St-Laurent [GRY], 40 St-Laurent [BLU], 41 St-Laurent [BLU], 47 St-Laurent [GOW], 302 St-Laurent / Place d'Orléans [GOW]"
 	},
 	{
 		"stop_560": 3025,
 		"name": "C",
-		"routes": "R1 Cyrville [R1], 7 St-Laurent [BLU], 14 St-Laurent [BLU], 19 Hurdman [GRY], 20 St-Laurent [GRY], 24 St-Laurent [GRY], N39 Place d'Orléans [BOW], N39 Trim [BOW], N39 Rideau [BOW]"
+		"routes": "1 Cyrville [R1], 7 St-Laurent [BLU], 14 St-Laurent [BLU], 19 Hurdman [GRY], 20 St-Laurent [GRY], 24 St-Laurent [GRY], N39 Place d'Orléans [BOW], N39 Trim [BOW], N39 Rideau [BOW]"
 	},
 	{
 		"stop_560": 4081,
@@ -24881,7 +24882,7 @@
 		"stop_560": 1369,
 		"name": "A",
 		"name-alt": "TREMBLAY / VIA RAIL ( A )",
-		"routes": "R1 Blair [R1], N39 Place d'Orléans [BOW]"
+		"routes": "1 Blair [R1], N39 Place d'Orléans [BOW]"
 	},
 	{
 		"stop_560": 6962,
@@ -25107,7 +25108,7 @@
 		"stop_560": "1371",
 		"name": "B",
 		"name-alt": "TREMBLAY / VIA RAIL ( B )",
-		"routes": "R1 Tunney’s Pasture [R1], N39 Rideau [BOW], 451 Lansdowne [GOW]"
+		"routes": "1 Tunney’s Pasture [R1], N39 Rideau [BOW], 451 Lansdowne [GOW]"
 	},
 	{
 		"stop_560": 3029,
@@ -26112,7 +26113,7 @@
 	{
 		"stop_560": 3011,
 		"name": "C",
-		"routes": "R1 Blair [R1], 1 Tunney's Pasture [R1], 57 Tunney's Pasture [BLU], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], N61 Stittsville [BOW], 62 Tunney's Pasture [BLU], 63 Tunney's Pasture [BLU], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], N75 Barrhaven Centre [BOW], 80 Barrhaven Centre [BLU], 81 Tunney's Pasture [GRY], 82 Tunney's Pasture [GOW], 256 Tunney's Pasture [PUR], 261 Tunney's Pasture [PUR], 262 Tunney's Pasture [PUR], 263 Tunney's Pasture [PUR], 265 Tunney's Pasture [PUR], 266 Tunney's Pasture [PUR], 275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
+		"routes": "1 Blair [R1], 1 Tunney's Pasture [R1], 57 Tunney's Pasture [BLU], 60 Tunney's Pasture [GOW], 61 Tunney's Pasture [BLU], N61 Stittsville [BOW], 62 Tunney's Pasture [BLU], 63 Tunney's Pasture [BLU], 73 Tunney's Pasture [GOW], 74 Tunney's Pasture [BLU], 75 Tunney's Pasture [BLU], N75 Barrhaven Centre [BOW], 80 Barrhaven Centre [BLU], 81 Tunney's Pasture [GRY], 82 Tunney's Pasture [GOW], 256 Tunney's Pasture [PUR], 261 Tunney's Pasture [PUR], 262 Tunney's Pasture [PUR], 263 Tunney's Pasture [PUR], 265 Tunney's Pasture [PUR], 266 Tunney's Pasture [PUR], 275 Tunney's Pasture [PUR], 277 Tunney's Pasture [PUR], 279 Tunney's Pasture [PUR]"
 	},
 	{
 		"stop_560": 3011,
