@@ -35,6 +35,14 @@ ul.card-list, .card ul {
 	}
 }
 
+ul#station-info-card-body{
+	li{
+		border-bottom: none;
+		margin-bottom: 1rem;
+	}
+}
+
+
 // card body{
 .card .card__body{
 	flex-grow: 1;
@@ -879,6 +887,7 @@ ul.card-list li {
 	@include media-breakpoint-up(sm) {
 		flex: 0 0 364px;
 	}
+
 }
 
 // Destination card

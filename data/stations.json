@@ -66,7 +66,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/algonquin-3",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/algonquin-01/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/algonquin-02/",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BAS.png",
@@ -97,7 +97,7 @@
 		"google_map_link": "",
 		"station_bsi": "",
 		"station_location": {
-			"access_point": "",
+			"access_point": "Algonquin Station, currently known as Baseline, is a future O-Train Line 1 station. The station features a central platform design and three entrances, one of which is a pedestrian bridge connecting to the Algonquin ACCE building.",
 			"address": "",
 			"google_link": "",
 			"access_point-fr": ""
@@ -222,7 +222,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/bayshore",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/bayshore1",
 			"prod_fr": "/fr/nos-services/stations-3/bayshore2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/BAY.png",
@@ -780,58 +780,6 @@
 		}
 	},
 	{
-		"id": "DOM",
-		"station_560": 3013,
-		"connecting_stops": "",
-		"station_name": "Dominion",
-		"station_type": {
-			"transitway": "southwest",
-			"line_1": false,
-			"line_2": false,
-			"line_3": null,
-			"line_4": false,
-			"bus": true
-		},
-		"station_name_fr": "",
-		"station_url": {
-			"staging": "",
-			"prod": "https://www.octranspo.com/en/our-services/stations-2/dominion1",
-			"prod_fr": "/fr/nos-services/stations-3/dominion2",
-			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/DOM.png",
-			"schedules": "https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&StopFilterIdentifier=T+DOM&StopFilterType=3&StopIdentifier=NH920",
-			"hero_image": "",
-			"tour360": "",
-			"pnr": "",
-			"staging-fr": "",
-			"nearby_map": ""
-		},
-		"station_feature": {
-			"pnr": null,
-			"bus_stop": true,
-			"accessible": false,
-			"airport": null
-		},
-		"station_extension": "",
-		"routing_index": {
-			"line_1": null,
-			"line_2": null,
-			"line_3": 2,
-			"line_4": null
-		},
-		"station_completed": {
-			"bus": null
-		},
-		"station_address": "",
-		"google_map_link": "",
-		"station_bsi": "",
-		"station_location": {
-			"access_point": "",
-			"address": "",
-			"google_link": "",
-			"access_point-fr": ""
-		}
-	},
-	{
 		"id": "DOW",
 		"station_560": 3061,
 		"connecting_stops": "6657, 6655, 8014, 7369",
@@ -1211,7 +1159,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/iris",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/iris1",
 			"prod_fr": "/fr/nos-services/stations-3/iris2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/IRS.png",
@@ -1263,7 +1211,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/jeanne-darc",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/jeanne-darc1",
 			"prod_fr": "/fr/nos-services/stations-3/jeanne-darc2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/JDARC.png",
@@ -1306,7 +1254,7 @@
 		"connecting_stops": "",
 		"station_name": "Kichi Zìbì",
 		"station_type": {
-			"transitway": "",
+			"transitway": true,
 			"line_1": true,
 			"line_2": null,
 			"line_3": true,
@@ -1315,10 +1263,10 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/kichi-zibi",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/kichi-zibi-01",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/kichi-zibi-02/",
-			"layout_map": "",
+			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/DOM.png",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/renderings/Kichi_Zibi.jpg",
 			"tour360": "",
@@ -1523,7 +1471,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/lincoln-fields-3",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/lincoln-fields1",
 			"prod_fr": "/fr/nos-services/stations-3/lincoln-fields2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/LIN.png",
@@ -1887,7 +1835,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/montreal",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/montreal/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/montreal-2/",
 			"layout_map": "",
@@ -1939,12 +1887,12 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/moodie",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/moodie1",
 			"prod_fr": "/fr/nos-services/stations-3/moodie2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/MOOD.png",
 			"schedules": "",
-			"hero_image": "https://www.octranspo.com/images/files/stage2/renderings/HD/Moodie-stn_view_(2).png",
+			"hero_image": "https://www.octranspo.com/images/files/stage2/renderings/HD/Moodie-stn_view_2.png",
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
@@ -2095,7 +2043,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/new-orchard",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/new-orchard/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/new-orchard-2/",
 			"layout_map": "",
@@ -2251,7 +2199,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/pinecrest",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/pinecrest1",
 			"prod_fr": "/fr/nos-services/stations-3/pinecrest2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/PIN.png",
@@ -2303,7 +2251,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/place-dorleans",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/place-dorleans",
 			"prod_fr": "/fr/nos-services/stations-3/place-dorleans-2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/ORL.png",
@@ -2334,7 +2282,7 @@
 		"google_map_link": "",
 		"station_bsi": "",
 		"station_location": {
-			"access_point": "",
+			"access_point": "The station is located beside Place d’Orléans Shopping Centre and OR 174",
 			"address": "",
 			"google_link": "",
 			"access_point-fr": ""
@@ -2407,7 +2355,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/queensview",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/queensview1/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/queensview2/",
 			"layout_map": "",
@@ -2667,7 +2615,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/sherbourne",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/sherbourne1/",
 			"prod_fr": "https://www.octranspo.com/fr/nos-services/stations-3/sherbourne2/",
 			"layout_map": "",
@@ -3084,7 +3032,7 @@
 		},
 		"station_name_fr": "",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/trim",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/trim",
 			"prod_fr": "/fr/nos-services/stations-3/trim2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/TRI.png",
@@ -3344,7 +3292,7 @@
 		},
 		"station_name_fr": "Westboro",
 		"station_url": {
-			"staging": "",
+			"staging": "https://staging.octranspo1.com/en/our-services/stations-nwtb/westboro",
 			"prod": "https://www.octranspo.com/en/our-services/stations-2/westboro1",
 			"prod_fr": "/fr/nos-services/stations-3/westboro2",
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/WEB.png",
