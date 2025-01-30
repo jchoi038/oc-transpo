@@ -45,9 +45,6 @@ var section_nearby = document.getElementById("nearby");
 var section_360 = document.getElementById("360");
 var section_explore = document.getElementById("explore");
 
-// hide elements
-section_amenities.style.display = "none"
-
 // build Back to top button
 
 if (page == "station") {
@@ -1286,15 +1283,24 @@ if (page == "station") {
 											lang == "en" ? "Station in photos" : "Station en photos"
 										}</p>
                     <div class="col-4">
-                        <div class="navigation-buttons-section navigation-buttons-section--spotlight photo-carousel-container-nav photo-carousel-container-nav--new">
-                            <div class="navigation-buttons-slider prev">
-                                <img src="/themes/user/site/octranspo/assets/img/stage-2/left-arrow-button.svg" alt="left-arrow-button">
-                            </div>
-                            <div class="navigation-buttons-slider next">
-                                <img src="/themes/user/site/octranspo/assets/img/stage-2/right-arrow-button.svg" alt="right-arrow-button">
-                            </div>
-                        </div>
-                    </div>
+						<div
+							class="navigation-buttons-section navigation-buttons-section--spotlight photo-carousel-container-nav photo-carousel-container-nav--new"
+						>
+							<div class="navigation-buttons-slider prev">
+								<img
+									alt="left-arrow-button"
+									src="/themes/user/site/octranspo/assets/img/stage-2/left-arrow-button.svg"
+								/>
+							</div>
+	
+							<div class="navigation-buttons-slider next">
+								<img
+									alt="right-arrow-button"
+									src="/themes/user/site/octranspo/assets/img/stage-2/right-arrow-button.svg"
+								/>
+							</div>
+						</div>
+					</div>
                 </div>
             </div>
             <div class="container carousel-container photo-carousel-container">
@@ -1306,19 +1312,15 @@ if (page == "station") {
 		const track = galleryContainer.querySelector(".gallery-carousel");
 
 		arr.forEach((item) => {
-			const slide = document.createElement("div");
-			slide.className = "gallery-image";
-			slide.innerHTML = `
+			const galleryItem = document.createElement("div");
+			galleryItem.className = "gallery-image";
+			galleryItem.innerHTML = `
             <figure>
-                <img src="${item.src}" alt="${
-				lang == "en" ? item.caption : item.caption_fr
-			}" style="width: 100%;">
-                <figcaption>${
-									lang == "en" ? item.caption : item.caption_fr
-								}</figcaption>
+                <img src="${item.src}" alt="${lang == "en" ? item.caption : item.caption_fr}>
+                <figcaption>${lang == "en" ? item.caption : item.caption_fr}</figcaption>
             </figure>
         `;
-			track.appendChild(slide);
+			track.appendChild(galleryItem);
 		});
 
 		section_explore.appendChild(galleryContainer);
