@@ -1,10 +1,24 @@
-/* This code is for dynamically styling the station page h1 banner */
 const lang = checkPageLanguage(window.location.href);
 const site = checkSite(window.location.href);
 const page = checkPage(window.location.href);
 
 // Initialize variables
 const h1Element = document.querySelector("h1");
+// Apply generic station styles
+
+h1Element.classList.add("station-banner");
+const h1StationName = h1Element.textContent.replace("’", "'"); // Get the original text content
+h1Element.innerHTML = `<span class="station-banner__title">${h1StationName}</span>`; // Wrap it in a <span>
+
+// const logo = document.createElement("img");
+// logo.src =
+// 	"https://www.octranspo.com/images/files/Network_Service_Change/O-heading-icon.png";
+// logo.className = "logo";
+// h1Element.prepend(logo.cloneNode(true));
+// lang == "en"
+// 	? (logo.alt = "OC Transpo logo")
+// 	: (logo.alt = "french trans needed");
+
 var quicklinks_container = document.getElementById("quicklinks-container");
 var selectOptionType = document.createElement("p");
 selectOptionType.textContent.textContent = "";
@@ -15,6 +29,8 @@ var futureStationLines = document.createElement("div");
 var stationRoutes = document.createElement("div");
 var stationLayoutMap = document.getElementsByClassName("station-layout-map");
 var section_busBoardingLocations = document.getElementById("bus-boarding-info");
+createHeroBanner()
+
 
 // /*delete this line for nwtb launch*/if (section_busBoardingLocations) {section_busBoardingLocations.className = "nwtb-launch"}
 
@@ -29,47 +45,12 @@ var section_nearby = document.getElementById("nearby");
 var section_360 = document.getElementById("360");
 var section_explore = document.getElementById("explore");
 
-function checkPage(currentUrl) {
-	if (
-		currentUrl.indexOf("our-services/stations") > 0 ||
-		currentUrl.indexOf("nos-services/stations") > 0
-	) {
-		return "station";
-	}
-}
-
-function checkSite(currentUrl) {
-	if (currentUrl.indexOf("staging")) {
-		return "staging";
-	} else {
-		return "prod";
-	}
-}
-
-function checkPageLanguage(currentUrl) {
-	if (currentUrl.indexOf("/fr/") == -1) {
-		return "en";
-	} else {
-		return "fr";
-	}
-}
+// hide elements
+section_amenities.style.display = "none"
 
 // build Back to top button
 
 if (page == "station") {
-	buildBackToTopBtn();
-	function buildBackToTopBtn() {
-		const backToTopBtn = document.createElement("a");
-
-		lang == "en"
-			? (backToTopBtn.textContent = "Back to top")
-			: (backToTopBtn.textContent = "Retour en haut");
-		backToTopBtn.className = "btn sticky back-to-top-btn";
-		backToTopBtn.href = "#top";
-
-		document.querySelector("body").appendChild(backToTopBtn);
-	}
-
 	// IF french page, translate section ids
 	if (lang == "fr") {
 		section_stationLayout.id = "carte";
@@ -80,6 +61,258 @@ if (page == "station") {
 		section_explore.id = "savoir";
 	}
 
+	fetch("/data/stations.json")
+		// fetch("/images/files/data/stations.json")
+		.then((response) => response.json())
+		.then((data) => {
+			let matchingStation = data.find(
+				(station) =>
+					station.station_name == h1StationName ||
+					station.station_name_fr == h1StationName
+			);
+
+			// stationRoutes = getStationRoutes(matchingStation)
+
+			if (h1StationName == "Template guide") {
+				matchingStation = data.find(
+					(station) => station.station_name == "Bayview"
+				);
+			}
+
+			if (matchingStation) {
+				// populate hero image
+				if (matchingStation.station_url.hero_image) {
+					let url = matchingStation.station_url.hero_image
+					let img = document.getElementById("station-hero-img")
+					img.style.backgroundImage = `url(${url})`;
+					
+				} else {
+					// TBD
+				}
+				/***********  Part n ***********/
+				/* Generate borading location table content */
+				// get all dynamic elements
+
+				fetch("/data/stopRecipes.json")
+					// fetch("/images/files/data/stopRecipes.json")
+					.then((response) => response.json())
+					.then((stopRecipes) => {
+						if (section_busBoardingLocations) {
+							createBusBoardingLocationsSection(matchingStation, stopRecipes);
+						}
+						//end
+					})
+					.then(() => {
+						infoCard
+							? buildStationInfoCard(
+									infoCard,
+									lang,
+									matchingStation,
+									stationLines,
+									futureStationLines,
+									selectOptionType
+							  )
+							: "";
+					});
+
+				/***********  Part 1 ***********/
+
+				// Create the new elements
+
+				const line1 = document.createElement("span");
+				line1.className = "rt rt-type--line1";
+				lang == "en"
+					? (line1.innerHTML = `<span class="visuallyhidden">Line </span>1`)
+					: (line1.innerHTML = `<span class="visuallyhidden">Ligne </span>1`);
+
+				const line2 = document.createElement("span");
+				line2.className = "rt rt-type--line2";
+				lang == "en"
+					? (line2.innerHTML = `<span class="visuallyhidden">Line </span>2`)
+					: (line2.innerHTML = `<span class="visuallyhidden">Ligne </span>2`);
+
+				const line3 = document.createElement("span");
+				line3.className = "rt rt-type--line3";
+				lang == "en"
+					? (line3.innerHTML = `<span class="visuallyhidden">Future Line </span>3`)
+					: (line3.innerHTML = `<span class="visuallyhidden">Future Ligne </span>3`);
+
+				const line4 = document.createElement("span");
+				line4.className = "rt rt-type--line4";
+				lang == "en"
+					? (line4.innerHTML = `<span class="visuallyhidden">Line </span>4`)
+					: (line4.innerHTML = `<span class="visuallyhidden">Ligne </span>4`);
+
+				const trainIcon = document.createElement("img");
+				trainIcon.className = "inline-icon";
+				lang == "en"
+					? (trainIcon.alt = `O-Train station`)
+					: (trainIcon.innerHTML = `Station de l'O-Train`);
+
+				trainIcon.src =
+					"https://www.octranspo.com/images/files/icons/transport_train-white.svg";
+
+				const busIcon = document.createElement("img");
+				busIcon.className = "inline-icon";
+				lang == "en" ? (busIcon.alt = `Bus`) : (busIcon.innerHTML = `Autobus`);
+				busIcon.src =
+					"https://www.octranspo.com/images/files/icons/transport_bus-white.svg";
+
+				// populate quicklinks
+				if (quicklinks_container) {
+					initializeQuickLinksSection(matchingStation);
+				}
+
+				
+
+				// populate 360 tour section
+				if (section_360) {
+					section_360.className = "section";
+					// Check if 360 url exists
+					if (matchingStation.station_url.tour360) {
+						// add in the h2 according to the page language
+						createSectionH2(
+							lang == "en" ? "360-Degree tour" : "Visite virtuelle",
+							section_360
+						);
+						// call helper function to populate 360 section
+						populate360Section(matchingStation.station_url.tour360);
+					} else {
+						// if 360 url DNE remove 360 section (if the section exists on page)
+						section_360?.remove();
+					}
+				}
+
+				// populate nearby map image
+				if (matchingStation.station_url.nearby_map) {
+					let nearby_map_url = matchingStation.station_url.nearby_map;
+					let altText =
+						lang == "en"
+							? `Map of Places of interest within a 5-minute walk of ${matchingStation.station_name} Station`
+							: `{Map of Places of interest within a 5-minute walk of ${matchingStation.station_name} Station} Sites d'intÃ©rÃªt Ã  moins de 5 km`;
+
+					//createFancyImageComponent function will have two variables: image src and alt text
+					let nearby_map = createFancyboxContainer(nearby_map_url, altText);
+					//add inline style to fancy image component flex=1 0 240px
+					nearby_map.style.flex = "1 0 240px";
+					//append to section_nearby component
+					section_nearby?.prepend(nearby_map);
+				}
+
+				// populate image gallery
+				if (matchingStation.station_url.image_gallery) {
+					console.log(matchingStation.station_url.image_gallery);
+					populateImageGallery(matchingStation.station_url.image_gallery);
+				}
+
+				//insert station layout to station layout section
+				if (matchingStation.station_url.layout_map) {
+					let figure = document.createElement("figure");
+					let figcaption = document.createElement("figcaption");
+					let layoutImg = document.createElement("img");
+					layoutImg.setAttribute("id", "zoomPanObj");
+					figcaption.innerHTML =
+						lang == "en"
+							? `Station layout map for ${matchingStation.station_name} Station. <a class="download-link" target="_blank" href="${matchingStation.station_url.layout_map}">Download map</a>`
+							: `Plan de la station ${matchingStation.station_name_fr}`;
+					layoutImg.alt = `${matchingStation.station_name} Station layout`;
+					layoutImg.src = matchingStation.station_url.layout_map;
+					figure.replaceChildren(layoutImg, figcaption);
+					section_stationLayout.replaceChildren(section_stops, figure);
+				} else {
+					// remove layout section
+					section_stationLayout.remove();
+					document.getElementById("quicklinks-card_station-layout").remove();
+				}
+
+				function getStationType(matchingStation, selectOptionType) {
+					// Check which lines or bus services the station belongs to and append the icons accordingly
+					if (matchingStation.station_type.line_1 == true) {
+						if (matchingStation.station_extension) {
+							futureStationLines.appendChild(line1.cloneNode(true));
+						} else {
+							stationLines.appendChild(line1.cloneNode(true));
+						}
+					}
+					if (matchingStation.station_type.line_2 == true) {
+						stationLines.appendChild(line2.cloneNode(true));
+					}
+					if (matchingStation.station_type.line_3 == true) {
+						futureStationLines.appendChild(line3.cloneNode(true));
+					}
+					if (matchingStation.station_type.line_4 == true) {
+						stationLines.appendChild(line4.cloneNode(true));
+					}
+
+					if (
+						matchingStation.station_type.line_1 == true ||
+						matchingStation.station_type.line_2 == true ||
+						matchingStation.station_type.line_3 == true ||
+						matchingStation.station_type.line_4 == true
+					) {
+						selectOptionType.textContent =
+							lang == "en" ? "O-Train station" : "Station de l'O-Train";
+					} else {
+						document.getElementById("station-lines-li")?.remove();
+					}
+					// Check if the station is in the bus station array and append the bus icon
+					if (matchingStation.station_type.transitway == true) {
+						if (selectOptionType.textContent) {
+							selectOptionType.textContent =
+								lang == "en"
+									? `${selectOptionType.textContent} | Transitway station`
+									: `${selectOptionType.textContent} | Station du transport en commun`;
+						} else {
+							selectOptionType.textContent =
+								lang == "en"
+									? "Transitway station"
+									: "Station du transport en commun";
+						}
+					}
+
+					return selectOptionType;
+				}
+				function styleStationBanner(h1Element, matchingStation) {
+					// Check which lines or bus services the station belongs to and append the icons accordingly
+					if (matchingStation.station_type.line_1 == true) {
+						h1Element.appendChild(line1.cloneNode(true)); // Add Line 1 number
+					}
+					if (matchingStation.station_type.line_2 == true) {
+						h1Element.appendChild(line2.cloneNode(true)); // Add Line 1 number
+					}
+					if (matchingStation.station_type.line_3 == true) {
+						h1Element.appendChild(line3.cloneNode(true)); // Add Line 1 number
+					}
+					if (matchingStation.station_type.line_4 == true) {
+						h1Element.appendChild(line4.cloneNode(true)); // Add Line 1 number
+					}
+
+					if (
+						matchingStation.station_type.line_1 == true ||
+						matchingStation.station_type.line_2 == true ||
+						matchingStation.station_type.line_3 == true ||
+						matchingStation.station_type.line_4 == true
+					) {
+						h1Element.appendChild(trainIcon.cloneNode()); // Add train icon
+						if (section_trainBoarding) {
+							section_trainBoarding.style.width = "100%";
+							createTrainBoardingInfoTable(matchingStation);
+						}
+					} else {
+						document.getElementById("station-lines-li")?.remove();
+					}
+					// Check if the station is in the bus station array and append the bus icon
+					if (matchingStation.station_type.transitway == true) {
+						h1Element.appendChild(busIcon.cloneNode()); // Add bus icon
+					}
+				}
+
+				styleStationBanner(h1Element, matchingStation);
+				getStationType(matchingStation, selectOptionType);
+			} else {
+				console.error("No matching station found.");
+			}
+		});
 	/*** Build foundations for major sections  IF the section exists***/
 
 	if (quicklinks_container) {
@@ -205,311 +438,23 @@ if (page == "station") {
 		addCardTags();
 	}
 
-	document.addEventListener("DOMContentLoaded", () => {
-		jsDisabled?.remove();
+	// .catch((error) => console.error("Error fetching JSON:", error));
 
-		fetch("/data/stations.json")
-			// fetch("/images/files/data/stations.json")
-			.then((response) => response.json())
-			.then((data) => {
-				const h1StationName = h1Element.textContent.replace("’", "'"); // Get the original text content
+	function createSection() {
+		var section = document.createElement("section");
+		section.classList.add("section");
+		return section;
+	}
 
-				let matchingStation = data.find(
-					(station) =>
-						station.station_name == h1StationName ||
-						station.station_name_fr == h1StationName
-				);
-
-				if (h1StationName == "Template guide") {
-					matchingStation = data.find(
-						(station) => station.station_name == "Bayview"
-					);
-				}
-
-				if (matchingStation) {
-					/***********  Part 1 ***********/
-					// Add the 'station-banner' class
-					h1Element.classList.add("station-banner");
-					// Wrap the existing content in a <span>
-					h1Element.innerHTML = `<span class="station-banner__title">${h1StationName}</span>`; // Wrap it in a <span>
-
-					// Create the new elements
-					const logo = document.createElement("img");
-					logo.src =
-						"https://www.octranspo.com/images/files/Network_Service_Change/O-heading-icon.png";
-					logo.className = "logo";
-					h1Element.prepend(logo.cloneNode(true));
-
-					lang == "en"
-						? (logo.alt = "OC Transpo logo")
-						: (logo.alt = "french trans needed");
-
-					const line1 = document.createElement("span");
-					line1.className = "rt rt-type--line1";
-					lang == "en"
-						? (line1.innerHTML = `<span class="visuallyhidden">Line </span>1`)
-						: (line1.innerHTML = `<span class="visuallyhidden">Ligne </span>1`);
-
-					const line2 = document.createElement("span");
-					line2.className = "rt rt-type--line2";
-					lang == "en"
-						? (line2.innerHTML = `<span class="visuallyhidden">Line </span>2`)
-						: (line2.innerHTML = `<span class="visuallyhidden">Ligne </span>2`);
-
-					const line3 = document.createElement("span");
-					line3.className = "rt rt-type--line3";
-					lang == "en"
-						? (line3.innerHTML = `<span class="visuallyhidden">Future Line </span>3`)
-						: (line3.innerHTML = `<span class="visuallyhidden">Future Ligne </span>3`);
-
-					const line4 = document.createElement("span");
-					line4.className = "rt rt-type--line4";
-					lang == "en"
-						? (line4.innerHTML = `<span class="visuallyhidden">Line </span>4`)
-						: (line4.innerHTML = `<span class="visuallyhidden">Ligne </span>4`);
-
-					const trainIcon = document.createElement("img");
-					trainIcon.className = "inline-icon";
-					lang == "en"
-						? (trainIcon.alt = `O-Train station`)
-						: (trainIcon.innerHTML = `Station de l'O-Train`);
-
-					trainIcon.src =
-						"https://www.octranspo.com/images/files/icons/transport_train-white.svg";
-
-					const busIcon = document.createElement("img");
-					busIcon.className = "inline-icon";
-					lang == "en"
-						? (busIcon.alt = `Bus`)
-						: (busIcon.innerHTML = `Autobus`);
-					busIcon.src =
-						"https://www.octranspo.com/images/files/icons/transport_bus-white.svg";
-
-					// populate quicklinks
-					if (quicklinks_container) {
-						initializeQuickLinksSection(matchingStation);
-					}
-
-					// populate hero image
-					if (matchingStation.station_url.hero_image) {
-						createHeroBanner(matchingStation.station_url.hero_image);
-					} else {
-						// TBD
-					}
-
-					// populate 360 tour section
-					if (section_360) {
-						section_360.className = "section";
-						// Check if 360 url exists
-						if (matchingStation.station_url.tour360) {
-							// add in the h2 according to the page language
-							createSectionH2(
-								lang == "en" ? "360-Degree tour" : "Visite virtuelle",
-								section_360
-							);
-							// call helper function to populate 360 section
-							populate360Section(matchingStation.station_url.tour360);
-						} else {
-							// if 360 url DNE remove 360 section (if the section exists on page)
-							section_360?.remove();
-						}
-					}
-
-					// populate nearby map image
-					if (matchingStation.station_url.nearby_map) {
-						let nearby_map_url = matchingStation.station_url.nearby_map;
-						let altText =
-							lang == "en"
-								? `Map of Places of interest within a 5-minute walk of ${matchingStation.station_name} Station`
-								: `{Map of Places of interest within a 5-minute walk of ${matchingStation.station_name} Station} Sites d'intÃ©rÃªt Ã  moins de 5 km`;
-
-						//createFancyImageComponent function will have two variables: image src and alt text
-						let nearby_map = createFancyboxContainer(nearby_map_url, altText);
-						//add inline style to fancy image component flex=1 0 240px
-						nearby_map.style.flex = "1 0 240px";
-						//append to section_nearby component
-						section_nearby?.prepend(nearby_map);
-					}
-
-					//insert station layout to station layout section
-					if (matchingStation.station_url.layout_map) {
-						let figure = document.createElement("figure");
-						let figcaption = document.createElement("figcaption");
-						let layoutImg = document.createElement("img");
-						layoutImg.setAttribute("id", "zoomPanObj");
-						figcaption.innerHTML =
-							lang == "en"
-								? `Station layout map for ${matchingStation.station_name} Station. <a class="download-link" target="_blank" href="${matchingStation.station_url.layout_map}">Download map</a>`
-								: `Plan de la station ${matchingStation.station_name_fr}`;
-						layoutImg.alt = `${matchingStation.station_name} Station layout`;
-						layoutImg.src = matchingStation.station_url.layout_map;
-						figure.replaceChildren(layoutImg, figcaption);
-						section_stationLayout.replaceChildren(section_stops, figure);
-					} else {
-						// remove layout section
-						section_stationLayout.remove();
-						document.getElementById("quicklinks-card_station-layout").remove();
-					}
-
-					// if (matchingStation.station_url.layout_map && stationLayoutMap) {
-					// 	for (let i = 0; i < stationLayoutMap.length; i++) {
-					// 		stationLayoutMap[i].src = `${matchingStation.station_url.layout_map}`;
-					// 		if (lang == "en") {
-					// 			let figure = document.createElement("figure")
-					// 			let figcaption = document.createElement("figcaption")
-					// 			let layoutImg = document.createElement("img")
-					// 			layoutImg.setAttribute("id", "zoomPanObj")
-					// 			figcaption.textContent = `Station layout map for ${matchingStation} Station.`
-					// 			stationLayoutMap[i].alt = `${matchingStation.station_name} Station layout`;
-					// 			document.getElementById("layout").appendChild(figure)
-					// 			document.getElementById("layout").appendChild(figcaption)
-					// 			// figure.appendChild(layoutImg)
-					// 			// figure.appendChild(figcaption)
-
-					// 		} else {
-					// 			stationLayoutMap[i].alt = `Plan de la station ${matchingStation.station_name}`;
-					// 		}
-					// 	}
-					// }
-
-					// ---
-
-					function getStationType(matchingStation, selectOptionType) {
-						// Check which lines or bus services the station belongs to and append the icons accordingly
-						if (matchingStation.station_type.line_1 == true) {
-							if (matchingStation.station_extension) {
-								futureStationLines.appendChild(line1.cloneNode(true));
-							} else {
-								stationLines.appendChild(line1.cloneNode(true));
-							}
-						}
-						if (matchingStation.station_type.line_2 == true) {
-							stationLines.appendChild(line2.cloneNode(true));
-						}
-						if (matchingStation.station_type.line_3 == true) {
-							futureStationLines.appendChild(line3.cloneNode(true));
-						}
-						if (matchingStation.station_type.line_4 == true) {
-							stationLines.appendChild(line4.cloneNode(true));
-						}
-
-						if (
-							matchingStation.station_type.line_1 == true ||
-							matchingStation.station_type.line_2 == true ||
-							matchingStation.station_type.line_3 == true ||
-							matchingStation.station_type.line_4 == true
-						) {
-							selectOptionType.textContent =
-								lang == "en" ? "O-Train station" : "Station de l'O-Train";
-						} else {
-							document.getElementById("station-lines-li")?.remove();
-						}
-						// Check if the station is in the bus station array and append the bus icon
-						if (matchingStation.station_type.transitway == true) {
-							if (selectOptionType.textContent) {
-								selectOptionType.textContent =
-									lang == "en"
-										? `${selectOptionType.textContent} | Transitway station`
-										: `${selectOptionType.textContent} | Station du transport en commun`;
-							} else {
-								selectOptionType.textContent =
-									lang == "en"
-										? "Transitway station"
-										: "Station du transport en commun";
-							}
-						}
-
-						return selectOptionType;
-					}
-					function styleStationBanner(h1Element, matchingStation) {
-						// Check which lines or bus services the station belongs to and append the icons accordingly
-						if (matchingStation.station_type.line_1 == true) {
-							h1Element.appendChild(line1.cloneNode(true)); // Add Line 1 number
-						}
-						if (matchingStation.station_type.line_2 == true) {
-							h1Element.appendChild(line2.cloneNode(true)); // Add Line 1 number
-						}
-						if (matchingStation.station_type.line_3 == true) {
-							h1Element.appendChild(line3.cloneNode(true)); // Add Line 1 number
-						}
-						if (matchingStation.station_type.line_4 == true) {
-							h1Element.appendChild(line4.cloneNode(true)); // Add Line 1 number
-						}
-
-						if (
-							matchingStation.station_type.line_1 == true ||
-							matchingStation.station_type.line_2 == true ||
-							matchingStation.station_type.line_3 == true ||
-							matchingStation.station_type.line_4 == true
-						) {
-							h1Element.appendChild(trainIcon.cloneNode()); // Add train icon
-							if (section_trainBoarding) {
-								section_trainBoarding.style.width = "100%";
-								createTrainBoardingInfoTable(matchingStation);
-							}
-						} else {
-							document.getElementById("station-lines-li")?.remove();
-						}
-						// Check if the station is in the bus station array and append the bus icon
-						if (matchingStation.station_type.transitway == true) {
-							h1Element.appendChild(busIcon.cloneNode()); // Add bus icon
-						}
-					}
-
-					styleStationBanner(h1Element, matchingStation);
-					getStationType(matchingStation, selectOptionType);
-				} else {
-					console.error("No matching station found.");
-				}
-
-				/***********  Part 2 ***********/
-				/* Generate borading location table content */
-				// get all dynamic elements
-
-				fetch("/data/stopRecipes.json")
-					// fetch("/images/files/data/stopRecipes.json")
-					.then((response) => response.json())
-					.then((stopRecipes) => {
-						if (section_busBoardingLocations) {
-							createBusBoardingLocationsSection(matchingStation, stopRecipes);
-						}
-						//end
-					})
-					.then(() => {
-						infoCard
-							? buildStationInfoCard(
-									infoCard,
-									lang,
-									matchingStation,
-									stationLines,
-									futureStationLines,
-									stationRoutes,
-									selectOptionType
-							  )
-							: "";
-					});
-
-				// /***********  Part 3 ***********/
-				// /* Add station status  */
-			});
-		// .catch((error) => console.error("Error fetching JSON:", error));
-
-		function createSection() {
-			var section = document.createElement("section");
-			section.classList.add("section");
-			return section;
-		}
-
-		function addTextContent(el, text) {
-			el.textContent = `${text}`;
-		}
-		function addhref(el, link) {
-			el.href = `${link}`;
-		}
-		function addsrc(el, url) {
-			el.src = `${url}`;
-		}
-	});
+	function addTextContent(el, text) {
+		el.textContent = `${text}`;
+	}
+	function addhref(el, link) {
+		el.href = `${link}`;
+	}
+	function addsrc(el, url) {
+		el.src = `${url}`;
+	}
 
 	function createSectionH2(title, section) {
 		let sectionTitle = document.createElement("h2");
@@ -1160,7 +1105,6 @@ if (page == "station") {
 		matchingStation,
 		lines,
 		futureLines,
-		routes,
 		selectOptionType
 	) {
 		// Add the card and station-info-card classes to the div
@@ -1241,7 +1185,10 @@ if (page == "station") {
 
 		if (lines.textContent != "") {
 			let title = document.createElement("strong");
-			title.innerHTML = lang == "en" ? `Lines <span class="tag tag-type__success">In service</span>` : "{}";
+			title.innerHTML =
+				lang == "en"
+					? `Lines <span class="tag tag-type__success">In service</span>`
+					: "{}";
 			appendListItem(cardBody, title, lines);
 		}
 
@@ -1323,6 +1270,58 @@ if (page == "station") {
 
 		// Remove the original <ul>
 		ulElement?.remove();
+	}
+
+	function populateImageGallery(arr) {
+		const galleryContainer = document.createElement("div");
+		galleryContainer.className =
+			"stage-2 container container-photo-gallery-header image-gallery-carousel-main no-padding";
+
+		galleryContainer.innerHTML = `
+        <div class="photo-gallery-generic">
+            <div class="row photo-gallery-first-row">
+                <div class="col-4"><!-- <h2>Photo Gallery</h2> --></div>
+                <div class="col-4 gallery-subhead-arrows" id="gallery-subhead-arrows-main">
+                    <p class="subhead">${
+											lang == "en" ? "Station in photos" : "Station en photos"
+										}</p>
+                    <div class="col-4">
+                        <div class="navigation-buttons-section navigation-buttons-section--spotlight photo-carousel-container-nav photo-carousel-container-nav--new">
+                            <div class="navigation-buttons-slider prev">
+                                <img src="/themes/user/site/octranspo/assets/img/stage-2/left-arrow-button.svg" alt="left-arrow-button">
+                            </div>
+                            <div class="navigation-buttons-slider next">
+                                <img src="/themes/user/site/octranspo/assets/img/stage-2/right-arrow-button.svg" alt="right-arrow-button">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container carousel-container photo-carousel-container">
+                <div class="gallery-carousel image-gallery-carousel gallery-carousel__item-wrapper" data-js="image-gallery-carousel-main"></div>
+            </div>
+        </div>
+    `;
+
+		const track = galleryContainer.querySelector(".gallery-carousel");
+
+		arr.forEach((item) => {
+			const slide = document.createElement("div");
+			slide.className = "gallery-image";
+			slide.innerHTML = `
+            <figure>
+                <img src="${item.src}" alt="${
+				lang == "en" ? item.caption : item.caption_fr
+			}" style="width: 100%;">
+                <figcaption>${
+									lang == "en" ? item.caption : item.caption_fr
+								}</figcaption>
+            </figure>
+        `;
+			track.appendChild(slide);
+		});
+
+		section_explore.appendChild(galleryContainer);
 	}
 
 	function populate360Section(url) {
@@ -1488,24 +1487,9 @@ if (page == "station") {
 		});
 	}
 
-	function createHeroBanner(url) {
-		// Get the station-hero-banner div
-		const heroBanner = document.getElementById("station-hero-banner");
-		// Create the img element
-		const heroImg = document.createElement("img");
 
-		if (heroBanner) {
-			// Add the hero-banner class to the div
-			heroBanner?.classList.add("hero-banner");
-			// Append the img to the hero-banner div
-			heroBanner.appendChild(heroImg);
-		}
-
-		if (heroImg) {
-			// Set the id and style with background-image for the img element
-			heroImg.id = "station-hero-img";
-			heroImg.style.backgroundImage = `url(${url})`;
-		}
+	function addHeroImageURL(url){
+		getElementById("station-hero-img").style.backgroundImage = `url(${url})`;
 	}
 
 	function createLayout(section, layoutClass) {
@@ -2255,3 +2239,49 @@ const createIconElement = (iconName, altText) => {
 	span.appendChild(icon);
 	return span;
 };
+
+function checkPage(currentUrl) {
+	if (
+		currentUrl.indexOf("our-services/stations") > 0 ||
+		currentUrl.indexOf("nos-services/stations") > 0
+	) {
+		return "station";
+	}
+}
+
+function checkSite(currentUrl) {
+	if (currentUrl.indexOf("staging")) {
+		return "staging";
+	} else {
+		return "prod";
+	}
+}
+
+function checkPageLanguage(currentUrl) {
+	if (currentUrl.indexOf("/fr/") == -1) {
+		return "en";
+	} else {
+		return "fr";
+	}
+}
+
+function getStationRoutes(matchingStation) {
+	return routes;
+}
+
+
+function createHeroBanner() {
+	const heroBanner = document.getElementById("station-hero-banner");
+	// Create the img element
+	const heroImg = document.createElement("img");
+
+	if (heroBanner) {
+		// Add the hero-banner class to the div
+		heroBanner?.classList.add("hero-banner");
+		// Append the img to the hero-banner div
+		heroBanner.appendChild(heroImg);
+	}
+
+	// Set the id and style with background-image for the img element
+	heroImg.id = "station-hero-img";
+}
