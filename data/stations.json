@@ -75,7 +75,17 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src" : "https://www.octranspo.com/images/files/algonquin_station_perspective.png",
+					"caption" : "Algonquin Station."
+				},
+				{
+					"src" : "https://www.octranspo.com/images/files/algonquin_fare_gate.png",
+					"caption" : "Algonquin station fare gate."
+				}
+			]
 		},
 		"station_feature": {
 			"pnr": true,
@@ -283,7 +293,35 @@
 			"tour360": "https://my.matterport.com/show/?m=tvVnUgKetMA",
 			"pnr": "",
 			"staging-fr": "https://staging.octranspo1.com/fr/nos-services/stations-fr-1/bayview-3",
-			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/bayview.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/bayview.jpg",
+			"image_gallery": [
+				{
+					"src" : "https://www.octranspo.com/images/files/stage2/Stage2-230823-26.jpg",
+					"caption" : "An overhead view of the Line 2 platform at Bayview Station.",
+					"caption_fr" : "{An overhead view of the Line 2 platform at Bayview Station.}"
+				},
+				{
+					"src" : "https://www.octranspo.com/images/files/stage2/bayview_1366x768.jpg",
+					"caption" : "Bayview Station street view.",
+					"caption_fr" : "{Bayview Station street view.}"
+				},
+				{
+					"src" : "https://www.octranspo.com/images/files/stage2/Bayview_Line_2_Platform_August_28.jpg",
+					"caption" : "Bayview Station platforms.",
+					"caption_fr" : "{Bayview Station platforms.}"
+				},
+				{
+					"src" : "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_bayview-station_01.jpg",
+					"caption" : "Bayview Station",
+					"caption_fr" : "{Bayview Station}"
+				},
+				{
+					"src" : "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_bayview-station_02.jpg",
+					"caption" : "Bayview Station",
+					"caption_fr" : "{Bayview Station}"
+				}
+			]
+			
 		},
 		"station_feature": {
 			"pnr": null,
