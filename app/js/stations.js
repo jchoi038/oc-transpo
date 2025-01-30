@@ -5,10 +5,11 @@ const page = checkPage(window.location.href);
 // Initialize variables
 const h1Element = document.querySelector("h1");
 // Apply generic station styles
-
-h1Element.classList.add("station-banner");
-const h1StationName = h1Element.textContent.replace("’", "'"); // Get the original text content
-h1Element.innerHTML = `<span class="station-banner__title">${h1StationName}</span>`; // Wrap it in a <span>
+if (page == "station") {
+	h1Element.classList.add("station-banner");
+	const h1StationName = h1Element.textContent.replace("’", "'"); // Get the original text content
+	h1Element.innerHTML = `<span class="station-banner__title">${h1StationName}</span>`; // Wrap it in a <span>
+}
 
 // const logo = document.createElement("img");
 // logo.src =
@@ -36,6 +37,10 @@ createHeroBanner()
 
 var section_trainBoarding = document.getElementById("train-boarding-info");
 var jsDisabled = document.getElementById("js-disabled");
+
+// delete line about js
+var jsDisabled = document.getElementById("js-disabled");
+jsDisabled?.remove();
 
 // get all page main sections
 var section_stationLayout = document.getElementById("layout");
