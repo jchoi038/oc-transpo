@@ -1486,7 +1486,7 @@ th.rt-confederation {
   gap: 0.25rem;
 }
 .station-banner__title {
-  text-align: center;
+  padding: 0.4em 0;
   margin-right: auto;
   box-sizing: border-box;
   flex-grow: 1;
@@ -3322,6 +3322,11 @@ ul.card-list li:not(:last-of-type), .card ul li:not(:last-of-type) {
   margin-bottom: 0.5em;
 }
 
+ul#station-info-card-body li {
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+
 .card .card__body {
   flex-grow: 1;
 }
@@ -5129,16 +5134,16 @@ section.divided {
 }
 
 .mb-1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 .mb-2 {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 .mb-3 {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 .mb-4 {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .mr-1_2 {
@@ -5358,7 +5363,7 @@ code {
   border-radius: 999rem;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 4px 0.5rem 5px 0.5rem;
+  padding: 2px 0.5rem 3px 0.5rem;
   margin: 0;
   margin-bottom: 0.5rem;
   line-height: 115%;
@@ -5491,7 +5496,6 @@ figure.clickable-img:hover img {
 
 img.station-layout-map {
   width: 100% !important;
-  border: 1px solid var(--border-color);
   border-radius: 0.5rem;
 }
 

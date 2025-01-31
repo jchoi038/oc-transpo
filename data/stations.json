@@ -23,13 +23,34 @@
 			"tour360": "https://my.matterport.com/show/?m=2LNFsmEbYQj",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_4_stations/PHOTO_airport-station_01.jpg",
+					"caption": "A train pulling in to Airport station",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_4_stations/PHOTO_airport-station_02.jpg",
+					"caption": "A train at Airport station",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/Virtual_tours/Airport_VT_1.jpg",
+					"caption": "Aiport Station entrance.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": false,
 			"accessible": true,
-			"airport": true
+			"airport": true,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -78,20 +99,31 @@
 			"nearby_map": "",
 			"image_gallery": [
 				{
-					"src" : "https://www.octranspo.com/images/files/algonquin_station_perspective.png",
-					"caption" : "Algonquin Station."
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/HD/05_BSST_VW01_Ext_Aerial.jpg",
+					"caption": "Bird's-eye view of Algonquin Station and connection to Algonquin Campus, , .",
+					"caption_fr": ""
 				},
 				{
-					"src" : "https://www.octranspo.com/images/files/algonquin_fare_gate.png",
-					"caption" : "Algonquin station fare gate."
+					"src": "https://www.octranspo.com/images/files/algonquin_station_perspective.png",
+					"caption": "Algonquin Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/algonquin_fare_gate.png",
+					"caption": "Algonquin station fare gate.",
+					"caption_fr": ""
 				}
-			]
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": true,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -137,13 +169,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -189,13 +226,18 @@
 			"tour360": "",
 			"pnr": "#baseline",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -241,13 +283,24 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/news/bayshore_exterior.png",
+					"caption": "Bayshore Station entrance rendering",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -280,6 +333,7 @@
 			"line_2": true,
 			"line_3": true,
 			"line_4": false,
+			"train" : true,
 			"bus": true
 		},
 		"station_name_fr": "",
@@ -296,38 +350,41 @@
 			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/bayview.jpg",
 			"image_gallery": [
 				{
-					"src" : "https://www.octranspo.com/images/files/stage2/Stage2-230823-26.jpg",
-					"caption" : "An overhead view of the Line 2 platform at Bayview Station.",
-					"caption_fr" : "{An overhead view of the Line 2 platform at Bayview Station.}"
+					"src": "https://www.octranspo.com/images/files/stage2/Stage2-230823-26.jpg",
+					"caption": "An overhead view of the Line 2 platform at Bayview Station.",
+					"caption_fr": "{An overhead view of the Line 2 platform at Bayview Station.}"
 				},
 				{
-					"src" : "https://www.octranspo.com/images/files/stage2/bayview_1366x768.jpg",
-					"caption" : "Bayview Station street view.",
-					"caption_fr" : "{Bayview Station street view.}"
+					"src": "https://www.octranspo.com/images/files/stage2/bayview_1366x768.jpg",
+					"caption": "Bayview Station street view.",
+					"caption_fr": "{Bayview Station street view.}"
 				},
 				{
-					"src" : "https://www.octranspo.com/images/files/stage2/Bayview_Line_2_Platform_August_28.jpg",
-					"caption" : "Bayview Station platforms.",
-					"caption_fr" : "{Bayview Station platforms.}"
+					"src": "https://www.octranspo.com/images/files/stage2/Bayview_Line_2_Platform_August_28.jpg",
+					"caption": "Bayview Station platforms.",
+					"caption_fr": "{Bayview Station platforms.}"
 				},
 				{
-					"src" : "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_bayview-station_01.jpg",
-					"caption" : "Bayview Station",
-					"caption_fr" : "{Bayview Station}"
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_bayview-station_01.jpg",
+					"caption": "Bayview Station",
+					"caption_fr": "{Bayview Station}"
 				},
 				{
-					"src" : "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_bayview-station_02.jpg",
-					"caption" : "Bayview Station",
-					"caption_fr" : "{Bayview Station}"
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_bayview-station_02.jpg",
+					"caption": "Bayview Station",
+					"caption_fr": "{Bayview Station}"
 				}
-			]
-			
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -373,13 +430,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -402,7 +464,7 @@
 		}
 	},
 	{
-		"id": "BLR",
+		"id": "BLB",
 		"station_560": 3034,
 		"connecting_stops": "",
 		"station_name": "Billings Bridge",
@@ -425,13 +487,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -477,13 +544,34 @@
 			"tour360": "https://my.matterport.com/show/?m=8tzSvdJovJJ&brand=0",
 			"pnr": "#blair",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/blair.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/blair.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Blair_01.jpg",
+					"caption": "An outside view of Blair Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Blair_overall.JPG",
+					"caption": "Blair Station and transitway.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Blair(3).JPG",
+					"caption": "Blair Station interior.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": true,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -526,16 +614,32 @@
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_bowesville.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/bowesville.png",
-			"tour360": "",
+			"tour360": "https://360accessibilitygen.com//embed/?tour=6750f4243c8df566660e32e0",
 			"pnr": "#bowesville",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_2_stations/POI_bowesville.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_bowesville-station_01.jpg",
+					"caption": "A train arriving at Bowesville Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/bowesville.png",
+					"caption": "Rendering of Bowesviles Station.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": true,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": true
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -581,13 +685,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
-			"pnr": null,
+			"pnr": true,
 			"bus_stop": true,
-			"accessible": false,
-			"airport": null
+			"accessible": true,
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -633,13 +742,34 @@
 			"tour360": "https://my.matterport.com/show/?m=eXKHPhX5Uhi",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_2_stations/POI_carleton.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_carleton-station_01.jpg",
+					"caption": "Carleton Station from above",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_carleton-station_02.jpg",
+					"caption": "A train at Carleton Station",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_carleton-station_03.jpg",
+					"caption": "A train at Carleton Station",
+					"caption_fr": ""
+				}
+			],
+			"area_map": "https://www.octranspo.com/images/files/Carleton_3D_Web.pdf"
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -685,13 +815,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -734,16 +869,32 @@
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_corso-italia.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/corso-italia.jpg",
-			"tour360": "",
+			"tour360": "https://360accessibilitygen.com//embed/?tour=6750f4489bfaece22a0c6a00",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_2_stations/POI_corso-italia.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_corso-italia-station_01.jpg",
+					"caption": "A train at Corso Italia Station",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/corso-italia.jpg",
+					"caption": "Rendering of Corso Italia Station",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -789,13 +940,34 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/cyrville.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/cyrville.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Cyrville_01.jpg",
+					"caption": "Aerial view of Cyrville Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Cyrville_02.jpg",
+					"caption": "Cyrville Station at night.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/cyrville_03.jpg",
+					"caption": "Cyrville Station entrance.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -838,16 +1010,27 @@
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_2_stations/STATION_dows-lake.jpg",
 			"schedules": "https://plan.octranspo.com/plan/StopSchedules?ShowOptions=true&StopFilterIdentifier=T+CARLG&StopFilterType=3&StopIdentifier=NB990",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/dows-lake.png",
-			"tour360": "",
+			"tour360": "https://360accessibilitygen.com//embed/?tour=6750f50a13eb79acd10e9f90",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_2_stations/POI_dows-lake.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/dows-lake.png",
+					"caption": "Rendering of Dow's Lake Station",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -893,13 +1076,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -945,14 +1133,18 @@
 			"tour360": "",
 			"pnr": "#fallowfield",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": true,
 			"bus_stop": true,
 			"accessible": false,
 			"airport": null,
-			"via": true
+			"via": true,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -998,13 +1190,24 @@
 			"tour360": "https://my.matterport.com/show/?m=RzxqcncYJNY",
 			"pnr": "#greenboro",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/greenboro.png",
+					"caption": "Rendering of Greenboro Station at train platforms",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": true,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1050,13 +1253,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1102,13 +1310,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/hurdman.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Aerial_perspective_of_Hurdman_Station.jpg",
+					"caption": "Zoomed out view of Hurdman Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Hurdman_01.jpg",
+					"caption": "Hurdman Station exterior.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Hurdman-Station-Public-Art-01.jpg",
+					"caption": "Public Art at Hurdman Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Hurdman_platform.JPG",
+					"caption": "Hurdman Station platform.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1154,13 +1388,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1206,13 +1445,44 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/maps/IRIS_vw03_ext_mainentrance_copy-min.jpg",
+					"caption": "Rendering of Iris Station entrance.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/maps/iris-entrance.png",
+					"caption": "Rendering of Iris Station entrance.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/maps/iris-stn_view.png",
+					"caption": "Iris Station street view.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/maps/iris-concourse.png",
+					"caption": "Iris Station fare gate.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/maps/iris-platform.png",
+					"caption": "Iris Station platforms.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -1258,13 +1528,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -1292,7 +1567,7 @@
 		"connecting_stops": "",
 		"station_name": "Kichi Zìbì",
 		"station_type": {
-			"transitway": true,
+			"transitway": "true",
 			"line_1": true,
 			"line_2": null,
 			"line_3": true,
@@ -1310,13 +1585,34 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/Kichi_Zibi.jpg",
+					"caption": "Rendering of Kichi Zìbì Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/maps/kichi-zibi-stn_view_2.png",
+					"caption": "Aerial View of Kichi Zìbì Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/maps/kichi-zibi-platform_view.png",
+					"caption": "Kichi Zìbì Station platforms.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": null,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -1332,7 +1628,7 @@
 		"google_map_link": "",
 		"station_bsi": "",
 		"station_location": {
-			"access_point": "",
+			"access_point": "Situated between Dominion Avenue and Berkley Avenue",
 			"address": "",
 			"google_link": "",
 			"access_point-fr": ""
@@ -1362,13 +1658,44 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/lees.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/lees.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Lees_01.jpg",
+					"caption": "Lees Station entrance, showcasing landscaping work.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Lees_02.jpg",
+					"caption": "Bird's eye view of Lees Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Lees.JPG",
+					"caption": "Public Art at Lees Station Platform.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/lees_03.jpg",
+					"caption": "Aerial view of train platforms at Lees Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/lees_04.jpg",
+					"caption": "Public Art: 'Transparent Passage' by Amy Thompson.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1414,13 +1741,24 @@
 			"tour360": "",
 			"pnr": "#leitrim",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/leitrim.jpg",
+					"caption": "Rendering of Leitrim Station with Trains pulling in from both directions.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": true,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1466,13 +1804,34 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stations/hero-images/limebank-june-2024.jpg",
+					"caption": "Full view of Leitrim Station during the construction phase with a train stopped at the platforms.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_limebank-station_01.jpg",
+					"caption": "A train leaving Limebank Station",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_limebank-station_02.jpg",
+					"caption": "Limebank Station from above",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1518,13 +1877,44 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/lincoln_fields-stn_view_2.png",
+					"caption": "Lincoln Fields Station entrance, showcasing landscaping work.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/lincoln-fields.png",
+					"caption": "Lincoln Fields Station platforms.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/lincoln_fields-platform.png",
+					"caption": "Lincoln Fields Station entrance and fares gates.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/lincoln_fields-fare_gate.png",
+					"caption": "Street view of Lincoln Fields Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/lincoln_fields_station.jpg",
+					"caption": "",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -1570,13 +1960,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1622,13 +2017,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1674,13 +2074,39 @@
 			"tour360": "https://my.matterport.com/show/?m=7cjUe5vpCtg&brand=0",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/lyon.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/lyon.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Lyon_01.jpg",
+					"caption": "Lyon Station interior above train platform level",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Lyon_02.jpg",
+					"caption": "Lyon Station west entrance.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/lyon_03.jpg",
+					"caption": "Lyon Station Sparks Street entrance.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Lyon_Art_Concourse.jpg",
+					"caption": "Lyon Station concourse public art: 'With Words as Their Actions' by PLANT Architect.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1726,13 +2152,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1778,13 +2209,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1830,13 +2266,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -1860,7 +2301,7 @@
 	},
 	{
 		"id": "",
-		"station_560": "",
+		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "Montréal",
 		"station_type": {
@@ -1882,13 +2323,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": null,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -1934,13 +2380,44 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/HD/Moodie-stn_view_(2).png",
+					"caption": "Moodie Station west entrance rendering, showcasing nearby landscaping.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/HD/Moodie-fare_gate.png",
+					"caption": "Moodie Station entrance and fare gates.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/HD/Moodie-stn_view.png",
+					"caption": "Moodie Station street view.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/HD/Moodie-platform.png",
+					"caption": "Moodie Station platforms.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/renderings/HD/moodie_lmsf.jpg",
+					"caption": "Moodie Light Maintenance and Storage Facility (LMSF).",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -1986,13 +2463,24 @@
 			"tour360": "https://my.matterport.com/show/?m=99WMwSC5DUB",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/mooney-bay.png",
+					"caption": "Rendering of Mooney's Bay Station during night time.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2038,13 +2526,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2068,7 +2561,7 @@
 	},
 	{
 		"id": "",
-		"station_560": "",
+		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "New Orchard",
 		"station_type": {
@@ -2090,13 +2583,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/news/new_orchard-entrance.png",
+					"caption": "New Orchard Station entrance",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/news/new_orchard-stn_view.png",
+					"caption": "Street view of New Orchard Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/news/new_orchard-fare_gate.png",
+					"caption": "New Orchard Station entrance and fare gates.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/news/new_orchard-platform.png",
+					"caption": "New Orchard Station platforms.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": null,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -2142,13 +2661,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/parliament.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/parliament.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/parliement_parlement.png",
+					"caption": "Parliament Station west entrance.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Parliament_entrance.JPG",
+					"caption": "Parliament station Sun Life entrance.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Parliament.jpg",
+					"caption": "Parliament Station Platform and Public Art 'Lone Pine Sunset' by Douglas Coupland.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Parliament_(2).JPG",
+					"caption": "Parliament station artful concourse.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2194,13 +2739,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/pimisi.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/ready4rail/stations/nearby/pimisi.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Pimisi-station_platform_03.JPG",
+					"caption": "Pimisi Station train platform",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Pimisi-station_platform_01.JPG",
+					"caption": "Pimisi Station interior.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Pimisi_02.jpg",
+					"caption": "Bird's eye view of Pimisi Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Pimisi-station_01.JPG",
+					"caption": "Public art:Moose Outdoor by Simon Brascoupé.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2246,13 +2817,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -2298,13 +2874,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": true,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -2350,13 +2931,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2380,7 +2966,7 @@
 	},
 	{
 		"id": "",
-		"station_560": "",
+		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "Queensview",
 		"station_type": {
@@ -2402,13 +2988,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/news/queensview-entrance.png",
+					"caption": "Queensview Station entrance rendering.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/news/queensview-stn_view.png",
+					"caption": "Street view of Queensview Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/news/queensview-concourse.png",
+					"caption": "Queensview Station entrance and Fare gates.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/news/queensview-platform.png",
+					"caption": "Queensview Station platforms.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": null,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -2454,13 +3066,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2506,13 +3123,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/rideau.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/rideau.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Rideau_station_entrance.JPG",
+					"caption": "Rideau Station entrance",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Rideau_station_train_platform_.JPG",
+					"caption": "Rideau Station platforms.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/news/Public_art_rideau.JPG",
+					"caption": "Public art at Rideau Station concourse.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Rideau_station_ticket_gate.jpg",
+					"caption": "Rideau Station fare gates.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2558,13 +3201,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2610,13 +3258,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2640,7 +3293,7 @@
 	},
 	{
 		"id": "",
-		"station_560": "",
+		"station_560": null,
 		"connecting_stops": "",
 		"station_name": "Sherbourne",
 		"station_type": {
@@ -2662,13 +3315,29 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Sherbourne_rendering_2_0.jpg",
+					"caption": "Sherbourne Station entrance",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Sherbourne_rendering_1.jpg",
+					"caption": "Aerial View of Sherbourne Station.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": null,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {
@@ -2714,13 +3383,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2766,13 +3440,29 @@
 			"tour360": "https://360accessibilitygen.com//embed/?tour=6750f4c10aada6367f056740",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_2_stations/POI_south-keys.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_2_stations/POI_south-keys.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stations/hero-images/STATION-HEADER_south-keys.jpg",
+					"caption": "South Keys station from above with a train.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stations/photos/line_2_stations/PHOTO_south-keys-station_02.jpg",
+					"caption": "Side view of South Keys station with a train pulling in,",
+					"caption_fr": ""
+				}
+			],
+			"area_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_2_stations/AREA_south-keys.jpg"
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2818,13 +3508,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/stlaurent.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/stlaurent.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/st-laurent_lines.jpg",
+					"caption": "St-Laurent Station train platform",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/st-laurent_platform.jpg",
+					"caption": "St-Laurent Station platform",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/st-laurent_gate.jpg",
+					"caption": "St-Laurent Station gate",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/st-laurent_entrance.jpg",
+					"caption": "St-Laurent Station entrance",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2870,13 +3586,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2922,13 +3643,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -2974,13 +3700,18 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": false,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3026,14 +3757,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/tremblay.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/tremblay.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/Tremblay_station.JPG",
+					"caption": "Tremblay station",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Tremblay_01.jpg",
+					"caption": "Aerial view of Tremblay Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/Tremblay_02.jpg",
+					"caption": "View of Tremblay Station: Entrance and Exterior.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/tremblay_03.jpg",
+					"caption": "Tremblay station public art: 'National Garden' by Jyhling Lee.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
 			"airport": null,
-			"via": true
+			"via": true,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3079,13 +3835,24 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://ottawa.ca/sites/default/files/styles/rectangle_xl/public/04_tist_vw02_ext_streetlevel_copy-min_0.jpg?h=88ac1a36&itok=itQPKkxC",
+					"caption": "Trim station",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": true,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "east",
 		"routing_index": {
@@ -3131,13 +3898,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/tunneys.jpg"
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/tunneys.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/tunneys_full.JPG",
+					"caption": "Tunney's Pasture Station entrance",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/tunneys_pasture_station_platform_01.jpg",
+					"caption": "Tunney's Pasture Station platforms.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/tunneys_pasture_station_platform_02.jpg",
+					"caption": "Overhead View of Tunney's Pasture Station.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/tunneys_pasture_station_entrance.JPG",
+					"caption": "Tunney's Pasture Station Entrance.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3183,13 +3976,39 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/nearby/uottawa.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/uOttawa.JPG",
+					"caption": "uOttawa Station train platform",
+					"caption_fr": "Aerial view of uOttawa Station."
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/Network_Service_Change/line1_stations/UO_01.jpg",
+					"caption": "",
+					"caption_fr": "Aerial view of uOttawa Station."
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/uOttawa_entrance.jpg",
+					"caption": "uOttawa Station entrance and fare gates.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/uOttawa_tracks.jpg",
+					"caption": "uOttawa Station tracks.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3232,16 +4051,27 @@
 			"layout_map": "https://www.octranspo.com/images/files/maps/station_layout/line_4_stations/STATION_uplands.jpg",
 			"schedules": "",
 			"hero_image": "https://www.octranspo.com/images/files/stage2/renderings/uplands_station.jpg",
-			"tour360": "",
+			"tour360": "https://360accessibilitygen.com//embed/?tour=6750f3bbed74b13ad7068e30",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_4_stations/POI_uplands.jpg",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stations/hero-images/STATION-HEADER_uplands.jpg",
+					"caption": "Bird's-eye view of Uplands Station, showcasing surrounding landscaping work.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": "https://www.octranspo.com/images/files/maps/area_map/nearby/line_4_stations/AREA_uplands.jpg"
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": false,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3287,13 +4117,24 @@
 			"tour360": "https://my.matterport.com/show/?m=ynebV6qyxph",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/walkley.jpg",
+					"caption": "Rendering of Walkley Station.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "",
 		"routing_index": {
@@ -3339,13 +4180,44 @@
 			"tour360": "",
 			"pnr": "",
 			"staging-fr": "",
-			"nearby_map": ""
+			"nearby_map": "",
+			"image_gallery": [
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/westboro_station_1-min.jpg",
+					"caption": "Westboro Station west entrance rendering",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/westboro-stn_view.png",
+					"caption": "Street view of Westboro station entrance rendering",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/westboro-platform.png",
+					"caption": "Westboro Station platforms rendering.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/westboro-stn_view_2.png",
+					"caption": "Westboro Station exterior and public art rendering.",
+					"caption_fr": ""
+				},
+				{
+					"src": "https://www.octranspo.com/images/files/stage2/westboro-concourse.png",
+					"caption": "Westboro Station interior and concourse rendering.",
+					"caption_fr": ""
+				}
+			],
+			"area_map": ""
 		},
 		"station_feature": {
 			"pnr": null,
 			"bus_stop": true,
 			"accessible": true,
-			"airport": null
+			"airport": null,
+			"via": null,
+			"washroom": "",
+			"bikes": null
 		},
 		"station_extension": "west",
 		"routing_index": {

@@ -2,15 +2,6 @@ const lang = checkPageLanguage(window.location.href);
 const site = checkSite(window.location.href);
 const page = checkPage(window.location.href);
 
-// Initialize variables
-const h1Element = document.querySelector("h1");
-// Apply generic station styles
-if (page == "station") {
-	h1Element.classList.add("station-banner");
-	const h1StationName = h1Element.textContent.replace("’", "'"); // Get the original text content
-	h1Element.innerHTML = `<span class="station-banner__title">${h1StationName}</span>`; // Wrap it in a <span>
-}
-
 // const logo = document.createElement("img");
 // logo.src =
 // 	"https://www.octranspo.com/images/files/Network_Service_Change/O-heading-icon.png";
@@ -30,8 +21,8 @@ var futureStationLines = document.createElement("div");
 var stationRoutes = document.createElement("div");
 var stationLayoutMap = document.getElementsByClassName("station-layout-map");
 var section_busBoardingLocations = document.getElementById("bus-boarding-info");
-createHeroBanner()
-
+var trainStation;
+createHeroBanner();
 
 // /*delete this line for nwtb launch*/if (section_busBoardingLocations) {section_busBoardingLocations.className = "nwtb-launch"}
 
@@ -52,7 +43,56 @@ var section_explore = document.getElementById("explore");
 
 // build Back to top button
 
+// Create the new elements
+
+const line1 = document.createElement("span");
+line1.className = "rt rt-type--line1";
+lang == "en"
+	? (line1.innerHTML = `<span class="visuallyhidden">Line </span>1`)
+	: (line1.innerHTML = `<span class="visuallyhidden">Ligne </span>1`);
+
+const line2 = document.createElement("span");
+line2.className = "rt rt-type--line2";
+lang == "en"
+	? (line2.innerHTML = `<span class="visuallyhidden">Line </span>2`)
+	: (line2.innerHTML = `<span class="visuallyhidden">Ligne </span>2`);
+
+const line3 = document.createElement("span");
+line3.className = "rt rt-type--line3";
+lang == "en"
+	? (line3.innerHTML = `<span class="visuallyhidden">Future Line </span>3`)
+	: (line3.innerHTML = `<span class="visuallyhidden">Future Ligne </span>3`);
+
+const line4 = document.createElement("span");
+line4.className = "rt rt-type--line4";
+lang == "en"
+	? (line4.innerHTML = `<span class="visuallyhidden">Line </span>4`)
+	: (line4.innerHTML = `<span class="visuallyhidden">Ligne </span>4`);
+
+const trainIcon = document.createElement("img");
+trainIcon.className = "inline-icon";
+lang == "en"
+	? (trainIcon.alt = `O-Train station`)
+	: (trainIcon.innerHTML = `Station de l'O-Train`);
+
+trainIcon.src =
+	"https://www.octranspo.com/images/files/icons/transport_train-white.svg";
+
+const busIcon = document.createElement("img");
+busIcon.className = "inline-icon";
+lang == "en" ? (busIcon.alt = `Bus`) : (busIcon.innerHTML = `Autobus`);
+busIcon.src =
+	"https://www.octranspo.com/images/files/icons/transport_bus-white.svg";
+
 if (page == "station") {
+	// Initialize variables
+	const h1Element = document.querySelector("h1");
+	// Apply generic station styles
+
+	h1Element.classList.add("station-banner");
+	const h1StationName = h1Element.textContent.replace("’", "'"); // Get the original text content
+	h1Element.innerHTML = `<span class="station-banner__title">${h1StationName}</span>`; // Wrap it in a <span>
+
 	// IF french page, translate section ids
 	if (lang == "fr") {
 		section_stationLayout.id = "carte";
@@ -62,6 +102,8 @@ if (page == "station") {
 		section_360.id = "360";
 		section_explore.id = "savoir";
 	}
+
+	/***********  Part 1 ***********/
 
 	fetch("/data/stations.json")
 		// fetch("/images/files/data/stations.json")
@@ -84,10 +126,9 @@ if (page == "station") {
 			if (matchingStation) {
 				// populate hero image
 				if (matchingStation.station_url.hero_image) {
-					let url = matchingStation.station_url.hero_image
-					let img = document.getElementById("station-hero-img")
+					let url = matchingStation.station_url.hero_image;
+					let img = document.getElementById("station-hero-img");
 					img.style.backgroundImage = `url(${url})`;
-					
 				} else {
 					// TBD
 				}
@@ -117,55 +158,10 @@ if (page == "station") {
 							: "";
 					});
 
-				/***********  Part 1 ***********/
-
-				// Create the new elements
-
-				const line1 = document.createElement("span");
-				line1.className = "rt rt-type--line1";
-				lang == "en"
-					? (line1.innerHTML = `<span class="visuallyhidden">Line </span>1`)
-					: (line1.innerHTML = `<span class="visuallyhidden">Ligne </span>1`);
-
-				const line2 = document.createElement("span");
-				line2.className = "rt rt-type--line2";
-				lang == "en"
-					? (line2.innerHTML = `<span class="visuallyhidden">Line </span>2`)
-					: (line2.innerHTML = `<span class="visuallyhidden">Ligne </span>2`);
-
-				const line3 = document.createElement("span");
-				line3.className = "rt rt-type--line3";
-				lang == "en"
-					? (line3.innerHTML = `<span class="visuallyhidden">Future Line </span>3`)
-					: (line3.innerHTML = `<span class="visuallyhidden">Future Ligne </span>3`);
-
-				const line4 = document.createElement("span");
-				line4.className = "rt rt-type--line4";
-				lang == "en"
-					? (line4.innerHTML = `<span class="visuallyhidden">Line </span>4`)
-					: (line4.innerHTML = `<span class="visuallyhidden">Ligne </span>4`);
-
-				const trainIcon = document.createElement("img");
-				trainIcon.className = "inline-icon";
-				lang == "en"
-					? (trainIcon.alt = `O-Train station`)
-					: (trainIcon.innerHTML = `Station de l'O-Train`);
-
-				trainIcon.src =
-					"https://www.octranspo.com/images/files/icons/transport_train-white.svg";
-
-				const busIcon = document.createElement("img");
-				busIcon.className = "inline-icon";
-				lang == "en" ? (busIcon.alt = `Bus`) : (busIcon.innerHTML = `Autobus`);
-				busIcon.src =
-					"https://www.octranspo.com/images/files/icons/transport_bus-white.svg";
-
 				// populate quicklinks
 				if (quicklinks_container) {
 					initializeQuickLinksSection(matchingStation);
 				}
-
-				
 
 				// populate 360 tour section
 				if (section_360) {
@@ -203,7 +199,6 @@ if (page == "station") {
 
 				// populate image gallery
 				if (matchingStation.station_url.image_gallery) {
-					console.log(matchingStation.station_url.image_gallery);
 					populateImageGallery(matchingStation.station_url.image_gallery);
 				}
 
@@ -227,53 +222,15 @@ if (page == "station") {
 					document.getElementById("quicklinks-card_station-layout").remove();
 				}
 
-				function getStationType(matchingStation, selectOptionType) {
-					// Check which lines or bus services the station belongs to and append the icons accordingly
-					if (matchingStation.station_type.line_1 == true) {
-						if (matchingStation.station_extension) {
-							futureStationLines.appendChild(line1.cloneNode(true));
-						} else {
-							stationLines.appendChild(line1.cloneNode(true));
-						}
-					}
-					if (matchingStation.station_type.line_2 == true) {
-						stationLines.appendChild(line2.cloneNode(true));
-					}
-					if (matchingStation.station_type.line_3 == true) {
-						futureStationLines.appendChild(line3.cloneNode(true));
-					}
-					if (matchingStation.station_type.line_4 == true) {
-						stationLines.appendChild(line4.cloneNode(true));
-					}
-
-					if (
-						matchingStation.station_type.line_1 == true ||
-						matchingStation.station_type.line_2 == true ||
-						matchingStation.station_type.line_3 == true ||
-						matchingStation.station_type.line_4 == true
-					) {
-						selectOptionType.textContent =
-							lang == "en" ? "O-Train station" : "Station de l'O-Train";
-					} else {
-						document.getElementById("station-lines-li")?.remove();
-					}
-					// Check if the station is in the bus station array and append the bus icon
-					if (matchingStation.station_type.transitway == true) {
-						if (selectOptionType.textContent) {
-							selectOptionType.textContent =
-								lang == "en"
-									? `${selectOptionType.textContent} | Transitway station`
-									: `${selectOptionType.textContent} | Station du transport en commun`;
-						} else {
-							selectOptionType.textContent =
-								lang == "en"
-									? "Transitway station"
-									: "Station du transport en commun";
-						}
-					}
-
-					return selectOptionType;
+				if (
+					matchingStation.station_type.line_1 == true ||
+					matchingStation.station_type.line_2 == true ||
+					matchingStation.station_type.line_3 == true ||
+					matchingStation.station_type.line_4 == true
+				) {
+					trainStation = true;
 				}
+
 				function styleStationBanner(h1Element, matchingStation) {
 					// Check which lines or bus services the station belongs to and append the icons accordingly
 					if (matchingStation.station_type.line_1 == true) {
@@ -295,6 +252,7 @@ if (page == "station") {
 						matchingStation.station_type.line_3 == true ||
 						matchingStation.station_type.line_4 == true
 					) {
+						trainStation = true;
 						h1Element.appendChild(trainIcon.cloneNode()); // Add train icon
 						if (section_trainBoarding) {
 							section_trainBoarding.style.width = "100%";
@@ -308,32 +266,45 @@ if (page == "station") {
 						h1Element.appendChild(busIcon.cloneNode()); // Add bus icon
 					}
 				}
-
 				styleStationBanner(h1Element, matchingStation);
 				getStationType(matchingStation, selectOptionType);
+
+				if (section_amenities) {
+					console.log(trainStation);
+					buildAmenitiesSection(section_amenities, trainStation);
+				}
 			} else {
 				console.error("No matching station found.");
 			}
 		});
 	/*** Build foundations for major sections  IF the section exists***/
 
-	if (quicklinks_container) {
-		quicklinks_container.className = "grid grid-5-4-2-2";
-	}
-
-	if (section_stationLayout) {
-		buildStationLayoutSectionLayout();
-	}
-
-	if (section_stops) {
-		buildStopsSectionLayout();
-	}
-	if (section_amenities) {
+	function buildAmenitiesSection(section_amenities, matchingStation) {
 		section_amenities.className = "section flex cards-overflow-x-container";
 		createSectionH2(
 			lang == "en" ? "Features & amenities" : "Am&eacute;nagements",
 			section_amenities
 		);
+
+		const faresDefaults = trainStation ?
+			`Ticket machines with video chat help
+			Fare gates at the station entrance` : "";
+
+		const navigationDefaults = trainStation ?
+			`Clear signage and wayfinding
+			Illuminated “O” pylon and lantern box
+			Service maps
+			Free OC Info phone for trip planning help and answers to all your questions
+			Map of nearby destinations (within walking distance)` : "";
+		const accessibilityDefaults = trainStation ?
+			`Audible and visual announcements
+			Tactile wayfinding tiles & platform edge indicator strips
+			Braille/tactile signage` : "";
+		const safetyDefaults = trainStation ?
+			`Transecure waiting area
+			Emergency phones
+			Platform edge indicator strips
+			Video camera monitoring` : "";
 
 		const amenities_faresMadeEasy_card = document.getElementById(
 			"fares-made-easy-card"
@@ -343,7 +314,8 @@ if (page == "station") {
 			? createDecorCard(
 					amenities_faresMadeEasy_card,
 					"card decor-card fares-made-easy",
-					lang == "en" ? "Fares made easy" : "Paiement facile"
+					lang == "en" ? "Fares made easy" : "Paiement facile",
+					faresDefaults
 			  )
 			: "";
 
@@ -356,7 +328,9 @@ if (page == "station") {
 					"card decor-card wayfinding",
 					lang == "en"
 						? "Navigation and wayfinding"
-						: "D&eacute;placement et orientation"
+						: "D&eacute;placement et orientation",
+					navigationDefaults
+						
 			  )
 			: "";
 		const amenities_accessibility_card =
@@ -365,7 +339,8 @@ if (page == "station") {
 			? createDecorCard(
 					amenities_accessibility_card,
 					"card decor-card accessibility",
-					lang == "en" ? "Accessibility" : "Accessibilit&eacute;"
+					lang == "en" ? "Accessibility" : "Accessibilit&eacute;",
+					accessibilityDefaults
 			  )
 			: "";
 		const amenities_cyclist_card = document.getElementById("cyclist-card");
@@ -387,7 +362,8 @@ if (page == "station") {
 					"card decor-card safety",
 					lang == "en"
 						? "Safety & security"
-						: "S&eacute;curit&eacute; et s&ucirc;ret&eacute;"
+						: "S&eacute;curit&eacute; et s&ucirc;ret&eacute;",
+					safetyDefaults
 			  )
 			: "";
 		const amenities_comfort_card = document.getElementById("comfort-card");
@@ -401,6 +377,18 @@ if (page == "station") {
 						: "Confort et commodit&eacute;"
 			  )
 			: "";
+	}
+
+	if (quicklinks_container) {
+		quicklinks_container.className = "grid grid-5-4-2-2";
+	}
+
+	if (section_stationLayout) {
+		buildStationLayoutSectionLayout();
+	}
+
+	if (section_stops) {
+		buildStopsSectionLayout();
 	}
 
 	if (section_nearby) {
@@ -417,7 +405,8 @@ if (page == "station") {
 					"card decor-card within-5km navy",
 					lang == "en"
 						? "Places of interest within 5 min"
-						: "Sites d'intérêt à moins de 5 minutes"
+						: "Sites d'intérêt à moins de 5 minutes",
+					""
 			  )
 			: "";
 		const nearby_alsoNearby_card = document.getElementById("also-nearby-card");
@@ -425,7 +414,8 @@ if (page == "station") {
 			? createDecorCard(
 					nearby_alsoNearby_card,
 					"card decor-card nearby blue",
-					lang == "en" ? "Also close-by" : "Aussi à proximité"
+					lang == "en" ? "Also close-by" : "Aussi à proximité",
+					""
 			  )
 			: "";
 	}
@@ -1187,10 +1177,7 @@ if (page == "station") {
 
 		if (lines.textContent != "") {
 			let title = document.createElement("strong");
-			title.innerHTML =
-				lang == "en"
-					? `Lines <span class="tag tag-type__success">In service</span>`
-					: "{}";
+			title.innerHTML = lang == "en" ? `Lines` : "{}";
 			appendListItem(cardBody, title, lines);
 		}
 
@@ -1198,13 +1185,9 @@ if (page == "station") {
 			let title = document.createElement("strong");
 			title.innerHTML =
 				lang == "en"
-					? `Lines <span class="tag tag-type__warning">In development</span>`
+					? `Future lines <span class="tag tag-type__warning">Under development</span>`
 					: "{}";
 			appendListItem(cardBody, title, futureLines);
-		}
-
-		if (routes) {
-			appendListItem(cardBody, "", routes);
 		}
 	}
 
@@ -1215,21 +1198,33 @@ if (page == "station") {
 		item.append(content);
 	}
 
-	function transformPtoUL(p) {
-		const items = p.split("\n").map((item) => item.trim());
+	function transformPtoUL(p1, p2) {
+		const items1 = p1.split("\n").map((item) => item.trim());
 		const ul = document.createElement("ul");
 
+		let defaultItems = ""
+		if (p2){
+			defaultItems = p2.split("\n").map((item) => item.trim());
+			defaultItems.forEach((text) => {
+				const li = document.createElement("li");
+				li.textContent = text;
+				li.textContent == "" ? "" : ul.appendChild(li);
+			});
+		}
+
 		// Loop through the items and create list elements
-		items.forEach((text) => {
+		items1.forEach((text) => {
 			const li = document.createElement("li");
 			li.textContent = text;
 			li.textContent == "" ? "" : ul.appendChild(li);
 		});
+		// Loop through the items and create list elements
+		
 
 		return ul;
 	}
 
-	function createDecorCard(card, classList, title) {
+	function createDecorCard(card, classList, title, liDefaults) {
 		const cardDiv = document.createElement("div");
 		card.className = classList;
 
@@ -1239,8 +1234,9 @@ if (page == "station") {
 		titleElement.innerHTML = title;
 
 		// Append the <h4> title to the new <div>
-
-		let listItems = transformPtoUL(card.textContent);
+		let customListItems = card.getElementsByTagName("ul")[0].textContent.replace("Insert custom list item","")
+		let listItems = transformPtoUL(customListItems, liDefaults)
+		
 		card.innerHTML = "";
 		card.appendChild(titleElement);
 
@@ -1319,12 +1315,15 @@ if (page == "station") {
 		arr.forEach((item) => {
 			const galleryItem = document.createElement("div");
 			galleryItem.className = "gallery-image";
-			galleryItem.innerHTML = `
-            <figure>
-                <img src="${item.src}" alt="${lang == "en" ? item.caption : item.caption_fr}>
-                <figcaption>${lang == "en" ? item.caption : item.caption_fr}</figcaption>
-            </figure>
-        `;
+
+			galleryItem.innerHTML = `<figure>
+                <img src="${item.src}" alt="${
+				lang == "en" ? item.caption : item.caption_fr
+			}">
+                <figcaption>${
+									lang == "en" ? item.caption : item.caption_fr
+								}</figcaption> </figure>`;
+
 			track.appendChild(galleryItem);
 		});
 
@@ -1494,8 +1493,7 @@ if (page == "station") {
 		});
 	}
 
-
-	function addHeroImageURL(url){
+	function addHeroImageURL(url) {
 		getElementById("station-hero-img").style.backgroundImage = `url(${url})`;
 	}
 
@@ -2276,7 +2274,6 @@ function getStationRoutes(matchingStation) {
 	return routes;
 }
 
-
 function createHeroBanner() {
 	const heroBanner = document.getElementById("station-hero-banner");
 	// Create the img element
@@ -2291,4 +2288,51 @@ function createHeroBanner() {
 
 	// Set the id and style with background-image for the img element
 	heroImg.id = "station-hero-img";
+}
+
+function getStationType(matchingStation, selectOptionType) {
+	// Check which lines or bus services the station belongs to and append the icons accordingly
+	if (matchingStation.station_type.line_1 == true) {
+		if (matchingStation.station_extension) {
+			futureStationLines.appendChild(line1.cloneNode(true));
+		} else {
+			stationLines.appendChild(line1.cloneNode(true));
+		}
+	}
+	if (matchingStation.station_type.line_2 == true) {
+		stationLines.appendChild(line2.cloneNode(true));
+	}
+	if (matchingStation.station_type.line_3 == true) {
+		futureStationLines.appendChild(line3.cloneNode(true));
+	}
+	if (matchingStation.station_type.line_4 == true) {
+		stationLines.appendChild(line4.cloneNode(true));
+	}
+
+	if (
+		matchingStation.station_type.line_1 == true ||
+		matchingStation.station_type.line_2 == true ||
+		matchingStation.station_type.line_3 == true ||
+		matchingStation.station_type.line_4 == true
+	) {
+		trainStation = true;
+		selectOptionType.textContent =
+			lang == "en" ? "O-Train station" : "Station de l'O-Train";
+	} else {
+		document.getElementById("station-lines-li")?.remove();
+	}
+	// Check if the station is in the bus station array and append the bus icon
+	if (matchingStation.station_type.transitway == true) {
+		if (selectOptionType.textContent) {
+			selectOptionType.textContent =
+				lang == "en"
+					? `${selectOptionType.textContent} | Transitway station`
+					: `${selectOptionType.textContent} | Station du transport en commun`;
+		} else {
+			selectOptionType.textContent =
+				lang == "en" ? "Transitway station" : "Station du transport en commun";
+		}
+	}
+
+	return selectOptionType;
 }
